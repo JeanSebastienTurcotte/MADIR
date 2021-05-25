@@ -14,7 +14,7 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="chap-enslog">   <!-- Ajouter l'identifiant du chapitre après le - du xml:id -->
     <title> Ensembles, fonctions et logique mathématique </title>
     <introduction xml:id= "intro-enslog">  <!-- Ajouter le même identifiant du chapitre après le - du xml:id -->
-    TEST
+    <p>Dans ce chapitre, on étudie les fondements des mathématiques discrètes. Plus particulièrement, on étudie les ensembles, les fonctions et la logique mathématique.</p>
     </introduction>
     
     <!-- Sections à inclure, dans des fichiers xml différents -->
