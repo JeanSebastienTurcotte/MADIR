@@ -98,7 +98,7 @@
             <p>
             <m>C=\{1,4,9,16,\ldots, 64,81\}</m>.</p>
           </li>
-          <li><p>D=\{A,B,C\}=\{\{3,4,5,6,7,8,9\},\{t,u,r,c,o,e\},\{1,4,9,16,\ldots, 64,81\}\}</p></li>
+          <li><p><m>D=\{A,B,C\}=\{\{3,4,5,6,7,8,9\},\{t,u,r,c,o,e\},\{1,4,9,16,\ldots, 64,81\}\}</m></p></li>
         </ol></p>
       </solution>
     </example>
@@ -175,10 +175,10 @@
     <ul>
     <li><p><m>S_1=\{a\},S_2=\{b\}</m> et <m>S_{3}=\{c\}</m>, qui ne contiennent qu'un élément. </p></li>
     <li><p><m>S_4=\{a,b\},S_{5}=\{a,c\}</m> et <m>S_6=\{b,c\}</m> qui en contiennent deux.</p></li>
-    <li><p><m>A</m> lui-même, qui contient trois éléments.</p></li>
+    <li><p><m>A=\{a,b,c\}</m> lui-même, qui contient trois éléments.</p></li>
     </ul>
     </p>
-    <p>Plus tard, on verra comment compter tous les sous-ensembles possibles à partir d'un ensemble de cardinalité <m>n</m>. Avec une petite précision, on reparlera de l'ensemble de tous les sous-ensembles possibles à la définition <xref ref="def-enspuiss"/>.</p></solution>
+    <p>Plus tard, on verra comment compter tous les sous-ensembles possibles à partir d'un ensemble ayant <m>n</m> éléments. Avec une petite précision, on reparlera de l'ensemble de tous les sous-ensembles possibles à la définition <xref ref="def-enspuiss"/>.</p></solution>
     </example>
     <definition xml:id="def-ensegaux">
     <title>Relation d'égalité</title>
@@ -201,6 +201,7 @@
     </statement>
     </example>
     <p>Le nombre d'éléments dans un ensemble est appelé la <em>cardinalité</em> de l'ensemble. Pour un ensemble <m>A</m>, on la note <m>\text{card}(A)=|A|</m>. Les ensembles <m>A,B,C</m> de l'exemple <xref ref="ex-relens"/> ont respectivement comme cardinalité <m>|A|=3,|B|=10</m> et <m>|C|=3</m>. </p>
+    <p>La cardinalité d'un ensemble peut être n'importe quel nombre naturel ou même infini. Un ensemble est dit fini si sa cardinalité est un nombre naturel et infini sinon.</p>
     </subsection>
     <subsection>
     <title>Représentation graphique d'ensembles</title>
@@ -310,7 +311,7 @@ def _(A='1,2,3,a', B='2,a,3,4,pomme', C='a,b,10,pomme'):
   <li><p>L'ensemble <m>A</m> est composé d'éléments <m>k</m> tels que <m>k</m> est un entier dont le carré est inférieur ou égal à <m>16</m>.</p></li>
   </ul>
   </p>
-  <p>La précision de l'ensemble permet de déterminer avec certitude les éléments de l'ensemble. Par exemple, l'ensemble <m>A</m> ci-dessous est <m>A=\{-4,-3,-2,-1,0,1,2,3,4\}</m>, mais l'ensemble <m>B=\{k\in \N\~|~ k^2\leq 16}</m> ne contient que les éléments <m>\{0,1,2,3,4\}</m>.</p>
+  <p>La précision de l'ensemble permet de déterminer avec certitude les éléments de l'ensemble. Par exemple, l'ensemble <m>A</m> ci-dessous est <m>A=\{-4,-3,-2,-1,0,1,2,3,4\}</m>, mais l'ensemble <m>B=\{k\in \N\~|~ k^2\leq 16\}</m> ne contient que les éléments <m>\{0,1,2,3,4\}</m>.</p>
   </subsection>
   <conclusion xml:id="concl-ens">
   <p>Les points importants de cette section sont:
@@ -328,13 +329,13 @@ def _(A='1,2,3,a', B='2,a,3,4,pomme', C='a,b,10,pomme'):
   <reading-questions>
   <exercise>
   <introduction>
-  <p>Écrire les ensembles suivants en extension:</p>
+  <p>Écrire les ensembles suivants en extension et dire si <m>-2</m> et <m>5</m> font partie de ces ensembles:</p>
   </introduction>
   <task>
   <statement><p><m>\{z\in \Z~|~ -3\leq z&lt; 5\}</m>;</p></statement>
   </task>
    <task>
-  <statement><p><m>\{\frac{a}{b}~|~ a,b\in \{2,3,4\}\}</m>;</p></statement>
+  <statement><p><m>\{\frac{a}{b}~|~ a,b\in \{-5,2,10\}\}</m>;</p></statement>
   </task>
    <task>
   <statement><p><m>\{n\in \N~|~ n \text{ est un facteur de } 60\}</m>;</p></statement>

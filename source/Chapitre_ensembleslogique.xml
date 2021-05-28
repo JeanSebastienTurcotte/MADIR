@@ -19,6 +19,7 @@
     
     <!-- Sections à inclure, dans des fichiers xml différents -->
     <xi:include href="Section_ensembles.xml" />
+    <xi:include href="Section_operationsensembles.xml" />
     <conclusion xml:id="concl-enslog">  <!-- Ajouter le même identifiant du chapitre après le - du xml:id -->
     
     </conclusion>
