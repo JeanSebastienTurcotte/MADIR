@@ -282,7 +282,7 @@ def _(A='1,2,3,a', B='2,a,3,4,pomme', C='a,b,10,pomme'):
   </subsection>
   <subsection>
   <title>Ensembles particuliers</title>
-  <p>On donne maintenant la définition de certains ensembles importants. L'un deux, l'ensemble univers a déjà été mentionné. Un autre ensemble d'une grande importance est l'ensemble vide. On le note par <m>\emptyset</m> ou encore <m>\{\}</m>. Sa cardinalité est de <m>0</m>. C'est le seul ensemble qui possède cette propriété. Il possède aussi la propriété d'être un sous-ensemble de tous les ensembles. On reviendra sur cette drôle de particularité dans la section <xref provisional="sec-logique"/>. </p>
+  <p>On donne maintenant la définition de certains ensembles importants. L'un deux, l'ensemble univers a déjà été mentionné. Un autre ensemble d'une grande importance est l'ensemble vide. On le note par <m>\emptyset</m> ou encore <m>\{\}</m>. Sa cardinalité est de <m>0</m>. C'est le seul ensemble qui possède cette propriété. Il possède aussi la propriété d'être un sous-ensemble de tous les ensembles, incluant lui-même. On reviendra sur cette drôle de particularité dans la section <xref provisional="sec-logique"/>. </p>
   <p>Un autre sous-ensemble a été évoqué à l'exemple <xref ref="ex-enspuiss"/>. On en donne une définition plus précise ci-bas.</p>
   <definition xml:id="def-enspuiss">
   <title>L'ensemble des puissances</title>
@@ -312,6 +312,18 @@ def _(A='1,2,3,a', B='2,a,3,4,pomme', C='a,b,10,pomme'):
   </ul>
   </p>
   <p>La précision de l'ensemble permet de déterminer avec certitude les éléments de l'ensemble. Par exemple, l'ensemble <m>A</m> ci-dessous est <m>A=\{-4,-3,-2,-1,0,1,2,3,4\}</m>, mais l'ensemble <m>B=\{k\in \N\~|~ k^2\leq 16\}</m> ne contient que les éléments <m>\{0,1,2,3,4\}</m>.</p>
+  <remark>
+  <title>Les intervalles</title>
+  <statement><p>On délimite les ensembles par les paires d'accolades, soit en énumérant les éléments ou en donnant une description des membres. Pour les ensembles dont la cardinalité est infinie, il peut être difficile ou impossible d'énumérer les éléments. En particulier, certains sous-ensemble des nombres réels sont particulièrement important qu'on leur donne une notation propre à eux. Ce sont les intervalles. Voici quatre exemples de cette notation:
+  <md>
+  <mrow>[a,b]&amp;=\{x\in \R~|~ a\leq x\leq b\}</mrow>
+   <mrow>[a,b[&amp;=\{x\in \R~|~ a\leq x&lt; b\}</mrow>
+  <mrow>]a,b]&amp;=\{x\in \R~|~ a&lt; x\leq b\}</mrow>
+  <mrow>]a,b[&amp;=\{x\in \R~|~ a&lt; x&lt; b\}</mrow>
+  </md>.
+  </p>
+  <p>De plus, lorsque l'inégalité est stricte, on admet la possibilité que <m>a</m> soit remplacé par <m>-\infty</m> et <m>b</m> par <m>\infty</m>.</p></statement>
+  </remark>
   </subsection>
   <conclusion xml:id="concl-ens">
   <p>Les points importants de cette section sont:
@@ -327,6 +339,9 @@ def _(A='1,2,3,a', B='2,a,3,4,pomme', C='a,b,10,pomme'):
   </conclusion>
   <!--Inclure les exercices de la section ci-dessous-->
   <reading-questions>
+  <introduction>
+  <p>Ces questions sont à faire avant de venir en classe et à remettre au début du cours.</p>
+  </introduction>
   <exercise>
   <introduction>
   <p>Écrire les ensembles suivants en extension et dire si <m>-2</m> et <m>5</m> font partie de ces ensembles:</p>
@@ -359,6 +374,7 @@ def _(A='1,2,3,a', B='2,a,3,4,pomme', C='a,b,10,pomme'):
   <statement><p>Est-ce que <m>\{5,13,1,8\}</m> est un sous-ensemble de <m>\{1,2,3,5,8,13,21\}</m>? Justifier</p></statement>
   </exercise>
   <exercise><statement><p>Donner le diagramme de Venn correspondant aux ensembles suivants : <m>\Omega=\{1,2,3,4,5,6\},A=\{1,3,5\},B=\{3,4,5,6\}</m>.</p></statement></exercise>
+  <exercise xml:id="exo-ABconfrel"><statement ><p>Soit <m>A,B\Omega</m> deux ensembles quelconques. Dessiner toutes les configurations relatives possibles que peuvent avoir <m>A</m> et <m>B</m> dans un diagramme de Venn. </p></statement></exercise>
   <exercise><statement><p>Donner <m>\mathscr{P}(A)</m> si <m>A=\{a,3,\Delta\}</m>.</p></statement></exercise>
   <exercise><introduction><p>Donner la cardinalité des ensembles suivants:</p></introduction>
   <task><statement><p><m>\{a\}</m></p></statement></task>
@@ -371,7 +387,7 @@ def _(A='1,2,3,a', B='2,a,3,4,pomme', C='a,b,10,pomme'):
   <task xml:id="exo-ensvide2"><statement><p><m>\{\emptyset,\{\emptyset\}\}</m></p></statement></task>
   </exercise>
   <exercise><statement><p>Exprimer en mots la différence entre les ensembles des exercices <xref ref="exo-ensdansens1"/> et <xref ref="exo-ensdansens2"/>.</p></statement></exercise>
-  <exercise><statement><p>Exprimer pourquoi la cardinalité des ensembles des exercices <xref ref="exo-ensvide1"/> et <xref ref="exo-ensvide2"/>.</p></statement></exercise>
+  <exercise><statement><p>Exprimer pourquoi la cardinalité des ensembles des exercices <xref ref="exo-ensvide1"/> et <xref ref="exo-ensvide2"/> est différente.</p></statement></exercise>
   <exercise><statemen><p>Noter toute question qui demeure suite à la lecture de la section et la résolutin des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.</p></statemen></exercise>
   </reading-questions>
 </section>
