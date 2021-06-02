@@ -20,5 +20,10 @@
     <conclusion xml:id="concl-">  <!-- Ajouter le même identifiant de la section après le - du xml:id -->
     
     </conclusion>
+    <reading-questions>
+    <introduction>
+  <p>Ces questions sont à faire avant de venir en classe et à remettre au début du cours.</p>
+  </introduction>
+    </reading-questions>
    <!--Inclure les exercices de la section ci-dessous--> 
 </section>
