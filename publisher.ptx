@@ -3,7 +3,7 @@
 
     <!-- HTML-Specific Options -->
     <html>
-        <css style="default" colors="blue_red"/>
+        <css style="default" colors="green_plum"/>
     </html>
 
 </publication>

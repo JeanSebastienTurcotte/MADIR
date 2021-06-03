@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Ce fichier constitue un fichier auxiliaire du livre                    -->
+<!--                                                                        -->
+<!--      Mathématiques discrètes : Intuition et rigueur                    -->
+<!--                                                                        -->
+<!-- Creative Commons Attribution Share Alike 4.0 International             -->
+<!-- CC-BY-4.0                                                              -->
+<!-- Jean-Sébastien Turcotte                                                -->
+
+<exercises xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="exo-">   <!-- Ajouter l'identifiant de la section après le - du xml:id -->
+    <title> Exercices </title>
+    <!-- 
+   <exercise xml:id="exo-nom">
+    <introduction>
+    <p>L'énoncé de l'exercice.</p>
+    </introduction>
+    <task>
+            <statement>
+                <p>La première lettre de la question.</p>
+            </statement>
+            <answer>
+                <p> La réponse suivra. </p>
+            </answer>
+            <solution>
+                <p> La solution suivra. </p>
+            </solution>
+    </task>
+    </exercise>
+    -->
+    <exercisegroup>
+    <title>À faire en classe au cours A</title>
+    <introduction><p>Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et d'atteindre les objectifs d'apprentissage plus avancés.</p></introduction>
+    <exercise>
+    <introduction><p>Soit <m>A=\{0,1,2,3\}</m>,<m>B=\{a,b,c,d\}</m>. Déterminer quels relations ci-dessous sont des fonctions. Expliquer pourquoi.</p></introduction>
+    <task><statement><p><m>R_1\subseteq A\times B</m> où <m>R=\{(0,d),(1,a),(2,b),(3,c)\}</m>;</p></statement></task>
+    <task><statement><p><m>R_2\subseteq A\times B</m> où <m>R_2=\{(1,a),(2,b),(3,c)\}</m>;</p></statement></task>
+<task><statement><p><m>R_3\subseteq A\times B</m> où <m>R_2=\{(0,a),(1,a),(2,b),(3,c)\}</m>;</p></statement></task>
+<task><statement><p><m>R_4\subseteq A\times B</m> où <m>R_2=\{(0,a),(1,a),(2,b),(3,c),(1,d)\}</m>;</p></statement></task>
+    <task><statement><p><m>R_5\subseteq=A\times A </m> où <m>R_5=\{(0,0),(1,0),(2,0),(3,0)\}</m>.</p></statement></task>
+    <task><statement><p><m></m></p></statement></task>
+    <task><statement><p><m></m></p></statement></task>
+    </exercise>
+    <!-- definition alternative de fonction -->
+    
+    </exercisegroup>
+    <exercisegroup>
+    <title>À faire en classe au cours B</title>
+    <introduction><p>Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et d'atteindre les objectifs d'apprentissage plus avancés.</p></introduction>
+    <!-- composition est associative -->
+    </exercisegroup>
+    <exercisegroup>
+    <title>Exercices supplémentaires</title>
+    </exercisegroup>
+</exercises>

@@ -29,7 +29,7 @@
     </exercise>
     -->
     <exercisegroup>
-    <title>À faire en classe</title>
+    <title>À faire en classe au cours B</title>
     <introduction><p>Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et d'atteindre les objectifs d'apprentissage plus avancés.</p></introduction>
     <exercise xml:id="exo-ens1">
     <introduction><p>Soit <m>A=\{0,1,2,3,4,5\}</m>, <m>B=\{0,3,6,9\}</m> et <m>\Omega=\{n\in \N~|~ n\leq 10\}</m>. Déterminer:</p></introduction>
