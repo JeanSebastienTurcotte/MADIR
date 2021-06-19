@@ -241,7 +241,8 @@ $\Box$
   <book xml:id="madir">
     <title>Mathématiques discrètes</title>
     <subtitle>Version préliminaire</subtitle>
-    <xi:include href="Chapitre_ensembleslogique.xml" />
+    <xi:include href="Chapitre_ensembles.xml" />
+    <xi:include href="Chapitre_logique.xml" />
     <conclusion><p>Version du  <date><today /></date> </p></conclusion>
   </book>
 </pretext>

@@ -50,7 +50,7 @@
     </statement>
     </definition>
     <p>Une fonction est une machine qui associe à chaque entrée exactement une sortie. Le processus par lequel s'effectue la transformation peut souvent être explicite, mais parfois implicite ou inconnu. </p>
-    <p>Si <m>C\subseteq A</m> est un sous-ensemble du domaine d'une fonction <m>f</m> et qu'on souhaite considérer la fonction restreinte sur ce sous-ensemble, on écrira <m>\left. f\right|_C</m>.</p>
+    <p>Si <m>C\subseteq A</m> est un sous-ensemble du domaine d'une fonction <m>f</m> et qu'on souhaite considérer la fonction restreinte sur ce sous-ensemble, on écrira <m>\left. f\right|_C</m> (voir l'exercice <xref ref="exo-fctrest"/>).</p>
     <example>
     <title>Des fonctions</title>
     <statement><p>On cherche parmi les relations suivantes lesquelles sont des fonctions:
@@ -687,6 +687,61 @@ Ellipse+Pts+Fleches+Txt#+Fct
     <li><p>La notion de fonction <xref ref="def-bij" text="custom">bijective</xref>.</p></li>
     </ol></p>
     </conclusion>
+    <reading-questions>
+    <introduction>
+  <p>Ces questions sont à faire avant de venir en classe et à remettre au début du cours.</p>
+  </introduction>
+  <exercisegroup>
+  <title>Exercices à remettre avant le cours A</title>
+  <exercise xml:id="exo-fctrel">
+    <introduction><p>Soit <m>A=\{0,1,2,3\}</m>,<m>B=\{a,b,c,d\}</m>. Déterminer quels relations ci-dessous sont des fonctions. Expliquer pourquoi.</p></introduction>
+    <task><statement><p><m>R_1\subseteq A\times B</m> où <m>R=\{(0,d),(1,a),(2,b),(3,c)\}</m>;</p></statement></task>
+    <task><statement><p><m>R_2\subseteq A\times B</m> où <m>R_2=\{(1,a),(2,b),(3,c)\}</m>;</p></statement></task>
+<task><statement><p><m>R_3\subseteq A\times B</m> où <m>R_2=\{(0,a),(1,a),(2,b),(3,c)\}</m>;</p></statement></task>
+<task><statement><p><m>R_4\subseteq A\times B</m> où <m>R_2=\{(0,a),(1,a),(2,b),(3,c),(1,d)\}</m>;</p></statement></task>
+    <task><statement><p><m>R_5\subseteq=A\times A </m> où <m>R_5=\{(0,0),(1,0),(2,0),(3,0)\}</m>.</p></statement></task>
+    </exercise>
+    <exercise><introduction><p>Soit <m>A=\{n\in \N~|~ 0\leq n\leq 999\}</m> les nombres naturels représentés par <m>1,2</m> ou <m>3</m> chiffres. On définit <m>f:A\to \N</m> comme la fonction qui associe à <m>a\in A</m> la somme des chiffres qui composent <m>a</m>.  Par exemple, <m>f(247)=2+4+7=15</m>.</p></introduction>
+    <task><statement><p>Déterminer <m>f(d)</m> où <m>d</m> est le jour de votre anniversaire.</p></statement></task>
+    <task><statement><p>Trouver l'image de cette fonction.</p></statement></task>
+    <task><statement><p>Trouver <m>f^{-1}(4)</m>.</p></statement></task>
+    <task><statement><p>Trouver <m>f^{-1}({2,3})</m></p></statement></task>
+    </exercise>
+    <exercise><introduction><p>Soit <m>C</m> l'ensemble de tous les chiens. Donner une ensemble <m>B</m> et une relation <m>R:A\to B</m> tels que</p></introduction>
+    <task><statement><p><m>R</m> n'est pas une fonction.</p></statement></task>
+    <task><statement><p><m>R</m> est une fonction.</p></statement></task>
+    </exercise>
+    <exercise><statement><p>Soit <m>A=\{3n-1~|~ n\in \N \text{ et } 1\leq n \leq 5\}</m> et <m>B=\{c,d,h,o,q\}</m>. Représenter dans un diagramme sagittal la fonction <m>f:A\to B</m> qui associe à <m>a\in A</m> la première lettre de son écriture dans la langue française.</p></statement></exercise>
+    <exercise>
+    <statement><p>Noter toute question qui demeure suite à la lecture de la section et la résolutin des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.</p></statement>
+    </exercise>
+    </exercisegroup>
+    <exercisegroup>
+    <title>Exercices à remettre avant le cours B</title>
+    <exercise><statement><p>Quels énoncés parmi les suivants sont équivalent à dire que <m>f:A\to B</m> est injective?
+    <ol>
+    <li><p>Le codomaine est égal à l'image.</p></li>
+    <li><p>Pour tout <m>a\in A</m> on a <m>f(a)\neq \emptyset</m>.</p></li>
+    <li><p>Si <m>a_1\neq a_2</m> alors <m>f(a_1)\neq f(a_2)</m>.</p></li> <!-- faux si C=emptyset -->
+    <li><p><m>|A|&lt; |B|</m></p></li>
+    </ol>
+    </p></statement>
+    </exercise>
+    <exercise><statement><p>Quels énoncés parmi les suivants sont équivalent à dire que <m>f:A\to B</m> est surjective?
+    <ol>
+    <li><p>Le codomaine est égal à l'image.</p></li>
+    <li><p>Pour tout <m>b\in B</m> on a <m>f^{-1}(\{b\})\neq \emptyset</m>.</p></li>
+    <li><p>Pour tout <m>C\subseteq B</m> on a <m>f^{-1}(C)\neq \emptyset</m>.</p></li> <!-- faux si C=emptyset -->
+    <li><p><m>|A|&gt; |B|</m></p></li>
+    </ol>
+    </p></statement>
+    </exercise>
+    <exercise>
+    <statement><p>Noter toute question qui demeure suite à la lecture de la section et la résolutin des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.</p></statement>
+    </exercise>
+    </exercisegroup>
+    <!--énumérer toutes les fonctions de A vers B et de B vers A -->
+    </reading-questions>
    <!--Inclure les exercices de la section ci-dessous--> 
+   <xi:include href="Exercices_fonctions.xml"/>
 </section>
-<!-- Définir f^-1(b) comme un ensemble et demander si une fonction. Revenir la dessua vec bijection -->

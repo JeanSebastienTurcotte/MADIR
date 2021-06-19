@@ -115,7 +115,7 @@ O+A+B+C
     </figure>
     </statement></task>
     </exercise>
-    <exercise>
+    <exercise xml:id="exo-diffsym">
     <introduction><p>Soit <m>A</m> et <m>B</m> deux ensembles quelconques. On définit la différence symétrique de <m>A</m> et <m>B</m>, note <m>A\oplus B</m> <fn><p>En effet, l'utilisation du symbole d'addition ne semble pas compatible avec le nom.</p></fn>, comme l'ensemble des éléments qui sont dans <m>A</m> ou <m>B</m>, mais pas les deux. </p></introduction>
     <task><statement><p>Donner la différence symétrique des ensembles <m>A,B</m> de l'exercice <xref ref="exo-ens1"/>.</p></statement></task>
     <task xml:id="exo-Venndiffsym"><statement><p>Sur un diagramme de Venn comme celui de la figure <xref ref="fig-Vennvide"/>, illustrer l'ensemble <m>A\oplus B</m>.</p>
