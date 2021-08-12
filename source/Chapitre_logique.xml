@@ -19,6 +19,8 @@
     
     <!-- Sections à inclure, dans des fichiers xml différents -->
     <xi:include href="Section_logprop.xml" />
+    <xi:include href="Section_eqlogfnc.xml" />
+    <xi:include href="Section_propquant.xml" />
     <conclusion xml:id="concl-logique">  <!-- Ajouter le même identifiant du chapitre après le - du xml:id -->
     
     </conclusion>

@@ -21,7 +21,7 @@
     <subsection>
     <title>Propositions mathématiques et connecteurs logiques</title>
     <p>L'objet le plus élémentaire de la logique est la proposition. Pour pouvoir faire un raisonnement et le valider, il faut savoir comment écrire et parler des mathématiques. </p>
-    <definition xml:id="def-enonce">
+    <definition xml:id="def-proposition">
     <title>Proposition mathématique</title>
     <statement>
     <p>Une <em>proposition</em> est un énoncé, une phrase déclarative qui est soit vraie, soit fausse.</p>
@@ -58,18 +58,25 @@
     <p>Selon le contexte, on reformulera la proposition <m>\neg p</m> pour que la formulation soit plus naturelle que &#x00AB; il n'est pas vrai que <m>p</m>&#x00BB;. </p>
     </definition>
     <p>Par exemple la négation de &#x00AB;Le Québec est une province du Canada &#x00BB; est &#x00AB; Il n'est pas vrai que le Québec est une province du Canada &#x00BB;, que l'on pourrait reformuler plus simplement comme &#x00AB; Le Québec n'est pas une province du Canada &#x00BB;.</p>
-    <definition>
+    <definition xml:id="def-conjonction">
     <title>La conjonction</title>
     <statement><p>Soit <m>p,q</m> deux propositions. On appelle <m>p</m> et <m>q</m> la conjonction de <m>p,q</m>, notée <m>p\wedge p</m>, la proposition qui est vraie lorsque <m>p</m> et <m>q</m> sont vraies.</p>
     <p>On note parfois aussi la conjonction entre <m>p</m> et <m>q</m> comme <m>p~\&amp; ~q</m>. C'est aussi la notation qui est utilisée par beaucoup de langages informatiques. Dans la partie textuelle de ces notes, on préfère l'utilisation du symbole <m>\wedge</m>, car il évoque un certain parallèle avec l'intersection de la théorie des ensembles. Le lien deviendra plus clair sous peu.  </p>
     </statement>
     </definition>
-    <definition>
+    <definition xml:id="def-disjonction">
     <title>La disjonction</title>
     <statement><p>Soit <m>p,q</m> deux propositions. On appelle <m>p</m> ou <m>q</m> la disjonction de <m>p,q</m>, notée <m>p\vee p</m>, la proposition qui est vraie lorsque <m>p</m> ou <m>q</m> sont vraies, peut-être les deux.</p>
     <p>On note parfois aussi la disjonction entre <m>p</m> et <m>q</m> comme <m>p~|~q</m>, <m>p\parallel q</m> ou <m>p+q</m>. Les deux premières notations alternatives sont celles qui sont utilisées par beaucoup de langages informatiques. Dans la partie textuelle de ces notes, on préfère l'utilisation du symbole <m>\vee</m>, car il évoque un certain parallèle avec l'union de la théorie des ensembles. Ce lien deviendra aussi plus clair sous peu. </p></statement>
     </definition>
     <p>La proposition &#x00AB; Il fait beau et je suis en congé &#x00BB; est une conjonction de deux propositions atomiques, alors que la proposition <m>On est jeudi ou c'est l'hiver</m> est une disjonction.</p>
+    <remark>
+    <title>Priorité des opérateurs</title>
+    <statement><p>Les opérateurs de disjonctions et de conjonctions sont des opérateurs binaires. Ils s'appliquent sur deux opérandes. L'opérateur de négation quant à lui est un opérateur unaire, qui s'applique sur l'opérande qui le suit. Afin d'éviter une trop grande utilisation de parenthèses, on donne la priorité à l'opérateur unaire.</p>
+    <p>
+    Ainsi, <m>\neg p\wedge q</m> est équivalent à <m>(\neg p)\wedge q</m>. Si on veut la négation d'une conjonction ou d'une disjonction, on pourra utiliser les parenthèses <m>\neg(p\vee q)</m>.
+    </p></statement>
+    </remark>
     </subsection>
     <subsection>
     <title>Table de vérité</title>
@@ -226,7 +233,7 @@
   </table>
   </sidebyside>
 </figure>
-<example>
+<example xml:id="ex-tautologie1">
 <title>Une table de vérité plus complexe</title>
 <statement><p>On considère la proposition <m>p\vee \neg (p\wedge q)</m> et on cherche à déterminer sous quelle condition elle est vraie. On utilise une table de vérité.</p></statement>
 <solution><p>Pour ce type de proposition, il convient de décomposer en plus petits morceaux et d'analyser chacun de ces morceaux afin de former le tout. La table de vérité</p>
@@ -328,11 +335,11 @@
     <subsection>
     <title>Implication, réciproque et contraposée</title>
     <p>Une autre manière de connecter des propositions est d'utiliser la formule &#x00AB; si <m>p</m>, alors <m>q</m>&#x00BB;. Par exemple, la proposition &#x00AB; S'il pleut, alors le gazon est mouillé &#x00BB; est une telle proposition.</p>
-    <definition>
+    <definition xml:id="def-implication">
     <title>L'implication logique</title>
     <statement><p>Soit <m>p</m> et <m>q</m> deux proposition. On appelle si <m>p</m>, alors <m>q</m> l'implication logique, notée <m>p\rightarrow q</m>. C'est une proposition qui est fausse lorsque <m>p</m> est vraie et <m>q</m> est fausse, mais vraie dans tous les autres cas.</p>
     <p>La proposition <m>p</m> est appelée l'hypothèse ou la prémisse et la proposition <m>q</m> est appelée la conséquence ou la conclusion.</p>
-    <p>En plus de si <m>p</m> alors <m>q</m>, on dit parfois aussi <m>p</m> implique <m>q</m>, <m>p</m> seulement si <m>q</m> ou <m>p</m> est suffisant pour que <m>q</m> soit vraie.</p>
+    <p>En plus de si <m>p</m> alors <m>q</m>, on dit parfois aussi <m>p</m> implique <m>q</m>, <m>p</m> seulement si <m>q</m>,<m>p</m> est suffisant pour que <m>q</m> soit vraie ou encore <m>q</m> est nécessaire pour avoir <m>p</m>.</p>
     </statement>
     </definition>
     <p>La table de vérité de l'implication se trouve ci-dessous.</p>
@@ -406,7 +413,7 @@
 Dans les deux premier cas, la conclusion est vraie. L'implication est alors vérifié. Il n'est pas important de savoir ce qui a causé le gazon à être mouillé. Dans le troisième cas de figure, l'implication est fausse, car elle stipule que la pluie aurait du mouiller le gazon, mais cela ne s'est pas produit. Dans le cas où il ne pleut pas et que le gazon n'est pas mouillé, l'implication serait vraie par défaut. 
 </p>
 <p>À partir d'une implication, on peut définir deux autres propositions reliées. Il est important de les distinguer.</p>
-<definition>
+<definition xml:id="def-reciproquecontraposee">
 <title>La réciproque et la contraposée d'une implication</title>
 <statement>
 <p>Soit <m>p,q</m> des propositions. La proposition <m>q\rightarrow p</m> est appelée la réciproque de <m>p\rightarrow q</m> et la proposition <m>\neg q\rightarrow \neg p</m> est appelée la contraposée.</p>
@@ -427,7 +434,7 @@ Dans les deux premier cas, la conclusion est vraie. L'implication est alors vér
         <m>\neg p</m>
       </cell>
       <cell right="medium">
-        <m>\neq q</m>
+        <m>\neg q</m>
       </cell>
       <cell>
         <m>p\rightarrow q</m>
@@ -533,7 +540,7 @@ Dans les deux premier cas, la conclusion est vraie. L'implication est alors vér
     </row>
   </tabular>
 </table>
-<p>En particulier, on remarque que l'implication et la contraposée ont exactement les mêmes valeurs de vérités en même temps. On dit de deux propositions qui possèdent cette propriété qu'elles sont équivalentes. On revient sur ce concept à la section <xref provisional="sec-equivcano"/>.</p>
+<p>En particulier, on remarque que l'implication et la contraposée ont exactement les mêmes valeurs de vérités en même temps. On dit de deux propositions qui possèdent cette propriété qu'elles sont équivalentes. On revient sur ce concept à la section <xref ref="sec-eqlogfnc"/>.</p>
 <p>La réciproque par contre n'est pas nécessairement vraie quand l'implication l'est. On peut toutefois imposer cette condition en créant la double implication.</p>
     <definition>
     <title>La double implication</title>
@@ -541,12 +548,20 @@ Dans les deux premier cas, la conclusion est vraie. L'implication est alors vér
     <p>On dit aussi <m>p</m> est nécessaire et suffisant pour <m>q</m>.</p>
     </statement>
     </definition>
-    
     </subsection>
     <!-- Sous-sections à écrire, à même ce fichier -->
     
     <conclusion xml:id="concl-logprop">  <!-- Ajouter le même identifiant de la section après le - du xml:id -->
-    
+    <p>Les éléments importants de cette section sont:
+    <ul>
+    <li><p>La définition d'une <xref ref="def-proposition" text="custom">proposition</xref>.</p></li>
+    <li><p>La <xref ref="def-negation" text="custom">négation</xref> d'une proposition et les connecteurs <xref ref="def-conjonction" text="custom"> conjonction</xref> et <xref ref="def-disjonction" text="custom">disjonction</xref>.</p></li>
+    <li><p>La notion d'implication et les formes <q>si <ellipsis/> alors</q>,<q>seulement si</q>,<q>nécessaire</q> et <q>suffisant</q>.</p> </li>
+    <li><p>La notion de <xref ref="def-reciproquecontraposee" text="custom">réciproque et de contraposée</xref>.</p></li>
+    <li><p>La construction d'une table de vérité et les tables de vérité de la conjonction, disjonction et implication.</p></li>
+    <li><p>La double implication et les formes <q>si et seulement si</q> et <q>nécessaire et suffisant</q>.</p></li>
+    </ul>
+    </p>
     </conclusion>
     <reading-questions>
     <introduction>
@@ -572,7 +587,7 @@ Dans les deux premier cas, la conclusion est vraie. L'implication est alors vér
   <task><statement><p>Si l'auteur n'a pas de frère, alors il a une soeur.</p></statement></task>
   </exercise>
   <exercise><statement><p>Tout comme pour la théorie des ensembles, on peut définir le <q>ou exclusif</q> pour des propositions logiques. Noté <m>p\oplus q</m>, cette proposition est vrai lorsqu'exactement une des propositions <m>p,q</m> est vraie.</p>
-  <p>Donner la table de vérité du ou exclusif.</p>
+  <p>Donner la table de vérité du <q>ou exclusif</q>.</p>
   </statement></exercise>
   <exercise><statement><p>Donner la table de vérité de la double implication.</p></statement></exercise>
   <exercise><introduction><p>Chaque phrase ci-dessous peut-être réécrite sous la forme d'une implication. Donner l'hypothèse et la conclusion de chacune de ces implications.</p></introduction>
@@ -582,6 +597,7 @@ Dans les deux premier cas, la conclusion est vraie. L'implication est alors vér
       <task><statement><p>Pour avoir un permis de conduire, il est nécessaire d'avoir au moins <m>16</m> ans.</p></statement></task>
       <task><statement><p>Pour pouvoir acheter de l'alcool, il suffit d'avoir 18 ans.</p></statement></task>
   </exercise>
+  <exercise><statement><p>Noter toute question qui demeure suite à la lecture de la section et la résolutin des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.</p></statement></exercise>
     </reading-questions>
    <!--Inclure les exercices de la section ci-dessous--> 
    <xi:include href="Exercices_logprop.xml"/>

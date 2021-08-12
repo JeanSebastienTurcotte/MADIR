@@ -143,10 +143,7 @@
       <solution><p>Il peut y avoir plus d'une manière valide pour décrire chacun de ces
         ensembles. En voici une: 
         <ol>
-          <li>
-            <p>
-            <m>A=\{v~|~ v \text{ est une voyelle de l'alphabet}\}</m>; 
-            </p></li>
+          <li><p><m>A=\{v~|~ v \text{ est une voyelle de l'alphabet } x\in R\}</m><!--\{v~|~ v \text{ est une voyelle de l'alphabet }\}</m>;--> </p></li>
               <li><p>
               <m>B=\{b~|~ b \text{ est un chiffre pair}\}</m>;</p>
             </li>
