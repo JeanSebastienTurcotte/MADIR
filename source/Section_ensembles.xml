@@ -223,8 +223,7 @@ O+A+B
     <statement><p>La cellule ci-dessous permet de créer le diagramme de Venn associé à trois ensembles <m>A,B,C</m>. Il est possible de modifier les éléments des ensembles et de visualiser dynamiquement comment le diagramme évolue.</p>
                     <figure xml:id="fig-sageVenn1">
                     <caption>Diagramme de Venn interactif</caption>
-
-                    <interactive platform="sage" width="100%" aspect="4:5">
+                    <interactive platform="sage" width="100%" aspect="4:5" ><!--  'preview="TEST.jpg" ins-->
                         <slate surface="sage">
 #Adapté de https://wiki.sagemath.org/interact/misc
 def f(s, braces=True): #Fonction qui permet d'écrire en texte une liste d'élément, encadrés par des accolades
@@ -291,7 +290,7 @@ def _(A='1,2,3,a', B='2,a,3,4,pomme', C='a,b,10,pomme'):
   </me>.</p>
   <p>On termine avec la liste des principaux ensembles de nombres qui seront utilisés dans ce livre.
   <ul>
-  <li><p>L'ensemble des nombres naturels, noté <m>\mathbb{N}=\{0,1,2,\ldots\}</m>.<aside><title>En passant</title><statement><p>Il n'y a pas de concensus quant à l'inclusion de l'élément <m>0</m> dans l'ensemble des nombres naturels. Certains auteurs vont l'inclure, d'autre non. L'important est la cohérence à même un texte. Parce qu'on fera une utilisation du langage informatique python/Sage et que ceux-ci commencent leur numérotation à <m>0</m>, on a choisit de l'inclure ici. Si on veut parler des naturels en excluant <m>0</m>, on le mentionnera explicitement et on dénotera l'ensemble par <m>\N^{*}</m> ou encore <m>\N\backslash\{0\}</m> (l'opération <m>\backslash</m> sera définie dans la section <xref provisional="sec-ensop"/>.</p></statement></aside></p></li>
+  <li><p>L'ensemble des nombres naturels, noté <m>\mathbb{N}=\{0,1,2,\ldots\}</m>.<aside><title>En passant</title><p>Il n'y a pas de concensus quant à l'inclusion de l'élément <m>0</m> dans l'ensemble des nombres naturels. Certains auteurs vont l'inclure, d'autre non. L'important est la cohérence à même un texte. Parce qu'on fera une utilisation du langage informatique python/Sage et que ceux-ci commencent leur numérotation à <m>0</m>, on a choisit de l'inclure ici. Si on veut parler des naturels en excluant <m>0</m>, on le mentionnera explicitement et on dénotera l'ensemble par <m>\N^{*}</m> ou encore <m>\N\backslash\{0\}</m> (l'opération <m>\backslash</m> sera définie dans la section <xref provisional="sec-ensop"/>.</p></aside></p></li>
   <li><p>L'ensemble des entiers, noté <m>\Z=\{\ldots, -2,-1,0,1,2,\ldots \}</m>.</p></li>
   <li><p>L'ensemble des nombres rationnels, noté <m>\Q=\left\{\left.\frac{a}{b}~\right|~ a,b\in \Z \text{ et } b\neq 0\right\}</m>. </p></li>
   <li><p>L'ensemble des nombres réels, noté <m>\R</m>. Pour cet ensemble, on se fie à l'intuition de ce que sont les nombres réels par exemple les nombres situé sur une droite infinie, car donner une définition précise est difficile. Cet ensemble sera peu utilisé, sa nature étant davantage du côté continu que discret.</p></li>
@@ -308,7 +307,7 @@ def _(A='1,2,3,a', B='2,a,3,4,pomme', C='a,b,10,pomme'):
   <li><p>L'ensemble <m>A</m> est composé d'éléments <m>k</m> tels que <m>k</m> est un entier dont le carré est inférieur ou égal à <m>16</m>.</p></li>
   </ul>
   </p>
-  <p>La précision de l'ensemble permet de déterminer avec certitude les éléments de l'ensemble. Par exemple, l'ensemble <m>A</m> ci-dessous est <m>A=\{-4,-3,-2,-1,0,1,2,3,4\}</m>, mais l'ensemble <m>B=\{k\in \N\~|~ k^2\leq 16\}</m> ne contient que les éléments <m>\{0,1,2,3,4\}</m>.</p>
+  <p>La précision de l'ensemble permet de déterminer avec certitude les éléments de l'ensemble. Par exemple, l'ensemble <m>A</m> ci-dessous est <m>A=\{-4,-3,-2,-1,0,1,2,3,4\}</m>, mais l'ensemble <m>B=\{k\in \N~|~ k^2\leq 16\}</m> ne contient que les éléments <m>\{0,1,2,3,4\}</m>.</p>
   <remark>
   <title>Les intervalles</title>
   <statement><p>On délimite les ensembles par les paires d'accolades, soit en énumérant les éléments ou en donnant une description des membres. Pour les ensembles dont la cardinalité est infinie, il peut être difficile ou impossible d'énumérer les éléments. En particulier, certains sous-ensemble des nombres réels sont particulièrement important qu'on leur donne une notation propre à eux. Ce sont les intervalles. Voici quatre exemples de cette notation:

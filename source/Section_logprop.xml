@@ -343,7 +343,7 @@
     </statement>
     </definition>
     <p>La table de vérité de l'implication se trouve ci-dessous.</p>
-    <table>
+    <table xml:id="tab-implication">
     <title>Table de vérité de l'implication</title>
   <tabular top="major">
     <row>
