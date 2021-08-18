@@ -68,10 +68,11 @@
   <exercise>
   <statement><p>On considère le scénario suivant. Une urne <m>U</m> contient deux billes blanches et une bille noire. La proposition
   <me>
-  \forall b\in U\, \text{couleur}(b)=blanche
+  \forall b\in U\, \text{couleur}(b)=\text{blanche}
   </me> 
-  est fausse. Si l'urne ne contient aucune bille, que peut-on dire de la proposition? Expliquer.
+  est fausse. Si l'urne ne contient aucune bille, que peut-on dire de cette même proposition? Expliquer.
   </p></statement>
+  <hint><p>Est-ce que la négation de cette proposition est vraie ou fausse?</p></hint>
   </exercise>
   <exercise><introduction><p>Soit <m>x,y</m> des nombres réels. Traduire les propositions suivantes en langue française et déterminer la valeur de vérité de chacune.</p></introduction>
   <task><statement><p><m>\forall x \exists y \,(x&lt; y)</m></p></statement></task>
@@ -116,6 +117,107 @@
   <me>\forall x\,(P(x)\vee Q(x))\equiv \forall x \,P(x)\vee \forall x \,Q(x)</me>?</p>
   <p>Démontrer ou trouver une exemple.</p></statement>
   <hint><p>Il faut penser à des propositions <m>P,Q</m> qui sont complémentaires.</p></hint>
+  </exercise>
+  <exercise><introduction><p>Soit <m>f,g</m> des figures quelconques. On définit les éléments de notation suivants:
+  <ul>
+  <li><p>Triangle(<m>f</m>),Cercle(<m>f</m>),Carré(<m>f</m>) représentent respectivement la proposition <m>f</m> est un triangle, cercle ou carré.</p></li>
+  <li><p>Rouge(<m>f</m>),Vert(<m>f</m>),Bleu(<m>f</m>) représentent respectivement la proposition la figure <m>f</m> est de couleur rouge,vert, bleu.</p></li>
+  <li><p>Gauche(f,g),Droite(f,g),Haut(f,g),Bas(f,g) représente respectivement la proposition <m>f</m> est à gauche, à droite, en haut, en bas de <m>g</m>.</p></li>
+  <li><p>MêmeCouleur(<m>f,g</m>),MêmeForme(<m>f,g</m>) représente respectivement les figures <m>f,g</m> ont la même couleur,forme.</p></li>
+  </ul>
+  La figure interactive suivante permet d'afficher un certain nombre de formes géométriques de couleurs variées.</p>
+  <figure>
+  <caption>Une grille interactive de figures</caption>
+  <interactive platform="sage" width="100%" aspect="4:5">
+  <instructions>Changer la densité afin d'avoir plus ou moins de figure dans la grille. La densité représente de manière approximative le pourcentage de cases qui contiennent des figures géométriques.</instructions>
+  <slate surface="sage">
+grille=line([(-2.5,-2.5),(-2.5,2.5)],color="black")+line([(-2.5+1,-2.5),(-2.5+1,2.5)],color="black")+line([(-2.5+2,-2.5),(-2.5+2,2.5)],color="black")+line([(-2.5+3,-2.5),(-2.5+3,2.5)],color="black")+line([(-2.5+4,-2.5),(-2.5+4,2.5)],color="black")+line([(-2.5+5,-2.5),(-2.5+5,2.5)],color="black")+line([(-2.5,-2.5),(2.5,-2.5)],color="black")+line([(-2.5,-2.5+1),(2.5,-2.5+1)],color="black")+line([(-2.5,-2.5+2),(2.5,-2.5+2)],color="black")+line([(-2.5,-2.5+3),(2.5,-2.5+3)],color="black")+line([(-2.5,-2.5+4),(2.5,-2.5+4)],color="black")+line([(-2.5,-2.5+5),(2.5,-2.5+5)],color="black",axes=False)
+taille=0.35
+def disque(i=0,j=0):
+    coul=choice(["blue","red","green"])
+    d=disk((0+i,0+j),taille,(0,2*pi),color=coul)
+    return d
+def carre(i=0,j=0):
+    coul=choice(["blue","red","green"])
+    c=polygon([(-taille+i,-taille+j),(taille+i,-taille+j),(taille+i,taille+j),(-taille+i,taille+j)],color=coul)
+    return c
+def triangle(i=0,j=0):
+    coul=choice(["blue","red","green"])
+    t=polygon([(-taille+i,-taille+j),(taille+i,-taille+j),(0+i,taille+j)],color=coul)
+    return t
+@interact
+def _(densite=slider(0,1,default=0.45)):
+    out=grille
+    nonvide=[]
+    for i in range(-2,3):
+        for j in range(-2,3):
+            if random()&lt;densite:
+                f=choice([disque(i,j),carre(i,j),triangle(i,j)])
+                out+=f
+                nonvide+=[[i,j]]
+    lettres=['$a$','$b$','$c$','$d$','$e$','$g$','$h$','$i$','$j$','$k$','$l$','$m$','$n$','$o$','$p$','$q$','$r$','$s$','$t$','$u$','$v$','$w$','$x$','$y$','$z$']
+    noms=lettres[0:len(nonvide)]
+    shuffle(noms)
+    for t in range(len(nonvide)):
+        out+=text(noms[t],nonvide[t],color="white",fontsize=20)
+    out.show()
+  </slate>
+  </interactive>
+  </figure>
+  </introduction>
+  <task><introduction><p>Pour chaque proposition, décrire en mots, déterminer la valeur de vérité et écrire la négation sous une forme symbolique simplifiée. L'ensemble univers est toujours la grille et sera omis pour alléger l'écriture des propositions.</p></introduction>
+  <task>
+  <statement><p><m>\exists f \, (\text{Triangle}(f)\wedge \text{Vert}(f))\vee(\text{Carré}(f)\wedge \text{Rouge}(f)) </m></p></statement>
+  </task>
+  <task>
+  <statement><p><m>\forall f \, \text{Cercle}(f)\rightarrow (\text{Bleu}(f)\vee \text{Vert}(f)) </m></p></statement>
+  </task>
+  <task>
+  <statement><p><m>\forall f \, (\text{Rouge}(f)\wedge \text{Cercle}(f)\wedge f\neq a)\rightarrow \text{Haut}(f,a) </m></p></statement>
+  </task>
+  <task>
+  <statement><p><m>\exists f \, \text{Carré}(f)\wedge \text{Droite}(f,a)  </m></p></statement>
+  </task>
+  <task>
+  <statement><p><m>\exists f_1 \, \text{Triangle}(f_1)\wedge \forall f_2\,(\text{Carré}(f_2)\rightarrow \text{Gauche}(f_1,f_2)) </m></p></statement>
+  </task>
+  <task>
+  <statement><p><m>\forall f_1 \, \text{Cercle}(f_1)\rightarrow \exists f_2\,(\neg \text{Cercle}(f_2)\wedge \text{MêmeCouleur}(f_1,f_2))  </m></p></statement>
+  </task>
+  <task>
+  <statement><p><m>\forall f_1 \, \text{Rouge}(f_1)\rightarrow \forall f_2\,(\text{Bleu}(f_2)\rightarrow \text{Haut}(f_1,f_2))  </m></p></statement>
+  </task>
+   <task>
+  <statement><p><m>\exists f_1 \, \text{Vert}(f_1)\wedge \exists f_2\,( \text{Bleu}(f_2)\wedge \text{MêmeForme}(f_1,f_2))  </m></p></statement>
+  </task>
+</task>
+
+<task><introduction><p>Pour chaque proposition, décrire en symbole, déterminer la valeur de vérité et écrire la négation en langage courant. L'ensemble univers est toujours la grille et sera omis pour alléger l'écriture des propositions.</p></introduction>
+  <task>
+  <statement><p>Il existe une forme géométrique rouge à la droite de <m>a</m>.</p></statement>
+  </task>
+  <task>
+  <statement><p>La couleur d'un cercle n'est pas bleue ou il existe une carré en bas de <m>a</m>.</p></statement>
+  </task>
+  <task>
+  <statement><p>Il y a un triangle vert à droite d'un cercle bleu.</p></statement>
+  </task>
+  <task>
+  <statement><p>Il existe une forme autre que <m>a</m> qui est identique.</p></statement>
+  </task>
+  <task>
+  <statement><p>Pour tout cercle, on peut trouver un carré de même couleur.</p></statement>
+  </task>
+  <task>
+  <statement><p>Il existe une figure rouge telle que tous les carrés sont à sa gauche.</p></statement>
+  </task>
+  <task>
+  <statement><p>Tous les cercles sont en haut des triangles.</p></statement>
+  </task>
+   <task>
+  <statement><p>Il existe un triangle et il existe un carré tels que le carré est à droite ou en haut du triangle.</p></statement>
+  </task>
+</task>
   </exercise>
     <!-- exo style #28 Rosen faire parallèle avec ceux dans en classe -->
     </exercisegroup>

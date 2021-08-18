@@ -197,11 +197,11 @@
     </ul></p>
     <p>On réécrit ces deux possibilités en langage symbolique:
     <me>
-    \exists g \forall a \,G(a)=g
+    \exists g \,\forall a \,G(a)=g
     </me>
     signifie qu'il existe un unique gardien qui est le gardien de tous les animaux alors que
     <me>
-    \forall a \exists g \, G(a)=g
+    \forall a \,\exists g \, G(a)=g
     </me>
     signifie que chaque animal possède son gardien. On note toutefois que cela n'empêche pas que deux animaux aient le même gardien.
     </p>
@@ -249,8 +249,8 @@ formes+txt
     \forall x \forall y\, P(x,y)
     </me>. En utilisant un procédé similaire, on obtient
     <md>
-    <mrow>\neg(\forall x \forall y\, P(x,y))&amp;\equiv \exists x \neg(\forall y\, P(x,y))</mrow>
-    <mrow>            &amp;\equiv \exists x \exists y\,\neg P(x,y)</mrow>
+    <mrow>\neg(\forall x \forall y\, P(x,y))&amp;\equiv \exists x\, \neg(\forall y\, P(x,y))</mrow>
+    <mrow>            &amp;\equiv \exists x\, \exists y\,\neg P(x,y)</mrow>
     </md>.</p>
     </subsection>
     <!-- faire la double negation avec forall forall et exists forall. Les autres sont dans les exos en classe -->
@@ -258,7 +258,17 @@ formes+txt
     <!-- Sous-sections à écrire, à même ce fichier -->
     
     <conclusion xml:id="concl-propquant">  <!-- Ajouter le même identifiant de la section après le - du xml:id -->
-    
+    <p>Les éléments importants de cette section sont:
+    <ul>
+    <li><p>La notion de prédicat, à distinguer d'une proposition.</p></li>
+    <li><p>Le quantificateur <xref ref="def-existe" text="custom">existentiel</xref> et son symbole <m>\exists</m>.</p></li>
+    <li><p>Le quantificateur <xref ref="def-pourtout" text="custom">universel</xref> et son symbole <m>\forall</m>.</p></li>
+    <li><p>Les notations raccourcies <m>\Rightarrow</m> et <m>\Leftrightarrow</m>.</p></li>
+    <li><p>La négation d'une proposition quantifiée par un quantificateur existentiel est une proposition quantifiée par un quantificateur universel suivi de la négation du prédicat. </p></li>
+    <li><p>La négation d'une proposition quantifiée par un quantificateur universel est une proposition quantifiée par un quantificateur existentiel suivi de la négation du prédicat. </p></li>
+    <li><p>L'importance de l'ordre des quantificateurs lorsque plus d'un quantificateur de type différent sont présents.</p></li>
+    </ul>
+    </p>
     </conclusion>
     <reading-questions xml:id="rq-propquant">  <!-- Ajouter le même identifiant de la section après le - du xml:id -->
     <introduction>
@@ -274,6 +284,24 @@ formes+txt
   <task><statement><p><m>\forall x&lt;0 \,P(x)</m>;</p></statement></task>
   <task><statement><p><m>\forall x\in \R \,\neg P(x)</m>;</p></statement></task>
   <task><statement><p><m>\forall x&lt;0 \,\neg P(x)</m>;</p></statement></task>
+  </exercise>
+  <exercise><introduction><p>Dans une ferme, on retrouve les animaux suivants: un chien blanc et noir ainsi qu'un chien brun, treize vaches de couleur blanche et noire, seize moutons blancs, quatre chats noirs, trente-trois poules brunes.</p>
+  <p>On considère les éléments de notation suivants:
+  <ul>
+  <li><p><m>d,v,m,c,p</m> respectivement pour chien,vache,mouton,chat et poule.</p></li>
+  <li><p><m>BN,Br,B,N,J,G</m> respectivement pour possède la couleur blanc et noir,brun,noir,jaune et enfin gris, et plus généralement <m>C</m> pour une allusion à la couleur quelconque.</p></li>
+  <li><p><m>M,O</m> respectivement pour est un mammifère ou un oiseau.</p></li>
+  <li><p><m>P</m> pour le nombre d'animaux est premier</p></li>
+  <li><p><m>F=\{d,v,m,c,p\}</m> l'ensemble des espèces animales de cette ferme.</p></li>
+  </ul></p>
+  <p>La proposition  <m>\exists a\in F\, c(a)\wedge Br(a)</m> peut être interprétée comme <q>il existe un chien brun</q>. Identifier les prédicats et transcrire en symbolique les propositions suivantes.</p>
+  </introduction>
+  <task><statement><p>Il y a une animal jaune à cette ferme.</p></statement></task>
+  <task><statement><p>Tous les animaux de la ferme sont des mammifères ou des oiseaux.</p></statement></task>
+  <task><statement><p>Pour tout animal, avoir du blanc signifie aussi avoir du noir.</p></statement></task>
+  <task><statement><p>Le nombre d'animaux d'une certaines espèces est un nombre premier.</p></statement></task>
+  <task><statement><p>Aucun animal n'est de couleur grise.</p></statement></task>
+  <task><statement><p>Il existe deux animaux de même couleurs et qui ne sont pas des vaches.</p></statement></task>
   </exercise>
 <exercise><statement><p>Est-ce que <m>\forall x\,\exists y \,P(x,y)\equiv \exists y\,\forall x \,P(x,y) </m>? Argumenter ou donner un exemple où l'équivalence n'est pas vraie.</p></statement></exercise>
 <exercise><statement><p>Est-ce que <m>\forall x\,\forall y \,P(x,y)\equiv \forall y\,\forall x \,P(x,y) </m>? Argumenter ou donner un exemple où l'équivalence n'est pas vraie.</p></statement></exercise>

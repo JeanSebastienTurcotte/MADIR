@@ -220,10 +220,11 @@ O+A+B
     <p>On peut remarquer dans la figure <xref ref="fig-Venn1"/> que les éléments <m>3,4</m> sont à la fois dans <m>A</m> et dans <m>B</m>. C'est un cas particulier de l'intersection de deux ensembles, qui sera défini dans la section <xref provisional="sec-opens"/>.</p>
     <example xml:id="ex-Venn">
     <title>Diagramme de Venn: dynamique</title>
-    <statement><p>La cellule ci-dessous permet de créer le diagramme de Venn associé à trois ensembles <m>A,B,C</m>. Il est possible de modifier les éléments des ensembles et de visualiser dynamiquement comment le diagramme évolue.</p>
+    <statement><p>La cellule ci-dessous permet de créer le diagramme de Venn associé à trois ensembles <m>A,B,C</m>.</p>
                     <figure xml:id="fig-sageVenn1">
                     <caption>Diagramme de Venn interactif</caption>
                     <interactive platform="sage" width="100%" aspect="4:5" ><!--  'preview="TEST.jpg" ins-->
+                    <instructions>Il est possible de modifier les éléments des ensembles et de visualiser dynamiquement comment le diagramme évolue.</instructions>
                         <slate surface="sage">
 #Adapté de https://wiki.sagemath.org/interact/misc
 def f(s, braces=True): #Fonction qui permet d'écrire en texte une liste d'élément, encadrés par des accolades
