@@ -30,7 +30,7 @@
     -->
     <exercisegroup>
     <title>À faire en classe</title>
-    <introduction><p>Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et d'atteindre les objectifs d'apprentissage plus avancés.</p></introduction>
+    <introduction><p>Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.</p></introduction>
     <exercise><introduction><p>Déterminer si les expressions suivantes sont des tautologies, des contradictions ou des propositions quelconques.</p></introduction>
     <task><statement><p><m>p\wedge \neg (q\rightarrow p)</m></p></statement></task>
     <task><statement><p><m>((p\rightarrow q)\wedge \neg q)\rightarrow \neg p</m></p></statement></task>

@@ -30,7 +30,7 @@
     -->
     <exercisegroup>
     <title>À faire en classe</title>
-    <introduction><p>Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et d'atteindre les objectifs d'apprentissage plus avancés.</p></introduction>
+    <introduction><p>Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.</p></introduction>
     <exercise><introduction><p>Si <m>P(x,y)</m> représente la proposition <q>Il existe un nombre <m>n\in \N</m> tel que <m>x\leq n &lt; y</m>.</q>, déterminer la valeur de vérité de</p></introduction>
     <task><statement><p><m>P(1,2)</m>;</p></statement></task>
     <task><statement><p><m>P(3,4)</m>;</p></statement></task>

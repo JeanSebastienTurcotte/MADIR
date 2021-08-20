@@ -30,7 +30,7 @@
     objet, on peut déterminer sans aucun doute son appartenance ou non à
     l'ensemble.</p>
     <p>Dans cette section, on définit la notion d'ensemble, la description en
-    extension et en compréhension d'un ensemble, la relation d'appartendance
+    extension et en compréhension d'un ensemble, la relation d'appartenance
     d'un objet à un ensemble, la relation entre deux ensembles et la
     cardinalité d'un ensemble. On donne aussi des exemples importants
     d'ensembles, dont l'ensemble vide.</p>
@@ -48,8 +48,8 @@
         <p>Un ensemble est une collection non ordonnée d'objets. On appelle
         aussi les objets des éléments ou des membres. Typiquement, on dénote un
         ensemble par une lettre majuscule du début de l'alphabet.</p>
-        <p>Typiquement, les ensembles sont utilisés pour regrouper des objets
-        avec des propriétés similaires, mais rien n'oblige que ce soit le cas.
+        <p>Bien que les ensembles soient normalement utilisés pour regrouper des objets
+        avec des propriétés similaires, rien n'oblige que ce soit le cas.
         On peut même avoir un ensemble dont les éléments sont eux-mêmes des
         ensembles.</p>
       </statement>
@@ -123,11 +123,11 @@
     <p>Dans la description en extension de l'ensemble des carrés parfaits
     inférieurs à 
     <m>100</m>, on a utilisé les 
-    &#x00AB;<m>\ldots</m>&#x00BB; afin de limiter l'écriture. On comprend que la suite définie
+    &#x00AB;<ellipsis/>&#x00BB; afin de limiter l'écriture. On comprend que la suite définie
     par les premiers termes de la description continue de manière naturelle
     dans cette omission. Souvent, pour décrire un ensemble contenant beaucoup
     d'éléments, même une infinité, on utilisera la description en compréhension
-    de l'ensemble. On énonce alors la (ou les) propriété que possède les
+    de l'ensemble. On énonce alors la (ou les) propriété que possèdent les
     éléments de l'ensemble à l'intérieur même de la description. Dans ce cas,
     on utilisera souvent pour dénoter un élément arbitraire de l'ensemble une
     lettre minuscule analogue à celle utilisée pour le nom de l'ensemble ou
@@ -141,7 +141,7 @@
       </ol>
       </p></statement>
       <solution><p>Il peut y avoir plus d'une manière valide pour décrire chacun de ces
-        ensembles. En voici une: 
+        ensembles. En voici une pour chacun: 
         <ol>
           <li><p><m>A=\{v~|~ v \text{ est une voyelle de l'alphabet } x\in R\}</m><!--\{v~|~ v \text{ est une voyelle de l'alphabet }\}</m>;--> </p></li>
               <li><p>
@@ -160,8 +160,8 @@
     <p>Étant donné un objet quelconque <m>a</m> et un ensemble <m>A</m>, on écrit <m>a\in A</m> (se lit <m>a</m> est dans <m>A</m> ou encore <m>a</m> appartient à <m>A</m>) si <m>a</m> est un élément de l'ensemble <m>A</m> et <m>a\notin A</m> (<m>a</m> n'appartient pas à <m>A</m>) sinon. Puisque plusieurs descriptions sont possibles pour un même ensemble, il peut être pratique de déterminer si deux ensembles sont égaux. On définit ci-dessous deux relations possibles entre deux ensembles, celle d'inclusion et celle d'égalité.</p>
     <definition xml:id="def-ssens">
     <title>Relation d'inclusion</title>
-    <statement><p>Soit <m>A</m> et <m>B</m> deux ensembles avec la propriété que pour tout élément <m>a\in A</m> on a aussi <m>a\in B</m>. On dit alors que <m>A</m> est un sous-ensemble de <m>B</m> et on écrit  <m>A\subseteq B</m>. Si on est certain que les ensembles sont différents, on pourra utiliser le symbole d'inclusion stricte, <m>\subset</m>. Ces symboles font penser aux symboles pour les inégalités. Ainsi, bien que d'usage beaucoup moins répandue, on peut aussi écrire <m>B\supseteq A</m>.</p>
-    <p>Ces symboles existent aussi dans leur version &#x00AB;négative&#x00BB; (<m>\not\subseteq,\not\subset,\not\supseteq,\not\supset</m>), utilisés pour la non inclusion d'un ensemble dans un autre. </p>
+    <statement><p>Soit <m>A</m> et <m>B</m> deux ensembles avec la propriété que, pour tout élément <m>a\in A</m>, on a aussi <m>a\in B</m>. On dit alors que <m>A</m> est un sous-ensemble de <m>B</m> et on écrit  <m>A\subseteq B</m>. Si on est certain que les ensembles sont différents, on pourra utiliser le symbole d'inclusion stricte, <m>\subset</m>. Ces symboles font penser aux symboles pour les inégalités. Ainsi, bien que d'usage beaucoup moins répandu, on peut aussi écrire <m>B\supseteq A</m>.</p>
+    <p>Ces symboles existent aussi dans leur version &#x00AB;négative&#x00BB; (<m>\not\subseteq,\not\subset,\not\supseteq,\not\supset</m>), utilisés pour la non inclusion d'un ensemble dans un autre. De plus, une variante souvent utilisée pour mettre l'emphase sur un sous-ensemble stricte est le symbole <m>\subsetneq</m>. </p>
     </statement>
     </definition>
     <p>On peut évidemment vérifier qu'un ensemble est un sous-ensemble d'un autre, mais on peut aussi créer les sous-ensembles à partir d'un ensemble.</p>
@@ -194,7 +194,7 @@
     <mrow>C&amp;=\{4,6,2\}</mrow>
     <mrow>D&amp;=\{n~|~ -1\leq n\leq 9\}</mrow>
     </md></p>
-    <p>On peut remarquer les relations suivantes: <m>C\subseteq A</m>,<m>A\subseteq C</m>,<m>A\subseteq B</m>,<m>B\subset D</m>,<m>A=C</m>. On aurait pu noter sans problème que <m>B\subseteq D</m>, mais pas que <m>A\subset C</m>.</p>
+    <p>On peut remarquer les relations suivantes: <m>C\subseteq A</m>,<m>A\subseteq C</m>,<m>A\subseteq B</m>,<m>B\subset D</m>,<m>A=C</m>. On aurait pu noter sans problème que <m>B\subsetneq D</m> (équivalent à <m>\subset</m>, ou même <m>B\subseteq D</m> (moins strict, mais quand même vrai), mais pas que <m>A\subset C</m>.</p>
     </statement>
     </example>
     <p>Le nombre d'éléments dans un ensemble est appelé la <em>cardinalité</em> de l'ensemble. Pour un ensemble <m>A</m>, on la note <m>\text{card}(A)=|A|</m>. Les ensembles <m>A,B,C</m> de l'exemple <xref ref="ex-relens"/> ont respectivement comme cardinalité <m>|A|=3,|B|=10</m> et <m>|C|=3</m>. </p>
@@ -217,10 +217,10 @@ B=circle((1,0),2,color="red")+text("$B$",(2,2),color="red")+text("$5$",(2,1),col
 O+A+B
     </sageplot></image>
     </figure>
-    <p>On peut remarquer dans la figure <xref ref="fig-Venn1"/> que les éléments <m>3,4</m> sont à la fois dans <m>A</m> et dans <m>B</m>. C'est un cas particulier de l'intersection de deux ensembles, qui sera défini dans la section <xref provisional="sec-opens"/>.</p>
+    <p>On peut remarquer dans la figure <xref ref="fig-Venn1"/> que les éléments <m>3,4</m> sont à la fois dans <m>A</m> et dans <m>B</m>. C'est un cas particulier de l'intersection de deux ensembles, qui sera défini dans la section <xref ref="sec-opens"/>.</p>
     <example xml:id="ex-Venn">
     <title>Diagramme de Venn: dynamique</title>
-    <statement><p>La cellule ci-dessous permet de créer le diagramme de Venn associé à trois ensembles <m>A,B,C</m>.</p>
+    <statement><p>On peut voir un diagramme de Venn associé à trois ensembles <m>A,B,C</m>.</p>
                     <figure xml:id="fig-sageVenn1">
                     <caption>Diagramme de Venn interactif</caption>
                     <interactive platform="sage" width="100%" aspect="4:5" ><!--  'preview="TEST.jpg" ins-->
@@ -279,7 +279,9 @@ def _(A='1,2,3,a', B='2,a,3,4,pomme', C='a,b,10,pomme'):
   </subsection>
   <subsection>
   <title>Ensembles particuliers</title>
-  <p>On donne maintenant la définition de certains ensembles importants. L'un deux, l'ensemble univers a déjà été mentionné. Un autre ensemble d'une grande importance est l'ensemble vide. On le note par <m>\emptyset</m> ou encore <m>\{\}</m>. Sa cardinalité est de <m>0</m>. C'est le seul ensemble qui possède cette propriété. Il possède aussi la propriété d'être un sous-ensemble de tous les ensembles, incluant lui-même. On reviendra sur cette drôle de particularité dans la section <xref provisional="sec-logique"/>. </p>
+  <p>On donne maintenant la définition de certains ensembles importants. L'un deux, l'ensemble univers a déjà été mentionné. Un autre ensemble d'une grande importance est l'ensemble vide. On le note par <m>\emptyset</m> ou encore <m>\{\}</m>. Sa cardinalité est de <m>0</m>. C'est le seul ensemble qui possède cette propriété. Il possède aussi la propriété d'être un sous-ensemble de tous les ensembles, incluant lui-même. 
+  <!-- TODO -->
+  <!--On reviendra sur cette drôle de particularité dans la section <xref provisional="sec-logique"/>--><!-- À voir de quoi il était question?-->. </p>
   <p>Un autre sous-ensemble a été évoqué à l'exemple <xref ref="ex-enspuiss"/>. On en donne une définition plus précise ci-bas.</p>
   <definition xml:id="def-enspuiss">
   <title>L'ensemble des puissances</title>
@@ -289,12 +291,12 @@ def _(A='1,2,3,a', B='2,a,3,4,pomme', C='a,b,10,pomme'):
   <me>
   \mathscr{P}(A)=\{\emptyset,A_1,A_2,A_3,A_4,A_5,A_6,A\}
   </me>.</p>
-  <p>On termine avec la liste des principaux ensembles de nombres qui seront utilisés dans ce livre.
+  <p>On termine avec la liste des principaux ensembles de nombres qui seront utilisés dans ces notes.
   <ul>
-  <li><p>L'ensemble des nombres naturels, noté <m>\mathbb{N}=\{0,1,2,\ldots\}</m>.<aside><title>En passant</title><p>Il n'y a pas de concensus quant à l'inclusion de l'élément <m>0</m> dans l'ensemble des nombres naturels. Certains auteurs vont l'inclure, d'autre non. L'important est la cohérence à même un texte. Parce qu'on fera une utilisation du langage informatique python/Sage et que ceux-ci commencent leur numérotation à <m>0</m>, on a choisit de l'inclure ici. Si on veut parler des naturels en excluant <m>0</m>, on le mentionnera explicitement et on dénotera l'ensemble par <m>\N^{*}</m> ou encore <m>\N\backslash\{0\}</m> (l'opération <m>\backslash</m> sera définie dans la section <xref provisional="sec-ensop"/>.</p></aside></p></li>
+  <li><p>L'ensemble des nombres naturels, noté <m>\mathbb{N}=\{0,1,2,\ldots\}</m>.<aside><title>En passant</title><p>Il n'y a pas de consensus quant à l'inclusion de l'élément <m>0</m> dans l'ensemble des nombres naturels. Certains auteurs vont l'inclure, d'autres non. L'important est la cohérence à même un texte. Parce qu'on fera une utilisation du langage informatique python/Sage et que ceux-ci commencent leur numérotation à <m>0</m>, on a choisit de l'inclure ici. Si on veut parler des naturels en excluant <m>0</m>, on le mentionnera explicitement et on dénotera l'ensemble par <m>\N^{*}</m> ou encore <m>\N\backslash\{0\}</m> (l'opération <m>\backslash</m> sera définie dans la section <xref ref="sec-opens"/>).</p></aside></p></li>
   <li><p>L'ensemble des entiers, noté <m>\Z=\{\ldots, -2,-1,0,1,2,\ldots \}</m>.</p></li>
   <li><p>L'ensemble des nombres rationnels, noté <m>\Q=\left\{\left.\frac{a}{b}~\right|~ a,b\in \Z \text{ et } b\neq 0\right\}</m>. </p></li>
-  <li><p>L'ensemble des nombres réels, noté <m>\R</m>. Pour cet ensemble, on se fie à l'intuition de ce que sont les nombres réels par exemple les nombres situé sur une droite infinie, car donner une définition précise est difficile. Cet ensemble sera peu utilisé, sa nature étant davantage du côté continu que discret.</p></li>
+  <li><p>L'ensemble des nombres réels, noté <m>\R</m>. Pour cet ensemble, on se fie à l'intuition de ce que sont les nombres réels, par exemple les nombres situé sur une droite infinie, car donner une définition précise est difficile. Cet ensemble sera peu utilisé, sa nature étant davantage du côté continu que discret.</p></li>
   </ul>
   </p>
   <p>Dans la description d'un ensemble en compréhension, lorsque les éléments sont des nombres, il est de bon usage de spécifier dans quel ensemble ces nombres se trouvent. Il n'y a pas de manière unique de le faire, en voici deux:
@@ -308,10 +310,10 @@ def _(A='1,2,3,a', B='2,a,3,4,pomme', C='a,b,10,pomme'):
   <li><p>L'ensemble <m>A</m> est composé d'éléments <m>k</m> tels que <m>k</m> est un entier dont le carré est inférieur ou égal à <m>16</m>.</p></li>
   </ul>
   </p>
-  <p>La précision de l'ensemble permet de déterminer avec certitude les éléments de l'ensemble. Par exemple, l'ensemble <m>A</m> ci-dessous est <m>A=\{-4,-3,-2,-1,0,1,2,3,4\}</m>, mais l'ensemble <m>B=\{k\in \N~|~ k^2\leq 16\}</m> ne contient que les éléments <m>\{0,1,2,3,4\}</m>.</p>
+  <p>La précision de l'ensemble permet de déterminer avec certitude les éléments de l'ensemble. Par exemple, l'ensemble <m>A</m> ci-dessus est <m>A=\{-4,-3,-2,-1,0,1,2,3,4\}</m>, mais l'ensemble <m>B=\{k\in \N~|~ k^2\leq 16\}</m> ne contient que les éléments <m>\{0,1,2,3,4\}</m>.</p>
   <remark>
   <title>Les intervalles</title>
-  <statement><p>On délimite les ensembles par les paires d'accolades, soit en énumérant les éléments ou en donnant une description des membres. Pour les ensembles dont la cardinalité est infinie, il peut être difficile ou impossible d'énumérer les éléments. En particulier, certains sous-ensemble des nombres réels sont particulièrement important qu'on leur donne une notation propre à eux. Ce sont les intervalles. Voici quatre exemples de cette notation:
+  <statement><p>On délimite les ensembles par les paires d'accolades, soit en énumérant les éléments ou en donnant une description des membres. Pour les ensembles dont la cardinalité est infinie, il peut être difficile ou impossible d'énumérer les éléments. En particulier, certains sous-ensembles des nombres réels sont assez importants pour qu'on leur donne une notation propre à eux. Ce sont les intervalles. Voici quatre exemples de cette notation:
   <md>
   <mrow>[a,b]&amp;=\{x\in \R~|~ a\leq x\leq b\}</mrow>
    <mrow>[a,b[&amp;=\{x\in \R~|~ a\leq x&lt; b\}</mrow>
@@ -323,6 +325,7 @@ def _(A='1,2,3,a', B='2,a,3,4,pomme', C='a,b,10,pomme'):
   </remark>
   </subsection>
   <conclusion xml:id="concl-ens">
+  <title>En résumé</title>
   <p>Les points importants de cette section sont:
   <ul>
   <li><p>La définition d'un <xref ref="def-ensemble" text="custom">ensemble</xref>.</p></li>
@@ -335,57 +338,12 @@ def _(A='1,2,3,a', B='2,a,3,4,pomme', C='a,b,10,pomme'):
     <!-- Ajouter le même identifiant de la section après le - du xml:id -->
   </conclusion>
   <!--Inclure les exercices de la section ci-dessous-->
-  <reading-questions>
+  <!--<reading-questions>
   <introduction>
   <p>Ces questions sont à faire avant de venir en classe et à remettre au début du cours.</p>
   </introduction>
-  <exercise>
-  <introduction>
-  <p>Écrire les ensembles suivants en extension et dire si <m>-2</m> et <m>5</m> font partie de ces ensembles:</p>
-  </introduction>
-  <task>
-  <statement><p><m>\{z\in \Z~|~ -3\leq z&lt; 5\}</m>;</p></statement>
-  </task>
-   <task>
-  <statement><p><m>\{\frac{a}{b}~|~ a,b\in \{-5,2,10\}\}</m>;</p></statement>
-  </task>
-   <task>
-  <statement><p><m>\{n\in \N~|~ n \text{ est un facteur de } 60\}</m>;</p></statement>
-  </task>
-  </exercise>
-  <exercise>
-  <introduction>
-  <p>Écrire les ensembles suivants en compréhension:</p>
-  </introduction>
-  <task>
-  <statement>
-  <p><m>\{1,2,3,4\}</m></p>
-  </statement></task>
-  <task>
-  <statement>
-  <p><m>\{1,1,-1\}</m></p>
-  </statement>
-  </task>
-  </exercise>
-  <exercise>
-  <statement><p>Est-ce que <m>\{5,13,1,8\}</m> est un sous-ensemble de <m>\{1,2,3,5,8,13,21\}</m>? Justifier</p></statement>
-  </exercise>
-  <exercise><statement><p>Donner le diagramme de Venn correspondant aux ensembles suivants : <m>\Omega=\{1,2,3,4,5,6\},A=\{1,3,5\},B=\{3,4,5,6\}</m>.</p></statement></exercise>
-  <exercise xml:id="exo-ABconfrel"><statement ><p>Soit <m>A,B\subseteq\Omega</m> deux ensembles quelconques. Dessiner toutes les configurations relatives possibles que peuvent avoir <m>A</m> et <m>B</m> dans un diagramme de Venn. </p></statement></exercise>
-  <exercise><statement><p>Donner <m>\mathscr{P}(A)</m> si <m>A=\{a,3,\Delta\}</m>.</p></statement></exercise>
-  <exercise><introduction><p>Donner la cardinalité des ensembles suivants:</p></introduction>
-  <task><statement><p><m>\{a\}</m></p></statement></task>
-  <task><statement><p><m>\{a,b\}</m></p></statement></task>
-  <task xml:id="exo-ensdansens1"><statement><p><m>\{\{a,b\},a\}</m></p></statement></task>
-  <task xml:id="exo-ensdansens2"><statement><p><m>\{\{a,b\},\{a\}\}</m></p></statement></task>
-  <task><statement><p><m>\emptyset</m></p></statement></task>
-  <task><statement><p><m>\{\emptyset\}</m></p></statement></task>
-  <task xml:id="exo-ensvide1"><statement><p><m>\{\emptyset,\emptyset\}</m></p></statement></task>
-  <task xml:id="exo-ensvide2"><statement><p><m>\{\emptyset,\{\emptyset\}\}</m></p></statement></task>
-  </exercise>
-  <exercise><statement><p>Exprimer en mots la différence entre les ensembles des exercices <xref ref="exo-ensdansens1"/> et <xref ref="exo-ensdansens2"/>.</p></statement></exercise>
-  <exercise><statement><p>Exprimer pourquoi la cardinalité des ensembles des exercices <xref ref="exo-ensvide1"/> et <xref ref="exo-ensvide2"/> est différente.</p></statement></exercise>
-  <exercise><statemen><p>Noter toute question qui demeure suite à la lecture de la section et la résolutin des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.</p></statemen></exercise>
   </reading-questions>
+  -->
+  <xi:include href="Exercices_ensembles.xml"/>
 </section>
 <!-- exercice Russel -->

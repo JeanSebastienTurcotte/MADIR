@@ -28,11 +28,11 @@
     </task>
     </exercise>
     -->
-    <exercisegroup>
+    <subexercises>
     <title>À faire en classe</title>
-    <introduction><p>Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et d'atteindre les objectifs d'apprentissage plus avancés.</p></introduction>
-    </exercisegroup>
-    <exercisegroup>
+    <introduction><p>Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.</p></introduction>
+    </subexercises>
+    <subexercises>
     <title>Exercices supplémentaires</title>
-    </exercisegroup>
+    </subexercises>
 </exercises>

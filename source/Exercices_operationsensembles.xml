@@ -30,7 +30,7 @@
     -->
     <exercisegroup>
     <title>À faire en classe</title>
-    <introduction><p>Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et d'atteindre les objectifs d'apprentissage plus avancés.</p></introduction>
+    <introduction><p>Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.</p></introduction>
     <exercise xml:id="exo-ens1">
     <introduction><p>Soit <m>A=\{0,1,2,3,4,5\}</m>, <m>B=\{0,3,6,9\}</m> et <m>\Omega=\{n\in \N~|~ n\leq 10\}</m>. Déterminer:</p></introduction>
     <task><statement><p>
@@ -140,7 +140,7 @@ O+A+B
     <introduction><p>Dans cet exercice, on s'intéresse à la cardinalité de l'union de deux ensembles.</p></introduction>
     <task><statement><p>Donner deux ensembles <m>A</m> et <m>B</m> tels que <m>|A|=4,|B|=3</m> et <m>|A\cup B|=7</m>. Que vaut <m>|A\cap B|</m>?</p></statement></task>
     <task><statement><p>Donner deux ensembles <m>A</m> et <m>B</m> tels que <m>|A|=4,|B|=3</m> et <m>|A\cup B|=5</m>. Que vaut <m>|A\cap B|</m>?</p></statement></task>
-    <task><statement><p>Si <m>A=\{a,b,c\}</m> et que <m>|B|=6</m>, quels sont les valeurs possibles pour <m>|A\cup B|</m>? Donner des exemples d'ensembles <m>B_1,B_2</m> tel que <m>|A\cup B|</m> est égale à la plus petite valeur possible et <m>|A\cup B_2|</m> est égale à la plus grande valeur possible. </p></statement></task>
+    <task><statement><p>Si <m>A=\{a,b,c\}</m> et que <m>|B|=6</m>, quelles sont les valeurs possibles pour <m>|A\cup B|</m>? Donner des exemples d'ensembles <m>B_1,B_2</m> tel que <m>|A\cup B_1|</m> est égale à la plus petite valeur possible et <m>|A\cup B_2|</m> est égale à la plus grande valeur possible. </p></statement></task>
     <task><statment><p>Pour chaque cas de la partie précédente, que vaut <m>|A\cap B|</m>?</p></statment></task>
     </exercise>
     <exercise xml:id="exo-incexc">
@@ -198,23 +198,23 @@ O+A+B
     <exercisegroup>
     <title>Exercices supplémentaires</title>
     <exercise>
-    <introduction><p>On considère <m>S</m> l'ensemble des étudiants du programme sciences informatique et mathématiques à Gérald-Godin et <m>C</m> l'ensemble des étudiants de Gérald-Godin qui sont inscrits en calcul différentiel. Exprimer les ensembles suivants en fonction de <m>S</m> et <m>C</m>. Au besoin, considérer l'ensemble univers <m>G</m> de tous les étudiants inscrits à Gérald-Godin.</p></introduction>
+    <introduction><p>On considère <m>S</m> l'ensemble des étudiants du programme Sciences informatique et mathématiques à Gérald-Godin et <m>C</m> l'ensemble des étudiants de Gérald-Godin qui sont inscrits en calcul différentiel. Exprimer les ensembles suivants en fonction de <m>S</m> et <m>C</m>. Au besoin, considérer l'ensemble univers <m>G</m> de tous les étudiants inscrits à Gérald-Godin.</p></introduction>
     <task>
-    <statement><p>Les étudiants de sciences informatiques et mathématiques qui suivent le cours de calcul différentiel.</p></statement>
+    <statement><p>Les étudiants de Sciences informatiques et mathématiques qui suivent le cours de calcul différentiel.</p></statement>
     </task>
     <task>
-    <statement><p>Les étudiants du cours de calcul différentiel qui ne sont pas en sciences informatiques et mathématiques.</p></statement>
+    <statement><p>Les étudiants du cours de calcul différentiel qui ne sont pas en Sciences informatiques et mathématiques.</p></statement>
     </task>
     <task>
-    <statement><p>Les étudiants de sciences informatiques et mathématiques ou inscrits dans le cours de calcul différentiel.</p></statement>
+    <statement><p>Les étudiants de Sciences informatiques et mathématiques ou inscrits dans le cours de calcul différentiel.</p></statement>
     </task>
     <task>
-    <statement><p>Les étudiants du cégep Gérald-Godin qui ne sont pas en calcul différentiel ni en sciences informatiques et mathéamtiques.</p></statement>
+    <statement><p>Les étudiants du cégep Gérald-Godin qui ne sont pas en calcul différentiel ni en Sciences informatiques et mathéamtiques.</p></statement>
     </task>
     <task>
-    <statement><p>Les étudiants de sciences informatiques et mathématiques ou ceux qui suivent le cours de calcul différentiel, mais qui ne sont pas en sciences informatiques et mathématiques.</p></statement>
+    <statement><p>Les étudiants de Sciences informatiques et mathématiques ou ceux qui suivent le cours de calcul différentiel, mais qui ne sont pas en Sciences informatiques et mathématiques.</p></statement>
     </task>
-    <conclusion>Cet exercice peut paraître bidon, mais on peut imaginer un gestionnaire informatique d'une école qui doit gérer une liste de courriels. Peut-être qu'un message précis doit être communiqué à un ensemble précis de personnes. On veut alors être certain de ne pas oublier quelqu'un et en même temps, on ne veut pas envoyer le message à quelqu'un qui n'a pas à le recevoir. </conclusion>
+    <conclusion>Cet exercice peut paraître bidon, mais on peut imaginer un gestionnaire informatique d'une école qui doit gérer une liste de courriels. Peut-être qu'un message précis doit être communiqué à un ensemble spécifique de personnes. On veut alors être certain de ne pas oublier quelqu'un et en même temps, on ne veut pas envoyer le message à quelqu'un qui n'a pas à le recevoir. </conclusion>
     </exercise>
     <exercise><statement><p>Déterminer des ensembles <m>A,B</m> tels que <m>A-B=\{a,h,i\},B-A=\{c\}</m> et <m>B\cap A=\{b,f,i\}</m> ou expliquer pourquoi c'est impossible. Dans le cas où c'est possible, est-ce que la réponse est unique?</p></statement>
     <hint><p>Faire un diagramme de Venn pour voir qu'une réponse unique existe.</p> </hint>
@@ -222,7 +222,7 @@ O+A+B
     <exercise><statement><p>Déterminer des ensembles <m>A,B</m> tels que <m>A-B=\{3,4,7,8\}</m> et <m>B\cap A=\{b,f,i\}</m> ou expliquer pourquoi c'est impossible. Dans le cas où c'est possible, est-ce que la réponse est unique?</p></statement></exercise>
     <exercise><statement><p>Déterminer des ensembles <m>A,B</m> tels que <m>A-B=\{rouge,vert,jaune\}</m> et <m>B\cap A=\{jaune, mauve, orange\}</m> ou expliquer pourquoi c'est impossible. Dans le cas où c'est possible, est-ce que la réponse est unique?</p></statement></exercise>
     <exercise>
-    <introduction><p>On va donner la démonstration des propriétés de la liste <xref ref="li-opensprop"/> qui ne l'ont pas été dans le texte.</p></introduction>
+    <introduction><p>On va donner les démonstrations des propriétés de la liste <xref ref="li-opensprop"/> qui n'ont pas été faites dans le texte .</p></introduction>
     <task>
     <introduction><p>Démontrer les propriétés <xref ref="li-opensId" text="custom"> d'identité </xref>, à savoir</p></introduction>
     <task><statement><p><m>A\cup \emptyset =A</m></p></statement></task>

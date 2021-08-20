@@ -30,7 +30,7 @@
     -->
     <exercisegroup>
     <title>À faire en classe au cours A</title>
-    <introduction><p>Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et d'atteindre les objectifs d'apprentissage plus avancés.</p></introduction>
+    <introduction><p>Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.</p></introduction>
     <exercise xml:id="exo-fctintro">
     <introduction><p>Soit <m>A=\{0,1,2,3,4,5\}</m>,<m>B=\{a,b,c,d,e\}</m> et <m>C=\{!,@,\#,a\}</m>. On considère les fonctions <m>g:A\to B</m> et <m>f:B\to C</m> définies comme suit:</p>
     <sidebyside>
