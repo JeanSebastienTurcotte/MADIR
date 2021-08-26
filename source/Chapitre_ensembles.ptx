@@ -18,9 +18,9 @@
     </introduction>
     
     <!-- Sections à inclure, dans des fichiers xml différents -->
-    <xi:include href="Section_ensembles.xml" />
-    <xi:include href="Section_operationsensembles.xml" />
-    <xi:include href="Section_fonctions.xml" />
+    <xi:include href="Section_ensembles.ptx" />
+    <xi:include href="Section_operationsensembles.ptx" />
+    <xi:include href="Section_fonctions.ptx" />
     <conclusion xml:id="concl-ensfct">  <!-- Ajouter le même identifiant du chapitre après le - du xml:id -->
     
     </conclusion>

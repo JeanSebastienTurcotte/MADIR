@@ -30,5 +30,5 @@
     </exercise>
     </reading-questions>
    <!--Inclure les exercices de la section ci-dessous--> 
-   <!--<xi:include href="Exercices_.xml" />-->
+   <!--<xi:include href="Exercices_.ptx" />-->
 </section>

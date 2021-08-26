@@ -344,6 +344,6 @@ def _(A='1,2,3,a', B='2,a,3,4,pomme', C='a,b,10,pomme'):
   </introduction>
   </reading-questions>
   -->
-  <xi:include href="Exercices_ensembles.xml"/>
+  <xi:include href="Exercices_ensembles.ptx"/>
 </section>
 <!-- exercice Russel -->

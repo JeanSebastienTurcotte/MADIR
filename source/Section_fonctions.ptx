@@ -743,5 +743,5 @@ Ellipse+Pts+Fleches+Txt#+Fct
     <!--énumérer toutes les fonctions de A vers B et de B vers A -->
     </reading-questions>
    <!--Inclure les exercices de la section ci-dessous--> 
-   <xi:include href="Exercices_fonctions.xml"/>
+   <xi:include href="Exercices_fonctions.ptx"/>
 </section>

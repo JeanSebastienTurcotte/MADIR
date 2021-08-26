@@ -736,6 +736,6 @@ et la table de vérité suivante.</p>
     </exercise>
     </reading-questions>
    <!--Inclure les exercices de la section ci-dessous--> 
-   <xi:include href="Exercices_circuits.xml" />
+   <xi:include href="Exercices_circuits.ptx" />
    <!-- Faire les portes ET et OU multiples -->
 </section>

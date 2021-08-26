@@ -310,5 +310,5 @@ formes+txt
     </exercise>
     </reading-questions>
    <!--Inclure les exercices de la section ci-dessous--> 
-   <xi:include href="Exercices_propquant.xml" />
+   <xi:include href="Exercices_propquant.ptx" />
 </section>

@@ -530,6 +530,6 @@ O+A+B
     </exercise>
     </reading-questions>
    <!--Inclure les exercices de la section ci-dessous--> 
-    <xi:include href="Exercices_operationsensembles.xml" />
+    <xi:include href="Exercices_operationsensembles.ptx" />
 </section>
 <!-- idée: Preuve par diagramme de Venn style oscar fin 0.4 -->
