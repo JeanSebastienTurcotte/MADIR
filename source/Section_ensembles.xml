@@ -72,7 +72,7 @@
             <m>9</m>, inclusivement.</p>
           </li>
           <li>
-            <p>L'ensemble des lettre de l'alphabet qui compose le nom de
+            <p>L'ensemble des lettres de l'alphabet qui composent le nom de
             famille de l'auteur, sans distinguer majuscule et minuscule.</p>
           </li>
           <li>
@@ -137,13 +137,13 @@
       <statement><p>On veut décrire les ensembles suivants en compréhension.
       <ol><li><p><m>A=\{a,e,i,o,u,y\}</m></p></li>
       <li><p><m>B=\{0,2,4,6,8\}</m></p></li>
-      <li><p><m>C=\{J,e,a,n,-,S,é,b,t,i\}</m></p></li>
+      <li><p><m>C=\{J,e,a,n,-,S,é,b,s,t,i\}</m></p></li>
       </ol>
       </p></statement>
       <solution><p>Il peut y avoir plus d'une manière valide pour décrire chacun de ces
         ensembles. En voici une pour chacun: 
         <ol>
-          <li><p><m>A=\{v~|~ v \text{ est une voyelle de l'alphabet } x\in R\}</m><!--\{v~|~ v \text{ est une voyelle de l'alphabet }\}</m>;--> </p></li>
+          <li><p><m>A=\{v~|~ v \text{ est une voyelle de l'alphabet }\}</m><!--\{v~|~ v \text{ est une voyelle de l'alphabet }\}</m>;--> </p></li>
               <li><p>
               <m>B=\{b~|~ b \text{ est un chiffre pair}\}</m>;</p>
             </li>

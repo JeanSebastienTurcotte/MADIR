@@ -523,7 +523,7 @@ O+A+B
     <task><statement><p>Trouver un ensemble <m>B\in\mathscr{P}(S)</m> tel que <m>|B|=3</m></p></statement></task>
     <task><statement><p>Trouver un ensemble <m>C\subseteq\mathscr{P}(S)</m> tel que <m>|C|=3</m></p></statement></task>
     <task><statement><p>Un étudiant affirme avoir trouvé <m>D\in \mathscr{P}(S)</m> tel que <m>|D|=6</m>. Donner un exemple d'un tel ensemble ou expliquer pourquoi ce n'est pas possible.</p></statement></task>
-    <task><statement><p>Un étudiant affirme avoir trouvé <m>E\subseteq \mathscr{P}(S)</m> tel que <m>|D|=6</m>. Donner un exemple d'un tel ensemble ou expliquer pourquoi ce n'est pas possible.</p></statement></task>
+    <task><statement><p>Un étudiant affirme avoir trouvé <m>E\subseteq \mathscr{P}(S)</m> tel que <m>|E|=6</m>. Donner un exemple d'un tel ensemble ou expliquer pourquoi ce n'est pas possible.</p></statement></task>
     </exercise>
     <exercise>
     <statement><p>Noter toute question qui demeure suite à la lecture de la section et la résolutin des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.</p></statement>

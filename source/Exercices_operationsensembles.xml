@@ -66,7 +66,7 @@ B=circle((1,0),2,color="red")+text("$B$",(2,2),color="red")
 C=circle((0,-2),2,color="forestgreen")+text("$C$",(-0.5,-4.2),color="forestgreen")
 O+A+B+C
     </sageplot></image>
-    </figure> <p>Sur un diagramme de Venn comme celui de la figure <xref ref="fig-Venn3vide"/>, illustrer les ensembles suivants:</p>
+    </figure> <p>Sur des diagrammes de Venn comme celui de la figure <xref ref="fig-Venn3vide"/>, illustrer les ensembles suivants:</p>
    
     </introduction>
     <task><statement><p><m>A\cup (B\cap C)</m></p></statement></task>
@@ -83,7 +83,7 @@ O+A+B+C
     <task><statement> <p><m>A^c\cap B\cap C^c</m></p> et <m>A\cap B^c\cap C^c</m>.</statement></task>
     </task>
     </exercise>
-    <exercise><introduction><p>Pour chaque diagramme de Venn ci-dessous, décrire l'ensemble ombragée en fonction des ensembles <m>A,B,C</m> et des opérations élémentaires.</p></introduction>
+    <exercise><introduction><p>Pour chaque diagramme de Venn ci-dessous, décrire l'ensemble ombragée en fonction des ensembles <m>A,B,C</m> et des opérations élémentaires d'union, d'intersection et de complément.</p></introduction>
     <task><statement>
     <figure>
     <caption>Le diagramme de Venn d'un ensemble</caption>
