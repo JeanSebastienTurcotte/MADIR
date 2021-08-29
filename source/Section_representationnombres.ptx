@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Ce fichier constitue une section du livre                              -->
+<!--                                                                        -->
+<!--      Mathématiques discrètes : Intuition et rigueur                    -->
+<!--                                                                        -->
+<!-- Creative Commons Attribution Share Alike 4.0 International             -->
+<!-- CC-BY-4.0                                                              -->
+<!-- Jean-Sébastien Turcotte                                                -->
+
+<!-- Les sections sont divisées en quatre parties, en plus du titre. Les parties introduction et conclusion sont facultatives. Le texte de ceux-ci apparait respectivement avant et après les sections. Les exercices sont à la fin de la section -->
+
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec-representation">   <!-- Ajouter l'identifiant de la section après le - du xml:id -->
+    <title> Représentation de nombres </title>
+    <introduction xml:id= "intro-representation">  <!-- Ajouter le même identifiant de la section après le - du xml:id -->
+    <p>À l'école primaire, on apprend à interpréter un nombre comme <m>1234</m> en le décomposant selon ses unités, dizaines, centaines et milliers. En termes plus mathématiques, on peut écrire
+    <me>
+    1234=1\times 1000+2\times 100+3\times 10+4\times 1
+    </me>.
+    Pourquoi une telle décomposition? D'où vient le choix de <m>1,10,100</m> et <m>1000</m>? L'hypothèse la plus plausible est que les systèmes de numération qui se développèrent au fil du temps ont en quelque sorte converger vers l'utilisation des chiffres <m>0,1,2,\ldots,9</m>; dix symboles, autant de doigts qu'un humain possède.</p>
+    <p>L'importance du nombre dix se fait d'autant plus remarquer quand on réécrit <men xml:id="eq-basedix" symbol="star">1234=1\times 10^3+2\times 10^2+3\times 10^1+4\times 1^0</men>.
+    Cela n'a toutefois pas toujours été ainsi. Différents système de représentation des nombres ont été élaborés dans l'histoire. Encore aujourd'hui, d'autres systèmes sont utilisés dans certains contexte. En informatique, la représentation binaire est prédominante.
+    </p>
+    <p>Dans cette section, on rappelle la notion d'écriture en base dix, on définit la représentation en base deux (binaire) et seize (hexadécimale). On effectue aussi des opérations élémentaires sur les nombres écrits en base deux et on voit comment convertir un nombre d'une base à une autre.</p>
+    </introduction>
+    
+    <!-- Sous-sections à écrire, à même ce fichier -->
+    <subsection>
+    <title>Systèmes positionnels</title>
+    <p>La représentation d'un nombre peut se faire de plusieurs manières. Une manière brute et assez inefficace consiste par exemple à faire un trait pour chaque unité. Ce système devient vite encombrant et il est difficile de rapidement lire un nombre. D'autres systèmes un peu mieux ont été inventés par différentes civilisation au cours de l'histoire.  Un système dans lequel nombre peut s'écrire sous une forme ressemblant à l'équation <xref ref="eq-basedix"/> de introduction est appelé un système positionnel. Ces systèmes sont normalement construits selon une base entière <m>b>1</m>, dans le cas de l'introduction, c'est dix, et d'un ensemble de symboles en nombre égal à la base. On peut utiliser une base différente, par exemple quatre avec les symboles <m>0,1,2,3</m>, pour représenter n'importe quel nombre.</p>
+    
+    <p>Chaque position correspond à une puissance de la base, puissance croissante lorsqu'on lit le nombre de droite à gauche. Ainsi le nombre à droite correspond aux unités, le deuxième nombre correspond à un multiple de <m>b</m>, le troisième aux multiples de <m>b^2</m> et ainsi de suite. Afin de distinguer du cas usuel, lorsque la base sera différente de dix, on l'indiquera en indice. Cet indice sera toujours sous-entendu comme étant écrit en base dix.</p>
+    <example>
+    <title>Des exemples en base quatre</title>
+    <statement><p>On considère les nombres suivants, écrits en base quatre:
+    <ol>
+    <li><p><m>123_4</m>;</p></li>
+    <li><p><m>102030_4</m>;</p></li>
+    <li><p><m>3223_4</m>.</p></li>
+    </ol>
+    On cherche leur valeur en base dix.</p>
+    </statement>
+    <solution><p>
+    <p>L'idée est de reprendre le principe de la décomposition sous une forme des puissances de <m>4</m>.</p>
+    <ol>
+   <li> <p>On a donc
+    <me>
+    123_4=1\times 4^2+2\times 4^1 2+3\times 4^0=16+8+3=27
+    </me>.</p></li>
+    <li><p>De plus,
+    <me>102030_4=1\times 4^6 + 0\times 4^5 + 2\times 4^4 + 0\times 4^3 + 3\times 4^2 + 0\times 4^1=4656 </me>.
+    </p></li>
+    <li><p>Finalement,
+    <me>
+    3223_4=3\times4^3+2\times 4^2+2\times 4^1+3\times 4^0=235
+    </me>.</p></li>
+    </ol>
+    </p></solution>
+    </example>
+    <p>La figure interactive <xref ref="fig-repbase"/> permet de visualiser les nombres de <m>0</m> à <m>30</m> dans chacune des bases deux,trois, quatre et cinq. Il est intéressant de voir comment la représentation d'un nombre évolue au fur et à mesure que celui-ci grandit.</p>
+    <figure xml:id="fig-repbase">
+<caption>Les nombres de <m>0</m> à <m>30</m> dans différentes bases</caption>
+    <interactive aspect="1:1" platform="geogebra" width="140%"
+      xml:id="geog-repbase">
+        <slate aspect="1:1" source="repbase.ggb"
+        surface="geogebra" xml:id="slate-repbase">
+            setCoordSystem(-8, 8,-6,6,);
+          </slate>
+        <instructions>
+          <p>Le curseur <m>b</m> représente la base utilisée et le curseur <m>n</m> représente le nombre en base dix. On peut choisir de voir comment un nombre change selon la base ou voir comment les nombres changent pour une base donnée. </p>
+        </instructions>
+        </interactive>
+    </figure>
+    </subsection>
+    <subsection>
+    <title>Représentation en base deux</title>
+    <p>Autre que la base dix, la base deux, ou représentation binaire est probablement la plus utilisée. Une des raisons est que les signaux envoyées par les pièces électroniques se trouvent en deux états, tel que mentionné dans la section <xref ref="sec-circuits"/>. La représentation binaire utilise les puissances de deux et l'ensemble de chiffres <m>\{0,1\}</m> pour représenter les nombres. Tout nombre entier peut être représenté comme une somme de termes <m>d\times 2^n</m> où <m>d\in \{0,1\}</m> et <m>n\in \N</m>. Les nombres de <m>1</m> à <m>30</m> peuvent être visualisés dans la figure interactive <xref ref="fig-repbase"/> en mettant la valeur de <m>b=2</m>.</p>
+    <p>La conversion d'un nombre d'une base à l'autre dépend des bases utilisées. Lorsque la base dix est impliquée, le processus est plus naturel. On peut comparer la conversion à la traduction entre deux langues. Traduire un mot d'une langue proche de la sienne, mais inconnue, est souvent un peu plus simple que de prendre un mot de sa langue et le traduire dans la langue inconnue. C'est un peu le même principe pour la conversion entre une base <m>b</m> et la base dix. De la base <m>b</m> vers dix est un peu plus simple que de la base dix vers la base <m>b</m>. Pour le binaire, connaitre les premières puissances de deux peut-être pratique. Les <m>13</m> premières sont données dans la table <xref ref="tab-puissances2"/>.</p>
+<table xml:id="tab-puissances2">    
+<title>Les premières puissances de <m>2</m> </title>
+  <tabular top="major">
+    <row>
+      <cell>
+        Puissance de<nbsp /><m>2</m>
+      </cell>
+      <cell>
+        <m>2^{12}</m>
+      </cell>
+      <cell>
+        <m>2^{11}</m>
+      </cell>
+      <cell>
+        <m>2^{10}</m>
+      </cell>
+      <cell>
+        <m>2^{9}</m>
+      </cell>
+      <cell>
+        <m>2^8</m>
+      </cell>
+      <cell>
+        <m>2^7</m>
+      </cell>
+      <cell>
+        <m>2^6</m>
+      </cell>
+      <cell>
+        <m>2^5</m>
+      </cell>
+      <cell>
+        <m>2^4</m>
+      </cell>
+      <cell>
+        <m>2^3</m>
+      </cell>
+      <cell>
+        <m>2^2</m>
+      </cell>
+      <cell>
+        <m>2^1</m>
+      </cell>
+      <cell>
+        <m>2^0</m>
+      </cell>
+    </row>
+    <row bottom="major">
+      <cell>
+        Valeur en base dix
+      </cell>
+      <cell>
+        <m>4096</m>
+      </cell>
+      <cell>
+        <m>2048</m>
+      </cell>
+      <cell>
+        <m>1024</m>
+      </cell>
+      <cell>
+        <m>512</m>
+      </cell>
+      <cell>
+        <m>256</m>
+      </cell>
+      <cell>
+        <m>128</m>
+      </cell>
+      <cell>
+        <m>64</m>
+      </cell>
+      <cell>
+        <m>32</m>
+      </cell>
+      <cell>
+        <m>16</m>
+      </cell>
+      <cell>
+        <m>8</m>
+      </cell>
+      <cell>
+        <m>4</m>
+      </cell>
+      <cell>
+        <m>2</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+    </row>
+  </tabular>
+</table>
+    <example>
+    <title>Du binaire vers la base dix </title>
+    <statement><p>On veut convertir les nombres suivants en base dix:
+    <ol>
+    <li><p><m>100110_2</m>;</p></li>
+    <li><p><m>110111_2</m>;</p></li>
+    <li><p><m>111111_2</m>;</p></li>
+    <li><p><m>100100100_2</m>.</p></li>
+    </ol>
+    </p></statement>
+    <solution>
+    <p><ol>
+    <li><p>On réécrit avec les puissances de deux
+    <me>
+    100110_2=1\times 32+0\times 16+0\times 8+1\times 4+1\times 2+0\times 1=38
+    </me>.</p></li>
+    <li><p>On réécrit avec les puissances de deux
+    <me>
+    110111_2=1\times 32+1\times 16+0\times 8+1\times 4+1\times 2+1\times 1=55
+    </me>.</p></li>
+    <li><p>On réécrit avec les puissances de deux
+    <me>
+    111111_2=1\times 32+1\times 16+1\times 8+1\times 4+1\times 2+1\times 1=63
+    </me>.</p></li>
+    <li><p>On réécrit avec les puissances de deux
+    <me>
+    100100100_2_2= 1\times 256+ 0\times 128+ 0\times 64+1\times 32+0\times 16+0\times 8+1\times 4+0\times 2+0\times 1=292
+    </me>.</p></li>
+    </ol></p>
+    </solution>
+    </example>
+    <p>Une méthode suivante pour convertir un nombre de la base décimale à une autre base est présentée ci-dessous. Une autre méthode sera présentée dans la section suivante.</p>
+    <example xml:id="ex-decimalebinaire">
+    <title>De la base dix vers le binaire</title>
+    <statement>
+    <p>On cherche à convertir les nombres suivants en binaire:
+    <ol>
+    <li><p><m>101</m>;</p></li>
+    <li><p><m>187</m>.</p></li>
+    </ol></p></statement>
+    <solution>
+    <p>On sait qu'un nombre en binaire va s'écrire sous la forme <m>d_n2^n+d_{n-1}2^{n-1}+\cdots + d_12^1+d_02^0</m> avec tous les <m>d_k\in \{0,1\}</m>. Pour trouver <m>n</m>, cherche la plus grande puissance de la base qui est plus petite ou égale au  nombre à convertir. Le nombre <m>n</m> sera celui la valeur de cette puissance. Ainsi pour <m>101</m>, la plus grande puissance qui est plus petite est <m>2^6=64</m>. On a donc
+    <me>
+    101=d_62^6+d_{5}2^{5}+\cdots + d_12^1+d_02^0
+    </me>.</p>
+    <p>Il faut ensuite choisir la plus grande valeur de <m>d_n</m> possible de sorte que <m>d_n b^n</m> soit inférieure au nombre <m>n</m>. Pour la base deux, le choix est simple et sera toujours <m>1</m>. Ainsi pour <m>101</m>, on a <m>d_6=1</m>:
+    <me>
+    101=2^6+d_{5}2^{5}+\cdots + d_12^1+d_02^0
+    </me>.
+    On envoie le terme trouvé du côté du nombre <m>n</m> en soustrayant et on répète ce processus jusqu'à ce que tous les <m>d_k</m> soient déterminés.
+    <md>
+    <mrow>101-2^6&amp;=d_{5}2^{5}+d_{4}2^{4}+d_{3}2^{3}+d_{2}2^{2} + d_12^1+d_02^0</mrow>
+    <mrow>37&amp;=d_{5}2^{5}+d_{4}2^{4}+d_{3}2^{3}+d_{2}2^{2} + d_12^1+d_02^0</mrow>
+    <intertext>La plus grande puissance plus petite que le nombre à gauche est 5</intertext>
+    <mrow>37&amp;=2^5+d_{4}2^{4}+d_{3}2^{3}+d_{2}2^{2} + d_12^1+d_02^0</mrow>
+    <mrow>37-2^5&amp;=d_{4}2^{4}+d_{3}2^{3}+d_{2}2^{2} + d_12^1+d_02^0</mrow>
+    <mrow>5&amp;=d_{4}2^{4}+d_{3}2^{3}+d_{2}2^{2} + d_12^1+d_02^0</mrow>
+    <intertext>La plus grande puissance qui est plus petite que 5 est 4. Les autres puissances sont multipliées par zéro.</intertext>
+    <mrow>5&amp;=0\times 2^{4}+0\times 2^{3}+2^{2} + d_12^1+d_02^0</mrow>
+    <mrow>5-2^2&amp;=d_1 2^1+d_02^0</mrow>
+    <mrow>1&amp;=d_1 2^1+d_02^0</mrow>
+    <intertext>La puissance 0 est égale à 1 et donc</intertext>
+    <mrow>1&amp;=0\times 2^1+2^0</mrow>
+    </md>.
+    En reprenant les valeurs de <m>d_k</m> non nulles, on a
+    <me>
+    101=1100101_2
+    </me>.
+    </p>
+    </solution>
+    <solution><p>On montre une manière plus concise d'écrire le raisonnement précédent. La plus grande puissance de <m>2</m> qui est inférieure ou égale à <m>187</m> est <m>128</m>. On a donc
+    <md>
+    <mrow>187&amp;=128+\text{quelque chose}</mrow>
+    <intertext>Puisque 187-128=59 et que la plus grande puissance de 2 inférieure à 59 est 32, on a</intertext>
+    <mrow>187&amp;=128+32+\text{autre chose}</mrow>
+    <intertext>autre chose doit être égal à 27 lorsqu'on fait la soustraction. La plus grande puissance inférieure à cela est 16 et donc</intertext>
+    <mrow>187&amp;=128+32+16+\text{quelque chose d'autre}</mrow>
+    <intertext>on poursuit ainsi et on obtient finalement</intertext>
+    <mrow>187&amp;=128+32+16+8+2+1</mrow>
+    <mrow>187&amp;=10111011_2</mrow>
+    </md></p></solution>
+    </example>
+    <p>En plus des nombres naturels, on peut aussi représenter les nombres négatifs ou même réels en d'autre base. Pour un nombre négatif, on se contentera de convertir le nombre en valeur absolue en binaire et d'ajouter un signe <m>-</m> devant. Pour un ordinateur toutefois, la réalité est un peu plus complexe. Pour les nombres décimaux, on peut procéder d'une manière similaire à celles utilisées pour convertir d'une base à l'autre. Si on considère un nombre à virgule écrit en binaire (dont la partie entière sera <m>0</m>, pour simplifier), par exemple <m>0.1011001</m>, alors il suffit de poursuivre l'écriture en puissance avec des nombres négatifs:
+    <me>
+    02^0+d_{-1}2^{-1}+d_{-2}2^{-2}+\cdots +d_{-m}2^{-m}
+    </me>.
+    À noter toutefois que, comme dans le cas des nombres décimaux, il est possible que la partie fractionnaire soit infinie, périodique ou non. On se contentera pour l'instant de cas où la représentation sera finie.
+    </p>
+    <example>
+    <title>D'une représentation binaire fractionnaire à décimale</title>
+    <statement>
+    <p>On considère le nombre <m>0.1011_2</m> et on cherche sa conversion en base dix.</p>
+    </statement>
+    <solution><p>On décompose le nombre selon les puissances négatives de <m>2</m> pour obtenir
+    <me>
+    0.1011_2=1\times 2^{-1}+0\times 2^{-2}+1\times 2^{-3}+1\times 2^{-4}=0.5+0.125+0.0625=0.6875
+    </me>.</p></solution>
+    </example>
+    <p>Il est possible qu'un nombre ayant une représentation décimale finie possède une représentation binaire infinie, il faut donc bien choisir les exemples pour éviter que cela arrive. Dans la prochaine section, on verra comment convertir un nombre décimal qui devient à représentation infinie. La table suivante pourra être utile.</p>
+    <table>
+  <tabular top="major">
+    <title>Puissances négatives de <m>2</m></title>
+    <row>
+      <cell>
+        Puissance de <m>2</m>
+      </cell>
+      <cell>
+        <m>2^{-1}</m>
+      </cell>
+      <cell>
+        <m>2^{-2}</m>
+      </cell>
+      <cell>
+        <m>2^{-3}</m>
+      </cell>
+      <cell>
+        <m>2^{-4}</m>
+      </cell>
+      <cell>
+        <m>2^{-5}</m>
+      </cell>
+      <cell>
+        <m>2^{-6}</m>
+      </cell>
+      <cell>
+        <m>2^{-7}</m>
+      </cell>
+      <cell>
+        <m>2^{-8}</m>
+      </cell>
+    </row>
+    <row bottom="major">
+      <cell>
+        Valeurs décimales
+      </cell>
+      <cell>
+        <m>0.5</m>
+      </cell>
+      <cell>
+        <m>0.25</m>
+      </cell>
+      <cell>
+        <m>0.126</m>
+      </cell>
+      <cell>
+        <m>0.0625</m>
+      </cell>
+      <cell>
+        <m>0.03125</m>
+      </cell>
+      <cell>
+        <m>0.015625</m>
+      </cell>
+      <cell>
+        <m>0.0078125</m>
+      </cell>
+      <cell>
+        <m>0.00390625</m>
+      </cell>
+    </row>
+  </tabular>
+</table>
+    <example>
+    <title>D'une représentation décimale fractionnaire à binaire</title>
+    <statement><p>On veut convertir le nombre <m>0.40625</m> en binaire.</p></statement>
+    <solution><p>L'idée est la même que celle utilisée à l'exemple <xref ref="ex-decimalebinaire"/>. On cherche la plus grande puissance de <m>2</m> qui est plus petite ou égale à <m>0.40625</m>. Dans ce cas, c'est <m>2^{-2}=0.25</m>. On a donc
+    <md>
+    <mrow>0.40625&amp;=0\times 2^{-1}+1\times 2^{-2}+\text{autre chose}</mrow>
+    <intertext>En soustrayant,  il reste 0.15625, pour lequel 0.125 est la plus grande puissance inférieure ou égale à ce nombre. On a alors</intertext>
+    <mrow>0.40625&amp;=0\times 2^{-1}+\times 2^{-2}+\times 2^{-3}+\text{quelque chose}</mrow>
+    <intertext>On soustrait une autre fois et on obtient 0.03125, qui est une puissance exacte de 2. Alors</intertext>
+    <mrow>0.40625&amp;=0\times 2^{-1}+ 2^{-2}+ 2^{-3}+2^{-5}</mrow>
+    <mrow>0.40625&amp;=0.01101_2</mrow>
+    </md>.</p></solution>
+    </example>
+    <!-- Nombres négatifs en représentation dans section un peu plus loin-->
+    </subsection>
+    <subsection>
+    <title>Représentation en base hexadécimale</title>
+    <p>La représentation binaire d'un nombre prend beaucoup plus de place que la représentation décimale. C'est un désavantage avec lequel on est prêt à vivre en informatique étant donné la simplicité d'un système à deux possibilités (ouvert-fermé, haut-bas, vrai-faux, etc.). On a dit au tout début de la section que n'importe quelle nombre <m>b>1</m>. Si <m>b>10</m> est un entier, quels symboles utilise-t-on pour représenter les nombres? L'un des systèmes les plus utilisés est le système hexadécimal. Celui-ci correspond à la base seize. Pour compléter l'ensemble des chiffres, on ajoute aux symboles les six premières lettres de l'alphabet, en majuscule. Ainsi, un nombre entier exprimé en hexadécimal sera de la forme
+    <me>
+     d_{n}\times 16^n + d_{n-1}\times 16^{n-1} +\cdots + d_{_1}\times 16^1 + d_{_0}\times 16^0              
+    </me>
+    avec tous les <m>d_k\in \{0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F\}</m>. Dans les calculs, on se rappelera que <m>A=10,B=11,C=12,D=13,E=14</m> et <m>F=15</m>.</p>
+    <p>Les nombres naturels de <m>0</m> à <m>3840</m> sont transformés en base seize dans la figure interactive ci-dessous.</p>
+    <figure xml:id="fig-repbas16">
+<caption>Les nombres de <m>0</m> à <m>3840</m> en base seize</caption>
+    <interactive aspect="1:1" platform="geogebra" width="140%"
+      xml:id="geog-repbase16">
+        <slate aspect="1:1" source="repbase16.ggb"
+        surface="geogebra" xml:id="slate-repbase16">
+            setCoordSystem(-8, 8,-6,6);
+          </slate>
+        <instructions>
+          <p>Le curseur <m>n</m> représente le nombre en base dix. On peut voir sa conversion en représentation hexadécimale. </p>
+        </instructions>
+        </interactive>
+    </figure>
+    <p>Les méthodes pour convertir entre la base dix et seize sont identiques à celles pour convertir entre base dix et deux. On donne deux exemples ci-dessous. La table des premières puissances de <m>16</m> est donné ici pour référence.</p>
+<table><title>Puissances de 16</title>
+  <tabular top="major"> 
+    <row>
+      <cell>
+        Puissance de seize
+      </cell>
+      <cell>
+        <m>16^8</m>
+      </cell>
+      <cell>
+        <m>16^{7}</m>
+      </cell>
+      <cell>
+        <m>16^{6}</m>
+      </cell>
+      <cell>
+        <m>16^{5}</m>
+      </cell>
+      <cell>
+        <m>16^{4}</m>
+      </cell>
+      <cell>
+        <m>16^{3}</m>
+      </cell>
+      <cell>
+        <m>16^{2}</m>
+      </cell>
+      <cell>
+        <m>16^{1}</m>
+      </cell>
+      <cell>
+        <m>16^{0}</m>
+      </cell>
+    </row>
+    <row bottom="major">
+      <cell>
+        Valeurs décimales
+      </cell>
+      <cell>
+        <m>4294967296</m>
+      </cell>
+      <cell>
+        <m>268435456</m>
+      </cell>
+      <cell>
+        <m>16777216</m>
+      </cell>
+      <cell>
+        <m>1048576</m>
+      </cell>
+      <cell>
+        <m>65536</m>
+      </cell>
+      <cell>
+        <m>4096</m>
+      </cell>
+      <cell>
+        <m>256</m>
+      </cell>
+      <cell>
+        <m>16</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+    </row>
+  </tabular>
+</table>
+    <example>
+    <title>Conversion entre système décimal et système hexadécimal</title>
+    <statement><p>On veut convertir <m>A0E2F3_{16}</m> en décimal et <m>987654321</m> en hexadécimal.</p></statement>
+    <solution>
+    <p>La conversion d'hexadécimal vers la base dix étant plus simple, on débute par celle-ci. On a
+    <md>
+    <mrow>A0E2F3_{16}&amp;=A\times 16^5+0\times 16^4+E\times 16^3+2\times 16^2+F\times 16^1+3\times 16^0</mrow>
+    <mrow>            &amp;=10\times 16^5+14\times 16^3+2\times 16^2+15\times 16^1+3\times 16^0</mrow>
+    <mrow>qui après addition de toutes ces puissances donne</mrow>
+    <mrow>&amp;=10543859</mrow>
+    </md>.
+    </p>
+    </solution>
+    <solution><p>Pour la conversion de la base décimale vers la base seize, on regarde encore quelle est la plus grande puissance de seize qui est inférieure ou égale au nombre à convertir. Pour <m>987654321</m>, c'est <m>16^7=268435456</m> qui sera utilisé. Il y a toutefois une étape supplémentaire à considérer par rapport à la conversion au binaire. Combien de fois <m>16^7</m> rentre-t-il dans <m>987654321</m>? On utilise Sage pour faire ce calcul, en notant qu'à la section suivante on aura un opérateur spécial qui donnera directement la réponse, sans tenir compte de la partie fractionnaire.</p>
+    <sage>
+    <input>
+    987654321.0/16^7
+    </input>
+    <output>
+    3.67929906026
+    </output>
+    </sage>
+    <p>Comme on obtient <m>3.67929906026</m>, on déduit qu'on peut mettre trois puissances de <m>16^7</m>, mais pas quatre. On a donc
+    <me>
+    987654321=3\times 16^7+\text{quelque chose}
+    </me>.
+    On poursuit les calculs avec Sage. Dans un premier temps, que reste-t-il si on soustrait <m>3\times 16^7</m> à <m>987654321</m>?
+    </p>
+    <sage>
+    <input>
+    987654321-3*16^7
+    </input>
+    <ouput>
+    182347953
+    </ouput>
+    </sage>
+    <p>La plus grande puissance de <m>16</m> qui est plus petite que ce nombre est <m>16^6</m>. En répétant la méthode ci-dessus, on calcule combien de fois cette puissance rentre dans <m>182347953</m>.</p>
+    <sage>
+    <input>182347953.0/16^6</input>
+    <output>10.8687849641</output>
+    </sage>
+    <p>La puissance peut rentrer <m>10</m> fois, ce qui veut dire que le symbole utilisé sera <m>A</m>:
+    <me>
+     987654321=3\times 16^7+A\times 16^6+\text{quelque chose d'autre}
+    </me>.
+    On soustrait <m>10\times 16^6</m> de <m>182347953</m> pour obtenir le reste. 
+    </p>
+    <sage>
+    <input>182347953-10*16^6</input>
+    <output>14575793</output>
+    </sage>
+    <p>On effectue une dernière étape complète avant de donner la réponse. Le reste pourra être complété en exercice. La cinquième puissance de <m>16</m> sera la prochaine à être utilisée. </p>
+    <sage>
+    <input>
+    14575793.0/16^5
+    </input>
+    <ouput>13.9005594254</ouput>
+    </sage>
+    <p>On peut donc mettre <m>13</m> fois <m>16^5</m> dans <m>14575793</m>, ce qui signifie que le symbole utilisé sera <m>D</m>. On aura
+    <me>
+        987654321=3\times 16^7+A\times 16^6+D\times 16^5+\text{autre chose}
+    </me>. Le reste sera égal à <m>944305</m> , comme le montre le calcul ci-dessous.</p>
+    <sage>
+    <input>14575793-13*16^5</input>
+    <output>944305</output>
+    </sage>
+    <p>Au final, on peut montrer que <me>987654321=3ADE68B1_{16}</me>. L'exercice <xref ref="exo-hexaafinir"/> demande le reste de la démarche.</p>
+    </solution>
+    </example>
+    </subsection>
+    <subsection>
+    <title>Opérations élémentaires en base deux</title>
+    </subsection>
+    <conclusion xml:id="concl-representation">  <!-- Ajouter le même identifiant de la section après le - du xml:id -->
+    
+    </conclusion>
+    <reading-questions xml:id="rq-representation">  <!-- Ajouter le même identifiant de la section après le - du xml:id -->
+    <introduction>
+  <p>Ces questions sont à faire avant de venir en classe et à remettre au début du cours.</p>
+  </introduction>
+  
+  <exercise>
+    <statement><p>Noter toute question qui demeure suite à la lecture de la section et la résolutin des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.</p></statement>
+    </exercise>
+    </reading-questions>
+   <!--Inclure les exercices de la section ci-dessous--> 
+   <!--<xi:include href="Exercices_.ptx" />-->
+</section>
+<!-- exercice finir de convertir l'exemple hexa-->
