@@ -91,14 +91,13 @@
     </p></statement></exercise>
     <exercise>
     <introduction><p>Pour chacune des fonctions suivantes, déterminer 
-    <m>
     <ol><li><p>L'image de <m>42</m>;</p></li>
     <li><p>L'image</p></li>
     <li><p>La préimage de <m>7</m></p></li>
     </ol>
-    </m></p></introduction>
+    </p></introduction>
     <task><statement><p>La fonction <m>f_1:\Z\to \Z</m> qui associe à <m>z\in \Z</m> son dernier chiffre.</p></statement></task>
-    <task><statement><p>La fonction <m>f_2:\N\to \N</m> qui associe à <m>z\in \Z</m> son premier chiffre chiffre.</p></statement></task>
+    <task><statement><p>La fonction <m>f_2:\N\to \N</m> qui associe à <m>n\in \N</m> son premier chiffre chiffre.</p></statement></task>
     <task><statement><p>La fonction <m>f_3:\R\to \R</m> qui associe à un nombre <m>r\in\R</m> le plus petit entier supérieur ou égal à <m>r</m>.</p></statement></task>
     <task><statement><p>La fonction <m>f_4:\R\to \R</m> qui associe à un nombre <m>r\in\R</m> le plus grand entier inférieur ou égal à <m>r</m>.</p></statement></task>
     </exercise>
