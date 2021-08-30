@@ -32,23 +32,23 @@
     <title>À faire en classe au cours A</title>
     <introduction><p>Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.</p></introduction>
     <exercise xml:id="exo-fctintro">
-    <introduction><p>Soit <m>A=\{0,1,2,3,4,5\}</m>,<m>B=\{a,b,c,d,e\}</m> et <m>C=\{!,@,\#,a\}</m>. On considère les fonctions <m>g:A\to B</m> et <m>f:B\to C</m> définies comme suit:</p>
-    <sidebyside>
-    <md>
-    <mrow>g(0)&amp;=b</mrow>
-    <mrow>g(1)&amp;=a</mrow>
-    <mrow>g(2)&amp;d</mrow>
-    <mrow>g(3)&amp;=b</mrow>
-    <mrow>g(4)&amp;=a</mrow>
-    <mrow>g(5)&amp;=c</mrow>
-    </md>
-    <md>
-    <mrow>f(a)&amp;=!</mrow>
-    <mrow>f(b)&amp;=#</mrow>
-    <mrow>f(c)&amp;#</mrow>
-    <mrow>f(d)&amp;=@</mrow>
-    <mrow>f(e)&amp;=a</mrow>
-    </md>
+    <introduction><p>Soit <m>A=\{0,1,2,3,4,5\}</m>,<m>B=\{a,b,c,d,e\}</m> et <m>C=\{!,@,\#,a\}</m>. On considère les fonctions <m>g:A\to B</m> et <m>f:B\to C</m> définies comme suit: </p>
+    <sidebyside> 
+    <ul>
+    <li><p><m>g(0)=b</m></p></li>
+    <li><p><m>g(1)=a</m></p></li>
+    <li><p><m>g(2)=d</m></p></li>
+    <li><p><m>g(3)=b</m></p></li>
+    <li><p><m>g(4)=a</m></p></li>
+    <li><p><m>g(5)=c</m></p></li>
+    </ul>
+    <ul>
+    <li><p><m>f(a)=!</m></p></li>
+    <li><p><m>f(b)=\#</m></p></li>
+    <li><p><m>f(c)=\#</m></p></li>
+    <li><p><m>f(d)=@</m></p></li>
+    <li><p><m>f(e)=a</m></p></li>
+    </ul>
     </sidebyside>
     <p>Déterminer</p>
     </introduction>
@@ -92,8 +92,8 @@
     <exercise>
     <introduction><p>Pour chacune des fonctions suivantes, déterminer 
     <ol><li><p>L'image de <m>42</m>;</p></li>
-    <li><p>L'image</p></li>
-    <li><p>La préimage de <m>7</m></p></li>
+    <li><p>L'image;</p></li>
+    <li><p>La préimage de <m>7</m>.</p></li>
     </ol>
     </p></introduction>
     <task><statement><p>La fonction <m>f_1:\Z\to \Z</m> qui associe à <m>z\in \Z</m> son dernier chiffre.</p></statement></task>

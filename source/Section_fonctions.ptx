@@ -694,20 +694,20 @@ Ellipse+Pts+Fleches+Txt#+Fct
   <exercisegroup>
   <title>Exercices à remettre avant le cours A</title>
   <exercise xml:id="exo-fctrel">
-    <introduction><p>Soit <m>A=\{0,1,2,3\}</m>,<m>B=\{a,b,c,d\}</m>. Déterminer quels relations ci-dessous sont des fonctions. Expliquer pourquoi.</p></introduction>
-    <task><statement><p><m>R_1\subseteq A\times B</m> où <m>R=\{(0,d),(1,a),(2,b),(3,c)\}</m>;</p></statement></task>
+    <introduction><p>Soit <m>A=\{0,1,2,3\}</m>,<m>B=\{a,b,c,d\}</m>. Déterminer quelles relations ci-dessous sont des fonctions. Expliquer pourquoi.</p></introduction>
+    <task><statement><p><m>R_1\subseteq A\times B</m> où <m>R_1=\{(0,d),(1,a),(2,b),(3,c)\}</m>;</p></statement></task>
     <task><statement><p><m>R_2\subseteq A\times B</m> où <m>R_2=\{(1,a),(2,b),(3,c)\}</m>;</p></statement></task>
-<task><statement><p><m>R_3\subseteq A\times B</m> où <m>R_2=\{(0,a),(1,a),(2,b),(3,c)\}</m>;</p></statement></task>
-<task><statement><p><m>R_4\subseteq A\times B</m> où <m>R_2=\{(0,a),(1,a),(2,b),(3,c),(1,d)\}</m>;</p></statement></task>
+<task><statement><p><m>R_3\subseteq A\times B</m> où <m>R_3=\{(0,a),(1,a),(2,b),(3,c)\}</m>;</p></statement></task>
+<task><statement><p><m>R_4\subseteq A\times B</m> où <m>R_4=\{(0,a),(1,a),(2,b),(3,c),(1,d)\}</m>;</p></statement></task>
     <task><statement><p><m>R_5\subseteq=A\times A </m> où <m>R_5=\{(0,0),(1,0),(2,0),(3,0)\}</m>.</p></statement></task>
     </exercise>
     <exercise><introduction><p>Soit <m>A=\{n\in \N~|~ 0\leq n\leq 999\}</m> les nombres naturels représentés par <m>1,2</m> ou <m>3</m> chiffres. On définit <m>f:A\to \N</m> comme la fonction qui associe à <m>a\in A</m> la somme des chiffres qui composent <m>a</m>.  Par exemple, <m>f(247)=2+4+7=15</m>.</p></introduction>
     <task><statement><p>Déterminer <m>f(d)</m> où <m>d</m> est le jour de votre anniversaire.</p></statement></task>
     <task><statement><p>Trouver l'image de cette fonction.</p></statement></task>
-    <task><statement><p>Trouver <m>f^{-1}(4)</m>.</p></statement></task>
-    <task><statement><p>Trouver <m>f^{-1}({2,3})</m></p></statement></task>
+    <task><statement><p>Trouver <m>f^{-1}(\{4\})</m>.</p></statement></task>
+    <task><statement><p>Trouver <m>f^{-1}(\{2,3\})</m></p></statement></task>
     </exercise>
-    <exercise><introduction><p>Soit <m>C</m> l'ensemble de tous les chiens. Donner une ensemble <m>B</m> et une relation <m>R:A\to B</m> tels que</p></introduction>
+    <exercise><introduction><p>Soit <m>C</m> l'ensemble de tous les chiens. Donner un ensemble <m>B</m> et une relation <m>R:A\to B</m> tels que</p></introduction>
     <task><statement><p><m>R</m> n'est pas une fonction.</p></statement></task>
     <task><statement><p><m>R</m> est une fonction.</p></statement></task>
     </exercise>
