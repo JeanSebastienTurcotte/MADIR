@@ -954,7 +954,7 @@
   <exercise><statement><p>Soit <m>p,q,r</m> des variables propositionnelles. Donner une proposition moléculaire formée à partir de <m>p,q,r</m> qui est vraie quand exactement deux variables sont vraies et fausse dans les autres cas.</p></statement>
   <hint>Penser à quoi ressemble la table de vérité de cette proposition afin de trouver une forme normale.</hint></exercise>
   <exercise><statement><p>Transformer l'expression <m>(\neg p \wedge q) \vee \neg (\neg r \vee q)</m> en l'une des formes normales en utilisant les propriétés (pas de table de vérité).</p></statement></exercise>
-  <exercise><statement><p>Noter toute question qui demeure suite à la lecture de la section et la résolutin des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative. </p></statement></exercise>
+  <exercise><statement><p>Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative. </p></statement></exercise>
     </reading-questions>
    <!--Inclure les exercices de la section ci-dessous--> 
    <xi:include href="Exercices_eqlogfnc.ptx"/>

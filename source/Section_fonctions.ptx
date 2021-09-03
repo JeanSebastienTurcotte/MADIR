@@ -36,7 +36,7 @@
     <mrow>f&amp;: &amp;A&amp;\to B</mrow>
     <mrow>&amp;&amp;a&amp;\to f(a)=b</mrow>
     </md>.</p>
-    <p>Chaque élément <m>a\in A</m> possède un élément <m>b\in B</m> tel que <m>f(a)=b</m>, mais un élément de <m>B</m> peut ne pas être atteint par un élément de <m>A</m>. Dans la définition d'une fonction, on spécifie souvent les trois ensembles suivants:
+    <p>Chaque élément <m>a\in A</m> possède un et un seul élément <m>b\in B</m> tel que <m>f(a)=b</m>, mais un élément de <m>B</m> peut ne pas être atteint par un élément de <m>A</m>. Dans la définition d'une fonction, on spécifie souvent les trois ensembles suivants:
     <dl>
     <li><title>Le domaine:</title><p>L'ensemble <m>A</m> est appelé le domaine de la fonction.</p></li>
     <li><title>Le codomaine:</title><p>L'ensemble <m>B</m> est appelé le codomaine de la fonction.</p></li>
@@ -713,31 +713,31 @@ Ellipse+Pts+Fleches+Txt#+Fct
     </exercise>
     <exercise><statement><p>Soit <m>A=\{3n-1~|~ n\in \N \text{ et } 1\leq n \leq 5\}</m> et <m>B=\{c,d,h,o,q\}</m>. Représenter dans un diagramme sagittal la fonction <m>f:A\to B</m> qui associe à <m>a\in A</m> la première lettre de son écriture dans la langue française.</p></statement></exercise>
     <exercise>
-    <statement><p>Noter toute question qui demeure suite à la lecture de la section et la résolutin des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.</p></statement>
+    <statement><p>Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.</p></statement>
     </exercise>
     </exercisegroup>
     <exercisegroup>
     <title>Exercices à remettre avant le cours B</title>
-    <exercise><statement><p>Quels énoncés parmi les suivants sont équivalent à dire que <m>f:A\to B</m> est injective?
+    <exercise><statement><p>Quels énoncés parmi les suivants sont équivalent à dire que <m>f:A\to B</m> est injective? Justifier.
     <ol>
     <li><p>Le codomaine est égal à l'image.</p></li>
     <li><p>Pour tout <m>a\in A</m> on a <m>f(a)\neq \emptyset</m>.</p></li>
     <li><p>Si <m>a_1\neq a_2</m> alors <m>f(a_1)\neq f(a_2)</m>.</p></li> <!-- faux si C=emptyset -->
-    <li><p><m>|A|&lt; |B|</m></p></li>
+    <li><p><m>|A|\leq |B|</m></p></li>
     </ol>
     </p></statement>
     </exercise>
-    <exercise><statement><p>Quels énoncés parmi les suivants sont équivalent à dire que <m>f:A\to B</m> est surjective?
+    <exercise><statement><p>Quels énoncés parmi les suivants sont équivalent à dire que <m>f:A\to B</m> est surjective? Justifier.
     <ol>
     <li><p>Le codomaine est égal à l'image.</p></li>
     <li><p>Pour tout <m>b\in B</m> on a <m>f^{-1}(\{b\})\neq \emptyset</m>.</p></li>
-    <li><p>Pour tout <m>C\subseteq B</m> on a <m>f^{-1}(C)\neq \emptyset</m>.</p></li> <!-- faux si C=emptyset -->
-    <li><p><m>|A|&gt; |B|</m></p></li>
+    <li><p>Pour tout <m>C\subseteq B</m> où <m>C\neq \emptyset</m>, on a <m>f^{-1}(C)\neq \emptyset</m>.</p></li> <!-- faux si C=emptyset -->
+    <li><p><m>|A|\geq |B|</m></p></li>
     </ol>
     </p></statement>
     </exercise>
     <exercise>
-    <statement><p>Noter toute question qui demeure suite à la lecture de la section et la résolutin des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.</p></statement>
+    <statement><p>Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.</p></statement>
     </exercise>
     </exercisegroup>
     <!--énumérer toutes les fonctions de A vers B et de B vers A -->

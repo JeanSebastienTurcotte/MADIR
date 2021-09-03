@@ -436,7 +436,7 @@
     </row>
   </tabular>
 </table>
-    <example>
+    <example xml:id="ex-decihexa">
     <title>Conversion entre système décimal et système hexadécimal</title>
     <statement><p>On veut convertir <m>A0E2F3_{16}</m> en décimal et <m>987654321</m> en hexadécimal.</p></statement>
     <solution>
@@ -505,9 +505,484 @@
     <p>Au final, on peut montrer que <me>987654321=3ADE68B1_{16}</me>. L'exercice <xref ref="exo-hexaafinir"/> demande le reste de la démarche.</p>
     </solution>
     </example>
+    <p>La base hexadécimale est beaucoup utilisée en informatique, car on peut passer facilement de binaire à hexadécimale ou l'inverse sans passer par l'intermédiaire de la base dix. De plus, un nombre en base seize est moins long à écrire qu'un nombre en base deux (en terme de nombre de caractère à utiliser). Pour voir comment passer de la base deux vers la base hexadécimale, on considère l'exemple suivant. On veut convertir le nombre <m>110110010110_{2}</m> sous forme hexadécimale. Exprimé sous forme de puissances de deux, ce nombre est
+    <me>
+    1\cdot 2^{11}+1\cdot 2^{10}+0\cdot 2^9+1\cdot 2^8+1\cdot 2^7+0\cdot 2^6+0\cdot 2^5+1\cdot 2^4+0\cdot 2^3+1\cdot 2^2+1\cdot 2^1+0\cdot 2^0
+    </me>. On regroupe maintenant ces termes en paquets de quatre, en effectuant une mise en évidence de la plus grande puissance de deux possible. On obtient alors
+    <me>
+    (1\cdot 2^{11}+1\cdot 2^{10}+0\cdot 2^9+1\cdot 2^8)+(1\cdot 2^7+0\cdot 2^6+0\cdot 2^5+1\cdot 2^4)+(0\cdot 2^3+1\cdot 2^2+1\cdot 2^1+0\cdot 2^0)=(1\cdot 2^{3}+1\cdot 2^{2}+0\cdot 2^1+1\cdot 2^0)2^8+(1\cdot 2^3+0\cdot 2^2+0\cdot 2^1+1\cdot 2^0)2^4+(0\cdot 2^3+1\cdot 2^2+1\cdot 2^1+0\cdot 2^0)2^0
+    </me>. On peut maintenant remarquer deux choses. Dans un premier temps, on a <m>2^8=(2^4)^2=16^2, 2^4=16^1</m> et <m>2^0=16^0</m>. En regroupant comme cela, on fait ressortir des puissances de 16, justement les puissances nécessaires pour écrire en base hexadécimale. Ensuite, dans les parenthèses, il ne reste que des puissance de deux entre <m>0</m> et <m>3</m>. Avec quatre chiffre binaire, on peut obtenir n'importe quel nombre entre <m>0000_2=0</m> et <m>1111_2=15</m>, exactement le nombre de caractères utilisés dans la base hexadécimale. Le nombre peut donc se réécrire comme suit:
+    <md>
+    <mrow tag="star" xml:id="eq-bintohex">(1\cdot 2^{3}+1\cdot 2^{2}+0\cdot 2^1+1\cdot 2^0)16^2+(1\cdot 2^3+0\cdot 2^2+0\cdot 2^1+1\cdot 2^0)16^1+(0\cdot 2^3+1\cdot 2^2+1\cdot 2^1+0\cdot 2^0)16^0 &amp;=(1101_2)16^2+(1001_2)16^1+(0110_2)16^0</mrow>
+    <!--<intertext>C'est trois nombres binaires sont respectivement de gauche à droite 13,9 et 6. En utilisant le fait qu'en hexadécimale 13 correspond à D, on a</intertext>-->
+    <mrow>&amp;=D\cdot 16^2+9\cdot 16^1+6\cdot 16^0</mrow>
+    <mrow>&amp;=D96_{16}</mrow>
+    </md>.</p>
+    <p>On remarque que les chiffres <m>\{1,0\}</m> dans les parenthèses de l'équation <xref ref="eq-bintohex"/> sont les mêmes chiffres que ceux de la représentation binaire, séparés en groupe de quatre. Pourquoi quatre? Parce que tel qu'observé, en effectuant une mise en évidence pour un groupe de quatre, on obtient des puissances de seize. L'algorithme suivant décrit la procédure pour convertir un nombre binaire en hexadécimal et hexadécimal en binaire</p>
+    <algorithm xml:id="algo-binhex">
+    <title>Conversion entre binaire et hexadécimale </title>
+    <statement><p>Pour convertir un nombre binaire en hexadécimale, on effectue les étapes suivantes.
+    <ol>
+    <li><p>De droite à gauche, sépare les chiffres en groupe de quatre. Si le groupe à gauche ne contient pas quatre chiffres, on comble avec des zéros à sa gauche.</p></li>
+    <li><p>On convertit chaque groupe de quatre en une valeur de <m>0</m> à <m>15</m>, en associant <m>10=A,11=B,12=C,13=D,14=E</m> et <m>15=F</m> si nécessaire.</p></li>
+    <li><p>En juxtaposant les chiffres obtenus, on obtient la représentation en hexadécimale.</p></li>
+    </ol></p>
+    <p>En inversant ce processus on peut aussi convertir d'hexadécimal à binaire.
+    <ol>
+    <li><p>Convertir chaque caractère du nombre hexadecimal en binaire, en ajoutant des zéros à la gauche au besoin pour former des groupes de quatre chiffres.</p></li>
+    <li><p>Regrouper les groupes en un seul nombre.</p></li>
+    <li><p>Supprimer les zéros complètement à gauche si nécessaire.</p></li>
+    </ol>
+    </p>
+    </statement>
+    </algorithm>
+    <p>On montre des exemples additionnels de cette procédure dans l'exemple suivant.</p>
+    <example>
+    <title>Des conversions entre binaire et hexadécimal</title>
+    <statement><p>On veut convertir les nombres <m>101110_2</m> et <m>1001001_2</m> en hexadécimal et les nombres <m>1234_{16}</m> et <m>BEBE2020_{16}</m> en binaire. </p></statement>
+    <solution><p>On commence par convertir les nombres binaires en base seize. Pour <m>101110_2</m>, on forme les groupes <m>0010\,1110</m>, ayant pris soin d'ajouter deux zéros à la gauche du premier bloc. Ces nombres correspondent respectivement à <m>2</m> et <m>14=E</m> en hexadécimal et donc, <m>101110_2=2E_{16}</m>. D'une manière similaire, <m>1001001_2</m> se regroupe comme <m>0100\,1001</m>, qui se convertissent comme <m>4</m> et <m>9</m>, pour donner <m>1001001_2=49_{16}</m>.</p></solution>
+    <solution><p>Pour convertir les nombres hexadecimaux en binaire, on suit la procédure établie dans l'algorithme <xref ref="algo-binhex"/>. Pour <m>1234_{16}</m>, on obtient <m>0001\,0010\,0011\,0100</m>, ce qui donne en regroupant et en éliminant les zéros de gauche <m>1234_{16}=1001000110100_2</m>. Ensuite pour <m>BEBE2020_{16}</m>, on a <m>1011\,1110\,1011\,1110\,0010\,0000\,0010\,0000</m>, ce qui donne <m>BEBE2020_{16}=10111110101111100010000000100000_2</m>. On voit bien ici l'avantage du système hexadécimal pour la longueur du nombre.</p></solution>
+    </example>
     </subsection>
     <subsection>
     <title>Opérations élémentaires en base deux</title>
+    <p>On s'intéresse maintenant à l'arithmétique dans les autres bases. Par simplicité, on n'utilise que le binaire, mais les opérations dans les autres bases se font essentiellement de la même manière.</p>
+    <p>Pour additionner deux nombres, on apprend assez tôt de faire l'addition position par position, en appliquant la retenue lorsque la somme des chiffres d'une même colonne dépasse dix. Le principe est le même en binaire, toutefois les retenues arrivent dès que la somme est supérieure ou égale à deux. En binaire, <m>1_2+1_2=10_2</m>. Voici un exemple d'addition de <m>110101_2</m> et <m>101110_2</m> en base deux.
+    <md alignment="alignat">
+    <mrow>&amp; &amp;&amp;\small{1}&amp;\small{1}&amp;\small{1}&amp;\small{1}&amp;\small{1}&amp;\small{1}&amp;&amp;\scriptsize{(\text{retenues})}&amp;</mrow>
+    <mrow>&amp; &amp;&amp;&amp;1&amp;1&amp;0&amp;1&amp;0&amp;1_2&amp;&amp;</mrow>
+    <mrow>&amp;+&amp;&amp;&amp;1&amp;0&amp;1&amp;1&amp;1&amp;1_2&amp;&amp;</mrow>    
+    <mrow>\hline&amp;&amp;&amp;1&amp;1&amp;0&amp;0&amp;1&amp;0&amp;0_2&amp;&amp;</mrow>
+    </md>
+    Dans la colonne à droite de cet exemple, on effectue <m>1+1</m> en binaire. Le résultat donne <m>10_2</m>, d'où le <m>0</m> dans la troisième ligne et le <m>1</m> dans la ligne des retenues. Ensuite, on additionne cette retenue avec le <m>0</m> et le <m>1</m> de cette colonne. Ceci donne encore une fois <m>1+0+1=10_2</m>, entrainant une autre retenue dans la colonne à gauche. Cette fois, pour la troisième colonne, il y a deux <m>1</m> à additionner en plus de la retenue. Cela donne <m>1+1+1=11_2</m>, expliquant pourquoi dans la réponse on obtient un <m>1</m> ainsi que dans la retenue. On poursuit ensuite de droite à gauche jusqu'à épuisement des nombres et des retenues.
+    </p>
+    <p>Les soustractions fonctionnent aussi de manière similaire à l'arithmétique en base dix. Au lieu d'avoir des retenues, on fait des emprunts lorsqu'on doit soustraire <m>1</m> à <m>0</m>. Dans ce cas, la soustraction <m>0_2-1_2</m>  devient <m>10_2-1_2=1_2</m> après emprunt, et l'emprunt se fait vers la gauche sur le prochain chiffre non nul (on ne peut emprunter à un <m>0</m>). Voici un exemple de la soustraction de <m>1100101_2</m> et <m>1001010_2</m>.
+    <md alignment="alignat">
+    <mrow>&amp; &amp; &amp; &amp; &amp;\small{0}&amp;\small{1}&amp;\small{1}&amp;\small{0}&amp;\small{1}&amp;&amp;\scriptsize{(\text{emprunts})}&amp;</mrow>
+    <mrow>&amp; &amp; &amp; &amp;1&amp;\bcancel{1}&amp;0&amp;0&amp;{\bcancel{1}}&amp;0&amp;1_2&amp;&amp;</mrow>
+    <mrow>&amp;- &amp; &amp; &amp;1&amp;0&amp;0&amp;1&amp;0&amp;1&amp;0_2&amp;&amp;</mrow>
+    <mrow>\hline&amp; &amp; &amp; &amp;0&amp;0&amp;1&amp;1&amp;0&amp;1&amp;1_2&amp;&amp;</mrow>
+    </md>
+    </p>
+    <p>Dans la deuxième colonne, il a été nécessaire de faire un emprunt. On a donc remplacé le <m>0</m> de la première colonne par <m>10_2</m> et en soustrayant le <m>1</m>, on obtient <m>10_2-1_2=1_2</m>. Il a aussi fallu emprunter dans la troisième colonne. Comme la quatrième est aussi nulle, on emprunte à la cinquième, ainsi <m>100_2</m> devient <m>011_2</m> avec le dernier <m>1</m> considéré comme <m>10_2</m>. La troisième colonne devient <m>10_2-1_2=1_2</m>, la quatrième <m>1_2-0_2=1_2</m> et la cinquième <m>0_2-0_2=0_2</m>. Finalement, la dernière colonne est <m>1_2-1_2=0_2</m>. Au final on a <m>1100101_2-1001010_2=11011_2</m>.</p>
+    <p>On veut maintenant effectuer une multiplication de deux nombres binaires. L'algorithme utilisé pour faire une multiplication en base dix peut être repris, mais on utilise une approche différente, similaire à la manière dont les ordinateurs font les calculs. Celle-ci exploite le fait que multiplié un nombre par une puissance de deux est équivalents à ajouter un certain nombre de zéros à la fin, comme multiplié par <m>10,100,1000,</m> etc. en base dix. Par exemple, pour faire <m>1101_2\times 100_2</m> on a
+    <md>
+    <mrow>1101_2\times 100_2&amp;=(2^3+2^2+2^0)\times 2^2</mrow>
+    <mrow>&amp;=2^3\times 2^2+2^2\times 2^2+2^0\times 2^2</mrow>
+    <mrow>&amp;=2^5+2^4+2^2</mrow>
+    <mrow>&amp;=110100_2</mrow>
+    </md>.
+    </p>
+    <p>De manière plus générale, on ajoute autant de zéros qu'il y en a dans l'écriture de la puissance de deux.Pour un produit quelconque, on va décomposer l'un des facteur selon ses puissances de deux, distribuer sur l'autre facteur et additionner les nombres obtenus.</p>
+    <example>
+    <title>Une multiplication binaire</title>
+    <statement><p>On veut effectuer le produit de <m>1001_2</m> par <m>1010_2</m> en décomposant <m>1010_2</m> selon ses puissances.</p></statement>
+    <solution><p>Puisque <m>1010_2=1000_2+0010_2</m>, on aura
+    <me>
+    1001_2\times 1010_2=1001_2\times (1000_2+10_2)=1001_2\times 1000_2+1001_2\times 10_2
+    </me>.
+    On ajoute à chaque terme le bon nombre de zéros et on obtient <m>1001000_2+10010_2</m>. Finalement, on additionne
+   <md>
+    <mrow>      &amp; &amp; 10 01000_2&amp;</mrow>
+    <mrow>      &amp;+&amp;{}{}10010_2&amp;</mrow>
+    <mrow>\hline&amp; &amp; 10 11010_2&amp; </mrow>
+    </md>
+    </p></solution>
+    </example>
+    <p>Si on veut multiplier des nombres réels avec un nombre fini de chiffre après le point, on procède comme suit. Une puissance négative de deux équivaut à déplacer le point vers la gauche, de un chiffre par valeur de <m>n</m> dans <m>2^{-n}</m>. Ainsi, <m>1101.01_2\times 0.01_2=11.0101</m>, puisque <m>0.01_2=2^{-2}</m>. On considère un exemple plus complexe.</p>
+    <example>
+    <title>Multiplication binaire de nombres réels</title>
+    <statement><p>On veut effectuer <m>10011.1011_2\times 101.101_2</m>.</p></statement>
+    <solution>
+    <p>En suivant la méthode pour les entiers, on décompose l'un des facteur en une somme de de puissances de deux. Ici, on choisit de décomposer le deuxième facteur, puisqu'il contient moins de chiffre. On a 
+    <me>
+    101.101_2=100_2+1_2+0.1_2+0.001_2
+    </me>.
+    Le produit devient 
+    <md>
+    <mrow>10011.1011_2\times 101.101_2&amp;=10011.1011_2\times (100_2+1_2+0.1_2+0.001_2)</mrow>
+    <mrow>&amp;=10011.1011_2\times 100_2+10011.1011_2\times 1_2+10011.1011_2\times 0.1_2+10011.1011_2\times 0.001_2.</mrow>
+    <intertext>En déplaçant le point, on trouve</intertext>
+    <mrow>101&amp;=1001110.11_2+10011.1011_2+1001.11011_2+100.111011_2</mrow>
+    <mrow>&amp;=1</mrow>
+    </md>
+    </p>
+    </solution>
+    </example>
+<md>
+<mrow>10011.1011_2\times 101.101_2&amp;=10011.1011_2\times (100_2+1_2+0.1_2+0.001_2)</mrow>
+    <mrow>&amp;=10011.1011_2\times 100_2+10011.1011_2\times 1_2+10011.1011_2\times 0.1_2+10011.1011_2\times 0.001_2.</mrow>
+               <!-- <intertext>And so it follows that,</intertext> -->
+    <mrow>101&amp;=1001110.11_2+10011.1011_2+1001.11011_2+100.111011_2</mrow>
+    <mrow>&amp;=1</mrow>
+            </md>
+    <p>Finalement, la division en binaire s'effectue aussi comme la division en base dix, en cherchant combien de fois on peut mettre ce par quoi on divise dans le nombre divisé. Une fois que suffisamment de chiffres du dividende (le nombre qui est divisé) ont été considérés pour que le diviseur puisse être soustrait au moins une fois, on utilise les autres chiffres du dividende de droite à gauche en abaissant un à un après la soustraction. Un exemple est illustré ci-dessous.</p>
+  <tabular>
+    <row>
+      <cell>
+      </cell>
+      <cell right="medium">
+        <m>7(\cancel{4}5)</m>
+      </cell>
+      <cell bottom="medium">
+        <m>3</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>-</m>
+      </cell>
+      <cell bottom="medium">
+        <m>6</m>
+      </cell>
+      <cell>
+        <m>2</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+      </cell>
+      <cell>
+        <m>14 (\cancel{5})</m>
+      </cell>
+      <cell>
+        <m>\downarrow</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>-</m>
+      </cell>
+      <cell bottom="medium">
+        <m>12</m>
+      </cell>
+      <cell>
+        <m>24</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+      </cell>
+      <cell>
+        <m>25</m>
+      </cell>
+      <cell>
+        <m>\downarrow</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>-</m>
+      </cell>
+      <cell bottom="medium">
+        <m>24</m>
+      </cell>
+      <cell>
+        <m>248</m>
+      </cell>
+    </row>
+    <row>
+      <cell right="medium">
+      </cell>
+      <cell right="medium" bottom="medium">
+        <m>1</m>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+  </tabular>
+  <p>Pour la division binaire, les chiffres du quotient (la réponse) ne peuvent être que <m>1</m> ou <m>0</m>. On revoit la même division que ci-dessous, mais en binaire, soit <m>1011101001_2 \div 11_2</m>.</p>
+  <tabular>
+    <row>
+      <cell>
+      </cell>
+      <cell right="medium">
+        <m>101(\cancel{1}101001)_2</m>
+      </cell>
+      <cell bottom="medium">
+        <m>11_2</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>-</m>
+      </cell>
+      <cell bottom="medium">
+        <m>\phantom{1}11_2</m>
+      </cell>
+      <cell>
+        <m>1_2</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+      </cell>
+      <cell>
+        <m>101(\cancel{1}01001)_2</m>
+      </cell>
+      <cell>
+        <m>\downarrow</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>-</m>
+      </cell>
+      <cell bottom="medium">
+        <m>\phantom{1}11_2</m>
+      </cell>
+      <cell>
+        <m>11_2</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+      </cell>
+      <cell>
+        <m>101(\cancel{0}1001)_2</m>
+      </cell>
+      <cell>
+        <m>\downarrow</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>-</m>
+      </cell>
+      <cell bottom="medium">
+        <m>\phantom{1}11_2</m>
+      </cell>
+      <cell>
+        <m>111_2</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+      </cell>
+      <cell>
+        <m>100(\cancel{1}001)_2</m>
+      </cell>
+      <cell>
+        <m>\downarrow</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>-</m>
+      </cell>
+      <cell bottom="medium">
+        <m>\phantom{1}11_2</m>
+      </cell>
+      <cell>
+        <m>1111_2</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+      </cell>
+      <cell>
+        <m>11(\cancel{0}01)_2</m>
+      </cell>
+      <cell>
+        <m>\downarrow</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>-</m>
+      </cell>
+      <cell bottom="medium">
+        <m>11_2</m>
+      </cell>
+      <cell>
+        <m>11111_2</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+      </cell>
+      <cell>
+        <m>00(\cancel{0}1)_2</m>
+      </cell>
+      <cell>
+        <m>\downarrow</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>-</m>
+      </cell>
+      <cell bottom="medium">
+        <m>\phantom{1}0_2</m>
+      </cell>
+      <cell>
+        <m>111110_2</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+      </cell>
+      <cell>
+        <m>00(\cancel{1})_2</m>
+      </cell>
+      <cell>
+        <m>\downarrow</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>-</m>
+      </cell>
+      <cell bottom="medium">
+        <m>\phantom{1}0_2</m>
+      </cell>
+      <cell>
+        <m>1111100_2</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+      </cell>
+      <cell>
+        <m>01_2</m>
+      </cell>
+      <cell>
+        <m>\downarrow</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>-</m>
+      </cell>
+      <cell bottom="medium">
+        <m>\phantom{0}0</m>
+      </cell>
+      <cell>
+        <m>11111000_2</m>
+      </cell>
+    </row>
+    <row>
+      <cell right="medium">
+        reste
+      </cell>
+      <cell right="medium" bottom="medium">
+        <m>1_2</m>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+  </tabular>
+  <p>On pourra vérifier que <m>11111000_2=248</m> et bien sûr, <m>1_2=1</m>. On considère un autre exemple.</p>
+  <example>
+  <title>Division en binaire</title>
+  <statement><p>On souhaite effectuer la division de <m>218</m> par <m>22</m> en binaire.</p></statement>
+  <solution><p>On commence par convertir les nombres en binaire. Pour <m>218</m>, on obtient <m>11011010_2=218</m> et pour <m>22</m>, c'est <m>10110_2=22</m>. Le résultat de la division est donné ci-dessous.</p>
+    <tabular>
+    <row>
+      <cell>
+      </cell>
+      <cell right="medium">
+        <m>11011(\cancel{0}10)_2</m>
+      </cell>
+      <cell bottom="medium">
+        <m>10110_2</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>-</m>
+      </cell>
+      <cell bottom="medium">
+        <m>10110_2</m>
+      </cell>
+      <cell>
+        <m>1_2</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+      </cell>
+      <cell>
+        <m>001010(\cancel{1}0)_2</m>
+      </cell>
+      <cell>
+        <m>\downarrow</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>-</m>
+      </cell>
+      <cell bottom="medium">
+        <m>0_2</m>
+      </cell>
+      <cell>
+        <m>10_2</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+      </cell>
+      <cell>
+        <m>10101(\cancel{0})_2</m>
+      </cell>
+      <cell>
+        <m>\downarrow</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>-</m>
+      </cell>
+      <cell bottom="medium">
+        <m>0_2</m>
+      </cell>
+      <cell>
+        <m>100_2</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+      </cell>
+      <cell>
+        <m>101010_2</m>
+      </cell>
+      <cell>
+        <m>\downarrow</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>-</m>
+      </cell>
+      <cell bottom="medium">
+        <m>\phantom{1}10110_2</m>
+      </cell>
+      <cell>
+        <m>1001_2</m>
+      </cell>
+    </row>
+    <row>
+      <cell right="medium">
+        reste
+      </cell>
+      <cell right="medium" bottom="medium">
+        <m>10100_2</m>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+  </tabular>
+  </solution>
+  </example>
     </subsection>
     <conclusion xml:id="concl-representation">  <!-- Ajouter le même identifiant de la section après le - du xml:id -->
     
@@ -516,9 +991,10 @@
     <introduction>
   <p>Ces questions sont à faire avant de venir en classe et à remettre au début du cours.</p>
   </introduction>
-  
+  <exercise xml:id="exo-hexaafinir"><statement><p>Compléter la conversion de <m>987654321</m> en hexadécimal entamée à l'exemple <xref ref="ex-decihexa"/>.</p></statement>
+  </exercise>
   <exercise>
-    <statement><p>Noter toute question qui demeure suite à la lecture de la section et la résolutin des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.</p></statement>
+    <statement><p>Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.</p></statement>
     </exercise>
     </reading-questions>
    <!--Inclure les exercices de la section ci-dessous--> 

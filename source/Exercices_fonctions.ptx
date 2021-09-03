@@ -86,7 +86,7 @@
     <ol>
     <li><p>Une relation <m>f:A\to B</m> qui satisfait la propriété que si <m>f(a_1)\neq f(a_2)</m>, alors <m>a_1\neq a_2</m> pour tous les <m>a_1,a_2\in A</m>.</p></li>
     <li><p>Un ensemble <m>\{(a,b)~|~a\in A \text{ et } b\in B\}</m>.</p></li>
-    <li><p>Un ensemble <m>\{(a,b)~|~a\in A \}</m>.</p></li>
+    <li><p>Un ensemble <m>\{(a,f(a))~|~a\in A \}</m>.</p></li>
     </ol>
     </p></statement></exercise>
     <exercise>
