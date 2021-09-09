@@ -11,7 +11,7 @@
 <!-- Les sections sont divisées en quatre parties, en plus du titre. Les parties introduction et conclusion sont facultatives. Le texte de ceux-ci apparait respectivement avant et après les sections. Les exercices sont à la fin de la section -->
 
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec-representation">   <!-- Ajouter l'identifiant de la section après le - du xml:id -->
-    <title> Représentation de nombres </title>
+    <title> Représentation des nombres </title>
     <introduction xml:id= "intro-representation">  <!-- Ajouter le même identifiant de la section après le - du xml:id -->
     <p>À l'école primaire, on apprend à interpréter un nombre comme <m>1234</m> en le décomposant selon ses unités, dizaines, centaines et milliers. En termes plus mathématiques, on peut écrire
     <me>
@@ -603,19 +603,12 @@
     <mrow>10011.1011_2\times 101.101_2&amp;=10011.1011_2\times (100_2+1_2+0.1_2+0.001_2)</mrow>
     <mrow>&amp;=10011.1011_2\times 100_2+10011.1011_2\times 1_2+10011.1011_2\times 0.1_2+10011.1011_2\times 0.001_2.</mrow>
     <intertext>En déplaçant le point, on trouve</intertext>
-    <mrow>101&amp;=1001110.11_2+10011.1011_2+1001.11011_2+100.111011_2</mrow>
-    <mrow>&amp;=1</mrow>
+    <mrow>\phantom{10011.1011_2\times 101.101_2}&amp;=1001110.11_2+10011.1011_2+1001.11011_2+10.0111011_2</mrow>
+    <mrow>\phantom{10011.1011_2\times 101.101_2}&amp;=1101110.1011111</mrow>
     </md>
     </p>
     </solution>
     </example>
-<md>
-<mrow>10011.1011_2\times 101.101_2&amp;=10011.1011_2\times (100_2+1_2+0.1_2+0.001_2)</mrow>
-    <mrow>&amp;=10011.1011_2\times 100_2+10011.1011_2\times 1_2+10011.1011_2\times 0.1_2+10011.1011_2\times 0.001_2.</mrow>
-               <!-- <intertext>And so it follows that,</intertext> -->
-    <mrow>101&amp;=1001110.11_2+10011.1011_2+1001.11011_2+100.111011_2</mrow>
-    <mrow>&amp;=1</mrow>
-            </md>
     <p>Finalement, la division en binaire s'effectue aussi comme la division en base dix, en cherchant combien de fois on peut mettre ce par quoi on divise dans le nombre divisé. Une fois que suffisamment de chiffres du dividende (le nombre qui est divisé) ont été considérés pour que le diviseur puisse être soustrait au moins une fois, on utilise les autres chiffres du dividende de droite à gauche en abaissant un à un après la soustraction. Un exemple est illustré ci-dessous.</p>
   <tabular>
     <row>
@@ -983,21 +976,260 @@
   </tabular>
   </solution>
   </example>
+  <p>La division de réels est bien sûr possible, mais on se restreint à la division de nombres naturels.</p>
+    </subsection>
+    <subsection>
+    <title>Représentation en circuits d'opérations binaires</title>
+    <p>À l'exercice <xref ref="exo-demiadditionneur"/>, on définit un circuit à deux entrées et deux sorties. Ce circuit est appelé un demi-additionneur. Étant donné deux entrées binaires, il retourne leur somme comme un nombre à deux chiffres, la puissance de <m>2^0</m> comme somme <m>S</m> et la puissance de <m>2^1</m> comme retenue <m>R</m>. Ainsi, <m>0_2+1_2=1_2</m> sera retournée comme <m>S=1</m> et <m>R=0</m>, alors que <m>1_2+1_2=10_2</m> sera retournée comme <m>S=0</m> et <m>R=1</m>.</p>
+    <p>On peut maintenant considérer l'addition binaire générale. Une addition se fait colonne par colonne. La somme d'une colonne est obtenue en faisant la somme des chiffres des nombres à additionner plus la retenue de la colonne précédente, le cas échéant. On va maintenant construire le circuit effectuant cette opération. Dans ce circuit, on note <m>A</m> le chiffre du premier terme de l'addition, <m>B</m> le second, <m>P</m> la retenue de la colonne précédente, <m>S</m> la somme de la colonne et <m>R</m> la nouvelle retenue. La figure <xref ref="fig-additionneur"/> illustre l'additionneur.</p>
+    <figure xml:id="fig-additionneur">
+    <caption>Un circuit additionneur</caption>
+    <image source="additionneur.svg">
+    <description>Une circuit à trois entrées et deux sorties est illustré. Les entrées A et B se combinent dans une porte XOR et dans une porte ET. Le résultat de la porte XOR se combine dans une autre porte XOR avec l'entrée P pour donner la sortie S. Puis la première porte XOR se combine encore avec P, mais cette fois-ci dans une porte ET. Le résultat des deux portes ET se combinent dans une porte OU pour produire la sortie R.</description>
+    </image>
+    </figure>
+    <p>On peut comprendre le circuit en considérant la table de vérité de l'opération <m>A+B+P</m> et en utilisant une forme normale. La table est donnée ci-dessous</p>
+    <table>
+  <title>L'addition de deux chiffres et une retenue en binaire</title>
+  <tabular>
+    <row>
+      <cell>
+        <m>A</m>
+      </cell>
+      <cell>
+        <m>B</m>
+      </cell>
+      <cell>
+        <m>P</m>
+      </cell>
+      <cell>
+        <m>S</m>
+      </cell>
+      <cell>
+        <m>R</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+    </row>
+  </tabular>
+</table>
+<p>On regarde l'expression pour <m>S</m> à l'aide de la forme normale disjonctive. La sortie <m>S</m> sera égale à <m>1</m> si <m>(\neg A\wedge \neg B\wedge P)\vee (\neg A \wedge B \wedge\neg P)\vee (A\wedge\neg B\wedge \neg P)\vee (A\wedge B\wedge P)</m>. On peut ensuite utiliser les règles de la logique pour simplifier un peu l'expression.
+<md>
+<mrow>S&amp;\equiv(\neg A\wedge \neg B\wedge P)\vee (\neg A \wedge B \wedge\neg P)\vee (A\wedge\neg B\wedge \neg P)\vee (A\wedge B\wedge P)&amp;&amp;</mrow>
+<mrow>&amp;\equiv (\neg A \wedge B \wedge\neg P)\vee (A\wedge\neg B\wedge \neg P)\vee (A\wedge B\wedge P)\vee(\neg A\wedge \neg B\wedge P)&amp;&amp;\text{commutativité de l'union}</mrow>
+<mrow>&amp;\equiv((\neg A \wedge B \wedge\neg P)\vee (A\wedge\neg B\wedge \neg P))\vee ((A\wedge B\wedge P)\vee(\neg A\wedge \neg B\wedge P)&amp;&amp;\text{associativité de l'union})</mrow>
+<mrow>&amp;\equiv(((\neg A\wedge B)\vee(A\wedge \neg B))\wedge \neg P)\vee(((\neg A\wedge \neg B)\vee(A\wedge  B))\wedge P)&amp;&amp;\text{distributivité de l'intersection sur l'union}</mrow>
+<mrow>&amp;\equiv((A\oplus B)\wedge \neg P)\vee ((\neg A\oplus B)\wedge P)&amp;&amp; \text{définition du ou exclusif}</mrow>
+<mrow>&amp;\equiv((A\oplus B)\wedge \neg P)\vee (\neg( A\oplus B)\wedge P)&amp;&amp;\text{voir l'exercice }<xref ref="exo-negationxor"/></mrow>
+<mrow>&amp;\equiv(A\oplus B)\oplus P &amp;&amp;\text{définition du ou exclusif}</mrow>
+</md>.
+L'exercice <xref ref="exo-circuitretenue"/> permettra de montrer que <m>R\equiv ((A\oplus B)\wedge P)\vee (A\wedge B)</m>.
+</p>
+<p>On observe dans le circuit de l'additionneur la présence de deux circuits demi-additionneurs, illustrés par les boites dans le circuit équivalent de la figure <xref ref="fig-additionneurreduit"/>. </p>
+    <figure xml:id="fig-additionneurreduit">
+    <caption>Un circuit additionneur réduit grâce aux circuits demi-additonneurs</caption>
+    <image source="additionneurreduit.svg">
+    <description>Une circuit à trois entrées et deux sorties est illustré. Les entrées A et B se combinent dans un circuit demi-additionneur. La sortie S de ce circuit se combine dans un autre circuit demi-additionneur avec l'entrée P. La sortie S de ce second demi-additionneur produit la sortie S globale du circuit. Puis, les sorties R des deux demi-additionneurs se combinent pour produire la sortie globale R du circuit.</description>
+    </image>
+    </figure>
+    <p>Maintenant, à partir de plusieurs combinaisons de circuits additionneurs, on peut illustrer comment faire l'addition de deux nombres binaires. La quantité de circuits additionneurs à utiliser dépend du nombres de chiffres utilisés pour représenter les nombres. Dans la figure <xref ref="fig-additionneur4bits"/>, on illustre un circuit permettant de faire l'addition de nombres binaires écrits avec quatre chiffres. La sortie d'un tel système sera un nombre à cinq chiffres, avec potentiellement le premier de ces chiffres égal à zéro. Pour faire <m>A+B=S</m>, on suppose que <m>A=(A_3A_2A_1A_0)_2</m>, <m>B=(B_3B_2B_1B_0)_2</m> et <m>S=(S_4S_3S_2S_1S_0)_2</m>. Le circuit additionne, de haut en bas, les chiffres de droite à gauche de <m>A</m> et <m>B</m>.</p>
+    <figure xml:id="fig-additionneur4bits">
+    <caption>Un circuit additionneur pour des nombres binaires à quatre chiffre</caption>
+    <image source="additionneur4bits.svg">
+    <description>Une circuit à huit entrées et cinq sorties est illustré. Les entrées A0 et B0 se combinent dans un circuit demi-additionneur. La sortie S de ce circuit produit la sortie S0 puis la sortie R se combine avec les entrées A1 et B1 dans un additionneur. La sortie S de cette additionneur produit S1 et la sortie R se combine avec A2 et B2 dans un autre additionneur. On continue ainsi de suite jusqu'au dernier additionneur, qui produit S3 par sa sortie S et S4 par sa sortie R.</description>
+    </image>
+    </figure>
     </subsection>
     <conclusion xml:id="concl-representation">  <!-- Ajouter le même identifiant de la section après le - du xml:id -->
-    
+    <p>Les points importants de cette section sont:
+    <ul>
+    <li><p>Le principe d'un système positionnel, où chaque chiffre représente un multiple d'une puissance de la base.</p></li>
+    <li><p>La conversion d'un nombre en binaire en un nombre en base dix.</p></li>
+    <li><p>La conversion d'un nombre en base dix en un nombre en binaire.</p></li>
+    <li><p>La conversion d'un nombre en hexadécimal en un nombre en base dix.</p></li>
+    <li><p>La conversion d'un nombre en base dix en un nombre en hexadécimal.</p></li>
+    <li><p>La conversion directe entre binaire et hexadécimal.</p></li>
+    <li><p>Les opérations d'addition,soustraction,multiplication et division en base deux.</p></li>
+    <li><p>Le principe de construction du circuit additionneur.</p></li>
+    </ul>
+    </p>
     </conclusion>
     <reading-questions xml:id="rq-representation">  <!-- Ajouter le même identifiant de la section après le - du xml:id -->
     <introduction>
   <p>Ces questions sont à faire avant de venir en classe et à remettre au début du cours.</p>
   </introduction>
-  <exercise xml:id="exo-hexaafinir"><statement><p>Compléter la conversion de <m>987654321</m> en hexadécimal entamée à l'exemple <xref ref="ex-decihexa"/>.</p></statement>
-  </exercise>
+    <subexercises>
+    <title>Exercices à remettre avant le cours A </title>
+    <exercise><statement><p>Donner les huit nombres binaires qui suivent <m>101101_2</m>.</p></statement></exercise>
+    <exercise><statement><p>Donner les dix nombres hexadécimaux qui suivent <m>ABCD_{16}</m>.</p></statement></exercise>
+    <exercise><statement><p>Qu'ont de particulier les nombres binaires qui se terminent par <m>0</m>?</p></statement></exercise>
+    <exercise><introduction><p>Convertir les nombres suivants en base dix.</p></introduction>
+    <task><statement><p>1010111_2</p></statement></task>
+    <task><statement><p>101010_2</p></statement></task>
+    <task><statement><p>1111111_2</p></statement></task>
+    <task><statement><p>1010111_2</p></statement></task>
+    <task><statement><p>ABCDEF_{16}</p></statement></task>
+    <task><statement><p>123456_{16}</p></statement></task>
+    <task><statement><p>1A2B3C_{16}</p></statement></task>
+    <task><statement><p>A1B2C3_{16}</p></statement></task>
+    </exercise>
   <exercise>
     <statement><p>Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.</p></statement>
     </exercise>
+    </subexercises>
+    <subexercises>
+    <title>Exercices à remettre avant le cours B</title>
+    <exercise>
+    <introduction><p>Effectuer les additions suivantes.</p></introduction>
+    <task><statement><p><m>1011_2+101_2</m></p></statement></task>
+    <task><statement><p><m>1010111_2+101000_2</m></p></statement></task>
+    <task><statement><p><m>1111011_2+1011111_2</m></p></statement></task>
+    <task><statement><p><m>1.0101_2+11.101_2</m></p></statement></task>
+    </exercise>
+    <exercise>
+    <introduction><p>Effectuer les multiplications suivantes.</p></introduction>
+    <task><statement><p><m>1011_2\times 101_2</m></p></statement></task>
+    <task><statement><p><m>1.0101_2\times 11.101_2</m></p></statement></task>
+    </exercise>
+<exercise>
+    <statement><p>Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.</p></statement>
+    </exercise>
+    </subexercises>
     </reading-questions>
    <!--Inclure les exercices de la section ci-dessous--> 
-   <!--<xi:include href="Exercices_.ptx" />-->
+   <xi:include href="Exercices_representationnombres.ptx" />
 </section>
-<!-- exercice finir de convertir l'exemple hexa-->

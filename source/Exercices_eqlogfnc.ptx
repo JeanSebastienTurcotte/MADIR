@@ -44,6 +44,7 @@
   <task><statement><p><m>\neg(p\vee(\neg p\wedge q))\equiv \neg(p\vee q)</m></p></statement></task>
    <task><statement><p><m>(p\rightarrow \neg q)\wedge (p\rightarrow \neg r)\equiv \neg( p\wedge(q\vee r))</m></p></statement></task>
   </exercise>
+  <exercise xml:id="exo-negationxor"><statement><p>Montrer que <m>\neg (p\oplus q)\equiv \neg p\oplus q\equiv p\oplus \neg q</m>.</p></statement></exercise>
   <exercise><!-- inspiré de http://discrete.openmathbooks.org/dmoi3/sec_propositional.html#rWC --><!-- Section 1?-->
   <statement><p>Batman a capturé le Sphynx et lui demande d'avouer ses plus récents crimes. Le sphynx étant ce qu'il est, il propose au chevalier noir l'énigme suivante. Il lui dit:
   <blockquote>

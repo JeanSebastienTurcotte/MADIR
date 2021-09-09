@@ -65,7 +65,7 @@
     <task><statement><p>C'est nuageux, mais il n'y a pas de pluie.</p></statement></task>
     <task><statement><p>Je chante sous la douche ou seul dans ma voiture.</p></statement></task>
     <task><statement><p>S'il fait chaud et que vous êtes sage, on ira à la plage.</p></statement></task>
-    <task><statement><p>Si vous achetez cette voiture, je vous propose <m>1000</m>$ de rabais au comptant ou un rabais de <m>1%</m> sur le financement.</p></statement></task>
+    <task><statement><p>Si vous achetez cette voiture, je vous propose <m>1000</m>$ de rabais au comptant ou un rabais de <m>1\%</m> sur le financement.</p></statement></task>
     </exercise>
     <exercise><introduction>
     <p>Construire la table de vérité des propositions suivantes.</p>

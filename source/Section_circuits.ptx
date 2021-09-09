@@ -723,7 +723,7 @@ et la table de vérité suivante.</p>
     </figure>
     <p>Déterminer une circuit équivalent à une simple porte XOR en termes de porte NON, ET et OU.</p></statement></exercise>
    <exercise><statement><p>Quel serait un circuit associé à l'expression <m>p\rightarrow q</m>?</p></statement></exercise>
-    <exercise><statement><p>Un circuit peut avoir plus d'une sortie. C'est particulièrement utile quand un circuit est en fait une partie d'un système plus complexe. Le circuit illustré à la figure <xref ref="fig-demiadditionneur"/> est une partie d'un circuit utilisé pour qu'un ordinateur effectue des additions. On reviendra sur ce type de circuit dans le chapitre <xref provisional="chap-arithmetiquebinaire"/>.</p>
+    <exercise xml:id="exo-demiadditionneur"><statement><p>Un circuit peut avoir plus d'une sortie. C'est particulièrement utile quand un circuit est en fait une partie d'un système plus complexe. Le circuit illustré à la figure <xref ref="fig-demiadditionneur"/> est une partie d'un circuit utilisé pour qu'un ordinateur effectue des additions. On reviendra sur ce type de circuit dans le chapitre <xref provisional="chap-reptheonombres"/>.</p>
     <figure xml:id="fig-demiadditionneur">
     <caption>Le circuit demi-additionneur</caption>
     <image source="demiadditionneur.svg">
