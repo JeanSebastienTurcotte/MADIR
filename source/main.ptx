@@ -75,6 +75,8 @@
 \DeclareMathOperator{\Arg}{Arg}
 \DeclareMathOperator{\vspan}{span}
 \DeclareMathOperator{\Det}{det}
+\DeclareMathOperator{\pgcd}{pgcd}
+\DeclareMathOperator{\ppcm}{ppcm}
 \renewcommand{\Re}{\operatorname{Re}}
 \newcommand{\CQFD}{\begin{flushright}   %pour faire un carré de cqfd (blanc) ou CCQFD (noir)
 $\blacksquare$

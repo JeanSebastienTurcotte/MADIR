@@ -670,7 +670,7 @@
     </example>
     <p>Pour obtenir la forme normale conjonctive à partir de la table de vérité, il faut travailler un peu plus fort. On utilise le fait que De Morgan transforme les <m>\wedge</m> en <m>\vee</m> et vice-versa par le biais de la négation. En prenant la forme disjonctive de la négation d'une proposition et en la niant à son tour, on obtiendra la forme conjonctive de la proposition originale. </p>
     <example>
-    <title>Forme normale disjonctive à partir de la table de vérité</title>
+    <title>Forme normale conjonctive à partir de la table de vérité</title>
     <statement>
     <p>On reprend la proposition <m>\neg (p\vee q)\vee (r\wedge \neg q)</m>, dont une forme normale disjonctive a été trouvée à l'exemple <xref ref="ex-fnprop"/>. La table de vérité de cette proposition est donnée ci-dessous.</p>  
 <table>
@@ -937,7 +937,7 @@
     <li><p>La notion de <xref ref="def-propequivalentes" text="custom">propositions équivalentes</xref>;</p></li>
     <li><p>Les différentes <xref ref="li-oplogprop" text="custom">équivalences logiques </xref> de base et leurs liens avec les <xref ref="li-opensprop" text="custom">propriétés</xref> des opérations sur les ensembles;</p></li>
     <li><p>La forme <xref ref="ex-implicationsansfleche" text="custom">sans flèche</xref> de l'implication;</p></li>
-    <li><p>Les formes noramles disjonctive et conjonctive et comment les obtenirs à partir de la table de vérité.</p></li>
+    <li><p>Les formes normales disjonctive et conjonctive et comment les obtenirs à partir de la table de vérité.</p></li>
     </ul>
     </p>
     </conclusion>
@@ -947,8 +947,9 @@
   </introduction>
   <exercise><statement><p>Utiliser des tables de vérité pour démontrer les <xref ref="li-oplogabs" text="custom">propriétés d'absorption</xref>.</p></statement></exercise>
   <exercise><statement><p>Montrer que <m>\neg(p\oplus q)</m> est logiquement équivalent à <m>p\leftrightarrow q</m>.</p></statement></exercise>
-  <exercise>
+  
   <exercise><statement><p>Montrer que <m>(\neg p \wedge q)\wedge (p\vee \neg q)</m> est une contradiction.</p></statement></exercise>
+  <exercise>
   <statement><p>Déterminer si <m>p\rightarrow (q\vee r)</m> est équivalent à <m>(p\rightarrow q)\vee (p\rightarrow r)</m>, à savoir si l'implication se distribue sur la disjonction.</p></statement>
   </exercise>
   <exercise><statement><p>Soit <m>p,q,r</m> des variables propositionnelles. Donner une proposition moléculaire formée à partir de <m>p,q,r</m> qui est vraie quand exactement deux variables sont vraies et fausse dans les autres cas.</p></statement>

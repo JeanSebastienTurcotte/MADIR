@@ -18,6 +18,7 @@
     </introduction>
     <!-- Sections à inclure, dans des fichiers xml différents -->
     <xi:include href="Section_representationnombres.ptx" />
+    <xi:include href="Section_divisibilite.ptx" />
     <conclusion xml:id="concl-reptheonombres">  <!-- Ajouter le même identifiant du chapitre après le - du xml:id -->
     
     </conclusion>

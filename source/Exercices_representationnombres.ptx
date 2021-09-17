@@ -31,7 +31,7 @@
     <subexercises>
     <title>À faire en classe au cours A</title>
     <introduction><p>Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.</p></introduction>
-    <exercise><introduction><p>Convertir les nombres suivants en binaire.</p></introduction>
+    <exercise xml:id="exo-conversionbinaire"><introduction><p>Convertir les nombres suivants en binaire.</p></introduction>
     <task><statement><p><m>17</m></p></statement></task>
     <task><statement><p><m>144</m></p></statement></task>
     <task><statement><p><m>1492</m></p></statement></task>
@@ -39,7 +39,7 @@
     <task><statement><p><m>1608</m></p></statement></task>
     <task><statement><p><m>1642</m></p></statement></task>
     </exercise>
-    <exercise><introduction><p>Convertir les nombres suivants en hexadécimal.</p></introduction>
+    <exercise xml:id="exo-conversionhexadecimale"><introduction><p>Convertir les nombres suivants en hexadécimal.</p></introduction>
     <task><statement><p><m>1938</m></p></statement></task>
     <task><statement><p><m>1928</m></p></statement></task>
     <task><statement><p><m>1999</m></p></statement></task>
