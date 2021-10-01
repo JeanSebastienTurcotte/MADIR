@@ -19,14 +19,14 @@
     </introduction>
     <subsection>
     <title>Portes logiques</title>
-    <p>Une porte logique est un dispositif agissant sur un certain nombre d'entrée et produisant à partir de ceux-ci une sortie. Typiquement dans un ordinateur, le niveau de tension de composantes est fourni en entrée afin de produire un résultat ou une information. On peut aussi voir les entrées comme des Vrai ou Faux, des Ouvert ou Fermé ou des <m>1</m> ou <m>0</m>. Une partie d'un circuit peut être illustré comme sur la figure <xref ref="fig-circuitintro"/>. À gauche, on retrouve les entrées (il peut y en avoir une ou plusieurs) et à droite la sortie. Au centre, on retrouve une porte, une espèce de boite noire qui accomplit des opérations logiques pour produire la sortie.</p>
+    <p>Une porte logique est un dispositif agissant sur un certain nombre d'entrée et produisant à partir de ceux-ci une sortie. Typiquement dans un ordinateur, le niveau de tension de composantes est fourni en entrée afin de produire un résultat ou une information. On peut aussi voir les entrées comme des Vrai ou Faux, des Ouvert ou Fermé ou des <m>1</m> ou <m>0</m>. Une partie d'un circuit peut être illustré comme sur la figure <xref ref="fig-circuitintro"/>. À gauche, on retrouve les entrées (il peut y en avoir une ou plusieurs) et à droite la sortie (encore une fois, une ou plusieurs). Au centre, on retrouve une porte, une espèce de boite noire qui accomplit des opérations logiques pour produire la sortie.</p>
     <figure xml:id="fig-circuitintro">
     <caption>Une partie de circuit avec une porte inconnue</caption>
     <image source="circuitintro.svg">
     <description> Un rectangle, représentant une porte de nature inconnue, est représenté avec à sa gauche, deux petits traits pour les entrées et à sa droite, un trait pour la sortie.</description>
     </image>
     </figure>
-    <p>On définit maintenant les trois portes principales d'un circuit logique. Elles les équivalents des opérateurs logiques <m>\not,\wedge,\vee</m>. Les portes  NON, ET et OU sont illustrées ci-dessous. </p>
+    <p>On définit maintenant les trois portes principales d'un circuit logique. Elles les équivalents des opérateurs logiques <m>\neg,\wedge,\vee</m>. Les portes  NON, ET et OU sont illustrées ci-dessous. </p>
     <figure xml:id="fig-portesdebase">
     <caption>Trois portes logiques élémentaires</caption>
     <sidebyside>
@@ -43,14 +43,14 @@
     </image>
     </figure>
     <figure xml:id="fig-porteOU">
-    <caption>Porte logiqueOUN</caption>
+    <caption>Porte logiqueOU</caption>
     <image source="OU.svg">
  <description> Une figure ressemblant à une fusée couchée sur le côté est représentée avec un côté concave arrondie à gauche et une extrémité à arrondie à droite. À sa gauche, deux petits traits pour l'entrée et à sa droite, un trait pour la sortie.</description>
     </image>
     </figure>
     </sidebyside>
     </figure>
-    <p>En plus des portes élémentaires, on peut aussi définir des portes pour des opérations comme le ou exclusif. On peut même définir ses propres opérations logiques et leur créer une porte. Concrètement, la porte NON va changer le signal de l'entrée pour l'inverser. Ainsi si une composante avait une tension élevée, Envoyer son signal dans une porte NON convertira la tension en basse. Une porte ET regarde les deux entrées et retourne un signal à tension élevée si les deux signaux d'entrée étaient aussi à tension élevée. Finalement la porte OU envoie un signal à tension élevée dès que l'une de ses entrée l'était. Pour se coller à la tradition informatique, on parlera désormais en termes de <m>1</m> et de <m>0</m> pour parler de l'entrée et de la sortie d'un circuit.</p>
+    <p>En plus des portes élémentaires, on peut aussi définir des portes pour des opérations comme le ou exclusif. On peut même définir ses propres opérations logiques et leur créer une porte. Concrètement, la porte NON va changer le signal de l'entrée pour l'inverser. Ainsi si une composante avait une tension élevée, envoyer son signal dans une porte NON convertira la tension en basse. Une porte ET regarde les deux entrées et retourne un signal à tension élevée si les deux signaux d'entrée étaient aussi à tension élevée. Finalement la porte OU envoie un signal à tension élevée dès que l'une de ses entrée l'était. Pour se coller à la tradition informatique, on parlera désormais en termes de <m>1</m> et de <m>0</m> pour parler de l'entrée et de la sortie d'un circuit.</p>
     <p>Évidemment, ces portes à elles seules ne sont pas très intéressante, mais c'est en les combinant qu'on peut faire des choses complexes et utiles. Il y a toutefois quelques règles à respecter. Sous ces conditions, la sortie d'un circuit sera entièrement déterminée par la valeur de ces entrées au moment de la lecture de celles-ci. On regarde un exemple de circuit plus complexe avant d'établir les règles pour combiner les portes.</p>
     <example xml:id="ex-circuit1">
     <title>Un premier circuit combiné: dynamique</title>
@@ -90,7 +90,7 @@
     </subsection>
     <subsection>
     <title>Parallèle avec la logique propositionnelle</title>
-    <p>On sait que pour chaque possibilité des entrées d'un circuit, on obtiendra une valeur de sortie. Lorsque le nombre de possibilités est raisonnable, on peut faire une table des possibilité. C'est l'équivalent de la table de vérité de la logique propositionnelle. Ci-dessous, la table du circuit de l'exemple <xref ref="ex-circuit1"/>. On peut vérifier avec la figure interactive <xref ref="fig-circuit1sol"/> que les valeurs sont exactes.</p>
+    <p>On sait que pour chaque possibilité des entrées d'un circuit, on obtiendra une valeur de sortie. Lorsque le nombre de possibilités est raisonnable, on peut faire une table des possibilités. C'est l'équivalent de la table de vérité de la logique propositionnelle. Ci-dessous, la table du circuit de l'exemple <xref ref="ex-circuit1"/>. On peut vérifier avec la figure interactive <xref ref="fig-circuit1sol"/> que les valeurs sont exactes.</p>
 <table>
 <title>Table de vérité du circuit de l'exemple <xref ref="ex-circuit1"/></title>
   <tabular top="major">
@@ -236,7 +236,6 @@
 </image>
 </figure>
 <figure>
-<caption>Deux circuits logiques</caption>
 <caption>Un circuit à trois entrées</caption>
 <image source="circuit3.svg">
 <description>Un circuit à trois entrées et quatre portes logiques est illustrés. Le X et le Y sont combinés dans une porte OU. Le Y et le Z sont combinés dans une porte ET et le résultat de cette porte est inversé par une porte NON. Finalement, cette inversion est combiné avec la porte OU du début dans une porte ET.</description>
@@ -330,7 +329,7 @@
 </table>
 <p>Pour ce qui est de l'expression logique, en suivant le raisonnement des calculs précédents, on arrive à <m>(X\vee Y)\wedge (\neg Y)</m>.</p>
 </solution>
-<solution><p>Souvent, il est plus simple de déterminer d'abord l'expression logique et à partir de celle-ci, écrire la table de vérité. C'est l'approche préconisé ici.</p>
+<solution><p>Souvent, il est plus simple de déterminer d'abord l'expression logique et à partir de celle-ci, écrire la table de vérité. C'est l'approche préconisée ici.</p>
 <p>On peut procéder comme dans le circuit à deux entrées. On peut aussi procéder de la sortie vers les entrées. La porte finale est une porte ET. On sait donc qu'on aura une conjonction de deux propositions. La première partie de la conjonction correspond à la sortie de la porte OU, qui combine le <m>X</m> et le <m>Y</m>. La seconde partie de la porte finale est la sortie d'une inversion. On aura donc une négation. Ce qui est inversé, c'est le résultat de la porte ET, qui combine le <m>Y</m> et le <m>Z</m>. En combinant ces informations, on obtient <m>(X\vee Y)\wedge \neg(Y\wedge Z)</m>.</p>
 <p>On peut ensuite trouver la table de vérité ci-dessous.</p>
 <table>
@@ -714,7 +713,7 @@ et la table de vérité suivante.</p>
   </image>
   </figure>
   </statement></exercise>
-      <exercise><statement><p>En plus des portes NON,ET et OU, on peut aussi créer d'autres portes à l'aide d'expression fréquemment utilisées. Dans cet exercice, on s'intéresse au circuit du <xref ref="exo-ouexclusiflogique" text="custom">ou exclusif</xref>. Une porte associée à cette opération s'appelle une porte XOR. Elle est illustrée à la figure <xref ref="fig-XOR"/>.</p>
+      <exercise><statement><p>En plus des portes NON,ET et OU, on peut aussi créer d'autres portes à l'aide d'expressions fréquemment utilisées. Dans cet exercice, on s'intéresse au circuit du <xref ref="exo-ouexclusiflogique" text="custom">ou exclusif</xref>. Une porte associée à cette opération s'appelle une porte XOR. Elle est illustrée à la figure <xref ref="fig-XOR"/>.</p>
     <figure xml:id="fig-XOR">
     <caption>Une porte XOR</caption>
     <image source="XOR.svg">
@@ -723,7 +722,7 @@ et la table de vérité suivante.</p>
     </figure>
     <p>Déterminer une circuit équivalent à une simple porte XOR en termes de porte NON, ET et OU.</p></statement></exercise>
    <exercise><statement><p>Quel serait un circuit associé à l'expression <m>p\rightarrow q</m>?</p></statement></exercise>
-    <exercise xml:id="exo-demiadditionneur"><statement><p>Un circuit peut avoir plus d'une sortie. C'est particulièrement utile quand un circuit est en fait une partie d'un système plus complexe. Le circuit illustré à la figure <xref ref="fig-demiadditionneur"/> est une partie d'un circuit utilisé pour qu'un ordinateur effectue des additions. On reviendra sur ce type de circuit dans le chapitre <xref provisional="chap-reptheonombres"/>.</p>
+    <exercise xml:id="exo-demiadditionneur"><statement><p>Un circuit peut avoir plus d'une sortie. C'est particulièrement utile quand un circuit est en fait une partie d'un système plus complexe. Le circuit illustré à la figure <xref ref="fig-demiadditionneur"/> est une partie d'un circuit utilisé pour qu'un ordinateur effectue des additions. On reviendra sur ce type de circuit dans le chapitre <xref ref="chap-reptheonombres"/>.</p>
     <figure xml:id="fig-demiadditionneur">
     <caption>Le circuit demi-additionneur</caption>
     <image source="demiadditionneur.svg">

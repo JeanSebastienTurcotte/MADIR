@@ -29,7 +29,7 @@
     <title>Systèmes positionnels</title>
     <p>La représentation d'un nombre peut se faire de plusieurs manières. Une manière brute et assez inefficace consiste par exemple à faire un trait pour chaque unité. Ce système devient vite encombrant et il est difficile de rapidement lire un nombre. D'autres systèmes un peu mieux ont été inventés par différentes civilisation au cours de l'histoire.  Un système dans lequel nombre peut s'écrire sous une forme ressemblant à l'équation <xref ref="eq-basedix"/> de introduction est appelé un système positionnel. Ces systèmes sont normalement construits selon une base entière <m>b>1</m>, dans le cas de l'introduction, c'est dix, et d'un ensemble de symboles en nombre égal à la base. On peut utiliser une base différente, par exemple quatre avec les symboles <m>0,1,2,3</m>, pour représenter n'importe quel nombre.</p>
     
-    <p>Chaque position correspond à une puissance de la base, puissance croissante lorsqu'on lit le nombre de droite à gauche. Ainsi le nombre à droite correspond aux unités, le deuxième nombre correspond à un multiple de <m>b</m>, le troisième aux multiples de <m>b^2</m> et ainsi de suite. Afin de distinguer du cas usuel, lorsque la base sera différente de dix, on l'indiquera en indice. Cet indice sera toujours sous-entendu comme étant écrit en base dix.</p>
+    <p>Chaque position correspond à une puissance de la base, puissance croissante lorsqu'on lit le nombre de droite à gauche. Ainsi le nombre à droite correspond aux unités, le deuxième nombre correspond à un multiple de <m>b</m>, le troisième au multiple de <m>b^2</m> et ainsi de suite. Afin de distinguer du cas usuel, lorsque la base sera différente de dix, on l'indiquera en indice. Cet indice sera toujours sous-entendu comme étant écrit en base dix.</p>
     <example>
     <title>Des exemples en base quatre</title>
     <statement><p>On considère les nombres suivants, écrits en base quatre:
@@ -45,10 +45,10 @@
     <ol>
    <li> <p>On a donc
     <me>
-    123_4=1\times 4^2+2\times 4^1 2+3\times 4^0=16+8+3=27
+    123_4=1\times 4^2+2\times 4^1 +3\times 4^0=16+8+3=27
     </me>.</p></li>
     <li><p>De plus,
-    <me>102030_4=1\times 4^6 + 0\times 4^5 + 2\times 4^4 + 0\times 4^3 + 3\times 4^2 + 0\times 4^1=4656 </me>.
+    <me>102030_4=1\times 4^5 + 0\times 4^4 + 2\times 4^3 + 0\times 4^2 + 3\times 4^1 + 0\times 4^0=1164 </me>.
     </p></li>
     <li><p>Finalement,
     <me>
@@ -74,7 +74,7 @@
     </subsection>
     <subsection>
     <title>Représentation en base deux</title>
-    <p>Autre que la base dix, la base deux, ou représentation binaire est probablement la plus utilisée. Une des raisons est que les signaux envoyées par les pièces électroniques se trouvent en deux états, tel que mentionné dans la section <xref ref="sec-circuits"/>. La représentation binaire utilise les puissances de deux et l'ensemble de chiffres <m>\{0,1\}</m> pour représenter les nombres. Tout nombre entier peut être représenté comme une somme de termes <m>d\times 2^n</m> où <m>d\in \{0,1\}</m> et <m>n\in \N</m>. Les nombres de <m>1</m> à <m>30</m> peuvent être visualisés dans la figure interactive <xref ref="fig-repbase"/> en mettant la valeur de <m>b=2</m>.</p>
+    <p>Autre que la base dix, la base deux, ou représentation binaire est probablement la plus utilisée. Une des raisons est que les signaux envoyées par les pièces électroniques se trouvent en deux états, tel que mentionné dans la section <xref ref="sec-circuits"/>. La représentation binaire utilise les puissances de deux et l'ensemble de chiffres <m>\{0,1\}</m> pour représenter les nombres. Tout nombre entier peut être représenté comme une somme de termes <m>d\times 2^n</m> où <m>d\in \{0,1\}</m> et <m>n\in \N</m>. Les nombres de <m>0</m> à <m>30</m> peuvent être visualisés dans la figure interactive <xref ref="fig-repbase"/> en mettant la valeur de <m>b=2</m>.</p>
     <p>La conversion d'un nombre d'une base à l'autre dépend des bases utilisées. Lorsque la base dix est impliquée, le processus est plus naturel. On peut comparer la conversion à la traduction entre deux langues. Traduire un mot d'une langue proche de la sienne, mais inconnue, est souvent un peu plus simple que de prendre un mot de sa langue et le traduire dans la langue inconnue. C'est un peu le même principe pour la conversion entre une base <m>b</m> et la base dix. De la base <m>b</m> vers dix est un peu plus simple que de la base dix vers la base <m>b</m>. Pour le binaire, connaitre les premières puissances de deux peut-être pratique. Les <m>13</m> premières sont données dans la table <xref ref="tab-puissances2"/>.</p>
 <table xml:id="tab-puissances2">    
 <title>Les premières puissances de <m>2</m> </title>
@@ -195,7 +195,7 @@
     </me>.</p></li>
     <li><p>On réécrit avec les puissances de deux
     <me>
-    100100100_2_2= 1\times 256+ 0\times 128+ 0\times 64+1\times 32+0\times 16+0\times 8+1\times 4+0\times 2+0\times 1=292
+    100100100_2= 1\times 256+ 0\times 128+ 0\times 64+1\times 32+0\times 16+0\times 8+1\times 4+0\times 2+0\times 1=292
     </me>.</p></li>
     </ol></p>
     </solution>
@@ -226,7 +226,7 @@
     <mrow>37&amp;=2^5+d_{4}2^{4}+d_{3}2^{3}+d_{2}2^{2} + d_12^1+d_02^0</mrow>
     <mrow>37-2^5&amp;=d_{4}2^{4}+d_{3}2^{3}+d_{2}2^{2} + d_12^1+d_02^0</mrow>
     <mrow>5&amp;=d_{4}2^{4}+d_{3}2^{3}+d_{2}2^{2} + d_12^1+d_02^0</mrow>
-    <intertext>La plus grande puissance qui est plus petite que 5 est 4. Les autres puissances sont multipliées par zéro.</intertext>
+    <intertext>La plus grande puissance qui est plus petite que 5 est 4. Les puissances précédente qui ne sont pas utilisées sont multipliées par zéro.</intertext>
     <mrow>5&amp;=0\times 2^{4}+0\times 2^{3}+2^{2} + d_12^1+d_02^0</mrow>
     <mrow>5-2^2&amp;=d_1 2^1+d_02^0</mrow>
     <mrow>1&amp;=d_1 2^1+d_02^0</mrow>
@@ -253,9 +253,9 @@
     </example>
     <p>En plus des nombres naturels, on peut aussi représenter les nombres négatifs ou même réels en d'autre base. Pour un nombre négatif, on se contentera de convertir le nombre en valeur absolue en binaire et d'ajouter un signe <m>-</m> devant. Pour un ordinateur toutefois, la réalité est un peu plus complexe. Pour les nombres décimaux, on peut procéder d'une manière similaire à celles utilisées pour convertir d'une base à l'autre. Si on considère un nombre à virgule écrit en binaire (dont la partie entière sera <m>0</m>, pour simplifier), par exemple <m>0.1011001</m>, alors il suffit de poursuivre l'écriture en puissance avec des nombres négatifs:
     <me>
-    02^0+d_{-1}2^{-1}+d_{-2}2^{-2}+\cdots +d_{-m}2^{-m}
+    0\times 2^0+d_{-1}2^{-1}+d_{-2}2^{-2}+\cdots +d_{-m}2^{-m}
     </me>.
-    À noter toutefois que, comme dans le cas des nombres décimaux, il est possible que la partie fractionnaire soit infinie, périodique ou non. On se contentera pour l'instant de cas où la représentation sera finie.
+    À noter toutefois que, comme dans le cas des nombres décimaux, il est possible que la partie fractionnaire soit infinie, périodique ou non. On se contentera de cas où la représentation sera finie.
     </p>
     <example>
     <title>D'une représentation binaire fractionnaire à décimale</title>
@@ -267,7 +267,7 @@
     0.1011_2=1\times 2^{-1}+0\times 2^{-2}+1\times 2^{-3}+1\times 2^{-4}=0.5+0.125+0.0625=0.6875
     </me>.</p></solution>
     </example>
-    <p>Il est possible qu'un nombre ayant une représentation décimale finie possède une représentation binaire infinie, il faut donc bien choisir les exemples pour éviter que cela arrive. Dans la prochaine section, on verra comment convertir un nombre décimal qui devient à représentation infinie. La table suivante pourra être utile.</p>
+    <p>Il est possible qu'un nombre ayant une représentation décimale finie possède une représentation binaire infinie, il faut donc bien choisir les exemples pour éviter que cela arrive. Dans la prochaine section, on verra comment convertir un nombre décimal qui devient à représentation infinie périodique. La table suivante pourra être utile.</p>
     <table>
   <tabular top="major">
     <title>Puissances négatives de <m>2</m></title>
@@ -1198,14 +1198,14 @@ L'exercice <xref ref="exo-circuitretenue"/> permettra de montrer que <m>R\equiv 
     <exercise><statement><p>Donner les dix nombres hexadécimaux qui suivent <m>ABCD_{16}</m>.</p></statement></exercise>
     <exercise><statement><p>Qu'ont de particulier les nombres binaires qui se terminent par <m>0</m>?</p></statement></exercise>
     <exercise><introduction><p>Convertir les nombres suivants en base dix.</p></introduction>
-    <task><statement><p>1010111_2</p></statement></task>
-    <task><statement><p>101010_2</p></statement></task>
-    <task><statement><p>1111111_2</p></statement></task>
-    <task><statement><p>1010111_2</p></statement></task>
-    <task><statement><p>ABCDEF_{16}</p></statement></task>
-    <task><statement><p>123456_{16}</p></statement></task>
-    <task><statement><p>1A2B3C_{16}</p></statement></task>
-    <task><statement><p>A1B2C3_{16}</p></statement></task>
+    <task><statement><p><m>1010111_2</m></p></statement></task>
+    <task><statement><p><m>101010_2</m></p></statement></task>
+    <task><statement><p><m>1111111_2</m></p></statement></task>
+    <task><statement><p><m>1010111_2</m></p></statement></task>
+    <task><statement><p><m>ABCDEF_{16}</m></p></statement></task>
+    <task><statement><p><m>123456_{16}</m></p></statement></task>
+    <task><statement><p><m>1A2B3C_{16}</m></p></statement></task>
+    <task><statement><p><m>A1B2C3_{16}</m></p></statement></task>
     </exercise>
   <exercise>
     <statement><p>Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.</p></statement>

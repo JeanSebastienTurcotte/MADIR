@@ -114,7 +114,7 @@
     <task><statement><p><m>X=1,Y=1,Z=1</m></p></statement></task>
     </exercise>
     <exercise>
-    <statement><p>Construire un circuit à trois entrées qui retourne <m>1</m> si et seulement si <m>X=Y</m> et <m>Y\neg Z</m> en n'utilisant que les trois portes de base</p></statement>
+    <statement><p>Construire un circuit à trois entrées qui retourne <m>1</m> si et seulement si <m>X=Y</m> et <m>Y\neq Z</m> en n'utilisant que les trois portes de base</p></statement>
     </exercise>
     <exercise><statement><p>Construire un circuit à trois entrées qui retourne <m>1</m> si au moins deux entrées sont ouvertes et <m>0</m> sinon. Utiliser n'importe quelle(s) porte(s) vues jusqu'ici.</p></statement></exercise>
     </subexercises>
