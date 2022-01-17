@@ -74,7 +74,7 @@
     <title>Priorité des opérateurs</title>
     <statement><p>Les opérateurs de disjonctions et de conjonctions sont des opérateurs binaires. Ils s'appliquent sur deux opérandes. L'opérateur de négation quant à lui est un opérateur unaire, qui s'applique sur l'opérande qui le suit. Afin d'éviter une trop grande utilisation de parenthèses, on donne la priorité à l'opérateur unaire.</p>
     <p>
-    Ainsi, <m>\neg p\wedge q</m> est équivalent à <m>(\neg p)\wedge q</m>. Si on veut la négation d'une conjonction ou d'une disjonction, on pourra utiliser les parenthèses <m>\neg(p\vee q)</m>.
+    Ainsi, la proposition <m>\neg p\wedge q</m> doit être vue comme <m>(\neg p)\wedge q</m>. Si on veut la négation d'une conjonction ou d'une disjonction, on pourra utiliser les parenthèses comme dans la proposition <m>\neg(p\wedge q)</m>. Dans la section <xref ref="sec-eqlogfnc"/>, on verra comment réécrire cette négation.
     </p></statement>
     </remark>
     </subsection>

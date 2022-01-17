@@ -41,7 +41,7 @@
     <task><statement><p><m>(121\mod 52 +95 \mod 52)\mod 52</m>;</p></statement></task>
     <task><statement><p><m>(121\mod 52 -95 \mod 52)\mod 52</m>;</p></statement></task>
     <task><statement><p><m>((121\mod 52) \times (95 \mod 52))\mod 52</m>;</p></statement></task>
-    <task><statement><p><m>3</m>;</p></statement></task>
+    <!--<task><statement><p><m>3</m>;</p></statement></task>-->
     </exercise>
     <exercise><statement><p>Donner les réponses aux calculs de l'exercice précédent sous la forme d'un entier entre <m>-51</m> et <m>0</m>.</p></statement></exercise>
     <exercise><statement><p>Montrer que chacune des classes d'équivalence modulo <m>5</m>, obtenues à l'exemple <xref ref="ex-modulo5"/>, peut être écrite sous la forme de l'ensemble <m>E_{r,5}=\{x\in \mathbb{Z}~|~ x=r+5k \,\text{pour un certain } k\in \mathbb{Z}\}</m>.</p></statement></exercise>
@@ -230,6 +230,7 @@
     <p>QFINXUFWNYNTSJXYZSWTRFSIJLJTWLJUJWJHVZNJXYJHWNYXFSXZYNQNXJWQFQJYYWJJ</p>
     <p>FUWJXJVZJQQJXTSYQJXQJYYWJXQJXUQZXZYNQNXJJXIJQFQFSLZJKWFSHFNXJ</p>
     </hint>
+    <answer><p>Le message est un résumé du livre la disparition de George Perec, que l'on peut lire sur le site de <url href="https://www.renaud-bray.com/Livres_Produit.aspx?id=15116&amp;def=Disparition(La)%2cPEREC%2c+GEORGES%2c9782070715237">Renaud-Bray</url>. Ce livre a la particularité qu'il ne contient pas la lettre <q>e</q>, sauf pour le nom de l'auteur.</p></answer>
     </exercise>
     </subexercises>
 </exercises>
