@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Ce fichier constitue un fichier auxiliaire du livre                    -->
+<!--                                                                        -->
+<!--      Mathématiques discrètes : Intuition et rigueur                    -->
+<!--                                                                        -->
+<!-- Creative Commons Attribution Share Alike 4.0 International             -->
+<!-- CC-BY-4.0                                                              -->
+<!-- Jean-Sébastien Turcotte                                                -->
+
+<exercises xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="exo-propGraphe">   <!-- Ajouter l'identifiant de la section après le - du xml:id -->
+    <title> Exercices </title>
+    <!-- 
+   <exercise xml:id="exo-nom">
+    <introduction>
+    <p>L'énoncé de l'exercice.</p>
+    </introduction>
+    <task>
+            <statement>
+                <p>La première lettre de la question.</p>
+            </statement>
+            <answer>
+                <p> La réponse suivra. </p>
+            </answer>
+            <solution>
+                <p> La solution suivra. </p>
+            </solution>
+    </task>
+    </exercise>
+    -->
+    <subexercises>
+    <title>À faire en classe</title>
+    <introduction><p>Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.</p></introduction>
+
+    <exercise xml:id="exo-isoRelEqu">
+        <introduction>
+            <p>
+                On peut voir que le fait d'être isomorphe est une relation entre les différents graphes. On veut montrer que cette relation satisfait certaines propriétés. Une relation ayant les propriétés ci-dessous est appelée une relation d'Équivalence. 
+            </p>
+        </introduction>
+        <task xml:id="prop-isoRefl">
+            <statement>
+                <p>
+                    Montrer que si <m>G=(S,A)</m> est un graphe simple, alors <m>G\cong G</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Il suffit de prendre <m>f:S\rightarrow S</m> la fonction identité, c'est-à-dire <m>f(s)=s</m> pour <m>s\in S</m>.
+                </p>
+            </solution>
+        </task>
+        <task xml:id="prop-isoSym">
+            <statement>
+                <p>
+                    S'il existe un isomorphisme <m>f:S_1\rightarrow S_2</m> du graphe <m>G_1=(S_1,A_1)</m> vers le graphe <m>G_2=(S_2,A_2)</m>, alors il existe un isomorphisme <m>g:S_2 \rightarrow S_1</m> du graphe <m>G_2</m> vers le graphe <m>G_1</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Il suffit de poser <m>g=f^{-1}</m>. En effet, puisque <m>f</m> est une fonction bijective, <m>f_{-1}:S_2\rightarrow S_1</m> existe et est également une fonction bijective. 
+                </p>
+                <p>
+                    Il reste à vérifier que <m>g</m> est bien un isomorphisme de graphe, c'est-à-dire que soit <m>t_1, t_2\in S_2 </m>, alors <m>\{t_1,t_2\}\in A_2</m> si et seulement si <m>\{f^{-1}(t_1),f^{-1}(t_2)\}\in A_1</m>. Puisque <m>f</m> est surjective, on peut poser <m>t_1=f(s_1)</m> et <m>t_2=f(s_2)</m> pour <m>s_1, s_2 \in S_1</m>. Ainsi, on a également <m>s_1=f^{-1}(t_1)</m> et <m>s_2=f^{-1}(t_2).</m>
+                </p>
+                <p>
+                     Par ce qui précède, l'énoncé <q><m>\{t_1,t_2\}\in A_2</m> si et seulement si <m>\{f^{-1}(t_1),f^{-1}(t_2)\}\in A_1</m></q> devient <q><m>\{f(s_1),f(s_2)\}\in A_2</m> si et seulement si <m>\{s_1,s_2\}\in A_1</m></q>, ce qui est vrai, car <m>f</m> est un isomorphisme.
+                </p>
+                <p>
+                    On a donc bien montré que <m>g=f^{-1}</m> est un isomorphisme de <m>G_2</m> vers <m>G_1</m>.
+                </p>
+            </solution>
+        </task>
+        <task xml:id="prop-isoTrans">
+            <statement>
+                <p>
+                    Soit <m>G_1=(S_1,A_1)</m>, <m>G_2=(S_2,A_2)</m> et <m>G_3=(S_3,A_3)</m> trois graphes simples tels que <m>G_1\cong G_2</m> et <m>G_2\cong G_3</m>. Montrer que <m></m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Soit <m>f:S_1\rightarrow S_2</m> un isomorphisme entre <m>G_1</m> et <m>G_2</m>, et soit <m>g:S_2\rightarrow S_3</m> un isomorphisme entre <m>G_2</m> et <m>G_3</m>. On pose <m>h=f\circ g:S_1\rightarrow S_3</m>. Par la définition de <m>f</m> et <m>g</m>, on vérifie facilement qu'il s'agit d'un isomorphisme.
+                </p>
+            </solution>
+        </task>
+    </exercise>
+
+    <exercise>
+        <statement>
+            <p>
+                On considère <m>C_n=(S,A)</m> le graphe cyclique à <m>n</m> sommets, disons <m>S=\{s_1, s_2, \dots s_n\}</m>. Par l'exercice <xref ref="prop-isoRefl"/>, on sait qu'il existe au moins un isomorphisme <m>f:S\rightarrow S</m>. Cependant, il pourrait y en avoir plus. Parmi toutes les <m>n!</m> bijections de <m>S</m> vers <m>S</m>, combien d'entres elles sont des isomorphismes de graphes? Autrement dit, combien d'isomorphisme différent existe-t-il allant de <m>C_n</m> vers <m>C_n</m>. 
+            </p>
+        </statement>
+        <answer>
+            <p>
+                Il y a <m>2\cdot n</m> isomorphismes différents entre <m>C_n</m> et <m>C_n</m>.
+            </p>
+        </answer>
+    </exercise>
+    <exercise xml:id="exo-preuveProp">
+        <introduction>
+        <p> Démontrer la proposition <xref ref="prop-isoGraphe"/>. Soit <m>G_1=(S_1,A_1)\cong G_2=(S_2,A_2)</m>, Montrer que : </p>
+        </introduction>
+        <task>
+            <p>
+                <m>|A_1|=|A_2| </m>
+            </p>
+        </task>
+        <task>
+            <p>
+                S'il existe une coloration à <m>n</m> couleurs de <m>G_1</m>, alors il existe une coloration à <m>n</m> couleurs de <m>G_2</m>.
+            </p>
+        </task>
+    </exercise>
+
+
+        
+    <!--<exercise>
+        <introduction>
+            <p>
+                Pour chacune des paires de graphes ci-dessous, déterminer s'ils sont isomorphes. S'ils ne sont pas isomorphes, justifier. S'il le sont, trouver un isomorphisme.
+            </p>
+        </introduction>
+        <task><statement>
+            <p><figure>
+                <caption> Deux graphes isomorphes?</caption>
+                <sidebyside widths="40% 40%">
+                    <figure >
+                        <caption> <m>G_1</m></caption>
+                        <image  source="tikzit_isoG1.jpg"/>
+                    </figure>
+                    <figure>
+                        <caption><m>H_1</m> </caption>
+                        <image  source="tikzit_isoH1.jpg" />
+                    </figure>
+                </sidebyside>
+            </figure></p>
+        </statement></task>
+        <task><statement>
+            <p><figure>
+                <caption> Deux graphes isomorphes?</caption>
+                <sidebyside widths="40% 40%">
+                    <figure >
+                        <caption> <m>G_2</m></caption>
+                        <image  source="tikzit_isoG2.jpg"/>
+                    </figure>
+                    <figure>
+                        <caption><m>H_2</m> </caption>
+                        <image  source="tikzit_isoH2.jpg" />
+                    </figure>
+                </sidebyside>
+            </figure></p>
+        </statement></task>
+        <task><statement>
+            <p><figure>
+                <caption> Deux graphes isomorphes?</caption>
+                <sidebyside widths="40% 40%">
+                    <figure >
+                        <caption> <m>G_3</m></caption>
+                        <image source="tikzit_isoG3.jpg"/>
+                    </figure>
+                    <figure>
+                        <caption><m>H_3</m> </caption>
+                        <image   source="tikzit_isoH3.jpg" />
+                    </figure>
+                </sidebyside>
+            </figure></p>
+        </statement></task>
+    </exercise>-->
+
+    </subexercises>
+    <!--<subexercises>
+    <title>Exercices supplémentaires</title>
+    </subexercises>-->
+</exercises>

@@ -14,12 +14,12 @@
     <title> Opérations sur les ensembles </title>
     <introduction xml:id= "intro-opens">  <!-- Ajouter le même identifiant de la section après le - du xml:id -->
     <title>Introduction</title>
-    <p> Il est possible de combiner des ensembles de différentes manières. On pourrait vouloir créer à partir de deux ensembles <m>A</m> et <m>B</m> un nouvel ensemble qui contiendrait tous les éléments qui sont dans <m>A</m> ou <m>B</m>, ceux qui sont à la fois dans <m>A</m> et <m>B</m> et ainsi de suite. On verra que ces opérations obéissent à des propriétés particulières, qui reviendront aussi dans le chapitre <xref ref="chap-logique"/></p>
+    <p> Il est possible de combiner des ensembles de différentes manières. On pourrait vouloir créer à partir de deux ensembles <m>A</m> et <m>B</m> un nouvel ensemble qui contiendrait tous les éléments qui sont dans <m>A</m> ou <m>B</m>, ceux qui sont à la fois dans <m>A</m> et <m>B</m> et ainsi de suite. On verra que ces opérations obéissent à des propriétés particulières, qui reviendront aussi dans le chapitre <xref ref="chap-logique"/>.</p>
     <p>Dans cette section, on définit l'union, l'intersection, le produit cartésien et la différence de deux ensembles. On définit aussi le complément d'un ensemble par rapport à un ensemble univers <m>\Omega</m>.</p>
     </introduction>
     <subsection xml:id="sssec-opens">
     <title>Opérations élémentaires sur les ensembles</title>
-    <p>La première opération que l'on considère est celle qui, à partir de deux ensembles, crée un nouvel ensemble dont les éléments sont dans au moins l'un des deux ensembles. On l'appelle l'union.</p>
+    <p>La première opération que l'on considère est celle qui, à partir de deux ensembles, crée un nouvel ensemble dont les éléments sont dans au moins l'un des deux ensembles. On l'appelle l'union.  </p>
     <definition xml:id="def-union">
     <title>L'union de deux ensembles</title>
     <statement><p>Soit <m>A</m> et <m>B</m> des ensembles quelconques. <em>L'union</em> de <m>A</m> et <m>B</m>, notée <m>A\cup B</m> est l'ensemble qui contient tous les éléments qui sont dans <m>A</m> ou dans <m>B</m>, potentiellement les deux:
@@ -58,7 +58,7 @@
     <p>L'intersection est <m>A\cap B=\{c,d\}</m>.</p>
     </solution>
     </example>
-    <p>L'union et l'intersection de deux ensembles sont  illlustrées à la figure <xref ref="fig-unionintersection"/>.</p>
+    <p>L'union et l'intersection de deux ensembles sont  illustrées à la figure <xref ref="fig-unionintersection"/>.</p>
     <figure xml:id="fig-unionintersection">
     <caption>L'union (à gauche) et l'intersection (à droite) de deux ensembles <m>A</m> et <m>B</m></caption>
     <sidebyside width="40%">
@@ -91,7 +91,7 @@ O+A+B+T
     <me>
     A-B=\{a\in A~|~ a\notin B\}
     </me>.</p>
-    <p>La différence est parfois aussi notéé <m>A\backslash B</m> et on dit aussi <m>A</m> sauf <m>B</m>. On préfèrera la notation <m>A-B</m>, car elle se conforme avec celle utilisée par Sage.</p>
+    <p>La différence est parfois aussi notée <m>A\backslash B</m> et on dit aussi <m>A</m> sauf <m>B</m>. On préfèrera la notation <m>A-B</m>, car elle se conforme avec celle utilisée par Sage.</p>
     </statement>
     </definition>
     <example>
@@ -105,7 +105,7 @@ O+A+B+T
     <p>Lorsqu'un ensemble est vu comme un sous-ensemble d'un ensemble univers <m>\Omega</m>, on donne un nom particulier aux éléments qui sont dans <m>\Omega</m>, mais pas dans <m>A</m>. C'est le complément de <m>A</m>.</p>
     <definition xml:id="def-compens">
     <title>Le complément d'un ensemble</title>
-    <statement><p>Soit <m>A</m> un ensemble à l'intérieur d'un ensemble univers <m>\Omega</m>. On apelle le complément de <m>A</m> l'ensemble des éléments de <m>\Omega</m> qui ne sont pas dans <m>A</m> et on le note:
+    <statement><p>Soit <m>A</m> un ensemble à l'intérieur d'un ensemble univers <m>\Omega</m>. On appelle le complément de <m>A</m> l'ensemble des éléments de <m>\Omega</m> qui ne sont pas dans <m>A</m> et on le note:
     <me>
     A^c=\Omega-A
     </me>.</p>
@@ -116,13 +116,13 @@ O+A+B+T
     <title>Le complément d'ensembles</title>
     <statement><p>On considère les ensembles <m>A=\{0,2,4,6,8,10\}</m> et <m>B=\{n\in \N ~|~ n\leq 7\}</m>. On cherche à décrire les compléments de <m>A</m> et <m>B</m> par rapport aux ensembles <m>\Omega_1=\{n\in \N ~|~ n\leq 10\}</m> et <m>\Omega_2=\N</m>.</p></statement>
     <solution>
-    <p>On commence par trouver les compléments par rapport à l'ensemble univers <m>\Omega_1</m>. Pour <m>A</m>, on remarque que les éléments sont les nombres pairs plus petit ou égaux à <m>10</m>. Dans <m>\Omega_1</m>, son complément sera alors <m>A^c=\{1,3,5,7,9\}</m>. Pour <m>B</m>, on cherche tous les nombres naturels qui sont inférieurs ou égaux à <m>10</m> (donc dans <m>\Omega_1</m>), mais pas inférieurs ou égaux à <m>7</m> (donc dans <m>B</m>). Il reste donc <m>B^c=\{8,9,10\}</m>. </p>
-    <p>Maintenant pour <m>\Omega_2</m>, on observe que l'ensemble est infini. On pourrait écrire <m>A^c=\{1,3,5,7,9,11,12,13,14,15,\ldots\}</m>, mais comme la suite logique est en deux parties (d'abord, les impairs inférieurs à <m>10</m>, puis tous les nombres naturels plus grand que <m>10</m>), on pourrait préférer l'écrire en deux partie:
+    <p>On commence par trouver les compléments par rapport à l'ensemble univers <m>\Omega_1</m>. Pour <m>A</m>, on remarque que les éléments sont les nombres pairs plus petits ou égaux à <m>10</m>. Dans <m>\Omega_1</m>, son complément sera alors <m>A^c=\{1,3,5,7,9\}</m>. Pour <m>B</m>, on cherche tous les nombres naturels qui sont inférieurs ou égaux à <m>10</m> (donc dans <m>\Omega_1</m>), mais pas inférieurs ou égaux à <m>7</m> (donc dans <m>B</m>). Il reste donc <m>B^c=\{8,9,10\}</m>. </p>
+    <p>Maintenant pour <m>\Omega_2</m>, on observe que l'ensemble est infini. On pourrait écrire <m>A^c=\{1,3,5,7,9,11,12,13,14,15,\ldots\}</m>, mais comme la suite logique est en deux parties (d'abord, les impairs inférieurs à <m>10</m>, puis tous les nombres naturels plus grands que <m>10</m>), on pourrait préférer l'écrire en deux parties:
     <me>
     A^c=\{1,3,5,7,9\}\cup\{11,12,13,14,\ldots\}
     </me>.
     </p>
-    <p>Pour l'ensemble <m>B</m>, on peut utiliser une description en compréhension assez clair:
+    <p>Pour l'ensemble <m>B</m>, on peut utiliser une description en compréhension assez claire:
     <me>
     B^c=\{n\in \N~|~ n\geq 8\}
     </me>.</p>
@@ -137,7 +137,7 @@ O+A+B+T
     </definition>
     <definition xml:id="def-prodcart">
     <title>Le produit cartésien</title>
-    <statement><p>Soit <m>A</m> et <m>B</m> deux ensembles. Le produit cartésien de <m>A</m> par <m>B</m>, noté <m>A\times B</m> est l'ensemble de toutes les paires ordonnées <m>(a,b)</m> formées à partir des éléments des ensemble <m>A,B</m>:
+    <statement><p>Soit <m>A</m> et <m>B</m> deux ensembles. Le produit cartésien de <m>A</m> par <m>B</m>, noté <m>A\times B</m> est l'ensemble de toutes les paires ordonnées <m>(a,b)</m> formées à partir des éléments des ensembles <m>A,B</m>:
     <me>
     A\times B=\{(a,b)~|~a\in A\text{ et }b\in B\}
     </me>.
@@ -149,7 +149,7 @@ O+A+B+T
     <title>Le produit cartésien de deux ensembles</title>
     <statement><p>On considère les ensembles <m>A=\{a,b\}</m> et <m>B=\{0,1,2\}</m>. On cherche à décrire le produit cartésien <m>A\times B</m> en extension.</p></statement>
     <solution>
-    <p>On doit énumérer toutes les paires ordonnées possibles. On verra au chapitre <xref provisional="chap-comb"/> comment compter le nombre de paires. Voici une méthode simple pour les énumérer sans en oublier lorsque les ensembles sont finis.
+    <p>On doit énumérer toutes les paires ordonnées possibles. On verra au chapitre <xref ref="chap-denombrement"/> comment compter le nombre de paires. Voici une méthode simple pour les énumérer sans en oublier lorsque les ensembles sont finis.
     <ol>
     <li><p>On prend le premier élément de <m>A</m> et on crée toutes les paires ordonnées possibles contenant cet élément. </p></li>
     <li><p>On répète avec les autres éléments de <m>A</m> jusqu'à épuisement de l'ensemble <m>A</m>.</p></li>
@@ -233,13 +233,13 @@ O+A+B+T
     <mrow>A\cup(B\cup C)&amp;=(A\cup B)\cup C</mrow>
     <mrow>A\cap(B\cap C)&amp;=(A\cap B)\cap C</mrow>
     </md>.</p></statement>
-    <proof><p>Pour démontrer l'identité de l'union, on utilise une table d'appartenance. Ce type de table reviendra dans la section <xref provisional="sec-logprop"/> (sous le nom de table de vérité). Voici comment remplir une telle table.
+    <proof><p>Pour démontrer l'identité de l'union, on utilise une table d'appartenance. Ce type de table reviendra dans la section <xref ref="sec-logprop"/> (sous le nom de table de vérité). Voici comment remplir une telle table.
     <ol>
     <li><p>Sur la première ligne, on met tous les ensembles pertinents à notre égalité, en commençant par les ensembles les plus simples à la gauche.</p></li>
     <li><p>En fonction du nombre d'ensembles seuls, on remplit les lignes sous les premières colonnes (ne contenant qu'un ensemble seul) avec des &#x00AB; non &#x00BB; (signifiant que l'élément n'est pas dans l'ensemble) ou &#x00AB; oui &#x00BB; (signifiant l'appartenance de l'élément à l'ensemble) afin d'obtenir toutes les combinaisons possibles.</p></li>
     <li><p>On remplit le reste de la table en utilisant la définition des opérations utilisées.</p></li>
     </ol>
-    L'égalité est vrai si les colonnes correspondant aux membres de part et d'autre de l'égalité sont identiques.
+    L'égalité est vraie si les colonnes correspondant aux membres de part et d'autre de l'égalité sont identiques.
     </p>
     <p>
     Voici la table pour l'identité <m>A\cup(B\cup C)=(A\cup B)\cup C</m>
@@ -481,9 +481,10 @@ O+A+B+T
     </ul>
     </p>
     </conclusion>
-    <reading-questions>
-      <introduction>
-  <p>Ces questions sont à faire avant de venir en classe et à remettre au début du cours.</p>
+   <!--Inclure les exercices de la section ci-dessous--> 
+<reading-questions xml:id="rq-opens">
+    <introduction xml:id= "intro-opens-lec">  <!-- Ajouter le même identifiant de la section après le - du xml:id -->
+    <p>Ces questions sont à faire avant de venir en classe et à remettre au début du cours.</p>
   </introduction>
   <exercise>
     <introduction><p>Soit <m>A=\{a,b,c,d\}</m> et <m>B=\{a,b,c,d,e,f,g\}</m> vivant dans l'ensemble univers <m>\Omega =\{l  ~|~ l \text{ est une lettre de l'alphabet comprise entre } a \text{ et } j  \}</m>. Déterminer:</p></introduction>
@@ -529,7 +530,7 @@ O+A+B
     <statement><p>Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.</p></statement>
     </exercise>
     </reading-questions>
-   <!--Inclure les exercices de la section ci-dessous--> 
+
     <xi:include href="Exercices_operationsensembles.ptx" />
 </section>
 <!-- idée: Preuve par diagramme de Venn style oscar fin 0.4 -->

@@ -23,7 +23,7 @@
     <p>Soit <m>a,b</m> deux entiers. Si on divise <m>a</m> par <m>b</m>, le résultat peut être un entier, comme par exemple avec <m>8/4=2</m>, un rationnel, avec en exemple <m>1/2</m> ou même non défini, si on divise par <m>0</m>. On expliquera prochainement la raison pour laquelle le fait que la division par <m>0</m> est non définie est une bonne chose. Dans le cas où <m>a/b\in \mathbb{Z}</m>, donc où le résultat de la division produit un entier, on dit que <m>b</m> divise <m>a</m>, et on écrit <m>b| a</m> (la barre étant verticale et non pas oblique comme pour l'opérateur de division).</p>
     <definition xml:id="def-divisibilite">
     <title>La divisibilité</title>
-    <statement><p>Soit <m>a,b\in \mathbb{Z}</m> avec <m>b\neq 0</m>. On dit que <q><m>a</m> divise <m>b</m></q> et on écrit <m>b| a</m> si le résultat <m>a/b</m> est un entier. On note que les quatre conditions suivantes sont équivalentes:
+    <statement><p>Soit <m>a,b\in \mathbb{Z}</m> avec <m>b\neq 0</m>. On dit que <q><m>b</m> divise <m>a</m></q> et on écrit <m>b| a</m> si le résultat <m>a/b</m> est un entier. On note que les quatre conditions suivantes sont équivalentes:
     <ul>
     <li><p><m>b| a</m></p></li>
     <li><p><m>a=kb</m> pour un certain <m>k\in \mathbb{Z}</m></p></li>
@@ -66,11 +66,11 @@
     </p>
     </solution>
     </example>
-    <paragraphs xml:id="par-etranglement"><title></title>Les valeurs numériques de l'exemple précédent étaient relativement petites qu'on savait si la relation de divisibilité était vraie assez facilement. Par contre, si on se demande est-ce que <m>123</m> divise <m>198823</m>, alors là ce n'est plus aussi évident. Comment peut-on procéder? On veut  trouver un multiple de <m>123</m> qui donne <m>881123</m> ou montrer que c'est impossible. On peut essayer de procéder par étranglement. Si on fait <m>123\times 10000=1230000</m>, on obtient une valeur trop grande, alors que si on fait <m>123\times 1000=123000</m>, on obtient une valeur trop petite. Si un multiple existe, il se trouve nécessairement entre <m>1000</m> et <m>10000</m>. On essaie <m>123\times 5000=615000</m>, qui est encore trop petit. Avec <m>123\times 7500=922500</m>, on est maintenant trop haut. Le multiple s'il existe se retrouve donc entre <m>5000</m> et <m>7500</m>. On peut continuer de couper la poire en deux comme cela pendant un certain temps et éventuellement, on arrive à <m>123\times 7163=881049</m> qui est plus petit et <m>7164\times 123=881172</m> qui est trop grand. On conclut donc que <m>881123</m> n'est pas un multiple de <m>123</m> et donc <m>123 \nmid 881123</m>.</paragraphs>
+    <paragraphs xml:id="par-etranglement"><title></title>Les valeurs numériques de l'exemple précédent étaient relativement petites qu'on savait si la relation de divisibilité était vraie assez facilement. Par contre, si on se demande est-ce que <m>123</m> divise <m>881123</m>, alors là ce n'est plus aussi évident. Comment peut-on procéder? On veut  trouver un multiple de <m>123</m> qui donne <m>881123</m> ou montrer que c'est impossible. On peut essayer de procéder par étranglement. Si on fait <m>123\times 10000=1230000</m>, on obtient une valeur trop grande, alors que si on fait <m>123\times 1000=123000</m>, on obtient une valeur trop petite. Si un multiple existe, il se trouve nécessairement entre <m>1000</m> et <m>10000</m>. On essaie <m>123\times 5000=615000</m>, qui est encore trop petit. Avec <m>123\times 7500=922500</m>, on est maintenant trop haut. Le multiple s'il existe se retrouve donc entre <m>5000</m> et <m>7500</m>. On peut continuer de couper la poire en deux comme cela pendant un certain temps et éventuellement, on arrive à <m>123\times 7163=881049</m> qui est plus petit et <m>7164\times 123=881172</m> qui est trop grand. On conclut donc que <m>881123</m> n'est pas un multiple de <m>123</m> et donc <m>123 \nmid 881123</m>.</paragraphs>
     <p>En prenant <m>123\times 7163=881049</m>, on remarque qu'on est à <m>74</m> entiers de la cible. On peut donc écrire <m> 881123=123\times 7163+74</m>. Il se trouve qu'on peut généraliser se résultat pour obtenir la notion bien connue de division.</p>
     <proposition xml:id="prop-divisioneuclidienne">
     <title>La division euclidienne</title>
-    <statement><p>Soit <m>a,b\in \mathbb{Z}</m> avec <m>b\neq 0</m>. Alors il existe des uniques entiers <m>q,r</m> avec <m>0\leq r\leq \lvert b\rvert</m> pour lesquels
+    <statement><p>Soit <m>a,b\in \mathbb{Z}</m> avec <m>b\neq 0</m>. Alors il existe une paire d'entiers unique <m>q,r</m> avec <m>0\leq r\leq \lvert b\rvert</m> pour lesquels
     <me>
     a=bq+r
     </me>.</p>
@@ -82,7 +82,7 @@
     <computation>
     <title>La divisibilité et Sage</title>
     <statement>
-    <p>Sage est capable de calculer facilement les entiers <m>q</m> et <m>r</m> de la proposition <xref ref="prop-divisioneuclidienne"/> grâce à deux opérateurs spéciaux. Si <c>a/b</c> produit la division usuelle, donnant un nombre rationnel lorsque <m>b\nmid a</m>, l'opération <c>a//b</c> elle produit le quotient <m>q</m> dans l'expession <m>a=bq+r</m>. Pour obtenir le reste, il faut utiliser <c>a%b</c>. La cellule ci-dessous illustre ces opérations.</p>
+    <p>Sage est capable de calculer facilement les entiers <m>q</m> et <m>r</m> de la proposition <xref ref="prop-divisioneuclidienne"/> grâce à deux opérateurs spéciaux. Si <c>a/b</c> produit la division usuelle, donnant un nombre rationnel lorsque <m>b\nmid a</m>, l'opération <c>a//b</c> elle produit le quotient <m>q</m> dans l'expression <m>a=bq+r</m>. Pour obtenir le reste, il faut utiliser <c>a%b</c>. La cellule ci-dessous illustre ces opérations.</p>
     <sage>
     <input>
 a=881123 #Changer a,b pour voir d'autres exemples
@@ -112,7 +112,7 @@ def _(a=(-100..100),b=(1..100),b_negatif=("b négatif?",False)):
     </subsection>
     <subsection>
     <title>Retour sur la conversion à partir de la base dix</title>
-    <p>Dans la section précédente, on a utilisé une méthode similaire à l'étranglement pour convertir un nombre de la base décimale aux bases binaires et hexadécimale. On peut utiliser l'écriture sous forme quotient et reste pour trouver les chiffres de l'écriture dans la nouvelle base. On montre l'idée générale avec un exempe concret, qu'on pourra généraliser facilement par la suite. On considère l'écriture de <m>187</m> dans la base deux, établie à l'exemple <xref ref="ex-decimalebinaire"/>. On suppose que l'écriture de <m>187</m> a <m>n</m> chiffres. On remarque que
+    <p>Dans la section précédente, on a utilisé une méthode similaire à l'étranglement pour convertir un nombre de la base décimale aux bases binaire et hexadécimale. On peut utiliser l'écriture sous forme quotient et reste pour trouver les chiffres de l'écriture dans la nouvelle base. On montre l'idée générale avec un exemple concret, qu'on pourra généraliser facilement par la suite. On considère l'écriture de <m>187</m> dans la base deux, établie à l'exemple <xref ref="ex-decimalebinaire"/>. On suppose que l'écriture de <m>187</m> a <m>n</m> chiffres. On remarque que
     <md>
     <mrow>187&amp;=d_n2^n+d_{n-1}2^{n-1}+\cdots d_12^1+d_02^0</mrow>
     <mrow>&amp;=2(d_n2^{n-1}+d_{n-1}2^{n-2}+\cdots d_12^0)+d_0</mrow>
@@ -120,9 +120,9 @@ def _(a=(-100..100),b=(1..100),b_negatif=("b négatif?",False)):
     Puisque <m>q=d_n2^{n-1}+d_{n-2}2^{n-1}+\cdots d_12^0\in \mathbb{Z}</m>, on voit que <m>187=2q+d_0</m> et donc, selon la proposition <xref ref="prop-divisioneuclidienne"/>, le premier chiffre de l'écriture de <m>187</m> en binaire correspond au reste de la division de <m>187</m> par <m>2</m>. Ensuite pour trouver <m>d_1</m>, on répète avec le quotient <m>q</m>. Dans le cas de <m>187</m>, on a <m>q=93</m> et <m>d=d_0=1</m>. En continuant,
     <md>
     <mrow>
-    93&amp;=d_n2^{n-1}+d_{n-2}2^{n-1}+\cdots d_12^0
+    93&amp;=d_n2^{n-1}+d_{n-1}2^{n-2}+\cdots d_12^0
     </mrow>
-    <mrow>&amp;=2(d_n2^{n-2}+d_{n-1}2^{n-3}+\cdots d_22^2)+d_1</mrow></md>
+    <mrow>&amp;=2(d_n2^{n-2}+d_{n-1}2^{n-3}+\cdots d_22^1)+d_1</mrow></md>
     , on peut trouver <m>d_1=1</m> et le prochain quotient égal à <m>46</m>. Avec cela, on obtient <m>d_2=0</m>, amenant le quotient suivant à <m>23</m>. On obtient <m>d_3=1</m> et le quotient suivant vaut <m>11</m>. On continue avec <m>d_4=1</m> pour un quotient de <m>5</m>, puis <d>d_5=1</d> pour un quotient de <m>2</m>, <m>d_6=0</m> pour un quotient de <m>1</m> et finalement, <m>d_7=1</m> pour un quotient de <m>0</m>. On peut donc écrire <m>187=10111011_2</m>. </p>
     <p>Ce qui est bien avec le binaire, c'est que le reste se déduit facilement avec la parité du nombre divisé. Si celui-ci est pair, le reste est de <m>0</m> et s'il est impair, le reste est de <m>1.</m> On peut simplifier la procédure en écrivant les quotients et les restes dans un tableau. La colonne des restes correspond à l'écriture binaire du nombre, les nombres de droite à gauche se trouvant de haut en bas de la colonne. Afin d'illustrer, la conversion du nombre <m>101=1100101_2</m>, aussi de l'exemple <xref ref="ex-decimalebinaire"/> est donnée dans la table <xref ref="tab-binairedecimale101"/>.</p>
     <table xml:id="tab-binairedecimale101">
@@ -204,7 +204,7 @@ def _(a=(-100..100),b=(1..100),b_negatif=("b négatif?",False)):
 </table>
 <p>La procédure est la même pour les autres bases, mais les restes ne peuvent pas être déterminés aussi facilement qu'en regardant la parité.</p>
 <example>
-<title>Conversion d'un nombre binaire en hexadécimale</title>
+<title>Conversion d'un nombre en base dix à un nombre en hexadécimale</title>
 <statement><p>On veut convertir <m>987654321</m> en base hexadécimale, afin de valider l'exemple <xref ref="ex-decihexa"/>. </p></statement>
 <solution>
 <p>On utilise une table dans laquelle on note les quotients et les restes. Ceux-ci peuvent être calculés avec Sage.</p>
@@ -320,10 +320,10 @@ def _(a=(-100..100),b=(1..100),b_negatif=("b négatif?",False)):
     <mrow>a&amp;=bq_1+r_1 &amp; &amp;\text{avec} &amp;0&amp;\leq r_1&lt; b</mrow>
     <mrow>b&amp;=r_1q_2+r_2 &amp; &amp;\text{avec} &amp;0&amp;\leq r_2&lt; r_1</mrow>
     <mrow>r_1&amp;=r_2q_3+r_3 &amp; &amp;\text{avec} &amp;0&amp;\leq r_3&lt; r_2</mrow>
-    <mrow>r_2&amp;=r_3q_3+r_4 &amp; &amp;\text{avec} &amp;0&amp;\leq r_4&lt; r_3</mrow>
+    <mrow>r_2&amp;=r_3q_4+r_4 &amp; &amp;\text{avec} &amp;0&amp;\leq r_4&lt; r_3</mrow>
     <mrow>\vdots&amp;=\vdots &amp;&amp;\vdots &amp;&amp;\vdots</mrow>
-    <mrow>r_{n-2}&amp;=r_{n-1}q_{t}+r_t &amp; &amp;\text{avec} &amp;0&amp;\leq r_t&lt; r_{t-1}</mrow>
-    <mrow>r_{n-1}&amp;=r_{n}q_{t+1}+r_{t+1} &amp; &amp;\text{avec} &amp;&amp;\phantom{0\leq}r_{t+1}=0</mrow>
+    <mrow>r_{t-2}&amp;=r_{t-1}q_{t}+r_t &amp; &amp;\text{avec} &amp;0&amp;\leq r_t&lt; r_{t-1}</mrow>
+    <mrow>r_{t-1}&amp;=r_{t}q_{t+1}+r_{t+1} &amp; &amp;\text{avec} &amp;&amp;\phantom{0\leq}r_{t+1}=0</mrow>
     </md>.
     </p></statement>
     </algorithm>
@@ -370,8 +370,8 @@ def _(a=(-100..100),b=(1..100),b_negatif=("b négatif?",False)):
     </conclusion>
     <reading-questions xml:id="rq-divisibilite">  <!-- Ajouter le même identifiant de la section après le - du xml:id -->
     <introduction>
-  <p>Ces questions sont à faire avant de venir en classe et à remettre au début du cours.</p>
-  </introduction>
+    <p>Ces questions sont à faire avant de venir en classe et à remettre au début du cours.</p>
+    </introduction>
   <exercise>
   <introduction>
   <p>Écrire les divisions suivantes sous la forme quotient et reste. Utiliser la méthode par étranglement comme dans ce <xref ref="par-etranglement" text="custom">paragraphe</xref>. </p>
@@ -392,7 +392,7 @@ def _(a=(-100..100),b=(1..100),b_negatif=("b négatif?",False)):
     <exercise><statement><p>Convertir les nombres de l'exercice <xref ref="exo-conversionhexadecimale"/> en hexadécimale en utilisant la méthode des divisions.</p></statement></exercise>
     <exercise><statement><p>Que fait l'algorithme suivant?</p>
     <listing>
-    <caption>Une algorithme sur les entiers</caption>
+    <caption>Un algorithme sur les entiers</caption>
     <program language="sage">
     <input>
 def algo(n):
@@ -425,7 +425,7 @@ def algo(n):
 def divisionEuclidienne(a, b):
     #Une algorithme qui retourne (q,r) la forme quotient reste de a/b:  a=bq+r
     if :#ÀCOMPLÉTER1
-        print('Le pgcd est non défini')
+        print('Le quotient est non défini')
     elif a == 0:
         return #ÀCOMPLÉTER2
     else:
@@ -454,7 +454,7 @@ def divisionEuclidienne(a, b):
     </exercise>
   <exercise>
     <statement><p>Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.</p></statement>
-    </exercise>
+  </exercise>
     </reading-questions>
    <!--Inclure les exercices de la section ci-dessous--> 
    <xi:include href="Exercices_divisibilite.ptx" />

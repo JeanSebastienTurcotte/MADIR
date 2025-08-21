@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Ce fichier constitue un fichier auxiliaire du livre                    -->
+<!--                                                                        -->
+<!--      Mathématiques discrètes : Intuition et rigueur                    -->
+<!--                                                                        -->
+<!-- Creative Commons Attribution Share Alike 4.0 International             -->
+<!-- CC-BY-4.0                                                              -->
+<!-- Jean-Sébastien Turcotte                                                -->
+
+<exercises xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="exo-pigeonHoles">   <!-- Ajouter l'identifiant de la section après le - du xml:id -->
+    <title> Exercices </title>
+    <!-- 
+   <exercise xml:id="exo-nom">
+    <introduction>
+    <p>L'énoncé de l'exercice.</p>
+    </introduction>
+    <task>
+            <statement>
+                <p>La première lettre de la question.</p>
+            </statement>
+            <answer>
+                <p> La réponse suivra. </p>
+            </answer>
+            <solution>
+                <p> La solution suivra. </p>
+            </solution>
+    </task>
+    </exercise>
+    -->
+    <subexercises>
+    <title>À faire en classe</title>
+    <introduction><p>Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.</p></introduction>
+<exercise>
+<statement>Montrer que si un élève assiste à six cours durant la semaine, chacun des cours se déroulant la même journée chaque semaine, alors il y a un jour durant lequel l'élève assiste à au moins deux cours.</statement>
+<solution>
+<p>En supposant qu'aucun cours n'est durant la fin de semaine, il y a <m>6</m> cours (objets) et <m>5</m> jours (boîtes). Il y a donc deux objets dans la même boîte, c'est-à-dire qu'il y a deux cours durant le même jour.</p>
+</solution>
+</exercise>
+
+
+<exercise>
+<introduction>Une urne contient <m>10</m> billes rouges et <m>10</m> billes bleues. Une personne pige au hasard des billes sans les remettre dans l'urne.</introduction>
+<task>
+<statement>Combien de billes doit-elle piger avant d'être certaine d'avoir deux billes de la même couleur?</statement>
+<answer><m>3</m> billes.</answer>
+<solution>
+<p>On place les <m>3</m> objets (billes) dans les <m>2</m> boîtes (rouge, bleu) selon la couleur de la bille. Puisqu'il y a plus d'objets que de boîtes, il y aura au moins deux objets dans la même boîte, et donc deux billes de la même couleur. </p>
+</solution>
+</task>
+<task>
+<statement> Combien de billes doit-elle piger avant d'être certaine d'avoir deux billes bleues? </statement>
+<answer><m>12</m> billes.</answer>
+<solution>
+<p>On suppose que les <m>10</m> premières billes pigées sont des billes rouges. Par la suite, si on pige deux billes supplémentaires, elles seront nécessairement bleus.</p>
+</solution>
+</task>
+</exercise>
+
+<exercise xml:id="exo-mod4">
+<statement> Montrer que si on choisit aléatoirement cinq nombres entiers, alors il y en aura au moins deux ayant le même reste lorsque divisé par <m>4</m>.</statement>
+<solution>
+<p>On place les <m>5</m> objets (les nombres entiers) dans les <m>4</m> boîtes représentant les classes d'équivalence modulo <m>4</m>. On place chaque entier dans sa propre classe d'équivalence. Puisqu'il y a plus d'objets que de boîtes, il ya aura au moins deux objets dans la même boîte.</p>
+<p> Ainsi, il y aura deux entiers dans la même classe d'équivalence modulo <m>4,</m> c'est-à-dire que ces deux entiers auront le même reste lorsque divisé par <m>4</m>.</p>
+</solution>
+</exercise>
+
+<exercise>
+<statement> Soit <m>d\in\,\N^\ast</m>. Montrer que si on choisit aléatoirement <m>d+1</m> nombres entiers, alors il y en aura au moins deux ayant le même reste lorsque divisé par <m>d</m>.</statement>
+<solution> Remplacer <m>5</m> par <m>d+1</m> et <m>4</m> par <m>d</m> dans la solution de l'exercice <xref ref="exo-mod4"/>.</solution>
+</exercise>
+
+
+<exercise>
+<statement><p>On choisit aléatoirement <m>n+1</m> nombres parmi les éléments de <m>\{1,2,\dots,2n-1\}</m>. Montrer qu'il existe au moins deux nombres qui somment à <m>2n</m>.</p></statement>
+<hint> Considérer les ensembles <m>\{1,2n-1\},\,\{2,2n-2\},\dots,\{n-1,n+1\},\,\{n,n\}</m>.</hint>
+<solution>
+<p>
+<ul>
+<li>Objets: Les <m>n+1</m> entiers que l'on choisit dans l'ensemble <m>\{1,2,\dots,2n-1\}</m>.</li>
+<li>Boîtes: Les <m>n</m> ensembles <m>\{1,2n-1\},\,\{2,2n-2\}, \dots ,\{n-1,n+1\},\, \{n,n\}</m>.</li>
+<li>On place un objet <m>o</m> dans une boîte <m>B</m> si <m>o\in\,B</m>.</li>
+</ul>
+Puisqu'il ya plus d'objets que de boîtes, il y aura au moins deux objets dans la même boîte. Tout d'abord on remarque qu'il y a un seul élément dans l'ensemble <m>\{n,n\}=\{n\}</m>. Ainsi, la boîte contenant deux objets ne peut pas être celle-ci. Finalement, si une boîte contient deux objets, par la définition des boîtes, on a que la somme de ces deux entiers donne <m>2n</m>.
+</p>
+</solution>
+</exercise>
+
+<exercise>
+<statement>Combien d'entiers doit-on choisir aléatoirement dans l'ensemble <m>\{1,2,3,4,5,6\}</m> afin de garantir qu'au moins une paire aura une somme de <m>7</m>?</statement>
+<answer> On doit en choisir <m>4</m>.</answer>
+</exercise>
+
+
+<exercise>
+<statment> Soit <m>f</m> est une fonction <m>f:A\to B</m>. En utilisant le principe des tiroirs de Dirichlet, montrer que si <m>|B|\lt |A|\lt \infty</m>, alors la fonction n'est pas injective.</statment>
+<solution>
+<p>
+<ul>
+<li>Objets: Les éléments de <m>A</m></li>
+<li>Boîtes: Les éléments de <m>B</m> </li>
+<li>On place un objet <m>a</m> dans une boîte <m>b</m> si <m>f(a)=b</m>.</li>
+</ul>
+Puisqu'il ya plus d'objets que de boîtes, il y aura au moins deux objets dans la même boîte. Ainsi, il existe <m>a_1\neq a_2\in\,A</m> tels que <m>f(a_1)=f(a_2).</m> La fonction n'est donc pas injective.
+</p>
+</solution>
+</exercise>
+
+<exercise>
+<statement>Soit <m>(a_i,b_i),</m> des paires d'entiers ordonnés (c'est-à-dire <m>a_i,\,b_i\in\,\Z</m>) pour <m>i=1,2,3,\dots,17.</m> Montrer qu'il existe, parmi ces <m>17</m> paires d'entiers, deux paires d'entiers <m>(a,b)</m> et <m>(c,d)</m> telles que <m>a\equiv c\mod 4 </m> et <m>b \equiv d \mod 4</m></statement>
+<solution>
+<p>
+<ul>
+<li>Objets: Les <m>17</m> paires <m>(a_i,b_i)</m></li>
+<li>Boîtes: Les <m>16</m> paires de classes d'équivalence <m>(E_{i,4},E_{j,4}),</m> pour <m>i,j=1,2,3,4</m>.</li>
+<li>On place un objet <m>(a,b)</m> dans une boîte <m>(E_{i,4},E_{j,4})</m> si <m>a\in E_{i,4}</m> et <m>b\in E_{j,4},</m> c'est-à-dire que <m>a\equiv i\mod 4</m> et <m>b\equiv j\mod 4</m>.</li>
+</ul>
+Puisqu'il ya plus d'objets que de boîtes, il y aura au moins deux objets dans la même boîte. Ainsi, on aura <m>(a,b)</m> et <m>(c,d)</m> tels que <m>a\equiv c \mod 4</m> et <m>b\equiv d \mod 4</m>.
+</p>
+</solution>
+</exercise>
+
+<exercise> 
+<statement> Soit <m>(x_i,y_i),\,i=1,2,3,4,5</m> cinq points du plan cartésien <m>\R^2</m>. Montrer que si <m>x_i,\,y_i\in\,\Z</m> pour <m>i=1,2,3,4,5</m> alors le point milieu d'au moins un des segments reliant une paire de ces points a des coordonnées entières. </statement>
+<hint> Le point milieu entre le point <m>(x_1,y_1)</m> et le point <m>(x_2,y_2)</m> est le point <m>\left(\frac{x_1+x_2}{2},\frac{y_1+y_2}{2}\right)</m>.</hint>
+<hint>À quel moment est-ce que <m>\frac{x_i+x_j}{2}</m> et <m>\frac{y_i+y_j}{2}</m> sont des entiers?</hint>
+<solution>
+    <p>
+        On remarque qu'un si on a deux points <m>(x_1,y_1)</m> et <m>(x_2,y_2)</m>, alors leur point milieu est <m>\left(\frac{x_1+x_2}{2},\frac{y_1+y_2}{2}\right)</m>. La fraction <m>\frac{x_1+x_2}{2}</m> sera un entier si et seulement si <m>x_1+x_2\equiv 0\ \mod 2</m>. De même la fraction <m>\frac{y_1+y_2}{2}</m> sera un entier si et seulement si <m>y_1+y_2\equiv 0\ \mod 2</m>. 
+    </p>
+    <p>
+        Ensuite, on veut trouver une condition pour vérifier quand est-ce qu'une somme de deux entiers, disons <m>a</m> et <m>b</m>, donne un nombre pair. On remarque que <m>1+1 \equiv 0\ \mod 2 </m> et <m>0+0 \equiv 0\ \mod 2 </m>, alors que <m>1+0 \equiv 1\ \mod 2 </m> et <m>0+1 \equiv 1\ \mod 2 </m>. Ainsi, <m>a\equiv b \ \mod 2</m> si et seulement si <m>a+b\equiv 0 \ \mod 2</m>.
+    </p>
+    <p>
+        <ul>
+            <li>Objets: Les <m>5</m> paires <m>(x_i,y_i)</m></li>
+            <li>Boîtes: Les <m>4</m> couples <m>(0,0),\ (0,1),\ (1,0),\ (1,1)</m>.</li>
+            <li>On place un objet <m>(x_i,y_i)</m> dans une boîte <m>(r_1,r_2)</m> si <m>x_1\equiv r_1 \ \mod 2</m> et <m>y_1\equiv r_2 \ \mod 2</m>. Par exemple, l'objet <m>(14, 101)</m> est placé dans la boîte <m>(0,1)</m> car <m>14\equiv 0 \ \mod 2</m> et <m>101\equiv 1 \ \mod 2</m>.</li>
+        </ul>
+        Puisqu'il ya plus d'objets que de boîtes, il y aura au moins deux objets dans la même boîte. Ainsi, on aura <m>(x_i,y_i)</m> et <m>(x_j,y_j)</m> tels que <m>x_i\equiv x_j \mod 2</m> et <m>y_i\equiv y_j \mod 2</m>. Par ce qui précède, on a que <m>\left(\frac{x_1+x_2}{2},\frac{y_1+y_2}{2}\right) \in \Z\times \Z</m>, c'est-à-dire que <m>\frac{x_1+x_2}{2}</m> et <m>\frac{y_1+y_2}{2}</m> sont des entiers.
+    </p>
+</solution>
+</exercise>
+
+
+    </subexercises>
+
+    <subexercises>
+        <title>Exercices supplémentaires</title>
+        <exercise>
+            <statement>
+                <p>
+                    Soit <m>n\gt 0</m> un entier. Démontrer que si on choisit aléatoirement <m>n+1</m> entiers quelconques, alors deux de ces entiers ont exactement le même reste lorsqu'ils sont divisés par <m>n</m>.
+                </p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Soit <m>n \gt 0</m> un entier. Démontrer que, dans tout ensemble de <m>n</m> entiers consécutifs, il y a exactement un entier qui est divisible par <m>n</m>.
+                </p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement> Soit <m>(x_i,y_i,z_i),\,i=1,2,\dots,8,9</m> neuf points de l'espace <m>\R^3</m>. Montrer que si <m>x_i,\,y_i\, z_i\in\,\Z</m> pour tout <m>i</m> alors le point milieu d'au moins un des segments reliant une paire de ces points a des coordonnées entières. </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    On suppose qu'une université offre, durant une session <m>300</m> cours différents. Sachant qu'il existe <m>20</m> périodes durant lesquels on peut donner un cours, combien de salles de classe sont nécessaires?  
+                </p>
+            </statement>
+        </exercise>
+    </subexercises>
+</exercises>

@@ -5,7 +5,9 @@
 <!--      Mathématiques discrètes : Intuition et rigueur                    -->
 <!--                                                                        -->
 <!-- Creative Commons Attribution Share Alike 4.0 International             -->
-<!-- CC-BY-4.0                                                              -->
+<!-- CC-BY-4.0                                            <introduction>
+  <p>Ces questions sont à faire avant de venir en classe et à remettre au début du cours.</p>
+  </introduction>                  -->
 <!-- Jean-Sébastien Turcotte                                                -->
 
 <!-- Les sections sont divisées en quatre parties, en plus du titre. Les parties introduction et conclusion sont facultatives. Le texte de ceux-ci apparait respectivement avant et après les sections. Les exercices sont à la fin de la section -->
@@ -13,13 +15,13 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec-propquant">   <!-- Ajouter l'identifiant de la section après le - du xml:id -->
     <title> Les propositions quantifiées </title>
     <introduction xml:id= "intro-propquant">  <!-- Ajouter le même identifiant de la section après le - du xml:id -->
-    <p>On a vu qu'un énoncé comme <q>x>0</q> n'est pas une proposition puisqu'il ne possède pas de valeur de vérité claire. Si <m>x=-1</m>, l'énoncé devient une proposition fausse, alors que si <m>x=2</m>, il devient une proposition vraie. Bien que certains énoncés avec variables peuvent sembler vrais peu importe la valeur de la variable, on préfèrera ne pas les considérer comme des propositions. Un exemple d'un tel énoncé serait <m>x^2\geq 0</m>. Comme fonction réelle, il est vrai qu'un nombre au carré est toujours positif. Il existe toutefois d'autre contexte où cette équation ne serait plus nécessairement vraie.<fn><p>Pour en savoir plus, voir <url href="https://fr.wikipedia.org/wiki/Nombre_complexe" text="custom">les nombres complexes</url>.</p></fn></p>
-    <p>Pour remédier à cela, on doit préciser ce que signifie les variables. On dira alors qu'on les quantifie.</p>
-    <p>Dans cette section, on définit le quantificateur existensiel et le quantificateur universel. On explique aussi comme obtenir la négation d'une proposition quantifiée.</p>
+    <p>On a vu qu'un énoncé comme <q>x>0</q> n'est pas une proposition puisqu'il ne possède pas de valeur de vérité claire. Si <m>x=-1</m>, l'énoncé devient une proposition fausse, alors que si <m>x=2</m>, il devient une proposition vraie. Bien que certains énoncés avec variables peuvent sembler vrais, peu importe la valeur de la variable, on préfèrera ne pas les considérer comme des propositions. Un exemple d'un tel énoncé serait <m>x^2\geq 0</m>. Comme fonction réelle, il est vrai qu'un nombre au carré est toujours positif. Il existe toutefois d'autres contextes où cette équation ne serait plus nécessairement vraie.<fn><p>Pour en savoir plus, voir <url href="https://fr.wikipedia.org/wiki/Nombre_complexe" text="custom">les nombres complexes</url>.</p></fn></p>
+    <p>Pour remédier à cela, on doit préciser ce que signifient les variables. On dira alors qu'on les quantifie.</p>
+    <p>Dans cette section, on définit le quantificateur existentiel et le quantificateur universel. On explique aussi comme obtenir la négation d'une proposition quantifiée.</p>
     </introduction>
     <subsection xml:id="sssec-predicats">
     <title>Prédicats</title>
-    <p>Un énoncé qui contient une ou des variables est appelé un prédicat. Ce n'est pas une proposition, car la valeur de vérité dépendra de la valeurs des variables. On spécifie normalement un ensemble univers <m>\Omega</m> qui consiste aux diverses possibilités que peuvent prendre les variables. Pour des valeurs spécifiques des variables, le prédicat devient une proposition.</p>
+    <p>Un énoncé qui contient une ou des variables est appelé un prédicat. Ce n'est pas une proposition, car la valeur de vérité dépendra de la valeur des variables. On spécifie normalement un ensemble univers <m>\Omega</m> qui consiste aux diverses possibilités que peuvent prendre les variables. Pour des valeurs spécifiques des variables, le prédicat devient une proposition.</p>
     <example>
     <title>Des prédicats</title>
     <statement><p>On considère l'ensemble des nombres réels comme ensemble univers et les prédicats suivants:
@@ -70,7 +72,7 @@
     <statement><p>On considère les propositions suivantes:
     <ol>
     <li><p><m>\exists n\in \N\, n^2=n+2  </m></p></li>
-    <li><p><m>\exists a \, <q>a \text{ est dans le prénom de l'auteur}</q></m> où <m>\Omega=\{u,v,w,x,y,z\}</m>.</p></li>
+    <li><p><m>\exists a \in \Omega, <q>a \text{ est dans le prénom de l'auteur}</q></m> où <m>\Omega=\{u,v,w,x,y,z\}</m>.</p></li>
     <li><p>Il y a un mammifère qui pond des oeufs.</p></li>
     <li><p>Il existe un moment précis où l'auteur mesurait <m>100 </m> cm. (Présentement, il en fait environ <m>170</m>.)</p></li>
     </ol>
@@ -99,7 +101,7 @@
     <statement><p>On considère les propositions suivantes:
     <ol>
     <li><p><m>\forall n\in \N\, n^2=n+2  </m></p></li>
-    <li><p><m>\forall a \, <q>a \text{ est dans le prénom de l'auteur}</q></m> où <m>\Omega=\{\text{a,b,s,t}\}</m>.</p></li>
+    <li><p><m>\forall a \in \Omega, <q>a \text{ est dans le prénom de l'auteur}</q></m> où <m>\Omega=\{\text{a,b,s,t}\}</m>.</p></li>
     <li><p>Tous les oiseaux peuvent voler.</p></li>
     <li><p>N'importe quel nombre naturel est pair ou impair.</p></li>
     </ol>
@@ -109,9 +111,9 @@
     <solution>
     <p><ol>
     <li><p>Il suffit de tester pour certaines valeurs de <m>\N</m>, comme <m>n=1</m> pour se rendre compte que la proposition est fausse.</p></li>
-    <li><p>Le prénom de l'auteur étant Jean-Sébastien, on vérifie aisément que a,b,s,t en font tous partie.</p></li>
+    <li><p>Le prénom de l'auteur étant Jean-Sébastien, on vérifie aisément que les lettres a,b,s,t en font toutes partie.</p></li>
     <li><p>La proposition est fausse, les autruches étant un exemple d'oiseaux ne pouvant pas voler.</p></li>
-    <li><p>La proposition est vraie, la parité d'un nombre créant une dichotomie des nombres naturels. On aura les outils nécessaire pour formaliser ceci prochainement.</p></li>
+    <li><p>La proposition est vraie, la parité d'un nombre créant une dichotomie des nombres naturels. On aura les outils nécessaires pour formaliser ceci prochainement.</p></li>
     </ol></p>
     </solution>
     </example>
@@ -138,7 +140,7 @@
     </me>,
     où <m>V(P)</m>  est l'ensemble de vérité de prédicat <m>P(x)</m>.</p>
     
-    <p>D'un point de vue pratique, et dans le but d'alléger l'écriture, on omet parfois l'écriture des quantificateurs universels. Ainsi, la proposition <m>x>2\rightarrow x^2>4</m> doit être comprise comme la proposition quantifiée <m>\forall x\in \R \,x>2\rightarrow x^2>4 </m>. On décide de garder l'écriture complète avec le quantificateur dans ce chapitre, mais il est possible qu'à l'occasion on le laisse tomber aussi au profit d'une écriture plus concise. Dans un souci de disctinction, on introduit la notation suivante:
+    <p>D'un point de vue pratique, et dans le but d'alléger l'écriture, on omet parfois l'écriture des quantificateurs universels. Ainsi, la proposition <m>x>2\rightarrow x^2>4</m> doit être comprise comme la proposition quantifiée <m>\forall x\in \R \,x>2\rightarrow x^2>4 </m>. On décide de garder l'écriture complète avec le quantificateur dans ce chapitre, mais il est possible qu'à l'occasion on le laisse tomber aussi au profit d'une écriture plus concise. Dans un souci de distinction, on introduit la notation suivante:
     <ul>
     <li><p><m>P(x)\Rightarrow Q(x)\equiv \forall x\in \Omega \, P(x)\rightarrow Q(x)</m></p></li>
     <li><p><m>P(x)\Leftrightarrow Q(x)\equiv \forall x\in \Omega \, P(x)\leftrightarrow Q(x)</m></p></li>
@@ -155,7 +157,7 @@
     \neg (\forall x\, P(x)) \equiv \exists x \, \neg P(x)
     </me>.</p>
     <p>
-    On répète ici qu'après analyse, cela ne devrait pas trop surprendre. S'il n'y a pas un objet avec une propriété, alors tous les objets n'ont pas la propriétés. De même, si ce n'est pas tous les objects qui ont une propriétés, alors il existe (au moins) un objet qui n'a pas la propriété. Le symbolisme en apparence complexe ne doit pas distraire du caractère simple de la chose.
+    On répète ici qu'après analyse, cela ne devrait pas trop surprendre. S'il n'y a pas un objet avec une propriété, alors tous les objets n'ont pas la propriété. De même, si ce n'est pas tous les objets qui ont une propriété, alors il existe (au moins) un objet qui n'a pas la propriété. Le symbolisme en apparence complexe ne doit pas distraire du caractère simple de la chose.
     </p>
     <example>
     <title>Négation de propositions quantifiées</title>
@@ -163,7 +165,7 @@
     <p>On considère les propositions suivantes: 
     <ol>
     <li><p><m>\forall n\in \N\, n^2=n+2  </m></p></li>
-    <li><p><m>\exists a \, <q>a \text{ est dans le prénom de l'auteur}</q></m> où <m>\Omega=\{u,v,w,x,y,z\}</m>.</p></li>
+    <li><p><m>\exists a\, \in \Omega, a \text{ est dans le prénom de l'auteur}</m> où <m>\Omega=\{u,v,w,x,y,z\}</m>.</p></li>
     <li><p>N'importe quel nombre naturel est pair ou impair.</p></li>
     <li><p>Il existe un moment précis où l'auteur mesurait <m>100 </m> cm.</p></li>
     </ol>
@@ -180,7 +182,7 @@
     </md>.</p>
     </li>
     <li>
-    <p>On peut nier cette proposition en écrivant <m>\forall a\,<q>\neg (a \text{ est dans le prénom de l'auteur})</q></m>, qui devient <m>\forall a\,<q>a \text{ n'est pas dans le prénom de l'auteur}</q></m>. </p>
+    <p>On peut nier cette proposition en écrivant <m>\forall a\in \Omega,\neg (a \text{ est dans le prénom de l'auteur})</m>, qui devient <m>\forall a\in \Omega,a \text{ n'est pas dans le prénom de l'auteur}</m>. </p>
     </li>
     <li>
     <p>Cette proposition est équivalente à <m>\forall n\in\N\, n\text{ est pair ou impair}</m>. Sa négation devient donc une proposition avec un quantificateur existentiel qui a la forme <m>\exists n\in \N \, n\text{ est n'est pas pair et } n\text{ n'est pas impair}</m>. On aurait aussi pu écrire plus simplement le prédicat comme <m>n</m> est ni pair ni impair. Le <q>et</q> fait toutefois ressortir la loi de De Morgann dans la négation du <q>ou</q>. </p>
@@ -205,7 +207,7 @@
     </me>
     signifie que chaque animal possède son gardien. On note toutefois que cela n'empêche pas que deux animaux aient le même gardien.
     </p>
-    <p>Pour cet exemple particulier, ce n'est pas trop grave si on interpète incorrectement la phrase <q>il existe un gardien pour tous les animaux du zoo</q>. Par contre en informatique, dans un contexte de programmation, il est primordial de bien interpréter ce qui est demandé afin que l'ordinateur puisse appliquer ce que l'utilisateur veut.</p>
+    <p>Pour cet exemple particulier, ce n'est pas trop grave si on interprète incorrectement la phrase <q>il existe un gardien pour tous les animaux du zoo</q>. Par contre en informatique, dans un contexte de programmation, il est primordial de bien interpréter ce qui est demandé afin que l'ordinateur puisse appliquer ce que l'utilisateur veut.</p>
     <p>On imagine un prédicat en deux variables <m>P(x,y)</m>. La proposition <m>\forall x\,\exists y P(x,y)</m> peut s'interpréter de la manière suivante. On imagine quelqu'un qui choisit un <m>x</m>. Il faut ensuite trouver un <m>y</m> tel que <m>P(x,y)</m> est vrai. Le choix de <m>y</m> risque de dépendre du <m>x</m> qui est choisi. </p>
     <p>Par contre dans la proposition <m>\exists x\,\forall y P(x,y)</m>, c'est le <m>x</m>, s'il existe, qui dépendra des <m>y</m>. On doit trouver un <m>x</m> qui fonctionnera peu importe le <m>y</m> que quelqu'un choisirait </p>
     <example>
@@ -275,33 +277,33 @@ formes+txt
   <p>Ces questions sont à faire avant de venir en classe et à remettre au début du cours.</p>
   </introduction>
   <exercise>
-  <introduction><p>Soit <m>P(x)</m> la proposition <q><m>x>2</m></q>. Déterminer si les propositions suivantes sont vraie, fausse ou indéterminée.</p></introduction>
+  <introduction><p>Soit <m>P(x)</m> le prédicat <q><m>x>2</m></q>. Déterminer si les propositions suivantes sont vraie, fausse ou indéterminée.</p></introduction>
   <task><statement><p><m>\exists x\in \R \,P(x)</m>;</p></statement></task>
-  <task><statement><p><m>\exists x&lt;0 \,P(x)</m>;</p></statement></task>
+  <task><statement><p><m>\exists x\in (-\infty,0) \,P(x)</m>;</p></statement></task>
   <task><statement><p><m>\exists x\in \R \,\neg P(x)</m>;</p></statement></task>
-  <task><statement><p><m>\exists x&lt;0 \,\neg P(x)</m>;</p></statement></task>
+  <task><statement><p><m>\exists x\in (-\infty,0) \,\neg P(x)</m>;</p></statement></task>
   <task><statement><p><m>\forall x\in \R \,P(x)</m>;</p></statement></task>
-  <task><statement><p><m>\forall x&lt;0 \,P(x)</m>;</p></statement></task>
+  <task><statement><p><m>\forall x\in (-\infty,0) \,P(x)</m>;</p></statement></task>
   <task><statement><p><m>\forall x\in \R \,\neg P(x)</m>;</p></statement></task>
-  <task><statement><p><m>\forall x&lt;0 \,\neg P(x)</m>;</p></statement></task>
+  <task><statement><p><m>\forall x\in (-\infty,0) \,\neg P(x)</m>;</p></statement></task>
   </exercise>
   <exercise><introduction><p>Dans une ferme, on retrouve les animaux suivants: un chien blanc et noir ainsi qu'un chien brun, treize vaches de couleur blanche et noire, seize moutons blancs, quatre chats noirs, trente-trois poules brunes.</p>
   <p>On considère les éléments de notation suivants:
   <ul>
   <li><p><m>d,v,m,c,p</m> respectivement pour chien,vache,mouton,chat et poule.</p></li>
-  <li><p><m>BN,Br,B,N,J,G</m> respectivement pour possède la couleur blanc et noir,brun,noir,jaune et enfin gris, et plus généralement <m>C</m> pour une allusion à la couleur quelconque.</p></li>
+  <li><p><m>BN,Br,B,N,J,G</m> respectivement pour possède la couleur blanc et noir, brun, blanc, noir, jaune et enfin gris, et plus généralement <m>C</m> pour une allusion à la couleur quelconque.</p></li>
   <li><p><m>M,O</m> respectivement pour est un mammifère ou un oiseau.</p></li>
   <li><p><m>P</m> pour le nombre d'animaux est premier</p></li>
   <li><p><m>F=\{d,v,m,c,p\}</m> l'ensemble des espèces animales de cette ferme.</p></li>
   </ul></p>
-  <p>La proposition  <m>\exists a\in F\, c(a)\wedge Br(a)</m> peut être interprétée comme <q>il existe un chien brun</q>. Identifier les prédicats et transcrire en symbolique les propositions suivantes.</p>
+  <p>La proposition  <m>\exists a\in F\, c(a)\wedge Br(a)</m> peut être interprétée comme <q>il existe un chat brun</q>. Identifier les prédicats et transcrire en symbolique les propositions suivantes.</p>
   </introduction>
-  <task><statement><p>Il y a une animal jaune à cette ferme.</p></statement></task>
+  <task><statement><p>Il y a un animal jaune à cette ferme.</p></statement></task>
   <task><statement><p>Tous les animaux de la ferme sont des mammifères ou des oiseaux.</p></statement></task>
-  <task><statement><p>Pour tout animal, avoir du blanc signifie aussi avoir du noir.</p></statement></task>
-  <task><statement><p>Le nombre d'animaux d'une certaines espèces est un nombre premier.</p></statement></task>
-  <task><statement><p>Aucun animal n'est de couleur grise.</p></statement></task>
-  <task><statement><p>Il existe deux animaux de même couleurs et qui ne sont pas des vaches.</p></statement></task>
+  <task><statement><p>Pour tout animal de la ferme, avoir du blanc signifie aussi avoir du noir.</p></statement></task>
+  <task><statement><p>Le nombre d'animaux de la ferme d'une certaine espèce est un nombre premier.</p></statement></task>
+  <task><statement><p>Aucun animal de la ferme n'est de couleur grise.</p></statement></task>
+  <task><statement><p>Il existe deux animaux de la ferme qui sont de la même couleur, mais qui ne sont pas des vaches.</p></statement></task>
   </exercise>
 <exercise><statement><p>Est-ce que <m>\forall x\,\exists y \,P(x,y)\equiv \exists y\,\forall x \,P(x,y) </m>? Argumenter ou donner un exemple où l'équivalence n'est pas vraie.</p></statement></exercise>
 <exercise><statement><p>Est-ce que <m>\forall x\,\forall y \,P(x,y)\equiv \forall y\,\forall x \,P(x,y) </m>? Argumenter ou donner un exemple où l'équivalence n'est pas vraie.</p></statement></exercise>

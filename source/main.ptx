@@ -31,9 +31,13 @@
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\N}{\mathbb{N}}
-\renewcommand{\C}{\mathbb{C}}
+\newcommand{\C}{\mathbb{C}}
 \newcommand{\D}{\mathbb{D}}
 \newcommand{\Prob}[1]{\mathbb{P}\left(#1\right)}
+
+\newcommand{\Permutation}[2]{P_{#2}^{#1}}
+\newcommand{\Binomial}[2]{C_{#2}^{#1}}
+
 \newcommand{\Probc}[2]{\mathbb{P}\left(#1~\left|\right .~#2\right)}
 \newcommand{\E}[1]{\mathbb{E}\left(#1\right)}
 \newcommand{\Ec}[2]{\mathbb{E}\left(#1~\left|\right .~#2\right)}
@@ -77,6 +81,7 @@
 \DeclareMathOperator{\Det}{det}
 \DeclareMathOperator{\pgcd}{pgcd}
 \DeclareMathOperator{\ppcm}{ppcm}
+%\DeclareMathOperator{\deg}{deg}
 \renewcommand{\Re}{\operatorname{Re}}
 \newcommand{\CQFD}{\begin{flushright}   %pour faire un carré de cqfd (blanc) ou CCQFD (noir)
 $\blacksquare$
@@ -108,7 +113,7 @@ $\Box$
     #1
   }
 }
--->
+-->     
         </macros>
         <!-- L'affichange par défaut des xréférence. Voir la section du sample article pour tester et décider sur une version finale         -->
         <cross-references text="global" />
@@ -118,16 +123,33 @@ $\Box$
         Inserted in the preamble to each standalone latex-based image for HMTL SVG output.
         -->
         <latex-image-preamble>
-        \usepackage{pgf,tikz,pgfplots}              % loads tikz package
+        \usepackage{pgf,tikz,tkz-graph<!--pgfplots-->}              % loads tikz package
         \usepackage{smartdiagram}           % for a circular diagram
-        \pgfplotsset{axis x line = middle,
-                     axis y line = middle}
+        <!--\pgfplotsset{axis x line = middle,
+                     axis y line = middle}-->
         \usepackage{mathrsfs}
-        \usetikzlibrary{arrows}
+        \usetikzlibrary{arrows.meta}
+        \usepackage{bm}
+        \newcommand{\param}[1]{\ensuremath{\vec{\bm{#1}}}}
         \usetikzlibrary{matrix}
         \usetikzlibrary{matrix.skeleton}
         \usetikzlibrary{fit}
         \usetikzlibrary{backgrounds}
+        \usetikzlibrary{automata,positioning}
+        \pgfdeclarelayer{edgelayer}
+        \pgfdeclarelayer{nodelayer}
+        \pgfsetlayers{edgelayer,nodelayer,main}
+
+        <!--% Node styles-->
+        \tikzstyle{SommetGraphe}=[fill=black, draw=black, shape=circle, scale=0.25]
+        \tikzstyle{none}=[]
+        \tikzstyle{new style 0}=[fill=green, draw=black, shape=circle, scale=0.25]
+        \tikzstyle{new style 1}=[fill=yellow, draw=black, shape=circle, scale=0.25]
+        \tikzstyle{new style 2}=[fill=blue, draw=black, shape=circle, scale=0.25]
+
+        <!--% Edge styles-->
+        \tikzstyle{new edge style 0}=[->, fill=none, draw=black, >=stealth]
+        \tikzstyle{new edge style 1}=[-]  
         </latex-image-preamble>
         <!--
         The Sage Notebook has its own interface and worksheet list.
@@ -239,7 +261,6 @@ $\Box$
     <!-- <xi:include href="./bookinfo.xml" />     À inclure éventuellement, voir les autres projets MBK pour info -->  
     
     <!--Structure principale -->
-
   <book xml:id="madir">
     <title>Mathématiques discrètes</title>
     <subtitle>Version préliminaire</subtitle>
@@ -247,6 +268,12 @@ $\Box$
     <xi:include href="Chapitre_logique.ptx" />
     <xi:include href="Chapitre_representationtheorienombres.ptx"/>
     <xi:include href="Chapitre_denombrement.ptx"/>
+    <xi:include href="Chapitre_preuveMath.ptx"/>
+    <xi:include href="Chapitre_relationRecurrence.ptx"/>
+    <!--
+    <xi:include href="Chapitre_graphe.ptx"/>  
+    <xi:include href="Back.ptx"/> -->
     <conclusion><p>Version du  <date><today format='yyyy/mm/dd' /></date> </p></conclusion>
   </book>
 </pretext>
+

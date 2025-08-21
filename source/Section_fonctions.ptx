@@ -13,7 +13,7 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec-fonctions">   <!-- Ajouter l'identifiant de la section après le - du xml:id -->
     <title> Les fonctions </title>
     <introduction xml:id= "intro-fonctions">  <!-- Ajouter le même identifiant de la section après le - du xml:id -->
-    <p>Étant donné deux ensembles <m>A,B</m>, potentiellement égaux, on peut s'intéresser aux relations qui existent entre les éléments de ces ensembles. Par exemple, on peut parler d'un lien de famille entre ensembles de personnes, une catégorisation de produits (un ensemble d'aliments et un ensemble contenant des identifiants comme  fruit, légume, viande, etc.) etc.</p>
+    <p>Dans un cours de mathématiques discrètes, on étudie les fonctions d'un point de vue différent à celui auquel on est habitué. Pour ce faire, on commence par parler de relations. Étant donné deux ensembles <m>A,B</m>, potentiellement égaux, on peut s'intéresser aux relations qui existent entre les éléments de ces ensembles. Par exemple, on peut parler d'un lien de famille entre ensembles de personnes, une catégorisation de produits (un ensemble d'aliments et un ensemble contenant des identifiants comme  fruit, légume, viande, etc.) etc.</p>
     </introduction>
     
     <!-- Sous-sections à écrire, à même ce fichier -->
@@ -30,7 +30,7 @@
     <p>Le type de relation le plus important et utile en mathématique est certainement la fonction. Une relation est une fonction si elle respecte des conditions additionnelles.</p>
     <definition xml:id="def-fonction">
     <title>Une fonction</title>
-    <statement><p>Soit <m>A,B</m> deux ensembles et <m>R\subseteq A\times B</m> une relation. On dit que <m>R</m> est une <em>fonction</em> si pour chaque élément <m>a\in A</m> fait partie d'exactement un élément de <m>R</m>. En d'autres mots, un élément de <m>A</m> ne peut être en relation qu'avec un seul élément.  </p>
+    <statement><p>Soit <m>A,B</m> deux ensembles et <m>R\subseteq A\times B</m> une relation. On dit que <m>R</m> est une <em>fonction</em> si chaque élément <m>a\in A</m> fait partie d'exactement un élément de <m>R</m>. En d'autres mots, un élément de <m>A</m> ne peut être en relation qu'avec un seul élément de <m>B</m>.  </p>
     <p>Traditionnellement, on dénote les fonctions par les lettres <m>f,g,h</m>. On écrit alors
     <md>
     <mrow>f&amp;: &amp;A&amp;\to B</mrow>
@@ -40,10 +40,11 @@
     <dl>
     <li><title>Le domaine:</title><p>L'ensemble <m>A</m> est appelé le domaine de la fonction.</p></li>
     <li><title>Le codomaine:</title><p>L'ensemble <m>B</m> est appelé le codomaine de la fonction.</p></li>
-    <li><title>L'image:</title><p>L'image est l'ensemble des <m>b\in B</m> qui sont atteints par au moins une valeur  <m>a\in A</m>: <me>
-    \text{Ima}(f)=\{b\in b~|~ \text{il existe } a\in A \text{ pour lequel } f(a)=b\}
-    </me>.</p>
-    <p>Si <m>f(a)=b</m>, on dit aussi que <m>b</m> est l'image de <m>a</m> et que <m>a</m> est une préimage de <m>b</m>. L'ensemble de toutes les préimages de <m>b</m> est parfois noté <m>f^{-1}(\{b\})</m>. On laisse parfois de côté les accolades, mais il faut alors faire attention de ne pas confondre <m>f^{-1}(b)</m> qui est un ensemble avec la fonction inverse de <m>f</m>, dont il sera question dans la sous-section <xref ref="sssec-injsurj"/>.</p>
+    <li><title>L'image:</title><p>L'image est l'ensemble des <m>b\in B</m> qui sont atteints par au moins une valeur  <m>a\in A</m>: <md>
+    <mrow>\text{Ima}(f)=\{b\in B~|~ \text{il existe }\amp a\in A </mrow>
+    <mrow>\amp \text{ tel que } f(a)=b\}</mrow>
+    </md>.</p>
+    <p>Si <m>f(a)=b</m>, on dit aussi que <m>b</m> est l'image de <m>a</m> et que <m>a</m> est une préimage de <m>b</m>. L'ensemble de toutes les préimages de <m>b</m> est parfois noté <m>f^{-1}(\{b\})</m>. On laisse parfois de côté les accolades, mais il faut alors faire attention de ne pas confondre <m>f^{-1}(b)</m>, qui est un ensemble, avec la fonction inverse de <m>f</m>, dont il sera question dans la sous-section <xref ref="sssec-injsurj"/>.</p>
     </li>
     </dl>
     </p>
@@ -62,7 +63,7 @@
     <li><p>La relation de <m>\N</m> vers <m>\R</m> qui associe à un nombre <m>k</m> les nombres <m>r</m> tels <m>r^2=k</m>.</p></li>
     <li><p>La relation <m>f:\N\to \N</m> définie par <m>f(n)=\frac{n}{2}</m>.</p></li>
     <li><p>La relation <m>f:\N\to \Q</m> définie par <m>f(n)=\frac{n}{2}</m>.</p></li>
-    <li><p>La relation de <m>\N\backslash\{0\}</m> vers <m>\N</m> qui associe à <m>n</m> le <m>n^{\text{e}}</m> nombre premier.</p></li>
+    <li><p>La relation de <m>\N\backslash\{0\}</m> vers <m>\N</m> qui associe à <m>n</m> le <m>n^{\text{ième}}</m> nombre premier.</p></li>
     </ol>
     </p></statement>
     <solution>
@@ -71,18 +72,18 @@
     <p>La relation entre les provinces de Canada n'est pas une fonction. Une province peut être en relation avec plusieurs autres, comme le Québec. Une province peut aussi ne pas être en relation avec aucune autre, comme l'Île-du-Prince-Édouard.</p>
     </li>
     <li><p>À la fin de la session, chaque étudiant aura une note. Deux étudiants auront peut-être la même note, mais ce n'est pas contre l'idée d'une fonction. Par contre, un étudiant aura une et une seule note. C'est donc une fonction.</p></li>
-    <li><p>Parce qu'un étudiant pourrait connaitre plus d'un langage de programmation, ce n'est pas une fonction. De même, peut-être qu'un étudiant ne sait même pas programmer.</p></li>
-    <li><p>Cette relation est une fonction, car à tout nombre <m>k\in \N</m> il existe une seule valeur pour <m>k^2</m>. Par exemple, si on note cette fonction par <m>f</m>, alors <m>f(4)=16,f(5)=25</m> etc.</p></li>
-    <li><p>Ce n'est pas une fonction car, étant donné <m>k\in N</m>, il existe deux nombres dans <m>\R</m> pour lesquels cela est possible, soit <m>\pm \sqrt{k}</m>. Par exemple, le naturel <m>4</m> serait associé à la fois à <m>-2</m> et à <m>2</m> par cette relation.</p>
-    <p>Si on changeait le codomaine par l'ensemble des rééls positifs, <m>\R^{+}</m>, alors on aurait une fonction.</p>
+    <li><p>Parce qu'un étudiant pourrait connaitre plus d'un langage de programmation, ce n'est pas une fonction. De même, peut-être qu'un étudiant ne sait même pas programmer. Il ne serait donc en relation avec aucun langage de programmation.</p></li>
+    <li><p>Cette relation est une fonction, car à tout nombre <m>k\in \N</m>, il existe une seule valeur pour <m>k^2</m>. Par exemple, si on note cette fonction par <m>f</m>, alors <m>f(4)=16,f(5)=25</m> etc.</p></li>
+    <li><p>Ce n'est pas une fonction, car étant donné <m>k\in N</m>, il existe deux nombres dans <m>\R</m> pour lesquels cela est possible, soit <m>\pm \sqrt{k}</m>. Par exemple, le naturel <m>4</m> serait associé à la fois à <m>-2</m> et à <m>2</m> par cette relation.</p>
+    <p>Si on changeait le codomaine par l'ensemble des réels positifs, <m>\R^{+}</m>, alors on aurait une fonction.</p>
     </li>
     <li><p>Cette relation n'est pas une fonction, car certaines valeurs du domaine ne possèdent pas d'image. C'est le cas pour <m>3</m>, puisque <m>f(3)=\frac{3}{2}\notin \N</m>.</p></li>
     <li><p>Cette fois-ci, le codomaine est adéquat et on a une fonction puisque la valeur <m>\frac{n}{2}</m> est unique pour chaque <m>n\in \N</m>.</p></li>
-    <li><p>Cette relation est une fonction, car il n'existe qu'un seul <m>n^\text{e}</m> nombre premier et qu'il en existe une infinité. Toutefois, contrairement aux autres fonctions ci-dessus, il n'y a pas de formule explicite pour déterminer <m>f(n)</m>. La liste des premiers nombres premiers est <m>2,3,5,7,11,13,17,19,23,\ldots</m>.</p></li>
+    <li><p>Cette relation est une fonction, car il n'existe qu'un seul <m>n^\text{ième}</m> nombre premier et qu'il en existe une infinité. Toutefois, contrairement aux autres fonctions ci-dessus, il n'y a pas de formule explicite pour déterminer <m>f(n)</m>. La liste des premiers nombres premiers est <m>2,3,5,7,11,13,17,19,23,\ldots</m>.</p></li>
     </ol></p>
     </solution>
     </example>
-    <p>Étant donné deux ensembles <m>A</m> et <m>B</m>, combien y a-t-il de fonctions différentes qui vont de <m>A</m> vers <m>B</m>? Si les ensembles ont une cardinalité finie, il sera possible de les compter.</p>
+    <p>Étant donné deux ensembles <m>A</m> et <m>B</m>, combien y a-t-il de fonctions différentes qui vont de <m>A</m> vers <m>B</m> ? Si les ensembles ont une cardinalité finie, il sera possible de les compter.</p>
     <example><title>Toutes le fonctions entre deux ensembles</title>
     <statement><p>Soit <m>A=\{0,1\}</m> et <m>B=\{0,1,2\}</m>. On cherche à faire la liste de toutes les fonctions possibles partant de <m>A</m> vers <m>B</m>.</p>
     <p>Il y aura <m>9</m> fonctions. Avant de poursuivre, tenter de voir pourquoi.</p>
@@ -227,7 +228,7 @@ Ovales+A+B+fleches
   </sageplot>
   </image>
   </figure>
-  <p>Les ellipses autour des éléments sont parfois omis dans cette représentation.</p>
+  <p>Les ellipses autour des éléments sont parfois omises dans cette représentation.</p>
   <p>Une autre méthode est en effectuant tout simplement une représentation graphique des valeurs. Cette méthode ne fonctionne que si les ensembles sont numériques bien sûr. Ci-dessous, la représentation de la fonction <m>f</m> ainsi que d'une fonction <m>g:\R\to\R</m> sinusoïdale. C'est surtout dans un contexte continue qu'on utilise ce type de représentation, mais à l'occasion aussi dans un contexte discret.</p>
   <sidebyside width="40%">
   <figure>
@@ -496,7 +497,7 @@ plot(sin(3*x)*cos(x/2),(x,-pi,pi),color="black")
     --> <!--Les permutations -->
     <subsection>
     <title>La composition de fonctions</title>
-    <p>On considère trois ensembles <m>A,B,C</m>, où <m>A</m> représente les élèves d'un cours à l'université, <m>B</m> représente la note de ces élèves et <m>C</m> représente les cotes possibles (<m>A^+,A,A^-,\ldots, D,F</m>). On peut imaginer une fonction qui à chaque élève associe une note puis, pour chaque note est associée une cote selon un barême préétablit par l'enseignant. Peut-on directement avoir une fonction qui à chaque élève retourne la cote? C'est un exemple de composition de fonctions.</p>
+    <p>On considère trois ensembles <m>A,B,C</m>, où <m>A</m> représente les élèves d'un cours à l'université, <m>B</m> représente la note de ces élèves (en pourcentage) et <m>C</m> représente les cotes possibles (<m>A^+,A,A^-,\ldots, D,F</m>). On peut imaginer une fonction qui à chaque élève associe une note puis, pour chaque note est associée une cote selon un barème préétabli par l'enseignant. Peut-on directement avoir une fonction qui à chaque élève retourne la cote? C'est un exemple de composition de fonctions.</p>
     <definition xml:id="def-compofct">
     <title>La composition de deux fonctions</title>
     <statement><p>Soit <m>g:A\to B</m> et <m>f:B\to C</m> deux fonctions. La composition de <m>f</m> et <m>g</m>, notée <m>f\circ g</m> est une fonction de <m>A</m> vers <m>C</m> définie par
@@ -508,7 +509,7 @@ plot(sin(3*x)*cos(x/2),(x,-pi,pi),color="black")
     <figure xml:id="fig-compofct">
     <caption>La composition <m>f\circ g</m></caption>
     <image xml:id="img-compofct">
-    <description>Trois ensembles A,B,C sont dessinés contenant respectivement les éléments a,g de a et f de g de a. Des flèches illustrant la fonction g partent de l'ensemble A à gauche vers l'ensemble B au centre, des flèches illustrant la fonction f partent de l'ensemble B au centre vers l'ensemble C à droite et des flèches illustrant la composition f rong g partent de l'ensemble A vers l'ensemble C. </description>
+    <description>Trois ensembles A,B,C sont dessinés contenant respectivement les éléments a,g de a et f de g de a. Des flèches illustrant la fonction g partent de l'ensemble A à gauche vers l'ensemble B au centre, des flèches illustrant la fonction f partent de l'ensemble B au centre vers l'ensemble C à droite et des flèches illustrant la composition f rond g partent de l'ensemble A vers l'ensemble C. </description>
     <sageplot>
 Ellipse=ellipse((-3,0),1,2,axes=False,color="black")+ellipse((-0,0),1,2,axes=False,color="black")+ellipse((3,0),1,2,axes=False,color="black")
 Pts=points([(-3,1)],color="black",pointsize=20)+points([(-0,1)],color="black",pointsize=20)+points([(3,1)],color="black",pointsize=20)
@@ -547,8 +548,8 @@ Ellipse+Pts+Fleches+Txt+Fct
     <li><p>On commence par la fonction <m>f</m>. Son domaine est l'ensemble <m>B=\{1,2,3\}</m>, son codomaine est l'ensemble <m>C=\{-1,-2,-3,-4\}</m> et son image est le sous-ensemble de <m>C</m> contenant les éléments <m>-1,-2,-4</m>.</p>
     <p>Pour la fonction <m>g</m>, son domaine est l'ensemble <m>A=\{a,b,c\}</m>, son codomaine est l'ensemble <m>B=\{1,2,3\}</m> et son image est le sous-ensemble de <m>C</m> contenant les éléments <m>1,3</m>.</p>
     <p>Finalement pour la composition <m>f\circ g</m>, son domaine est l'ensemble <m>A=\{a,b,c\}</m>, son codomaine est l'ensemble <m>C=\{-1,-2,-3,-4\}</m> et son image est le sous-ensemble de <m>C</m> contenant les éléments <m>-2,-4</m>.</p></li>
-    <li><p>Comme <m>a\not B=\text{dom}(f)</m>, on ne peut pas déterminer l'image de <m>a</m> par <m>f</m>. Par contre <m>a\in A=\text{dom}(g)=\text{dom}(f\circ g)</m>, on a <m>g(a)=1</m> et <m>(f\circ g)(a)=-4</m></p></li>
-    <li><p>La ou les préimage de <m>-4</m> par la fonction <m>f</m> est l'ensemble des valeurs <m>x\in B=\text{dom}(f)</m> telles que <m>f(x)=-4</m>. On a <m>f^{-1}(-4)=\{1\}.</m> Pour la composition, on cherche l'ensemble des <m>x\in A=\text{dom}(f\circ g)</m> telle que <m>(f\circ g)(x)=-4</m>. On trouve <m>(f\circ g)^{-1}(-4)=\{a,c\}</m>. </p></li>
+    <li><p>Comme <m>a\notin B=\text{dom}(f)</m>, on ne peut pas déterminer l'image de <m>a</m> par <m>f</m>. Par contre <m>a\in A=\text{dom}(g)=\text{dom}(f\circ g)</m>, on a <m>g(a)=1</m> et <m>(f\circ g)(a)=-4</m></p></li>
+    <li><p>La ou les préimages de <m>-4</m> par la fonction <m>f</m> est l'ensemble des valeurs <m>x\in B=\text{dom}(f)</m> telles que <m>f(x)=-4</m>. On a <m>f^{-1}(-4)=\{1\}.</m> Pour la composition, on cherche l'ensemble des <m>x\in A=\text{dom}(f\circ g)</m> telles que <m>(f\circ g)(x)=-4</m>. On trouve <m>(f\circ g)^{-1}(-4)=\{a,c\}</m>. </p></li>
     </ol></p>
     </solution>
     </example>
@@ -558,9 +559,9 @@ Ellipse+Pts+Fleches+Txt+Fct
     <p>On a vu dans l'exemple <xref ref="ex-composagi"/> que certaines fonctions envoient plusieurs éléments sur une même image. On a aussi vu que certaines fonctions n'atteignent pas toutes les valeurs de leur codomaine. Ce sont souvent des propriétés qu'il est souhaitable d'avoir ou du moins, elles entrainent d'heureuses conséquences.</p>
     <definition xml:id="def-inj">
     <title>Fonction injective</title>
-    <statement><p>Soit <m>F:A\to B</m> une fonction. On dit que <m>f</m> est injective si et seulement si les éléments de l'image ne sont atteints par <m>f</m> que par exactement un élément du domaine. En langage mathématique, on écrit que si <m>f(a_1)=f(a_2)</m>, alors nécessairement <m>a_1=a_2</m>.</p></statement>
+    <statement><p>Soit <m>f:A\to B</m> une fonction. On dit que <m>f</m> est injective si et seulement si les éléments de l'image ne sont atteints par <m>f</m> que par exactement un élément du domaine.  En langage mathématique, on écrit que si <m>f(a_1)=f(a_2)</m>, alors nécessairement <m>a_1=a_2</m>.</p></statement>
     </definition>
-    <p>Avec une fonction injective, il n'y a pas de collision dans le codomaine, c'est-à-dire deux valeurs du domaine qui sont envoyées sur le même éléments. Dans ce cas, la préimage d'un élément du codomaine est soit l'ensemble vide, soit un élément unique du domaine.</p>
+    <p>Avec une fonction injective, il n'y a pas de collision dans le codomaine, c'est-à-dire deux valeurs du domaine qui sont envoyées sur le même élément. Dans ce cas, la préimage d'un élément du codomaine est soit l'ensemble vide, soit un élément unique du domaine.</p>
     <example xml:id="ex-inj">
     <title>Des fonctions injectives</title>
     <statement><p>On considère les fonctions suivantes et on cherche celles qui sont injectives:
@@ -581,12 +582,12 @@ Ellipse+Pts+Fleches+Txt+Fct
     </example>
     <definition xml:id="def-surj">
     <title>Fonction surjective</title>
-    <p>Soit <m>F:A\to B</m> une fonction. On dit que <m>f</m> est surjective si et seulement si tous les éléments du codomaine <m>B</m> sont atteints par <m>f</m> par au moins une valeur du domaine <m>A</m>. En lagange mathématique, on écrit que pour tout <m>b\in B</m>, il existe au moins un <m>a\in A</m> tel que <m>f(a)=b</m>.</p>
+    <p>Soit <m>f:A\to B</m> une fonction. On dit que <m>f</m> est surjective si et seulement si tous les éléments du codomaine <m>B</m> sont atteints par <m>f</m> par au moins une valeur du domaine <m>A</m>.Ceci est équivalent à dire que le codomaine de la fonction <m>f</m> est l'image de celle-ci. En langage mathématique, on écrit que pour tout <m>b\in B</m>, il existe au moins un <m>a\in A</m> tel que <m>f(a)=b</m>.</p>
     </definition>
     <p>Avec une fonction surjective, personne n'est laissé de côté dans le codomaine. Chaque valeur doit être atteinte.</p>
     <example xml:id="ex-surj">
-    <title>Des fonctions surjective</title>
-    <statement><p>On considère les fonctions suivantes et on cherche celles qui sont surjective:
+    <title>Des fonctions surjectives</title>
+    <statement><p>On considère les fonctions suivantes et on cherche celles qui sont surjectives:
     <ol>
     <li><p>La fonction de <m>\R\to \R</m> définie par <m>f(x)=x^2</m>.</p></li>
     <li><p>La fonction de <m>\R^{+}\to \R^{+}</m><fn><p>Par <m>\R^{+}</m>, on veut dire l'ensemble<m>\{x\in \R~|~ x\geq 0\}</m></p></fn> définie par <m>f(x)=x^2</m>.</p></li>
@@ -609,7 +610,7 @@ Ellipse+Pts+Fleches+Txt+Fct
     <p>Parmi les fonctions des exemples <xref first="ex-inj" last="ex-surj"/>, la fonction <m>f:\R^{+}\to \R^{+}</m> est une bijection, tout comme la fonction de <m>A</m> vers <m>A</m> associant chaque élément à son homologue. Ce dernier exemple est ce qu'on appelle une fonction identité. </p>
     <p>La figure <xref ref="fig-fctscorr"/> donne des exemples des différentes combinaisons possibles des propriétés d'injectivité, surjectivité et bijectivité qu'une fonction peut avoir.</p>
     <figure xml:id="fig-fctscorr">
-    <caption>Différents cas possible d'injectivité, surjectivité et bijectivité</caption>
+    <caption>Différents cas possibles d'injectivité, surjectivité et bijectivité</caption>
     <sidebyside>
     <figure xml:id="fig-fctscorr_rien">
     <caption>Fonction ni injective ni surjective</caption>
@@ -672,12 +673,15 @@ Ellipse+Pts+Fleches+Txt#+Fct
     <p>On considère une fonction <m>f:A\to B</m> qui est bijective. Chaque élément du domaine est envoyé vers exactement un élément du codomaine et chaque élément du codomaine est atteint. Il est donc possible de défaire le travail effectué par la fonction et de partir des éléments de <m>B</m> pour revenir sur les éléments de <m>A</m>. </p>
     <definition xml:id="def-inverse">
     <title>Fonction inverse</title>
-    <statement><p>Soit <m>f:A\to B</m> une bijection. La fonction inverse de <m>f</m>, notée <m>f^{-1}:B\to A</m> est la fonction qui associe à chaque <m>b\in B</m> un élément <m>a\in A</m> tels que <m>f(a)=b</m>. On écrira alors <m>f^{-1}(b)=a</m>.</p></statement>
+    <statement>
+    <p>Soit <m>f:A\to B</m> une bijection. La fonction inverse de <m>f</m>, notée <m>f^{-1}:B\to A</m> est la fonction qui associe à chaque <m>b\in B</m> un élément <m>a\in A</m> tels que <m>f(a)=b</m>. On écrira alors <m>f^{-1}(b)=a</m>.</p>
+    <p>De manière équivalente, la fonction <m>f^{-1}</m> est l'unique fonction <m>f^{-1}:B\to A</m> telle que pour tout élément <m>a \in A</m>, on a <m>\left(f^{-1}\circ f \right)(a)=a</m>, et pour tout élément <m>b \in B</m>, on a <m>\left(f\circ f^{-1} \right)(b)=b</m>.</p>
+    </statement>
     </definition>
     <p>La fonction <m>f:\R^{+}\to\R^{+}</m> des exemples <xref first="ex-inj" last="ex-surj"/> est bijective. On peut la définir par la règle <m>f(x)=x^2</m>. Son inverse est <m>f^{-1}(x)=\sqrt{x}</m>. La fonction identité de ces mêmes exemples était aussi bijective. Elle est son propre inverse. </p>
-    <p>Les fonctions et leurs inverses possèdent la propriété suivante en lien avec la composition. Pour tout élément <m>a\in A</m>, on a <m>(f^{-1}\circ f)(a)=f^{-1}(f(a))=a</m> et pour tout élément <m>b\in B</m> on a <m>(f\circ f^{-1})(b)=f(f^{-1}(b))=b</m>.</p>
     </subsection>
-    <conclusion xml:id="concl-fonctions">  <!-- Ajouter le même identifiant de la section après le - du xml:id -->
+    <conclusion xml:id="concl-fonctions">
+    <title>En résumé</title> <!-- Ajouter le même identifiant de la section après le - du xml:id -->
     <p>Les points importants de cette section sont:
     <ol>
     <li><p>La définition d'une <xref ref="def-fonction" text="custom">fonction</xref>;</p></li>
@@ -691,34 +695,27 @@ Ellipse+Pts+Fleches+Txt#+Fct
     <introduction>
   <p>Ces questions sont à faire avant de venir en classe et à remettre au début du cours.</p>
   </introduction>
-  <exercisegroup>
-  <title>Exercices à remettre avant le cours A</title>
+
   <exercise xml:id="exo-fctrel">
     <introduction><p>Soit <m>A=\{0,1,2,3\}</m>,<m>B=\{a,b,c,d\}</m>. Déterminer quelles relations ci-dessous sont des fonctions. Expliquer pourquoi.</p></introduction>
     <task><statement><p><m>R_1\subseteq A\times B</m> où <m>R_1=\{(0,d),(1,a),(2,b),(3,c)\}</m>;</p></statement></task>
     <task><statement><p><m>R_2\subseteq A\times B</m> où <m>R_2=\{(1,a),(2,b),(3,c)\}</m>;</p></statement></task>
 <task><statement><p><m>R_3\subseteq A\times B</m> où <m>R_3=\{(0,a),(1,a),(2,b),(3,c)\}</m>;</p></statement></task>
 <task><statement><p><m>R_4\subseteq A\times B</m> où <m>R_4=\{(0,a),(1,a),(2,b),(3,c),(1,d)\}</m>;</p></statement></task>
-    <task><statement><p><m>R_5\subseteq=A\times A </m> où <m>R_5=\{(0,0),(1,0),(2,0),(3,0)\}</m>.</p></statement></task>
+    <task><statement><p><m>R_5\subseteq A\times A </m> où <m>R_5=\{(0,0),(1,0),(2,0),(3,0)\}</m>.</p></statement></task>
     </exercise>
-    <exercise><introduction><p>Soit <m>A=\{n\in \N~|~ 0\leq n\leq 999\}</m> les nombres naturels représentés par <m>1,2</m> ou <m>3</m> chiffres. On définit <m>f:A\to \N</m> comme la fonction qui associe à <m>a\in A</m> la somme des chiffres qui composent <m>a</m>.  Par exemple, <m>f(247)=2+4+7=15</m>.</p></introduction>
+    <exercise><introduction><p>Soit <m>A=\{n\in \N~|~ 0\leq n\leq 999\}</m> les nombres naturels représentés par <m>1,2</m> ou <m>3</m> chiffres. On définit <m>f:A\to \N</m> comme la fonction qui associe à <m>a\in A</m> la somme des chiffres qui composent <m>a</m>.  Par exemple, <m>f(247)=2+4+7=13</m>.</p></introduction>
     <task><statement><p>Déterminer <m>f(d)</m> où <m>d</m> est le jour de votre anniversaire.</p></statement></task>
     <task><statement><p>Trouver l'image de cette fonction.</p></statement></task>
     <task><statement><p>Trouver <m>f^{-1}(\{4\})</m>.</p></statement></task>
     <task><statement><p>Trouver <m>f^{-1}(\{2,3\})</m></p></statement></task>
     </exercise>
-    <exercise><introduction><p>Soit <m>C</m> l'ensemble de tous les chiens. Donner un ensemble <m>B</m> et une relation <m>R:A\to B</m> tels que</p></introduction>
+    <exercise><introduction><p>Soit <m>C</m> l'ensemble de tous les chiens. Donner un ensemble <m>B</m> et une relation <m>R:C\to B</m> tels que</p></introduction>
     <task><statement><p><m>R</m> n'est pas une fonction.</p></statement></task>
     <task><statement><p><m>R</m> est une fonction.</p></statement></task>
     </exercise>
-    <exercise><statement><p>Soit <m>A=\{3n-1~|~ n\in \N \text{ et } 1\leq n \leq 5\}</m> et <m>B=\{c,d,h,o,q\}</m>. Représenter dans un diagramme sagittal la fonction <m>f:A\to B</m> qui associe à <m>a\in A</m> la première lettre de son écriture dans la langue française.</p></statement></exercise>
-    <exercise>
-    <statement><p>Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.</p></statement>
-    </exercise>
-    </exercisegroup>
-    <exercisegroup>
-    <title>Exercices à remettre avant le cours B</title>
-    <exercise><statement><p>Quels énoncés parmi les suivants sont équivalent à dire que <m>f:A\to B</m> est injective? Justifier.
+    <exercise><statement><p>Soit <m>A=\{3n-1~|~ n\in \N\ \text{ et }\ 1\leq n \leq 5\}</m> et <m>B=\{c,d,h,o,q\}</m>. Représenter dans un diagramme sagittal la fonction <m>f:A\to B</m> qui associe à <m>a\in A</m> la première lettre de son écriture dans la langue française.</p></statement></exercise>
+    <exercise><statement><p>Quels énoncés parmi les suivants sont équivalents à dire que <m>f:A\to B</m> est injective? Justifier.
     <ol>
     <li><p>Le codomaine est égal à l'image.</p></li>
     <li><p>Pour tout <m>a\in A</m> on a <m>f(a)\neq \emptyset</m>.</p></li>
@@ -727,10 +724,10 @@ Ellipse+Pts+Fleches+Txt#+Fct
     </ol>
     </p></statement>
     </exercise>
-    <exercise><statement><p>Quels énoncés parmi les suivants sont équivalent à dire que <m>f:A\to B</m> est surjective? Justifier.
+    <exercise><statement><p>Quels énoncés parmi les suivants sont équivalents à dire que <m>f:A\to B</m> est surjective? Justifier.
     <ol>
     <li><p>Le codomaine est égal à l'image.</p></li>
-    <li><p>Pour tout <m>b\in B</m> on a <m>f^{-1}(\{b\})\neq \emptyset</m>.</p></li>
+    <li><p>Pour tout <m>b\in B</m>, on a <m>f^{-1}(\{b\})\neq \emptyset</m>.</p></li>
     <li><p>Pour tout <m>C\subseteq B</m> où <m>C\neq \emptyset</m>, on a <m>f^{-1}(C)\neq \emptyset</m>.</p></li> <!-- faux si C=emptyset -->
     <li><p><m>|A|\geq |B|</m></p></li>
     </ol>
@@ -739,7 +736,7 @@ Ellipse+Pts+Fleches+Txt#+Fct
     <exercise>
     <statement><p>Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.</p></statement>
     </exercise>
-    </exercisegroup>
+
     <!--énumérer toutes les fonctions de A vers B et de B vers A -->
     </reading-questions>
    <!--Inclure les exercices de la section ci-dessous--> 

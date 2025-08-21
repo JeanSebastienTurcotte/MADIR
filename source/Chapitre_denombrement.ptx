@@ -1,30 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 
-<!-- Ce fichier constitue un chapitre du livre                              -->
-<!--                                                                        -->
-<!--      Mathématiques discrètes : Intuition et rigueur                    -->
-<!--                                                                        -->
-<!-- Creative Commons Attribution Share Alike 4.0 International             -->
-<!-- CC-BY-4.0                                                              -->
-<!-- Jean-Sébastien Turcotte                                                -->
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="chap-denombrement" >
+  <title>Dénombrement</title>
 
 
-<!-- Les chapitres sont divisés en trois parties, en plus du titre. Les parties introduction et conclusion sont facultatives. Le texte de ceux-ci apparait respectivement avant et après les sections. -->
+<xi:include href="./section_prodSomme.ptx" />¸
+<xi:include href="./section_arrCombinaison.ptx" /> 
+<xi:include href="./Section_combinatoireExoSupp.ptx" /> 
+<!--<xi:include href="./Section_sommation.ptx" /> -->
 
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="chap-denombrement">   <!-- Ajouter l'identifiant du chapitre après le - du xml:id -->
-    <title> Dénombrement </title>
-    <introduction xml:id= "intro-denombrement">  <!-- Ajouter le même identifiant du chapitre après le - du xml:id -->
-    
-    </introduction>
-    
-    <!-- Sections à inclure, dans des fichiers xml différents -->
-    <!--<xi:include href="Section_.ptx" />-->
-   <section><title>Exercices principes d'étiquetage</title>
-   <xi:include href="Exercices_combinatoire.ptx"/></section>
-     <section><title>Exercices billes et urnes</title>
-   <xi:include href="Exercices_classificationcombinatoire.ptx"/></section>
-    <conclusion xml:id="concl-denombrement">  <!-- Ajouter le même identifiant du chapitre après le - du xml:id -->
-    
-    </conclusion>
-    <!-- Possibilité de faire des exercices récapitulatif -->
 </chapter>

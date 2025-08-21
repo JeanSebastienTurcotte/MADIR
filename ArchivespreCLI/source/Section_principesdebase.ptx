@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Ce fichier constitue une section du livre                              -->
+<!--                                                                        -->
+<!--      Mathématiques discrètes : Intuition et rigueur                    -->
+<!--                                                                        -->
+<!-- Creative Commons Attribution Share Alike 4.0 International             -->
+<!-- CC-BY-4.0                                                              -->
+<!-- Jean-Sébastien Turcotte                                                -->
+
+<!-- Les sections sont divisées en quatre parties, en plus du titre. Les parties introduction et conclusion sont facultatives. Le texte de ceux-ci apparait respectivement avant et après les sections. Les exercices sont à la fin de la section -->
+
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec-principes">   <!-- Ajouter l'identifiant de la section après le - du xml:id -->
+    <title> Principes de base en combinatoire </title>
+    <introduction xml:id= "intro-principes"><!-- Ajouter le même identifiant de la section après le - du xml:id --> 
+    <p>En mathématique, l'art de compter le nombre de possibilités est appelé le dénombrement ou la combinatoire. La difficulté principale du dénombrement est de le faire rapidement et efficacement. Bien dénombrer peut permettre de déterminer le temps qu'un algorithme prendra pour s'exécuter, donner une indication sur la sécurité d'un mot de passe et bien d'autres choses. </p>
+    <p>Dans cette sectin, on énonce trois principes fondamentaux du dénombrement qui permettront de résoudre différents problèmes. En particulier, on introduit le principe de multiplication, le principe d'addition et le principe d'étiquetage. L'important symbole et opération de factorielle sera aussi introduit. </p>
+    </introduction>
+    
+    <!-- Sous-sections à écrire, à même ce fichier -->
+    <subsection xml:id="sssec-principeplusfois">
+    <title>Les principes d'addition et de multiplication</title>
+    <p>On commence par regarder un problème simple. Un refuge pour animaux héberge actuellement <m>2</m> chats et <m>3</m> chiens. De combien de manières peut-on choisir un animal à ramener à la maison? Puisqu'il y a <m>2+3=5</m> animaux différents, on aurait donc <m>5</m> choix.</p>
+    <p>Qu'en est-il si on veut ramener à la maison un chat et un chien? Il y a <m>2</m> chats possible. Pour chaque choix d'un chat, on peut ensuite sélectionner un des <m>3</m> chiens. On compte alors <m>2\times 3=6</m> choix possibles, que l'on peut voir en notant les <m>2</m> chats par <m>c1,c2</m> et les chiens par <m>C1,C2,C3</m>:
+    <me>
+    \{\{c1,C1\},\{c1,C2\},\{c1,C3\},\{c2,C1\},\{c2,C2\},\{c2,C3\}\}
+    </me>.</p>
+    <p>Ensemble, ces deux exemples illustrent les premiers principes du dénombrement, le principe d'addition et le principe de multiplication.</p>
+    <proposition xml:id="prop-principeplus">
+    <title>Le principe d'addition</title>
+    <statement>
+    <p>Si un événement <m>A</m> peut se dérouler de <m>m</m> manières et un événement <m>B</m> peut se dérouler de <m>n</m> manières distinctes de <m>A</m>, alors l'événement <sq><m>A</m> ou <m>B</m></sq> peut se dérouler de <m>m+n</m> manières.</p>
+    </statement>
+    <proof>En voyant la situation dans le contexte des ensembles, le nombre de possibilités correspond à la cardinalité de l'ensemble <m>A\cup B</m>. Selon le <xref ref="exo-incexc">principe d'inclusion-exclusion</xref> de l'exercice <xref ref="exo-incexc"/>, la cardinalité de <m>A\cup B</m> est <m>\lvert A\rvert+\lvert B\rvert -\lvert A\cap B\rvert</m>. Puisque les ensembles sont disjoints, on retrouve <m>m+n</m> éléments.</proof>
+    </proposition>
+    </subsection>
+    <conclusion xml:id="concl-principes">  <!-- Ajouter le même identifiant de la section après le - du xml:id -->
+    
+    </conclusion>
+    <reading-questions xml:id="rq-principes">  <!-- Ajouter le même identifiant de la section après le - du xml:id -->
+    <introduction>
+  <p>Ces questions sont à faire avant de venir en classe et à remettre au début du cours.</p>
+  </introduction>
+  
+  <exercise>
+    <statement><p>Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.</p></statement>
+    </exercise>
+    </reading-questions>
+   <!--Inclure les exercices de la section ci-dessous--> 
+   <!--<xi:include href="Exercices_.ptx" />-->
+</section>

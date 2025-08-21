@@ -13,7 +13,7 @@
 
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="chap-reptheonombres">   <!-- Ajouter l'identifiant du chapitre après le - du xml:id -->
     <title> Représentation des nombres et arithmétique modulaire </title>
-    <introduction xml:id= "intro-">  <!-- Ajouter le même identifiant du chapitre après le - du xml:id -->
+    <introduction xml:id= "intro-repNombres">  <!-- Ajouter le même identifiant du chapitre après le - du xml:id -->
     
     </introduction>
     <!-- Sections à inclure, dans des fichiers xml différents -->

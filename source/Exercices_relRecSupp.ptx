@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Ce fichier constitue un fichier auxiliaire du livre                    -->
+<!--                                                                        -->
+<!--      Mathématiques discrètes : Intuition et rigueur                    -->
+<!--                                                                        -->
+<!-- Creative Commons Attribution Share Alike 4.0 International             -->
+<!-- CC-BY-4.0                                                              -->
+<!-- Jean-Sébastien Turcotte                                                -->
+
+<exercises xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="exo-relRecSupp">   <!-- Ajouter l'identifiant de la section après le - du xml:id -->
+    <title> Exercices </title>
+    <!-- 
+   <exercise xml:id="exo-nom">
+    <introduction>
+    <p>L'énoncé de l'exercice.</p>
+    </introduction>
+    <task>
+            <statement>
+                <p>La première lettre de la question.</p>
+            </statement>
+            <answer>
+                <p> La réponse suivra. </p>
+            </answer>
+            <solution>
+                <p> La solution suivra. </p>
+            </solution>
+    </task>
+    </exercise>
+    -->
+    <subexercises>
+    <title>À faire en classe</title>
+    <introduction><p>Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.</p></introduction>
+
+   <!-- <exercise >
+        <introduction>
+            <p>Un modèle qu'on peut utilisé pour approximer  le nombre de homards pêchés par année est de supposer que le nombre de homards pêchés dans une année est la moyennes du nombre de homards pêchés dans les deux années précédentes. </p>
+        </introduction>
+        <task>
+            <statement>
+                <p>En supposant que le modèle est vrai, trouver une relation de récurrence pour la suite <m>\{L_n\}</m>, où <m>L_n</m> est le nombre de homard pêchés à l'année <m>n</m>.</p>
+            </statement>
+            <answer><p>On a <m>L_n=\frac{L_{n-1}}{2}+\frac{L_{n-2}}{2}</m>.</p></answer>
+        </task>
+        <task>
+            <statement>
+                <p>Déterminer <m>L_n</m>, sachant que 100 000 homards ont été pêchés à l'an 1, et 300 000 ont été pêchés à l'an 2.</p>
+            </statement>
+            <answer><p>On a <m>L_n=\frac{800\ 000}{3}\left(\frac{-1}{2}\right)^n + \frac{700\ 000}{3}</m>.</p></answer>
+        </task>
+    </exercise> -->
+<!--<exercise>
+    <introduction>
+        <p>Un client d'une banque dépose 10 000 <m>\$</m> dans un compte d'investissement. À la fin de chaque année (le dernier jour de l'année), on ajoute au compte de banque deux montants. Le premier est <m>15\%</m> du montant dans le compte durant cette année, et le deuxième est <m>20\%</m> du montant dans le compte durant l'année précédente.</p>
+    </introduction>
+    <task>
+        <statement>
+            <p>Trouver une relation de récurrence pour la suite <m>\{M_n\}</m>, où <m>M_n</m> est le montant en <m>\$</m> dans le compte à la fin de l'an <m>n</m>.</p>
+        </statement>
+        <answer><p>On a <m>M_n=1,15 M_{n-1}+0,20 M_{n-2}</m>.</p></answer>
+    </task>
+    <task>
+        <statement>
+            <p>En utilisant <m>M_{0}=10\ 000</m> et <m>M_1=1\ 500</m>, trouver une expression pour <m>M_n</m>.</p>
+        </statement>
+        <answer><p>À l'aide de l'équation caractéristique est des conditions initiales, on à <m>M_n=\frac{250\ 000}{3}\left(\frac{3}{2}\right)^n+\frac{50\ 000}{3}\left(\frac{-3}{10}\right)^n</m>.</p></answer>
+    </task>
+</exercise>
+<exercise>
+    <introduction>
+        <p>Un nouvel enmployé dans une compagnie se fait offrir un salaire de <m>50\ 000 \$</m> par année. De plus, l'employé se fait promettre qu'à la fin de chaque année, son salaire sera le double de celui de l'année précédente plus <m>10\ 000 \$</m> par année passée à travailler pour la compagnie.</p>
+    </introduction>
+    <task>
+        <statement>
+            <p>Trouver une relation pour la suite <m>\{s_n\}</m>, où <m>s_n</m> est le salaire en <m>\$</m> de l'employé à l'année <m>n</m>. Ici, la condition initiale est <m>s_1=50\ 000</m>.</p>
+        </statement>
+        <answer><p>On a <m>s_n=2s_{n-1}+10\ 000(n-1)</m>.</p></answer>
+    </task>
+    <task>
+        <statement>
+            <p>Trouver l'expression de <m>s_n</m>. Utiliser une solution particulière de la forme <m>cn+d</m>, où <m>c</m> et <m>d</m> sont des constantes à déterminer.</p>
+        </statement>
+        <solution>
+            <p>
+                On commence par résoudre la relation homogène. On trouve alors <m>s_n^{(h)}=\alpha (2)^n </m>
+            </p>
+            <p>
+                Ensuite, on remplaçant par <m>cn+d</m> dans la relation, on obtient 
+                <md>
+                    <mrow> cn+d \amp = 2(c(n-1) + d ) +10\ 000(n-1) \amp\amp </mrow>
+                    <mrow>   cn+d \amp = 2cn - 2c+2d +10\ 000n-10\ 000 \amp\amp \text{ en distribuant}</mrow>
+                    <mrow> (c)n+(d)  \amp = (2c + 10\ 000)n + (2d-2c-10\ 000) \amp\amp  \text{ en distribuant}</mrow>
+                </md>.
+            </p>
+            <p>
+                En comparant les termes devant les <m>n</m> et les termes constant, on obtient les deux équations <m>c = 2c - 10\ 000 </m> et <m>d = 2d-2c-10\ 000 </m>. On peut alors résoudre ce système d'équations et trouver <m>c=d=-10\ 000</m>. On a alors que la solution particulière est <m>-10\ 000 c - 10\ 000</m>.
+            </p>
+            <p>
+                Ainsi, on a que <m>s_n =\alpha 2^n -10\ 000 (n+1)</m>. À l'aide de la condition initiale, on a <m>s_1=50\ 000 = \alpha 2  -20\ 000</m>, et donc  <m>\frac{70\ 000}{2}=\alpha</m>.
+            </p>
+            <p>
+                Par ce qui précède, on a <m>s_n= 70\ 000 2^{n-1} - 10\ 000(n+1)</m>.
+            </p>
+        </solution>
+    </task>
+</exercise> -->
+<exercise>
+    <statement><p> On considère <m>C(n)</m> le nombre de chaînes binaires de longueur <m>n</m> possédant un nombre pair de <m>0.</m> Trouver une relation de récurrence pour <m>C(n)</m> ainsi que la condition initiale, c'est-à-dire déterminer la valeur de <m>C(1)</m>. </p></statement>
+    <answer><m> C(n)= 2*C(n-1)</m> avec <m>C(1)=1</m></answer>
+    <solution>
+        <p>
+            Les chaîne binaires de longueur un sont soit <m>1</m> ou <m>0</m>. Ainsi, la chaîne <m>1</m> est la seule contenant un nombre pair de <m>0</m>, d'où <m>C(1)=1</m>.
+        </p>
+        <p>
+            Par la suite, on considère une chaîne binaire de longueur <m>n</m>, qu'on note <m>d_1d_2\dots d_{n-1}d_n</m>, avec <m>d_i\in \{0,1\}</m>. Pour déterminer <m>C(n)</m> on utilise le principe de la somme sur la valeur de <m>d_n</m>. Il ya deux cas possible, soit <m>d_n=1</m>, ou bien <m>d_n=0</m>. 
+
+        </p>
+        <p>
+            Si <m>d_n=1</m>, puisque la chaîne <m>d_1d_2\dots d_{n-1}1</m> possède un nombre pair de <m>0</m>, il doit y avoir un nombre pair de <m>0</m> dans la chaîne <m>d_1d_2\dots d_{n-1}</m>. Il en en a donc <m>C(n-1)</m>.
+        </p>
+        <p>
+            Si <m>d_n=0</m>, puisque la chaîne <m>d_1d_2\dots d_{n-1}0</m> possède un nombre pair de <m>0</m>,  il doit y avoir un nombre impair de <m>0</m> dans la chaîne <m>d_1d_2\dots d_{n-1}</m>. Par l'exercice <xref ref="Exo-chaineBinZeroImpPair"/>, on sait qu'il a aussi <m>C(n-1)</m> suite de ce type.
+        </p>
+        <p>
+            Par le principe de la somme, on a que <m>C(n)=C(n-1)+C(n-1)=2C(n-1)</m>.
+        </p>
+    </solution>
+    </exercise>
+
+    <exercise>
+    <statement><p> On considère <m>D(n)</m> le nombre de chaînes de chiffres (en base dix) de longueur <m>n</m> possédant un nombre pair de <m>0.</m> Trouver une relation de récurrence pour <m>D(n)</m> ainsi que la condition initiale, c'est-à-dire déterminer la valeur de <m>D(1)</m>. </p></statement>
+    <answer><m> D(n)= 9D(n-1)+(10^{n-1}-D(n-1))=8D(n-1)+10^{n-1}</m> avec <m>D(1)=9</m></answer>
+    <solution>
+        <p>
+            Les chaîne de chiffres en base dix de longueur un sont  <m>0, 1, 2, 3, 4, 5, 6, 7, 8</m> ou <m>9</m>. Ainsi, il y en a <m>9</m> contenant un nombre pair de <m>0</m>, d'où <m>D(1)=9</m>.
+        </p>
+        <p>
+            Par la suite, on considère une chaîne chiffres en base dix de longueur <m>n</m>, qu'on note <m>d_1d_2\dots d_{n-1}d_n</m>, avec <m>d_i\in \{0,1,\dots,9\}</m>. Pour déterminer <m>D(n)</m> on utilise le principe de la somme sur la valeur de <m>d_n</m>. Il ya deux cas possible, soit <m>d_n\neq 0</m>, ou bien <m>d_n=0</m>. 
+
+        </p>
+        <p>
+            Si <m>d_n\neq 0</m> il y a <m>9</m> choix pour <m>d_n</m> et puisque la chaîne <m>d_1d_2\dots d_{n-1}\ast</m> possède un nombre pair de <m>0</m>, il doit y avoir un nombre pair de <m>0</m> dans la chaîne <m>d_1d_2\dots d_{n-1}</m>. Il y a donc <m>9\cdot D(n-1)</m> chaînes de chiffres de longueur <m>n</m> ayant un nombre pair de <m>0</m> avec <m>d_n \neq 0</m>.
+        </p>
+        <p>
+            Si <m>d_n=0</m>, puisque la chaîne <m>d_1d_2\dots d_{n-1}0</m> possède un nombre pair de <m>0</m>, il doit y avoir un nombre impair de <m>0</m> dans la chaîne <m>d_1d_2\dots d_{n-1}</m>. On veut donc compter le nombre de chaînes de chiffre de longueur <m>n-1</m> ayant un nombre impair de <m>0</m> à l'aide de <m>D(n-1)</m>. Puisqu'il y a <m>10^{n-1}</m> chaînes de chiffres de longueur <m>n-1</m>, il y en aura <m>10^{n-1}-D(n-1)</m> avec un nombre impair de <m>0</m>. 
+        </p>
+        <p>
+            Par le principe de la somme, on a que <m>D(n)=9\cdot D(n-1)+(10^{n-1}-D(n-1))=8C(n-1)+10^{n-1}</m>.
+        </p>
+    </solution>
+    </exercise>
+     
+    <exercise>
+    <introduction>
+    <p>On pose <m>P_k</m> le nombre de permutations d'un ensemble fini à <m>k</m> éléments. On sait déjà que <m>P_k=k!.</m> On veut retrouver cette formule à l'aide d'une relation de récurrence.</p>
+    </introduction>
+    <task> <statement>Trouver une relation de récurrence pour <m>P_k</m></statement>
+    <answer><m> P_k = k P_{k-1}</m></answer>
+    <solution>
+        <p>
+            Pour effectuer une permutation de notre ensemble, on commence par choisir la position d'un des élément de l'ensemble, et ensuite on permute les <m>k-1</m> élments restant. On a donc que <m>P_k=k\cdot P_{k-1}</m>.
+        </p>
+    </solution>
+    </task>
+    <task><statement>Déterminer <m>P_1</m> </statement> <answer> <m> P_1=1</m></answer></task>
+    <task><statement> Utiliser la relation de récurrence et la condition initiale trouvée dans les étapes précédentes pour vérifier que <m>P_k=k!</m></statement>
+    <solution><p> En utilisant la relation de récurrence à plusieurs reprises (à <m>k-1</m> reprise pour être exacte), on a
+<md>
+<mrow> P_k\amp=kP_{k-1} </mrow>
+<mrow> P_k\amp=k({k-1})P_{k-2} </mrow>
+<mrow> P_k\amp=k({k-1})(k-2)P_{k-3} </mrow>
+<mrow> \amp\vdots  </mrow>
+<mrow> P_k\amp=k({k-1})(k-2)(k-3)\cdots (2)P_{1} </mrow>
+<mrow> P_k\amp=k({k-1})(k-2)(k-3)\cdots (2)(1)=k! </mrow>
+</md>
+  </p></solution>
+    </task> 
+    </exercise>
+
+    <exercise>
+    <introduction>
+    <p> Une machine distributrice accepte uniquement des pièces de <m>1\$,</m> des pièces de <m>2\$</m> et des billets de <m>5\$</m> </p> 
+    <p> Posons <m>p_n</m> le nombre de façons de donner <m>n</m> dollars à cette machine si l'ordre dans laquelle on donne l'argent est importante.</p>
+    </introduction>
+    <task>
+    <statement><p> Trouver une relation de récurrence pour <m>p_n</m>.</p></statement>
+    <answer> <m>p_{n}=p_{n-1}+p_{n-2}+p_{n-5}</m></answer>
+    <solution>
+    <p>On cherche une relation de récurrence pour <m>n\geq 5.</m> Pour déterminer <m>p_n,</m> on utilise le principe de la somme selon la dernière pièce ou le dernier billet utilisé afin de donner les <m>n</m> dollars.</p>
+    <p>Il s'agit soit d'une pièce de <m>1\$,</m> soit une pièce de <m>2\$</m> ou bien un billet de <m>5\$</m> </p>
+    <p>Ainsi, avant de donner la dernière pièce/le dernier billet, on avait donné <m>n-1,\, n-2</m> ou bien <m>n-5</m> dollar. </p>
+    <p>Par le principe de la somme, on a <m>p_n=p_{n-1} + p_{n-2}+p_{n-5}</m>. </p>
+    </solution>
+    </task>
+    <task>
+    <statement>Trouver les conditions initiales pour ce problème, c'est-à-dire déterminer <m>p_1, p_2, p_3, p_4</m> et <m>p_5</m>.</statement>
+    <hint> Compter <m>p_n</m> selon le nombre de <m>1\$</m> utilisé.</hint>
+    <hint> Il faudra faire des permutations d'objets indiscernables (l'ordre est important, mais on ne peut pas distinguer les pièces de la même sorte).</hint>
+    <hint>
+    <p> On peut également trouver <m>p_1=1</m> et <m>p_2=2,</m> et ensuite trouver une relation de récurrence pour <m>p_3,\,p_4</m> et <m>p_5</m> de la même manière qu'on l'a fait pour <m>n\geq 5</m>.</p>
+    <p> On aura <m>p_3=p_1+p_2,</m> <m>p_4=p_3+p_2</m> et <m>p_5=p_4+p_3+1</m>.</p>
+    </hint>
+    <answer>
+    <md>
+    <mrow>p_1\amp=1</mrow>
+    <mrow>p_2\amp=2</mrow>
+    <mrow>p_3\amp=3</mrow>
+    <mrow>p_4\amp=5</mrow>
+    <mrow>p_5\amp=9</mrow>
+    </md>
+    </answer> 
+    </task>
+    <task>
+    <statement> Déterminer <m>p_{10}</m>. </statement>
+    <hint> Utiliser la relation de récurrence jusqu'à ce que tous les indices soient entre <m> 1</m> et <m> 5</m>.</hint>
+    <answer> <m> p_{10}=128</m> </answer>
+    </task>
+    </exercise>
+
+<exercise>
+<introduction><p> On note <m>a_n</m> le nombre de chaînes binaires de longueur <m>n</m> qui contiennent trois <m>0</m> consécutifs.</p> </introduction>
+<task>
+<statement> Trouver une relation de récurrence pour <m>a_n</m> avec <m>n\geq 4</m>.</statement>
+<answer><m>a_n = a_{n-1} + a_{n-2}+a_{n-3}+2^{n-3} </m> </answer>
+<solution>
+    <p>
+        Soit <m>d_1\dots d_{n-3}d_{n-2}d_{n-1}d_n</m> une chaîne binaire de longueur <m>n</m> qui contient trois <m>0</m> consécutifs. On sépare en plusieurs cas selon les valeurs des derniers caractères. En particulier, on sépare selon l'endroit où se trouve le dernier <m>1</m> dans la chaîne <m>d_1\dots d_{n-3}d_{n-2}d_{n-1}d_n</m>. Il y aura quatre cas différents.
+    </p>
+    <p>
+        Si le dernier <m>1</m> est à la dernière position, c'est-à-dire si <m>d_n=1</m>, alors les trois <m>0</m> consécutifs se trouvent dans la chaîne <m>d_1\dots d_{n-3}d_{n-2}d_{n-1}</m>. Il y a donc <m>a_{n-1}</m> possibilités.
+    </p>
+    <p>
+        Si le dernier <m>1</m> est à l'avant dernière position, c'est-à-dire si <m>d_{n-1}d_n=10</m>, alors les trois <m>0</m> consécutifs se trouvent dans la chaîne <m>d_1\dots d_{n-3}d_{n-2}</m>. Il y a donc <m>a_{n-2}</m> possibilités.
+    </p>
+    <p>
+        Si le dernier <m>1</m> est à la troisième position en partant de la fin, c'est-à-dire si <m>d_{n-2}d_{n-1}d_n=100</m>, alors les trois <m>0</m> consécutifs se trouvent dans la chaîne <m>d_1\dots d_{n-3}</m>. Il y a donc <m>a_{n-3}</m> possibilités.
+    </p>
+    <p>
+        Finalement, si le dernier <m>1</m> est avant <m>d_{n-2}</m>, c'est-à-dire si <m>d_{n-2}d_{n-1}d_n=000</m>, alors il y a déjà trois <m>0</m> consécutifs dans la chaîne <m>d_1\dots d_{n-3}d_{n-2}d_{n-1}d_n=d_1\dots d_{n-3}000</m>. Il n'y a donc aucune restriction sur la chaîne <m>d_1\dots d_{n-3}</m>, c'est-à-dire qu'il y a <m>2^{n-3}</m> possibilités.
+    </p>
+    <p>
+        Par le principe de la somme, on a <m>a_n=a_{n-1} + a_{n-2}+a_{n-3}+2^{n-3}</m>.
+    </p>
+</solution>
+</task>
+<task>
+<statement>Trouver les conditions initiales, c'est-à-dire déterminer <m>a_1, a_2</m> et <m>a_3</m>. </statement>
+<answer><m>a_1=0</m>, <m>a_2=0</m> et <m>a_3=1</m>. </answer>
+</task>
+<task>
+<statement> Déterminer <m>a_{7}</m> </statement>
+<answer><m>a_7=47</m></answer>
+</task>
+</exercise>
+
+
+<exercise>
+<introduction><p> On note <m>a_n</m> le nombre de chaînes binaires de longueur <m>n</m> qui ne contiennent pas trois <m>0</m> consécutifs.</p> </introduction>
+<task>
+<statement> Trouver une relation de récurrencepour <m>a_n</m>.</statement>
+<answer><m>a_n = a_{n-1} + a_{n-2}+a_{n-3} </m> </answer>
+<solution>
+    <p>
+        Soit <m>d_1\dots d_{n-3}d_{n-2}d_{n-1}d_n</m> une chaîne binaire de longueur <m>n</m> qui ne contient pas trois <m>0</m> consécutifs. On sépare en plusieurs cas selon les valeurs des derniers caractères. En particulier, on sépare selon l'endroit où se trouve le dernier <m>1</m> dans la chaîne <m>d_1\dots d_{n-3}d_{n-2}d_{n-1}d_n</m>. Il y aura trois cas différents.
+    </p>
+    <p>
+        Si le dernier <m>1</m> est à la dernière position, c'est-à-dire si <m>d_n=1</m>, alors la chaîne <m>d_1\dots d_{n-3}d_{n-2}d_{n-1}</m> ne doit pas contenir trois <m>0</m> consécutifs. Il y a donc <m>a_{n-1}</m> possibilités.
+    </p>
+    <p>
+        Si le dernier <m>1</m> est à l'avant dernière position, c'est-à-dire si <m>d_{n-1}d_n=10</m>, alors la chaîne <m>d_1\dots d_{n-3}d_{n-2}</m> ne doit pas contenir trois <m>0</m> consécutifs. Il y a donc <m>a_{n-2}</m> possibilités.
+    </p>
+    <p>
+        Si le dernier <m>1</m> est à la troisième position en partant de la fin, c'est-à-dire si <m>d_{n-2}d_{n-1}d_n=100</m>, alors la chaîne <m>d_1\dots d_{n-3}</m> ne doit pas contenir trois <m>0</m> consécutifs. Il y a donc <m>a_{n-3}</m> possibilités.
+    </p>
+    <p>
+        Finalement, on remarque que le dernier <m>1</m> ne peu pas être avant le <m>d_{n-2}</m>. En effet, si c'était le cas, on aurait <m>d_{n-2}d_{n-1}d_n=000</m>, mais alors il y aurait trois <m>0</m> consécutifs dans la chaîne <m>d_1\dots d_{n-3}d_{n-2}d_{n-1}d_n=d_1\dots d_{n-3}000</m>.
+    </p>
+    <p>
+        Par le principe de la somme, on a <m>a_n=a_{n-1} + a_{n-2}+a_{n-3}</m>.
+    </p>
+</solution>
+</task>
+<task>
+<statement>Trouver les conditions initiales, c'est-à-dire trouver <m>a_1, a_2</m> et <m>a_3</m>. </statement>
+<answer><m>a_1=2</m>, <m>a_2=4</m> et <m>a_3=7</m>. </answer>
+</task>
+<task>
+<statement> Déterminer <m>a_{7}</m> </statement>
+<answer><m>a_7=81</m></answer>
+</task>
+</exercise>
+<exercise>
+    <introduction>
+        <p>On considère un échiquier de dimension <m>2\times n</m>, c'est-à-dire un échiquer formé de deux rangés, et chacune de ces rangés est formée de <m>n</m> cases. On veut recouvrir cet échiquer à l'aide de tuiles de dimension <m>1\times 2</m>, <m>2\times 1</m> et <m>2\times 2</m>.</p>
+        <p>On note <m>a_n</m> le nombre de façons d'accomplir cette tâche.</p>
+    </introduction>
+    <task>
+        <statement>
+            <p>Déterminer <m>a_1</m> et <m>a_2</m>.</p>
+        </statement>
+        <solution>
+            <p>Si <m>n = 1</m>, l'échiquier est de dimension <m>2\times 1</m>. Il y a donc une seule façon d'accomplir cette tâche, en plaçant une tuile <m>2\times 1</m>. Ainsi, <m>a_1=1</m>.</p>
+            <p>Si <m>n = 2</m>, l'échiquier est de dimension <m>2\times 2</m>. Il y a donc trois façons d'accomplir cette tâche. En plaçant deux tuiles  de dimension <m>2\times 1</m>, en plaçant deux tuiles  de dimension <m>1\times 2</m> ou encore en plaçant une tuile de dimension <m>2\times 2</m>. Ainsi, <m>a_2=3</m>.</p>
+        </solution>
+    </task>
+    <task>
+        <statement>
+            <p>Trouver une relation de récurrence pour <m>a_n</m>.</p>
+        </statement>
+        <solution>
+            <p>On sépare la tâche en trois catégories. Pour se faire, on regarde quelle sorte de tuile à été utilisée afin de recouvrir la case en haut à gauche de l'échiquer. Il y a trois façons de le faire, une pour chaque type de tuiles, <m>1\times 2</m>, <m>2\times 1</m> ou <m>2\times 2</m>. </p>
+            <p>Si on a utilisé une tuile de dimension <m>2\times 1</m>, il reste à recouvrir un échiquier de dimension <m>2\times (n-1)</m>. Il y a <m>a_{n-1}</m> façons d'accomplir cette tâche.</p>
+            <p>Si on a utilisé une tuile de dimension <m>1\times 2</m>, alors on a nécessairement urilisé une autre tuile de dimension <m>1\times 2</m> pour recouvrir la case en bas à gauche. Il reste donc à recouvrir un échiquier de dimension <m>2\times (n-2)</m>. Il y a <m>a_{n-2}</m> façons d'accomplir cette tâche.</p>
+            <p>Finalement, si on a utilisé une tuile de dimension <m>2\times 2</m>, il reste à recouvrir un échiquier de dimension <m>2\times (n-2)</m>. Il y a <m>a_{n-2}</m> façons d'accomplir cette tâche.</p>
+            <p>Ainsi, par le principe de la somme, on a <m>a_n=a_{n-1}+a_{n-2}+a_{n-2}=a_{n-1}+2a_{n-2}</m>.</p>
+        </solution>
+    </task>
+    <task><statement>
+        <p>
+            Résoudre la relation de récurrence à l'aide des conditions initiales (à l'aide de <m>a_1</m> et <m>a_2</m>).
+        </p>
+    </statement>
+    <solution>
+        <p> À l'aide de l'équation caractéristique, on trouve que <m>a_n=\alpha_1 (2)^n + \alpha_2 (-1)^n</m>.</p>
+        <p>Puisque <m>1=a_1= 2\alpha_1-\alpha_2</m> et <m>3=a_2=4\alpha_1 +\alpha_2</m>, on peut résoudre ces équations et obtenir <m>\alpha_1=\frac{2}{3}</m> et <m>\alpha_2=\frac{1}{3}</m>.</p>
+        <p>Ainsi, <m>a_n=\frac{2\cdot 2^n}{3}+\frac{1(-1)^n}{3}=\frac{2^{n+1}+(-1)^n}{3}</m>.</p> 
+    </solution>
+</task>
+</exercise>
+
+<exercise>
+    <introduction><p>On considère <m>s_n</m> le nombre de chaînes binaites de longueur <m>n</m> qui contiennent la suite de caractères <m>01</m>.</p></introduction>
+    <task>
+        <statement>
+            <p>Trouver les conditions initiales, c'est-à-dire, déterminer <m>s_1</m> et <m>s_2</m>.</p>
+        </statement>
+        <answer><p>On a <m>a_1=0</m> et <m>a_2=1</m>.</p></answer>
+    </task>
+    <task>
+        <statement> 
+            <p>Trouver une relation re récurrence pour la suite <m>\{s_n\}</m>.</p>
+        </statement>
+        <hint><p>La relation est une relation linéaire non homogène.</p></hint>
+        <solution>
+            <p>On considère la tâche d'écrire une chaîne binaire de longueur <m>n</m> contenant la suite <m>01</m>. On utilise le principe de la somme selon le premier caractère utilisé.</p>
+            <p>Si le premier caractère est un <m>1</m>, alors il doit y avoir la suite <m>01</m> à quelque part dans les <m>n-1</m> caractères restants. Ainsi, il reste à choisir une chaînes à <m>n-1</m> caractères contenant la suite <m>01</m>. Il y a <m>s_{n-1}</m> façons d'accomplir cette tâche.</p>
+            <p>Si le premier caractère utilisé est un <m>0</m>, il faut faire plus attention. On doit encore séparer en deux cas.</p>
+            <p>Tout d'abord, si la chaîne commence par <m>0</m>, il se peut que la suite <m>01</m> se trouve parmi les <m>n-1</m> caractères restants. Ainsi, il reste à choisir une chaînes à <m>n-1</m> caractères contenant la suite <m>01</m>. Il y a <m>s_{n-1}</m> façons d'accomplir cette tâche. </p>
+            <p>Cependant, on remarque que dans le cas précédent, on ne compte pas les chaînes qui contiennent la suite <m>01</m> uniquement dans les deux premiers caractères. On suppose donc que la suite <m>01</m> se retouve dans la chaîne uniquement au début de celle-ci. C'est-à-dire que la chaîne commence par <m>01</m>, mais n'a pas la suite <m>01</m> dans les <m>n-2</m> caractères restants. Ainsi, il reste à choisir une chaîne de <m>n-2</m> caractères qui ne contient pas la suite <m>01</m>. En passant par le complément, il y a <m>2^{n-2}-s_{n-2}</m> façons d'accomplir cette tâche.</p>
+            <p>Par le principe de la somme, on a <m>s_n=2s_{n-1}-s_{n-2}+2^{n-2}</m>.</p>
+        </solution>
+    </task>
+    <task>
+        <statement><p>Trouver une expression pour <m>s_n</m>. Puisque la relation est non homogène, on devra utiliser une solution particulière. Prendre une solution particulière de la forme <m>c 2^n</m>, où <m>c\in \R</m> est une constante à déterminer.</p></statement>
+        <solution>
+            <p>
+                On commence par résoudre la relation homogène. On trouve alors <m>s_n^{(h)}=\alpha_1 (1)^n + \alpha_2 n (1)^n= \alpha_1  + \alpha_2 n</m>
+            </p>
+            <p>
+                Ensuite, on remplaçant par <m>c2^n</m> dans la relation, on obtient 
+                <md>
+                    <mrow> c2^n \amp = 2(c2^{n-1}) - c2^{n-2} + 2^{n-2} \amp\amp </mrow>
+                    <mrow> \Rightarrow  2c \amp = 2c - c+1 \amp\amp \text{ en divisant par } 2^{n-2}</mrow>
+                    <mrow> \Rightarrow  c \amp = 1 \amp\amp </mrow>
+                </md>.
+            </p>
+            <p>
+                Ainsi, on a que <m>s_n = \alpha_1  + \alpha_2 n + 2^n</m>. À l'aide des conditions initiales, on a <m>s_1=0 = \alpha_1 + \alpha_2</m> et <m>s_2=1=\alpha_1 + 2\alpha_2</m>. On peut résoudre ces équations et obtenir <m>\alpha_1=-1</m> et <m>\alpha_2=1</m>.
+            </p>
+            <p>
+                Par ce qui précède, on a <m>s_n= -1 + n + 2^n</m>.
+            </p>
+        </solution>
+    </task>
+</exercise>
+
+    </subexercises>
+    <!--<subexercises>
+    <title>Exercices supplémentaires</title>
+    </subexercises>-->
+</exercises>

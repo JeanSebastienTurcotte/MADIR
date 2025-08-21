@@ -11,7 +11,7 @@
   <!-- Ajouter l'identifiant de la section après le - du xml:id -->
   <title>Les ensembles</title>
   <introduction xml:id="intro-ens">
-    <!-- Ajouter le même identifiant de la section après le - du xml:id -->
+    <!-- Ajouter le même identifiant de la section après le - du xml:id --> 
     <p>L'objet fondamental à la base des mathématiques discrètes (voire même
     des mathématiques en général) est une structure appelée 
     <em>ensemble</em>. Un ensemble est une structure qui regroupe des objets.
@@ -37,11 +37,11 @@
   </introduction>
   <!-- Sous-sections à écrire, à même ce fichier -->
   <subsection>
-    <title>Définitions et exemples</title>
+    <title>Définitions et exemples</title>	
     <p>On commence avec la définition d'un ensemble. Un ensemble sera bien
     défini si on peut toujours déterminer l'appartenance ou non appartenance
     d'un objet à cet ensemble sans aucun doute. Pour voir un exemple d'ensemble
-    qui n'est pas bien défini, on pourra consulter l'exercice <xref provisional="exo-Russel" />.</p>
+    qui n'est pas bien défini, on pourra consulter l'exercice <xref ref="exo-Russel" />.</p>
     <definition xml:id="def-ensemble">
       <title>Un ensemble</title>
       <statement>
@@ -89,16 +89,17 @@
           <li>
             <p>
             <m>A=\{3,4,5,6,7,8,9\}</m>; 
+	    </p>
+            </li>
             <li>
               <p>
               <m>B=\{t,u,r,c,o,e\}</m>;</p>
-            </li></p>
-          </li>
+            </li>
           <li>
             <p>
             <m>C=\{1,4,9,16,\ldots, 64,81\}</m>.</p>
           </li>
-          <li><p><m>D=\{A,B,C\}=\{\{3,4,5,6,7,8,9\},\{t,u,r,c,o,e\},\{1,4,9,16,\ldots, 64,81\}\}</m></p></li>
+          <li><p><m>D=\{A,B,C\}=\Bigl\{\{3,4,5,6,7,8,9\},\{t,u,r,c,o,e\},\{1,4,9,16,\ldots, 64,81\}\Bigr\}</m></p></li>
         </ol></p>
       </solution>
     </example>
@@ -113,7 +114,7 @@
         l'ensemble 
         <m>A</m> de l'exemple 
         <xref ref="ex-ensext" />. De plus, comme c'est l'appartenance d'un
-        objet à l'ensemble qui est important, la répétion n'est pas nécessaire.
+        objet à l'ensemble qui est important, la répétition n'est pas nécessaire.
         L'ensemble 
         <m>B^{'}=\{t,u,r,c,o,t,t,e\}</m> est le même ensemble que l'ensemble 
         <m>B</m> de l'exemple 
@@ -161,7 +162,7 @@
     <definition xml:id="def-ssens">
     <title>Relation d'inclusion</title>
     <statement><p>Soit <m>A</m> et <m>B</m> deux ensembles avec la propriété que, pour tout élément <m>a\in A</m>, on a aussi <m>a\in B</m>. On dit alors que <m>A</m> est un sous-ensemble de <m>B</m> et on écrit  <m>A\subseteq B</m>. Si on est certain que les ensembles sont différents, on pourra utiliser le symbole d'inclusion stricte, <m>\subset</m>. Ces symboles font penser aux symboles pour les inégalités. Ainsi, bien que d'usage beaucoup moins répandu, on peut aussi écrire <m>B\supseteq A</m>.</p>
-    <p>Ces symboles existent aussi dans leur version &#x00AB;négative&#x00BB; (<m>\not\subseteq,\not\subset,\not\supseteq,\not\supset</m>), utilisés pour la non inclusion d'un ensemble dans un autre. De plus, une variante souvent utilisée pour mettre l'emphase sur un sous-ensemble stricte est le symbole <m>\subsetneq</m>. </p>
+    <p>Ces symboles existent aussi dans leur version &#x00AB;négative&#x00BB; (<m>\not\subseteq,\not\subset,\not\supseteq,\not\supset</m>), utilisés pour la non inclusion d'un ensemble dans un autre. De plus, une variante souvent utilisée pour mettre l'emphase sur un sous-ensemble strict est le symbole <m>\subsetneq</m>. </p>
     </statement>
     </definition>
     <p>On peut évidemment vérifier qu'un ensemble est un sous-ensemble d'un autre, mais on peut aussi créer les sous-ensembles à partir d'un ensemble.</p>
@@ -170,8 +171,8 @@
     <statement><p>On considère l'ensemble <m>A=\{a,b,c\}</m>. On cherche tous les sous-ensembles de <m>A</m> possibles contenant au moins un élément.</p></statement>
     <solution><p>L'ensemble <m>A</m> contient trois éléments. Un sous-ensemble pourrait donc potentiellement contenir un, deux ou même trois éléments. On énumère les possibilités ci-dessous.
     <ul>
-    <li><p><m>S_1=\{a\},S_2=\{b\}</m> et <m>S_{3}=\{c\}</m>, qui ne contiennent qu'un élément. </p></li>
-    <li><p><m>S_4=\{a,b\},S_{5}=\{a,c\}</m> et <m>S_6=\{b,c\}</m> qui en contiennent deux.</p></li>
+    <li><p><m>A_1=\{a\},A_2=\{b\}</m> et <m>A_{3}=\{c\}</m>, qui ne contiennent qu'un élément. </p></li>
+    <li><p><m>A_4=\{a,b\},A_{5}=\{a,c\}</m> et <m>A_6=\{b,c\}</m> qui en contiennent deux.</p></li>
     <li><p><m>A=\{a,b,c\}</m> lui-même, qui contient trois éléments.</p></li>
     </ul>
     </p>
@@ -180,32 +181,34 @@
     <definition xml:id="def-ensegaux">
     <title>Relation d'égalité</title>
     <statement>
-    <p>Soit <m>A</m> et <m>B</m> deux ensembles. On dit que les ensembles sont égaux, et on écrit <m>A=B</m>, si et seulement s'ils sont formés des mêmes éléments.</p>
+    <p>Soit <m>A</m> et <m>B</m> deux ensembles. On dit que les ensembles sont égaux, et on écrit <m>A=B\ </m>, si et seulement s'ils sont formés des mêmes éléments.</p>
     <p>Une manière pratique de déterminer si deux ensembles sont égaux est de montrer qu'à la fois <m>A\subseteq B</m> et <m>B\subseteq A</m>.</p>
     </statement>
     </definition>
     <p>On regarde des exemples de sous-ensembles et d'ensembles égaux.</p>
     <example xml:id="ex-relens">
     <title>Sous-ensemble et égalité</title>
-    <statement><p>On considère les ensembles suivants:
-    <md>>
+    <statement>
+    <p>On considère les ensembles suivants:
+    <md>
     <mrow>A&amp;=\{2,4,6\}</mrow>
-    <mrow>B&amp;=\{n~|~ n \text{ est un nombre entier compris entre }0\text{ et }9\text{ inclusivement}\}</mrow>
+    <mrow>B&amp;=\{n~|~ n \text{ est un nombre entier compris entre }0\text{ et }9\text{ inclusivement}\}</mrow> 
     <mrow>C&amp;=\{4,6,2\}</mrow>
-    <mrow>D&amp;=\{n~|~ -1\leq n\leq 9\}</mrow>
+    <mrow>D&amp;=\{n~|~ n \text{ est un nombre entier et } -1\leq n\leq 9\}</mrow>
     </md></p>
     <p>On peut remarquer les relations suivantes: <m>C\subseteq A</m>,<m>A\subseteq C</m>,<m>A\subseteq B</m>,<m>B\subset D</m>,<m>A=C</m>. On aurait pu noter sans problème que <m>B\subsetneq D</m> (équivalent à <m>\subset</m>, ou même <m>B\subseteq D</m> (moins strict, mais quand même vrai), mais pas que <m>A\subset C</m>.</p>
     </statement>
     </example>
+
     <p>Le nombre d'éléments dans un ensemble est appelé la <em>cardinalité</em> de l'ensemble. Pour un ensemble <m>A</m>, on la note <m>\text{card}(A)=|A|</m>. Les ensembles <m>A,B,C</m> de l'exemple <xref ref="ex-relens"/> ont respectivement comme cardinalité <m>|A|=3,|B|=10</m> et <m>|C|=3</m>. </p>
-    <p>La cardinalité d'un ensemble peut être n'importe quel nombre naturel ou même infini. Un ensemble est dit fini si sa cardinalité est un nombre naturel et infini sinon.</p>
-    </subsection>
+    <p>La cardinalité d'un ensemble peut être n'importe quel nombre naturel ou même infini. Un ensemble est dit fini si sa cardinalité est un nombre naturel et infini sinon.</p> 
+</subsection>
     <subsection>
     <title>Représentation graphique d'ensembles</title>
     <p>Il peut être utile d'avoir une représentation graphique de la notion d'ensemble et des concepts associés. Pour cela on peut utiliser un diagramme de Venn. Dans un tel diagramme, on identifie l'ensemble des tous les objets étudiés par un rectangle. On le notera <m>\Omega</m> (la lettre grecque omega, majuscule). On l'appelle souvent le référentiel ou encore l'ensemble univers. Dans ce rectangle, un certain nombre d'ensembles peuvent être illustrés, souvent par des cercles.</p>
 
     <p>À titre d'exemple, on prend comme ensemble univers les  chiffres arabes <m>\Omega=\{0,1,\ldots ,9\}</m> et on considère les deux sous-ensembles suivants: <m>A=\{1,2,3,4\},B=\{3,4,5,6\}</m>. La figure suivante illustre un diagramme de Venn de ces ensembles. </p>
-    <figure xml:id="fig-Venn1">
+  <figure xml:id="fig-Venn1">
     <caption>Un diagramme de Venn</caption>
     <image xml:id="img-Venn1"><description>
     Le diagramme de Venn des ensembles Omega, A et B est illustré. On voit les éléments à l'intérieur de chaque ensemble.
@@ -224,7 +227,7 @@ O+A+B
                     <figure xml:id="fig-sageVenn1">
                     <caption>Diagramme de Venn interactif</caption>
                     <interactive platform="sage" width="100%" aspect="4:5" ><!--  'preview="TEST.jpg" ins-->
-                    <instructions>Il est possible de modifier les éléments des ensembles et de visualiser dynamiquement comment le diagramme évolue.</instructions>
+                    <instructions><p>Il est possible de modifier les éléments des ensembles et de visualiser dynamiquement comment le diagramme évolue.</p></instructions>
                         <slate surface="sage">
 #Adapté de https://wiki.sagemath.org/interact/misc
 def f(s, braces=True): #Fonction qui permet d'écrire en texte une liste d'élément, encadrés par des accolades
@@ -279,30 +282,35 @@ def _(A='1,2,3,a', B='2,a,3,4,pomme', C='a,b,10,pomme'):
   </subsection>
   <subsection>
   <title>Ensembles particuliers</title>
-  <p>On donne maintenant la définition de certains ensembles importants. L'un deux, l'ensemble univers a déjà été mentionné. Un autre ensemble d'une grande importance est l'ensemble vide. On le note par <m>\emptyset</m> ou encore <m>\{\}</m>. Sa cardinalité est de <m>0</m>. C'est le seul ensemble qui possède cette propriété. Il possède aussi la propriété d'être un sous-ensemble de tous les ensembles, incluant lui-même. 
-  <!-- TODO -->
+
+  <statement>
+
+
+
+</statement>	
+  <p>On donne maintenant la définition de certains ensembles importants. L'un deux, l'ensemble univers a déjà été mentionné. Un autre ensemble d'une grande importance est l'ensemble vide. On le note par <m>\emptyset</m> ou encore <m>\{\}</m>. Sa cardinalité est de <m>0</m>. <em>C'est le seul ensemble qui possède cette propriété.</em> Il possède aussi la propriété d'être un sous-ensemble de tous les ensembles, incluant lui-même. 
   <!--On reviendra sur cette drôle de particularité dans la section <xref provisional="sec-logique"/>--><!-- À voir de quoi il était question?-->. </p>
   <p>Un autre sous-ensemble a été évoqué à l'exemple <xref ref="ex-enspuiss"/>. On en donne une définition plus précise ci-bas.</p>
   <definition xml:id="def-enspuiss">
   <title>L'ensemble des puissances</title>
-  <statement>Étant donné un ensemble <m>A</m>, l'ensemble de tous les sous-ensembles formés des éléments de <m>A</m> est appelé l'ensemble des puissances (ou des parties) de <m>A</m>. On le note par <m>\mathscr{P}(A)</m>.</statement>
+  <statement>Étant donné un ensemble <m>A</m>, l'ensemble de tous les ensembles formés des éléments de <m>A</m>, c'est-à-dire tous les sous-ensembles de <m>A</m>, est appelé l'ensemble des puissances (ou des parties) de <m>A</m>. On le note par <m>\mathscr{P}(A)</m>.</statement>
   </definition>
   <p>Si on ajoute l'ensemble vide au sous-ensembles trouvés à l'exemple <xref ref="ex-enspuiss"/>, on obtient l'ensemble des puissances de <m>A</m>:
   <me>
   \mathscr{P}(A)=\{\emptyset,A_1,A_2,A_3,A_4,A_5,A_6,A\}
   </me>.</p>
   <p>On termine avec la liste des principaux ensembles de nombres qui seront utilisés dans ces notes.
-  <ul>
-  <li><p>L'ensemble des nombres naturels, noté <m>\mathbb{N}=\{0,1,2,\ldots\}</m>.<aside><title>En passant</title><p>Il n'y a pas de consensus quant à l'inclusion de l'élément <m>0</m> dans l'ensemble des nombres naturels. Certains auteurs vont l'inclure, d'autres non. L'important est la cohérence à même un texte. Parce qu'on fera une utilisation du langage informatique python/Sage et que ceux-ci commencent leur numérotation à <m>0</m>, on a choisit de l'inclure ici. Si on veut parler des naturels en excluant <m>0</m>, on le mentionnera explicitement et on dénotera l'ensemble par <m>\N^{*}</m> ou encore <m>\N\backslash\{0\}</m> (l'opération <m>\backslash</m> sera définie dans la section <xref ref="sec-opens"/>).</p></aside></p></li>
+  <ul xml:id="not-nombres">
+  <li><p>L'ensemble des nombres naturels, noté <m>\mathbb{N}=\{0,1,2,\ldots\}</m>.<aside><title>En passant</title><p>Il n'y a pas de consensus quant à l'inclusion de l'élément <m>0</m> dans l'ensemble des nombres naturels. Certains auteurs vont l'inclure, d'autres non. L'important est la cohérence à même un texte. Parce qu'on fera une utilisation du langage informatique python/Sage et que ceux-ci commencent leur numérotation à <m>0</m>, on a choisi de l'inclure ici. Si on veut parler des naturels en excluant <m>0</m>, on le mentionnera explicitement et on dénotera l'ensemble par <m>\N^{*}</m> ou encore <m>\N\backslash\{0\}</m> (l'opération <m>\backslash</m> sera définie dans la section <xref ref="sec-opens"/>).</p></aside></p></li>
   <li><p>L'ensemble des entiers, noté <m>\Z=\{\ldots, -2,-1,0,1,2,\ldots \}</m>.</p></li>
-  <li><p>L'ensemble des nombres rationnels, noté <m>\Q=\left\{\left.\frac{a}{b}~\right|~ a,b\in \Z \text{ et } b\neq 0\right\}</m>. </p></li>
-  <li><p>L'ensemble des nombres réels, noté <m>\R</m>. Pour cet ensemble, on se fie à l'intuition de ce que sont les nombres réels, par exemple les nombres situé sur une droite infinie, car donner une définition précise est difficile. Cet ensemble sera peu utilisé, sa nature étant davantage du côté continu que discret.</p></li>
+  <li><p>L'ensemble des nombres rationnels, noté <me>\Q=\left\{\left.\frac{a}{b}~\right|~ a,b\in \Z\ \text{ et }\ b\neq 0\right\}</me>. </p></li>
+  <li><p>L'ensemble des nombres réels, noté <m>\R</m>. Pour cet ensemble, on se fie à l'intuition de ce que sont les nombres réels, par exemple les nombres situés sur une droite infinie, car donner une définition précise est difficile. Cet ensemble sera peu utilisé, sa nature étant davantage du côté continu que discret.</p></li>
   </ul>
   </p>
   <p>Dans la description d'un ensemble en compréhension, lorsque les éléments sont des nombres, il est de bon usage de spécifier dans quel ensemble ces nombres se trouvent. Il n'y a pas de manière unique de le faire, en voici deux:
   <ul>
   <li><p><m>A=\{k\in \Z ~|~ k^2\leq 16\}</m>;</p></li>
-  <li><p><m>A=\{k~|~ k\in \Z \text{ et } k^2\leq 16\}</m>.</p></li>
+  <li><p><m>A=\{k~|~ k\in \Z\ \text{ et }\ k^2\leq 16\}</m>.</p></li>
   </ul>
   On pourrait traduire ces deux écritures respectivement par
   <ul>
@@ -323,6 +331,8 @@ def _(A='1,2,3,a', B='2,a,3,4,pomme', C='a,b,10,pomme'):
   </p>
   <p>De plus, lorsque l'inégalité est stricte, on admet la possibilité que <m>a</m> soit remplacé par <m>-\infty</m> et <m>b</m> par <m>\infty</m>.</p></statement>
   </remark>
+
+
   </subsection>
   <conclusion xml:id="concl-ens">
   <title>En résumé</title>
@@ -344,6 +354,8 @@ def _(A='1,2,3,a', B='2,a,3,4,pomme', C='a,b,10,pomme'):
   </introduction>
   </reading-questions>
   -->
+
+  
   <xi:include href="Exercices_ensembles.ptx"/>
 </section>
 <!-- exercice Russel -->
