@@ -154,6 +154,12 @@
         </ol></p></solution>
     </example>
     <p>Dans la description en compréhension, on sépare la variable utilisée de la condition avec une barre verticale. Cette barre devrait se lire comme l'expression &#x00AB; tel que &#x00BB;. On voit souvent le &#x00AB; deux points (:) &#x00BB; comme autre possibilité de notation.</p>
+    <p>Il peut exister plusieurs manières valides de décrire un objet en compréhension. Toutefois, on veut respecter une certaine structure syntaxique. On peut avoir :
+    <ol>
+    <li><p>un ensemble domaine, suivie d'une condition pour filtrer les éléments du domaine, par exemple <m>A=\{x\in \Z ~|~ x^2&lt; 25\}</m>;</p></li>
+    <li><p>une formule, suivie d'une domaine dans lequel est appliquée la formule, comme dans l'ensemble <m>B=\{x^2~|~| x\in \{1,2,3,4\}\}</m>.</p></li>
+    </ol></p>
+    <p></p>
     </subsection>
     <subsection>
     <title>Relation entre deux ensembles</title>
@@ -313,18 +319,7 @@ def _(A='1,2,3,a', B='2,a,3,4,pomme', C='a,b,10,pomme'):
   <li><p>L'ensemble des nombres réels, noté <m>\R</m>. Pour cet ensemble, on se fie à l'intuition de ce que sont les nombres réels, par exemple les nombres situés sur une droite infinie, car donner une définition précise est difficile. Cet ensemble sera peu utilisé, sa nature étant davantage du côté continu que discret.</p></li>
   </ul>
   </p>
-  <p>Dans la description d'un ensemble en compréhension, lorsque les éléments sont des nombres, il est de bon usage de spécifier dans quel ensemble ces nombres se trouvent. Il n'y a pas de manière unique de le faire, en voici deux:
-  <ul>
-  <li><p><m>A=\{k\in \Z ~|~ k^2\leq 16\}</m>;</p></li>
-  <li><p><m>A=\{k~|~ k\in \Z\ \text{ et }\ k^2\leq 16\}</m>.</p></li>
-  </ul>
-  On pourrait traduire ces deux écritures respectivement par
-  <ul>
-  <li><p>L'ensemble <m>A</m> est composé des entiers <m>k</m> tels que leur carré est inférieur ou égal à <m>16</m>; </p></li>
-  <li><p>L'ensemble <m>A</m> est composé d'éléments <m>k</m> tels que <m>k</m> est un entier dont le carré est inférieur ou égal à <m>16</m>.</p></li>
-  </ul>
-  </p>
-  <p>La précision de l'ensemble permet de déterminer avec certitude les éléments de l'ensemble. Par exemple, l'ensemble <m>A</m> ci-dessus est <m>A=\{-4,-3,-2,-1,0,1,2,3,4\}</m>, mais l'ensemble <m>B=\{k\in \N~|~ k^2\leq 16\}</m> ne contient que les éléments <m>\{0,1,2,3,4\}</m>.</p>
+  <p>Dans la description d'un ensemble en compréhension, lorsque les éléments sont des nombres, il est de bon usage de spécifier dans quel ensemble ces nombres se trouvent. La précision de l'ensemble permet de déterminer avec certitude les éléments de l'ensemble. Par exemple, l'ensemble <m>A=\{k ~|~ k^2\leq 16\}</m> est égal à <m>\{-4,-3,-2,-1,0,1,2,3,4\}</m> si l'on considère le domaine comme <m>\Z</m>, mais vaut <m>\{0,1,2,3,4\}</m> si l'on prend comme domaine <m>\N</m>.</p>
   <remark>
   <title>Les intervalles</title>
   <statement><p>On délimite les ensembles par les paires d'accolades, soit en énumérant les éléments ou en donnant une description des membres. Pour les ensembles dont la cardinalité est infinie, il peut être difficile ou impossible d'énumérer les éléments. En particulier, certains sous-ensembles des nombres réels sont assez importants pour qu'on leur donne une notation propre à eux. Ce sont les intervalles. Voici quatre exemples de cette notation:
@@ -364,5 +359,3 @@ def _(A='1,2,3,a', B='2,a,3,4,pomme', C='a,b,10,pomme'):
   
   <xi:include href="Exercices_ensembles.ptx"/>
 </section>
-<!-- exercice Russel -->
-<!-- Ajouter qqc du genre https://github.com/RobertTalbert/discretecs/blob/master/MTH225-Winter2025/course-docs/How%20to%20work%20with%20set%20builder%20notation.md --> <!-- après les ensembles N,Q,R etc. -->
