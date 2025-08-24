@@ -15,13 +15,13 @@
     <p>L'objet fondamental à la base des mathématiques discrètes (voire même
     des mathématiques en général) est une structure appelée 
     <em>ensemble</em>. Un ensemble est une structure qui regroupe des objets.
-    On peut parler de l'ensemble des étudiants du programme Sciences
-    informatiques et mathématiques, de l'ensemble des arbres sur le terrain du
+    On peut parler de l'ensemble des étudiants du programme Sciences,
+    informatique et mathématique, de l'ensemble des arbres sur le terrain du
     cégep ou encore l'ensemble des nombres naturels compris entre 
     <m>4</m>  et  
     <m>42</m>.</p>
     <p>Le terme 
-    <m>objet</m> est pris dans son sens intuitif et large. Au début de la
+    <em>objet</em> est pris dans son sens intuitif et large. Au début de la
     théorie des ensembles, plusieurs paradoxes furent relevés, le plus célèbre
     par Bertrand Russel. On peut pallier à ces paradoxes en donnant une
     définition axiomatique de la théorie des ensembles. Pour ce qui suit, ce
@@ -58,7 +58,7 @@
     pas toujours pratique ou même possible, est d'énumérer ses éléments. On dit alors que
     l'ensemble est décrit en 
     <em>extension</em>. On utilisera les accolades 
-    <m>\{, \}</m>pour encadrer les éléments d'un ensemble. Ceci est cohérent
+    <m>\{, \}</m> pour encadrer les éléments d'un ensemble. Ceci est cohérent
     avec la notion d'ensemble de plusieurs langages de programmation, dont
     Python/Sage, qui sera utilisé à plusieurs reprises dans ces notes.</p>
     <example xml:id="ex-ensext">
@@ -124,14 +124,13 @@
     <p>Dans la description en extension de l'ensemble des carrés parfaits
     inférieurs à 
     <m>100</m>, on a utilisé les 
-    &#x00AB;<ellipsis/>&#x00BB; afin de limiter l'écriture. On comprend que la suite définie
+    &#x00AB; <ellipsis/> &#x00BB; afin de limiter l'écriture. On comprend que la suite définie
     par les premiers termes de la description continue de manière naturelle
     dans cette omission. Souvent, pour décrire un ensemble contenant beaucoup
-    d'éléments, même une infinité, on utilisera la description en compréhension
+    d'éléments, même une infinité, on utilisera la description en <em>compréhension</em>
     de l'ensemble. On énonce alors la (ou les) propriété que possèdent les
     éléments de l'ensemble à l'intérieur même de la description. Dans ce cas,
-    on utilisera souvent pour dénoter un élément arbitraire de l'ensemble une
-    lettre minuscule analogue à celle utilisée pour le nom de l'ensemble ou
+    on utilisera souvent une lettre minuscule pour dénoter un élément arbitraire de l'ensemble analogue à celle utilisée pour le nom de l'ensemble ou
     encore ayant un sens particulier dans le contexte.</p>
     <example>
       <title>Des ensembles décrits en compréhension</title>
@@ -154,7 +153,7 @@
           </li>
         </ol></p></solution>
     </example>
-    <p>Dans la description en compréhension, on sépare la variable utilisée de la condition avec une barre verticale. Cette barre devrait se lire comme l'expression &#x00AB; tel que &#x00BB;. On voit souvent le &#x00AB;deux points (:) &#x00BB; comme autre possibilité de notation.</p>
+    <p>Dans la description en compréhension, on sépare la variable utilisée de la condition avec une barre verticale. Cette barre devrait se lire comme l'expression &#x00AB; tel que &#x00BB;. On voit souvent le &#x00AB; deux points (:) &#x00BB; comme autre possibilité de notation.</p>
     </subsection>
     <subsection>
     <title>Relation entre deux ensembles</title>
@@ -199,8 +198,12 @@
     <p>On peut remarquer les relations suivantes: <m>C\subseteq A</m>,<m>A\subseteq C</m>,<m>A\subseteq B</m>,<m>B\subset D</m>,<m>A=C</m>. On aurait pu noter sans problème que <m>B\subsetneq D</m> (équivalent à <m>\subset</m>, ou même <m>B\subseteq D</m> (moins strict, mais quand même vrai), mais pas que <m>A\subset C</m>.</p>
     </statement>
     </example>
-
-    <p>Le nombre d'éléments dans un ensemble est appelé la <em>cardinalité</em> de l'ensemble. Pour un ensemble <m>A</m>, on la note <m>\text{card}(A)=|A|</m>. Les ensembles <m>A,B,C</m> de l'exemple <xref ref="ex-relens"/> ont respectivement comme cardinalité <m>|A|=3,|B|=10</m> et <m>|C|=3</m>. </p>
+    <definition>
+    <statement>
+    <p>Le nombre d'éléments dans un ensemble est appelé la <em>cardinalité</em> de l'ensemble. Pour un ensemble <m>A</m>, on la note <m>\text{card}(A)=|A|</m>.
+    </p></statement></definition>
+    <p>
+    Les ensembles <m>A,B,C</m> de l'exemple <xref ref="ex-relens"/> ont respectivement comme cardinalité <m>|A|=3,|B|=10</m> et <m>|C|=3</m>. </p>
     <p>La cardinalité d'un ensemble peut être n'importe quel nombre naturel ou même infini. Un ensemble est dit fini si sa cardinalité est un nombre naturel et infini sinon.</p> 
 </subsection>
     <subsection>
@@ -210,9 +213,10 @@
     <p>À titre d'exemple, on prend comme ensemble univers les  chiffres arabes <m>\Omega=\{0,1,\ldots ,9\}</m> et on considère les deux sous-ensembles suivants: <m>A=\{1,2,3,4\},B=\{3,4,5,6\}</m>. La figure suivante illustre un diagramme de Venn de ces ensembles. </p>
   <figure xml:id="fig-Venn1">
     <caption>Un diagramme de Venn</caption>
-    <image xml:id="img-Venn1"><description>
+    <image xml:id="img-Venn1"><shortdescription>
     Le diagramme de Venn des ensembles Omega, A et B est illustré. On voit les éléments à l'intérieur de chaque ensemble.
-    </description>
+    </shortdescription>
+    <description><p>Un rectangle avec la lettre Omega majuscule est illustré. À l'intérieur, on peut y voir deux cercles qui s'intersectent. Les chiffres de 0 à 9 sont aussi présent. Dans le cercle de gauche, on peut voir que les chiffres 1 et 2 sont présents. Le cercle de droite contient les chiffres 5 et 6. Au centre, à la fois dans le cercle de gauche et dans celui de droite, on peut voir les chiffres 3 et 4. Finalement, à l'extérieur des deux cercles, mais à l'intérieur du rectangle, on voit les chiffres 0,7,8 et 9.</p></description>
     <sageplot>
 O=polygon2d([(-4,-4),(-4,4),(4,4),(4,-4)],color="black",fill=False,axes=False)+text(r"$\Omega$",(-3.8,3.8),color="black")+text("$0$",(0,3),color="black")+text("$7$",(-1,2.5),color="black")+text("$8$",(1,2.5),color="black")+text("$9$",(0,-3),color="black")
 A=circle((-1,0),2,color="blue")+text("$A$",(-2,2),color="blue")+text("$2$",(-2,-1),color="black")+text("$1$",(-2,1),color="black")+text("$3$",(0,1),color="black")+text("$4$",(0,-1),color="black")
@@ -272,6 +276,8 @@ def _(A='1,2,3,a', B='2,a,3,4,pomme', C='a,b,10,pomme'):
     # Plot intersection of all three
     G += text(f(ABC,braces=False), (0,0), rgbcolor='black')
 
+    # Plot tags for the sets
+    G+=text("A",(centers[0][0]+2,centers[0][1]),color="black")+text("B",(centers[1][0]-1.5,centers[1][1]+1.5),color="black")+text("C",(centers[2][0],centers[2][1]-2),color="black")
     # Show it
     G.show(aspect_ratio=1, axes=False)
                         </slate>
@@ -289,7 +295,7 @@ def _(A='1,2,3,a', B='2,a,3,4,pomme', C='a,b,10,pomme'):
 
 </statement>	
   <p>On donne maintenant la définition de certains ensembles importants. L'un deux, l'ensemble univers a déjà été mentionné. Un autre ensemble d'une grande importance est l'ensemble vide. On le note par <m>\emptyset</m> ou encore <m>\{\}</m>. Sa cardinalité est de <m>0</m>. <em>C'est le seul ensemble qui possède cette propriété.</em> Il possède aussi la propriété d'être un sous-ensemble de tous les ensembles, incluant lui-même. 
-  <!--On reviendra sur cette drôle de particularité dans la section <xref provisional="sec-logique"/>--><!-- À voir de quoi il était question?-->. </p>
+  <!--On reviendra sur cette drôle de particularité dans la section <xref provisional="sec-logique"/>--><!-- À voir de quoi il était question?--> </p>
   <p>Un autre sous-ensemble a été évoqué à l'exemple <xref ref="ex-enspuiss"/>. On en donne une définition plus précise ci-bas.</p>
   <definition xml:id="def-enspuiss">
   <title>L'ensemble des puissances</title>
@@ -359,3 +365,4 @@ def _(A='1,2,3,a', B='2,a,3,4,pomme', C='a,b,10,pomme'):
   <xi:include href="Exercices_ensembles.ptx"/>
 </section>
 <!-- exercice Russel -->
+<!-- Ajouter qqc du genre https://github.com/RobertTalbert/discretecs/blob/master/MTH225-Winter2025/course-docs/How%20to%20work%20with%20set%20builder%20notation.md --> <!-- après les ensembles N,Q,R etc. -->

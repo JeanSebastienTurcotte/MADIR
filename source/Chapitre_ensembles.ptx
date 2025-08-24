@@ -14,7 +14,7 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="chap-ensfct">   <!-- Ajouter l'identifiant du chapitre après le - du xml:id -->
     <title> Ensembles et fonctions </title>
     <introduction xml:id= "intro-ensfct">  <!-- Ajouter le même identifiant du chapitre après le - du xml:id -->
-    <p>Dans ce chapitre, on étudie les fondements des mathématiques discrètes. Plus particulièrement, on étudie les ensembles, les fonctions et la logique mathématique.</p>
+    <p>Dans ce chapitre, on étudie les fondements des mathématiques discrètes. Plus particulièrement, on étudie les ensembles et les fonctions.</p>
     </introduction>
     
     <!-- Sections à inclure, dans des fichiers xml différents -->
