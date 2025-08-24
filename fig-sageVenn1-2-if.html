@@ -210,6 +210,8 @@ def _(A='1,2,3,a', B='2,a,3,4,pomme', C='a,b,10,pomme'):
     # Plot intersection of all three
     G += text(f(ABC,braces=False), (0,0), rgbcolor='black')
 
+    # Plot tags for the sets
+    G+=text("A",(centers[0][0]+2,centers[0][1]),color="black")+text("B",(centers[1][0]-1.5,centers[1][1]+1.5),color="black")+text("C",(centers[2][0],centers[2][1]-2),color="black")
     # Show it
     G.show(aspect_ratio=1, axes=False)
 </script></pre></div>

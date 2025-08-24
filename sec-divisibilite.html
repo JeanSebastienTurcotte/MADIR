@@ -132,6 +132,9 @@ sagecell.makeSagecell({
 #sec-ens-3-8-3-1-1 { counter-set: sec-ens-3-8-3-1-1 0; }
 #sec-ens-3-8-3-1-1 > li::marker { content: ""counter(sec-ens-3-8-3-1-1,decimal)"."; }
 #sec-ens-3-8-3-1-1 > li { counter-increment: sec-ens-3-8-3-1-1; }
+#sec-ens-3-10-1 { counter-set: sec-ens-3-10-1 0; }
+#sec-ens-3-10-1 > li::marker { content: ""counter(sec-ens-3-10-1,decimal)"."; }
+#sec-ens-3-10-1 > li { counter-increment: sec-ens-3-10-1; }
 #sssec-opens-19-3-1-2 { counter-set: sssec-opens-19-3-1-2 0; }
 #sssec-opens-19-3-1-2 > li::marker { content: ""counter(sssec-opens-19-3-1-2,decimal)"."; }
 #sssec-opens-19-3-1-2 > li { counter-increment: sssec-opens-19-3-1-2; }
@@ -737,9 +740,10 @@ $\Box$
 </ul>
 </div></article><div class="para" id="sec-divisibilite-3-4">Quand on écrit <span class="process-math">\(b| a\text{,}\)</span> c’est soit vrai, soit faux selon <span class="process-math">\(a,b\text{.}\)</span> On a donc une proposition. Pour écrire la négation de cette proposition, on peut utiliser la notation  <span class="process-math">\(b\nmid a\)</span> pour dire que <span class="process-math">\(b\)</span> me divise pas <span class="process-math">\(a\text{.}\)</span>
 </div>
-<details id="sec-divisibilite-3-5" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="example example-like" id="sec-divisibilite-3-5"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Exemples de divisibilité.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="sec-divisibilite-3-5-2-1">
+</h4>
+<div class="para logical" id="sec-divisibilite-3-5-2-1">
 <div class="para">On cherche la valeur de vérité des propositions suivantes.</div>
 <ol class="decimal" id="sec-divisibilite-3-5-2-1-1">
 <li id="sec-divisibilite-3-5-2-1-1-1"><div class="para" id="sec-divisibilite-3-5-2-1-1-1-1"><span class="process-math">\(\displaystyle 4| 8\)</span></div></li>
@@ -768,7 +772,7 @@ $\Box$
 <li id="sec-divisibilite-3-5-3-1-1-7"><div class="para" id="sec-divisibilite-3-5-3-1-1-7-1">Puisque <span class="process-math">\(n^2=n\times n\text{,}\)</span> on conclut que <span class="process-math">\(n\)</span> est un facteur de <span class="process-math">\(n^2\)</span> et donc que <span class="process-math">\(n| n^2\)</span> peu importe la valeur de <span class="process-math">\(n\)</span> non nulle. La proposition est vraie.</div></li>
 <li id="sec-divisibilite-3-5-3-1-1-8"><div class="para" id="sec-divisibilite-3-5-3-1-1-8-1">Si on peut montrer une valeur de <span class="process-math">\(n\)</span> qui ne respecte pas la condition, alors la proposition sera fausse. Par exemple, si <span class="process-math">\(n=2\text{,}\)</span> c’est faux de dire que <span class="process-math">\(2^2| 2\)</span> puisque <span class="process-math">\(2/4=1/2\)</span> et ce n’est pas un entier. Donc la proposition est fausse.</div></li>
 <li id="sec-divisibilite-3-5-3-1-1-9"><div class="para" id="sec-divisibilite-3-5-3-1-1-9-1">Si on arrive à trouver une valeur, la proposition d’existence sera vérifiée. En prenant <span class="process-math">\(n=1\text{,}\)</span> on observe que <span class="process-math">\(1^2| 1\)</span> et donc la proposition est vraie.</div></li>
-</ol></div></div></details></div></article></details><section class="paragraphs" id="par-etranglement"><span class="process-math">\(123\)</span><span class="process-math">\(881123\text{,}\)</span><span class="process-math">\(123\)</span><span class="process-math">\(881123\)</span><span class="process-math">\(123\times 10000=1230000\text{,}\)</span><span class="process-math">\(123\times 1000=123000\text{,}\)</span><span class="process-math">\(1000\)</span><span class="process-math">\(10000\text{.}\)</span><span class="process-math">\(123\times 5000=615000\text{,}\)</span><span class="process-math">\(123\times 7500=922500\text{,}\)</span><span class="process-math">\(5000\)</span><span class="process-math">\(7500\text{.}\)</span><span class="process-math">\(123\times 7163=881049\)</span><span class="process-math">\(7164\times 123=881172\)</span><span class="process-math">\(881123\)</span><span class="process-math">\(123\)</span><span class="process-math">\(123 \nmid 881123\text{.}\)</span></section><div class="para" id="sec-divisibilite-3-7">En prenant <span class="process-math">\(123\times 7163=881049\text{,}\)</span> on remarque qu’on est à <span class="process-math">\(74\)</span> entiers de la cible. On peut donc écrire <span class="process-math">\(881123=123\times 7163+74\text{.}\)</span> Il se trouve qu’on peut généraliser se résultat pour obtenir la notion bien connue de division.</div>
+</ol></div></div></details></div></article><section class="paragraphs" id="par-etranglement"><span class="process-math">\(123\)</span><span class="process-math">\(881123\text{,}\)</span><span class="process-math">\(123\)</span><span class="process-math">\(881123\)</span><span class="process-math">\(123\times 10000=1230000\text{,}\)</span><span class="process-math">\(123\times 1000=123000\text{,}\)</span><span class="process-math">\(1000\)</span><span class="process-math">\(10000\text{.}\)</span><span class="process-math">\(123\times 5000=615000\text{,}\)</span><span class="process-math">\(123\times 7500=922500\text{,}\)</span><span class="process-math">\(5000\)</span><span class="process-math">\(7500\text{.}\)</span><span class="process-math">\(123\times 7163=881049\)</span><span class="process-math">\(7164\times 123=881172\)</span><span class="process-math">\(881123\)</span><span class="process-math">\(123\)</span><span class="process-math">\(123 \nmid 881123\text{.}\)</span></section><div class="para" id="sec-divisibilite-3-7">En prenant <span class="process-math">\(123\times 7163=881049\text{,}\)</span> on remarque qu’on est à <span class="process-math">\(74\)</span> entiers de la cible. On peut donc écrire <span class="process-math">\(881123=123\times 7163+74\text{.}\)</span> Il se trouve qu’on peut généraliser se résultat pour obtenir la notion bien connue de division.</div>
 <article class="proposition theorem-like" id="prop-divisioneuclidienne"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">La division euclidienne.</span>
 </h4>
@@ -858,9 +862,10 @@ def _(a=(-100..100),b=(1..100),b_negatif=("b négatif?",False)):
 <td class="l m b3 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
 </tr>
 </table></div></figure><div class="para" id="sec-divisibilite-4-5">La procédure est la même pour les autres bases, mais les restes ne peuvent pas être déterminés aussi facilement qu’en regardant la parité.</div>
-<details id="sec-divisibilite-4-6" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="example example-like" id="sec-divisibilite-4-6"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">3.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">Conversion d’un nombre en base dix à un nombre en hexadécimale.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="sec-divisibilite-4-6-2-1">On veut convertir <span class="process-math">\(987654321\)</span> en base hexadécimale, afin de valider l’exemple <a href="sec-representation.html#ex-decihexa" class="xref" data-knowl="./knowl/xref/ex-decihexa.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Exemple 3.1.11: Conversion entre système décimal et système hexadécimal">3.1.11</a>.</div>
+</h4>
+<div class="para" id="sec-divisibilite-4-6-2-1">On veut convertir <span class="process-math">\(987654321\)</span> en base hexadécimale, afin de valider l’exemple <a href="sec-representation.html#ex-decihexa" class="xref" data-knowl="./knowl/xref/ex-decihexa.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Exemple 3.1.11: Conversion entre système décimal et système hexadécimal">3.1.11</a>.</div>
 <div class="solutions"><details id="sec-divisibilite-4-6-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="sec-divisibilite-4-6-3-1">On utilise une table dans laquelle on note les quotients et les restes. Ceux-ci peuvent être calculés avec Sage.</div>
 <figure class="table table-like" id="sec-divisibilite-4-6-3-2"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.2.7<span class="period">.</span></span><span class="space"> </span>Conversion de 987654321 en hexadécimale avec la méthode des quotients et des restes</figcaption><div class="tabular-box natural-width"><table class="tabular">
@@ -906,7 +911,7 @@ def _(a=(-100..100),b=(1..100),b_negatif=("b négatif?",False)):
 </tr>
 </table></div></figure><div class="para" id="sec-divisibilite-4-6-3-3">Le résultat est donc bel et bien <span class="process-math">\(987654321=3ADE68B1_{16}\text{.}\)</span>
 </div>
-</div></details></div></article></details></section><section class="subsection" id="sec-divisibilite-5"><h3 class="heading hide-type">
+</div></details></div></article></section><section class="subsection" id="sec-divisibilite-5"><h3 class="heading hide-type">
 <span class="type">Sous-section</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="space"> </span><span class="title">L’algorithme d’Euclide</span>
 </h3>
 <div class="para" id="sec-divisibilite-5-2">Un concept important en théorie des nombres est celui du plus grand commun diviseur, ou pgcd. Le nom est assez évocateur de ce qu’il représente, mais voici une définition formelle.</div>
@@ -940,9 +945,10 @@ r_{t-2}&amp;=r_{t-1}q_{t}+r_t &amp; &amp;\text{avec} &amp;0&amp;\leq r_t&lt; r_{
 r_{t-1}&amp;=r_{t}q_{t+1}+r_{t+1} &amp; &amp;\text{avec} &amp;&amp;\phantom{0\leq}r_{t+1}=0\text{.}
 \end{align*}
 </div>
-</div></article><details id="sec-divisibilite-5-6" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></article><article class="example example-like" id="sec-divisibilite-5-6"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">3.2.10</span><span class="period">.</span><span class="space"> </span><span class="title">Calcul d’un <span class="process-math">\(\pgcd\)</span>.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="sec-divisibilite-5-6-2-1">
+</h4>
+<div class="para logical" id="sec-divisibilite-5-6-2-1">
 <div class="para">En utilisant l’algorithme d’Euclide, on veut calculer</div>
 <ol class="decimal" id="sec-divisibilite-5-6-2-1-1">
 <li id="sec-divisibilite-5-6-2-1-1-1"><div class="para" id="sec-divisibilite-5-6-2-1-1-1-1"><span class="process-math">\(\pgcd{(402,312)}\text{;}\)</span></div></li>
@@ -972,7 +978,7 @@ r_{t-1}&amp;=r_{t}q_{t+1}+r_{t+1} &amp; &amp;\text{avec} &amp;&amp;\phantom{0\le
 </div>
 <div class="para">Selon l’algorithme d’Euclide, <span class="process-math">\(\pgcd{(147,74)}=1\text{,}\)</span> le dernier reste non nul. Ces nombres sont donc copremiers.</div>
 </div></div></details>
-</div></article></details></section><section class="conclusion" id="concl-divisibilite"><div class="para logical" id="concl-divisibilite-1">
+</div></article></section><section class="conclusion" id="concl-divisibilite"><div class="para logical" id="concl-divisibilite-1">
 <div class="para">Les points importants de cette section sont:</div>
 <ul class="disc" id="concl-divisibilite-1-1">
 <li id="concl-divisibilite-1-1-1"><div class="para" id="concl-divisibilite-1-1-1-1">La définition de la <a href="sec-divisibilite.html#def-divisibilite" class="xref" data-knowl="./knowl/xref/def-divisibilite.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Définition 3.2.1: La divisibilité">divisibilité</a>;</div></li>

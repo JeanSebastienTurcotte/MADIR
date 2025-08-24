@@ -120,6 +120,9 @@ window.MathJax = {
 #sec-ens-3-8-3-1-1 { counter-set: sec-ens-3-8-3-1-1 0; }
 #sec-ens-3-8-3-1-1 > li::marker { content: ""counter(sec-ens-3-8-3-1-1,decimal)"."; }
 #sec-ens-3-8-3-1-1 > li { counter-increment: sec-ens-3-8-3-1-1; }
+#sec-ens-3-10-1 { counter-set: sec-ens-3-10-1 0; }
+#sec-ens-3-10-1 > li::marker { content: ""counter(sec-ens-3-10-1,decimal)"."; }
+#sec-ens-3-10-1 > li { counter-increment: sec-ens-3-10-1; }
 #sssec-opens-19-3-1-2 { counter-set: sssec-opens-19-3-1-2 0; }
 #sssec-opens-19-3-1-2 > li::marker { content: ""counter(sssec-opens-19-3-1-2,decimal)"."; }
 #sssec-opens-19-3-1-2 > li { counter-increment: sssec-opens-19-3-1-2; }
@@ -705,9 +708,10 @@ $\Box$
 <span class="type">Sous-section</span><span class="space"> </span><span class="codenumber">1.3.1</span><span class="space"> </span><span class="title">Définitions et exemples</span>
 </h3>
 <div class="para" id="sec-fonctions-3-2">Soit <span class="process-math">\(A\)</span> et <span class="process-math">\(B\)</span> deux ensembles. Une relation est un sous-ensemble  <span class="process-math">\(R\subseteq A\times B\text{.}\)</span> On dit parfois que <span class="process-math">\(R\)</span> est une relation de <span class="process-math">\(A\)</span> vers <span class="process-math">\(B\text{.}\)</span>  Deux éléments <span class="process-math">\(a\in A\)</span> et <span class="process-math">\(b\in B\)</span> sont dits en relation si <span class="process-math">\((a,b)\in R\text{.}\)</span> On écrit aussi <span class="process-math">\(a~ R~ b\)</span> ou <span class="process-math">\(a\sim b\)</span> pour dire que les éléments <span class="process-math">\(a,b\)</span> sont en relation.</div>
-<details id="ex-rel" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="example example-like" id="ex-rel"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">1.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Un exemple de relation.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="ex-rel-2-1">
+</h4>
+<div class="para logical" id="ex-rel-2-1">
 <div class="para">On considère l’ensemble <span class="process-math">\(A=B\)</span> formé des provinces canadiennes. On pose</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -721,7 +725,7 @@ R=\{(p,q)\in A\times A~|~\text{il existe une frontière terrestre entre } p \tex
 </div>
 <div class="para" id="ex-rel-3-2">Par contre, le Québec n’a pas de frontière terrestre avec l’Alberta ou la Colombie-Britannique alors <span class="process-math">\((\text{Québec},\text{Alberta}),(\text{Québec},\text{Colombie-Britannique})\notin R\text{.}\)</span>
 </div>
-</div></details></div></article></details><div class="para" id="sec-fonctions-3-4">Le type de relation le plus important et utile en mathématique est certainement la fonction. Une relation est une fonction si elle respecte des conditions additionnelles.</div>
+</div></details></div></article><div class="para" id="sec-fonctions-3-4">Le type de relation le plus important et utile en mathématique est certainement la fonction. Une relation est une fonction si elle respecte des conditions additionnelles.</div>
 <article class="definition definition-like" id="def-fonction"><h4 class="heading">
 <span class="type">Définition</span><span class="space"> </span><span class="codenumber">1.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Une fonction.</span>
 </h4>
@@ -758,9 +762,10 @@ f&amp;: &amp;A&amp;\to B\\
 </dl>
 </div></article><div class="para" id="sec-fonctions-3-6">Une fonction est une machine qui associe à chaque entrée exactement une sortie. Le processus par lequel s’effectue la transformation peut souvent être explicite, mais parfois implicite ou inconnu.</div>
 <div class="para" id="sec-fonctions-3-7">Si <span class="process-math">\(C\subseteq A\)</span> est un sous-ensemble du domaine d’une fonction <span class="process-math">\(f\)</span> et qu’on souhaite considérer la fonction restreinte sur ce sous-ensemble, on écrira <span class="process-math">\(\left. f\right|_C\)</span> (voir l’exercice <a href="sec-fonctions.html#exo-fctrest" class="xref" data-knowl="./knowl/xref/exo-fctrest.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Exercice 1.3.6.3">1.3.6.3</a>).</div>
-<details id="sec-fonctions-3-8" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="example example-like" id="sec-fonctions-3-8"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">1.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Des fonctions.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="sec-fonctions-3-8-2-1">
+</h4>
+<div class="para logical" id="sec-fonctions-3-8-2-1">
 <div class="para">On cherche parmi les relations suivantes lesquelles sont des fonctions:</div>
 <ol class="decimal" id="sec-fonctions-3-8-2-1-1">
 <li id="sec-fonctions-3-8-2-1-1-1"><div class="para" id="sec-fonctions-3-8-2-1-1-1-1">La relation définie à l’exemple <a href="sec-fonctions.html#ex-rel" class="xref" data-knowl="./knowl/xref/ex-rel.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Exemple 1.3.1: Un exemple de relation">1.3.1</a>.</div></li>
@@ -792,10 +797,11 @@ f&amp;: &amp;A&amp;\to B\\
 </div></li>
 <li id="sec-fonctions-3-8-3-1-1-8"><div class="para" id="sec-fonctions-3-8-3-1-1-8-1">Cette relation est une fonction, car il n’existe qu’un seul <span class="process-math">\(n^\text{ième}\)</span> nombre premier et qu’il en existe une infinité. Toutefois, contrairement aux autres fonctions ci-dessus, il n’y a pas de formule explicite pour déterminer <span class="process-math">\(f(n)\text{.}\)</span> La liste des premiers nombres premiers est <span class="process-math">\(2,3,5,7,11,13,17,19,23,\ldots\text{.}\)</span>
 </div></li>
-</ol></div></div></details></div></article></details><div class="para" id="sec-fonctions-3-9">Étant donné deux ensembles <span class="process-math">\(A\)</span> et <span class="process-math">\(B\text{,}\)</span> combien y a-t-il de fonctions différentes qui vont de <span class="process-math">\(A\)</span> vers <span class="process-math">\(B\)</span> ? Si les ensembles ont une cardinalité finie, il sera possible de les compter.</div>
-<details id="sec-fonctions-3-10" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</ol></div></div></details></div></article><div class="para" id="sec-fonctions-3-9">Étant donné deux ensembles <span class="process-math">\(A\)</span> et <span class="process-math">\(B\text{,}\)</span> combien y a-t-il de fonctions différentes qui vont de <span class="process-math">\(A\)</span> vers <span class="process-math">\(B\)</span> ? Si les ensembles ont une cardinalité finie, il sera possible de les compter.</div>
+<article class="example example-like" id="sec-fonctions-3-10"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">1.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Toutes le fonctions entre deux ensembles.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="sec-fonctions-3-10-2-1">Soit <span class="process-math">\(A=\{0,1\}\)</span> et <span class="process-math">\(B=\{0,1,2\}\text{.}\)</span> On cherche à faire la liste de toutes les fonctions possibles partant de <span class="process-math">\(A\)</span> vers <span class="process-math">\(B\text{.}\)</span>
+</h4>
+<div class="para" id="sec-fonctions-3-10-2-1">Soit <span class="process-math">\(A=\{0,1\}\)</span> et <span class="process-math">\(B=\{0,1,2\}\text{.}\)</span> On cherche à faire la liste de toutes les fonctions possibles partant de <span class="process-math">\(A\)</span> vers <span class="process-math">\(B\text{.}\)</span>
 </div> <div class="para" id="sec-fonctions-3-10-2-2">Il y aura <span class="process-math">\(9\)</span> fonctions. Avant de poursuivre, tenter de voir pourquoi.</div>
 <div class="solutions"><details id="sec-fonctions-3-10-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="sec-fonctions-3-10-3-1">On sait que chaque élément du domaine doit être envoyé sur exactement un élément du codomaine. Comme on a deux éléments dans le domaine et que pour chacun on a trois choix dans le codomaine, on devrait trouver <span class="process-math">\(3\cdot3=9\)</span> fonctions. Elles sont dans la table <a href="sec-fonctions.html#tab-fctAB" class="xref" data-knowl="./knowl/xref/tab-fctAB.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Table 1.3.5: Les fonctions de A vers B">1.3.5</a>. L’ordre n’est évidemment pas important, mais remarquer comment elles ont été listées. On est parti avec <span class="process-math">\(f(0)=0\)</span> pour ensuite faire toutes les valeurs possibles pour <span class="process-math">\(f(1)\text{.}\)</span> Ensuite, on prend la deuxième option <span class="process-math">\(f(0)=1\)</span> et on répète, pour finalement arriver avec <span class="process-math">\(f(0)=2\)</span> et ses variantes pour <span class="process-math">\(f(1)\text{.}\)</span>
@@ -852,7 +858,7 @@ f&amp;: &amp;A&amp;\to B\\
 <td class="l m b3 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
 </tr>
 </table></div></figure>
-</div></details></div></article></details></section><section class="subsection" id="sec-fonctions-4"><h3 class="heading hide-type">
+</div></details></div></article></section><section class="subsection" id="sec-fonctions-4"><h3 class="heading hide-type">
 <span class="type">Sous-section</span><span class="space"> </span><span class="codenumber">1.3.2</span><span class="space"> </span><span class="title">Représentation d’une fonction</span>
 </h3>
 <div class="para" id="sec-fonctions-4-2">Pour aider à comprendre  une fonction, il peut être pratique de la visualiser à l’aide de différents outils. Selon le domaine et/ou le codomaine, certains sont plus appropriés que d’autres. À titre d’exemple, on considère les ensembles <span class="process-math">\(A=\{0,1,2,3\}\)</span> et <span class="process-math">\(B=\{1,2,3\}\)</span> et la fonction définie comme suit: <span class="process-math">\(f(0)=1,f(1)=3,f(2)=1,f(3)=2
@@ -909,9 +915,10 @@ f&amp;: &amp;A&amp;\to B\\
 </div>
 </div></article><div class="para" id="sec-fonctions-5-4">Cette relation est bel et bien une fonction, car tous les éléments de <span class="process-math">\(A\)</span> possèdent une image et celle-ci est unique puisque les relations <span class="process-math">\(f,g\)</span> sont des fonctions. L’image de <span class="process-math">\(a\)</span> par <span class="process-math">\(g\)</span> est donc unique, tout comme l’image de <span class="process-math">\(g(a)\in B\)</span> par <span class="process-math">\(f\text{.}\)</span> La figure <a href="sec-fonctions.html#fig-compofct" class="xref" data-knowl="./knowl/xref/fig-compofct.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Figure 1.3.11">1.3.11</a> représente la composition de deux fonctions.</div>
 <figure class="figure figure-like" id="fig-compofct"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/sageplot/img-compofct.svg" role="img" class="contained" alt="Trois ensembles A,B,C sont dessinés contenant respectivement les éléments a,g de a et f de g de a. Des flèches illustrant la fonction g partent de l’ensemble A à gauche vers l’ensemble B au centre, des flèches illustrant la fonction f partent de l’ensemble B au centre vers l’ensemble C à droite et des flèches illustrant la composition f rond g partent de l’ensemble A vers l’ensemble C."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.3.11<span class="period">.</span></span><span class="space"> </span>La composition <span class="process-math">\(f\circ g\)</span></figcaption></figure><details id="ex-composagi" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.3.11<span class="period">.</span></span><span class="space"> </span>La composition <span class="process-math">\(f\circ g\)</span></figcaption></figure><article class="example example-like" id="ex-composagi"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">1.3.12</span><span class="period">.</span><span class="space"> </span><span class="title">Composition de deux fonctions.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="ex-composagi-2-1">
+</h4>
+<div class="para logical" id="ex-composagi-2-1">
 <div class="para">Soit <span class="process-math">\(A,B,C\)</span> trois ensembles et <span class="process-math">\(f,g\)</span> des fonctions telles qu’illustrés à la figure <a href="sec-fonctions.html#fig-composagi" class="xref" data-knowl="./knowl/xref/fig-composagi.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Figure 1.3.13">1.3.13</a>. On veut déterminer</div>
 <ol class="decimal" id="ex-composagi-2-1-4">
 <li id="ex-composagi-2-1-4-1"><div class="para" id="ex-composagi-2-1-4-1-1">Le domaine, le codomaine et l’image de <span class="process-math">\(f,g\)</span> et <span class="process-math">\(f\circ g\text{.}\)</span>
@@ -935,7 +942,7 @@ f&amp;: &amp;A&amp;\to B\\
 </div></li>
 <li id="ex-composagi-3-1-1-3"><div class="para" id="ex-composagi-3-1-1-3-1">La ou les préimages de <span class="process-math">\(-4\)</span> par la fonction <span class="process-math">\(f\)</span> est l’ensemble des valeurs <span class="process-math">\(x\in B=\text{dom}(f)\)</span> telles que <span class="process-math">\(f(x)=-4\text{.}\)</span> On a <span class="process-math">\(f^{-1}(-4)=\{1\}.\)</span> Pour la composition, on cherche l’ensemble des <span class="process-math">\(x\in A=\text{dom}(f\circ g)\)</span> telles que <span class="process-math">\((f\circ g)(x)=-4\text{.}\)</span> On trouve <span class="process-math">\((f\circ g)^{-1}(-4)=\{a,c\}\text{.}\)</span>
 </div></li>
-</ol></div></div></details></div></article></details></section><section class="subsection" id="sssec-injsurj"><h3 class="heading hide-type">
+</ol></div></div></details></div></article></section><section class="subsection" id="sssec-injsurj"><h3 class="heading hide-type">
 <span class="type">Sous-section</span><span class="space"> </span><span class="codenumber">1.3.4</span><span class="space"> </span><span class="title">Fonctions injectives et surjectives</span>
 </h3>
 <div class="para" id="sssec-injsurj-2">On a vu dans l’exemple <a href="sec-fonctions.html#ex-composagi" class="xref" data-knowl="./knowl/xref/ex-composagi.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Exemple 1.3.12: Composition de deux fonctions">1.3.12</a> que certaines fonctions envoient plusieurs éléments sur une même image. On a aussi vu que certaines fonctions n’atteignent pas toutes les valeurs de leur codomaine. Ce sont souvent des propriétés qu’il est souhaitable d’avoir ou du moins, elles entrainent d’heureuses conséquences.</div>
@@ -944,9 +951,10 @@ f&amp;: &amp;A&amp;\to B\\
 </h4>
 <div class="para" id="def-inj-2-1">Soit <span class="process-math">\(f:A\to B\)</span> une fonction. On dit que <span class="process-math">\(f\)</span> est injective si et seulement si les éléments de l’image ne sont atteints par <span class="process-math">\(f\)</span> que par exactement un élément du domaine.  En langage mathématique, on écrit que si <span class="process-math">\(f(a_1)=f(a_2)\text{,}\)</span> alors nécessairement <span class="process-math">\(a_1=a_2\text{.}\)</span>
 </div></article><div class="para" id="sssec-injsurj-4">Avec une fonction injective, il n’y a pas de collision dans le codomaine, c’est-à-dire deux valeurs du domaine qui sont envoyées sur le même élément. Dans ce cas, la préimage d’un élément du codomaine est soit l’ensemble vide, soit un élément unique du domaine.</div>
-<details id="ex-inj" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="example example-like" id="ex-inj"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">1.3.15</span><span class="period">.</span><span class="space"> </span><span class="title">Des fonctions injectives.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="ex-inj-2-1">
+</h4>
+<div class="para logical" id="ex-inj-2-1">
 <div class="para">On considère les fonctions suivantes et on cherche celles qui sont injectives:</div>
 <ol class="decimal" id="ex-inj-2-1-1">
 <li id="ex-inj-2-1-1-1"><div class="para" id="ex-inj-2-1-1-1-1">La fonction de <span class="process-math">\(\R\to \R\)</span> définie par <span class="process-math">\(f(x)=x^2\text{.}\)</span>
@@ -967,14 +975,15 @@ f&amp;: &amp;A&amp;\to B\\
 <div class="para" id="ex-inj-3-1-1-4-1">On essaie de décortiquer un peu la fonction. L’ensemble de puissances contient <span class="process-math">\(8\)</span> éléments. La cardinalité de ces éléments varie de <span class="process-math">\(0\)</span> pour l’ensemble vide à <span class="process-math">\(3\)</span> pour l’ensemble <span class="process-math">\(A\)</span> lui-même. On comprend maintenant pourquoi le codomaine ne pouvait être que l’ensemble <span class="process-math">\(A\text{.}\)</span> On a dû lui ajoute l’élément <span class="process-math">\(3\)</span> afin que <span class="process-math">\(f\)</span> puisse associer à chaque valeur de <span class="process-math">\(\mathscr{P}(A)\)</span> une réponse.</div>
 <div class="para" id="ex-inj-3-1-1-4-2">On peut évidemment exhiber plusieurs sous-ensembles qui ont la même cardinalité, par exemple <span class="process-math">\(\{0\},\{1\}\)</span> et <span class="process-math">\(\{2\}\)</span> ou <span class="process-math">\(\{0,1\},\{0,2\}\)</span> et <span class="process-math">\(\{1,2\}\text{.}\)</span> Cette fonction n’est donc pas injective.</div>
 </li>
-</ol></div></div></details></div></article></details><article class="definition definition-like" id="def-surj"><h4 class="heading">
+</ol></div></div></details></div></article><article class="definition definition-like" id="def-surj"><h4 class="heading">
 <span class="type">Définition</span><span class="space"> </span><span class="codenumber">1.3.16</span><span class="period">.</span><span class="space"> </span><span class="title">Fonction surjective.</span>
 </h4>
 <div class="para" id="def-surj-2">Soit <span class="process-math">\(f:A\to B\)</span> une fonction. On dit que <span class="process-math">\(f\)</span> est surjective si et seulement si tous les éléments du codomaine <span class="process-math">\(B\)</span> sont atteints par <span class="process-math">\(f\)</span> par au moins une valeur du domaine <span class="process-math">\(A\text{.}\)</span>Ceci est équivalent à dire que le codomaine de la fonction <span class="process-math">\(f\)</span> est l’image de celle-ci. En langage mathématique, on écrit que pour tout <span class="process-math">\(b\in B\text{,}\)</span> il existe au moins un <span class="process-math">\(a\in A\)</span> tel que <span class="process-math">\(f(a)=b\text{.}\)</span>
 </div></article><div class="para" id="sssec-injsurj-7">Avec une fonction surjective, personne n’est laissé de côté dans le codomaine. Chaque valeur doit être atteinte.</div>
-<details id="ex-surj" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="example example-like" id="ex-surj"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">1.3.17</span><span class="period">.</span><span class="space"> </span><span class="title">Des fonctions surjectives.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="ex-surj-2-1">
+</h4>
+<div class="para logical" id="ex-surj-2-1">
 <div class="para">On considère les fonctions suivantes et on cherche celles qui sont surjectives:</div>
 <ol class="decimal" id="ex-surj-2-1-1">
 <li id="ex-surj-2-1-1-1"><div class="para" id="ex-surj-2-1-1-1-1">La fonction de <span class="process-math">\(\R\to \R\)</span> définie par <span class="process-math">\(f(x)=x^2\text{.}\)</span>
@@ -991,7 +1000,7 @@ f&amp;: &amp;A&amp;\to B\\
 <li id="ex-surj-3-1-1-2"><div class="para" id="ex-surj-3-1-1-2-1">Cette fois, comme le codomaine est restreint aux réels positifs, il n’y a plus de nombres négatifs. Chaque nombre réel positif possède une unique racine carrée et donc, chaque élément de l’image n’est atteint que par un seul élément du domaine. C’est une fonction surjective.</div></li>
 <li id="ex-surj-3-1-1-3"><div class="para" id="ex-surj-3-1-1-3-1">Dans la définition de la fonction, on dit que chaque membre du domaine est associé à son homologue du codomaine. C’est donc une surjection (on utilise parfois ce terme plutôt que fonction surjective).</div></li>
 <li id="ex-surj-3-1-1-4"><div class="para" id="ex-surj-3-1-1-4-1">La cardinalité des éléments de <span class="process-math">\(\mathscr{P}(A)\)</span> varie de <span class="process-math">\(0\)</span> pour l’ensemble vide à <span class="process-math">\(3\)</span> pour l’ensemble <span class="process-math">\(A\)</span> lui-même, passant par <span class="process-math">\(1\)</span> et <span class="process-math">\(2\)</span> avec les sous-ensembles <span class="process-math">\(\{0\},\{1\}\)</span> et <span class="process-math">\(\{2\}\)</span> et <span class="process-math">\(\{0,1\},\{0,2\}\)</span> et <span class="process-math">\(\{1,2\}\text{.}\)</span> Cette fonction est donc surjective.</div></li>
-</ol></div></div></details></div></article></details><div class="para" id="sssec-injsurj-9">La définition de surjection dit que chaque valeur du codomaine est atteinte par au moins un élément du domaine. On peut reformuler la définition de fonction injective en parlant de codomaine aussi de la manière suivante: chaque valeur du codomaine est atteinte par au plus un élément du domaine. Que se passe-t-il lorsqu’une fonction est à la fois injective et surjective?</div>
+</ol></div></div></details></div></article><div class="para" id="sssec-injsurj-9">La définition de surjection dit que chaque valeur du codomaine est atteinte par au moins un élément du domaine. On peut reformuler la définition de fonction injective en parlant de codomaine aussi de la manière suivante: chaque valeur du codomaine est atteinte par au plus un élément du domaine. Que se passe-t-il lorsqu’une fonction est à la fois injective et surjective?</div>
 <article class="definition definition-like" id="def-bij"><h4 class="heading">
 <span class="type">Définition</span><span class="space"> </span><span class="codenumber">1.3.18</span><span class="period">.</span><span class="space"> </span><span class="title">Fonction bijective.</span>
 </h4>

@@ -132,6 +132,9 @@ sagecell.makeSagecell({
 #sec-ens-3-8-3-1-1 { counter-set: sec-ens-3-8-3-1-1 0; }
 #sec-ens-3-8-3-1-1 > li::marker { content: ""counter(sec-ens-3-8-3-1-1,decimal)"."; }
 #sec-ens-3-8-3-1-1 > li { counter-increment: sec-ens-3-8-3-1-1; }
+#sec-ens-3-10-1 { counter-set: sec-ens-3-10-1 0; }
+#sec-ens-3-10-1 > li::marker { content: ""counter(sec-ens-3-10-1,decimal)"."; }
+#sec-ens-3-10-1 > li { counter-increment: sec-ens-3-10-1; }
 #sssec-opens-19-3-1-2 { counter-set: sssec-opens-19-3-1-2 0; }
 #sssec-opens-19-3-1-2 > li::marker { content: ""counter(sssec-opens-19-3-1-2,decimal)"."; }
 #sssec-opens-19-3-1-2 > li { counter-increment: sssec-opens-19-3-1-2; }
@@ -721,9 +724,10 @@ $\Box$
 <span class="type">Définition</span><span class="space"> </span><span class="codenumber">7.4.1</span><span class="period">.</span>
 </h4>
 <div class="para" id="def-arbreForet-1-1">Un graphe <span class="process-math">\(G=(S,A)\)</span> simple est appelé une <dfn class="terminology">forêt</dfn> s’il ne contient aucun cycle.</div> <div class="para" id="def-arbreForet-1-2">Si en plus le graphe <span class="process-math">\(G\)</span> est connexe, on dira que <span class="process-math">\(G\)</span> est un <dfn class="terminology">arbre</dfn>. Pour expliciter qu’un graphe est un arbre, on notera souvent le graphe <span class="process-math">\(T=(S,A)\)</span> au lieu de <span class="process-math">\(G=(S,A)\text{.}\)</span>
-</div></article><details id="exe-arbre" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></article><article class="example example-like" id="exe-arbre"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">7.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Une forêt et deux arbres.</span>
-</h4></summary><article class="example example-like knowl__content"><span class="process-math">\(T_1\)</span><span class="process-math">\(T_2\)</span><span class="process-math">\(F\)</span><div id="exe-arbre-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">G=Graph({0:[1,2,3,4],1:[5,6,7],4:[8,9,10],6:[11,12],9:[13,14]})
+</h4>
+<span class="process-math">\(T_1\)</span><span class="process-math">\(T_2\)</span><span class="process-math">\(F\)</span><div id="exe-arbre-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">G=Graph({0:[1,2,3,4],1:[5,6,7],4:[8,9,10],6:[11,12],9:[13,14]})
 print("T1")
 G.show(layout='tree',tree_root=0, save_pos=True)
 </script></div>
@@ -734,7 +738,7 @@ G.show(layout='tree',tree_root=0, save_pos=True)
 <div id="exe-arbre-7" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">G=Graph({0:[1,2,3,4],1:[5,6,7],4:[8,9,10],6:[11,12],9:[13,14],"a":["b","c","d"],"b":["e","f","g"],"e":["h"],"f":["i","j"]})
 print("F")
 G.show(layout='forest', tree_root="a",save_pos=True)
-</script></div></article></details><article class="proposition theorem-like" id="prop-caractArbre"><h4 class="heading">
+</script></div></article><article class="proposition theorem-like" id="prop-caractArbre"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">7.4.3</span><span class="period">.</span>
 </h4>
 <div class="para" id="prop-caractArbre-1-1">Un graphe <span class="process-math">\(T=(S,A)\)</span> est un arbre si et seulement si pour chaque paire de sommets <span class="process-math">\(s, t\in S\text{,}\)</span> il existe une unique chaîne reliant <span class="process-math">\(s\)</span> et <span class="process-math">\(t\text{.}\)</span>
@@ -793,9 +797,10 @@ G.show(layout='forest', tree_root="a",save_pos=True)
 </div></article><details id="lem-arbreCouvrant-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Démonstration<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="lem-arbreCouvrant-2-1">Soit <span class="process-math">\(s, t\in S\text{,}\)</span> puisque <span class="process-math">\(G\)</span> est connexe, on sait qu’il y a une chaîne simple reliant <span class="process-math">\(s\)</span> et <span class="process-math">\(t\text{.}\)</span> Si cette chaîne ne passe pas par <span class="process-math">\(\{s_0, s_{n-1}\}\text{,}\)</span> alors cette chaîne est aussi une chaîne de <span class="process-math">\(G_0\text{.}\)</span> Si cette chaîne passe par <span class="process-math">\(s_0, s_{n-1}\text{,}\)</span> alors on peut écrire cette chaîne de la façon suivante.</div>
 <div class="para" id="lem-arbreCouvrant-2-2">On a <span class="process-math">\(s= t_0, t_1, \dots, t_{i-1}, t_{i}, t_{i+1}, t_{i+2}, \dots, t_{m}=t  \text{,}\)</span> avec <span class="process-math">\(t_{i}=s_0\)</span> et <span class="process-math">\(t_{i+1}=s_{n-1}\text{.}\)</span> Mais alors on sait qu’il y a une chaîne de <span class="process-math">\(G_0\)</span> entre <span class="process-math">\(t_0=s\)</span> et <span class="process-math">\(t_{i}\text{,}\)</span> qu’il y a une chaîne de <span class="process-math">\(G_0\)</span> entre <span class="process-math">\(t_i=s_0\)</span> et <span class="process-math">\(t_{i+1}=s_{n-1}\)</span> et qu’il y a une chaîne de <span class="process-math">\(G_0\)</span> entre <span class="process-math">\(t_{i+1}\)</span> et <span class="process-math">\(t_{m}=t\text{.}\)</span> Ainsi, par l’exercice <a href="sec-chaineEuler.html#exo-addChaine" class="xref" data-knowl="./knowl/xref/exo-addChaine.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Exercice 7.3.5.2">7.3.5.2</a>, il y a une chaîne entre <span class="process-math">\(s\)</span> et <span class="process-math">\(t\)</span> dans <span class="process-math">\(G_0\text{.}\)</span>
 </div>
-<div class="para" id="lem-arbreCouvrant-2-3">On a montré qu’il existe une chaîne de <span class="process-math">\(G_0\)</span> entre chaque paire de sommets, c’est-à-dire que <span class="process-math">\(G_0\)</span> est connexe.</div></article></details><details id="exe-arbreCouvrantLemme" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<div class="para" id="lem-arbreCouvrant-2-3">On a montré qu’il existe une chaîne de <span class="process-math">\(G_0\)</span> entre chaque paire de sommets, c’est-à-dire que <span class="process-math">\(G_0\)</span> est connexe.</div></article></details><article class="example example-like" id="exe-arbreCouvrantLemme"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">7.4.9</span><span class="period">.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="exe-arbreCouvrantLemme-1">On montre un cas particulier du lemme précédent pour bien visualiser. Soit <span class="process-math">\(G\)</span> le graphe ci-dessous, et <span class="process-math">\(G_1\)</span> le graphe obtenu de <span class="process-math">\(G\)</span> en enlevant l’arête <span class="process-math">\(\{1, 2\}\)</span> de <span class="process-math">\(G\text{.}\)</span> On remarque que la chaîne <span class="process-math">\(0, 1, 2, 3\)</span> est une chaîne de <span class="process-math">\(G\)</span> reliant <span class="process-math">\(0\)</span> avec <span class="process-math">\(3\text{.}\)</span> Puisque <span class="process-math">\(G_1\)</span> ne possède pas l’arête <span class="process-math">\(\{1,2\}\text{,}\)</span> cette chaîne n’est pas une chaîne de <span class="process-math">\(G_1\text{.}\)</span> Cependant, puisque <span class="process-math">\(\{1,2\}\)</span> fait parti d’un cycle dans <span class="process-math">\(G\text{,}\)</span> on remarque que la chaîne <span class="process-math">\(0,1,4,5,6,7,2,3\)</span> et une chaîne de <span class="process-math">\(G_1\)</span> reliant <span class="process-math">\(0\)</span> et <span class="process-math">\(3\text{.}\)</span>
+</h4>
+<div class="para" id="exe-arbreCouvrantLemme-1">On montre un cas particulier du lemme précédent pour bien visualiser. Soit <span class="process-math">\(G\)</span> le graphe ci-dessous, et <span class="process-math">\(G_1\)</span> le graphe obtenu de <span class="process-math">\(G\)</span> en enlevant l’arête <span class="process-math">\(\{1, 2\}\)</span> de <span class="process-math">\(G\text{.}\)</span> On remarque que la chaîne <span class="process-math">\(0, 1, 2, 3\)</span> est une chaîne de <span class="process-math">\(G\)</span> reliant <span class="process-math">\(0\)</span> avec <span class="process-math">\(3\text{.}\)</span> Puisque <span class="process-math">\(G_1\)</span> ne possède pas l’arête <span class="process-math">\(\{1,2\}\text{,}\)</span> cette chaîne n’est pas une chaîne de <span class="process-math">\(G_1\text{.}\)</span> Cependant, puisque <span class="process-math">\(\{1,2\}\)</span> fait parti d’un cycle dans <span class="process-math">\(G\text{,}\)</span> on remarque que la chaîne <span class="process-math">\(0,1,4,5,6,7,2,3\)</span> et une chaîne de <span class="process-math">\(G_1\)</span> reliant <span class="process-math">\(0\)</span> et <span class="process-math">\(3\text{.}\)</span>
 </div>
 <div id="exe-arbreCouvrantLemme-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">G=Graph({0:[1],1:[2,4],2:[3,7],4:[5],5:[6],6:[7]})
 print("G")
@@ -804,7 +809,7 @@ G.delete_edge((1,2))
 print()
 print("G1")
 G.show()
-</script></div></article></details><article class="proposition theorem-like" id="prop-arbreCouvrant"><h4 class="heading">
+</script></div></article><article class="proposition theorem-like" id="prop-arbreCouvrant"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">7.4.10</span><span class="period">.</span>
 </h4>
 <div class="para" id="prop-arbreCouvrant-1-1">Soit <span class="process-math">\(G=(S,A)\)</span> un graphe simple connexe, alors <span class="process-math">\(G\)</span> possède un arbre couvrant <span class="process-math">\(T\text{.}\)</span>

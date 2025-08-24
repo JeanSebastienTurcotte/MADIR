@@ -120,6 +120,9 @@ window.MathJax = {
 #sec-ens-3-8-3-1-1 { counter-set: sec-ens-3-8-3-1-1 0; }
 #sec-ens-3-8-3-1-1 > li::marker { content: ""counter(sec-ens-3-8-3-1-1,decimal)"."; }
 #sec-ens-3-8-3-1-1 > li { counter-increment: sec-ens-3-8-3-1-1; }
+#sec-ens-3-10-1 { counter-set: sec-ens-3-10-1 0; }
+#sec-ens-3-10-1 > li::marker { content: ""counter(sec-ens-3-10-1,decimal)"."; }
+#sec-ens-3-10-1 > li { counter-increment: sec-ens-3-10-1; }
 #sssec-opens-19-3-1-2 { counter-set: sssec-opens-19-3-1-2 0; }
 #sssec-opens-19-3-1-2 > li::marker { content: ""counter(sssec-opens-19-3-1-2,decimal)"."; }
 #sssec-opens-19-3-1-2 > li { counter-increment: sssec-opens-19-3-1-2; }
@@ -708,9 +711,10 @@ $\Box$
 <span class="type">Sous-section</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="space"> </span><span class="title">Prédicats</span>
 </h3>
 <div class="para" id="sssec-predicats-2">Un énoncé qui contient une ou des variables est appelé un prédicat. Ce n’est pas une proposition, car la valeur de vérité dépendra de la valeur des variables. On spécifie normalement un ensemble univers <span class="process-math">\(\Omega\)</span> qui consiste aux diverses possibilités que peuvent prendre les variables. Pour des valeurs spécifiques des variables, le prédicat devient une proposition.</div>
-<details id="sssec-predicats-3" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="example example-like" id="sssec-predicats-3"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Des prédicats.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="sssec-predicats-3-2-1">
+</h4>
+<div class="para logical" id="sssec-predicats-3-2-1">
 <div class="para">On considère l’ensemble des nombres réels comme ensemble univers et les prédicats suivants:</div>
 <ol class="decimal" id="sssec-predicats-3-2-1-1">
 <li id="sssec-predicats-3-2-1-1-1"><div class="para" id="sssec-predicats-3-2-1-1-1-1"><span class="process-math">\(P_1(x): x&gt;4\text{;}\)</span></div></li>
@@ -723,7 +727,7 @@ $\Box$
 <li id="sssec-predicats-3-3-1-1-1"><div class="para" id="sssec-predicats-3-3-1-1-1-1">Lorsque <span class="process-math">\(x=1\text{,}\)</span> la proposition <span class="process-math">\(P_1(1)\)</span> est <span class="process-math">\(1&gt;4\text{,}\)</span> qui est fausse.</div></li>
 <li id="sssec-predicats-3-3-1-1-2"><div class="para" id="sssec-predicats-3-3-1-1-2-1">La proposition <span class="process-math">\(P_2(1,3)\)</span> est <span class="process-math">\(1\leq 3\text{,}\)</span> qui est vraie.</div></li>
 <li id="sssec-predicats-3-3-1-1-3"><div class="para" id="sssec-predicats-3-3-1-1-3-1">Puisque <span class="process-math">\(1+3=4\text{,}\)</span> la proposition <span class="process-math">\(P_3(1,3)\)</span> est fausse.</div></li>
-</ol></div></div></details></div></article></details><div class="para logical" id="sssec-predicats-4">
+</ol></div></div></details></div></article><div class="para logical" id="sssec-predicats-4">
 <div class="para">L’ensemble de toutes les valeurs de <span class="process-math">\(\Omega\)</span> qui rendent un prédicat <span class="process-math">\(P\)</span> vrai est appelé l’ensemble de vérité de <span class="process-math">\(P\text{.}\)</span> On le note</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -731,9 +735,10 @@ V(P)=\{x\in \Omega~|~ P(x) \text{ est vrai}\}\text{.}
 \end{equation*}
 </div>
 </div>
-<details id="sssec-predicats-5" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="example example-like" id="sssec-predicats-5"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Des ensembles de vérité.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="sssec-predicats-5-2-1">
+</h4>
+<div class="para logical" id="sssec-predicats-5-2-1">
 <div class="para">On considère le prédicat “<span class="process-math">\(l\)</span> est une voyelle”. On cherche les ensembles de vérité de ce prédicat lorsque l’ensemble univers est</div>
 <ol class="decimal" id="sssec-predicats-5-2-1-2">
 <li id="sssec-predicats-5-2-1-2-1"><div class="para" id="sssec-predicats-5-2-1-2-1-1">
@@ -747,7 +752,7 @@ V(P)=\{x\in \Omega~|~ P(x) \text{ est vrai}\}\text{.}
 </div></li>
 <li id="sssec-predicats-5-3-1-1-2"><div class="para" id="sssec-predicats-5-3-1-1-2-1">Parmi les lettres qui composent “Jean-Sébastien”, on retrouve les voyelles <span class="process-math">\(\{a,e,i\}\text{.}\)</span>
 </div></li>
-</ol></div></div></details></div></article></details></section><section class="subsection" id="sssec-quantificateurs"><h3 class="heading hide-type">
+</ol></div></div></details></div></article></section><section class="subsection" id="sssec-quantificateurs"><h3 class="heading hide-type">
 <span class="type">Sous-section</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="space"> </span><span class="title">Quantificateurs existentiel et universel</span>
 </h3>
 <div class="para" id="sssec-quantificateurs-2">On peut donc transformer un prédicat en proposition en assignant aux variables certaines valeurs. On peut aussi ajouter un quantificateur à un prédicat. Un quantificateur est un mot du genre “certains, quelques, toutes, \etc” qui vient parler, d’une manière plus ou moins précise, de combien de valeurs de la variable on s’intéresse. Ainsi si on dit, “pour certaines valeurs de <span class="process-math">\(x\in \R\)</span> on a <span class="process-math">\(x&gt;4\)</span>”,on obtient une proposition. Dans ce cas-ci, elle est vraie, mais si on avait dit “pour toutes les valeurs de <span class="process-math">\(x\in \R\text{,}\)</span> on a <span class="process-math">\(x&gt;4\)</span>”, on aurait obtenu une proposition fausse.</div>
@@ -756,9 +761,10 @@ V(P)=\{x\in \Omega~|~ P(x) \text{ est vrai}\}\text{.}
 <span class="type">Définition</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Quantificateur existentiel.</span>
 </h4>
 <div class="para" id="def-existe-2-1">Soit <span class="process-math">\(P(x)\)</span> un prédicat et <span class="process-math">\(\Omega\)</span> l’ensemble univers de la variable <span class="process-math">\(x\text{.}\)</span> Une proposition existentielle est un énoncé de la forme “il existe <span class="process-math">\(x\in \Omega\)</span> tel que <span class="process-math">\(P(x)\)</span> est vrai”. D’un point de vue symbolique, on la dénote <span class="process-math">\(\exists x\in \Omega \, P(x)\)</span> (le symbole <span class="process-math">\(\exists\)</span> se lit “il existe”). La proposition est vraie s’il existe au moins une valeur dans <span class="process-math">\(\Omega\)</span> qui rende <span class="process-math">\(P(x)\)</span> vrai et est fausse si toutes les valeurs de <span class="process-math">\(\Omega\)</span> font que <span class="process-math">\(P(x)\)</span> est faux.</div> <div class="para" id="def-existe-2-2">Au lieu de “il existe”, on dit parfois aussi “pour un certain”,“on peut trouver”,“pour au moins”, etc.</div></article><div class="para" id="sssec-quantificateurs-5">Avec une proposition contenant un quantificateur existentiel, on obtient la valeur de vérité “vraie” dès qu’ (au moins) une valeur de <span class="process-math">\(\Omega\)</span> rende le prédicat vrai. Pour que la proposition soit fausse, il faut toutefois vérifier que le prédicat est faux pour toutes les valeurs dans <span class="process-math">\(\Omega\text{,}\)</span> ou du moins argumenter cela.</div>
-<details id="sssec-quantificateurs-6" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="example example-like" id="sssec-quantificateurs-6"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">2.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Des propositions avec quantificateur existentiel.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="sssec-quantificateurs-6-2-1">
+</h4>
+<div class="para logical" id="sssec-quantificateurs-6-2-1">
 <div class="para">On considère les propositions suivantes:</div>
 <ol class="decimal" id="sssec-quantificateurs-6-2-1-1">
 <li id="sssec-quantificateurs-6-2-1-1-1"><div class="para" id="sssec-quantificateurs-6-2-1-1-1-1"><span class="process-math">\(\displaystyle \exists n\in \N\, n^2=n+2  \)</span></div></li>
@@ -774,14 +780,15 @@ V(P)=\{x\in \Omega~|~ P(x) \text{ est vrai}\}\text{.}
 <li id="sssec-quantificateurs-6-3-1-1-2"><div class="para" id="sssec-quantificateurs-6-3-1-1-2-1">Puisque Jean-Sébastien ne contient aucune des lettres u,v,w,x,y et z, la proposition est fausse.</div></li>
 <li id="sssec-quantificateurs-6-3-1-1-3"><div class="para" id="sssec-quantificateurs-6-3-1-1-3-1">Il y a en fait deux types de mammifères qui pondent des oeufs. L’ornithorynque est probablement l’exemple le plus connu, mais il y a aussi  les échidnés.</div></li>
 <li id="sssec-quantificateurs-6-3-1-1-4"><div class="para" id="sssec-quantificateurs-6-3-1-1-4-1">Ceci constitue un bon exemple de l’existence d’une valeur, sans toutefois pouvoir la déterminer. Comme la croissance d’une personne est un processus continu et qu’un humain nait normalement entre 46 et 56 cm (le record étant de 71!), il existe bel et bien un moment où l’auteur mesurait 100 cm. Bien malin toutefois celui qui pourra dire quand cela s’est produit.</div></li>
-</ol></div></div></details></div></article></details><div class="para" id="sssec-quantificateurs-7">Alors que le quantificateur existentiel souhaite l’existence d’une valeur rendant le prédicat vrai, le quantificateur universel lui veut que le prédicat soit vrai pour toutes les valeurs de l’univers considéré.</div>
+</ol></div></div></details></div></article><div class="para" id="sssec-quantificateurs-7">Alors que le quantificateur existentiel souhaite l’existence d’une valeur rendant le prédicat vrai, le quantificateur universel lui veut que le prédicat soit vrai pour toutes les valeurs de l’univers considéré.</div>
 <article class="definition definition-like" id="def-pourtout"><h4 class="heading">
 <span class="type">Définition</span><span class="space"> </span><span class="codenumber">2.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Quantificateur universel.</span>
 </h4>
 <div class="para" id="def-pourtout-2-1">Soit <span class="process-math">\(P(x)\)</span> un prédicat et <span class="process-math">\(\Omega\)</span> l’ensemble univers de la variable <span class="process-math">\(x\text{.}\)</span> Une proposition universelle est un énoncé de la forme “pour tout <span class="process-math">\(x\in \Omega\)</span> on a que <span class="process-math">\(P(x)\)</span> est vrai”. D’un point de vue symbolique, on la dénote <span class="process-math">\(\forall x\in\Omega \, P(x)\)</span> (le symbole <span class="process-math">\(\forall\)</span> se lit “pour tout”). La proposition est vraie si chaque valeur de <span class="process-math">\(x\)</span> dans <span class="process-math">\(\Omega\)</span> rend <span class="process-math">\(P(x)\)</span> vrai et est fausse dès qu’une valeur de <span class="process-math">\(x\)</span> font que <span class="process-math">\(P(x)\)</span> est faux.</div> <div class="para" id="def-pourtout-2-2">Au lieu de “pour tout”, on dit parfois aussi “pour chaque”,“pour n’importe quel”,etc.</div></article><div class="para" id="sssec-quantificateurs-9">Avec une proposition contenant un quantificateur universel, il faut vérifier (ou argumenter pour) toutes les valeurs de <span class="process-math">\(\Omega\)</span> pour que la proposition soit vraie. Pour qu’elle soit fausse, il suffit d’exhiber une valeur de <span class="process-math">\(x\)</span> pour laquelle <span class="process-math">\(P(x)\)</span> est faux.</div>
-<details id="sssec-quantificateurs-10" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="example example-like" id="sssec-quantificateurs-10"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">2.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Des propositions avec quantificateur universel.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="sssec-quantificateurs-10-2-1">
+</h4>
+<div class="para logical" id="sssec-quantificateurs-10-2-1">
 <div class="para">On considère les propositions suivantes:</div>
 <ol class="decimal" id="sssec-quantificateurs-10-2-1-1">
 <li id="sssec-quantificateurs-10-2-1-1-1"><div class="para" id="sssec-quantificateurs-10-2-1-1-1-1"><span class="process-math">\(\displaystyle \forall n\in \N\, n^2=n+2  \)</span></div></li>
@@ -797,7 +804,7 @@ V(P)=\{x\in \Omega~|~ P(x) \text{ est vrai}\}\text{.}
 <li id="sssec-quantificateurs-10-3-1-1-2"><div class="para" id="sssec-quantificateurs-10-3-1-1-2-1">Le prénom de l’auteur étant Jean-Sébastien, on vérifie aisément que les lettres a,b,s,t en font toutes partie.</div></li>
 <li id="sssec-quantificateurs-10-3-1-1-3"><div class="para" id="sssec-quantificateurs-10-3-1-1-3-1">La proposition est fausse, les autruches étant un exemple d’oiseaux ne pouvant pas voler.</div></li>
 <li id="sssec-quantificateurs-10-3-1-1-4"><div class="para" id="sssec-quantificateurs-10-3-1-1-4-1">La proposition est vraie, la parité d’un nombre créant une dichotomie des nombres naturels. On aura les outils nécessaires pour formaliser ceci prochainement.</div></li>
-</ol></div></div></details></div></article></details><div class="para logical" id="sssec-quantificateurs-11">
+</ol></div></div></details></div></article><div class="para logical" id="sssec-quantificateurs-11">
 <div class="para">Une proposition universelle est souvent présentée à l’aide d’une implication. On retrouve donc fréquemment, pour des prédicats <span class="process-math">\(P\)</span> et <span class="process-math">\(Q\text{,}\)</span> la forme</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -860,9 +867,10 @@ V(P)=\{x\in \Omega~|~ P(x) \text{ est vrai}\}\text{.}
 </div>
 </div>
 <div class="para" id="sec-propquant-5-5">On répète ici qu’après analyse, cela ne devrait pas trop surprendre. S’il n’y a pas un objet avec une propriété, alors tous les objets n’ont pas la propriété. De même, si ce n’est pas tous les objets qui ont une propriété, alors il existe (au moins) un objet qui n’a pas la propriété. Le symbolisme en apparence complexe ne doit pas distraire du caractère simple de la chose.</div>
-<details id="sec-propquant-5-6" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="example example-like" id="sec-propquant-5-6"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">2.3.7</span><span class="period">.</span><span class="space"> </span><span class="title">Négation de propositions quantifiées.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="sec-propquant-5-6-2-1">
+</h4>
+<div class="para logical" id="sec-propquant-5-6-2-1">
 <div class="para">On considère les propositions suivantes:</div>
 <ol class="decimal" id="sec-propquant-5-6-2-1-1">
 <li id="sec-propquant-5-6-2-1-1-1"><div class="para" id="sec-propquant-5-6-2-1-1-1-1"><span class="process-math">\(\displaystyle \forall n\in \N\, n^2=n+2  \)</span></div></li>
@@ -887,7 +895,7 @@ V(P)=\{x\in \Omega~|~ P(x) \text{ est vrai}\}\text{.}
 </div></li>
 <li id="sec-propquant-5-6-3-1-3"><div class="para" id="sec-propquant-5-6-3-1-3-1">Cette proposition est équivalente à <span class="process-math">\(\forall n\in\N\, n\text{ est pair ou impair}\text{.}\)</span> Sa négation devient donc une proposition avec un quantificateur existentiel qui a la forme <span class="process-math">\(\exists n\in \N \, n\text{ est n'est pas pair et } n\text{ n'est pas impair}\text{.}\)</span> On aurait aussi pu écrire plus simplement le prédicat comme <span class="process-math">\(n\)</span> est ni pair ni impair. Le “et” fait toutefois ressortir la loi de De Morgann dans la négation du “ou”.</div></li>
 <li id="sec-propquant-5-6-3-1-4"><div class="para" id="sec-propquant-5-6-3-1-4-1">Pour nier cette proposition, on pourrait dire qu’à tout moment de sa vie, l’auteur n’a jamais mesuré <span class="process-math">\(100\)</span> cm.</div></li>
-</ol></div></details></div></article></details><div class="para logical" id="sec-propquant-5-7">
+</ol></div></details></div></article><div class="para logical" id="sec-propquant-5-7">
 <div class="para">Il est également possible d’utiliser plus d’un quantificateur avec un prédicat. La forme symbolique mathématique prend alors toute son importance. Par exemple, on imagine la proposition suivante “il existe un gardien pour tous les animaux du zoo”. Qu’est-ce que cela signifie? Est-ce</div>
 <ul class="disc" id="sec-propquant-5-7-2">
 <li id="sec-propquant-5-7-2-1"><div class="para" id="sec-propquant-5-7-2-1-1">il y a un seul gardien qui s’occupe de tous les animaux du zoo;</div></li>
@@ -912,9 +920,10 @@ V(P)=\{x\in \Omega~|~ P(x) \text{ est vrai}\}\text{.}
 <div class="para" id="sec-propquant-5-9">Pour cet exemple particulier, ce n’est pas trop grave si on interprète incorrectement la phrase “il existe un gardien pour tous les animaux du zoo”. Par contre en informatique, dans un contexte de programmation, il est primordial de bien interpréter ce qui est demandé afin que l’ordinateur puisse appliquer ce que l’utilisateur veut.</div>
 <div class="para" id="sec-propquant-5-10">On imagine un prédicat en deux variables <span class="process-math">\(P(x,y)\text{.}\)</span> La proposition <span class="process-math">\(\forall x\,\exists y P(x,y)\)</span> peut s’interpréter de la manière suivante. On imagine quelqu’un qui choisit un <span class="process-math">\(x\text{.}\)</span> Il faut ensuite trouver un <span class="process-math">\(y\)</span> tel que <span class="process-math">\(P(x,y)\)</span> est vrai. Le choix de <span class="process-math">\(y\)</span> risque de dépendre du <span class="process-math">\(x\)</span> qui est choisi.</div>
 <div class="para" id="sec-propquant-5-11">Par contre dans la proposition <span class="process-math">\(\exists x\,\forall y P(x,y)\text{,}\)</span> c’est le <span class="process-math">\(x\text{,}\)</span> s’il existe, qui dépendra des <span class="process-math">\(y\text{.}\)</span> On doit trouver un <span class="process-math">\(x\)</span> qui fonctionnera peu importe le <span class="process-math">\(y\)</span> que quelqu’un choisirait</div>
-<details id="sec-propquant-5-12" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="example example-like" id="sec-propquant-5-12"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">2.3.8</span><span class="period">.</span><span class="space"> </span><span class="title">Des quantificateurs juxtaposés.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="sec-propquant-5-12-2-1">
+</h4>
+<div class="para logical" id="sec-propquant-5-12-2-1">
 <div class="para">On considère la grille ci-dessous ainsi que les propositions suivantes:</div>
 <ol class="decimal" id="sec-propquant-5-12-2-1-1">
 <li id="sec-propquant-5-12-2-1-1-1"><div class="para" id="sec-propquant-5-12-2-1-1-1-1">Il existe un triangle <span class="process-math">\(t\)</span> tel que pour tout cercle <span class="process-math">\(c\text{,}\)</span> <span class="process-math">\(t\)</span> est à la droite de <span class="process-math">\(c\text{.}\)</span>
@@ -928,7 +937,7 @@ V(P)=\{x\in \Omega~|~ P(x) \text{ est vrai}\}\text{.}
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.3.9<span class="period">.</span></span><span class="space"> </span>Une grille avec des figures</figcaption></figure> <div class="para" id="sec-propquant-5-12-2-3">On cherche la valeur de vérité de ces propositions.</div>
 <div class="solutions">
 <details id="sec-propquant-5-12-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="sec-propquant-5-12-3-1">Pour cette proposition, il suffit de trouver un triangle pour lequel tout cercle, le triangle sera à la droite du cercle. En regardant la figure <a href="sec-propquant.html#fig-Tarski1" class="xref" data-knowl="./knowl/xref/fig-Tarski1.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Figure 2.3.9">2.3.9</a>, on constate que les triangles <span class="process-math">\(d\)</span> et <span class="process-math">\(i\)</span> satisfont cette propriété. En effet, les trois cercles <span class="process-math">\(a,b,c\)</span> sont tous à la gauche de ces triangles. On peut donc dire que <span class="process-math">\(d\)</span> et <span class="process-math">\(i\)</span> sont à la droite de tous les cercles. Ainsi, la proposition est vraie.</div></div></details><details id="sec-propquant-5-12-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="sec-propquant-5-12-4-1">Pour cette proposition, on cherche un cercle et un triangle de la même couleur. Aucun triangle n’est bleu, ce qui élimine les triangles <span class="process-math">\(a,c\text{.}\)</span> Par contre, le cercle <span class="process-math">\(b\)</span> et le triangle <span class="process-math">\(f\)</span> (ou <span class="process-math">\(i\)</span>) sont rouges. La proposition est donc vraie.</div></div></details><details id="sec-propquant-5-12-5" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="sec-propquant-5-12-5-1">Cette fois-ci, il n’est pas suffisant de trouver deux formes de la même couleur. Il faut s’assurer que pour chaque triangle, il existe un carré ayant la même couleur. On identifie trois triangles, soit <span class="process-math">\(d,f\)</span> et <span class="process-math">\(i\text{.}\)</span> Le triangle <span class="process-math">\(d\)</span> est vert. On vérifie sur la figure <a href="sec-propquant.html#fig-Tarski1" class="xref" data-knowl="./knowl/xref/fig-Tarski1.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Figure 2.3.9">2.3.9</a> que le carré <span class="process-math">\(e\)</span> est aussi vert. Le triangle <span class="process-math">\(f\)</span> est rouge, tout comme le triangle <span class="process-math">\(i\text{.}\)</span> Dans les deux cas, le carré <span class="process-math">\(g\)</span> ou le carré <span class="process-math">\(h\)</span> sont aussi rouges. La propriété est donc vraie.</div></div></details><details id="sec-propquant-5-12-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="sec-propquant-5-12-6-1">On doit vérifier la condition pour chaque triangle. Pour le triangle <span class="process-math">\(d\text{,}\)</span> il est vrai de dire que tous les carrés sont sur une ligne inférieure, comme on peut le voir sur la figure <a href="sec-propquant.html#fig-Tarski1" class="xref" data-knowl="./knowl/xref/fig-Tarski1.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Figure 2.3.9">2.3.9</a>. Par contre il y a des carrés sur la même ligne que le triangle <span class="process-math">\(f\)</span> (les carrés <span class="process-math">\(e,g\)</span>) et des carrés sur des lignes supérieures au triangle <span class="process-math">\(i\)</span>(toujours les carrés <span class="process-math">\(e,g\)</span>). Pour ces raisons, la proposition est fausse.</div></div></details>
-</div></article></details><div class="para" id="sec-propquant-5-13">Comment se comportent les propositions formées de plus d’un quantificateur lorsqu’on considère leur négation? À l’aide des règles établies plus haut et en procédant en étape, on peut arriver à trouver la négation d’une telle proposition. On donne deux exemples de propositions formées de deux quantificateurs. D’autres se trouvent dans les exercices.</div>
+</div></article><div class="para" id="sec-propquant-5-13">Comment se comportent les propositions formées de plus d’un quantificateur lorsqu’on considère leur négation? À l’aide des règles établies plus haut et en procédant en étape, on peut arriver à trouver la négation d’une telle proposition. On donne deux exemples de propositions formées de deux quantificateurs. D’autres se trouvent dans les exercices.</div>
 <div class="para logical" id="sec-propquant-5-14">
 <div class="para">Dans un premier temps, on considère la proposition</div>
 <div class="displaymath process-math">

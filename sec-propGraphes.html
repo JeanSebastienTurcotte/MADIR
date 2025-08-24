@@ -132,6 +132,9 @@ sagecell.makeSagecell({
 #sec-ens-3-8-3-1-1 { counter-set: sec-ens-3-8-3-1-1 0; }
 #sec-ens-3-8-3-1-1 > li::marker { content: ""counter(sec-ens-3-8-3-1-1,decimal)"."; }
 #sec-ens-3-8-3-1-1 > li { counter-increment: sec-ens-3-8-3-1-1; }
+#sec-ens-3-10-1 { counter-set: sec-ens-3-10-1 0; }
+#sec-ens-3-10-1 > li::marker { content: ""counter(sec-ens-3-10-1,decimal)"."; }
+#sec-ens-3-10-1 > li { counter-increment: sec-ens-3-10-1; }
 #sssec-opens-19-3-1-2 { counter-set: sssec-opens-19-3-1-2 0; }
 #sssec-opens-19-3-1-2 > li::marker { content: ""counter(sssec-opens-19-3-1-2,decimal)"."; }
 #sssec-opens-19-3-1-2 > li { counter-increment: sssec-opens-19-3-1-2; }
@@ -732,9 +735,10 @@ $\Box$
 </h4>
 <div class="para" id="def-listAdj-1-1">Soit <span class="process-math">\(G=(S,A)\)</span> un graphe simple. On représente celui-ci à l’aide d’un tableau dont la première colonne représente les sommets du graphe, et la deuxième colonne représente les voisins du sommet.</div></article>
 </div>
-<details id="subs-representationGraphe-4" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="example example-like" id="subs-representationGraphe-4"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">7.2.3</span><span class="period">.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="subs-representationGraphe-4-1-1">Soit <span class="process-math">\(G_1\)</span> et <span class="process-math">\(G_2\)</span> les graphes de la figure <a href="sec-propGraphes.html#fig-exeGraphNeq" class="xref" data-knowl="./knowl/xref/fig-exeGraphNeq.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Figure 7.2.1">7.2.1</a>, donner leur liste d’adjacence.</div>
+</h4>
+<div class="para" id="subs-representationGraphe-4-1-1">Soit <span class="process-math">\(G_1\)</span> et <span class="process-math">\(G_2\)</span> les graphes de la figure <a href="sec-propGraphes.html#fig-exeGraphNeq" class="xref" data-knowl="./knowl/xref/fig-exeGraphNeq.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Figure 7.2.1">7.2.1</a>, donner leur liste d’adjacence.</div>
 <div class="solutions"><details id="subs-representationGraphe-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Réponse</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
 <div class="para" id="subs-representationGraphe-4-2-1"><figure class="table table-like" id="subs-representationGraphe-4-2-1-1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">7.2.4<span class="period">.</span></span><span class="space"> </span>Liste d’adjacence de <span class="process-math">\(G_1\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
@@ -784,7 +788,7 @@ $\Box$
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(2, 3\)</span></td>
 </tr>
 </table></div></figure></div>
-</div></details></div></article></details><div class="para" id="subs-representationGraphe-5">Cette représentation peut nous aider à détecter certaines propriétés en commun de nos graphes. En particulier, lorsque le nombre de sommets augmente, la liste d’adjacence est souvent plus pratique que le dessin pour bien comprendre nos graphes. Aussi, on peut se servir d’une liste d’adjacence pour définir un graphe dans sage.</div>
+</div></details></div></article><div class="para" id="subs-representationGraphe-5">Cette représentation peut nous aider à détecter certaines propriétés en commun de nos graphes. En particulier, lorsque le nombre de sommets augmente, la liste d’adjacence est souvent plus pratique que le dessin pour bien comprendre nos graphes. Aussi, on peut se servir d’une liste d’adjacence pour définir un graphe dans sage.</div>
 <div class="para" id="subs-representationGraphe-6"><div id="subs-representationGraphe-6-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">#Définition de G_1 dans sage à l'aide de la liste d'adjacence.
 d1={"a": ["b","c"], "b": ["a","c"], "c": ["a","b","d"], "d": ["c"]} # La liste d'adjacence de G_1
 g1 = Graph(d1)  #Définition de G_1
@@ -810,9 +814,10 @@ a_{m,1} &amp; a_{m,2}&amp;\dots  &amp; a_{m,n}
 \end{pmatrix}
 \end{equation*}
 </div>
-</div></article><details id="subs-representationGraphe-9" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></article><article class="example example-like" id="subs-representationGraphe-9"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">7.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">Quelques matrices.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="subs-representationGraphe-9-2">
+</h4>
+<div class="para logical" id="subs-representationGraphe-9-2">
 <div class="para">La matrice</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -852,11 +857,12 @@ C=\bigl(c_{i,j}\bigr)=\begin{pmatrix}
 </div>
 <div class="para">est une matrice <span class="process-math">\(3\times 3\)</span> avec <span class="process-math">\(c_{1,1}=1\text{,}\)</span><span class="process-math">\(c_{2,2}=2\)</span> et <span class="process-math">\(c_{3,1}=7\text{.}\)</span> Puisque le nombre de lignes et de colonnes est <span class="process-math">\(3\text{,}\)</span> on dit que <span class="process-math">\(C\)</span> est une matrice carrée d’ordre <span class="process-math">\(3\text{.}\)</span>
 </div>
-</div></article></details><div class="para" id="subs-representationGraphe-10">On peut également définir une matrice <span class="process-math">\(A\)</span> à l’aide d’une règle pour les <span class="process-math">\(a_{i,j}\)</span> en termes de <span class="process-math">\(i\)</span> et <span class="process-math">\(j\text{.}\)</span>
+</div></article><div class="para" id="subs-representationGraphe-10">On peut également définir une matrice <span class="process-math">\(A\)</span> à l’aide d’une règle pour les <span class="process-math">\(a_{i,j}\)</span> en termes de <span class="process-math">\(i\)</span> et <span class="process-math">\(j\text{.}\)</span>
 </div>
-<details id="exe-defAij" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="example example-like" id="exe-defAij"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">7.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Une autre façon de définir une matrice.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="exe-defAij-2">
+</h4>
+<div class="para logical" id="exe-defAij-2">
 <div class="para">Si <span class="process-math">\(A=\bigl(a_{i,j}\bigr)\)</span> est une matrice <span class="process-math">\(3\times 3\)</span> avec</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -891,7 +897,7 @@ B=\begin{pmatrix}
 \end{pmatrix}.
 \end{equation*}
 </div>
-</div></article></details><div class="para" id="subs-representationGraphe-12">On peut maintenant définir la matrice d’adjacence d’un graphe. Il est important de noter que la définition d’une matrice d’adjacence n’est pas unique pour chaque graphe. En effet, la définition dépendra de l’ordre dans lequel on considère les sommets du graphe.</div>
+</div></article><div class="para" id="subs-representationGraphe-12">On peut maintenant définir la matrice d’adjacence d’un graphe. Il est important de noter que la définition d’une matrice d’adjacence n’est pas unique pour chaque graphe. En effet, la définition dépendra de l’ordre dans lequel on considère les sommets du graphe.</div>
 <article class="definition definition-like" id="def-matriceAdjc"><h4 class="heading">
 <span class="type">Définition</span><span class="space"> </span><span class="codenumber">7.2.9</span><span class="period">.</span>
 </h4>
@@ -903,9 +909,10 @@ m_{i,j}=\begin{cases} 1 &amp; \text{si } \{s_i,s_j\}\in A \\ 0 &amp; \text{sinon
 \end{equation*}
 </div>
 </div></article><div class="para" id="subs-representationGraphe-14">Étand donné un graphe, on veut être en mesure de trouver sa matrice d’adjacence. Inversement, étant donnée une matrice d’adjacence, peut-on déterminer un graphe correspondant.</div>
-<details id="exe-matriceAdjc" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="example example-like" id="exe-matriceAdjc"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">7.2.10</span><span class="period">.</span><span class="space"> </span><span class="title">Matrice d’adjacence.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="exe-matriceAdjc-2">On considère le graphe <span class="process-math">\(G=(S,A)\)</span> ci-dessous: <figure class="figure figure-like" id="fig-tikzit_exeMatAdjG"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/tikzit_exeMatAdjG.svg" role="img" class="contained"></div>
+</h4>
+<div class="para" id="exe-matriceAdjc-2">On considère le graphe <span class="process-math">\(G=(S,A)\)</span> ci-dessous: <figure class="figure figure-like" id="fig-tikzit_exeMatAdjG"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/tikzit_exeMatAdjG.svg" role="img" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.2.11<span class="period">.</span></span><span class="space"> </span>Le graphe <span class="process-math">\(G\)</span></figcaption></figure> Déterminer la matrice d’adjacence de <span class="process-math">\(G\text{.}\)</span>
 </div>
 <details id="exe-matriceAdjc-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Réponse</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="exe-matriceAdjc-3-1">
@@ -921,9 +928,10 @@ M_G=\begin{pmatrix}
 \end{pmatrix}
 \end{equation*}
 </div>
-</div></div></details></article></details><details id="exe-graphAPartirMatrice" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></div></details></article><article class="example example-like" id="exe-graphAPartirMatrice"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">7.2.12</span><span class="period">.</span><span class="space"> </span><span class="title">Graphe à partir d’une matrice d’adjacence.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="exe-graphAPartirMatrice-2">
+</h4>
+<div class="para logical" id="exe-graphAPartirMatrice-2">
 <div class="para">Soit <span class="process-math">\(M_H\)</span> la matrice</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -944,7 +952,7 @@ M_H=\begin{pmatrix}
 <div class="para" id="exe-graphAPartirMatrice-3-1">Il y a plusieurs choix possibles pour <span class="process-math">\(H\text{.}\)</span>
 </div></article><details id="exe-graphAPartirMatrice-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Réponse</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="exe-graphAPartirMatrice-4-1">Une réponse possible est le graphe <span class="process-math">\(H\)</span> ci-dessous. <figure class="figure figure-like" id="fig-tikzit_exeMatAdjH"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/tikzit_exeMatAdjH.svg" role="img" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.2.14<span class="period">.</span></span><span class="space"> </span>Le graphe <span class="process-math">\(H\)</span></figcaption></figure>
-</div></div></details></article></details><div class="para" id="subs-representationGraphe-17">On peut utiliser Sage afin de tracer un graphe à partir d’une matrice d’adjacence. Voici le graphe de l’exemple <a href="sec-propGraphes.html#exe-graphAPartirMatrice" class="xref" data-knowl="./knowl/xref/exe-graphAPartirMatrice.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Exemple 7.2.12: Graphe à partir d’une matrice d’adjacence">7.2.12</a> obtenu à partir d’une matrice d’adjacence. <div id="subs-representationGraphe-17-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">Mat=matrix([[0,1,1,0,1],[1,0,1,1,0],[1,1,0,0,0],[0,1,0,0,1],[1,0,0,1,0]]) #Définition de la matrice d'adjacence
+</div></div></details></article><div class="para" id="subs-representationGraphe-17">On peut utiliser Sage afin de tracer un graphe à partir d’une matrice d’adjacence. Voici le graphe de l’exemple <a href="sec-propGraphes.html#exe-graphAPartirMatrice" class="xref" data-knowl="./knowl/xref/exe-graphAPartirMatrice.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Exemple 7.2.12: Graphe à partir d’une matrice d’adjacence">7.2.12</a> obtenu à partir d’une matrice d’adjacence. <div id="subs-representationGraphe-17-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">Mat=matrix([[0,1,1,0,1],[1,0,1,1,0],[1,1,0,0,0],[0,1,0,0,1],[1,0,0,1,0]]) #Définition de la matrice d'adjacence
 show(Mat)
 g=Graph(Mat) #Définition du graphe
 show(g)
@@ -984,9 +992,10 @@ show(g)
 <li id="prop-isoGraphe-1-2-5"><div class="para" id="p-derived-prop-isoGraphe-1-2-5">Il existe une coloration à <span class="process-math">\(n\)</span> couleurs de <span class="process-math">\(G_1\)</span> si et seulement si il existe une coloration à <span class="process-math">\(n\)</span> couleurs de <span class="process-math">\(G_2\text{.}\)</span> En particulier <span class="process-math">\(\chi(G_1)=\chi(G_2)\text{.}\)</span>
 </div></li>
 </ol></article><div class="para" id="subs-isoGraphe-6">La proposition <a href="sec-propGraphes.html#prop-isoGraphe" class="xref" data-knowl="./knowl/xref/prop-isoGraphe.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Proposition 7.2.16">7.2.16</a> est surtout utile pour montrer que deux graphes ne sont pas isomorphes. En effet, si deux graphes sont tels que toutes les conclusions de la proposition précédente sont satisfaites, cela ne garantit par que les graphes seront isomorphes (ce n’est pas un si et seulement si). Cependant, si l’une de ces conclusions ne pas satisfaites, on sait que les graphes ne sont pas isomorphes!</div>
-<details id="exe-nonIso" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="example example-like" id="exe-nonIso"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">7.2.17</span><span class="period">.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="exe-nonIso-1-1">On peut montrer que les deux graphes ci-dessous ne sont pas isomorphes, car il existe une coloration à deux couleurs pour le graphe <span class="process-math">\(G,\)</span> mais il faut au moins trois couleurs pour une coloration de <span class="process-math">\(H\text{.}\)</span>
+</h4>
+<div class="para" id="exe-nonIso-1-1">On peut montrer que les deux graphes ci-dessous ne sont pas isomorphes, car il existe une coloration à deux couleurs pour le graphe <span class="process-math">\(G,\)</span> mais il faut au moins trois couleurs pour une coloration de <span class="process-math">\(H\text{.}\)</span>
 </div> <figure class="figure figure-like" id="exe-nonIso-1-2"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <div class="sbspanel top" style="width:50%;"><figure class="figure figure-like" id="exe-nonIso-1-2-2-1"><img src="external/tikzit_Graphesdiff2.jpg" class="contained"><figcaption><span class="codenumber">(a)</span><span class="space"> </span><span class="process-math">\(G\)</span></figcaption></figure></div>
 <div class="sbspanel top" style="width:50%;"><figure class="figure figure-like" id="exe-nonIso-1-2-2-2"><img src="external/tikzit_Graphesdiff1.jpg" class="contained"><figcaption><span class="codenumber">(b)</span><span class="space"> </span><span class="process-math">\(h\)</span></figcaption></figure></div>
@@ -995,10 +1004,11 @@ show(g)
 <div class="sbspanel top" style="width:50%;"><figure class="figure figure-like" id="exe-nonIso-1-4-2-1"><img src="external/tikzit_Graphesdiff2Coul.jpg" class="contained"><figcaption><span class="codenumber">(a)</span><span class="space"> </span><span class="process-math">\(G\)</span></figcaption></figure></div>
 <div class="sbspanel top" style="width:50%;"><figure class="figure figure-like" id="exe-nonIso-1-4-2-2"><img src="external/tikzit_GraphesdiffCoul.jpg" class="contained"><figcaption><span class="codenumber">(b)</span><span class="space"> </span><span class="process-math">\(H\)</span></figcaption></figure></div>
 </div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.2.19<span class="period">.</span></span><span class="space"> </span>Coloration pour différencier des graphes</figcaption></figure></article></details><div class="para" id="subs-isoGraphe-8">Voici un exemple de deux graphes qui sont isomorphes.</div>
-<details id="exe-ouiIso" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.2.19<span class="period">.</span></span><span class="space"> </span>Coloration pour différencier des graphes</figcaption></figure></article><div class="para" id="subs-isoGraphe-8">Voici un exemple de deux graphes qui sont isomorphes.</div>
+<article class="example example-like" id="exe-ouiIso"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">7.2.20</span><span class="period">.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="exe-ouiIso-1-1">Les deux graphes ci-dessous sont isomorphes.</div> <figure class="figure figure-like" id="exe-ouiIso-1-2"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+</h4>
+<div class="para" id="exe-ouiIso-1-1">Les deux graphes ci-dessous sont isomorphes.</div> <figure class="figure figure-like" id="exe-ouiIso-1-2"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <div class="sbspanel top" style="width:50%;"><figure class="figure figure-like" id="exe-ouiIso-1-2-2-1"><img src="external/tikzit_GrapheSame.jpg" class="contained"><figcaption><span class="codenumber">(a)</span><span class="space"> </span><span class="process-math">\(G\)</span></figcaption></figure></div>
 <div class="sbspanel top" style="width:50%;"><figure class="figure figure-like" id="exe-ouiIso-1-2-2-2"><img src="external/tikzit_GrapheSame2.jpg" class="contained"><figcaption><span class="codenumber">(b)</span><span class="space"> </span><span class="process-math">\(H\)</span></figcaption></figure></div>
 </div></div>
@@ -1042,10 +1052,11 @@ M_H=\begin{pmatrix}
 </div>
 <div class="para">Puisque les deux matrices sont les mêmes, on à bien que <span class="process-math">\(G\cong H\text{.}\)</span>
 </div>
-</div></article></details><div class="para" id="subs-isoGraphe-10">Une autre paire de graphes qui sont isomorphes</div>
-<details id="exe-ouiIso2" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></article><div class="para" id="subs-isoGraphe-10">Une autre paire de graphes qui sont isomorphes</div>
+<article class="example example-like" id="exe-ouiIso2"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">7.2.22</span><span class="period">.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="exe-ouiIso2-1-1">Les deux graphes ci-dessous sont isomorphes.</div> <figure class="figure figure-like" id="exe-ouiIso2-1-2"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+</h4>
+<div class="para" id="exe-ouiIso2-1-1">Les deux graphes ci-dessous sont isomorphes.</div> <figure class="figure figure-like" id="exe-ouiIso2-1-2"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <div class="sbspanel top" style="width:50%;"><figure class="figure figure-like" id="exe-ouiIso2-1-2-2-1"><img src="external/tikzit_GrapheIsoSimpleOui1.jpg" class="contained"><figcaption><span class="codenumber">(a)</span><span class="space"> </span><span class="process-math">\(G\)</span></figcaption></figure></div>
 <div class="sbspanel top" style="width:50%;"><figure class="figure figure-like" id="exe-ouiIso2-1-2-2-2"><img src="external/tikzit_GrapheIsoSimpleOui2.jpg" class="contained"><figcaption><span class="codenumber">(b)</span><span class="space"> </span><span class="process-math">\(H\)</span></figcaption></figure></div>
 </div></div>
@@ -1090,7 +1101,7 @@ M_H=\begin{pmatrix}
 </div>
 <div class="para">Puisque <span class="process-math">\(M_G=M_H\text{,}\)</span> on a que <span class="process-math">\(G\cong H\text{.}\)</span>
 </div>
-</div></article></details></section><section class="exercises" id="exo-propGraphe"><h3 class="heading hide-type">
+</div></article></section><section class="exercises" id="exo-propGraphe"><h3 class="heading hide-type">
 <span class="type">Exercices</span><span class="space"> </span><span class="codenumber">7.2.3</span><span class="space"> </span><span class="title">Exercices</span>
 </h3>
 <article class="subexercises" id="exo-propGraphe-2"><h4 class="heading"><span class="title">À faire en classe</span></h4>

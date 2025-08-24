@@ -120,6 +120,9 @@ window.MathJax = {
 #sec-ens-3-8-3-1-1 { counter-set: sec-ens-3-8-3-1-1 0; }
 #sec-ens-3-8-3-1-1 > li::marker { content: ""counter(sec-ens-3-8-3-1-1,decimal)"."; }
 #sec-ens-3-8-3-1-1 > li { counter-increment: sec-ens-3-8-3-1-1; }
+#sec-ens-3-10-1 { counter-set: sec-ens-3-10-1 0; }
+#sec-ens-3-10-1 > li::marker { content: ""counter(sec-ens-3-10-1,decimal)"."; }
+#sec-ens-3-10-1 > li { counter-increment: sec-ens-3-10-1; }
 #sssec-opens-19-3-1-2 { counter-set: sssec-opens-19-3-1-2 0; }
 #sssec-opens-19-3-1-2 > li::marker { content: ""counter(sssec-opens-19-3-1-2,decimal)"."; }
 #sssec-opens-19-3-1-2 > li { counter-increment: sssec-opens-19-3-1-2; }
@@ -725,9 +728,9 @@ $\Box$
 <span class="type">Sous-section</span><span class="space"> </span><span class="codenumber">5.2.2</span><span class="space"> </span><span class="title">Exemples de preuves par récurrence</span>
 </h3>
 <div class="para" id="subs-exemples-2">Regardons maintenant quelques exemples pour illustrer la méthode, en commençant par la formule de la somme des entiers positifs.</div>
-<details id="exe-sommeEntiers" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<article class="example example-like" id="exe-sommeEntiers"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">5.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">La somme des <span class="process-math">\(n\)</span> premiers entiers positifs.</span>
-</h4></summary><article class="example example-like knowl__content">Montrer par récurrence que, pour <span class="process-math">\(n\in\,\N^\ast,\)</span> on a <span class="process-math">\(1+2+\cdots + n = \frac{n(n+1)}{2}.\)</span><div class="solutions"><details id="exe-sommeEntiers-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+</h4>Montrer par récurrence que, pour <span class="process-math">\(n\in\,\N^\ast,\)</span> on a <span class="process-math">\(1+2+\cdots + n = \frac{n(n+1)}{2}.\)</span><div class="solutions"><details id="exe-sommeEntiers-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="exe-sommeEntiers-3-1">On pose <span class="process-math">\(P(n):\, 1+ 2 + \cdots + n = \frac{n(n+1)}{2}.\)</span>
 </div>
 <div class="para" id="exe-sommeEntiers-3-2">
@@ -753,9 +756,9 @@ $\Box$
 </div>
 <div class="para" id="exe-sommeEntiers-3-5">Ainsi, puisqu’on a montré que la proposition est vraie pour <span class="process-math">\(n=1\text{,}\)</span> et qu’on a montré que si elle est vraie pour <span class="process-math">\(n=k\text{,}\)</span> alors elle est également vraie pour <span class="process-math">\(n=k+1\text{,}\)</span> on a montré que la proposition est vraie pour tout <span class="process-math">\(n\geq 1\text{.}\)</span>
 </div>
-</div></details></div></article></details><details id="exe-divisibilite" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></details></div></article><article class="example example-like" id="exe-divisibilite"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">5.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Une preuve de divisibilité.</span>
-</h4></summary><article class="example example-like knowl__content">Montrer par récurrence que <span class="process-math">\(n^3-n\)</span> est divisible par <span class="process-math">\(3\)</span> pour tout entier naturel <span class="process-math">\(n\in \N\text{.}\)</span><div class="solutions"><details id="exe-divisibilite-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+</h4>Montrer par récurrence que <span class="process-math">\(n^3-n\)</span> est divisible par <span class="process-math">\(3\)</span> pour tout entier naturel <span class="process-math">\(n\in \N\text{.}\)</span><div class="solutions"><details id="exe-divisibilite-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="exe-divisibilite-3-1">
 <em class="alert">Étape de base:</em> On montre que la proposition est vraie pour <span class="process-math">\(n=0\text{.}\)</span> Pour <span class="process-math">\(n=0\text{,}\)</span> on a <span class="process-math">\(n^3-n=0^3-0=0.\)</span> Puisque <span class="process-math">\(3\mid 0\text{,}\)</span> la proposition est bien vraie en <span class="process-math">\(n=0\text{.}\)</span>
 </div>
@@ -776,9 +779,9 @@ $\Box$
 </div>
 <div class="para" id="exe-divisibilite-3-4">Puisque la proposition est vraie pour <span class="process-math">\(n=0\text{,}\)</span> et que si la proposition est vraie pour <span class="process-math">\(n=k\text{,}\)</span> elle est aussi vraie pour <span class="process-math">\(n=k+1,\)</span> alors la proposition est vraie pour tout <span class="process-math">\(n\in\, \N\text{.}\)</span>
 </div>
-</div></details></div></article></details><details id="exe-inegalite1" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></details></div></article><article class="example example-like" id="exe-inegalite1"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">5.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Démonstration d’une inégalité.</span>
-</h4></summary><article class="example example-like knowl__content">Montrer par récurrence que pour tout entier naturel <span class="process-math">\(n\in \N\text{,}\)</span> on a que <span class="process-math">\(n\lt 2^n\text{.}\)</span><div class="solutions"><details id="exe-inegalite1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+</h4>Montrer par récurrence que pour tout entier naturel <span class="process-math">\(n\in \N\text{,}\)</span> on a que <span class="process-math">\(n\lt 2^n\text{.}\)</span><div class="solutions"><details id="exe-inegalite1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="exe-inegalite1-3-1">
 <em class="alert">Étape de base:</em> On veut montrer que la proposition est vraie pour <span class="process-math">\(n=0.\)</span> En <span class="process-math">\(n=0,\)</span> la proposition devient <span class="process-math">\(0\lt 2^0=1,\)</span> ce qui est vrai.</div>
 <div class="para" id="exe-inegalite1-3-2">
@@ -799,19 +802,21 @@ k+1 \amp \lt 2^k +1 \amp\text{, par H.I.}\\
 </div>
 <div class="para" id="exe-inegalite1-3-4">Puisque la proposition est vraie pour <span class="process-math">\(n=0\text{,}\)</span> et que si la proposition est vraie pour <span class="process-math">\(n=k\text{,}\)</span> elle est aussi vraie pour <span class="process-math">\(n=k+1,\)</span> alors la proposition est vraie pour tout <span class="process-math">\(n\in\, \N\text{.}\)</span>
 </div>
-</div></details></div></article></details><div class="para" id="subs-exemples-6">Lorsqu’on utilise une preuve par récurrence, il faut s’assurer que l’argument utilisé pour l’étape d’induction fonctionne pour <em class="emphasis">toutes les valeurs</em> de <span class="process-math">\(k\text{.}\)</span> Voici un exemple d’une mauvaise utilisation d’une preuve par récurrence pour “montrer” une proposition qui est fausse.</div>
-<details id="exe-faussePreuve" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></details></div></article><div class="para" id="subs-exemples-6">Lorsqu’on utilise une preuve par récurrence, il faut s’assurer que l’argument utilisé pour l’étape d’induction fonctionne pour <em class="emphasis">toutes les valeurs</em> de <span class="process-math">\(k\text{.}\)</span> Voici un exemple d’une mauvaise utilisation d’une preuve par récurrence pour “montrer” une proposition qui est fausse.</div>
+<article class="example example-like" id="exe-faussePreuve"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">5.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">Erreur commune d’une “preuve” par récurrence.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="exe-faussePreuve-2-1">Trouver l’erreur dans le raisonnement suivant permettant de “montrer” que pour tout ensemble de <span class="process-math">\(n\geq 2\)</span> droites dans le plan,  si aucune n’est parallèle à une autre, alors il existe un point commun à toutes ces droites:</div> <div class="para" id="exe-faussePreuve-2-2">
+</h4>
+<div class="para" id="exe-faussePreuve-2-1">Trouver l’erreur dans le raisonnement suivant permettant de “montrer” que pour tout ensemble de <span class="process-math">\(n\geq 2\)</span> droites dans le plan,  si aucune n’est parallèle à une autre, alors il existe un point commun à toutes ces droites:</div> <div class="para" id="exe-faussePreuve-2-2">
 <em class="alert">Étape de base :</em> On doit montrer que la proposition est vraie pour <span class="process-math">\(n=2.\)</span> Or, si on a deux droites qui ne sont pas parallèles dans le plan, elles ont nécessairement un point en commun.</div> <div class="para" id="exe-faussePreuve-2-3">
 <em class="alert">Étape d’induction :</em> On suppose que la proposition est vraie pour <span class="process-math">\(n=k\text{,}\)</span> et on veut montrer qu’elle est vraie pour <span class="process-math">\(n=k+1,\)</span> pour <span class="process-math">\(k\)</span> un entier tel que <span class="process-math">\(k\geq 2\text{.}\)</span>
 </div> <div class="para" id="exe-faussePreuve-2-4">On considère un ensemble de <span class="process-math">\(k+1\)</span> droites dans le plan qui sont deux à deux non-parallèles. Si on regarde les <span class="process-math">\(k\)</span> premières droites, alors par l’H.I., il existe un point <span class="process-math">\(p_1\)</span> qui est en commun aux <span class="process-math">\(k\)</span> premières droites.</div> <div class="para" id="exe-faussePreuve-2-5">Par le même argument, il existe un point <span class="process-math">\(p_2\)</span> qui est en commun au <span class="process-math">\(k\)</span> dernières droites. On veut montrer que <span class="process-math">\(p_1=p_2\text{.}\)</span>
 </div> <div class="para" id="exe-faussePreuve-2-6">Supposons que ces points soient distincts. Alors toutes les <span class="process-math">\(k-1\)</span> droites contenant ces deux points seront les mêmes droites (car il y a une seule droite passant par deux points dans le plan). Ceci est une contradiction, car ces droites sont distinctes. On doit donc avoir <span class="process-math">\(p_1=p_2\text{,}\)</span> et donc toutes les <span class="process-math">\(k+1\)</span> droites possèdent un point en commun.</div>
 <div class="solutions"><details id="exe-faussePreuve-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <span class="process-math">\(p_1=p_2\)</span><span class="process-math">\(k=2.\)</span><span class="process-math">\(k=2,\)</span><span class="process-math">\(k+1=3,\)</span><span class="process-math">\(p_1\)</span><span class="process-math">\(p_2\)</span><span class="process-math">\(p_1\)</span><span class="process-math">\(p_2,\)</span>
-</div></details></div></article></details><details id="exe-faussePreuve2" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></details></div></article><article class="example example-like" id="exe-faussePreuve2"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">5.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">Une autre “preuve” par récurrence.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="exe-faussePreuve2-2-1">Trouver l’erreur dans le raisonnement suivant permettant de “montrer” que  toutes les voitures sont de la même couleur:</div> <div class="para" id="exe-faussePreuve2-2-2">On considère <span class="process-math">\(E_n=\{v_1, v_2, \dots, v_n\}\)</span> un ensemble de <span class="process-math">\(n\)</span> voitures <span class="process-math">\(v_i\text{.}\)</span> On pose  <span class="process-math">\(P(n)\)</span>  la proposition: Toutes les voitures de l’ensemble <span class="process-math">\(E_n\)</span> sont de la même couleur.</div> <div class="para" id="exe-faussePreuve2-2-3">
+</h4>
+<div class="para" id="exe-faussePreuve2-2-1">Trouver l’erreur dans le raisonnement suivant permettant de “montrer” que  toutes les voitures sont de la même couleur:</div> <div class="para" id="exe-faussePreuve2-2-2">On considère <span class="process-math">\(E_n=\{v_1, v_2, \dots, v_n\}\)</span> un ensemble de <span class="process-math">\(n\)</span> voitures <span class="process-math">\(v_i\text{.}\)</span> On pose  <span class="process-math">\(P(n)\)</span>  la proposition: Toutes les voitures de l’ensemble <span class="process-math">\(E_n\)</span> sont de la même couleur.</div> <div class="para" id="exe-faussePreuve2-2-3">
 <em class="alert">Étape de base :</em> On doit montrer que la proposition est vraie pour <span class="process-math">\(n=1\text{.}\)</span> Or, si <span class="process-math">\(n=1\text{,}\)</span> <span class="process-math">\(E_1=\{v_1\}\text{,}\)</span> et on a bien que toutes les voitures sont de la même couleur (celle de <span class="process-math">\(v_1\)</span>).</div> <div class="para" id="exe-faussePreuve2-2-4">
 <em class="alert">Étape d’induction :</em> On suppose que la proposition est vraie pour tous les ensembles de <span class="process-math">\(n=k\)</span> voitures, et on veut montrer qu’elle est vraie pour tous les ensembles de <span class="process-math">\(n=k+1\)</span> voitures, pour <span class="process-math">\(k\)</span> un entier tel que <span class="process-math">\(k\geq 1\text{.}\)</span>
 </div> <div class="para logical" id="exe-faussePreuve2-2-5">
@@ -830,9 +835,9 @@ E_{k+1}=\{v_1, v_2, \dots, v_{k}\}\cup \{v_2, \dots, v_{k},v_{k+1}\}.
 </div>
 <div class="para" id="exe-faussePreuve2-3-2">On a encore <span class="process-math">\(E_2=\{v_1\}\cup \{v_2\}\text{,}\)</span> mais il n’y a pas d’élément en commun dans ces deux ensembles (car <span class="process-math">\(v_2\notin \{v_1\}\)</span>). L’argument ne fonctionne donc pas à cet étape! La proposition n’est donc pas vraie pour <span class="process-math">\(n\gt 1\text{.}\)</span>
 </div>
-</div></details></div></article></details><details id="exe-sommeEntierImp" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></details></div></article><article class="example example-like" id="exe-sommeEntierImp"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">5.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">La somme des entiers positifs impairs.</span>
-</h4></summary><article class="example example-like knowl__content">Montrer par récurrence que, pour <span class="process-math">\(n\in\,\N,\)</span> la somme des <span class="process-math">\(n\)</span> premiers entiers positifs impairs est <span class="process-math">\(n^2\)</span><div class="solutions"><details id="exe-sommeEntierImp-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+</h4>Montrer par récurrence que, pour <span class="process-math">\(n\in\,\N,\)</span> la somme des <span class="process-math">\(n\)</span> premiers entiers positifs impairs est <span class="process-math">\(n^2\)</span><div class="solutions"><details id="exe-sommeEntierImp-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="exe-sommeEntierImp-3-1">Tout d’abord, on remarque qu’on peut écrire le <span class="process-math">\(n\)</span>-ième entier positif impair comme <span class="process-math">\(2n-1\text{.}\)</span> Ainsi, on peut écrire la proposition comme <span class="process-math">\(P(n):\ 1+3+\cdots + (2n-1) = n^2\text{.}\)</span>
 </div>
 <div class="para" id="exe-sommeEntierImp-3-2">
@@ -852,9 +857,10 @@ E_{k+1}=\{v_1, v_2, \dots, v_{k}\}\cup \{v_2, \dots, v_{k},v_{k+1}\}.
 </div>
 <div class="para" id="exe-sommeEntierImp-3-5">Puisque la proposition est vraie pour <span class="process-math">\(n=1\text{,}\)</span> et que si la proposition est vraie pour <span class="process-math">\(n=k\text{,}\)</span> elle est aussi vraie pour <span class="process-math">\(n=k+1,\)</span> alors la proposition est vraie pour tout <span class="process-math">\(n\in\, \N^\ast\text{.}\)</span>
 </div>
-</div></details></div></article></details><details id="subs-exemples-10" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></details></div></article><article class="example example-like" id="subs-exemples-10"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">5.2.9</span><span class="period">.</span><span class="space"> </span><span class="title">Une autre preuve de divisibilité.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="subs-exemples-10-2-1">Montrer par récurrence que pour <span class="process-math">\(n\)</span> un entier naturel, alors <span class="process-math">\(7^{n+2}+8^{2n+1}\)</span> est divisible par <span class="process-math">\(57\text{.}\)</span>
+</h4>
+<div class="para" id="subs-exemples-10-2-1">Montrer par récurrence que pour <span class="process-math">\(n\)</span> un entier naturel, alors <span class="process-math">\(7^{n+2}+8^{2n+1}\)</span> est divisible par <span class="process-math">\(57\text{.}\)</span>
 </div>
 <div class="solutions"><details id="subs-exemples-10-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="subs-exemples-10-3-1">
@@ -879,7 +885,7 @@ E_{k+1}=\{v_1, v_2, \dots, v_{k}\}\cup \{v_2, \dots, v_{k},v_{k+1}\}.
 </div>
 <div class="para" id="subs-exemples-10-3-4">Puisque la proposition est vraie pour <span class="process-math">\(n=0\text{,}\)</span> et que si la proposition est vraie pour <span class="process-math">\(n=k\text{,}\)</span> elle est aussi vraie pour <span class="process-math">\(n=k+1,\)</span> alors la proposition est vraie pour tout <span class="process-math">\(n\in\, \N\text{.}\)</span>
 </div>
-</div></details></div></article></details></section><section class="conclusion" id="concl-induction"><div class="para logical" id="concl-induction-1">
+</div></details></div></article></section><section class="conclusion" id="concl-induction"><div class="para logical" id="concl-induction-1">
 <div class="para">Les points importants de cette section sont:</div>
 <ul class="disc" id="concl-induction-1-1">
 <li id="concl-induction-1-1-1"><div class="para" id="concl-induction-1-1-1-1">

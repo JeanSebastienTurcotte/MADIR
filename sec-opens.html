@@ -120,6 +120,9 @@ window.MathJax = {
 #sec-ens-3-8-3-1-1 { counter-set: sec-ens-3-8-3-1-1 0; }
 #sec-ens-3-8-3-1-1 > li::marker { content: ""counter(sec-ens-3-8-3-1-1,decimal)"."; }
 #sec-ens-3-8-3-1-1 > li { counter-increment: sec-ens-3-8-3-1-1; }
+#sec-ens-3-10-1 { counter-set: sec-ens-3-10-1 0; }
+#sec-ens-3-10-1 > li::marker { content: ""counter(sec-ens-3-10-1,decimal)"."; }
+#sec-ens-3-10-1 > li { counter-increment: sec-ens-3-10-1; }
 #sssec-opens-19-3-1-2 { counter-set: sssec-opens-19-3-1-2 0; }
 #sssec-opens-19-3-1-2 > li::marker { content: ""counter(sssec-opens-19-3-1-2,decimal)"."; }
 #sssec-opens-19-3-1-2 > li { counter-increment: sssec-opens-19-3-1-2; }
@@ -719,10 +722,11 @@ $\Box$
 A\cup B=\{c~|~ c\in A \text{ ou } c\in B\}\text{.}
 \end{equation*}
 </div>
-</div> <div class="para" id="def-union-2-2">Le mot « ou » n’a pas la même signification ici que dans la langue usuelle. On parle d’un « ou » inclusif. L’opération qui crée un ensemble dont les éléments sont dans <span class="process-math">\(A\)</span> ou dans <span class="process-math">\(B\text{,}\)</span> mais pas les deux est appelée la différence symétrique (voir exercice <a href="sec-opens.html#exo-diffsym" class="xref" data-knowl="./knowl/xref/exo-diffsym.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Exercice 1.2.4.5">1.2.4.5</a>). C’est l’équivalent d’un « ou » exclusif.</div></article><details id="sssec-opens-4" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div> <div class="para" id="def-union-2-2">Le mot « ou » n’a pas la même signification ici que dans la langue usuelle. On parle d’un « ou » inclusif. L’opération qui crée un ensemble dont les éléments sont dans <span class="process-math">\(A\)</span> ou dans <span class="process-math">\(B\text{,}\)</span> mais pas les deux est appelée la différence symétrique (voir exercice <a href="sec-opens.html#exo-diffsym" class="xref" data-knowl="./knowl/xref/exo-diffsym.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Exercice 1.2.4.5">1.2.4.5</a>). C’est l’équivalent d’un « ou » exclusif.</div></article><article class="example example-like" id="sssec-opens-4"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">L’union de deux ensembles.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="sssec-opens-4-2-1">Soit <span class="process-math">\(A=\{a,b,c,d\}\)</span> et <span class="process-math">\(B=\{1,2,c,d,e\}\)</span> deux ensembles. On cherche à écrire <span class="process-math">\(A\cup B\)</span> en extension.</div>
-<div class="solutions"><details id="sssec-opens-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="sssec-opens-4-3-1">L’union est <span class="process-math">\(A\cup B=\{a,b,c,d,e,1,2\}\text{.}\)</span> À remarquer qu’on ne met qu’une fois les éléments, comme le veut la définition d’un ensemble.</div></div></details></div></article></details><div class="para" id="sssec-opens-5">La deuxième opération est celle qui, à partir de deux ensembles,  crée un nouvel ensemble dont les éléments sont simultanément dans <span class="process-math">\(A\)</span> et <span class="process-math">\(B\text{.}\)</span> On l’appelle l’intersection.</div>
+</h4>
+<div class="para" id="sssec-opens-4-2-1">Soit <span class="process-math">\(A=\{a,b,c,d\}\)</span> et <span class="process-math">\(B=\{1,2,c,d,e\}\)</span> deux ensembles. On cherche à écrire <span class="process-math">\(A\cup B\)</span> en extension.</div>
+<div class="solutions"><details id="sssec-opens-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="sssec-opens-4-3-1">L’union est <span class="process-math">\(A\cup B=\{a,b,c,d,e,1,2\}\text{.}\)</span> À remarquer qu’on ne met qu’une fois les éléments, comme le veut la définition d’un ensemble.</div></div></details></div></article><div class="para" id="sssec-opens-5">La deuxième opération est celle qui, à partir de deux ensembles,  crée un nouvel ensemble dont les éléments sont simultanément dans <span class="process-math">\(A\)</span> et <span class="process-math">\(B\text{.}\)</span> On l’appelle l’intersection.</div>
 <article class="definition definition-like" id="def-intersection"><h4 class="heading">
 <span class="type">Définition</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">L’intersection de deux ensembles.</span>
 </h4>
@@ -734,11 +738,12 @@ A\cup B=\{c~|~ c\in A \text{ ou } c\in B\}\text{.}
 A\cap B=\{c~|~ c\in A \text{ et } c\in B\}\text{.}
 \end{equation*}
 </div>
-</div> <div class="para" id="def-intersection-2-2">Deux ensembles dont l’intersection est vide sont dits <em class="emphasis">disjoints</em>.</div></article><details id="sssec-opens-7" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div> <div class="para" id="def-intersection-2-2">Deux ensembles dont l’intersection est vide sont dits <em class="emphasis">disjoints</em>.</div></article><article class="example example-like" id="sssec-opens-7"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">L’intersection de deux ensembles.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="sssec-opens-7-2-1">On reprend les ensembles <span class="process-math">\(A=\{a,b,c,d\}\)</span> et <span class="process-math">\(B=\{1,2,c,d,e\}\text{.}\)</span> On cherche à écrire <span class="process-math">\(A\cap B\)</span> en extension.</div>
+</h4>
+<div class="para" id="sssec-opens-7-2-1">On reprend les ensembles <span class="process-math">\(A=\{a,b,c,d\}\)</span> et <span class="process-math">\(B=\{1,2,c,d,e\}\text{.}\)</span> On cherche à écrire <span class="process-math">\(A\cap B\)</span> en extension.</div>
 <div class="solutions"><details id="sssec-opens-7-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="sssec-opens-7-3-1">L’intersection est <span class="process-math">\(A\cap B=\{c,d\}\text{.}\)</span>
-</div></div></details></div></article></details><div class="para" id="sssec-opens-8">L’union et l’intersection de deux ensembles sont  illustrées à la figure <a href="sec-opens.html#fig-unionintersection" class="xref" data-knowl="./knowl/xref/fig-unionintersection.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Figure 1.2.5">1.2.5</a>.</div>
+</div></div></details></div></article><div class="para" id="sssec-opens-8">L’union et l’intersection de deux ensembles sont  illustrées à la figure <a href="sec-opens.html#fig-unionintersection" class="xref" data-knowl="./knowl/xref/fig-unionintersection.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Figure 1.2.5">1.2.5</a>.</div>
 <figure class="figure figure-like" id="fig-unionintersection"><div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
 <div class="sbspanel top" style="width:44.4444444444444%;"><img src="generated/sageplot/img-union.svg" role="img" class="contained" alt="Le diagramme de Venn de deux ensembles est illustré, avec l’union de A et B colorée."></div>
 <div class="sbspanel top" style="width:44.4444444444444%;"><img src="generated/sageplot/img-intersection.svg" role="img" class="contained" alt="Le diagramme de Venn de deux ensembles est illustré, avec l’intersection de A et B colorée."></div>
@@ -755,15 +760,16 @@ A\cap B=\{c~|~ c\in A \text{ et } c\in B\}\text{.}
 A-B=\{a\in A~|~ a\notin B\}\text{.}
 \end{equation*}
 </div>
-</div> <div class="para" id="def-differenceens-2-2">La différence est parfois aussi notée <span class="process-math">\(A\backslash B\)</span> et on dit aussi <span class="process-math">\(A\)</span> sauf <span class="process-math">\(B\text{.}\)</span> On préfèrera la notation <span class="process-math">\(A-B\text{,}\)</span> car elle se conforme avec celle utilisée par Sage.</div></article><details id="sssec-opens-12" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div> <div class="para" id="def-differenceens-2-2">La différence est parfois aussi notée <span class="process-math">\(A\backslash B\)</span> et on dit aussi <span class="process-math">\(A\)</span> sauf <span class="process-math">\(B\text{.}\)</span> On préfèrera la notation <span class="process-math">\(A-B\text{,}\)</span> car elle se conforme avec celle utilisée par Sage.</div></article><article class="example example-like" id="sssec-opens-12"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">1.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">La différence de deux ensembles.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="sssec-opens-12-2-1">Soit <span class="process-math">\(A=\{a,b,c,d\}\)</span> et <span class="process-math">\(B=\{1,2,c,d,e\}\text{.}\)</span> On cherche à décrire en extension les ensembles <span class="process-math">\(A-B\)</span> et <span class="process-math">\(B-A\)</span> (vont-ils être égaux?)</div>
+</h4>
+<div class="para" id="sssec-opens-12-2-1">Soit <span class="process-math">\(A=\{a,b,c,d\}\)</span> et <span class="process-math">\(B=\{1,2,c,d,e\}\text{.}\)</span> On cherche à décrire en extension les ensembles <span class="process-math">\(A-B\)</span> et <span class="process-math">\(B-A\)</span> (vont-ils être égaux?)</div>
 <div class="solutions"><details id="sssec-opens-12-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="sssec-opens-12-3-1">Pour l’ensemble <span class="process-math">\(A-B\text{,}\)</span> on retranche les éléments de <span class="process-math">\(A\)</span> qui sont aussi dans <span class="process-math">\(B\text{.}\)</span> Il reste <span class="process-math">\(A-B=\{a,b\}\text{.}\)</span>
 </div>
 <div class="para" id="sssec-opens-12-3-2">Pour ce qui est de <span class="process-math">\(B-A\text{,}\)</span> on obtient <span class="process-math">\(B-A=\{1,2,e\}\text{.}\)</span>
 </div>
-</div></details></div></article></details><div class="para" id="sssec-opens-13">Lorsqu’un ensemble est vu comme un sous-ensemble d’un ensemble univers <span class="process-math">\(\Omega\text{,}\)</span> on donne un nom particulier aux éléments qui sont dans <span class="process-math">\(\Omega\text{,}\)</span> mais pas dans <span class="process-math">\(A\text{.}\)</span> C’est le complément de <span class="process-math">\(A\text{.}\)</span>
+</div></details></div></article><div class="para" id="sssec-opens-13">Lorsqu’un ensemble est vu comme un sous-ensemble d’un ensemble univers <span class="process-math">\(\Omega\text{,}\)</span> on donne un nom particulier aux éléments qui sont dans <span class="process-math">\(\Omega\text{,}\)</span> mais pas dans <span class="process-math">\(A\text{.}\)</span> C’est le complément de <span class="process-math">\(A\text{.}\)</span>
 </div>
 <article class="definition definition-like" id="def-compens"><h4 class="heading">
 <span class="type">Définition</span><span class="space"> </span><span class="codenumber">1.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Le complément d’un ensemble.</span>
@@ -775,9 +781,10 @@ A-B=\{a\in A~|~ a\notin B\}\text{.}
 A^c=\Omega-A\text{.}
 \end{equation*}
 </div>
-</div> <div class="para" id="def-compens-2-2">On utilise parfois aussi la notion <span class="process-math">\(\bar{A}\)</span> ou <span class="process-math">\(A^{'}\)</span> pour désigner le complément.</div></article><details id="sssec-opens-15" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div> <div class="para" id="def-compens-2-2">On utilise parfois aussi la notion <span class="process-math">\(\bar{A}\)</span> ou <span class="process-math">\(A^{'}\)</span> pour désigner le complément.</div></article><article class="example example-like" id="sssec-opens-15"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">1.2.9</span><span class="period">.</span><span class="space"> </span><span class="title">Le complément d’ensembles.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="sssec-opens-15-2-1">On considère les ensembles <span class="process-math">\(A=\{0,2,4,6,8,10\}\)</span> et <span class="process-math">\(B=\{n\in \N ~|~ n\leq 7\}\text{.}\)</span> On cherche à décrire les compléments de <span class="process-math">\(A\)</span> et <span class="process-math">\(B\)</span> par rapport aux ensembles <span class="process-math">\(\Omega_1=\{n\in \N ~|~ n\leq 10\}\)</span> et <span class="process-math">\(\Omega_2=\N\text{.}\)</span>
+</h4>
+<div class="para" id="sssec-opens-15-2-1">On considère les ensembles <span class="process-math">\(A=\{0,2,4,6,8,10\}\)</span> et <span class="process-math">\(B=\{n\in \N ~|~ n\leq 7\}\text{.}\)</span> On cherche à décrire les compléments de <span class="process-math">\(A\)</span> et <span class="process-math">\(B\)</span> par rapport aux ensembles <span class="process-math">\(\Omega_1=\{n\in \N ~|~ n\leq 10\}\)</span> et <span class="process-math">\(\Omega_2=\N\text{.}\)</span>
 </div>
 <div class="solutions"><details id="sssec-opens-15-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="sssec-opens-15-3-1">On commence par trouver les compléments par rapport à l’ensemble univers <span class="process-math">\(\Omega_1\text{.}\)</span> Pour <span class="process-math">\(A\text{,}\)</span> on remarque que les éléments sont les nombres pairs plus petits ou égaux à <span class="process-math">\(10\text{.}\)</span> Dans <span class="process-math">\(\Omega_1\text{,}\)</span> son complément sera alors <span class="process-math">\(A^c=\{1,3,5,7,9\}\text{.}\)</span> Pour <span class="process-math">\(B\text{,}\)</span> on cherche tous les nombres naturels qui sont inférieurs ou égaux à <span class="process-math">\(10\)</span> (donc dans <span class="process-math">\(\Omega_1\)</span>), mais pas inférieurs ou égaux à <span class="process-math">\(7\)</span> (donc dans <span class="process-math">\(B\)</span>). Il reste donc <span class="process-math">\(B^c=\{8,9,10\}\text{.}\)</span>
@@ -798,7 +805,7 @@ B^c=\{n\in \N~|~ n\geq 8\}\text{.}
 \end{equation*}
 </div>
 </div>
-</div></details></div></article></details><div class="para" id="sssec-opens-16">Une dernière opération sur les ensembles que l’on considère est le produit cartésien. Celle-ci sera particulièrement utile pour définir d’autres concepts de manières adéquates. On introduit dans un premier temps la notion de paires ordonnées.</div>
+</div></details></div></article><div class="para" id="sssec-opens-16">Une dernière opération sur les ensembles que l’on considère est le produit cartésien. Celle-ci sera particulièrement utile pour définir d’autres concepts de manières adéquates. On introduit dans un premier temps la notion de paires ordonnées.</div>
 <article class="definition definition-like" id="sssec-opens-17"><h4 class="heading">
 <span class="type">Définition</span><span class="space"> </span><span class="codenumber">1.2.10</span><span class="period">.</span><span class="space"> </span><span class="title">Paire ordonnée.</span>
 </h4>
@@ -814,9 +821,10 @@ B^c=\{n\in \N~|~ n\geq 8\}\text{.}
 A\times B=\{(a,b)~|~a\in A\text{ et }b\in B\}\text{.}
 \end{equation*}
 </div>
-</div></article><details id="sssec-opens-19" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</div></article><article class="example example-like" id="sssec-opens-19"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">1.2.12</span><span class="period">.</span><span class="space"> </span><span class="title">Le produit cartésien de deux ensembles.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="sssec-opens-19-2-1">On considère les ensembles <span class="process-math">\(A=\{a,b\}\)</span> et <span class="process-math">\(B=\{0,1,2\}\text{.}\)</span> On cherche à décrire le produit cartésien <span class="process-math">\(A\times B\)</span> en extension.</div>
+</h4>
+<div class="para" id="sssec-opens-19-2-1">On considère les ensembles <span class="process-math">\(A=\{a,b\}\)</span> et <span class="process-math">\(B=\{0,1,2\}\text{.}\)</span> On cherche à décrire le produit cartésien <span class="process-math">\(A\times B\)</span> en extension.</div>
 <div class="solutions"><details id="sssec-opens-19-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="sssec-opens-19-3-1">
 <div class="para">On doit énumérer toutes les paires ordonnées possibles. On verra au chapitre <a href="chap-denombrement.html" class="internal" title="Chapitre 4: Dénombrement">4</a> comment compter le nombre de paires. Voici une méthode simple pour les énumérer sans en oublier lorsque les ensembles sont finis.</div>
@@ -828,7 +836,7 @@ A\times B=\{(a,b)~|~a\in A\text{ et }b\in B\}\text{.}
 </div>
 <div class="para" id="sssec-opens-19-3-2">On a donc <span class="process-math">\(A\times B=\{(a,0),(a,1),(a,2),(b,0),(b,1),(b,2)\}\text{.}\)</span>
 </div>
-</div></details></div></article></details></section><section class="subsection" id="sssec-propoper"><h3 class="heading hide-type">
+</div></details></div></article></section><section class="subsection" id="sssec-propoper"><h3 class="heading hide-type">
 <span class="type">Sous-section</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="space"> </span><span class="title">Propriétés des opérations élémentaires</span>
 </h3>
 <div class="para" id="sssec-propoper-2">Les opérations définies à la sous-section précédente peuvent interagir de plusieurs manières entre elles et être combinées. On peut les démontrer de plusieurs manières. On en présente deux ci-dessous. On donne la liste des propriétés dans un premier temps et on effectue la démonstration de deux d’entre elles par la suite. Les exercices complèteront les preuves. Pour chaque propriété, <span class="process-math">\(A,B,C\)</span> sont des ensembles quelconques et <span class="process-math">\(\Omega\)</span> est un ensemble univers avec <span class="process-math">\(A\subseteq \Omega\text{.}\)</span>
