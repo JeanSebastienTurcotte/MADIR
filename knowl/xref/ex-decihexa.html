@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr-CA" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -25,11 +32,13 @@ sagecell.makeSagecell({
 </head>
 <body class="ignore-math">
 <article class="example example-like"><h4 class="heading">
-<span class="type">Exemple</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="codenumber">3.1.11</span><span xmlns:pf="https://prefigure.org" class="period">.</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="title">Conversion entre système décimal et système hexadécimal.</span>
+<span class="type">Exemple</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Conversion entre système décimal et système hexadécimal.</span>
 </h4>
-<div xmlns:pf="https://prefigure.org" class="para">On veut convertir <span class="process-math">\(A0E2F3_{16}\)</span> en décimal et <span class="process-math">\(987654321\)</span> en hexadécimal.</div>
+<div class="para">On veut convertir <span class="process-math">\(A0E2F3_{16}\)</span> en décimal et <span class="process-math">\(987654321\)</span> en hexadécimal.<div class="autopermalink" data-description="Paragraphe"><a href="#ex-decihexa-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
 <div class="solutions">
-<details xmlns:pf="https://prefigure.org" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical">
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
 <div class="para">La conversion d’hexadécimal vers la base dix étant plus simple, on débute par celle-ci. On a</div>
 <div class="displaymath process-math">
 \begin{align*}
@@ -41,8 +50,12 @@ A0E2F3_{16}&amp;=A\times 16^5+0\times 16^4+E\times 16^3+2\times 16^2+F\times 16^
 &amp;=10543859\text{.}
 \end{align*}
 </div>
-</div></div></details><details xmlns:pf="https://prefigure.org" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para">Pour la conversion de la base décimale vers la base seize, on regarde encore quelle est la plus grande puissance de seize qui est inférieure ou égale au nombre à convertir. Pour <span class="process-math">\(987654321\text{,}\)</span> c’est <span class="process-math">\(16^7=268435456\)</span> qui sera utilisé. Il y a toutefois une étape supplémentaire à considérer par rapport à la conversion au binaire. Combien de fois <span class="process-math">\(16^7\)</span> rentre-t-il dans <span class="process-math">\(987654321\text{?}\)</span> On utilise Sage pour faire ce calcul, en notant qu’à la section suivante on aura un opérateur spécial qui donnera directement la réponse, sans tenir compte de la partie fractionnaire.</div>
+<div class="autopermalink" data-description="Paragraphe"><a href="#sol-hexadeci-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.1.11.1"><a href="#sol-hexadeci" title="Copy heading and permalink for Solution 3.1.11.1" aria-label="Copy heading and permalink for Solution 3.1.11.1">🔗</a></div>
+</div></details><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para">Pour la conversion de la base décimale vers la base seize, on regarde encore quelle est la plus grande puissance de seize qui est inférieure ou égale au nombre à convertir. Pour <span class="process-math">\(987654321\text{,}\)</span> c’est <span class="process-math">\(16^7=268435456\)</span> qui sera utilisé. Il y a toutefois une étape supplémentaire à considérer par rapport à la conversion au binaire. Combien de fois <span class="process-math">\(16^7\)</span> rentre-t-il dans <span class="process-math">\(987654321\text{?}\)</span> On utilise Sage pour faire ce calcul, en notant qu’à la section suivante on aura un opérateur spécial qui donnera directement la réponse, sans tenir compte de la partie fractionnaire.<div class="autopermalink" data-description="Paragraphe"><a href="#sol-decihexa-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
 <div id="sol-decihexa-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">987654321.0/16^7
 </script></div>
 <div class="para logical">
@@ -54,10 +67,11 @@ A0E2F3_{16}&amp;=A\times 16^5+0\times 16^4+E\times 16^3+2\times 16^2+F\times 16^
 </div>
 <div class="para">On poursuit les calculs avec Sage. Dans un premier temps, que reste-t-il si on soustrait <span class="process-math">\(3\times 16^7\)</span> à <span class="process-math">\(987654321\text{?}\)</span>
 </div>
+<div class="autopermalink" data-description="Paragraphe"><a href="#sol-decihexa-3" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div id="sol-decihexa-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">987654321-3*16^7
 </script></div>
-<div class="para">La plus grande puissance de <span class="process-math">\(16\)</span> qui est plus petite que ce nombre est <span class="process-math">\(16^6\text{.}\)</span> En répétant la méthode ci-dessus, on calcule combien de fois cette puissance rentre dans <span class="process-math">\(182347953\text{.}\)</span>
+<div class="para">La plus grande puissance de <span class="process-math">\(16\)</span> qui est plus petite que ce nombre est <span class="process-math">\(16^6\text{.}\)</span> En répétant la méthode ci-dessus, on calcule combien de fois cette puissance rentre dans <span class="process-math">\(182347953\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#sol-decihexa-5" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div id="sol-decihexa-6" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">182347953.0/16^6
 </script></div>
@@ -70,10 +84,12 @@ A0E2F3_{16}&amp;=A\times 16^5+0\times 16^4+E\times 16^3+2\times 16^2+F\times 16^
 \end{equation*}
 </div>
 <div class="para">On soustrait <span class="process-math">\(10\times 16^6\)</span> de <span class="process-math">\(182347953\)</span> pour obtenir le reste.</div>
+<div class="autopermalink" data-description="Paragraphe"><a href="#sol-decihexa-7" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div id="sol-decihexa-8" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">182347953-10*16^6
 </script></div>
-<div class="para">On effectue une dernière étape complète avant de donner la réponse. Le reste pourra être complété en exercice. La cinquième puissance de <span class="process-math">\(16\)</span> sera la prochaine à être utilisée.</div>
+<div class="para">On effectue une dernière étape complète avant de donner la réponse. Le reste pourra être complété en exercice. La cinquième puissance de <span class="process-math">\(16\)</span> sera la prochaine à être utilisée.<div class="autopermalink" data-description="Paragraphe"><a href="#sol-decihexa-9" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
 <div id="sol-decihexa-10" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">14575793.0/16^5
 </script></div>
 <div class="para logical">
@@ -84,6 +100,7 @@ A0E2F3_{16}&amp;=A\times 16^5+0\times 16^4+E\times 16^3+2\times 16^2+F\times 16^
 \end{equation*}
 </div>
 <div class="para">Le reste sera égal à <span class="process-math">\(944305\)</span> , comme le montre le calcul ci-dessous.</div>
+<div class="autopermalink" data-description="Paragraphe"><a href="#sol-decihexa-11" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div id="sol-decihexa-12" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">14575793-13*16^5
 </script></div>
@@ -95,8 +112,11 @@ A0E2F3_{16}&amp;=A\times 16^5+0\times 16^4+E\times 16^3+2\times 16^2+F\times 16^
 \end{equation*}
 </div>
 <div class="para">L’exercice <a href="sec-representation.html#exo-hexaafinir" class="xref" data-knowl="./knowl/xref/exo-hexaafinir.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Exercice 3.1.7.6">3.1.7.6</a> demande le reste de la démarche.</div>
+<div class="autopermalink" data-description="Paragraphe"><a href="#sol-decihexa-13" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
+<div class="autopermalink" data-description="Solution 3.1.11.2"><a href="#sol-decihexa" title="Copy heading and permalink for Solution 3.1.11.2" aria-label="Copy heading and permalink for Solution 3.1.11.2">🔗</a></div>
 </div></details>
-</div></article><span class="incontext"><a class="internal" href="sec-representation.html#ex-decihexa">Contexte</a></span>
+</div>
+<div class="autopermalink" data-description="Exemple 3.1.11: Conversion entre système décimal et système hexadécimal"><a href="#ex-decihexa" title="Copy heading and permalink for Exemple 3.1.11: Conversion entre système décimal et système hexadécimal" aria-label="Copy heading and permalink for Exemple 3.1.11: Conversion entre système décimal et système hexadécimal">🔗</a></div></article><span class="incontext"><a class="internal" href="sec-representation.html#ex-decihexa">Contexte</a></span>
 </body>
 </html>

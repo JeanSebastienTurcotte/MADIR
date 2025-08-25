@@ -6,14 +6,21 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="fr-CA" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>MaDIR Arbre et arborescence</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta xmlns:pf="https://prefigure.org" property="og:type" content="book">
-<meta xmlns:pf="https://prefigure.org" property="book:title" content="Mathématiques discrètes">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
   "tex": {
@@ -85,7 +92,43 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Mathématiques discrètes">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.9.8';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.b215b0da62d655bd.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.28cc3c4821792be5.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Évaluer (Sage)';
+</script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
 // Their results will be linked, only within language type
 sagecell.makeSagecell({
   "inputLocation": "div.sagecell-sage",
@@ -97,266 +140,14 @@ sagecell.makeSagecell({
   ],
   "evalButtonText": "Évaluer (Sage)"
 });
-</script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.css" integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.css" integrity="sha512-nXlJLUeqPMp1Q3+Bd8Qds8tXeRVQscMscwysJm821C++9w6WtsFbJjPenZ8cQVMXyqSAismveQJc0C1splFDCA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Évaluer (Sage)';
-</script><link xmlns:pf="https://prefigure.org" rel="preconnect" href="https://fonts.googleapis.com">
-<link xmlns:pf="https://prefigure.org" rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
-<link xmlns:pf="https://prefigure.org" href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
-<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link xmlns:pf="https://prefigure.org" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/colors_green_plum.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
-<style>
-#ex-ensext-2-1-1 { counter-set: ex-ensext-2-1-1 0; }
-#ex-ensext-2-1-1 > li::marker { content: ""counter(ex-ensext-2-1-1,decimal)"."; }
-#ex-ensext-2-1-1 > li { counter-increment: ex-ensext-2-1-1; }
-#ex-ensext-3-1-1 { counter-set: ex-ensext-3-1-1 0; }
-#ex-ensext-3-1-1 > li::marker { content: ""counter(ex-ensext-3-1-1,decimal)"."; }
-#ex-ensext-3-1-1 > li { counter-increment: ex-ensext-3-1-1; }
-#sec-ens-3-8-2-1-1 { counter-set: sec-ens-3-8-2-1-1 0; }
-#sec-ens-3-8-2-1-1 > li::marker { content: ""counter(sec-ens-3-8-2-1-1,decimal)"."; }
-#sec-ens-3-8-2-1-1 > li { counter-increment: sec-ens-3-8-2-1-1; }
-#sec-ens-3-8-3-1-1 { counter-set: sec-ens-3-8-3-1-1 0; }
-#sec-ens-3-8-3-1-1 > li::marker { content: ""counter(sec-ens-3-8-3-1-1,decimal)"."; }
-#sec-ens-3-8-3-1-1 > li { counter-increment: sec-ens-3-8-3-1-1; }
-#sec-ens-3-10-1 { counter-set: sec-ens-3-10-1 0; }
-#sec-ens-3-10-1 > li::marker { content: ""counter(sec-ens-3-10-1,decimal)"."; }
-#sec-ens-3-10-1 > li { counter-increment: sec-ens-3-10-1; }
-#sssec-opens-19-3-1-2 { counter-set: sssec-opens-19-3-1-2 0; }
-#sssec-opens-19-3-1-2 > li::marker { content: ""counter(sssec-opens-19-3-1-2,decimal)"."; }
-#sssec-opens-19-3-1-2 > li { counter-increment: sssec-opens-19-3-1-2; }
-#li-opensprop-2 { counter-set: li-opensprop-2 0; }
-#li-opensprop-2 > li::marker { content: ""counter(li-opensprop-2,decimal)"."; }
-#li-opensprop-2 > li { counter-increment: li-opensprop-2; }
-#prop-opensass-3-1-2 { counter-set: prop-opensass-3-1-2 0; }
-#prop-opensass-3-1-2 > li::marker { content: ""counter(prop-opensass-3-1-2,decimal)"."; }
-#prop-opensass-3-1-2 > li { counter-increment: prop-opensass-3-1-2; }
-#sec-fonctions-3-8-2-1-1 { counter-set: sec-fonctions-3-8-2-1-1 0; }
-#sec-fonctions-3-8-2-1-1 > li::marker { content: ""counter(sec-fonctions-3-8-2-1-1,decimal)"."; }
-#sec-fonctions-3-8-2-1-1 > li { counter-increment: sec-fonctions-3-8-2-1-1; }
-#sec-fonctions-3-8-3-1-1 { counter-set: sec-fonctions-3-8-3-1-1 0; }
-#sec-fonctions-3-8-3-1-1 > li::marker { content: ""counter(sec-fonctions-3-8-3-1-1,decimal)"."; }
-#sec-fonctions-3-8-3-1-1 > li { counter-increment: sec-fonctions-3-8-3-1-1; }
-#ex-composagi-2-1-4 { counter-set: ex-composagi-2-1-4 0; }
-#ex-composagi-2-1-4 > li::marker { content: ""counter(ex-composagi-2-1-4,decimal)"."; }
-#ex-composagi-2-1-4 > li { counter-increment: ex-composagi-2-1-4; }
-#ex-composagi-3-1-1 { counter-set: ex-composagi-3-1-1 0; }
-#ex-composagi-3-1-1 > li::marker { content: ""counter(ex-composagi-3-1-1,decimal)"."; }
-#ex-composagi-3-1-1 > li { counter-increment: ex-composagi-3-1-1; }
-#ex-inj-2-1-1 { counter-set: ex-inj-2-1-1 0; }
-#ex-inj-2-1-1 > li::marker { content: ""counter(ex-inj-2-1-1,decimal)"."; }
-#ex-inj-2-1-1 > li { counter-increment: ex-inj-2-1-1; }
-#ex-inj-3-1-1 { counter-set: ex-inj-3-1-1 0; }
-#ex-inj-3-1-1 > li::marker { content: ""counter(ex-inj-3-1-1,decimal)"."; }
-#ex-inj-3-1-1 > li { counter-increment: ex-inj-3-1-1; }
-#ex-surj-2-1-1 { counter-set: ex-surj-2-1-1 0; }
-#ex-surj-2-1-1 > li::marker { content: ""counter(ex-surj-2-1-1,decimal)"."; }
-#ex-surj-2-1-1 > li { counter-increment: ex-surj-2-1-1; }
-#ex-surj-3-1-1 { counter-set: ex-surj-3-1-1 0; }
-#ex-surj-3-1-1 > li::marker { content: ""counter(ex-surj-3-1-1,decimal)"."; }
-#ex-surj-3-1-1 > li { counter-increment: ex-surj-3-1-1; }
-#concl-fonctions-2-1 { counter-set: concl-fonctions-2-1 0; }
-#concl-fonctions-2-1 > li::marker { content: ""counter(concl-fonctions-2-1,decimal)"."; }
-#concl-fonctions-2-1 > li { counter-increment: concl-fonctions-2-1; }
-#sec-fonctions-8-6-1-1-2 { counter-set: sec-fonctions-8-6-1-1-2 0; }
-#sec-fonctions-8-6-1-1-2 > li::marker { content: "("counter(sec-fonctions-8-6-1-1-2,lower-alpha)")"; }
-#sec-fonctions-8-6-1-1-2 > li { counter-increment: sec-fonctions-8-6-1-1-2; }
-#sec-fonctions-8-7-1-1-2 { counter-set: sec-fonctions-8-7-1-1-2 0; }
-#sec-fonctions-8-7-1-1-2 > li::marker { content: "("counter(sec-fonctions-8-7-1-1-2,lower-alpha)")"; }
-#sec-fonctions-8-7-1-1-2 > li { counter-increment: sec-fonctions-8-7-1-1-2; }
-#exo--2-7-1-1-3 { counter-set: exo--2-7-1-1-3 0; }
-#exo--2-7-1-1-3 > li::marker { content: "("counter(exo--2-7-1-1-3,lower-alpha)")"; }
-#exo--2-7-1-1-3 > li { counter-increment: exo--2-7-1-1-3; }
-#exo--2-8-1-1-1 { counter-set: exo--2-8-1-1-1 0; }
-#exo--2-8-1-1-1 > li::marker { content: ""counter(exo--2-8-1-1-1,lower-roman)""; }
-#exo--2-8-1-1-1 > li { counter-increment: exo--2-8-1-1-1; }
-#exo--2-8-2-2-1 { counter-set: exo--2-8-2-2-1 0; }
-#exo--2-8-2-2-1 > li::marker { content: ""counter(exo--2-8-2-2-1,lower-roman)""; }
-#exo--2-8-2-2-1 > li { counter-increment: exo--2-8-2-2-1; }
-#exo--2-8-3-2-1 { counter-set: exo--2-8-3-2-1 0; }
-#exo--2-8-3-2-1 > li::marker { content: ""counter(exo--2-8-3-2-1,lower-roman)""; }
-#exo--2-8-3-2-1 > li { counter-increment: exo--2-8-3-2-1; }
-#exo--2-8-4-2-1 { counter-set: exo--2-8-4-2-1 0; }
-#exo--2-8-4-2-1 > li::marker { content: ""counter(exo--2-8-4-2-1,lower-roman)""; }
-#exo--2-8-4-2-1 > li { counter-increment: exo--2-8-4-2-1; }
-#exo--2-8-5-2-1 { counter-set: exo--2-8-5-2-1 0; }
-#exo--2-8-5-2-1 > li::marker { content: ""counter(exo--2-8-5-2-1,lower-roman)""; }
-#exo--2-8-5-2-1 > li { counter-increment: exo--2-8-5-2-1; }
-#sec-logprop-5-7-1 { counter-set: sec-logprop-5-7-1 0; }
-#sec-logprop-5-7-1 > li::marker { content: ""counter(sec-logprop-5-7-1,decimal)"."; }
-#sec-logprop-5-7-1 > li { counter-increment: sec-logprop-5-7-1; }
-#li-oplogprop-2 { counter-set: li-oplogprop-2 0; }
-#li-oplogprop-2 > li::marker { content: ""counter(li-oplogprop-2,decimal)"."; }
-#li-oplogprop-2 > li { counter-increment: li-oplogprop-2; }
-#sec-eqlogfnc-3-13-2-1-2 { counter-set: sec-eqlogfnc-3-13-2-1-2 0; }
-#sec-eqlogfnc-3-13-2-1-2 > li::marker { content: ""counter(sec-eqlogfnc-3-13-2-1-2,decimal)"."; }
-#sec-eqlogfnc-3-13-2-1-2 > li { counter-increment: sec-eqlogfnc-3-13-2-1-2; }
-#sec-eqlogfnc-3-13-3-1-1 { counter-set: sec-eqlogfnc-3-13-3-1-1 0; }
-#sec-eqlogfnc-3-13-3-1-1 > li::marker { content: ""counter(sec-eqlogfnc-3-13-3-1-1,decimal)"."; }
-#sec-eqlogfnc-3-13-3-1-1 > li { counter-increment: sec-eqlogfnc-3-13-3-1-1; }
-#sssec-predicats-3-2-1-1 { counter-set: sssec-predicats-3-2-1-1 0; }
-#sssec-predicats-3-2-1-1 > li::marker { content: ""counter(sssec-predicats-3-2-1-1,decimal)"."; }
-#sssec-predicats-3-2-1-1 > li { counter-increment: sssec-predicats-3-2-1-1; }
-#sssec-predicats-3-3-1-1 { counter-set: sssec-predicats-3-3-1-1 0; }
-#sssec-predicats-3-3-1-1 > li::marker { content: ""counter(sssec-predicats-3-3-1-1,decimal)"."; }
-#sssec-predicats-3-3-1-1 > li { counter-increment: sssec-predicats-3-3-1-1; }
-#sssec-predicats-5-2-1-2 { counter-set: sssec-predicats-5-2-1-2 0; }
-#sssec-predicats-5-2-1-2 > li::marker { content: ""counter(sssec-predicats-5-2-1-2,decimal)"."; }
-#sssec-predicats-5-2-1-2 > li { counter-increment: sssec-predicats-5-2-1-2; }
-#sssec-predicats-5-3-1-1 { counter-set: sssec-predicats-5-3-1-1 0; }
-#sssec-predicats-5-3-1-1 > li::marker { content: ""counter(sssec-predicats-5-3-1-1,decimal)"."; }
-#sssec-predicats-5-3-1-1 > li { counter-increment: sssec-predicats-5-3-1-1; }
-#sssec-quantificateurs-6-2-1-1 { counter-set: sssec-quantificateurs-6-2-1-1 0; }
-#sssec-quantificateurs-6-2-1-1 > li::marker { content: ""counter(sssec-quantificateurs-6-2-1-1,decimal)"."; }
-#sssec-quantificateurs-6-2-1-1 > li { counter-increment: sssec-quantificateurs-6-2-1-1; }
-#sssec-quantificateurs-6-3-1-1 { counter-set: sssec-quantificateurs-6-3-1-1 0; }
-#sssec-quantificateurs-6-3-1-1 > li::marker { content: ""counter(sssec-quantificateurs-6-3-1-1,decimal)"."; }
-#sssec-quantificateurs-6-3-1-1 > li { counter-increment: sssec-quantificateurs-6-3-1-1; }
-#sssec-quantificateurs-10-2-1-1 { counter-set: sssec-quantificateurs-10-2-1-1 0; }
-#sssec-quantificateurs-10-2-1-1 > li::marker { content: ""counter(sssec-quantificateurs-10-2-1-1,decimal)"."; }
-#sssec-quantificateurs-10-2-1-1 > li { counter-increment: sssec-quantificateurs-10-2-1-1; }
-#sssec-quantificateurs-10-3-1-1 { counter-set: sssec-quantificateurs-10-3-1-1 0; }
-#sssec-quantificateurs-10-3-1-1 > li::marker { content: ""counter(sssec-quantificateurs-10-3-1-1,decimal)"."; }
-#sssec-quantificateurs-10-3-1-1 > li { counter-increment: sssec-quantificateurs-10-3-1-1; }
-#sec-propquant-5-6-2-1-1 { counter-set: sec-propquant-5-6-2-1-1 0; }
-#sec-propquant-5-6-2-1-1 > li::marker { content: ""counter(sec-propquant-5-6-2-1-1,decimal)"."; }
-#sec-propquant-5-6-2-1-1 > li { counter-increment: sec-propquant-5-6-2-1-1; }
-#sec-propquant-5-6-3-1 { counter-set: sec-propquant-5-6-3-1 0; }
-#sec-propquant-5-6-3-1 > li::marker { content: ""counter(sec-propquant-5-6-3-1,decimal)"."; }
-#sec-propquant-5-6-3-1 > li { counter-increment: sec-propquant-5-6-3-1; }
-#sec-propquant-5-12-2-1-1 { counter-set: sec-propquant-5-12-2-1-1 0; }
-#sec-propquant-5-12-2-1-1 > li::marker { content: ""counter(sec-propquant-5-12-2-1-1,decimal)"."; }
-#sec-propquant-5-12-2-1-1 > li { counter-increment: sec-propquant-5-12-2-1-1; }
-#exo-propquant-2-10-1-1-2 { counter-set: exo-propquant-2-10-1-1-2 0; }
-#exo-propquant-2-10-1-1-2 > li::marker { content: "("counter(exo-propquant-2-10-1-1-2,lower-alpha)")"; }
-#exo-propquant-2-10-1-1-2 > li { counter-increment: exo-propquant-2-10-1-1-2; }
-#exo-propquant-2-10-2-1 { counter-set: exo-propquant-2-10-2-1 0; }
-#exo-propquant-2-10-2-1 > li::marker { content: "("counter(exo-propquant-2-10-2-1,lower-alpha)")"; }
-#exo-propquant-2-10-2-1 > li { counter-increment: exo-propquant-2-10-2-1; }
-#sec-circuits-3-9-1 { counter-set: sec-circuits-3-9-1 0; }
-#sec-circuits-3-9-1 > li::marker { content: ""counter(sec-circuits-3-9-1,decimal)"."; }
-#sec-circuits-3-9-1 > li { counter-increment: sec-circuits-3-9-1; }
-#subs-sysPositionnel-4-2-1-1 { counter-set: subs-sysPositionnel-4-2-1-1 0; }
-#subs-sysPositionnel-4-2-1-1 > li::marker { content: ""counter(subs-sysPositionnel-4-2-1-1,decimal)"."; }
-#subs-sysPositionnel-4-2-1-1 > li { counter-increment: subs-sysPositionnel-4-2-1-1; }
-#subs-sysPositionnel-4-3-1-2 { counter-set: subs-sysPositionnel-4-3-1-2 0; }
-#subs-sysPositionnel-4-3-1-2 > li::marker { content: ""counter(subs-sysPositionnel-4-3-1-2,decimal)"."; }
-#subs-sysPositionnel-4-3-1-2 > li { counter-increment: subs-sysPositionnel-4-3-1-2; }
-#ex-binairedecimale-2-1-1 { counter-set: ex-binairedecimale-2-1-1 0; }
-#ex-binairedecimale-2-1-1 > li::marker { content: ""counter(ex-binairedecimale-2-1-1,decimal)"."; }
-#ex-binairedecimale-2-1-1 > li { counter-increment: ex-binairedecimale-2-1-1; }
-#ex-binairedecimale-3-1-1 { counter-set: ex-binairedecimale-3-1-1 0; }
-#ex-binairedecimale-3-1-1 > li::marker { content: ""counter(ex-binairedecimale-3-1-1,decimal)"."; }
-#ex-binairedecimale-3-1-1 > li { counter-increment: ex-binairedecimale-3-1-1; }
-#ex-decimalebinaire-2-1-1 { counter-set: ex-decimalebinaire-2-1-1 0; }
-#ex-decimalebinaire-2-1-1 > li::marker { content: ""counter(ex-decimalebinaire-2-1-1,decimal)"."; }
-#ex-decimalebinaire-2-1-1 > li { counter-increment: ex-decimalebinaire-2-1-1; }
-#algo-binhex-2-1-1 { counter-set: algo-binhex-2-1-1 0; }
-#algo-binhex-2-1-1 > li::marker { content: ""counter(algo-binhex-2-1-1,decimal)"."; }
-#algo-binhex-2-1-1 > li { counter-increment: algo-binhex-2-1-1; }
-#algo-binhex-2-2-1 { counter-set: algo-binhex-2-2-1 0; }
-#algo-binhex-2-2-1 > li::marker { content: ""counter(algo-binhex-2-2-1,decimal)"."; }
-#algo-binhex-2-2-1 > li { counter-increment: algo-binhex-2-2-1; }
-#exo-puissmoinsnombre-18-2-1 { counter-set: exo-puissmoinsnombre-18-2-1 0; }
-#exo-puissmoinsnombre-18-2-1 > li::marker { content: "("counter(exo-puissmoinsnombre-18-2-1,lower-alpha)")"; }
-#exo-puissmoinsnombre-18-2-1 > li { counter-increment: exo-puissmoinsnombre-18-2-1; }
-#exo-representation-3-3-3-1-1-8 { counter-set: exo-representation-3-3-3-1-1-8 0; }
-#exo-representation-3-3-3-1-1-8 > li::marker { content: "("counter(exo-representation-3-3-3-1-1-8,lower-alpha)")"; }
-#exo-representation-3-3-3-1-1-8 > li { counter-increment: exo-representation-3-3-3-1-1-8; }
-#sec-divisibilite-3-5-2-1-1 { counter-set: sec-divisibilite-3-5-2-1-1 0; }
-#sec-divisibilite-3-5-2-1-1 > li::marker { content: ""counter(sec-divisibilite-3-5-2-1-1,decimal)"."; }
-#sec-divisibilite-3-5-2-1-1 > li { counter-increment: sec-divisibilite-3-5-2-1-1; }
-#sec-divisibilite-3-5-3-1-1 { counter-set: sec-divisibilite-3-5-3-1-1 0; }
-#sec-divisibilite-3-5-3-1-1 > li::marker { content: ""counter(sec-divisibilite-3-5-3-1-1,decimal)"."; }
-#sec-divisibilite-3-5-3-1-1 > li { counter-increment: sec-divisibilite-3-5-3-1-1; }
-#def-pgcd-2-1-7 { counter-set: def-pgcd-2-1-7 0; }
-#def-pgcd-2-1-7 > li::marker { content: ""counter(def-pgcd-2-1-7,decimal)"."; }
-#def-pgcd-2-1-7 > li { counter-increment: def-pgcd-2-1-7; }
-#sec-divisibilite-5-6-2-1-1 { counter-set: sec-divisibilite-5-6-2-1-1 0; }
-#sec-divisibilite-5-6-2-1-1 > li::marker { content: ""counter(sec-divisibilite-5-6-2-1-1,decimal)"."; }
-#sec-divisibilite-5-6-2-1-1 > li { counter-increment: sec-divisibilite-5-6-2-1-1; }
-#exo-divisibilite-3-2-2-1-5 { counter-set: exo-divisibilite-3-2-2-1-5 0; }
-#exo-divisibilite-3-2-2-1-5 > li::marker { content: "("counter(exo-divisibilite-3-2-2-1-5,lower-alpha)")"; }
-#exo-divisibilite-3-2-2-1-5 > li { counter-increment: exo-divisibilite-3-2-2-1-5; }
-#ex-modulotemps-2-1-2 { counter-set: ex-modulotemps-2-1-2 0; }
-#ex-modulotemps-2-1-2 > li::marker { content: ""counter(ex-modulotemps-2-1-2,decimal)"."; }
-#ex-modulotemps-2-1-2 > li { counter-increment: ex-modulotemps-2-1-2; }
-#prop-moduloprop-2-1-5 { counter-set: prop-moduloprop-2-1-5 0; }
-#prop-moduloprop-2-1-5 > li::marker { content: ""counter(prop-moduloprop-2-1-5,decimal)"."; }
-#prop-moduloprop-2-1-5 > li { counter-increment: prop-moduloprop-2-1-5; }
-#sec-modulo-4-12-2-1-2 { counter-set: sec-modulo-4-12-2-1-2 0; }
-#sec-modulo-4-12-2-1-2 > li::marker { content: ""counter(sec-modulo-4-12-2-1-2,decimal)"."; }
-#sec-modulo-4-12-2-1-2 > li { counter-increment: sec-modulo-4-12-2-1-2; }
-#sec-modulo-5-4-2-1-1 { counter-set: sec-modulo-5-4-2-1-1 0; }
-#sec-modulo-5-4-2-1-1 > li::marker { content: ""counter(sec-modulo-5-4-2-1-1,decimal)"."; }
-#sec-modulo-5-4-2-1-1 > li { counter-increment: sec-modulo-5-4-2-1-1; }
-#concl-modulo-1-1 { counter-set: concl-modulo-1-1 0; }
-#concl-modulo-1-1 > li::marker { content: ""counter(concl-modulo-1-1,decimal)"."; }
-#concl-modulo-1-1 > li { counter-increment: concl-modulo-1-1; }
-#exo-modulo-2-5-2-1 { counter-set: exo-modulo-2-5-2-1 0; }
-#exo-modulo-2-5-2-1 > li::marker { content: "("counter(exo-modulo-2-5-2-1,lower-alpha)")"; }
-#exo-modulo-2-5-2-1 > li { counter-increment: exo-modulo-2-5-2-1; }
-#prop-regleProd-2 { counter-set: prop-regleProd-2 0; }
-#prop-regleProd-2 > li::marker { content: ""counter(prop-regleProd-2,decimal)"."; }
-#prop-regleProd-2 > li { counter-increment: prop-regleProd-2; }
-#prop-regleSomme-2 { counter-set: prop-regleSomme-2 0; }
-#prop-regleSomme-2 > li::marker { content: ""counter(prop-regleSomme-2,decimal)"."; }
-#prop-regleSomme-2 > li { counter-increment: prop-regleSomme-2; }
-#prop-incExclu-2-1 { counter-set: prop-incExclu-2-1 0; }
-#prop-incExclu-2-1 > li::marker { content: ""counter(prop-incExclu-2-1,decimal)"."; }
-#prop-incExclu-2-1 > li { counter-increment: prop-incExclu-2-1; }
-#prop-div-2-1 { counter-set: prop-div-2-1 0; }
-#prop-div-2-1 > li::marker { content: ""counter(prop-div-2-1,decimal)"."; }
-#prop-div-2-1 > li { counter-increment: prop-div-2-1; }
-#def_perm-1 { counter-set: def_perm-1 0; }
-#def_perm-1 > li::marker { content: ""counter(def_perm-1,decimal)"."; }
-#def_perm-1 > li { counter-increment: def_perm-1; }
-#def_combBin-1 { counter-set: def_combBin-1 0; }
-#def_combBin-1 > li::marker { content: ""counter(def_combBin-1,decimal)"."; }
-#def_combBin-1 > li { counter-increment: def_combBin-1; }
-#exe-plusieursEquiv-2-2 { counter-set: exe-plusieursEquiv-2-2 0; }
-#exe-plusieursEquiv-2-2 > li::marker { content: ""counter(exe-plusieursEquiv-2-2,decimal)"."; }
-#exe-plusieursEquiv-2-2 > li { counter-increment: exe-plusieursEquiv-2-2; }
-#exe-plusieursEquiv-3-1 { counter-set: exe-plusieursEquiv-3-1 0; }
-#exe-plusieursEquiv-3-1 > li::marker { content: ""counter(exe-plusieursEquiv-3-1,decimal)"."; }
-#exe-plusieursEquiv-3-1 > li { counter-increment: exe-plusieursEquiv-3-1; }
-#exo-methodePreuve-1-17-1-2 { counter-set: exo-methodePreuve-1-17-1-2 0; }
-#exo-methodePreuve-1-17-1-2 > li::marker { content: "("counter(exo-methodePreuve-1-17-1-2,lower-alpha)")"; }
-#exo-methodePreuve-1-17-1-2 > li { counter-increment: exo-methodePreuve-1-17-1-2; }
-#def-induction-2-1-3 { counter-set: def-induction-2-1-3 0; }
-#def-induction-2-1-3 > li::marker { content: ""counter(def-induction-2-1-3,decimal)"."; }
-#def-induction-2-1-3 > li { counter-increment: def-induction-2-1-3; }
-#subs-defGraphe-4-2-1-3 { counter-set: subs-defGraphe-4-2-1-3 0; }
-#subs-defGraphe-4-2-1-3 > li::marker { content: ""counter(subs-defGraphe-4-2-1-3,decimal)"."; }
-#subs-defGraphe-4-2-1-3 > li { counter-increment: subs-defGraphe-4-2-1-3; }
-#subs-defGraphe-8-2-1-3 { counter-set: subs-defGraphe-8-2-1-3 0; }
-#subs-defGraphe-8-2-1-3 > li::marker { content: ""counter(subs-defGraphe-8-2-1-3,decimal)"."; }
-#subs-defGraphe-8-2-1-3 > li { counter-increment: subs-defGraphe-8-2-1-3; }
-#prop-isoGraphe-1-2 { counter-set: prop-isoGraphe-1-2 0; }
-#prop-isoGraphe-1-2 > li::marker { content: ""counter(prop-isoGraphe-1-2,decimal)"."; }
-#prop-isoGraphe-1-2 > li { counter-increment: prop-isoGraphe-1-2; }
-</style>
+</script>
 </head>
 <body class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Sauter au contenu</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a xmlns:pf="https://prefigure.org" id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
-<h1 class="heading"><a href="madir.html"><span class="title">Mathématiques discrètes:</span> <span class="subtitle">Version préliminaire</span></a></h1>
+<a class="assistive" href="#ptx-content">Sauter au contenu</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="madir.html"><span class="title">Mathématiques discrètes</span> <span class="subtitle">Version préliminaire</span></a></h1>
 <p class="byline"></p>
-</div>
-</div></header><nav xmlns:pf="https://prefigure.org" id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Table des matières"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Table des matières</span></button><div class="searchbox">
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Table des matières"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Table des matières</span></button><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
 <div class="search-results-controls">
@@ -367,7 +158,8 @@ sagecell.makeSagecell({
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-chaineEuler.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="up-button button" href="chap-theorieGraphes.html" title="Haut"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Haut</span></a><span class="next-button button disabled"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span></nav><div xmlns:pf="https://prefigure.org" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}        
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-chaineEuler.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="up-button button" href="chap-theorieGraphes.html" title="Haut"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Haut</span></a><span class="next-button button disabled"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}        
 \newcommand{\Z}{\mathbb{Z}}                
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Q}{\mathbb{Q}}
@@ -433,7 +225,7 @@ $\Box$
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div xmlns:pf="https://prefigure.org" id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chap-ensfct.html" class="internal"><span class="codenumber">1</span> <span class="title">Ensembles et fonctions</span></a></div>
 <ul class="structural toc-item-list">
@@ -701,9 +493,9 @@ $\Box$
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-chaineEuler.html#exo-connexeEuler" class="internal"><span class="codenumber">7.3.5</span> <span class="title">Exercices</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section active">
+<li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="sec-arbre.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Arbre et arborescence</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list active">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-arbre.html#subsec-arbreDef" class="internal"><span class="codenumber">7.4.1</span> <span class="title">Forêt et arbre</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-arbre.html#subsec-arbreCouvrant" class="internal"><span class="codenumber">7.4.2</span> <span class="title">Arbre couvrant</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-arbre.html#subsec-arborescence" class="internal"><span class="codenumber">7.4.3</span> <span class="title">Arborescence</span></a></div></li>
@@ -713,19 +505,22 @@ $\Box$
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:pf="https://prefigure.org" class="section" id="sec-arbre"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">7.4</span><span class="space"> </span><span class="title">Arbre et arborescence</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-arbre"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Arbre et arborescence</span>
 </h2>
-<section class="introduction" id="intro-arbre"></section><div class="para" id="sec-arbre-3">Pour cette section, on suppose que tous les graphes sont finis, c’est-à-dire qu’ils possèdent un nombre fini de sommets, et donc aussi un nombre fini d’arêtes.</div>
+<section class="introduction" id="intro-arbre"></section><div class="para" id="sec-arbre-3">Pour cette section, on suppose que tous les graphes sont finis, c’est-à-dire qu’ils possèdent un nombre fini de sommets, et donc aussi un nombre fini d’arêtes.<div class="autopermalink" data-description="Paragraphe"><a href="#sec-arbre-3" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
 <section class="subsection" id="subsec-arbreDef"><h3 class="heading hide-type">
-<span class="type">Sous-section</span><span class="space"> </span><span class="codenumber">7.4.1</span><span class="space"> </span><span class="title">Forêt et arbre</span>
+<span class="type">Sous-section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.4.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Forêt et arbre</span>
 </h3>
 <article class="definition definition-like" id="def-arbreForet"><h4 class="heading">
-<span class="type">Définition</span><span class="space"> </span><span class="codenumber">7.4.1</span><span class="period">.</span>
+<span class="type">Définition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.4.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="def-arbreForet-1-1">Un graphe <span class="process-math">\(G=(S,A)\)</span> simple est appelé une <dfn class="terminology">forêt</dfn> s’il ne contient aucun cycle.</div> <div class="para" id="def-arbreForet-1-2">Si en plus le graphe <span class="process-math">\(G\)</span> est connexe, on dira que <span class="process-math">\(G\)</span> est un <dfn class="terminology">arbre</dfn>. Pour expliciter qu’un graphe est un arbre, on notera souvent le graphe <span class="process-math">\(T=(S,A)\)</span> au lieu de <span class="process-math">\(G=(S,A)\text{.}\)</span>
-</div></article><article class="example example-like" id="exe-arbre"><h4 class="heading">
-<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">7.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Une forêt et deux arbres.</span>
+<div class="para" id="def-arbreForet-1-1">Un graphe <span class="process-math">\(G=(S,A)\)</span> simple est appelé une <dfn class="terminology">forêt</dfn> s’il ne contient aucun cycle.<div class="autopermalink" data-description="Paragraphe"><a href="#def-arbreForet-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div> <div class="para" id="def-arbreForet-1-2">Si en plus le graphe <span class="process-math">\(G\)</span> est connexe, on dira que <span class="process-math">\(G\)</span> est un <dfn class="terminology">arbre</dfn>. Pour expliciter qu’un graphe est un arbre, on notera souvent le graphe <span class="process-math">\(T=(S,A)\)</span> au lieu de <span class="process-math">\(G=(S,A)\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#def-arbreForet-1-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Définition 7.4.1"><a href="#def-arbreForet" title="Copy heading and permalink for Définition 7.4.1" aria-label="Copy heading and permalink for Définition 7.4.1">🔗</a></div></article><article class="example example-like" id="exe-arbre"><h4 class="heading">
+<span class="type">Exemple</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.4.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Une forêt et deux arbres.</span>
 </h4>
 <span class="process-math">\(T_1\)</span><span class="process-math">\(T_2\)</span><span class="process-math">\(F\)</span><div id="exe-arbre-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">G=Graph({0:[1,2,3,4],1:[5,6,7],4:[8,9,10],6:[11,12],9:[13,14]})
 print("T1")
@@ -738,69 +533,93 @@ G.show(layout='tree',tree_root=0, save_pos=True)
 <div id="exe-arbre-7" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">G=Graph({0:[1,2,3,4],1:[5,6,7],4:[8,9,10],6:[11,12],9:[13,14],"a":["b","c","d"],"b":["e","f","g"],"e":["h"],"f":["i","j"]})
 print("F")
 G.show(layout='forest', tree_root="a",save_pos=True)
-</script></div></article><article class="proposition theorem-like" id="prop-caractArbre"><h4 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">7.4.3</span><span class="period">.</span>
+</script></div>
+<div class="autopermalink" data-description="Exemple 7.4.2: Une forêt et deux arbres"><a href="#exe-arbre" title="Copy heading and permalink for Exemple 7.4.2: Une forêt et deux arbres" aria-label="Copy heading and permalink for Exemple 7.4.2: Une forêt et deux arbres">🔗</a></div></article><article class="proposition theorem-like" id="prop-caractArbre"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.4.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="prop-caractArbre-1-1">Un graphe <span class="process-math">\(T=(S,A)\)</span> est un arbre si et seulement si pour chaque paire de sommets <span class="process-math">\(s, t\in S\text{,}\)</span> il existe une unique chaîne reliant <span class="process-math">\(s\)</span> et <span class="process-math">\(t\text{.}\)</span>
-</div></article><div class="para" id="subsec-arbreDef-5">On termine la sous-section <a href="sec-arbre.html#subsec-arbreDef" class="internal" title="Sous-section 7.4.1: Forêt et arbre">7.4.1</a> avec deux propositions concernant les arbres.</div>
-<div class="para" id="subsec-arbreDef-6">Tout d’abord, lorsqu’on regarde les graphes d’un arbre, on remarque que certains des sommets ont une caractéristique particulière. En effet, on peut remarquer que pour chaque exemple, il y a toujours des sommets de degré <span class="process-math">\(1\text{.}\)</span> Ceci n’est pas une coïncidence.</div>
-<div class="para" id="subsec-arbreDef-7">Par la suite, on remarque aussi qu’il existe une relation entre le nombre d’arêtes d’un arbre et le nombre de sommets de celui-ci.</div>
-<article class="proposition theorem-like" id="prop-arbreFeuille"><h4 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">7.4.4</span><span class="period">.</span>
-</h4>
-<div class="para" id="prop-arbreFeuille-1-1">Soit <span class="process-math">\(T=(S,A)\)</span> un arbre tel que <span class="process-math">\(|S|\geq 2\text{,}\)</span> alors il existe au moins deux sommets distincts <span class="process-math">\(s, t\in S\)</span> tels que <span class="process-math">\(\deg(s)=\deg(t)=1\text{.}\)</span>
-</div> <details id="prop-arbreFeuille-1-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Démonstration<span class="period">.</span></span></h5></summary><article class="hiddenproof knowl__content"><div class="para" id="prop-arbreFeuille-1-2-1">Puisque <span class="process-math">\(T\)</span> est un graphe connexe avec au moins deux sommets, il existe au moins une chaîne simple de longueur <span class="process-math">\(n\geq 1\text{.}\)</span> Supposons que <span class="process-math">\(s=s_0, s_1, \dots s_n=t\)</span> soit la chaîne simple la plus longue possible dans <span class="process-math">\(T\text{.}\)</span> Une telle chaîne doit nécessairement exister, car le nombre d’arêtes est fini.</div>
-<div class="para" id="prop-arbreFeuille-1-2-2">Puisque <span class="process-math">\(s_{n-1}\)</span> est un voisin de <span class="process-math">\(t\text{,}\)</span> on a que <span class="process-math">\(\deg(t)\geq 1\text{.}\)</span> On veut montrer que P<span class="process-math">\(\deg(t)=1\text{.}\)</span> Supposons le contraire, alors <span class="process-math">\(t\)</span> possède un voisin différent de <span class="process-math">\(s_{n-1}\)</span> et de <span class="process-math">\(s_n\text{.}\)</span> Celui-ci doit aussi être différent de <span class="process-math">\(s_i\text{,}\)</span> <span class="process-math">\(i=0, 1, \dots n-2\text{,}\)</span> car sinon on obtiendrait un cycle dans <span class="process-math">\(T\text{.}\)</span> Notons ce voisin <span class="process-math">\(s_{n+1}\text{.}\)</span> On a alors que <span class="process-math">\(s_0, s_1, \dots s_{n}, s_{n+1}\)</span> est une chaîne simple de longueur <span class="process-math">\(n+1\text{.}\)</span> Ceci est une contradiction, car on avait supposé que la chaîne simple la plus longue était de longueur <span class="process-math">\(n\text{.}\)</span> On doit donc avoir <span class="process-math">\(\deg(t)=1\text{.}\)</span>
+<div class="para" id="prop-caractArbre-1-1">Un graphe <span class="process-math">\(T=(S,A)\)</span> est un arbre si et seulement si pour chaque paire de sommets <span class="process-math">\(s, t\in S\text{,}\)</span> il existe une unique chaîne reliant <span class="process-math">\(s\)</span> et <span class="process-math">\(t\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#prop-caractArbre-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="para" id="prop-arbreFeuille-1-2-3">Par le même argument, on peut montrer que <span class="process-math">\(\deg(s)=1\text{.}\)</span> Ainsi, on a trouvé au moins deux sommets de degré <span class="process-math">\(1\text{.}\)</span>
-</div></article></details></article><div class="para" id="subsec-arbreDef-9">Cette proposition nous pousse donc à donner un nom aux sommets de degré <span class="process-math">\(1\text{,}\)</span> ainsi qu’aux sommets de degré plus grand que <span class="process-math">\(1\text{.}\)</span>
+<div class="autopermalink" data-description="Proposition 7.4.3"><a href="#prop-caractArbre" title="Copy heading and permalink for Proposition 7.4.3" aria-label="Copy heading and permalink for Proposition 7.4.3">🔗</a></div></article><div class="para" id="subsec-arbreDef-5">On termine la sous-section <a href="sec-arbre.html#subsec-arbreDef" class="internal" title="Sous-section 7.4.1: Forêt et arbre">7.4.1</a> avec deux propositions concernant les arbres.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-arbreDef-5" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="para" id="subsec-arbreDef-6">Tout d’abord, lorsqu’on regarde les graphes d’un arbre, on remarque que certains des sommets ont une caractéristique particulière. En effet, on peut remarquer que pour chaque exemple, il y a toujours des sommets de degré <span class="process-math">\(1\text{.}\)</span> Ceci n’est pas une coïncidence.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-arbreDef-6" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="para" id="subsec-arbreDef-7">Par la suite, on remarque aussi qu’il existe une relation entre le nombre d’arêtes d’un arbre et le nombre de sommets de celui-ci.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-arbreDef-7" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="prop-arbreFeuille"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.4.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="prop-arbreFeuille-1-1">Soit <span class="process-math">\(T=(S,A)\)</span> un arbre tel que <span class="process-math">\(|S|\geq 2\text{,}\)</span> alors il existe au moins deux sommets distincts <span class="process-math">\(s, t\in S\)</span> tels que <span class="process-math">\(\deg(s)=\deg(t)=1\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#prop-arbreFeuille-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div> <details id="prop-arbreFeuille-1-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Démonstration<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5></summary><article class="hiddenproof knowl__content"><div class="para" id="prop-arbreFeuille-1-2-1">Puisque <span class="process-math">\(T\)</span> est un graphe connexe avec au moins deux sommets, il existe au moins une chaîne simple de longueur <span class="process-math">\(n\geq 1\text{.}\)</span> Supposons que <span class="process-math">\(s=s_0, s_1, \dots s_n=t\)</span> soit la chaîne simple la plus longue possible dans <span class="process-math">\(T\text{.}\)</span> Une telle chaîne doit nécessairement exister, car le nombre d’arêtes est fini.<div class="autopermalink" data-description="Paragraphe"><a href="#prop-arbreFeuille-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="para" id="prop-arbreFeuille-1-2-2">Puisque <span class="process-math">\(s_{n-1}\)</span> est un voisin de <span class="process-math">\(t\text{,}\)</span> on a que <span class="process-math">\(\deg(t)\geq 1\text{.}\)</span> On veut montrer que P<span class="process-math">\(\deg(t)=1\text{.}\)</span> Supposons le contraire, alors <span class="process-math">\(t\)</span> possède un voisin différent de <span class="process-math">\(s_{n-1}\)</span> et de <span class="process-math">\(s_n\text{.}\)</span> Celui-ci doit aussi être différent de <span class="process-math">\(s_i\text{,}\)</span> <span class="process-math">\(i=0, 1, \dots n-2\text{,}\)</span> car sinon on obtiendrait un cycle dans <span class="process-math">\(T\text{.}\)</span> Notons ce voisin <span class="process-math">\(s_{n+1}\text{.}\)</span> On a alors que <span class="process-math">\(s_0, s_1, \dots s_{n}, s_{n+1}\)</span> est une chaîne simple de longueur <span class="process-math">\(n+1\text{.}\)</span> Ceci est une contradiction, car on avait supposé que la chaîne simple la plus longue était de longueur <span class="process-math">\(n\text{.}\)</span> On doit donc avoir <span class="process-math">\(\deg(t)=1\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#prop-arbreFeuille-1-2-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="para" id="prop-arbreFeuille-1-2-3">Par le même argument, on peut montrer que <span class="process-math">\(\deg(s)=1\text{.}\)</span> Ainsi, on a trouvé au moins deux sommets de degré <span class="process-math">\(1\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#prop-arbreFeuille-1-2-3" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Démonstration 1"><a href="#prop-arbreFeuille-1-2" title="Copy heading and permalink for Démonstration 1" aria-label="Copy heading and permalink for Démonstration 1">🔗</a></div></article></details><div class="autopermalink" data-description="Proposition 7.4.4"><a href="#prop-arbreFeuille" title="Copy heading and permalink for Proposition 7.4.4" aria-label="Copy heading and permalink for Proposition 7.4.4">🔗</a></div></article><div class="para" id="subsec-arbreDef-9">Cette proposition nous pousse donc à donner un nom aux sommets de degré <span class="process-math">\(1\text{,}\)</span> ainsi qu’aux sommets de degré plus grand que <span class="process-math">\(1\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#subsec-arbreDef-9" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <article class="definition definition-like" id="def-feuilleSommetInterne"><h4 class="heading">
-<span class="type">Définition</span><span class="space"> </span><span class="codenumber">7.4.5</span><span class="period">.</span>
+<span class="type">Définition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.4.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="def-feuilleSommetInterne-1-1">
 <div class="para">Soit <span class="process-math">\(T=(S,A)\)</span> un arbre et soit <span class="process-math">\(s\in S\)</span> un sommet quelconque.</div>
 <ul class="disc" id="def-feuilleSommetInterne-1-1-3">
-<li id="def-feuilleSommetInterne-1-1-3-1"><div class="para" id="def-feuilleSommetInterne-1-1-3-1-1">On dit que <span class="process-math">\(s\)</span> est <dfn class="terminology">une feuille</dfn> de l’arbre <span class="process-math">\(T\)</span> si <span class="process-math">\(\deg(s)=1\text{.}\)</span>
-</div></li>
-<li id="def-feuilleSommetInterne-1-1-3-2"><div class="para" id="def-feuilleSommetInterne-1-1-3-2-1">On dit que <span class="process-math">\(s\)</span> est <dfn class="terminology">un sommet interne</dfn>, ou bien <dfn class="terminology">une branche</dfn> de l’arbre <span class="process-math">\(T\)</span> si <span class="process-math">\(\deg(s)&gt;1\text{.}\)</span>
-</div></li>
+<li id="def-feuilleSommetInterne-1-1-3-1">
+<div class="para" id="def-feuilleSommetInterne-1-1-3-1-1">On dit que <span class="process-math">\(s\)</span> est <dfn class="terminology">une feuille</dfn> de l’arbre <span class="process-math">\(T\)</span> si <span class="process-math">\(\deg(s)=1\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#def-feuilleSommetInterne-1-1-3-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Point"><a href="#def-feuilleSommetInterne-1-1-3-1" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+</li>
+<li id="def-feuilleSommetInterne-1-1-3-2">
+<div class="para" id="def-feuilleSommetInterne-1-1-3-2-1">On dit que <span class="process-math">\(s\)</span> est <dfn class="terminology">un sommet interne</dfn>, ou bien <dfn class="terminology">une branche</dfn> de l’arbre <span class="process-math">\(T\)</span> si <span class="process-math">\(\deg(s)&gt;1\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#def-feuilleSommetInterne-1-1-3-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Point"><a href="#def-feuilleSommetInterne-1-1-3-2" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+</li>
 </ul>
-</div></article><article class="proposition theorem-like" id="prop-sommetAreteArbre"><h4 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">7.4.6</span><span class="period">.</span>
+<div class="autopermalink" data-description="Paragraphe"><a href="#def-feuilleSommetInterne-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Définition 7.4.5"><a href="#def-feuilleSommetInterne" title="Copy heading and permalink for Définition 7.4.5" aria-label="Copy heading and permalink for Définition 7.4.5">🔗</a></div></article><article class="proposition theorem-like" id="prop-sommetAreteArbre"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.4.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="prop-sommetAreteArbre-1-1">Soit <span class="process-math">\(T=(S,A)\)</span> un arbre, alors <span class="process-math">\(|S|=|A|+1\text{.}\)</span>
-</div> <details id="prop-sommetAreteArbre-1-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Démonstration<span class="period">.</span></span></h5></summary><article class="hiddenproof knowl__content"><div class="para" id="prop-sommetAreteArbre-1-2-1">On procède par induction sur <span class="process-math">\(|A|\text{.}\)</span> C’est-à-dire qu’on suppose que <span class="process-math">\(|A|=n\text{,}\)</span> et on montre par induction que <span class="process-math">\(|S|=n+1\text{.}\)</span>
+<div class="para" id="prop-sommetAreteArbre-1-1">Soit <span class="process-math">\(T=(S,A)\)</span> un arbre, alors <span class="process-math">\(|S|=|A|+1\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#prop-sommetAreteArbre-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div> <details id="prop-sommetAreteArbre-1-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Démonstration<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5></summary><article class="hiddenproof knowl__content"><div class="para" id="prop-sommetAreteArbre-1-2-1">On procède par induction sur <span class="process-math">\(|A|\text{.}\)</span> C’est-à-dire qu’on suppose que <span class="process-math">\(|A|=n\text{,}\)</span> et on montre par induction que <span class="process-math">\(|S|=n+1\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#prop-sommetAreteArbre-1-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div class="para" id="prop-sommetAreteArbre-1-2-2">
-<em class="alert">ÉTAPE DE BASE:</em> Pour <span class="process-math">\(n=0\text{,}\)</span> alors <span class="process-math">\(T\)</span> ne possède aucune arête. Puisque <span class="process-math">\(T\)</span> est un graphe connexe, on doit nécessairement avoir <span class="process-math">\(|S|=1\text{.}\)</span> Ainsi, on a bien <span class="process-math">\(|S|=n+1=0+1=1\text{.}\)</span>
+<em class="alert">ÉTAPE DE BASE:</em> Pour <span class="process-math">\(n=0\text{,}\)</span> alors <span class="process-math">\(T\)</span> ne possède aucune arête. Puisque <span class="process-math">\(T\)</span> est un graphe connexe, on doit nécessairement avoir <span class="process-math">\(|S|=1\text{.}\)</span> Ainsi, on a bien <span class="process-math">\(|S|=n+1=0+1=1\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#prop-sommetAreteArbre-1-2-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div class="para" id="prop-sommetAreteArbre-1-2-3">
-<em class="alert">ÉTAPE D’INDUCTION:</em> On suppose que si un arbre quelconque possède <span class="process-math">\(k\)</span> arêtes, pour <span class="process-math">\(k\geq 0\text{,}\)</span> alors cet arbre possède <span class="process-math">\(k+1\)</span> sommets. (H.I.)</div>
-<div class="para" id="prop-sommetAreteArbre-1-2-4">Soit <span class="process-math">\(T=(S,A)\)</span> avec <span class="process-math">\(|A|=k+1\text{,}\)</span> on veut montrer, à l’aide de l’H.I. que <span class="process-math">\(|S|=(k+1)+1=k+2\text{.}\)</span> Puisque <span class="process-math">\(k\geq 0\text{,}\)</span> alors <span class="process-math">\(|A|=k+1\geq 1\text{.}\)</span> Si <span class="process-math">\(T\text{,}\)</span> possède au moins une arête, alors <span class="process-math">\(T\)</span> possède au moins deux sommets, c’est-à-dire que <span class="process-math">\(|S|\geq 2\text{.}\)</span> Ainsi, par <a href="sec-arbre.html#prop-arbreFeuille" class="xref" data-knowl="./knowl/xref/prop-arbreFeuille.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Proposition 7.4.4">7.4.4</a>, on sait qu’il existe au moins deux sommets de degré <span class="process-math">\(1\text{.}\)</span> Soit <span class="process-math">\(s_0\in S\)</span> tel que <span class="process-math">\(\deg(s_0)=1\)</span> et <span class="process-math">\(s_1\)</span> l’unique voisin de <span class="process-math">\(s_0\text{.}\)</span> On remarque que si une chaîne simple contient l’arête <span class="process-math">\(\{s_0,s_1\}\text{,}\)</span> alors elle commence (ou termine) nécessairement par cette arête, puisque <span class="process-math">\(\deg(s_0)=1\text{.}\)</span>
+<em class="alert">ÉTAPE D’INDUCTION:</em> On suppose que si un arbre quelconque possède <span class="process-math">\(k\)</span> arêtes, pour <span class="process-math">\(k\geq 0\text{,}\)</span> alors cet arbre possède <span class="process-math">\(k+1\)</span> sommets. (H.I.)<div class="autopermalink" data-description="Paragraphe"><a href="#prop-sommetAreteArbre-1-2-3" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="para" id="prop-sommetAreteArbre-1-2-5">On pose donc <span class="process-math">\(T_0==(S-\{s_0\},A-\{s_0,s_1\})\text{,}\)</span> c’est-à-dire que <span class="process-math">\(T_0\)</span> est l’arbre obtenu en enlevant l’arête <span class="process-math">\(\{s_0,s_1\}\)</span> et le sommet <span class="process-math">\(s_0\)</span> à <span class="process-math">\(T\text{.}\)</span> Ainsi, <span class="process-math">\(|A-\{s_0,s_1\}|=k\)</span> et <span class="process-math">\(|S-\{s_0\}|=|S|-1\text{.}\)</span> Par hypothèse d’induction, on a <span class="process-math">\(|S-\{s_0\}|=k+1\text{,}\)</span> d’où <span class="process-math">\(|S|=(k+1)+1=k+2\text{.}\)</span>
+<div class="para" id="prop-sommetAreteArbre-1-2-4">Soit <span class="process-math">\(T=(S,A)\)</span> avec <span class="process-math">\(|A|=k+1\text{,}\)</span> on veut montrer, à l’aide de l’H.I. que <span class="process-math">\(|S|=(k+1)+1=k+2\text{.}\)</span> Puisque <span class="process-math">\(k\geq 0\text{,}\)</span> alors <span class="process-math">\(|A|=k+1\geq 1\text{.}\)</span> Si <span class="process-math">\(T\text{,}\)</span> possède au moins une arête, alors <span class="process-math">\(T\)</span> possède au moins deux sommets, c’est-à-dire que <span class="process-math">\(|S|\geq 2\text{.}\)</span> Ainsi, par <a href="sec-arbre.html#prop-arbreFeuille" class="xref" data-knowl="./knowl/xref/prop-arbreFeuille.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Proposition 7.4.4">7.4.4</a>, on sait qu’il existe au moins deux sommets de degré <span class="process-math">\(1\text{.}\)</span> Soit <span class="process-math">\(s_0\in S\)</span> tel que <span class="process-math">\(\deg(s_0)=1\)</span> et <span class="process-math">\(s_1\)</span> l’unique voisin de <span class="process-math">\(s_0\text{.}\)</span> On remarque que si une chaîne simple contient l’arête <span class="process-math">\(\{s_0,s_1\}\text{,}\)</span> alors elle commence (ou termine) nécessairement par cette arête, puisque <span class="process-math">\(\deg(s_0)=1\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#prop-sommetAreteArbre-1-2-4" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="para" id="prop-sommetAreteArbre-1-2-6">On a montré que si <span class="process-math">\(|A|=0\text{,}\)</span> alors <span class="process-math">\(|S|=0+1=1\text{.}\)</span> De plus, on a montré que si on suppose que <span class="process-math">\(|A|=k\)</span> implique que <span class="process-math">\(|S|=k+1\)</span> pour un certain <span class="process-math">\(k\geq 0\text{,}\)</span> alors <span class="process-math">\(|A|=k+1\)</span> implique <span class="process-math">\(|S|=k+2\text{.}\)</span> Par le principe d’induction, on a donc bien montré que si <span class="process-math">\(|A|=n\text{,}\)</span> alors <span class="process-math">\(|S|=n+1\)</span> pour tout entier <span class="process-math">\(n\geq 0\text{.}\)</span>
-</div></article></details></article></section><section class="subsection" id="subsec-arbreCouvrant"><h3 class="heading hide-type">
-<span class="type">Sous-section</span><span class="space"> </span><span class="codenumber">7.4.2</span><span class="space"> </span><span class="title">Arbre couvrant</span>
+<div class="para" id="prop-sommetAreteArbre-1-2-5">On pose donc <span class="process-math">\(T_0==(S-\{s_0\},A-\{s_0,s_1\})\text{,}\)</span> c’est-à-dire que <span class="process-math">\(T_0\)</span> est l’arbre obtenu en enlevant l’arête <span class="process-math">\(\{s_0,s_1\}\)</span> et le sommet <span class="process-math">\(s_0\)</span> à <span class="process-math">\(T\text{.}\)</span> Ainsi, <span class="process-math">\(|A-\{s_0,s_1\}|=k\)</span> et <span class="process-math">\(|S-\{s_0\}|=|S|-1\text{.}\)</span> Par hypothèse d’induction, on a <span class="process-math">\(|S-\{s_0\}|=k+1\text{,}\)</span> d’où <span class="process-math">\(|S|=(k+1)+1=k+2\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#prop-sommetAreteArbre-1-2-5" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="para" id="prop-sommetAreteArbre-1-2-6">On a montré que si <span class="process-math">\(|A|=0\text{,}\)</span> alors <span class="process-math">\(|S|=0+1=1\text{.}\)</span> De plus, on a montré que si on suppose que <span class="process-math">\(|A|=k\)</span> implique que <span class="process-math">\(|S|=k+1\)</span> pour un certain <span class="process-math">\(k\geq 0\text{,}\)</span> alors <span class="process-math">\(|A|=k+1\)</span> implique <span class="process-math">\(|S|=k+2\text{.}\)</span> Par le principe d’induction, on a donc bien montré que si <span class="process-math">\(|A|=n\text{,}\)</span> alors <span class="process-math">\(|S|=n+1\)</span> pour tout entier <span class="process-math">\(n\geq 0\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#prop-sommetAreteArbre-1-2-6" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Démonstration 1"><a href="#prop-sommetAreteArbre-1-2" title="Copy heading and permalink for Démonstration 1" aria-label="Copy heading and permalink for Démonstration 1">🔗</a></div></article></details><div class="autopermalink" data-description="Proposition 7.4.6"><a href="#prop-sommetAreteArbre" title="Copy heading and permalink for Proposition 7.4.6" aria-label="Copy heading and permalink for Proposition 7.4.6">🔗</a></div></article><div class="autopermalink" data-description="Sous-section 7.4.1: Forêt et arbre"><a href="#subsec-arbreDef" title="Copy heading and permalink for Sous-section 7.4.1: Forêt et arbre" aria-label="Copy heading and permalink for Sous-section 7.4.1: Forêt et arbre">🔗</a></div></section><section class="subsection" id="subsec-arbreCouvrant"><h3 class="heading hide-type">
+<span class="type">Sous-section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.4.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Arbre couvrant</span>
 </h3>
-<section class="introduction" id="intro-arbreCouvrant"><div class="para" id="intro-arbreCouvrant-1">Lorsqu’on conçoit des algorithmes concernant les graphes, il est souvent utile d’avoir une méthode afin de nous assurer de parcourir l’ensemble des sommets de façon systématique. Une méthode pour accomplir cette tâche est de parcourir les sommets de notre graphe à l’aide d’un arbre couvrant.</div></section><article class="definition definition-like" id="def-arbreCouvrant"><h4 class="heading">
-<span class="type">Définition</span><span class="space"> </span><span class="codenumber">7.4.7</span><span class="period">.</span>
+<section class="introduction" id="intro-arbreCouvrant"><div class="para" id="intro-arbreCouvrant-1">Lorsqu’on conçoit des algorithmes concernant les graphes, il est souvent utile d’avoir une méthode afin de nous assurer de parcourir l’ensemble des sommets de façon systématique. Une méthode pour accomplir cette tâche est de parcourir les sommets de notre graphe à l’aide d’un arbre couvrant.<div class="autopermalink" data-description="Paragraphe"><a href="#intro-arbreCouvrant-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div></section><article class="definition definition-like" id="def-arbreCouvrant"><h4 class="heading">
+<span class="type">Définition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.4.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="def-arbreCouvrant-1-1">Soit <span class="process-math">\(G=(S,A)\)</span> un graphe simple connexe. Un <dfn class="terminology">arbre couvrant de <span class="process-math">\(G\)</span></dfn> est un sous-graphe <span class="process-math">\(T=(S,A_0)\)</span> tel que <span class="process-math">\(T\)</span> est un arbre. Ainsi, un arbre couvrant de <span class="process-math">\(G\)</span> est un arbre ayant les mêmes sommets que <span class="process-math">\(G\text{.}\)</span>
-</div></article><div class="para" id="subsec-arbreCouvrant-4">Pour pouvoir démontrer la proposition <a href="sec-arbre.html#prop-arbreCouvrant" class="xref" data-knowl="./knowl/xref/prop-arbreCouvrant.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Proposition 7.4.10">7.4.10</a>, on a besoin d’un résultat intermédiaire. Puisque le résultat sert principalement à démontrer une proposition plus importante, on dira qu’il s’agit d’un lemme.</div>
-<article class="lemma theorem-like" id="lem-arbreCouvrant"><h4 class="heading">
-<span class="type">Lemme</span><span class="space"> </span><span class="codenumber">7.4.8</span><span class="period">.</span>
-</h4>
-<div class="para" id="lem-arbreCouvrant-1-1">Soit <span class="process-math">\(G=(S,A)\)</span> un graphe connexe. Supposons que <span class="process-math">\(s_0, s_1, \dots, s_{n-1}, s_0\)</span> soit un cycle simple de longueur <span class="process-math">\(n\)</span> dans <span class="process-math">\(G\text{.}\)</span> Le <a href="sec-introGraphe.html#def-retraitArete" class="xref" data-knowl="./knowl/xref/def-retraitArete.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Définition 7.1.51">graphe <span class="process-math">\(G_0=G-\{s_0,s_{n-1}\}\)</span></a> est aussi un graphe connexe. Pour ce faire, on devra utiliser le fait que la chaîne <span class="process-math">\(s_0, s_1, \dots s_{n-1}\)</span> est une chaîne de <span class="process-math">\(G_0\)</span> reliant <span class="process-math">\(s_0\)</span> et <span class="process-math">\(s_{n-1}\text{.}\)</span>
-</div></article><details id="lem-arbreCouvrant-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Démonstration<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="lem-arbreCouvrant-2-1">Soit <span class="process-math">\(s, t\in S\text{,}\)</span> puisque <span class="process-math">\(G\)</span> est connexe, on sait qu’il y a une chaîne simple reliant <span class="process-math">\(s\)</span> et <span class="process-math">\(t\text{.}\)</span> Si cette chaîne ne passe pas par <span class="process-math">\(\{s_0, s_{n-1}\}\text{,}\)</span> alors cette chaîne est aussi une chaîne de <span class="process-math">\(G_0\text{.}\)</span> Si cette chaîne passe par <span class="process-math">\(s_0, s_{n-1}\text{,}\)</span> alors on peut écrire cette chaîne de la façon suivante.</div>
-<div class="para" id="lem-arbreCouvrant-2-2">On a <span class="process-math">\(s= t_0, t_1, \dots, t_{i-1}, t_{i}, t_{i+1}, t_{i+2}, \dots, t_{m}=t  \text{,}\)</span> avec <span class="process-math">\(t_{i}=s_0\)</span> et <span class="process-math">\(t_{i+1}=s_{n-1}\text{.}\)</span> Mais alors on sait qu’il y a une chaîne de <span class="process-math">\(G_0\)</span> entre <span class="process-math">\(t_0=s\)</span> et <span class="process-math">\(t_{i}\text{,}\)</span> qu’il y a une chaîne de <span class="process-math">\(G_0\)</span> entre <span class="process-math">\(t_i=s_0\)</span> et <span class="process-math">\(t_{i+1}=s_{n-1}\)</span> et qu’il y a une chaîne de <span class="process-math">\(G_0\)</span> entre <span class="process-math">\(t_{i+1}\)</span> et <span class="process-math">\(t_{m}=t\text{.}\)</span> Ainsi, par l’exercice <a href="sec-chaineEuler.html#exo-addChaine" class="xref" data-knowl="./knowl/xref/exo-addChaine.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Exercice 7.3.5.2">7.3.5.2</a>, il y a une chaîne entre <span class="process-math">\(s\)</span> et <span class="process-math">\(t\)</span> dans <span class="process-math">\(G_0\text{.}\)</span>
+<div class="para" id="def-arbreCouvrant-1-1">Soit <span class="process-math">\(G=(S,A)\)</span> un graphe simple connexe. Un <dfn class="terminology">arbre couvrant de <span class="process-math">\(G\)</span></dfn> est un sous-graphe <span class="process-math">\(T=(S,A_0)\)</span> tel que <span class="process-math">\(T\)</span> est un arbre. Ainsi, un arbre couvrant de <span class="process-math">\(G\)</span> est un arbre ayant les mêmes sommets que <span class="process-math">\(G\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#def-arbreCouvrant-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="para" id="lem-arbreCouvrant-2-3">On a montré qu’il existe une chaîne de <span class="process-math">\(G_0\)</span> entre chaque paire de sommets, c’est-à-dire que <span class="process-math">\(G_0\)</span> est connexe.</div></article></details><article class="example example-like" id="exe-arbreCouvrantLemme"><h4 class="heading">
-<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">7.4.9</span><span class="period">.</span>
+<div class="autopermalink" data-description="Définition 7.4.7"><a href="#def-arbreCouvrant" title="Copy heading and permalink for Définition 7.4.7" aria-label="Copy heading and permalink for Définition 7.4.7">🔗</a></div></article><div class="para" id="subsec-arbreCouvrant-4">Pour pouvoir démontrer la proposition <a href="sec-arbre.html#prop-arbreCouvrant" class="xref" data-knowl="./knowl/xref/prop-arbreCouvrant.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Proposition 7.4.10">7.4.10</a>, on a besoin d’un résultat intermédiaire. Puisque le résultat sert principalement à démontrer une proposition plus importante, on dira qu’il s’agit d’un lemme.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-arbreCouvrant-4" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<article class="lemma theorem-like" id="lem-arbreCouvrant"><h4 class="heading">
+<span class="type">Lemme</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.4.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="exe-arbreCouvrantLemme-1">On montre un cas particulier du lemme précédent pour bien visualiser. Soit <span class="process-math">\(G\)</span> le graphe ci-dessous, et <span class="process-math">\(G_1\)</span> le graphe obtenu de <span class="process-math">\(G\)</span> en enlevant l’arête <span class="process-math">\(\{1, 2\}\)</span> de <span class="process-math">\(G\text{.}\)</span> On remarque que la chaîne <span class="process-math">\(0, 1, 2, 3\)</span> est une chaîne de <span class="process-math">\(G\)</span> reliant <span class="process-math">\(0\)</span> avec <span class="process-math">\(3\text{.}\)</span> Puisque <span class="process-math">\(G_1\)</span> ne possède pas l’arête <span class="process-math">\(\{1,2\}\text{,}\)</span> cette chaîne n’est pas une chaîne de <span class="process-math">\(G_1\text{.}\)</span> Cependant, puisque <span class="process-math">\(\{1,2\}\)</span> fait parti d’un cycle dans <span class="process-math">\(G\text{,}\)</span> on remarque que la chaîne <span class="process-math">\(0,1,4,5,6,7,2,3\)</span> et une chaîne de <span class="process-math">\(G_1\)</span> reliant <span class="process-math">\(0\)</span> et <span class="process-math">\(3\text{.}\)</span>
+<div class="para" id="lem-arbreCouvrant-1-1">Soit <span class="process-math">\(G=(S,A)\)</span> un graphe connexe. Supposons que <span class="process-math">\(s_0, s_1, \dots, s_{n-1}, s_0\)</span> soit un cycle simple de longueur <span class="process-math">\(n\)</span> dans <span class="process-math">\(G\text{.}\)</span> Le <a href="sec-introGraphe.html#def-retraitArete" class="xref" data-knowl="./knowl/xref/def-retraitArete.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Définition 7.1.51">graphe <span class="process-math">\(G_0=G-\{s_0,s_{n-1}\}\)</span></a> est aussi un graphe connexe. Pour ce faire, on devra utiliser le fait que la chaîne <span class="process-math">\(s_0, s_1, \dots s_{n-1}\)</span> est une chaîne de <span class="process-math">\(G_0\)</span> reliant <span class="process-math">\(s_0\)</span> et <span class="process-math">\(s_{n-1}\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#lem-arbreCouvrant-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Lemme 7.4.8"><a href="#lem-arbreCouvrant" title="Copy heading and permalink for Lemme 7.4.8" aria-label="Copy heading and permalink for Lemme 7.4.8">🔗</a></div></article><details id="lem-arbreCouvrant-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Démonstration<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="lem-arbreCouvrant-2-1">Soit <span class="process-math">\(s, t\in S\text{,}\)</span> puisque <span class="process-math">\(G\)</span> est connexe, on sait qu’il y a une chaîne simple reliant <span class="process-math">\(s\)</span> et <span class="process-math">\(t\text{.}\)</span> Si cette chaîne ne passe pas par <span class="process-math">\(\{s_0, s_{n-1}\}\text{,}\)</span> alors cette chaîne est aussi une chaîne de <span class="process-math">\(G_0\text{.}\)</span> Si cette chaîne passe par <span class="process-math">\(s_0, s_{n-1}\text{,}\)</span> alors on peut écrire cette chaîne de la façon suivante.<div class="autopermalink" data-description="Paragraphe"><a href="#lem-arbreCouvrant-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="para" id="lem-arbreCouvrant-2-2">On a <span class="process-math">\(s= t_0, t_1, \dots, t_{i-1}, t_{i}, t_{i+1}, t_{i+2}, \dots, t_{m}=t  \text{,}\)</span> avec <span class="process-math">\(t_{i}=s_0\)</span> et <span class="process-math">\(t_{i+1}=s_{n-1}\text{.}\)</span> Mais alors on sait qu’il y a une chaîne de <span class="process-math">\(G_0\)</span> entre <span class="process-math">\(t_0=s\)</span> et <span class="process-math">\(t_{i}\text{,}\)</span> qu’il y a une chaîne de <span class="process-math">\(G_0\)</span> entre <span class="process-math">\(t_i=s_0\)</span> et <span class="process-math">\(t_{i+1}=s_{n-1}\)</span> et qu’il y a une chaîne de <span class="process-math">\(G_0\)</span> entre <span class="process-math">\(t_{i+1}\)</span> et <span class="process-math">\(t_{m}=t\text{.}\)</span> Ainsi, par l’exercice <a href="sec-chaineEuler.html#exo-addChaine" class="xref" data-knowl="./knowl/xref/exo-addChaine.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Exercice 7.3.5.2">7.3.5.2</a>, il y a une chaîne entre <span class="process-math">\(s\)</span> et <span class="process-math">\(t\)</span> dans <span class="process-math">\(G_0\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#lem-arbreCouvrant-2-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="para" id="lem-arbreCouvrant-2-3">On a montré qu’il existe une chaîne de <span class="process-math">\(G_0\)</span> entre chaque paire de sommets, c’est-à-dire que <span class="process-math">\(G_0\)</span> est connexe.<div class="autopermalink" data-description="Paragraphe"><a href="#lem-arbreCouvrant-2-3" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Démonstration 7.4.8.1"><a href="#lem-arbreCouvrant-2" title="Copy heading and permalink for Démonstration 7.4.8.1" aria-label="Copy heading and permalink for Démonstration 7.4.8.1">🔗</a></div></article></details><article class="example example-like" id="exe-arbreCouvrantLemme"><h4 class="heading">
+<span class="type">Exemple</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.4.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="exe-arbreCouvrantLemme-1">On montre un cas particulier du lemme précédent pour bien visualiser. Soit <span class="process-math">\(G\)</span> le graphe ci-dessous, et <span class="process-math">\(G_1\)</span> le graphe obtenu de <span class="process-math">\(G\)</span> en enlevant l’arête <span class="process-math">\(\{1, 2\}\)</span> de <span class="process-math">\(G\text{.}\)</span> On remarque que la chaîne <span class="process-math">\(0, 1, 2, 3\)</span> est une chaîne de <span class="process-math">\(G\)</span> reliant <span class="process-math">\(0\)</span> avec <span class="process-math">\(3\text{.}\)</span> Puisque <span class="process-math">\(G_1\)</span> ne possède pas l’arête <span class="process-math">\(\{1,2\}\text{,}\)</span> cette chaîne n’est pas une chaîne de <span class="process-math">\(G_1\text{.}\)</span> Cependant, puisque <span class="process-math">\(\{1,2\}\)</span> fait parti d’un cycle dans <span class="process-math">\(G\text{,}\)</span> on remarque que la chaîne <span class="process-math">\(0,1,4,5,6,7,2,3\)</span> et une chaîne de <span class="process-math">\(G_1\)</span> reliant <span class="process-math">\(0\)</span> et <span class="process-math">\(3\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#exe-arbreCouvrantLemme-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
 <div id="exe-arbreCouvrantLemme-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">G=Graph({0:[1],1:[2,4],2:[3,7],4:[5],5:[6],6:[7]})
 print("G")
@@ -809,51 +628,77 @@ G.delete_edge((1,2))
 print()
 print("G1")
 G.show()
-</script></div></article><article class="proposition theorem-like" id="prop-arbreCouvrant"><h4 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">7.4.10</span><span class="period">.</span>
+</script></div>
+<div class="autopermalink" data-description="Exemple 7.4.9"><a href="#exe-arbreCouvrantLemme" title="Copy heading and permalink for Exemple 7.4.9" aria-label="Copy heading and permalink for Exemple 7.4.9">🔗</a></div></article><article class="proposition theorem-like" id="prop-arbreCouvrant"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.4.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="prop-arbreCouvrant-1-1">Soit <span class="process-math">\(G=(S,A)\)</span> un graphe simple connexe, alors <span class="process-math">\(G\)</span> possède un arbre couvrant <span class="process-math">\(T\text{.}\)</span>
-</div></article><details id="prop-arbreCouvrant-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Démonstration<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="prop-arbreCouvrant-2-1">On construit une suite <span class="process-math">\(G_k=(S,A_k)\)</span> de sous-graphe de <span class="process-math">\(G\)</span> par récurrence, c’est-à-dire qu’on définit <span class="process-math">\(G_0\text{,}\)</span> et ensuite, ayant défini <span class="process-math">\(G_k=(S,A_k)\)</span> pour <span class="process-math">\(k\geq 0\text{,}\)</span> on définit <span class="process-math">\(G_{k+1}\text{.}\)</span> On va continuer le processus jusqu’à ce que le graphe obtenu soit un arbre. Ce processus se terminera nécessairement en un nombre fini d’étape, disons <span class="process-math">\(n\)</span> étapes. À la fin, on posera <span class="process-math">\(T=G_n\text{.}\)</span>
+<div class="para" id="prop-arbreCouvrant-1-1">Soit <span class="process-math">\(G=(S,A)\)</span> un graphe simple connexe, alors <span class="process-math">\(G\)</span> possède un arbre couvrant <span class="process-math">\(T\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#prop-arbreCouvrant-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="para" id="prop-arbreCouvrant-2-2">On pose <span class="process-math">\(G_0=G\text{.}\)</span> Ensuite, on suppose qu’on a défini <span class="process-math">\(G_k=(S,A_k)\)</span> un graphe simple connexe pour <span class="process-math">\(k\geq 0\text{.}\)</span> Si <span class="process-math">\(G_k\)</span> est un arbre, alors il s’agit d’un arbre couvrant pour <span class="process-math">\(G\text{,}\)</span> et on a terminé. Si au contraire <span class="process-math">\(G_k\)</span> n’est pas un arbre, on doit définir <span class="process-math">\(G_{k+1}\)</span> un graphe simple connexe contenant une arête de moins que <span class="process-math">\(G_k\text{.}\)</span>
+<div class="autopermalink" data-description="Proposition 7.4.10"><a href="#prop-arbreCouvrant" title="Copy heading and permalink for Proposition 7.4.10" aria-label="Copy heading and permalink for Proposition 7.4.10">🔗</a></div></article><details id="prop-arbreCouvrant-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Démonstration<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="prop-arbreCouvrant-2-1">On construit une suite <span class="process-math">\(G_k=(S,A_k)\)</span> de sous-graphe de <span class="process-math">\(G\)</span> par récurrence, c’est-à-dire qu’on définit <span class="process-math">\(G_0\text{,}\)</span> et ensuite, ayant défini <span class="process-math">\(G_k=(S,A_k)\)</span> pour <span class="process-math">\(k\geq 0\text{,}\)</span> on définit <span class="process-math">\(G_{k+1}\text{.}\)</span> On va continuer le processus jusqu’à ce que le graphe obtenu soit un arbre. Ce processus se terminera nécessairement en un nombre fini d’étape, disons <span class="process-math">\(n\)</span> étapes. À la fin, on posera <span class="process-math">\(T=G_n\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#prop-arbreCouvrant-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="para" id="prop-arbreCouvrant-2-3">Puisque <span class="process-math">\(G_k\)</span> n’est pas un arbre, <span class="process-math">\(G_k\)</span> possède un cycle, disons le cycle <span class="process-math">\(s_0, s_1, \dots, s_{m-1}, s_m\text{,}\)</span> avec <span class="process-math">\(s_{m}=s_0\text{.}\)</span> On pose alors <span class="process-math">\(G_{k+1}=(S,A_{k+1}):= G_k-\{s_{m-1}, s_m\}=(S,A_k-\{s_{m-1},s_m\})\text{.}\)</span> Le graphe obtenu est donc un graphe avec les mêmes sommets que <span class="process-math">\(G\text{,}\)</span> possédant une arête de moins que le graphe <span class="process-math">\(G_k\text{.}\)</span> On doit vérifier qu’il s’agit toujours de graphe connexe. Or, par le lemme <a href="sec-arbre.html#lem-arbreCouvrant" class="xref" data-knowl="./knowl/xref/lem-arbreCouvrant.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Lemme 7.4.8">7.4.8</a>, on sait que <span class="process-math">\(G_{k+1}\)</span> est connexe.</div>
-<div class="para" id="prop-arbreCouvrant-2-4">Puisqu’on enlève une arête à chaque étape, et que le nombre d’arêtes de <span class="process-math">\(G\)</span> est fini, on doit nécessairement arriver à un point où <span class="process-math">\(G_k\)</span> ne possède pas de cycle. Si le processus se termine avec <span class="process-math">\(k=n\text{,}\)</span> alors on pose <span class="process-math">\(T=G_n\text{.}\)</span> Puisque <span class="process-math">\(T\)</span> possède les mêmes sommets que <span class="process-math">\(G\text{,}\)</span> est connexe et ne possède aucun cycle. <span class="process-math">\(T\)</span> est donc bien un arbre couvrant de <span class="process-math">\(G\text{.}\)</span>
-</div></article></details></section><section class="subsection" id="subsec-arborescence"><h3 class="heading hide-type">
-<span class="type">Sous-section</span><span class="space"> </span><span class="codenumber">7.4.3</span><span class="space"> </span><span class="title">Arborescence</span>
+<div class="para" id="prop-arbreCouvrant-2-2">On pose <span class="process-math">\(G_0=G\text{.}\)</span> Ensuite, on suppose qu’on a défini <span class="process-math">\(G_k=(S,A_k)\)</span> un graphe simple connexe pour <span class="process-math">\(k\geq 0\text{.}\)</span> Si <span class="process-math">\(G_k\)</span> est un arbre, alors il s’agit d’un arbre couvrant pour <span class="process-math">\(G\text{,}\)</span> et on a terminé. Si au contraire <span class="process-math">\(G_k\)</span> n’est pas un arbre, on doit définir <span class="process-math">\(G_{k+1}\)</span> un graphe simple connexe contenant une arête de moins que <span class="process-math">\(G_k\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#prop-arbreCouvrant-2-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="para" id="prop-arbreCouvrant-2-3">Puisque <span class="process-math">\(G_k\)</span> n’est pas un arbre, <span class="process-math">\(G_k\)</span> possède un cycle, disons le cycle <span class="process-math">\(s_0, s_1, \dots, s_{m-1}, s_m\text{,}\)</span> avec <span class="process-math">\(s_{m}=s_0\text{.}\)</span> On pose alors <span class="process-math">\(G_{k+1}=(S,A_{k+1}):= G_k-\{s_{m-1}, s_m\}=(S,A_k-\{s_{m-1},s_m\})\text{.}\)</span> Le graphe obtenu est donc un graphe avec les mêmes sommets que <span class="process-math">\(G\text{,}\)</span> possédant une arête de moins que le graphe <span class="process-math">\(G_k\text{.}\)</span> On doit vérifier qu’il s’agit toujours de graphe connexe. Or, par le lemme <a href="sec-arbre.html#lem-arbreCouvrant" class="xref" data-knowl="./knowl/xref/lem-arbreCouvrant.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Lemme 7.4.8">7.4.8</a>, on sait que <span class="process-math">\(G_{k+1}\)</span> est connexe.<div class="autopermalink" data-description="Paragraphe"><a href="#prop-arbreCouvrant-2-3" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="para" id="prop-arbreCouvrant-2-4">Puisqu’on enlève une arête à chaque étape, et que le nombre d’arêtes de <span class="process-math">\(G\)</span> est fini, on doit nécessairement arriver à un point où <span class="process-math">\(G_k\)</span> ne possède pas de cycle. Si le processus se termine avec <span class="process-math">\(k=n\text{,}\)</span> alors on pose <span class="process-math">\(T=G_n\text{.}\)</span> Puisque <span class="process-math">\(T\)</span> possède les mêmes sommets que <span class="process-math">\(G\text{,}\)</span> est connexe et ne possède aucun cycle. <span class="process-math">\(T\)</span> est donc bien un arbre couvrant de <span class="process-math">\(G\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#prop-arbreCouvrant-2-4" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Démonstration 7.4.10.1"><a href="#prop-arbreCouvrant-2" title="Copy heading and permalink for Démonstration 7.4.10.1" aria-label="Copy heading and permalink for Démonstration 7.4.10.1">🔗</a></div></article></details><div class="autopermalink" data-description="Sous-section 7.4.2: Arbre couvrant"><a href="#subsec-arbreCouvrant" title="Copy heading and permalink for Sous-section 7.4.2: Arbre couvrant" aria-label="Copy heading and permalink for Sous-section 7.4.2: Arbre couvrant">🔗</a></div></section><section class="subsection" id="subsec-arborescence"><h3 class="heading hide-type">
+<span class="type">Sous-section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.4.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Arborescence</span>
 </h3>
-<section class="introduction" id="intro-arborescence"><div class="para" id="intro-arborescence-1">Un exemple classique d’utilisation des arbres est les arbres généalogiques. Une façon de représenter un arbre généalogique est de commencer par un ancêtre commun de la famille, qu’on représente par un sommet, et de relier ce sommet par une arête  à un sommet représentant chacun des enfants de cette personne. Par la suite, on ajoute un sommet pour chaque enfant de la génération suivante, reliant les enfants à leur parent.</div>
-<div class="para" id="intro-arborescence-2">On veut utiliser cette idée afin de représenter les arbres, c’est-à-dire qu’on choisira un sommet pour être l’ancêtre de tous les autres sommets. Ceci permettra de donner un certain ordre à nos arbres. Pour chaque sommet, on pourra considérer l’unique chaîne simple le reliant à l’ancêtre commun. La longueur de cette chaîne représentera en quelque sorte la génération à laquelle chaque sommet appartient.</div>
-<div class="para" id="intro-arborescence-3">Cette représentation est très utile lorsqu’on veut représenter un arbre de décision, c’est-à-dire un arbre permettant de répondre à un problème particulier. En effet, cette représentation nous permettra de donner une longueur minimale associée à notre arbre de décision. Ceci servira à vérifier si l’algorithme utilisé peut être optimisé, ou bien s’il s’agit déjà de l’algorithme le plus efficace.</div>
-<div class="para" id="intro-arborescence-4">La combinaison d’un arbre et de notre ancêtre commun est ce qu’on appelle une arborescence. Ainsi, une arborescence n’est rien d’autre qu’un arbre pour lequel on a choisi un sommet particulier.</div></section><article class="definition definition-like" id="def-arborescence"><h4 class="heading">
-<span class="type">Définition</span><span class="space"> </span><span class="codenumber">7.4.11</span><span class="period">.</span>
+<section class="introduction" id="intro-arborescence"><div class="para" id="intro-arborescence-1">Un exemple classique d’utilisation des arbres est les arbres généalogiques. Une façon de représenter un arbre généalogique est de commencer par un ancêtre commun de la famille, qu’on représente par un sommet, et de relier ce sommet par une arête  à un sommet représentant chacun des enfants de cette personne. Par la suite, on ajoute un sommet pour chaque enfant de la génération suivante, reliant les enfants à leur parent.<div class="autopermalink" data-description="Paragraphe"><a href="#intro-arborescence-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="para" id="intro-arborescence-2">On veut utiliser cette idée afin de représenter les arbres, c’est-à-dire qu’on choisira un sommet pour être l’ancêtre de tous les autres sommets. Ceci permettra de donner un certain ordre à nos arbres. Pour chaque sommet, on pourra considérer l’unique chaîne simple le reliant à l’ancêtre commun. La longueur de cette chaîne représentera en quelque sorte la génération à laquelle chaque sommet appartient.<div class="autopermalink" data-description="Paragraphe"><a href="#intro-arborescence-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="para" id="intro-arborescence-3">Cette représentation est très utile lorsqu’on veut représenter un arbre de décision, c’est-à-dire un arbre permettant de répondre à un problème particulier. En effet, cette représentation nous permettra de donner une longueur minimale associée à notre arbre de décision. Ceci servira à vérifier si l’algorithme utilisé peut être optimisé, ou bien s’il s’agit déjà de l’algorithme le plus efficace.<div class="autopermalink" data-description="Paragraphe"><a href="#intro-arborescence-3" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="para" id="intro-arborescence-4">La combinaison d’un arbre et de notre ancêtre commun est ce qu’on appelle une arborescence. Ainsi, une arborescence n’est rien d’autre qu’un arbre pour lequel on a choisi un sommet particulier.<div class="autopermalink" data-description="Paragraphe"><a href="#intro-arborescence-4" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div></section><article class="definition definition-like" id="def-arborescence"><h4 class="heading">
+<span class="type">Définition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.4.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="def-arborescence-1-1">Une <dfn class="terminology">arborescence</dfn> est une paire <span class="process-math">\((T,r)\)</span> où <span class="process-math">\(T=(S,A)\)</span> est un arbre et <span class="process-math">\(r\in S\)</span> est un sommet de <span class="process-math">\(T\text{.}\)</span> On appellera <span class="process-math">\(r\)</span> la racine de <span class="process-math">\(T\text{.}\)</span>
-</div></article><div class="para" id="subsec-arborescence-4">Si <span class="process-math">\((T,r)\)</span> est une arborescence, puisque <span class="process-math">\(T\)</span> est un arbre, pour tout sommet <span class="process-math">\(s\)</span> de <span class="process-math">\(T\text{,}\)</span> il existe une unique chaîne simple entre <span class="process-math">\(r\)</span> et <span class="process-math">\(s\text{.}\)</span> Ceci nous permet de donner les définitions suivantes.</div>
+<div class="para" id="def-arborescence-1-1">Une <dfn class="terminology">arborescence</dfn> est une paire <span class="process-math">\((T,r)\)</span> où <span class="process-math">\(T=(S,A)\)</span> est un arbre et <span class="process-math">\(r\in S\)</span> est un sommet de <span class="process-math">\(T\text{.}\)</span> On appellera <span class="process-math">\(r\)</span> la racine de <span class="process-math">\(T\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#def-arborescence-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Définition 7.4.11"><a href="#def-arborescence" title="Copy heading and permalink for Définition 7.4.11" aria-label="Copy heading and permalink for Définition 7.4.11">🔗</a></div></article><div class="para" id="subsec-arborescence-4">Si <span class="process-math">\((T,r)\)</span> est une arborescence, puisque <span class="process-math">\(T\)</span> est un arbre, pour tout sommet <span class="process-math">\(s\)</span> de <span class="process-math">\(T\text{,}\)</span> il existe une unique chaîne simple entre <span class="process-math">\(r\)</span> et <span class="process-math">\(s\text{.}\)</span> Ceci nous permet de donner les définitions suivantes.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-arborescence-4" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
 <article class="definition definition-like" id="def-arboDescendant"><h4 class="heading">
-<span class="type">Définition</span><span class="space"> </span><span class="codenumber">7.4.12</span><span class="period">.</span>
+<span class="type">Définition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.4.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="def-arboDescendant-1-1">Soit <span class="process-math">\((T,r)\)</span> une arborescence et soit <span class="process-math">\(s\)</span> un sommet de <span class="process-math">\(T\text{.}\)</span> On note l’unique chaîne entre de <span class="process-math">\(T\)</span> entre <span class="process-math">\(s\)</span> par <span class="process-math">\(r=s_0, s_1, \dots , s_{n}=s\)</span>
+<div class="para" id="def-arboDescendant-1-1">Soit <span class="process-math">\((T,r)\)</span> une arborescence et soit <span class="process-math">\(s\)</span> un sommet de <span class="process-math">\(T\text{.}\)</span> On note l’unique chaîne entre de <span class="process-math">\(T\)</span> entre <span class="process-math">\(s\)</span> par <span class="process-math">\(r=s_0, s_1, \dots , s_{n}=s\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#def-arboDescendant-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div> <ul class="disc" id="def-arboDescendant-1-2">
-<li id="def-arboDescendant-1-2-1"><div class="para" id="def-arboDescendant-1-2-1-1">Le <dfn class="terminology">niveau</dfn> du sommet <span class="process-math">\(s\)</span> est la longueur de la chaîne <span class="process-math">\(s_0, \dots s_n\text{,}\)</span> c’est-à-dire <span class="process-math">\(n\text{.}\)</span>
-</div></li>
-<li id="def-arboDescendant-1-2-2"><div class="para" id="def-arboDescendant-1-2-2-1">Le plus grand niveau de l’arborescence <span class="process-math">\(T\)</span> est appelé la <dfn class="terminology">hauteur</dfn> de <span class="process-math">\(T\text{.}\)</span>
-</div></li>
-<li id="def-arboDescendant-1-2-3"><div class="para" id="def-arboDescendant-1-2-3-1">Les sommets <span class="process-math">\(s_0, s_1, \dots, s_{n-1}\)</span> sont appelés les <dfn class="terminology">ancêtres</dfn> de <span class="process-math">\(s\text{.}\)</span> À l’inverse, on dira que <span class="process-math">\(s\)</span> est un <dfn class="terminology">descendant</dfn> des sommets <span class="process-math">\(s_0, s_1, \dots, s_{n-1}\text{.}\)</span>
-</div></li>
-<li id="def-arboDescendant-1-2-4"><div class="para" id="def-arboDescendant-1-2-4-1">Le sommet <span class="process-math">\(s_{n-1}\)</span> est appelé le <dfn class="terminology">parent</dfn> de <span class="process-math">\(s\text{,}\)</span> alors qu’on dira que <span class="process-math">\(s\)</span> est <dfn class="terminology">l’enfant</dfn> de <span class="process-math">\(s_{n-1}\)</span>
-</div></li>
-</ul></article></section><section class="conclusion" id="concl-arbre"></section><section class="reading-questions" id="rq-arbre"><h3 class="heading hide-type">
-<span class="type">Questions de compréhension de la lecture</span><span class="space"> </span><span class="codenumber">7.4.4</span><span class="space"> </span><span class="title">Questions de compréhension de la lecture</span>
+<li id="def-arboDescendant-1-2-1">
+<div class="para" id="def-arboDescendant-1-2-1-1">Le <dfn class="terminology">niveau</dfn> du sommet <span class="process-math">\(s\)</span> est la longueur de la chaîne <span class="process-math">\(s_0, \dots s_n\text{,}\)</span> c’est-à-dire <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#def-arboDescendant-1-2-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Point"><a href="#def-arboDescendant-1-2-1" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+</li>
+<li id="def-arboDescendant-1-2-2">
+<div class="para" id="def-arboDescendant-1-2-2-1">Le plus grand niveau de l’arborescence <span class="process-math">\(T\)</span> est appelé la <dfn class="terminology">hauteur</dfn> de <span class="process-math">\(T\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#def-arboDescendant-1-2-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Point"><a href="#def-arboDescendant-1-2-2" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+</li>
+<li id="def-arboDescendant-1-2-3">
+<div class="para" id="def-arboDescendant-1-2-3-1">Les sommets <span class="process-math">\(s_0, s_1, \dots, s_{n-1}\)</span> sont appelés les <dfn class="terminology">ancêtres</dfn> de <span class="process-math">\(s\text{.}\)</span> À l’inverse, on dira que <span class="process-math">\(s\)</span> est un <dfn class="terminology">descendant</dfn> des sommets <span class="process-math">\(s_0, s_1, \dots, s_{n-1}\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#def-arboDescendant-1-2-3-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Point"><a href="#def-arboDescendant-1-2-3" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+</li>
+<li id="def-arboDescendant-1-2-4">
+<div class="para" id="def-arboDescendant-1-2-4-1">Le sommet <span class="process-math">\(s_{n-1}\)</span> est appelé le <dfn class="terminology">parent</dfn> de <span class="process-math">\(s\text{,}\)</span> alors qu’on dira que <span class="process-math">\(s\)</span> est <dfn class="terminology">l’enfant</dfn> de <span class="process-math">\(s_{n-1}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#def-arboDescendant-1-2-4-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Point"><a href="#def-arboDescendant-1-2-4" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Définition 7.4.12"><a href="#def-arboDescendant" title="Copy heading and permalink for Définition 7.4.12" aria-label="Copy heading and permalink for Définition 7.4.12">🔗</a></div></article><div class="autopermalink" data-description="Sous-section 7.4.3: Arborescence"><a href="#subsec-arborescence" title="Copy heading and permalink for Sous-section 7.4.3: Arborescence" aria-label="Copy heading and permalink for Sous-section 7.4.3: Arborescence">🔗</a></div></section><section class="conclusion" id="concl-arbre"></section><section class="reading-questions" id="rq-arbre"><h3 class="heading hide-type">
+<span class="type">Questions de compréhension de la lecture</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.4.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Questions de compréhension de la lecture</span>
 </h3>
-<section class="introduction" id="rq-arbre-1"><div class="para" id="rq-arbre-1-1">Ces questions sont à faire avant de venir en classe et à remettre au début du cours.</div></section><article class="exercise exercise-like" id="rq-arbre-2"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="rq-arbre-2-1-1">Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.</div></article></section></section></div>
-<div class="ptx-content-footer">
-<a class="previous-button button" href="sec-chaineEuler.html" title="Précédent"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="top-button button" href="#" title="Top"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Suivant</span><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+<section class="introduction" id="rq-arbre-1"><div class="para" id="rq-arbre-1-1">Ces questions sont à faire avant de venir en classe et à remettre au début du cours.<div class="autopermalink" data-description="Paragraphe"><a href="#rq-arbre-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div></section><article class="exercise exercise-like" id="rq-arbre-2"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="rq-arbre-2-1-1">Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.<div class="autopermalink" data-description="Paragraphe"><a href="#rq-arbre-2-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Question de compréhension 7.4.4.1"><a href="#rq-arbre-2" title="Copy heading and permalink for Question de compréhension 7.4.4.1" aria-label="Copy heading and permalink for Question de compréhension 7.4.4.1">🔗</a></div></article><div class="autopermalink" data-description="Questions de compréhension de la lecture 7.4.4"><a href="#rq-arbre" title="Copy heading and permalink for Questions de compréhension de la lecture 7.4.4" aria-label="Copy heading and permalink for Questions de compréhension de la lecture 7.4.4">🔗</a></div></section><div class="autopermalink" data-description="Section 7.4: Arbre et arborescence"><a href="#sec-arbre" title="Copy heading and permalink for Section 7.4: Arbre et arborescence" aria-label="Copy heading and permalink for Section 7.4: Arbre et arborescence">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec-chaineEuler.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a xmlns:pf="https://prefigure.org" class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a xmlns:pf="https://prefigure.org" class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a xmlns:pf="https://prefigure.org" class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
 </body>
 </html>

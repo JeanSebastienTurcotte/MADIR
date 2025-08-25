@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2025-08-21T01:25:51.426879</dc:date>
+    <dc:date>2025-08-24T20:29:38.886466</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -44,7 +44,7 @@ L 324.969231 13.430769
 L 324.969231 324.969231 
 L 13.430769 324.969231 
 z
-" clip-path="url(#p1d1dddc101)" style="fill: none; stroke: #000000; stroke-linejoin: miter"/>
+" clip-path="url(#p78ada218b4)" style="fill: none; stroke: #000000; stroke-linejoin: miter"/>
    </g>
    <g id="matplotlib.axis_1"/>
    <g id="matplotlib.axis_2"/>
@@ -281,7 +281,7 @@ C 130.257692 179.527621 134.3609 189.433639 141.66363 196.73637
 C 148.966361 204.0391 158.872379 208.142308 169.2 208.142308 
 L 169.2 208.142308 
 z
-" clip-path="url(#p1d1dddc101)" style="fill: none; stroke: #0000ff; stroke-linejoin: miter"/>
+" clip-path="url(#p78ada218b4)" style="fill: none; stroke: #0000ff; stroke-linejoin: miter"/>
    </g>
    <g id="patch_5">
     <path d="M 169.2 247.084615 
@@ -295,12 +295,12 @@ C 91.315385 189.855241 99.521799 209.667278 114.12726 224.27274
 C 128.732722 238.878201 148.544759 247.084615 169.2 247.084615 
 L 169.2 247.084615 
 z
-" clip-path="url(#p1d1dddc101)" style="fill: none; stroke: #ff0000; stroke-linejoin: miter"/>
+" clip-path="url(#p78ada218b4)" style="fill: none; stroke: #ff0000; stroke-linejoin: miter"/>
    </g>
   </g>
  </g>
  <defs>
-  <clipPath id="p1d1dddc101">
+  <clipPath id="p78ada218b4">
    <rect x="7.2" y="7.2" width="324" height="324"/>
   </clipPath>
  </defs>
