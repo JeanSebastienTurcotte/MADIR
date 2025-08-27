@@ -111,7 +111,7 @@
         banner="default"
         navbar="default"
     />-->
-    <css style="default" colors="green_plum"/>
+    <css theme="default-modern" primary-color="Indigo" secondary-color="Green"/>
     <!-- Search can be default or none, or you can use a Google-cx number to use google's search
     feature (but then variant should be set to none to avoid conflict) -->
     <search variant="default" />

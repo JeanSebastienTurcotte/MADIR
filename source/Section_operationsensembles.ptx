@@ -63,22 +63,22 @@
     <caption>L'union (à gauche) et l'intersection (à droite) de deux ensembles <m>A</m> et <m>B</m></caption>
     <sidebyside width="40%">
     <image xml:id="img-union">
-    <description>Le diagramme de Venn de deux ensembles est illustré, avec l'union de A et B colorée.</description>
+    <shortdescription>Le diagramme de Venn de deux ensembles est illustré, avec l'union de A et B colorée.</shortdescription>
     <sageplot>
 O=polygon2d([(-4,-4),(-4,4),(4,4),(4,-4)],color="black",fill=False,axes=False)+text(r"$\Omega$",(-3.8,3.8),color="black")
 A=circle((-1,0),2,color="grey",fill=True,alpha=0.5)+circle((-1,0),2,color="blue")+text("$A$",(-2,2),color="blue")
 B=circle((1,0),2,color="grey",fill=True,alpha=0.5)+circle((1,0),2,color="red")+text("$B$",(2,2),color="red")
-T=text(r"$A\cup B$, colorée en gris",(0,3),color="black")
+T=text(r"L'ensemble $A\cup B$, coloré en gris",(0,3),color="black")
 O+A+B+T    
     </sageplot>
     </image>
     <image xml:id="img-intersection">
-    <description>Le diagramme de Venn de deux ensembles est illustré, avec l'intersection de A et B colorée.</description>
+    <shortdescription>Le diagramme de Venn de deux ensembles est illustré, avec l'intersection de A et B colorée.</shortdescription>
     <sageplot>
 O=polygon2d([(-4,-4),(-4,4),(4,4),(4,-4)],color="black",fill=False,axes=False)+text(r"$\Omega$",(-3.8,3.8),color="black")
 A=plot(sqrt(4-(x+1)^2),(x,0,1),fill=0)+plot(-sqrt(4-(x+1)^2),(x,0,1),fill=0)+circle((-1,0),2,color="blue")+text("$A$",(-2,2),color="blue")
 B=plot(sqrt(4-(x-1)^2),(x,-1,0),fill=0)+plot(-sqrt(4-(x-1)^2),(x,-1,0),fill=0)+circle((1,0),2,color="red")+text("$B$",(2,2),color="red")
-T=text(r"$A\cap B$, colorée en gris",(0,3),color="black")
+T=text(r"L'ensemble $A\cap B$, coloré en gris",(0,3),color="black")
 O+A+B+T    
     </sageplot>
     </image>
@@ -484,10 +484,12 @@ O+A+B+T
    <!--Inclure les exercices de la section ci-dessous--> 
 <reading-questions xml:id="rq-opens">
     <introduction xml:id= "intro-opens-lec">  <!-- Ajouter le même identifiant de la section après le - du xml:id -->
-    <p>Ces questions sont à faire avant de venir en classe et à remettre au début du cours.</p>
+    <p><!--Ces questions sont à faire avant de venir en classe et à remettre au début du cours.-->
+    Répondre à ces questions suite à la lecture du texte qui précède pour valider la compréhension.
+    </p>
   </introduction>
   <exercise>
-    <introduction><p>Soit <m>A=\{a,b,c,d\}</m> et <m>B=\{a,b,c,d,e,f,g\}</m> vivant dans l'ensemble univers <m>\Omega =\{l  ~|~ l \text{ est une lettre de l'alphabet comprise entre } a \text{ et } j  \}</m>. Déterminer:</p></introduction>
+    <introduction><p>Soit <m>A=\{a,b,c,d\}</m> et <m>B=\{a,b,c,d,e,f,g\}</m> vivant dans l'ensemble univers <m>\Omega =\{l  ~|~ l \text{ est une lettre de l'alphabet comprise entre } a \text{ et } j \text{ inclusivement } \}</m>. Déterminer:</p></introduction>
     <task><statement><p>
     <m>A\cup B</m>
     </p></statement></task>

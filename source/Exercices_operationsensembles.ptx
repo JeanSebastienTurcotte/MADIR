@@ -924,81 +924,679 @@ O+A+B+C
     <exercisegroup>
     <title>Exercices supplémentaires</title>
     <exercise>
-    <introduction><p>On considère <m>S</m> l'ensemble des étudiants du programme Sciences informatique et mathématiques à Gérald-Godin et <m>C</m> l'ensemble des étudiants de Gérald-Godin qui sont inscrits en calcul différentiel. Exprimer les ensembles suivants en fonction de <m>S</m> et <m>C</m>. Au besoin, considérer l'ensemble univers <m>G</m> de tous les étudiants inscrits à Gérald-Godin.</p></introduction>
+    <introduction><p>On considère <m>S</m> l'ensemble des étudiants du programme Sciences, informatique et mathématique à Gérald-Godin et <m>C</m> l'ensemble des étudiants de Gérald-Godin qui sont inscrits en calcul différentiel. Exprimer les ensembles suivants en fonction de <m>S</m> et <m>C</m>. Au besoin, considérer l'ensemble univers <m>G</m> de tous les étudiants inscrits à Gérald-Godin.</p></introduction>
     <task>
-    <statement><p>Les étudiants de Sciences informatiques et mathématiques qui suivent le cours de calcul différentiel.</p></statement>
+    <statement><p>Les étudiants de Science, informatique et mathématique qui suivent le cours de calcul différentiel.</p></statement>
+    <answer>
+    <p><m>S\cap C</m></p>
+    </answer>
     </task>
     <task>
-    <statement><p>Les étudiants du cours de calcul différentiel qui ne sont pas en Sciences informatiques et mathématiques.</p></statement>
+    <statement><p>Les étudiants du cours de calcul différentiel qui ne sont pas en Sciences, informatique et mathématique.</p></statement>
+    <answer><p><m>C-S</m></p></answer>
     </task>
     <task>
-    <statement><p>Les étudiants de Sciences informatiques et mathématiques ou inscrits dans le cours de calcul différentiel.</p></statement>
+    <statement><p>Les étudiants de Sciences, informatique et mathématique ou ceux inscrits dans le cours de calcul différentiel.</p></statement>
+        <answer><p><m>S\cup C</m></p></answer>
     </task>
     <task>
-    <statement><p>Les étudiants du cégep Gérald-Godin qui ne sont pas en calcul différentiel ni en Sciences informatiques et mathématiques.</p></statement>
+    <statement><p>Les étudiants du cégep Gérald-Godin qui ne sont pas en calcul différentiel ni en Sciences, informatique et mathématique.</p></statement>
+        <answer><p><m>G-(S\cup C)</m></p></answer>
     </task>
     <task>
-    <statement><p>Les étudiants de Sciences informatiques et mathématiques ou ceux qui suivent le cours de calcul différentiel, mais qui ne sont pas en Sciences informatiques et mathématiques.</p></statement>
+    <statement><p>Les élèves du cégep Gérald-Godin, sauf ceux qui sont en Sciences, informatique et mathématique, mais sans le cours de calcul différentiel ni ceux qui sont en calcul différentiel sans être dans le programme de Sciences, informatique et mathématique.</p></statement>
+        <answer><p><m>(S\cup C)^c\cup (S\cap C)</m></p></answer>
     </task>
     <conclusion>Cet exercice peut paraître bidon, mais on peut imaginer un gestionnaire informatique d'une école qui doit gérer une liste de courriels. Peut-être qu'un message précis doit être communiqué à un ensemble spécifique de personnes. On veut alors être certain de ne pas oublier quelqu'un et en même temps, on ne veut pas envoyer le message à quelqu'un qui n'a pas à le recevoir. </conclusion>
     </exercise>
-    <exercise><statement><p>Déterminer des ensembles <m>A,B</m> tels que <m>A-B=\{a,h,i\},B-A=\{c\}</m> et <m>B\cap A=\{b,f,i\}</m> ou expliquer pourquoi c'est impossible. Dans le cas où c'est possible, est-ce que la réponse est unique?</p></statement>
+    <exercise><statement><p>Déterminer des ensembles <m>A,B</m> tels que <m>A-B=\{a,h,i\},B-A=\{c\}</m> et <m>B\cap A=\{b,f\}</m> ou expliquer pourquoi c'est impossible. Dans le cas où c'est possible, est-ce que la réponse est unique?</p></statement>
     <hint><p>Faire un diagramme de Venn pour voir qu'une réponse unique existe.</p> </hint>
+    <answer><p><m>A=\{a,b,f,h,i\}</m> et <m>B=\{b,c,f\}</m>. La figure ci-dessous illustre ces deux ensembles.</p>
+    <figure>
+    <caption>La solution à l'exercice</caption>
+        <image>
+    <shortdescription>Le diagramme de Venn de deux ensembles est illustré.</shortdescription>
+    <sageplot>
+O=polygon2d([(-4,-4),(-4,4),(4,4),(4,-4)],color="black",fill=False,axes=False)+text(r"$\Omega$",(-3.8,3.8),color="black")
+A=circle((-1,0),2,color="grey",fill=False,alpha=0.5)+circle((-1,0),2,color="blue")+text("$A$",(-2,2),color="blue")
+B=circle((1,0),2,color="grey",fill=False,alpha=0.5)+circle((1,0),2,color="red")+text("$B$",(2,2),color="red")
+T=text(r"$a$ $h$ $i$",(-2,0),color="black")+text(r"$b$ $f$",(0,0),color="black")+text(r"$c$",(2,0),color="black")
+O+A+B+T    
+    </sageplot>
+    </image>
+    </figure>
+    <p>La réponse est unique puisque chacune des trois parties du diagramme de Venn est entièrement déterminée par l'énoncé du problème.</p>
+    </answer>    
     </exercise> 
-    <exercise><statement><p>Déterminer des ensembles <m>A,B</m> tels que <m>A-B=\{3,4,7,8\}</m> et <m>B\cap A=\{b,f,i\}</m> ou expliquer pourquoi c'est impossible. Dans le cas où c'est possible, est-ce que la réponse est unique?</p></statement></exercise>
-    <exercise><statement><p>Déterminer des ensembles <m>A,B</m> tels que <m>A-B=\{rouge,vert,jaune\}</m> et <m>B\cap A=\{jaune, mauve, orange\}</m> ou expliquer pourquoi c'est impossible. Dans le cas où c'est possible, est-ce que la réponse est unique?</p></statement></exercise>
+    <exercise><statement><p>Déterminer des ensembles <m>A,B</m> tels que <m>A-B=\{3,4,7,8\}</m> et <m>B\cap A=\{b,f,i\}</m> ou expliquer pourquoi c'est impossible. Dans le cas où c'est possible, est-ce que la réponse est unique?</p></statement>
+    <solution><p>Cette fois la solution n'est pas unique, car il n'est pas précisé ce qui doit aller dans <m>B-A</m>. Deux exemples possibles sont
+    <m>A=\{3,4,7,8,b,f,i\}</m> et <m>B_1=\{b,f,i\}</m> ou <m>A=\{3,4,7,8,b,f,i\}</m> et <m>B_1=\{b,f,i,j,m,9,\text{carottes}\}</m>. </p></solution>
+    </exercise>
+    <exercise><statement><p>Déterminer des ensembles <m>A,B</m> tels que <m>A-B=\{rouge,vert,jaune\}</m> et <m>B\cap A=\{jaune, mauve, orange\}</m> ou expliquer pourquoi c'est impossible. Dans le cas où c'est possible, est-ce que la réponse est unique?</p></statement>
+    <solution><p>C'est impossible, puisque l'élément jaune doit être dans <m>A-B</m> et donc, ne pas être dans <m>B</m>, et dans <m>B\cap A</m> et donc, être dans <m>B</m>.</p></solution></exercise>
     <exercise>
     <introduction><p>On va donner les démonstrations des propriétés de la liste <xref ref="li-opensprop"/> qui n'ont pas été faites dans le texte .</p></introduction>
     <task>
     <introduction><p>Démontrer les propriétés <xref ref="li-opensId" text="custom"> d'identité </xref>, à savoir</p></introduction>
-    <task><statement><p><m>A\cup \emptyset =A</m></p></statement></task>
-    <task><statement><p> et <m>A\cap \Omega =A</m>.</p></statement></task>
+    <task><statement><p><m>A\cup \emptyset =A</m></p></statement>
+    <solution><p>Par un argument d'appartenance: </p>
+    <p> Soit <m>a</m> un élément quelconque de <m>A\cup \emptyset</m>. Alors <m>a\in A</m> ou <m>A\in \emptyset</m>, selon la définition de l'union. Or comme l'ensemble vide ne contient pas d'élément, on doit avoir <m>a\in A</m>. Ainsi, <m>A\cup \emptyset \subseteq A</m>.</p>
+    <p>D'un autre côté, soit <m>b\in A</m>, un élément de <m>A</m>, alors par définition <m>b\in A\cup \emptyset</m>. On peut donc déduire que <m>A\subseteq (A\cup \emptyset)</m>.</p>
+    <p>Les deux ensembles sont donc égaux.</p>
+    </solution>
+    </task>
+    <task><statement><p> et <m>A\cap \Omega =A</m>.</p></statement>
+    <solution><p>On procède avec une table d'appartenance.</p>
+    <table>
+  <title>Table d'appartenance pour l'exercice</title>
+  <tabular>
+    <row>
+      <cell>
+        <m>A</m>
+      </cell>
+      <cell>
+        <m>\Omega</m>
+      </cell>
+      <cell>
+        <m>A\cap \Omega</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Oui
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Non
+      </cell>
+    </row>
+  </tabular>
+</table>
+    </solution>
+    <p>On note que cette table est particulière, puisque sous <m>\Omega</m> l'appartenance est toujours égale à &#x00AB;oui &#x00BB;.</p>
+    </task>
     </task>
 <task>
     <introduction><p>Démontrer les propriétés <xref ref="li-opensid" text="custom"> d'idempotence </xref>, à savoir</p></introduction>
-    <task><statement><p><m>A\cup A =A</m></p></statement></task>
-    <task><statement><p> et <m>A\cap A =A</m>.</p></statement></task>
+    <task><statement><p><m>A\cup A =A</m></p></statement>
+    <solution><p>Soit <m>a\in A</m> un élément de <m>A</m>. Alors <m>A\in A\cup A</m> et donc, <m>A\subseteq (A\cup A)</m>. Soit <m>b\in A\cup A</m>. Alors <m>b\in A</m> et donc, <m>(A\cup A)\subseteq A</m>. On a donc égalité entre les ensembles.</p></solution></task>
+    <task><statement><p> et <m>A\cap A =A</m>.</p></statement>
+    <solution><p>Soit <m>a\in A</m> un élément de <m>A</m>. Alors <m>A\in A\cap A</m> et donc, <m>A\subseteq (A\cap A)</m>. Soit <m>b\in A\cap A</m>. Alors <m>b\in A</m> et donc, <m>(A\cap A)\subseteq A</m>. On a donc égalité entre les ensembles.</p></solution></task>
     </task>
 <task>
     <introduction><p>Démontrer les propriétés de <xref ref="li-opensdom" text="custom"> domination </xref>, à savoir</p></introduction>
-    <task><statement><p><m>A\cup \Omega =\Omega</m></p></statement></task>
-    <task><statement><p> et <m>A\cap \emptyset =\emptyset</m>.</p></statement></task>
+    <task><statement><p><m>A\cup \Omega =\Omega</m></p></statement>
+    <solution><p>Par défaut, tout ensemble est un sous-ensemble de l'espace <m>\Omega</m>. On a donc <m>A\cup \Omega \subseteq \Omega</m>. De plus, si un élément est dans <m>\Omega</m>, alors il sera dans <m>A\cup \Omega</m> et donc, <m>\Omega \subseteq (A\cup \Omega)</m>. Les ensembles sont donc égaux.</p></solution></task>
+    <task><statement><p> et <m>A\cap \emptyset =\emptyset</m>.</p></statement>
+    <solution><p>Comme l'ensemble vide ne contient aucun élément, l'intersection de <m>A</m> et <m>\emptyset</m> est aussi vide.</p></solution></task>
     </task>
     <task>
     <introduction><p>Démontrer les propriétés de <xref ref="li-openscomp" text="custom"> complémentarité et complétude</xref>, à savoir que</p></introduction>
-    <task><statement><p><m>(A^c)^c=A</m>,</p></statement></task>
-    <task><statement><p><m>A\cup A^c=\Omega</m></p></statement></task>
-    <task><statement><p>et <m>A\cap A^c=\emptyset</m></p></statement></task>
+    <task><statement><p><m>(A^c)^c=A</m>,</p></statement>
+    <solution><p>On procède avec une table d'appartenance.</p>
+    <table>
+  <title>Table d'appartenance pour l'exercice</title>
+  <tabular>
+    <row>
+      <cell>
+        <m>A</m>
+      </cell>
+      <cell>
+        <m>A^c</m>
+      </cell>
+      <cell>
+        <m>(A^c)^c</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Oui
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Non
+      </cell>
+    </row>
+  </tabular>
+</table>
+    </solution>
+    </task>
+    <task><statement><p><m>A\cup A^c=\Omega</m></p></statement>
+    <solution>
+    <p>On procède avec une table d'appartenance.</p>
+    <table>
+  <title>Table d'appartenance pour l'exercice</title>
+  <tabular>
+    <row>
+      <cell>
+        <m>A</m>
+      </cell>
+      <cell>
+        <m>A^c</m>
+      </cell>
+      <cell>
+        <m>\Omega</m>
+      </cell>
+      <cell>
+        <m>A\cup A^c</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Oui
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Oui
+      </cell>
+    </row>
+  </tabular>
+</table>
+    </solution></task>
+    <task><statement><p>et <m>A\cap A^c=\emptyset</m></p></statement>
+    <p>On procède avec une table d'appartenance.</p>
+    <table>
+  <title>Table d'appartenance pour l'exercice</title>
+  <tabular>
+    <row>
+      <cell>
+        <m>A</m>
+      </cell>
+      <cell>
+        <m>A^c</m>
+      </cell>
+      <cell>
+        <m>\emptyset</m>
+      </cell>
+      <cell>
+        <m>A\cup A^c</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Non
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Non
+      </cell>
+    </row>
+  </tabular>
+</table>
+    </task>
     </task>
 <task>
     <introduction><p>Démontrer les propriétés <xref ref="li-opensabs" text="custom"> d'absorption </xref>, à savoir</p></introduction>
-    <task><statement><p><m>A\cup (A\cap B) =A</m></p></statement></task>
-    <task><statement><p> et <m>A\cap (A\cup B) =A</m>.</p></statement></task>
+    <task><statement><p><m>A\cup (A\cap B) =A</m></p></statement>
+    <solution><p>On procède avec une table d'appartenance.</p>
+    <table>
+  <title>Table d'appartenance pour l'exercice</title>
+  <tabular>
+    <row>
+      <cell>
+        <m>A</m>
+      </cell>
+      <cell>
+        <m>B</m>
+      </cell>
+      <cell>
+        <m>A\cap B</m>
+      </cell>
+      <cell>
+        <m>A\cup (A\cap B)</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Oui
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Oui
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Non
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Non
+      </cell>
+    </row>
+  </tabular>
+</table>
+    </solution></task>
+    <task><statement><p> et <m>A\cap (A\cup B) =A</m>.</p></statement>
+    <solution><p>Soit <m>a\in A</m>. Alors <m>a\in A\cup B</m> et donc <m>a\in A\cap (A\cup B)</m>. Donc, <m>A\subseteq A\cap (A\cup B)</m>. Soit <m>b\in A\cap (A\cup B)</m>. Alors <m>a\in A</m> et donc <m>A\cap (A\cup B)\subseteq A</m>. Les deux ensembles sont égaux.</p></solution>
+    </task>
     </task>
 <task>
     <introduction><p>Démontrer les propriétés de <xref ref="li-openscom" text="custom"> commutativité </xref>, à savoir</p></introduction>
-    <task><statement><p><m>A\cup B =B\cup A</m></p></statement></task>
-    <task><statement><p> et <m>A\cap B =B\cap A</m>.</p></statement></task>
+    <task><statement><p><m>A\cup B =B\cup A</m></p></statement>
+    <solution><p>Soit <m>a\in A\cup B</m>. Alors <m>a\in A</m> ou <m>a\in B</m>. Si <m>a\in A</m>, alors <m>a\in B\cup A</m>. De même, si on a plutôt <m>a\in B</m>, alors <m>b\in B\cup A</m> également. On a alors <m>(A\cup B)\subseteq B\cup A)</m>. De manière analogue, on montre que <m>B\cup A\subseteq A</m> et on conclut que les ensembles sont égaux.</p></solution>
+    </task>
+    <task><statement><p> et <m>A\cap B =B\cap A</m>.</p></statement>
+    <solution><p>
+    On procède par avec une table d'appartenance:
+    </p>
+    <table>
+  <title>Table d'appartenance pour l'exercice</title>
+  <tabular>
+    <row>
+      <cell>
+        <m>A</m>
+      </cell>
+      <cell>
+        <m>B</m>
+      </cell>
+      <cell>
+        <m>A\cap B</m>
+      </cell>
+      <cell>
+        <m>B\cap A</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Oui
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Non
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Non
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Non
+      </cell>
+    </row>
+  </tabular>
+</table>
+    </solution></task>
     </task> 
     <!-- De Morgann si pas vidéo -->
     </exercise> 
     <exercise><introduction><p>Soit <m>A\subseteq \Omega</m> un ensemble arbitraire. Démontrer les propriétés suivantes:</p></introduction>
     <task>
     <statement><p><m>A\oplus A=\emptyset</m></p></statement>
+    <solution><p>Par définition, les éléments à l'intérieur de la différence symétrique de deux ensembles doivent être dans exactement l'un des deux ensembles. Comme ici les deux ensembles sont égaux, aucun élément ne peut être dans <m>A</m>, mais pas dans <m>A</m>. On a donc <m>A\oplus A=\emptyset</m>.</p></solution>
     </task>
     <task xml:id="exo-Aoplusvide">
     <statement><p><m>A\oplus \emptyset=A</m></p></statement>
+    <solution><p>Cette fois, comme il n'y a aucun élément dans l'ensemble vide, tous les éléments de <m>A</m> peuvent faire partie de la différence symétrique. On a donc <m>A\oplus \emptyset= A</m>.</p></solution>
     </task>
     <task>
     <statement><p><m>A\oplus \Omega=A^c</m></p></statement>
+    <p>Dès qu'un élément est dans <m>A</m>, il est forcément dans <m>\Omega</m>, puisque <m>A\subseteq \Omega</m>. Les éléments dans <m>A\oplus \Omega</m> ne peuvent donc être que des éléments de <m>\Omega</m> qui sont absents de l'ensemble <m>A</m>. C'est précisément la définition du complémentaire de l'ensemble <m>A</m>.</p>
     </task>
     </exercise> 
     <exercise><statement><p>Dans l'exercice <xref ref="exo-Aoplusvide"/>, on a vu que <m>A\oplus \emptyset =A</m>. Expliquer pourquoi si <m>A\oplus B=A</m>, alors nécessairement on doit avoir <m>B=\emptyset</m>. </p></statement>
-    <hint><p>Il peut être utile de considérer les quatre <xref ref="exo-ABconfrel" text="custom" >configurations relatives</xref> que peuvent prendre deux ensembles.</p></hint></exercise>
+    <hint><p>Il peut être utile de revoir le <xref ref="exo-Venndiffsym" text="custom">diagramme de Venn</xref> de la différence symétrique.</p></hint>
+    <solution><p>Selon la figure <xref ref="fig-VennAopluB"/>, on observe qu'il y a deux régions distinctes qui sont grisées. Si <m>A\oplus B=A</m>, alors la région à droite contenue dans l'ensemble <m>B</m> doit être vide. De plus, il faut que la région à gauche contenue dans l'ensemble <m>A</m> soit en réalité équivalente à <m>A</m>, car celle-ci représente toute la différence symétrique et vaut <m>A</m>. Il s'ensuit que la région à l'intersection des ensembles <m>A</m> et <m>B</m> doit être vide.</p></solution></exercise>
     <exercise><statement><p>On sait que l'union est une opération <xref ref="li-opensass" text="custom">associative</xref>. Est-ce le cas pour la différence symétrique, c'est-à-dire est-ce que 
     <me>
     A\oplus(B\oplus C)=(A\oplus B)\oplus C
-    </me>?</p></statement></exercise> 
+    </me>?</p></statement><hint><p>Une table d'appartenance est la manière la plus simple de faire la vérification. Un diagramme de Venn peut aussi aider.</p></hint>
+    <solution><p>On construit la table d'appartenance de ce problème. </p>
+    <table>
+  <title>Table d'appartenance pour l'exercice</title>
+  <tabular>
+    <row>
+      <cell bottom="medium">
+        A
+      </cell>
+      <cell bottom="medium">
+        B
+      </cell>
+      <cell bottom="medium">
+        C
+      </cell>
+      <cell>
+        <m>A\oplus B</m>
+      </cell>
+      <cell>
+        <m>B\oplus C</m>
+      </cell>
+      <cell bottom="medium">
+        <m>A\oplus (B\oplus C)</m>
+      </cell>
+      <cell>
+        <m>(A\oplus B)\oplus C</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Non
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Oui
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Oui
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Non
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Oui
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Non
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Non
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Non
+      </cell>
+      <cell>
+        Oui
+      </cell>
+      <cell>
+        Oui
+      </cell>
+    </row>
+  </tabular>
+</table>
+    </solution>
+    </exercise> 
     <exercise>
     <title>L'union et l'intersection généralisée</title>
     <introduction><p>Les opérations d'union et d'intersection sont des opérations binaires, qui demandent deux ensembles qui agissent à titre d'opérandes. Parce qu'elles sont associatives, on peut généraliser ces opérations à plus de deux ensembles, possiblement même une infinité. Ainsi, si <m>A_0,A_1,A_2,\ldots , A_n</m> sont des ensembles, on note
@@ -1009,12 +1607,16 @@ O+A+B+C
     A_0\cap A_1\cap A_2\cap \cdots \cap A_n=\bigcap_{i=0}^n A_i
     </me> leur intersection. La lettre <m>i</m> est appelée  l'indice d'union (ou d'intersection). On aurait pu commencer à <m>1</m> ou à n'importe quel autre entier.</p></introduction>
     <task><introduction><p>Soit <m>A_{i}=\{n\in \N~|~ n\leq i\}</m> défini pour tout <m>i\in \N</m>. Pour <m>N \in \N</m> un entier quelconque, déterminer quel est l'ensemble</p></introduction>
-        <task><statement><p><m>\displaystyle\bigcup_{i=0}^N A_i</m>;</p></statement></task>
-        <task><statement><p><m>\displaystyle\bigcap_{i=0}^N A_i</m>.</p></statement></task>
+        <task><statement><p><m>\displaystyle\bigcup_{i=0}^N A_i</m>;</p></statement>
+        <answer><p><m>\{0,1,2,\ldots , N\}</m></p></answer>
+        </task>
+        <task><statement><p><m>\displaystyle\bigcap_{i=0}^N A_i</m>.</p></statement>
+        <answer><p><m>\{0\}</m></p></answer>
+        </task>
     </task>
     <task><introduction><p>Soit <m>B_{i}=\{n\in \N~|~ n\geq i\}</m> défini pour tout <m>i\in \N</m>. Pour <m>N \in \N</m> un entier quelconque, déterminer quel est l'ensemble</p></introduction>
-        <task><statement><p><m>\displaystyle\bigcup_{i=0}^N B_i</m>;</p></statement></task>
-        <task><statement><p><m>\displaystyle\bigcap_{i=0}^N B_i</m>.</p></statement></task>
+        <task><statement><p><m>\displaystyle\bigcup_{i=0}^N B_i</m>;</p></statement><answer><p><m>\mathbb{N}</m></p></answer></task>
+        <task><statement><p><m>\displaystyle\bigcap_{i=0}^N B_i</m>.</p></statement><answer><p><m>\emptyset</m></p></answer></task>
     </task>
     </exercise> 
     

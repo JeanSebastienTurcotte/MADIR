@@ -97,9 +97,9 @@
             </li>
           <li>
             <p>
-            <m>C=\{1,4,9,16,\ldots, 64,81\}</m>.</p>
+            <m>C=\{1,4,9,16,\ldots, 64,81\}</m>;</p>
           </li>
-          <li><p><m>D=\{A,B,C\}=\Bigl\{\{3,4,5,6,7,8,9\},\{t,u,r,c,o,e\},\{1,4,9,16,\ldots, 64,81\}\Bigr\}</m></p></li>
+          <li><p><m>D=\{A,B,C\}=\Bigl\{\{3,4,5,6,7,8,9\},\{t,u,r,c,o,e\},\{1,4,9,16,\ldots, 64,81\}\Bigr\}</m>.</p></li>
         </ol></p>
       </solution>
     </example>
@@ -134,16 +134,16 @@
     encore ayant un sens particulier dans le contexte.</p>
     <example>
       <title>Des ensembles décrits en compréhension</title>
-      <statement><p>On veut décrire les ensembles suivants en compréhension.
-      <ol><li><p><m>A=\{a,e,i,o,u,y\}</m></p></li>
-      <li><p><m>B=\{0,2,4,6,8\}</m></p></li>
-      <li><p><m>C=\{J,e,a,n,-,S,é,b,s,t,i\}</m></p></li>
+      <statement><p>On veut décrire les ensembles suivants en compréhension:
+      <ol><li><p><m>A=\{a,e,i,o,u,y\};</m></p></li>
+      <li><p><m>B=\{0,2,4,6,8\}</m>;</p></li>
+      <li><p><m>C=\{J,e,a,n,-,S,é,b,s,t,i\}</m>.</p></li>
       </ol>
       </p></statement>
       <solution><p>Il peut y avoir plus d'une manière valide pour décrire chacun de ces
         ensembles. En voici une pour chacun: 
         <ol>
-          <li><p><m>A=\{v~|~ v \text{ est une voyelle de l'alphabet }\}</m><!--\{v~|~ v \text{ est une voyelle de l'alphabet }\}</m>;--> </p></li>
+          <li><p><m>A=\{v~|~ v \text{ est une voyelle de l'alphabet }\}</m>; </p></li>
               <li><p>
               <m>B=\{b~|~ b \text{ est un chiffre pair}\}</m>;</p>
             </li>
@@ -157,7 +157,7 @@
     <p>Il peut exister plusieurs manières valides de décrire un objet en compréhension. Toutefois, on veut respecter une certaine structure syntaxique. On peut avoir :
     <ol>
     <li><p>un ensemble domaine, suivie d'une condition pour filtrer les éléments du domaine, par exemple <m>A=\{x\in \Z ~|~ x^2&lt; 25\}</m>;</p></li>
-    <li><p>une formule, suivie d'une domaine dans lequel est appliquée la formule, comme dans l'ensemble <m>B=\{x^2~|~| x\in \{1,2,3,4\}\}</m>.</p></li>
+    <li><p>une formule, suivie d'une domaine dans lequel est appliquée la formule, comme dans l'ensemble <m>B=\{x^2~|~ x\in \{1,2,3,4\}\}</m>.</p></li>
     </ol></p>
     <p></p>
     </subsection>
@@ -339,10 +339,10 @@ def _(A='1,2,3,a', B='2,a,3,4,pomme', C='a,b,10,pomme'):
   <title>En résumé</title>
   <p>Les points importants de cette section sont:
   <ul>
-  <li><p>La définition d'un <xref ref="def-ensemble" text="custom">ensemble</xref>.</p></li>
-  <li><p>Les écritures en extension et en compréhension d'un ensemble.</p></li>
-  <li><p>La relation <xref ref="def-ssens" text="custom">d'inclusion</xref>, de sous-ensemble.</p></li>
-  <li><p>La notion <xref ref="def-ensegaux" text="custom">d'égalité</xref> entre deux ensembles.</p></li>
+  <li><p>La définition d'un <xref ref="def-ensemble" text="custom">ensemble</xref>;</p></li>
+  <li><p>Les écritures en extension et en compréhension d'un ensemble;</p></li>
+  <li><p>La relation <xref ref="def-ssens" text="custom">d'inclusion</xref>, de sous-ensemble;</p></li>
+  <li><p>La notion <xref ref="def-ensegaux" text="custom">d'égalité</xref> entre deux ensembles;</p></li>
   <li><p>L'ensemble univers <m>\Omega</m> et l'ensemble vide <m>\emptyset</m>.</p></li>
   </ul>
   </p>
