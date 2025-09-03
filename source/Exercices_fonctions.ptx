@@ -29,7 +29,7 @@
     </exercise>
     -->
     <exercisegroup>
-    <title>À faire en classe durant le premier cours de la semaine</title>
+    <title>Exercices</title><!--<title>À faire en classe durant le premier cours de la semaine</title>-->
     <introduction><p>Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.</p></introduction>
     <exercise xml:id="exo-fctintro">
     <introduction><p>Soit <m>A=\{0,1,2,3,4,5\}</m>,<m>B=\{a,b,c,d,e\}</m> et <m>C=\{!,@,\#,a\}</m>. On considère les fonctions <m>g:A\to B</m> et <m>f:B\to C</m> définies comme suit: </p>
@@ -66,7 +66,7 @@
     <task><statement><p>La préimage de <m>\#</m> par la composition <m>f\circ g</m>;</p></statement><answer><p>La préimage de <m>\#</m> par <m>f\circ g</m> est <m>\{0,3,5\}</m>. C'est-à-dire que <m>(f\circ g)^{-1}(\#)=\{0,3,5\}</m>.</p></answer></task>
     </exercise>
     <exercise>
-      <statement><p>Quelle est l'image de la fonction <m>f:\emptyset\to B</m>?</p></statement>
+      <statement><p>Quelle est l'image de la fonction <m>f:\emptyset\to B</m> où <m>B</m> est un ensemble quelconque non vide?</p></statement>
       <answer><p>L'image de <m>f</m> est <m>\emptyset</m>.</p></answer>
       <hint><p>Pouvez-vous trouver un élément dans l'image de <m>f</m>? Quel est l'ensemble qui ne contient aucun élément?</p></hint>
       <solution>
@@ -100,9 +100,9 @@
     <p>Soit <m>a \in A</m> un élément quelconque de <m>A</m>, on doit montrer que <m>(f\circ g)\circ h(a)=f\circ (g\circ h)(a)</m>.  </p>
     <p>En utilisant la définition de la composition de fonctions à plusieurs reprises, on a 
     <md>
-    <mrow>
+    <!--<mrow>
     {\color{blue}{(f\circ g)}} \circ {\color{red}{h (a)}} \amp = ({\color{blue}{f\circ g}})\left( {\color{red}{h(a)}}\right)
-    </mrow>
+    </mrow>--><!-- Utile?-->
     <mrow>
     ({\color{blue}{f\circ g}}) \circ {\color{red}{h (a)}} \amp = ({\color{blue}{f}}\circ {\color{green}{g}})\left( {\color{red}{h(a)}}\right)
     </mrow>
@@ -128,7 +128,10 @@
     <li><p>Un ensemble <m>\{(a,b)~|~a\in A \text{ et } b\in B\}</m>.</p></li>
     <li><p>Un ensemble <m>\{(a,f(a))~|~a\in A \}</m>, si pour chaque <m>a</m>, <m>f(a)</m> est un élément de <m>B</m>.</p></li>
     </ol>
-    </p></statement><answer>L'énoncé c. est une définition équivalente du concept de fonction.</answer></exercise>
+    </p></statement><answer><p>Les énoncés (a) et (c) sont des définitions équivalentes du concept de fonction.</p></answer>
+    <solution><p>L'énoncé (a) est une définition de fonction équivalente. Tout élément de <m>A</m> possède une image unique dans <m>B</m>.</p>
+    <p>L'énoncé (b) n'est pas une définition d'une fonction. C'est plutôt le produit cartésien.</p>
+    <p>L'énoncé (c) est équivalent au concept de fonction puisqu'il correspond aussi à un sous-ensemble de <m>A\times B</m> où chaque élément de <m>A</m> possède un seul élément de <m>B</m> appelé <m>f(a)</m>.</p></solution></exercise>
     <exercise>
     <introduction><p>Pour chacune des fonctions suivantes, déterminer 
     <ol marker="i"><li><p>L'image de <m>42</m>;</p></li>
@@ -172,9 +175,38 @@
 
 
     <exercise><introduction><p>Soit <m>f,g,h</m> des fonctions définies de <m>\Z</m> vers <m>\Z</m> par <m>f(n)=n^2,g(n)=n-1</m> et <m>h(n)=n+1</m>. Donner une formule pour les compositions suivantes.</p></introduction>
-    <task><statement><p><m>f\circ g\circ h</m></p></statement><answer><m>f\circ g\circ h (n) = n^2</m>.</answer></task>
-    <task><statement><p><m> g\circ f\circ h</m></p></statement><answer><m>g\circ f\circ h (n) = n^2+2n</m>.</answer></task>
-    <task><statement><p><m> h\circ f\circ g</m></p></statement><answer><m>h\circ f\circ g (n) = n^2-2n+2</m>.</answer></task>
+    <task><statement><p><m>f\circ g\circ h</m></p></statement><answer><m>f\circ g\circ h (n) = n^2</m>.</answer>
+    <solution><p>On a 
+    <md>
+    <mrow>(f\circ g\circ h)(n)&amp;=f(g(h(n)))</mrow>
+    <mrow>&amp;=f(g(n+1))</mrow>
+    <mrow>&amp;=f(n+1-1)</mrow>
+    <mrow>&amp;=f(n)</mrow>
+    <mrow>&amp;=n^2</mrow>
+    </md></p></solution>
+    </task>
+    <task><statement><p><m> g\circ f\circ h</m></p></statement><answer><m>g\circ f\circ h (n) = n^2+2n</m>.</answer>
+    <solution><p>On a 
+    <md>
+    <mrow>g\circ f\circ h&amp;=g(f(h(n)))</mrow>
+    <mrow>&amp;=g(f(n+1))</mrow>
+    <mrow>&amp;=g((n+1)^2)</mrow>
+    <mrow>&amp;=g(n^2+2n+1)</mrow>
+    <mrow>&amp;=n^2+2n+1-1</mrow>
+    <mrow>&amp;=n^2+2n</mrow>
+    </md></p></solution>
+    </task>
+    <task><statement><p><m> h\circ f\circ g</m></p></statement><answer><m>h\circ f\circ g (n) = n^2-2n+2</m>.</answer>
+    <solution><p>On a 
+    <md>
+    <mrow>h\circ f\circ g&amp;=h(f(g(n)))</mrow>
+    <mrow>&amp;=h(f(n-1))</mrow>
+    <mrow>&amp;=h((n-1)^2)</mrow>
+    <mrow>&amp;=h(n^2-2n+1)</mrow>
+    <mrow>&amp;=n^2-2n+1+1</mrow>
+    <mrow>&amp;=n^2-2n+2</mrow>
+    </md></p></solution>
+    </task>
     </exercise>
     <exercise><introduction><p>Soit <m>A,B</m> deux ensembles et <m>f:A\to B</m> une fonction. Soit <m>C,D\subseteq A</m> deux sous-ensembles de <m>A</m>. Montrer que</p></introduction>
     <task>
@@ -189,7 +221,7 @@
     <task>
     <statement><p><m>f(C\cap D)\subseteq f(C)\cap f(D)</m>;</p></statement>
     <solution>
-    Soit <m>b \in f(C\cap D)</m>, alors il existe <m>a\in C\cap D</m> tel que <m>f(a)=b</m>. Puisque <m>a\in C</m> et <m>a \in D</m>, on a que <m>b \in f(C)</m> et <m>b \in f(D)</m>. On a donc <m>b \in f(C)\cap f(D)</m>, d'où <m>f(C \cap D) \subseteq f(C) \cap f(D)</m>.
+    <p>Soit <m>b \in f(C\cap D)</m>, alors il existe <m>a\in C\cap D</m> tel que <m>f(a)=b</m>. Puisque <m>a\in C</m> et <m>a \in D</m>, on a que <m>b \in f(C)</m> et <m>b \in f(D)</m>. On a donc <m>b \in f(C)\cap f(D)</m>, d'où <m>f(C \cap D) \subseteq f(C) \cap f(D)</m>.</p>
     </solution>
     </task>
     <task><introduction><p>Trouver deux ensembles <m>A,B</m> et des sous-ensembles <m>C,D\subseteq A</m> tels que 
@@ -200,11 +232,11 @@
     </p></introduction>
     <task><statement><p><m>f(C\cap D)=f(C)\cap f(D)</m></p></statement>
     <answer><p>Soit <m>A=\{0,1,2,3\},B=\{0,1,2\},C=\{0,1,2\}</m> et <m>D=\{2,3\}</m> avec <m>f(0)=0,f(1)=1,f(2)=1,f(3)=2</m>.</p></answer>
-    <answer>On prend <m>A=\R</m>, <m>B=\R</m>, <m>C=[1,3]</m> et <m>D=[2,4]</m>, avec <m>f:A \rightarrow B</m> définie par <m>f(x)=x^2</m>. Ainsi, <m>C\cap D= [2,3]</m>, <m>f(C\cap D)=[4,9]</m>, <m>f(C)=[1,9]</m>, <m>f(D)=[4,16]</m> et donc <m>f(C)\cap f(D) = [4,9]</m> .</answer>
+    <answer><p>On prend <m>A=\R</m>, <m>B=\R</m>, <m>C=[1,3]</m> et <m>D=[2,4]</m>, avec <m>f:A \rightarrow B</m> définie par <m>f(x)=x^2</m>. Ainsi, <m>C\cap D= [2,3]</m>, <m>f(C\cap D)=[4,9]</m>, <m>f(C)=[1,9]</m>, <m>f(D)=[4,16]</m> et donc <m>f(C)\cap f(D) = [4,9]</m> .</p></answer>
     </task>
     <task><statement><p><m>f(C\cap D)\subset f(C)\cap f(D)</m></p></statement>
     <answer><p>Soit <m>A=\{0,1,2,3\},B=\{0,1,2\},C=\{0,1,2\}</m> et <m>D=\{2,3\}</m> avec <m>f(0)=0,f(1)=1,f(2)=2,f(3)=1</m>.</p></answer>
-    <answer>On prend <m>A=\R</m>, <m>B=\R</m>, <m>C=[-1,0]</m> et <m>D=[0,1]</m>, avec <m>f:A \rightarrow B</m> définie par <m>f(x)=x^2</m>. Ainsi, <m>C\cap D= \{0\}</m>, <m>f(C\cap D)=\{0\}</m>, <m>f(C)=[0,1]</m>, <m>f(D)=[0,1]</m> et donc <m>f(C)\cap f(D) = [0,1]</m>.</answer>
+    <answer><p>On prend <m>A=\R</m>, <m>B=\R</m>, <m>C=[-1,0]</m> et <m>D=[0,1]</m>, avec <m>f:A \rightarrow B</m> définie par <m>f(x)=x^2</m>. Ainsi, <m>C\cap D= \{0\}</m>, <m>f(C\cap D)=\{0\}</m>, <m>f(C)=[0,1]</m>, <m>f(D)=[0,1]</m> et donc <m>f(C)\cap f(D) = [0,1]</m>.</p></answer>
     </task>
     </task>
     </exercise>
@@ -216,7 +248,7 @@
     \end{cases}
     </me> .</p></introduction>
     <task><statement><p>À titre d'exemple, on considère l'ensemble  <m>A=\{a,b,c\}</m> et le sous-ensemble <m>C=\{a,b\}</m>. Quels sont les éléments de <m>\mathbb{1}_C</m>?</p></statement>
-    <answer><m>\mathbb{1}_C = \{(a,1),(b,1),(c,0)\}</m>. Ainsi, on a <m>\mathbb{1}_C(a)=1</m>, <m>\mathbb{1}_C(b)=1</m> et <m>\mathbb{1}_C(c)=0</m> </answer>
+    <answer><p><m>\mathbb{1}_C = \{(a,1),(b,1),(c,0)\}</m>. Ainsi, on a <m>\mathbb{1}_C(a)=1</m>, <m>\mathbb{1}_C(b)=1</m> et <m>\mathbb{1}_C(c)=0</m>. </p></answer>
     </task>
     <task><statement><p>Pour des ensembles <m>C,D\subseteq A</m> quelconques, montrer que <m>\mathbb{1}_{C\cap D}=\mathbb{1}_C\cdot\mathbb{1}_D</m>. </p></statement>
     <solution><p>Soit <m>a\in A</m>, on veut comparer <m>\mathbb{1}_C(a)\cdot \mathbb{1}_D(a)</m> à <m>\mathbb{1}_{C\cap D}(a)</m>.</p> 
@@ -233,7 +265,7 @@
     <solution>
     <p> On peut aussi montrer l'égalité à l'aide d'une table d'appartenance, à laquelle on ajoute des colones pour les valeurs des fonctions.</p>
 <table>
-    <title>Table d'appartenance pour <m>\mathbb{1}_{C\cup D}=\mathbb{1}_C+\mathbb{1}_D-\mathbb{1}_C\cdot\mathbb{1}_D</m></title>
+    <title>Table d'appartenance pour l'exercice</title>
     <tabular top="major" halign="center">
     <row bottom="medium">
       <cell>
@@ -385,56 +417,75 @@
     </solution>
     </task>
     <task><statement><p>Trouver une expression pour la fonction caractéristique du complément de <m>C</m> en fonction de celle de <m>C</m>.</p></statement>
-    <answer><m>\mathbb{1}_{C^c}=1-\mathbb{1}_C</m>.</answer>
+    <answer><p><m>\mathbb{1}_{C^c}=1-\mathbb{1}_C</m>.</p></answer>
     </task>
     </exercise>
     <exercise><introduction><p>On considère les ensembles <m>A=\{0,1\}</m> et <m>B=\{a,b,c\}</m>. Dans le chapitre  <xref ref="chap-denombrement"/>, nous verrons des méthodes plus générales pour compter des obtets. Pour l'instant, vous pouvez utiliser un argument intuitif ou énumérer les fonctions demandées.</p></introduction>
     <task xml:id="exo-nbrFonctions"><introduction><p>On considère les fonctions de <m>A</m> vers <m>B</m>.</p></introduction>
-    <task><statement><p>Combien y a-t-il de fonctions possibles?</p></statement><answer>Il y a <m>3^2=9</m> fonctions de <m>A</m> vers <m>B</m>.</answer></task>
-    <task><statement><p>Combien sont injectives? Si possible, donner un exemple.</p></statement><answer>Il y a <m>3\cdot 2 = 6</m> fonctions injectives de <m>A</m> vers <m>B</m>. 
-Une telle fonction est la fonction définie par <m>f(0)=a</m> et <m>f(1)=b</m>.</answer></task>
-    <task><statement><p>Combien sont surjectives? Si possible, donner un exemple.</p></statement><answer>Il n'y a aucune fonction surjective de <m>A</m> vers <m>B</m>.</answer></task>
-    <task><statement><p>Combien sont bijectives? Si possible, donner un exemple.</p></statement><answer>Il n'y a aucune fonction bijective de <m>A</m> vers <m>B</m>.</answer></task>
+    <task><statement><p>Combien y a-t-il de fonctions possibles?</p></statement><answer><p>Il y a <m>3^2=9</m> fonctions de <m>A</m> vers <m>B</m>.</p></answer>
+    <solution><p>Comme chaque élément de <m>A</m> doit avoir une image dans <m>B</m> et qu'il y a <m>2</m> éléments dans <m>A</m> et <m>3</m> dans <m>B</m>, on a <m>3</m> choix d'image pour <m>0</m> et <m>3</m> choix d'image pour <m>1</m>, ce qui donne <m>3^2</m> fonctions possibles.</p></solution>
+    </task>
+    <task><statement><p>Combien sont injectives? Si possible, donner un exemple.</p></statement><answer><p>Il y a <m>3\cdot 2 = 6</m> fonctions injectives de <m>A</m> vers <m>B</m>. 
+Une telle fonction est la fonction définie par <m>f(0)=a</m> et <m>f(1)=b</m>.</p></answer>
+<solution><p>Pour qu'une fonction soit injective, les éléments du domaine doivent avoir des images différentes. On a <m>3</m> choix pour l'image de <m>0</m> et, pour chacun de ces choix, <m>2</m> choix restant pour l'image de <m>1</m>, pour un total de <m>3\times 2=6</m> choix.</p></solution>
+</task>
+    <task><statement><p>Combien sont surjectives? Si possible, donner un exemple.</p></statement><answer><p>Il n'y a aucune fonction surjective de <m>A</m> vers <m>B</m>.</p></answer></task>
+    <task><statement><p>Combien sont bijectives? Si possible, donner un exemple.</p></statement><answer><p>Il n'y a aucune fonction bijective de <m>A</m> vers <m>B</m>.</p></answer></task>
     </task>
     <task><introduction><p>Répondre aux mêmes questions, mais avec les fonctions de <m>B</m> vers <m>A</m>.</p></introduction>
-    <task><answer> Il y a <m>2^3=8</m> fonctions de <m>B</m> vers <m>A</m>.</answer></task>
-    <task><answer>Il n'y a aucune fonction injective de <m>B</m> vers <m>A</m>.</answer></task>
-    <task><answer>Il y a <m>6</m> fonctions surjectives de <m>B</m> vers <m>A</m>. Une telle fonction est la fonction définie par <m>f(a)=f(b)=0</m> et <m>f(c)=1</m>.</answer></task>
-    <task><answer>Il n'y a aucune fonction bijective de <m>B</m> vers <m>A</m>.</answer></task>
+    <task><statement><p>Combien y a-t-il de fonctions possibles?</p></statement><answer><p> Il y a <m>2^3=8</m> fonctions de <m>B</m> vers <m>A</m>.</p></answer></task>
+    <task><statement><p>Combien sont injectives? Si possible, donner un exemple.</p></statement><answer><p>Il n'y a aucune fonction injective de <m>B</m> vers <m>A</m>.</p></answer>
+    <solution><p>Comme l'image ne contient que deux éléments, mais le domaine en contient trois, il est impossible que chaque élément du domane ait une image différente des autres. Ainsi, il n'y a pas de fonction injective.</p></solution></task>
+    <task><statement><p>Combien sont surjectives? Si possible, donner un exemple.</p></statement><answer><p>Il y a <m>6</m> fonctions surjectives de <m>B</m> vers <m>A</m>. Une telle fonction est la fonction définie par <m>f(a)=f(b)=0</m> et <m>f(c)=1</m>.</p></answer><solution><p>Le problème général de déterminer le nombre de fonctions surjective entre deux ensembles est complexe. Lorsque les cardinalités des ensembles sont petites, on peut les énumérer. En voici une liste:
+    <md>
+    <mrow>f_1&amp;=\{(a,0),(b,0),(c,1)\}</mrow>
+    <mrow>f_2&amp;=\{(a,0),(b,1),(c,0)\}</mrow>
+    <mrow>f_3&amp;=\{(a,1),(b,0),(c,0)\}</mrow>
+    <mrow>f_4&amp;=\{(a,0),(b,1),(c,1)\}</mrow>
+    <mrow>f_5&amp;=\{(a,1),(b,1),(c,0)\}</mrow>
+    <mrow>f_6&amp;=\{(a,1),(b,0),(c,1)\}</mrow>
+    </md>.
+    Dans ce cas-ci, une autre manière de les compter est de prendre le nombre total de fonctions de <m>A</m> vers <m>B</m>, soit <m>8</m> et de soustraire les fonctions qui ne sont pas surjectives. Comme l'image ne possède que deux éléments, une fonction qui n'est pas surjective est nécessairement une fonction pour laquelle tous les éléments sont envoyés vers la même image. Il y a deux fonctions ayant cette propriété. Le nombre de fonctions surjective est donc <m>8-2=6</m>.
+    </p></solution></task>
+    <task><statement><p>Combien sont bijectives? Si possible, donner un exemple.</p></statement><answer><p>Il n'y a aucune fonction bijective de <m>B</m> vers <m>A</m>.</p></answer></task>
     </task>
     </exercise>
     <exercise><introduction><p>Que peut-on dire de la cardinalité des ensembles <m>A,B</m> s'il existe une fonction <m>f:A\to B</m> qui est</p></introduction>
-    <task><statement><p>injective? Justifier</p></statement><solution>Si <m>f</m> est injective, alors <m>|A|\leq |B|</m>. En effet, pour chaque élément <m>a\in A</m>, il existe un élément <m>b=f(a)</m>. De plus, tous ces éléments sont différents, puisque si <m>a_1 \neq a_2</m>, alors <m>f(a_1) \neq f(a_2)</m>, par l'injectivité de <m>f</m>.</solution></task>
-    <task><statement><p>surjective? Justifier</p></statement><solution>Si <m>f</m> est surjective, alors <m>|A|\geq |B|</m>. En effet, puisque <m>f</m> est surjective, pour chaque élément <m>b\in B</m>, il existe un <m>a\in A</m>, différent pour chaque <m>b</m>, tel que <m>f(a)=b</m>.</solution></task>
-    <task><statement><p>bijective? Justifier</p></statement><solution>Si <m>f</m> est bijective, alors <m>|A|= |B|</m>. En effet, si <m>f</m> est bijective, alors <m>f</m> est injective et surjective. Par <m>(a)</m>, on a que <m>|A|\leq |B|</m>, alors que par <m>(b)</m>, on a que <m>|A|\geq |B|</m>. Les deux inégalités nous donnent que  <m>|A|=|B|</m>.</solution></task>
+    <task><statement><p>injective? Justifier</p></statement><solution><p>Si <m>f</m> est injective, alors <m>|A|\leq |B|</m>. En effet, pour chaque élément <m>a\in A</m>, il existe un élément <m>b=f(a)</m>. De plus, tous ces éléments sont différents, puisque si <m>a_1 \neq a_2</m>, alors <m>f(a_1) \neq f(a_2)</m>, par l'injectivité de <m>f</m>.</p></solution></task>
+    <task><statement><p>surjective? Justifier</p></statement><solution><p>Si <m>f</m> est surjective, alors <m>|A|\geq |B|</m>. En effet, puisque <m>f</m> est surjective, pour chaque élément <m>b\in B</m>, il existe un <m>a\in A</m>, différent pour chaque <m>b</m>, tel que <m>f(a)=b</m>.</p></solution></task>
+    <task><statement><p>bijective? Justifier</p></statement><solution><p>Si <m>f</m> est bijective, alors <m>|A|= |B|</m>. En effet, si <m>f</m> est bijective, alors <m>f</m> est injective et surjective. Par <m>(a)</m>, on a que <m>|A|\leq |B|</m>, alors que par <m>(b)</m>, on a que <m>|A|\geq |B|</m>. Les deux inégalités nous donnent que  <m>|A|=|B|</m>.</p></solution></task>
     </exercise>
     <exercise><introduction><p>Donner une fonction de <m>\N</m> vers <m>\N</m> qui est </p></introduction>
-    <task><statement><p>injective, mais pas surjective;</p></statement><answer><m>f_a(n)=2n</m></answer></task>
+    <task><statement><p>injective, mais pas surjective;</p></statement><answer><p><m>f_a(n)=2n</m></p></answer></task>
     <task><statement><p>surjective, mais pas injective;</p></statement>
-    <answer><me>
+    <answer><p><me>
     f_b(n)=\begin{cases}
-    \frac{n}{2} &amp; \text{ si } n \text{ est pair.} \\
-    \frac{n-1}{2}&amp; \text{ sinon }
+    0 &amp; \text{ si } n=0 \\
+    n-1&amp; \text{ sinon }
     \end{cases}
-    </me>.</answer></task>
+    </me>.
+    Cette fonction a deux préimages pour <m>0</m>, soit <m>0</m> et <m>1</m>. Elle n'est donc pas injective. Par contre, elle est surjective puisque tout naturel <m>n\in \mathbb{N}</m> est atteint par <m>n+1</m>.
+    </p></answer></task>
     <task><statement><p>bijective;</p></statement>
     <answer>
+    <p>Un exemple simple est d'envoyer chaque naturel sur lui-même, soit <m>f_c(n)=n</m>.</p>
+    </answer>    
+    <answer>
+    <p> Voici un exemple un peu plus complexe:</p>
     <me>
-    f_c(n)=\begin{cases}
+    g_c(n)=\begin{cases}
     n+1 &amp; \text{ si } n \text{ est pair.} \\
     n-1&amp; \text{ sinon.}
     \end{cases}
     </me>.
     </answer>
-    <answer>
-    <m>g_c(n)=n</m>.
-    </answer>
+
     </task>
-    <task><statement><p>ni injective ni surjective.</p></statement><answer><m>f_d(n)=0</m>.</answer></task>
+    <task><statement><p>ni injective ni surjective.</p></statement><answer><p><m>f_d(n)=0</m> pour tout naturel <m>n\in \mathbb{N}</m>.</p></answer></task>
     </exercise>
     <exercise xml:id="exo-compInjSurj"><introduction><p>Soit <m>g:A\to B</m> et <m>f:B\to C</m> des fonctions.</p></introduction>
     <task><statement><p>Montrer que si <m>f,g</m> sont injectives, alors <m>f\circ g</m> l'est aussi.</p></statement>
-    <solution>Pour montrer que <m>f\circ g</m> est injective, on doit montrer que, soit <m>a_1,\ a_2\in A</m> deux éléments quelconques de <m>A</m> tels que <m>f\circ g(a_1) = f\circ g(a_2)</m>, alors <m>a_1=a_2</m>. Par définition de <m>f\circ g</m>, si <m>f\circ g(a_1) = f\circ g(a_2)</m>,  on a que 
+    <solution><p>Pour montrer que <m>f\circ g</m> est injective, on doit montrer que, soit <m>a_1,\ a_2\in A</m> deux éléments quelconques de <m>A</m> tels que <m>f\circ g(a_1) = f\circ g(a_2)</m>, alors <m>a_1=a_2</m>. Par définition de <m>f\circ g</m>, si <m>f\circ g(a_1) = f\circ g(a_2)</m>,  on a que 
     <md>
     <mrow>
     f(g(a_1))&amp; = f(g(a_2)) \amp
@@ -446,12 +497,12 @@ Une telle fonction est la fonction définie par <m>f(0)=a</m> et <m>f(1)=b</m>.<
     a_1&amp; = a_2\amp\text{ car } g \text{ est injective}  
     </mrow>
     </md>   
-    Ainsi, <m>f\circ g</m> est injective.</solution></task>
+    Ainsi, <m>f\circ g</m> est injective.</p></solution></task>
     <task><statement><p>Montrer que si <m>f,g</m> sont surjectives, alors <m>f\circ g</m> l'est aussi.</p></statement>
     <solution>
-    Pour montrer que <m>f\circ g</m> est surjective, on doit montrer que pour tout élélément <m>c \in C</m>, on peut trouver un élément <m>a \in A</m> tel que <m>f\circ g(a)=c</m>. Soit <m>c \in C</m>, puisque <m>f</m> est surjective, il existe <m>b\in B</m> tel que <m>\color{red}{f(b)=c}</m>. De plus, puisque <m>g</m> est surjective, il existe <m>a \in A</m> tel que <m>\color{green}{g(a)=b}</m>. Ainsi, 
+    <p>Pour montrer que <m>f\circ g</m> est surjective, on doit montrer que pour tout élément <m>c \in C</m>, on peut trouver un élément <m>a \in A</m> tel que <m>f\circ g(a)=c</m>. Soit <m>c \in C</m>, puisque <m>f</m> est surjective, il existe <m>b\in B</m> tel que <m>\color{red}{f(b)=c}</m>. De plus, puisque <m>g</m> est surjective, il existe <m>a \in A</m> tel que <m>\color{green}{g(a)=b}</m>. Ainsi, 
     <me>f\circ g(a)=f({\color{green}{g(a)}})=f({\color{green}{b}})={\color{red}{f(b)}}={\color{red}{c}}</me>,
-    et donc <m>f\circ g</m> est surjective.
+    et donc <m>f\circ g</m> est surjective.</p>
     </solution>
     </task>
     </exercise>
@@ -459,7 +510,7 @@ Une telle fonction est la fonction définie par <m>f(0)=a</m> et <m>f(1)=b</m>.<
     <me>
     (f\circ g)^{-1}=g^{-1}\circ f^{-1}    </me>.
     </p></statement>
-    <solution> <p> Par l'exercice <xref ref="exo-compInjSurj"/>, on sait que <m>f\circ g</m> est injective et surjective, et donc inversible. Il ne reste qu'à montrer que pour tout <m>a \in A</m>, et pour tout <m>c\in C</m>
+    <solution> <p> Par l'exercice <xref ref="exo-compInjSurj"/>, on sait que <m>f\circ g</m> est injective et surjective, et donc bijective et inversible. Il ne reste qu'à montrer que pour tout <m>a \in A</m>, et pour tout <m>c\in C</m>
     <me>
     (g^{-1}\circ f^{-1}) \circ (f\circ g) (a) = a
     </me>
@@ -535,11 +586,77 @@ Une telle fonction est la fonction définie par <m>f(0)=a</m> et <m>f(1)=b</m>.<
     </introduction>
     <task><statement><p>Trouver une bijection entre les nombres naturels et les nombres naturels pairs. Ceci montre que <m>|\N|=|2\N|</m>, même si <m>2\N\subset \N</m>.</p>
     <p>Un ensemble qui a la même cardinalité que <m>\N</m> ou qui est de cardinalité finie est dit dénombrable.</p>
-    </statement><answer>On considère <m>f:\N\to 2\N</m> la fonction définie par <m>f(n)=2n</m>.</answer></task>
+    </statement>
+    <answer><p><m>f(n)=2n</m></p></answer>
+    <answer><p>On considère <m>f:\N\to 2\N</m> la fonction définie par <m>f(n)=2n</m>. C'est une bijection. On peut bien le voir dans la table partielle ci-dessous.</p>
+    <table>
+    <title>Bijection entre <m>\mathbb{N}</m> et <m>2\mathbb{N}</m></title>
+  <tabular>
+    <row>
+      <cell>
+        <m>n</m>
+      </cell>
+      <cell>
+        <m>f(n)</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>2</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>2</m>
+      </cell>
+      <cell>
+        <m>4</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>3</m>
+      </cell>
+      <cell>
+        <m>6</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\vdots</m>
+      </cell>
+      <cell>
+        <m>\vdots</m>
+      </cell>
+    </row>
+  </tabular>
+</table>
+    </answer></task>
     <task xml:id="exo-bijTan"> 
     <statement> Trouver une bijection entre <m>]0,1[</m> et <m>\R</m>. Ceci montre que <m>\text{Card}\left(]0,1[\right)=\text{Card}\left(\R\right)</m>, même si <m>]0,1[ \subset \R</m>.</statement>
-    <hint>Penser à la fonction <m>\tan(x)</m>. </hint>
-    <answer>La fonction <m>f:]0,1[\to \R</m> définie par <m>f(x)=\tan\left( \pi x - \frac{\pi}{2}\right)</m> est une bijection.</answer>
+    <hint><p>Penser à la fonction <m>\tan(x)</m>.</p> </hint>
+    <answer><p>La fonction <m>f:]0,1[\to \R</m> définie par <m>f(x)=\tan\left( \pi x - \frac{\pi}{2}\right)</m> est une bijection.</p>
+    <figure>
+    <caption>La fonction <m>\tan\left( \pi x - \frac{\pi}{2}\right)</m></caption>
+    <image xml:id="bijection_0-1-R">
+    <shortdescription>La fonction est illustrée. On voit que c'est une bijection entre les ensembles.</shortdescription>
+    <sageplot>
+    plot(tan(x*pi-pi/2),x,0,1,ymin=-100,ymax=100)
+    </sageplot>
+    </image>
+    </figure>
+    </answer>
     </task>
     <task xml:id="exo-diagocantor"><statement><p>On considère maintenant l'ensemble <m>\N</m> et l'ensemble <m>]0,1[</m> des nombres réels compris entre <m>0</m> et <m>1</m> (exclusivement, mais ce n'est pas important). On suppose qu'il existe une bijection entre ces deux ensembles. En particulier, on peut déterminer l'image de chaque naturel et lui associer un réel. On peut donc lister les nombres réels. Voici à quoi ressemblerait cette liste:
     <md>
@@ -553,34 +670,381 @@ Une telle fonction est la fonction définie par <m>f(0)=a</m> et <m>f(1)=b</m>.<
     <p>Donc on prétend avoir cette bijection entre les deux ensembles. On considère le nombre réel <m>r=0.r_0r_1r_2r_3\cdots</m> formé de la manière suivante: <m>r_i=1</m> si <m>d_{i,i}\neq 1</m> et <m>r_i=2</m> si <m>d_{i,i}=1</m>. Que peut-on conclure grâce à ce nombre?</p>
     </statement>
     <hint><p>Quel nombre naturel a pour image <m>r</m>?</p></hint>
-    <solution>On peut remarquer que le nombre <m>r \in ]0,1[</m>, mais <m>r</m> n'est pas dans l'image de <m>f</m>, c'est-à-dire que <m>f(n)\neq r</m> pour tout <m>n \in \N</m>. En effet, <m>r</m> a été construit en prenant la diagonale de la liste <md>
+    <solution><p>On peut remarquer que le nombre <m>r \in ]0,1[</m>, mais <m>r</m> n'est pas dans l'image de <m>f</m>, c'est-à-dire que <m>f(n)\neq r</m> pour tout <m>n \in \N</m>. En effet,
+    si <m>r</m> était l'image du naturel <m>n</m>, alors <m>r_n=d_{n,n}</m>. Mais par construction, cela ne peut se produire étant donné que si <m>d_{n,n}=1</m>, alors <m>r_n=2</m> et si <m>d_{n,n}\neq 1</m>, on a posé <m>r_n=1</m>.</p>
+    <p>On dit que <m>r</m> a été construit en prenant la diagonale de la liste <md>
     <mrow>f(0)&amp;=0.d_{0,0}d_{0,1}d_{0,2}d_{0,3}d_{0,4}\cdots</mrow>
     <mrow>f(1)&amp;=0.d_{1,0}d_{1,1}d_{1,2}d_{1,3}d_{1,4}\cdots</mrow>
     <mrow>f(2)&amp;=0.d_{2,0}d_{2,1}d_{2,2}d_{2,3}d_{2,4}\cdots</mrow>
     <mrow>f(3)&amp;=0.d_{3,0}d_{3,1}d_{3,2}d_{3,3}d_{3,4}\cdots</mrow>
     <mrow>\vdots&amp;= \vdots</mrow>
     </md> , pour ensuite changer chacun des termes, c'est-
-a-dire que <m>r_i\neq d_{i,i}</m>.  Ainsi, <m>f</m> ne peut pas être une bijection, ce qui est en contradiction avec notre hypothèse initiale. Il n'existe donc pas de bijection entre <m>\N</m> et <m>]0,1[</m>. Par <xref ref="exo-bijTan"/>, il ne peut pas y avoir de bijection entre <m>\N</m> et <m>\R</m>. En fait <m>|\N| \lt |\R|</m>.</solution>
+a-dire que <m>r_i\neq d_{i,i}</m>.  Ainsi, <m>f</m> ne peut pas être une bijection, ce qui est en contradiction avec notre hypothèse initiale. Il n'existe donc pas de bijection entre <m>\N</m> et <m>]0,1[</m>. Par <xref ref="exo-bijTan"/>, il ne peut pas y avoir de bijection entre <m>\N</m> et <m>\R</m>. En fait <m>|\N| \lt |\R|</m>.</p></solution>
     </task>
   </exercise>
     <exercise><introduction><p>Soit <m>A=\{n\in\N~|~ 1\leq n\leq 12\}</m> et <m>B=\{1,2,3,4,6,12\}</m>. On définit la relation <m>PGCD_{12}:A\to B</m> qui associe à <m>a\in A</m> le plus grand commun diviseur de <m>a</m> et <m>12</m>.</p></introduction>
-    <task><statement><p>Montrer que cette relation est une fonction.</p></statement></task>
-    <task><statement><p>Déterminer l'image de <m>8</m>.</p></statement></task>
-    <task><statement><p>Déterminer la préimage de <m>3</m>.</p></statement></task>
-    <task><statement><p>Est-ce que la fonction est injective? Surjective?</p></statement></task>
+    <task><statement><p>Montrer que cette relation est une fonction.</p></statement>
+    <solution><p>Pour chaque nombre dans <m>A</m>, il n'y a qu'un seul plus grand commun diviseur avec <m>12</m>. On a donc bel et bien une fonction.</p></solution>
+    </task>
+    <task><statement><p>Déterminer l'image de <m>8</m>.</p></statement><answer><p><m>4</m></p></answer></task>
+    <task><statement><p>Déterminer la préimage de <m>3</m>.</p></statement><answer><p>La préimage de <m>3</m> est <m>\{3,9\}</m>.</p></answer></task>
+    <task><statement><p>Est-ce que la fonction est injective? Surjective?</p></statement><answer><p>Surjective, mais pas injective.</p></answer></task>
     </exercise>
     <exercise><statement><p>On considère la fonction caractéristique définie à l'exercice <xref ref="exo-fctcar"/> et la différence symétrique de l'exercice <xref ref="exo-diffsym"/>. Montrer que
     <me> 
     \mathbb{1}_{A\oplus B}=\mathbb{1}_A+\mathbb{1}_B-2\mathbb{1}_{A\cap B}
-    </me>.</p></statement></exercise>
-    <exercise>
-    <introduction><p>Dans l'exercice <xref ref="exo-compofprei"/>, on a analysé le comportement de <m>f^{-1}(f(A))</m> et de <m>f(f^{-1}(B))</m>.</p></introduction>
-    <task><statement><p>Montrer que <m>f^{-1}(f(A))\supseteq A</m>. Donner un exemple où <m>f^{-1}(f(A))\supset A</m> et un exemple où <m>f^{-1}(f(A))= A</m>.</p></statement></task>
-    <task><statement><p>Montrer que <m>f(f^{-1}(B))\subseteq B</m>. Donner un exemple où <m>f(f^{-1}(B))\subset B</m> et un exemple où <m>f(f^{-1}(B))= B</m>.</p></statement></task>
+    </me>.</p></statement>
+    <solution><p>On peut construire une table d'appartenance:</p>
+    <table>
+  <title>Table d'appartenance pour l'exercice</title>
+  <tabular>
+    <row>
+      <cell>
+        <m>A</m>
+      </cell>
+      <cell>
+        <m>B</m>
+      </cell>
+      <cell>
+        <m>A\cap B</m>
+      </cell>
+      <cell>
+        <m>A\oplus B</m>
+      </cell>
+      <cell>
+        <m>\mathbb{1}_A</m>
+      </cell>
+      <cell>
+        <m>\mathbb{1}_B</m>
+      </cell>
+      <cell>
+        <m>\mathbb{1}_{A\cap B}</m>
+      </cell>
+      <cell>
+        <m>\mathbb{1}_{A\oplus B}</m>
+      </cell>
+      <cell>
+        <m>\mathbb{1}_{A}+\mathbb{1}_{B}-2\mathbb{1}_{A\cap B}</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        oui
+      </cell>
+      <cell>
+        oui
+      </cell>
+      <cell>
+        oui
+      </cell>
+      <cell>
+        non
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        oui
+      </cell>
+      <cell>
+        non
+      </cell>
+      <cell>
+        non
+      </cell>
+      <cell>
+        oui
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        non
+      </cell>
+      <cell>
+        oui
+      </cell>
+      <cell>
+        non
+      </cell>
+      <cell>
+        oui
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        non
+      </cell>
+      <cell>
+        non
+      </cell>
+      <cell>
+        non
+      </cell>
+      <cell>
+        non
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+    </row>
+  </tabular>
+</table>
+    <p>Comme les deux dernières colonnes sont identiques, on peut conclure à leur égalité.</p>
+    </solution>
     </exercise>
-    <exercise><statement><p>Soit <m>A,B</m> deux ensembles de cardinalité infinie dénombrable. Trouver une bijection entre <m>\N</m> et <m>A\cup B</m> pour montrer que l'union est aussi dénombrable.</p></statement></exercise>
-    <exercise><statement><p>Soit <m>A\subseteq B</m> des ensembles avec <m>B</m> de cardinalité infinie dénombrable. Montrer que <m>A</m> est aussi dénombrable.</p></statement></exercise>
-    <exercise><statement><p>Considérer l'ensemble <m>A</m> des nombres entre <m>0</m> et <m>1</m> dont le développement décimal ne contient de que des <m>0</m> ou des <m>1</m>, par exemple <m>0.1001000100001\cdots</m>. Montrer que cet ensemble est non dénombrable en modifiant l'argument présenté à l'exercice <xref ref="exo-diagocantor"/>.</p></statement></exercise>
+    <!--<exercise>
+    <introduction><p>Dans l'exercice <xref ref="exo-compofprei"/>, on a analysé le comportement de <m>f^{-1}(f(A))</m> et de <m>f(f^{-1}(B))</m>.</p></introduction>
+    <task><statement><p>Montrer que <m>f^{-1}(f(A))\supseteq A</m>. Donner un exemple où <m>f^{-1}(f(A))\supset A</m> et un exemple où <m>f^{-1}(f(A))= A</m>.</p></statement>
+    <solution><p>La démonstration a été faite dans l'exercice <xref ref="exo-compofprei"/>. On la répète ici par souci de clarté.</p>
+    <p>On peut montrer que l'inclusion <m>C\subseteq f^{-1}(f(C))</m> est vérifiée. En effet, si <m>c\in C</m>, alors par définition, <m>f(c)\in f(C)</m>, et donc <m>c\in f^{-1}(f(C))</m>. </p>
+    </solution>
+    </task>
+    <task><statement><p>Montrer que <m>f(f^{-1}(B))\subseteq B</m>. Donner un exemple où <m>f(f^{-1}(B))\subset B</m> et un exemple où <m>f(f^{-1}(B))= B</m>.</p></statement></task>
+    </exercise> --> <!-- redondant avec l'autre -->
+    <exercise xml:id="exo-sousensdenomb"><task><statement><p>Soit <m>A\subseteq \mathbb{N}</m>. Montrer que la cardinalité de <m>A</m> est finie ou infinie dénombrable.</p></statement>
+    <solution><p>Si la cardinalité de <m>A</m> est finie, il n'y a rien à montrer. On considère donc le cas où l'ensemble <m>A</m> possède une infinité d'éléments et on trouve une bijection entre <m>A</m> et <m>\mathbb{N}</m>.</p>
+    <p>On considère la fonction <m>f:\mathbb{N}\to A</m> définie comme suit:
+    <ol>
+    <li><p>On pose <m>f(0)</m> le plus petit naturel dans l'ensemble <m>A</m>.</p></li>
+    <li><p>Soit <m>A_1=A-\{f(0)\}</m>. Cet ensemble est non vide puisque la cardinalité de <m>A</m> est infinie. On pose <m>f(1)</m> le plus petit naturel de cet ensemble.</p></li>
+    <li><p>Pour tout naturel <m>n\geq 2</m>, on pose <m>A_n=A-\{f(0),f(1),\ldots f(n-1)\}</m>. L'image de <m>g(n)</m> est le plus petit naturel de <m>A_n</m>.</p></li>
+    </ol></p>
+    <p>Il faut montrer que cette fonction est bijective. D'une part, elle est surjective puisque chaque élément de <m>A</m> est atteint. En effet, si on place les éléments de <m>A</m> en ordre croissant, l'élément en position <m>k</m> a comme préimage le naturel <m>k-1</m>. De l'autre côté, elle est injective puisque, par construction, deux naturels ne peuvent pas avoir la même image étant donné qu'une fois atteint, un nombre est retiré de l'ensemble <m>A</m> pour les prochains naturels.</p>
+    <p>Puisqu'une bijection entre <m>\mathbb{N}</m> et <m>A</m> existe, la cardinalité de <m>A</m> est infinie dénombrable.</p>
+    </solution>
+    </task>
+    <task><statement><p>Soit <m>A\subseteq B</m> des ensembles avec <m>B</m> de cardinalité infinie dénombrable. Montrer que <m>A</m> est aussi dénombrable (finie ou infinie).</p></statement>
+    <solution><p>Deux cas sont possible, soit <m>A</m> possède un nombre fini d'éléments, soit il en possède une infinité. Dans le premier cas, il n'y a rien à montrer. On considère donc un sous-ensemble <m>A</m> de <m>B</m> qui possède une infinité d'éléments. Parce que <m>B</m> est de cardinalité infini dénombrable, il existe une bijection entre <m>B</m> et <m>\mathbb{N}</m>, soit <m>f:B\to \mathbb{N}</m>. On considère la fonction <m>g:A\to f(A)</m> donnée par la restriction de <m>f</m> sur <m>A</m>:
+    <me>g(n)=\left.f\right_A(n)</me>.
+    </p>
+    <p>Parce que <m>A</m> est de cardinalité infinie et que <m>f</m> est une bijection, l'ensemble <m>f(A)\subseteq \mathbb{N}</m> avec cardinalité infinie. De plus, la fonction <m>g</m> est aussi une bijection entre <m>A</m> et <m>f(A)</m>. Selon la partie précédente, la cardinalité de <m>f(A)</m> est dénombrable. Ainsi la cardinalité de <m>A</m> l'est également.</p>
+    </solution></task></exercise>
+    <exercise><introduction><p>Soit <m>A,B</m> deux ensembles de cardinalité infinie dénombrable.</p></introduction>
+    <task xml:id="exo-uniondisjointdenomb"><statement><p>Si <m>A\cap B=\emptyset</m>, trouver une bijection entre <m>\N</m> et <m>A\cup B</m> pour montrer que l'union est aussi dénombrable.</p></statement>
+    <solution><p>Si on est capable de donner une liste de tous les éléments de <m>A\cup B</m>, alors l'ensemble est dénombrable. Comme <m>A</m> et <m>B</m> sont dénombrables, un telle liste existe pour chacun de ces ensembles. Il suffit d'alterner entre les éléments de <m>A</m> et ceux de <m>B</m>:</p>
+    <table>
+  <title>Énumération de <m>A\cup B</m></title>
+  <tabular>
+    <row>
+      <cell>
+        <m>n</m>
+      </cell>
+      <cell>
+        Éléments de<nbsp /><m>A\cup B</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>a_1</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>2</m>
+      </cell>
+      <cell>
+        <m>b_1</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>3</m>
+      </cell>
+      <cell>
+        <m>a_2</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>4</m>
+      </cell>
+      <cell>
+        <m>b_2</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>5</m>
+      </cell>
+      <cell>
+        <m>a_3</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>6</m>
+      </cell>
+      <cell>
+        <m>B_3</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\vdots</m>
+      </cell>
+      <cell>
+        <m>\vdots</m>
+      </cell>
+    </row>
+  </tabular>
+</table>
+    </solution><!-- convertir en <intuition/> -->
+    <solution><p>Si <m>A</m> et <m>B</m> sont de cardinalité infinie dénombrable, alors il existe des bijections <m>f:\mathbb{N}\to A</m> et <m>g:\mathbb{N}\to B</m>. On peut créer une nouvelle bijection à partir de ces fonctions de la manière suivante:
+    <me>
+    h(n)=\begin{cases}
+    f\left(\frac{n}{2}\right) &amp; \text{ si } n \text{ est pair}\\
+    g\left(\frac{n-1}{2}\right) &amp; \text{ si } n \text{ est impair}
+    \end{cases}
+    </me>. On a donc </p>
+    <table>
+    <title>bijection entre <m>\mathbb{N}</m> et <m>A\cup B</m></title>
+  <tabular>
+    <row>
+      <cell>
+        <m>n</m>
+      </cell>
+      <cell>
+        <m>h(n)</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>f(0)</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>g(0)</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>2</m>
+      </cell>
+      <cell>
+        <m>f(1)</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>3</m>
+      </cell>
+      <cell>
+        <m>g(1)</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>4</m>
+      </cell>
+      <cell>
+        <m>f(2)</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>5</m>
+      </cell>
+      <cell>
+        <m>g(2)</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>6</m>
+      </cell>
+      <cell>
+        <m>f(3)</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\vdots</m>
+      </cell>
+      <cell>
+        <m>\vdots</m>
+      </cell>
+    </row>
+  </tabular>
+</table>
+    <p>Puisque <m>f,g</m> sont des bijections et que les ensembles <m>A,B</m> sont disoints, on sait que tous les éléments de <m>A</m> et <m>B</m> sont présents (la fonction <m>h</m> est surjective) et qu'il n'y a pas de répétition (elle est aussi injective).</p></solution>
+    </task>
+    <task xml:id="exo-unioncommedisjoint"><statement><p>Montrer que <m>A\cup B=(A-B)\cup (B-A)\cup (A\cap B)</m>.</p></statement></task>
+    <task><statement><p>Montrer que <m>A</m> et <m> B</m> ne sont pas disjoints, alors <m>A\cup B</m> est tout de même de cardinalité dénombrable. </p></statement>
+    <hint><p>Appliquer les parties <xref ref="exo-uniondisjointdenomb"/> et <xref ref="exo-unioncommedisjoint"/> ainsi que l'exercice <xref ref="exo-sousensdenomb"/>. </p></hint>
+    <solution><p>Par <xref ref="exo-unioncommedisjoint"/>, l'union de <m>A</m> et <m>B</m> s'écrit comme une union de trois ensembles. De plus, par construction, ces trois ensembles sont disjoints. Comme <m>A-B\subseteq B, B-A\subseteq B</m> et <m>A\cap B\subseteq A</m> (et <m>B</m>), l'exercice <xref ref="exo-sousensdenomb"/> garantit que ces ensembles sont de cardinalité dénombrable.</p>
+    
+    <p> On pose <m>C=(A-B)\cup (B-A)</m>. Alors par l'exercice <xref ref="exo-uniondisjointdenomb"/>, l'ensemble <m>C</m> est dénombrable. Finalement, pour la même raison, l'ensemble <m>C\cup (A\cap B)=(A-B)\cup (B-A)\cup (A\cap B)</m> est aussi dénombrable.</p></solution></task>
+    </exercise>
+    
+    <exercise><statement><p>Considérer l'ensemble <m>A</m> des nombres entre <m>0</m> et <m>1</m> dont le développement décimal ne contient de que des <m>0</m> ou des <m>1</m>, par exemple <m>0.1001000100001\cdots</m>. Montrer que cet ensemble est non dénombrable en modifiant l'argument présenté à l'exercice <xref ref="exo-diagocantor"/>.</p></statement>
+    <solution><p>On imagine qu'une liste de ces nombres existe. On pose <m>x=b_1b_2b_3\cdots</m> l'un de ces nombres où <m>b_i=0</m> si le nombre à la ligne <m>i</m> de cette liste a un <m>1</m> en position <m>i</m> et <m>b_i=1</m> sinon. Par construction, <m>x</m> n'est pas dans la liste. Or si la cardinalité de <m>A</m> était dénombrable, il devrait s'y trouver. Ceci est une contradiction, alors <m>A</m> doit être non dénombrable.</p></solution>
+    </exercise>
     <exercise><introduction><p>Considérer la table infinie suivante, dans laquelle des nombres rationnels strictement positifs apparaissent.</p>
     <table>    
 <title>Énumération des rationnels</title>
@@ -796,8 +1260,18 @@ a-dire que <m>r_i\neq d_{i,i}</m>.  Ainsi, <m>f</m> ne peut pas être une biject
   </tabular>
 </table>
     </introduction>
-    <task><statement><p>Est-ce que tous les rationnels strictement positifs apparaissent? Justifier </p></statement></task>
-    <task><statement>Créer une bijection de <m>\N</m> vers l'ensemble des rationnels strictement positifs afin de montrer que cet ensemble est aussi dénombrable.</statement></task>
+    <task><statement><p>Est-ce que tous les rationnels strictement positifs apparaissent? Justifier </p></statement>
+    <solution><p>Les rationnels strictement positifs apparaissent tous puisque toutes les combinaisons de numérateur et dénominateur sont présentes. Chaque nombre apparait même plus d'une fois, par exemple <m>1/2=2/4=3/6=\cdots</m>.</p></solution>
+    </task>
+    <task><statement>Créer une bijection de <m>\N</m> vers l'ensemble des rationnels strictement positifs afin de montrer que cet ensemble est aussi dénombrable.</statement>
+    <solution><p>On va parcourir la table de façon à obtenir une liste de tous les rationnels. On commence au coin supérieur gauche avec l'entrée <m>1/1</m>, puis on se déplace vers la droite pour atteindre l'entrée <m>1/2</m>. On descend ensuite par la diagonale en bas à gauche pour aller chercher l'entrée <m>2/1</m>, on descend pour atteindre l'entrée <m>3/1</m> et on remonte le long de la diagonale. La figure <xref ref="fig-enumeration_rationnel"/> illustre le début de ce processus. Lorsque l'on tombe sur un nombre que l'on a déjà rencontré, on l'ignore tout simplement. Ce procédé garantit que tous les rationnels seront touchés puisque, par construction de la grille, chaque combinaison de numérateur et dénominateur est incluse.</p>
+    <figure xml:id="fig-enumeration_rationnel">
+    <caption>Énumération des rationnels</caption>
+    <image source="enumeration_rationnel.svg">
+    </image>
+    </figure>
+    </solution>
+    </task>
     </exercise>
     </exercisegroup>
 </exercises>

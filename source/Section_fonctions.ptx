@@ -19,7 +19,7 @@
     <!-- Sous-sections à écrire, à même ce fichier -->
     <subsection>
     <title>Définitions et exemples</title>
-    <p>Soit <m>A</m> et <m>B</m> deux ensembles. Une relation est un sous-ensemble  <m>R\subseteq A\times B</m>. On dit parfois que <m>R</m> est une relation de <m>A</m> vers <m>B</m>.  Deux éléments <m>a\in A</m> et <m>b\in B</m> sont dits en relation si <m>(a,b)\in R</m>. On écrit aussi <m>a~ R~ b</m> ou <m>a\sim b</m> pour dire que les éléments <m>a,b</m> sont en relation.</p>
+    <p>Soit <m>A</m> et <m>B</m> deux ensembles. Une relation est un sous-ensemble <m>R</m> du produit cartésien: <m>R\subseteq A\times B</m>. On dit parfois que <m>R</m> est une relation de <m>A</m> vers <m>B</m>.  Deux éléments <m>a\in A</m> et <m>b\in B</m> sont dits en relation si <m>(a,b)\in R</m>. On écrit aussi <m>a~ R~ b</m> ou <m>a\sim b</m> pour dire que les éléments <m>a,b</m> sont en relation.</p>
     <example xml:id="ex-rel">
     <title>Un exemple de relation</title>
     <statement><p>On considère l'ensemble <m>A=B</m> formé des provinces canadiennes. On pose <me>R=\{(p,q)\in A\times A~|~\text{il existe une frontière terrestre entre } p \text{ et }q\}</me>. On cherche trois éléments de <m>A\times A</m> qui sont en relation <m>R</m> et deux qui ne le sont pas.</p></statement>
@@ -89,7 +89,7 @@
     <p>Il y aura <m>9</m> fonctions. Avant de poursuivre, tenter de voir pourquoi.</p>
     </statement>
     <solution>
-    <p>On sait que chaque élément du domaine doit être envoyé sur exactement un élément du codomaine. Comme on a deux éléments dans le domaine et que pour chacun on a trois choix dans le codomaine, on devrait trouver <m>3\cdot3=9</m> fonctions. Elles sont dans la table <xref ref="tab-fctAB"/>. L'ordre n'est évidemment pas important, mais remarquer comment elles ont été listées. On est parti avec <m>f(0)=0</m> pour ensuite faire toutes les valeurs possibles pour <m>f(1)</m>. Ensuite, on prend la deuxième option <m>f(0)=1</m> et on répète, pour finalement arriver avec <m>f(0)=2</m> et ses variantes pour <m>f(1)</m>. </p>
+    <p>On sait que chaque élément du domaine doit être envoyé sur exactement un élément du codomaine. Comme on a deux éléments dans le domaine et que, pour chacun, on a trois choix dans le codomaine, on devrait trouver <m>3\cdot3=9</m> fonctions. Elles sont dans la table <xref ref="tab-fctAB"/>. L'ordre n'est évidemment pas important, mais remarquer comment elles ont été listées. On est parti avec <m>f(0)=0</m> pour ensuite faire toutes les valeurs possibles pour <m>f(1)</m>. Ensuite, on prend la deuxième option <m>f(0)=1</m> et on répète, pour finalement arriver avec <m>f(0)=2</m> et ses variantes pour <m>f(1)</m>. </p>
     <table xml:id="tab-fctAB"><title>Les fonctions de <m>A</m> vers <m>B</m></title>
   <tabular top="major">
     <row>
@@ -209,7 +209,7 @@
     </subsection>
   <subsection>
   <title>Représentation d'une fonction</title>
-  <p>Pour aider à comprendre  une fonction, il peut être pratique de la visualiser à l'aide de différents outils. Selon le domaine et/ou le codomaine, certains sont plus appropriés que d'autres. À titre d'exemple, on considère les ensembles <m>A=\{0,1,2,3\}</m> et <m>B=\{1,2,3\}</m> et la fonction définie comme suit:
+  <p>Pour aider à comprendre  une fonction, il peut être pratique de la visualiser à l'aide de différents outils. Selon le domaine ou le codomaine, certains sont plus appropriés que d'autres. À titre d'exemple, on considère les ensembles <m>A=\{0,1,2,3\}</m> et <m>B=\{1,2,3\}</m> et la fonction définie comme suit:
   <m>
   f(0)=1,f(1)=3,f(2)=1,f(3)=2
   </m>.
@@ -229,7 +229,7 @@ Ovales+A+B+fleches
   </image>
   </figure>
   <p>Les ellipses autour des éléments sont parfois omises dans cette représentation.</p>
-  <p>Une autre méthode est en effectuant tout simplement une représentation graphique des valeurs. Cette méthode ne fonctionne que si les ensembles sont numériques bien sûr. Ci-dessous, la représentation de la fonction <m>f</m> ainsi que d'une fonction <m>g:\R\to\R</m> sinusoïdale. C'est surtout dans un contexte continue qu'on utilise ce type de représentation, mais à l'occasion aussi dans un contexte discret.</p>
+  <p>Une autre méthode consiste à effectuer tout simplement une représentation graphique des valeurs. Cette méthode ne fonctionne que si les ensembles sont numériques bien sûr. Ci-dessous, la représentation de la fonction <m>f</m> ainsi que d'une fonction <m>g:\R\to\R</m> sinusoïdale. C'est surtout dans un contexte continue qu'on utilise ce type de représentation, mais à l'occasion aussi dans un contexte discret.</p>
   <sidebyside width="40%">
   <figure>
   <caption>Un graphique pour <m>f</m></caption>
@@ -254,10 +254,10 @@ plot(sin(3*x)*cos(x/2),(x,-pi,pi),color="black")
   <tabular top="major">
     <row bottom="medium">
       <cell>
-        n
+      <m>n</m>
       </cell>
       <cell>
-        f(n)
+      <m>f(n)</m>
       </cell>
     </row>
     <row>
@@ -546,10 +546,10 @@ Ellipse+Pts+Fleches+Txt+Fct
     <solution>
     <p><ol>
     <li><p>On commence par la fonction <m>f</m>. Son domaine est l'ensemble <m>B=\{1,2,3\}</m>, son codomaine est l'ensemble <m>C=\{-1,-2,-3,-4\}</m> et son image est le sous-ensemble de <m>C</m> contenant les éléments <m>-1,-2,-4</m>.</p>
-    <p>Pour la fonction <m>g</m>, son domaine est l'ensemble <m>A=\{a,b,c\}</m>, son codomaine est l'ensemble <m>B=\{1,2,3\}</m> et son image est le sous-ensemble de <m>C</m> contenant les éléments <m>1,3</m>.</p>
+    <p>Pour la fonction <m>g</m>, son domaine est l'ensemble <m>A=\{a,b,c\}</m>, son codomaine est l'ensemble <m>B=\{1,2,3\}</m> et son image est le sous-ensemble de <m>B</m> contenant les éléments <m>1,3</m>.</p>
     <p>Finalement pour la composition <m>f\circ g</m>, son domaine est l'ensemble <m>A=\{a,b,c\}</m>, son codomaine est l'ensemble <m>C=\{-1,-2,-3,-4\}</m> et son image est le sous-ensemble de <m>C</m> contenant les éléments <m>-2,-4</m>.</p></li>
     <li><p>Comme <m>a\notin B=\text{dom}(f)</m>, on ne peut pas déterminer l'image de <m>a</m> par <m>f</m>. Par contre <m>a\in A=\text{dom}(g)=\text{dom}(f\circ g)</m>, on a <m>g(a)=1</m> et <m>(f\circ g)(a)=-4</m></p></li>
-    <li><p>La ou les préimages de <m>-4</m> par la fonction <m>f</m> est l'ensemble des valeurs <m>x\in B=\text{dom}(f)</m> telles que <m>f(x)=-4</m>. On a <m>f^{-1}(-4)=\{1\}.</m> Pour la composition, on cherche l'ensemble des <m>x\in A=\text{dom}(f\circ g)</m> telles que <m>(f\circ g)(x)=-4</m>. On trouve <m>(f\circ g)^{-1}(-4)=\{a,c\}</m>. </p></li>
+    <li><p>La ou les préimages de <m>-4</m> par la fonction <m>f</m> est l'ensemble des valeurs <m>x\in B=\text{dom}(f)</m> telles que <m>f(x)=-4</m>. On a <m>f^{-1}(-4)=\{1\}</m>. La préimage de <m>-4</m> par <m>g</m> n'existe pas, car <m>-4\notin \text{Im}(g)</m>.Pour la composition, on cherche l'ensemble des <m>x\in A=\text{dom}(f\circ g)</m> telles que <m>(f\circ g)(x)=-4</m>. On trouve <m>(f\circ g)^{-1}(-4)=\{a,c\}</m>. </p></li>
     </ol></p>
     </solution>
     </example>
@@ -575,7 +575,7 @@ Ellipse+Pts+Fleches+Txt+Fct
     <li><p>Cette fonction n'est pas injective puisque pour tout <m>x\in \R</m>, on a <m>f(x)=f(-x)=^2</m>. En particulier, si <m>x\neq 0</m>, on obtient deux valeurs différentes du domaine qui donne la même image, par exemple <m>f(-1)=f(1)=1</m>. </p></li>
     <li><p>Cette fois, comme le domaine est restreint aux réels positifs, il n'y a plus de <m>-x</m> possible. Chaque nombre réel positif possède une unique racine carrée et donc, chaque élément de l'image n'est atteint que par un seul élément du domaine. C'est une fonction injective. </p></li>
     <li><p>Parce que <m>A</m> est un ensemble, on sait qu'il n'y a pas de répétitions dans ses éléments. Chaque membre de l'image est atteint par son unique homologue du domaine. C'est donc une injection (on utilise parfois ce terme plutôt que fonction injective).</p></li>
-    <li><p>On essaie de décortiquer un peu la fonction. L'ensemble de puissances contient <m>8</m> éléments. La cardinalité de ces éléments varie de <m>0</m> pour l'ensemble vide à <m>3</m> pour l'ensemble <m>A</m> lui-même. On comprend maintenant pourquoi le codomaine ne pouvait être que l'ensemble <m>A</m>. On a dû lui ajoute l'élément <m>3</m> afin que <m>f</m> puisse associer à chaque valeur de <m>\mathscr{P}(A)</m> une réponse.</p>
+    <li><p>On essaie de décortiquer un peu la fonction. L'ensemble de puissances contient <m>8</m> éléments. La cardinalité de ces éléments varie de <m>0</m> pour l'ensemble vide à <m>3</m> pour l'ensemble <m>A</m> lui-même. On comprend maintenant pourquoi le codomaine ne pouvait pas être que l'ensemble <m>A</m>. On a dû lui ajoute l'élément <m>3</m> afin que <m>f</m> puisse associer à chaque valeur de <m>\mathscr{P}(A)</m> une réponse.</p>
     <p>On peut évidemment exhiber plusieurs sous-ensembles qui ont la même cardinalité, par exemple <m>\{0\},\{1\}</m> et <m>\{2\}</m> ou <m>\{0,1\},\{0,2\}</m> et <m>\{1,2\}</m>. Cette fonction n'est donc pas injective.</p>
     </li>
     </ol></p></solution>
@@ -693,7 +693,8 @@ Ellipse+Pts+Fleches+Txt#+Fct
     </conclusion>
     <reading-questions>
     <introduction>
-  <p>Ces questions sont à faire avant de venir en classe et à remettre au début du cours.</p>
+  <!--<p>Ces questions sont à faire avant de venir en classe et à remettre au début du cours.</p>-->
+  <p>Répondre à ces questions suite à la lecture du texte qui précède pour valider la compréhension.</p>
   </introduction>
 
   <exercise xml:id="exo-fctrel">
