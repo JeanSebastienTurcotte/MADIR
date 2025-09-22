@@ -338,7 +338,7 @@
     <md>
     <mrow>0.40625&amp;=0\times 2^{-1}+1\times 2^{-2}+\text{autre chose}</mrow>
     <intertext>En soustrayant,  il reste 0.15625, pour lequel 0.125 est la plus grande puissance inférieure ou égale à ce nombre. On a alors</intertext>
-    <mrow>0.40625&amp;=0\times 2^{-1}+\times 2^{-2}+\times 2^{-3}+\text{quelque chose}</mrow>
+    <mrow>0.40625&amp;=0\times 2^{-1}+1\times 2^{-2}+1\times 2^{-3}+\text{quelque chose}</mrow>
     <intertext>On soustrait une autre fois et on obtient 0.03125, qui est une puissance exacte de 2. Alors</intertext>
     <mrow>0.40625&amp;=0\times 2^{-1}+ 2^{-2}+ 2^{-3}+2^{-5}</mrow>
     <mrow>0.40625&amp;=0.01101_2</mrow>

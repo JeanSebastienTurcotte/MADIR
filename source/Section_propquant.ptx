@@ -59,7 +59,7 @@
     </subsection>
     <subsection xml:id="sssec-quantificateurs">
     <title>Quantificateurs existentiel et universel</title>
-    <p>On peut donc transformer un prédicat en proposition en assignant aux variables certaines valeurs. On peut aussi ajouter un quantificateur à un prédicat. Un quantificateur est un mot du genre <q>certains, quelques, toutes, \etc</q> qui vient parler, d'une manière plus ou moins précise, de combien de valeurs de la variable on s'intéresse. Ainsi si on dit, <q>pour certaines valeurs de <m>x\in \R</m> on a <m>x>4</m></q>,on obtient une proposition. Dans ce cas-ci, elle est vraie, mais si on avait dit <q>pour toutes les valeurs de <m>x\in \R</m>, on a <m>x>4</m></q>, on aurait obtenu une proposition fausse.</p>
+    <p>On peut donc transformer un prédicat en proposition en assignant aux variables certaines valeurs. On peut aussi ajouter un quantificateur à un prédicat. Un quantificateur est un mot du genre <q>certains, quelques, toutes, etc.</q> qui vient parler, d'une manière plus ou moins précise, de combien de valeurs de la variable on s'intéresse. Ainsi si on dit, <q>pour certaines valeurs de <m>x\in \R</m> on a <m>x>4</m></q>,on obtient une proposition. Dans ce cas-ci, elle est vraie, mais si on avait dit <q>pour toutes les valeurs de <m>x\in \R</m>, on a <m>x>4</m></q>, on aurait obtenu une proposition fausse.</p>
     <p>En mathématiques, il y a deux principaux quantificateurs qui sont utilisés. Le quantificateur existentiel et le quantificateur universel. Le premier s'intéresse à l'existence d'une valeur des variables qui rendent le prédicat vrai. Il n'est même pas nécessaire de la trouver cette valeur, et il pourrait y en avoir plus d'une. L'important, c'est qu'elle existe. Le quantificateur universel lui veut que le prédicat soit vrai pour toutes les valeurs de l'ensemble univers.</p>
     <definition xml:id="def-existe">
     <title>Quantificateur existentiel</title>
@@ -72,7 +72,7 @@
     <statement><p>On considère les propositions suivantes:
     <ol>
     <li><p><m>\exists n\in \N\, n^2=n+2  </m></p></li>
-    <li><p><m>\exists a \in \Omega, <q>a \text{ est dans le prénom de l'auteur}</q></m> où <m>\Omega=\{u,v,w,x,y,z\}</m>.</p></li>
+    <li><p><m>\exists a \in \Omega, a \text{est dans le prénom de l'auteur}</m> où <m>\Omega=\{u,v,w,x,y,z\}</m>.</p></li>
     <li><p>Il y a un mammifère qui pond des oeufs.</p></li>
     <li><p>Il existe un moment précis où l'auteur mesurait <m>100 </m> cm. (Présentement, il en fait environ <m>170</m>.)</p></li>
     </ol>
@@ -101,7 +101,7 @@
     <statement><p>On considère les propositions suivantes:
     <ol>
     <li><p><m>\forall n\in \N\, n^2=n+2  </m></p></li>
-    <li><p><m>\forall a \in \Omega, <q>a \text{ est dans le prénom de l'auteur}</q></m> où <m>\Omega=\{\text{a,b,s,t}\}</m>.</p></li>
+    <li><p><m>\forall a \in \Omega, a \text{ est dans le prénom de l'auteur}</m> où <m>\Omega=\{\text{a,b,s,t}\}</m>.</p></li>
     <li><p>Tous les oiseaux peuvent voler.</p></li>
     <li><p>N'importe quel nombre naturel est pair ou impair.</p></li>
     </ol>
