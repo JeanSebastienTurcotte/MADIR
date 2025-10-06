@@ -32,41 +32,41 @@
     <title>À faire en classe</title>
     <introduction><p>Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.</p></introduction>
     <exercise xml:id="exo-conversionbinaire"><introduction><p>Convertir les nombres suivants en binaire.</p></introduction>
-    <task><statement><p><m>17</m></p></statement><answer><m>17=10001_2</m> </answer></task>
-    <task><statement><p><m>144</m></p></statement> <answer><m>144=10010000_2</m></answer> </task>
-    <task><statement><p><m>1492</m></p></statement> <answer> <m>1492=10111010100_2</m> </answer> </task>
-    <task><statement><p><m>1534</m></p></statement><answer><m>1534=10111111110_2</m></answer></task>
-    <task><statement><p><m>1608</m></p></statement><answer><m>1608=11001001000_2</m></answer></task>
-    <task><statement><p><m>1642</m></p></statement><answer><m>1642=11001101010_2</m></answer></task>
+    <task><statement><p><m>17</m></p></statement><answer><p><m>17=10001_2</m></p> </answer></task>
+    <task><statement><p><m>144</m></p></statement> <answer><p><m>144=10010000_2</m></p></answer> </task>
+    <task><statement><p><m>1492</m></p></statement> <answer><p> <m>1492=10111010100_2</m></p> </answer> </task>
+    <task><statement><p><m>1534</m></p></statement><answer><p><m>1534=10111111110_2</m></p></answer></task>
+    <task><statement><p><m>1608</m></p></statement><answer><p><m>1608=11001001000_2</m></p></answer></task>
+    <task><statement><p><m>1642</m></p></statement><answer><p><m>1642=11001101010_2</m></p></answer></task>
     </exercise>
     <exercise xml:id="exo-conversionhexadecimale"><introduction><p>Convertir les nombres suivants en hexadécimal.</p></introduction>
-    <task><statement><p><m>1938</m></p></statement><answer><m>1938=792_{16}</m></answer></task>
-    <task><statement><p><m>1928</m></p></statement><answer><m>1928=788_{16}</m></answer></task>
-    <task><statement><p><m>1999</m></p></statement><answer><m>1999=7CF_{16}</m></answer></task>
+    <task><statement><p><m>1938</m></p></statement><answer><p><m>1938=792_{16}</m></p></answer></task>
+    <task><statement><p><m>1928</m></p></statement><answer><p><m>1928=788_{16}</m></p></answer></task>
+    <task><statement><p><m>1999</m></p></statement><answer><p><m>1999=7CF_{16}</m></p></answer></task>
     </exercise>
     <exercise>
     <introduction><p>Convertir les nombres réels suivants en base deux.</p></introduction>
-    <task><statement><p><m>0.875</m></p></statement><answer><m>0,875=0,111_2</m></answer></task>
-    <task><statement><p><m>0.1640625</m></p></statement><answer><m>0,1640625=0,0010101_2</m></answer></task>
+    <task><statement><p><m>0.875</m></p></statement><answer><p><m>0,875=0,111_2</m></p></answer></task>
+    <task><statement><p><m>0.1640625</m></p></statement><answer><p><m>0,1640625=0,0010101_2</m></p></answer></task>
     </exercise>
     <exercise><introduction><p>Convertir les nombres ci-dessous en base seize sans passer par la base dix</p>.</introduction>
-    <task><statement><p><m>1011011111000101_2</m></p></statement><answer><m>1011011111000101_2=B7C5_{16}</m></answer></task>
-    <task><statement><p><m>101110_2</m></p></statement><answer><m>101110_2=2E_{16}</m></answer></task>
+    <task><statement><p><m>1011011111000101_2</m></p></statement><answer><p><m>1011011111000101_2=B7C5_{16}</m></p></answer></task>
+    <task><statement><p><m>101110_2</m></p></statement><answer><p><m>101110_2=2E_{16}</m></p></answer></task>
     </exercise>
     <exercise><introduction><p>Convertir les nombres ci-dessous en binaire sans passer par la base dix.</p></introduction>
-    <task><statement><p><m>CAFE_{16}</m></p></statement><answer><m>CAFE_{16}=1100101011111110_2</m></answer></task>
-    <task><statement><p><m>ABBA2021_{16}</m></p></statement><answer><m>ABBA2021_{16}=10101011101110100010000000100001_2</m></answer></task>
+    <task><statement><p><m>CAFE_{16}</m></p></statement><answer><p><m>CAFE_{16}=1100101011111110_2</m></p></answer></task>
+    <task><statement><p><m>ABBA2021_{16}</m></p></statement><answer><p><m>ABBA2021_{16}=10101011101110100010000000100001_2</m></p></answer></task>
     </exercise>
     <exercise xml:id="exo-hexaafinir"><statement><p>Compléter la conversion de <m>987654321</m> en hexadécimal entamée à l'exemple <xref ref="ex-decihexa"/>.</p></statement>
-    <answer><m>987654321=3ADE68B1_{16}</m></answer>
+    <answer><p><m>987654321=3ADE68B1_{16}</m></p></answer>
   </exercise>
     <exercise><introduction><p>On considère <m>\Omega=\{n\in \N ~|~ n\leq 15\}</m>. On pose <m>A_0\subseteq \Omega</m> l'ensemble des nombres dans <m>\Omega</m> qui ont un <m>1</m> à la position <m>2^0</m> dans leur représentation binaire, <m>A_1\subseteq\Omega</m> ceux qui ont un <m>1</m> à la position <m>2^1</m> et ainsi de suite.</p></introduction>
-    <task><statement><p>Donner une description en extension de <m>A_2</m>.</p></statement><answer><m>A_2=\{4,5,6,7,12,13,14,15\}</m></answer></task>
-    <task><statement><p>Que sont les nombres dans <m>A_3^c</m>?</p></statement><answer><m>A_3=\{8,9,10,11,12,13,14,15\}</m>, et donc <m>A_3^c=\{0,1,2,3,4,5,6,7\}</m></answer></task>
-    <task><statement><p>Que vaut <m>\lvert A_1\cup A_0\rvert</m></p></statement><answer><m>|A_1\cup A_0|=12</m></answer></task>
+    <task><statement><p>Donner une description en extension de <m>A_2</m>.</p></statement><answer><p><m>A_2=\{4,5,6,7,12,13,14,15\}</m></p></answer></task>
+    <task><statement><p>Que sont les nombres dans <m>A_3^c</m>?</p></statement><answer><p><m>A_3=\{8,9,10,11,12,13,14,15\}</m>, et donc <m>A_3^c=\{0,1,2,3,4,5,6,7\}</m></p></answer></task>
+    <task><statement><p>Que vaut <m>\lvert A_1\cup A_0\rvert</m></p></statement><answer><p><m>|A_1\cup A_0|=12</m></p></answer></task>
     <task>
       <statement><p>Énumérer les éléments dans <m>A_2\cap A_0</m>.</p></statement>
-      <answer> <m>A_2\cap A_0 =\{5,7,13,15\}</m> </answer>
+      <answer><p> <m>A_2\cap A_0 =\{5,7,13,15\}</m></p> </answer>
       <solution>
         <p>
           Par définition, on a que <m>A_2=\{4,5,6,7,12,13,14,15\}</m>, alors que <m>A_0=\{1,3,5,7,8,9,11,13,15\}</m>. Ainsi, <m>A_2\cap A_0 =\{5,7,13,15\}</m>
@@ -75,7 +75,7 @@
     </task>
     <task>
       <statement><p>Énumérer les éléments dans <m>A_3\cap A_1</m>.</p></statement>
-      <answer> <m>A_3\cap A_1 =\{10,11,14,15\}</m> </answer>
+      <answer><p> <m>A_3\cap A_1 =\{10,11,14,15\}</m></p> </answer>
       <solution>
         <p>
           Par définition, on a que <m>A_3=\{8,9,10,11,12,13,14,15\}</m>, alors que <m>A_1=\{2,3,6,7,10,11,14,15\}</m>. Ainsi, <m>A_3\cap A_1 =\{10,11,14,15\}</m>
@@ -84,15 +84,15 @@
     </task>
     </exercise>
     <exercise><introduction><p>On considère la fonction <m>f:\mathbb{N}\to \mathbb{N}</m> qui associe à chaque nombre naturel la somme de ses chiffres dans la représentation binaire, par exemple <m>f(11001_2)=3</m>. Soit <m>A=\{0,1,2,\ldots , 100\}</m>. </p></introduction>
-    <task><statement><p>Calculer <m>f(66)</m>.</p></statement><answer> <m>f(66)=f(1000010_2)=2</m> </answer></task>
-    <task><statement><p>Quelle est l'image de l'ensemble <m>A</m>?</p></statement> <answer> <m>f(A)=\{0,1,2,3,4,5,6\}</m> </answer> </task>
-    <task><statement><p>Donner <m>(f^{-1}(\{1\}))\cap A</m>, soit les nombres dans <m>A</m> qui ont comme image <m>1</m>.</p></statement><answer> <m>(f^{-1}(\{1\}))\cap A=\{1,2,4,8,16,32,64\}</m> </answer></task>
-    <task><statement><p>De façon générale, que vaut <m>f^{-1}(\{1\})</m>?</p></statement><answer> <m>f^{-1}(\{1\})</m> est l'ensemble des puissances de <m>2</m>.  </answer></task>
+    <task><statement><p>Calculer <m>f(66)</m>.</p></statement><answer> <p><m>f(66)=f(1000010_2)=2</m></p> </answer></task>
+    <task><statement><p>Quelle est l'image de l'ensemble <m>A</m>?</p></statement> <answer><p> <m>f(A)=\{0,1,2,3,4,5,6\}</m></p> </answer> </task>
+    <task><statement><p>Donner <m>(f^{-1}(\{1\}))\cap A</m>, soit les nombres dans <m>A</m> qui ont comme image <m>1</m>.</p></statement><answer><p> <m>(f^{-1}(\{1\}))\cap A=\{1,2,4,8,16,32,64\}</m> </p></answer></task>
+    <task><statement><p>De façon générale, que vaut <m>f^{-1}(\{1\})</m>?</p></statement><answer> <p><m>f^{-1}(\{1\})</m> est l'ensemble des puissances de <m>2</m>. </p> </answer></task>
      </exercise> 
-    <exercise><introduction>Effectuer les opérations suivantes.</introduction>
+     <exercise><introduction><p>Effectuer les opérations suivantes.</p></introduction>
     <task>
         <statement><p><m>110111011_2+1001011010_2</m></p></statement>
-        <answer> <m>110111011_2+1001011010_2=10000010101_2</m> </answer>
+        <answer> <p><m>110111011_2+1001011010_2=10000010101_2</m></p> </answer>
         <solution>
             <p>
                 <md alignment="alignat">
@@ -130,15 +130,15 @@
     </task>
     </exercise>
     <exercise><introduction><p>Effectuer les soustractions suivantes.</p></introduction>
-    <task><statement><p><m>111000_2-101000_2</m></p></statement> <answer><m>111000_2-101000_2=10000_2</m></answer> </task>
-    <task><statement><p><m>111000_2-111_2</m></p></statement> <answer> <m>111000_2-111_2=110001_2</m> </answer></task>
-    <task><statement><p><m>1110011_2-111111_2</m></p></statement><answer> <m>1110011_2-111111_2=110100_2</m> </answer></task>
-    <task><statement><p><m>100000_2-10101_2</m></p></statement><answer><m>100000_2-10101_2=1011_2</m></answer></task>
+    <task><statement><p><m>111000_2-101000_2</m></p></statement> <answer><p><m>111000_2-101000_2=10000_2</m></p></answer> </task>
+    <task><statement><p><m>111000_2-111_2</m></p></statement> <answer> <p><m>111000_2-111_2=110001_2</m> </p></answer></task>
+    <task><statement><p><m>1110011_2-111111_2</m></p></statement><answer> <p><m>1110011_2-111111_2=110100_2</m> </p></answer></task>
+    <task><statement><p><m>100000_2-10101_2</m></p></statement><answer><p><m>100000_2-10101_2=1011_2</m></p></answer></task>
     </exercise>
     <exercise><introduction><p>Effectuer les divisions suivantes afin de trouver le quotient et le reste.</p></introduction>
     <task>
         <statement><p><m>1101001_2\div 11_2</m></p></statement>
-        <answer><m>1101001_2\div 11_2 = 100011_2</m></answer>
+        <answer><p><m>1101001_2\div 11_2 = 100011_2</m></p></answer>
         <solution>
             <p>
                 <tabular>
@@ -284,36 +284,36 @@
         </solution>
     
     </task>
-    <task><statement><p><m>1011101_2\div 110_2</m></p></statement><answer> <m>1011101_2\div 110_2 = 1111_2\text{ avec reste de }11_2</m> </answer></task>
-    <task><statement><p><m>110001_2\div 1111_2</m></p></statement><answer> <m>110001_2\div 1111_2=11_2 \text{ avec reste de } 100_2</m> </answer></task>
-    <task><statement><p><m>101110111_2\div 11011_2</m></p></statement><answer> <m>101110111_2\div 11011_2= 1101_2 \text{ avec reste de } 11000_2</m> </answer></task>
+    <task><statement><p><m>1011101_2\div 110_2</m></p></statement><answer><p> <m>1011101_2\div 110_2 = 1111_2\text{ avec reste de }11_2</m></p> </answer></task>
+    <task><statement><p><m>110001_2\div 1111_2</m></p></statement><answer><p> <m>110001_2\div 1111_2=11_2 \text{ avec reste de } 100_2</m></p> </answer></task>
+    <task><statement><p><m>101110111_2\div 11011_2</m></p></statement><answer><p> <m>101110111_2\div 11011_2= 1101_2 \text{ avec reste de } 11000_2</m></p> </answer></task>
     </exercise>
     
     <exercise xml:id="exo-puissmoinsnombre">
     <introduction><p>Effectuer les soustractions suivantes, en décimale ou en binaire. Remarquer que le nombre de gauche est toujours une puissance de deux.</p></introduction>
-    <task><statement><p><m>10_2-1_2</m></p></statement> <answer> <m>10_2-1_2=1_2</m></answer> </task>
-    <task><statement><p><m>100_2-10_2</m></p></statement> <answer> <m>100_2-10_2=10_2</m> </answer> </task>
-    <task><statement><p><m>100_2-11_2</m></p></statement>  <answer> <m>100_2-11_2=01_2</m></answer> </task>
-    <task><statement><p><m>1000_2-100_2</m></p></statement> <answer> <m>1000_2-100_2=100_2</m> </answer> </task>
-    <task><statement><p><m>1000_2-101_2</m></p></statement> <answer> <m>1000_2-101_2=011_2</m> </answer> </task>
-    <task><statement><p><m>1000_2-110_2</m></p></statement> <answer><m>1000_2-110_2=010_2</m> </answer> </task>
-    <task><statement><p><m>1000_2-111_2</m></p></statement> <answer> <m>1000_2-111_2=001_2</m> </answer> </task>
-    <task><statement><p><m>10000_2-1000_2</m></p></statement> <answer> <m>10000_2-1000_2=1000_2</m> </answer> </task>
-    <task><statement><p><m>10000_2-1001_2</m></p></statement> <answer> <m>10000_2-1001_2=0111_2</m> </answer> </task>
-    <task xml:id="exo-complementexemple"><statement><p><m>10000_2-1010_2</m></p></statement> <answer> <m>10000_2-1010_2=0110_2</m> </answer></task>
-    <task><statement><p><m>10000_2-1011_2</m></p></statement> <answer><m>10000_2-1011_2=0101_2</m></answer> </task>
-    <task><statement><p><m>10000_2-1100_2</m></p></statement> <answer> <m>10000_2-1100_2=0100_2</m> </answer> </task>
-    <task><statement><p><m>10000_2-1101_2</m></p></statement> <answer> <m>10000_2-1101_2=0011_2</m></answer> </task>
-    <task><statement><p><m>10000_2-1110_2</m></p></statement> <answer><m>1000_2-1110_2=0010_2</m></answer> </task>
-    <task><statement><p><m>10000_2-1111_2</m></p></statement> <answer><m>10000_2-1111_2=0001_2</m></answer> </task>
-    <task><statement><p><m>100000000_2-110100</m></p></statement> <answer> <m>100000000_2-110100_2=001100_2</m> </answer> </task>
+    <task><statement><p><m>10_2-1_2</m></p></statement> <answer><p> <m>10_2-1_2=1_2</m></p></answer> </task>
+    <task><statement><p><m>100_2-10_2</m></p></statement> <answer> <p><m>100_2-10_2=10_2</m> </p></answer> </task>
+    <task><statement><p><m>100_2-11_2</m></p></statement>  <answer><p> <m>100_2-11_2=01_2</m></p></answer> </task>
+    <task><statement><p><m>1000_2-100_2</m></p></statement> <answer><p> <m>1000_2-100_2=100_2</m></p> </answer> </task>
+    <task><statement><p><m>1000_2-101_2</m></p></statement> <answer><p> <m>1000_2-101_2=011_2</m> </p></answer> </task>
+    <task><statement><p><m>1000_2-110_2</m></p></statement> <answer><p><m>1000_2-110_2=010_2</m></p> </answer> </task>
+    <task><statement><p><m>1000_2-111_2</m></p></statement> <answer><p> <m>1000_2-111_2=001_2</m></p> </answer> </task>
+    <task><statement><p><m>10000_2-1000_2</m></p></statement> <answer><p> <m>10000_2-1000_2=1000_2</m> </p></answer> </task>
+    <task><statement><p><m>10000_2-1001_2</m></p></statement> <answer><p> <m>10000_2-1001_2=0111_2</m> </p></answer> </task>
+    <task xml:id="exo-complementexemple"><statement><p><m>10000_2-1010_2</m></p></statement> <answer><p> <m>10000_2-1010_2=0110_2</m> </p></answer></task>
+    <task><statement><p><m>10000_2-1011_2</m></p></statement> <answer><p><m>10000_2-1011_2=0101_2</m></p></answer> </task>
+    <task><statement><p><m>10000_2-1100_2</m></p></statement> <answer><p> <m>10000_2-1100_2=0100_2</m></p> </answer> </task>
+    <task><statement><p><m>10000_2-1101_2</m></p></statement> <answer><p> <m>10000_2-1101_2=0011_2</m></p></answer> </task>
+    <task><statement><p><m>10000_2-1110_2</m></p></statement> <answer><p><m>1000_2-1110_2=0010_2</m></p></answer> </task>
+    <task><statement><p><m>10000_2-1111_2</m></p></statement> <answer><p><m>10000_2-1111_2=0001_2</m></p></answer> </task>
+    <task><statement><p><m>100000000_2-110100</m></p></statement> <answer> <p><m>100000000_2-110100_2=001100_2</m> </p></answer> </task>
     <task><statement><p>Que peut-on dire du résultat de la soustraction d'un nombre à une puissance de deux supérieure?</p></statement>
     <answer>
-    Le résultat de la soustraction est obtenu de la manière suivante:
+    <p>Le résultat de la soustraction est obtenu de la manière suivante:
     <ol>
     <li><p>À partir de la droite, on garde les premiers zéros et le premier un.</p></li>
     <li><p>Tous les autres chiffres sont inversés. Les zéros deviennent des uns et les uns deviennent des zéros.</p></li>
-    </ol>
+    </ol></p>
     </answer></task>
     </exercise>
     </subexercises>
@@ -351,7 +351,7 @@
     </me>. Celui-ci correspond à la réponse de la soustraction à l'exercice <xref ref="exo-complementexemple"/>.</p>
     </introduction>
     <task><statement><p>Vérifier les réponses de l'exercice <xref ref="exo-puissmoinsnombre"/> en utilisant la méthode du complément.</p></statement></task>
-    <task><statement><p>Trouver le complément de <m>11101_2</m> par rapport à la puissance <m>n=8</m>.</p></statement><answer><m>(00011101_2)^c=11100011_2</m></answer></task>
+    <task><statement><p>Trouver le complément de <m>11101_2</m> par rapport à la puissance <m>n=8</m>.</p></statement><answer><p><m>(00011101_2)^c=11100011_2</m></p></answer></task>
     </task>
     <task><introduction><p>Pour revenir à la soustraction <m>A-B</m>, une fois le complément de <m>B</m> calculé, on additionne <m>A+B^c</m>, ce qui donne un nombre à au plus <m>n+1</m> chiffres significatifs (à partir du premier <m>1</m> à gauche). On distingue alors deux cas, selon si <m>A&gt;B</m> ou <m>A&lt;B</m>.</p></introduction>
     <task><statement><p>Vérifier que <m>101011_2-1101_2=0101011_2+(0001101_2)^c-10000000_2=0101011_2+1110011_2-10000000_2=</m> et que le résultat correspond au résultat de <m>0101011_2+(0001101_2)^c</m>, en ignorant le chiffre le plus à gauche. On prend le complément selon la puissance <m>n=7</m>.</p></statement></task>

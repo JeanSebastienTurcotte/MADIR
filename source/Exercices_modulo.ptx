@@ -34,64 +34,65 @@
     <exercise><introduction><p>Déterminer le plus petit entier positif congru à <m>5^{2021}</m> modulo:</p></introduction>
     <task><statement><p><m>2</m>;</p></statement>
     <solution>
+    <p>
     <md>
     <mrow> 5^{2021} \amp \equiv 1^{2021} \mod 2</mrow>
     <mrow> \amp \equiv 1 \mod 2.</mrow>
     </md>
-    Ainsi, le plus petit entier positif congru à <m>5^{2021}</m> modulo <m>2</m> est <m>1</m>.
+    Ainsi, le plus petit entier positif congru à <m>5^{2021}</m> modulo <m>2</m> est <m>1</m>.</p>
     </solution>
-    <solution> Puisque <m>5^{2021}</m> est un nombre impair, on sait que le plus petit entier positif congru à <m>5^{2021}</m> modulo <m>2</m> est <m>1</m></solution>
+    <solution><p> Puisque <m>5^{2021}</m> est un nombre impair, on sait que le plus petit entier positif congru à <m>5^{2021}</m> modulo <m>2</m> est <m>1</m>.</p></solution>
     </task>
     <task><statement><p><m>3</m>;</p></statement>
-    <solution>
+    <solution><p>
     <md>
     <mrow> 5^{2021} \amp \equiv (-1)^{2021} \mod 3</mrow>
     <mrow> \amp \equiv -1 \mod 3</mrow>
     <mrow> \amp \equiv 2 \mod 3.</mrow>
     </md>
-    Ainsi, le plus petit entier positif congru à <m>5^{2021}</m> modulo <m>3</m> est <m>2</m>.
+    Ainsi, le plus petit entier positif congru à <m>5^{2021}</m> modulo <m>3</m> est <m>2</m>.</p>
     </solution>
     </task>
     <task><statement><p><m>4</m>;</p></statement>
-    <solution>
+    <solution><p>
     <md>
     <mrow> 5^{2021} \amp \equiv 1^{2021} \mod 4</mrow>
     <mrow> \amp \equiv 1 \mod 4.</mrow>
     </md>
-    Ainsi, le plus petit entier positif congru à <m>5^{2021}</m> modulo <m>4</m> est <m>1</m>.
+    Ainsi, le plus petit entier positif congru à <m>5^{2021}</m> modulo <m>4</m> est <m>1</m>.</p>
     </solution>
     </task>
     <task><statement><p><m>6</m>;</p></statement>
-    <solution>
+    <solution><p>
     <md>
     <mrow> 5^{2021} \amp \equiv (-1)^{2021} \mod 6</mrow>
     <mrow> \amp \equiv -1 \mod 6</mrow>
     <mrow> \amp \equiv 5 \mod 6.</mrow>
     </md>
-    Ainsi, le plus petit entier positif congru à <m>5^{2021}</m> modulo <m>6</m> est <m>5</m>.
+    Ainsi, le plus petit entier positif congru à <m>5^{2021}</m> modulo <m>6</m> est <m>5</m>.</p>
     </solution>
     </task>
     </exercise>
-    <exercise><introduction>Pour chaque opération ci-dessous, donner la réponse sous la forme d'un entier entre <m>0</m> et <m>51</m>.</introduction>
+    <exercise><introduction><p>Pour chaque opération ci-dessous, donner la réponse sous la forme d'un entier entre <m>0</m> et <m>51</m>.</p></introduction>
     <task><statement><p><m>(121\mod 52 +95 \mod 52)\mod 52</m>;</p></statement>
-    <answer><m>(121\mod 52 +95 \mod 52)\mod 52=8</m></answer>
+    <answer><p><m>(121\mod 52 +95 \mod 52)\mod 52=8</m></p></answer>
     </task>
     <task><statement><p><m>(121\mod 52 -95 \mod 52)\mod 52</m>;</p></statement>
-    <answer><m>(121\mod 52 -95 \mod 52)\mod 52=26</m></answer>
+    <answer><p><m>(121\mod 52 -95 \mod 52)\mod 52=26</m></p></answer>
     </task>
     <task><statement><p><m>((121\mod 52) \times (95 \mod 52))\mod 52</m>;</p></statement>
-    <answer><m>((121\mod 52) \times (95 \mod 52))\mod 52=3</m></answer>
+    <answer><p><m>((121\mod 52) \times (95 \mod 52))\mod 52=3</m></p></answer>
     </task>
     <!--<task><statement><p><m>3</m>;</p></statement></task>-->
     <hint>Rappel: On utilise la notation <m>a \mod n</m> pour représenter le reste de la division de <m>a</m> par <m>n</m>. Par exemple, <m>121 \mod 52 = 17</m> </hint>
     </exercise>
     <exercise><statement><p>Donner les réponses aux calculs de l'exercice précédent sous la forme d'un entier entre <m>-51</m> et <m>0</m>.</p></statement>
-    <answer>
+    <answer><p>
     <ol>
-    <li><m>8-52=-44</m></li>
-    <li><m>26-52=-26</m></li>
-    <li><m>3-52=-49</m></li>
-    </ol>
+    <li><p><m>8-52=-44</m></p></li>
+    <li><p><m>26-52=-26</m></p></li>
+    <li><p><m>3-52=-49</m></p></li>
+    </ol></p>
     </answer>
     </exercise>
    <!-- <exercise><statement><p>Montrer que chacune des classes d'équivalence modulo <m>5</m>, obtenues à l'exemple <xref ref="ex-modulo5"/>, peut être écrite sous la forme de l'ensemble <m>E_{r,5}=\{x\in \mathbb{Z}~|~ x=r+5k \,\text{pour un certain } k\in \mathbb{Z}\}</m>.</p></statement>
@@ -218,24 +219,24 @@
     <task><statement><p>À quelle ligne et quelle colonne retrouve-t-on le nombre <m>33</m>?</p></statement><answer>Le nombre <m>33</m> se trouve à la position <m>(5,3)</m>. </answer></task>
     <task><statement><p>À quelle ligne et quelle colonne retrouve-t-on le nombre <m>66</m>?</p></statement><answer>Le nombre <m>66</m> se trouve à la position <m>(11,0)</m>. </answer></task>
     <task><statement><p>À quelle ligne et quelle colonne retrouve-t-on le nombre <m>87</m>?</p></statement><answer>Le nombre <m>87</m> se trouve à la position <m>(14,3)</m>. </answer></task>
-    <task><statement><p>À quelle ligne et quelle colonne retrouve-t-on votre numéro de  DA?</p></statement><answer>Votre DA se trouve à la position <m>(\frac{DA-r}{6},r)</m>, où <m>r= DA \mod 6</m> est le reste de votre DA lors de la division par <m>6</m>. </answer></task>
+    <task><statement><p>À quelle ligne et quelle colonne retrouve-t-on votre numéro de  DA?</p></statement><answer><p>Votre DA se trouve à la position <m>(\frac{DA-r}{6},r)</m>, où <m>r= DA \mod 6</m> est le reste de votre DA lors de la division par <m>6</m>.</p> </answer></task>
     </exercise>
     <exercise>
     <introduction><p>Résoudre les congruences suivantes ou expliquer pourquoi il n'y a pas de solutions.</p></introduction>
     <task><statement><p><m>2x\equiv 1\mod 5</m></p></statement>
-    <answer><m>x\equiv 3 \mod 5</m></answer>
+    <answer><p><m>x\equiv 3 \mod 5</m></p></answer>
     </task>
     <task><statement><p><m>3x\equiv 1\mod 4</m></p></statement>
-    <answer><m>x\equiv 3 \mod 4</m></answer>
+    <answer><p><m>x\equiv 3 \mod 4</m></p></answer>
     </task>
     <task><statement><p><m>3x\equiv 1\mod 7</m></p></statement>
-    <answer><m>x\equiv 5 \mod 7</m></answer>
+    <answer><p><m>x\equiv 5 \mod 7</m></p></answer>
     </task>
     <task><statement><p><m>4x\equiv 1\mod 6</m></p></statement>
-    <answer>Cette équation ne possède aucune solution, car <m>\pgcd{(4,6)}=2\not\mid \ 1</m>.</answer>
+    <answer><p>Cette équation ne possède aucune solution, car <m>\pgcd{(4,6)}=2\not\mid \ 1</m>.</p></answer>
     </task>
     <task><statement><p><m>5x\equiv 1\mod 7</m></p></statement>
-    <answer><m>x\equiv 3 \mod 7</m></answer>
+    <answer><p><m>x\equiv 3 \mod 7</m></p></answer>
     </task>
     </exercise>
     <exercise>
