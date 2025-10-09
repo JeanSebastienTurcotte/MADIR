@@ -476,7 +476,133 @@ Cependant, on ne peut pas utiliser le principe de la somme, car il existe des ch
 </example>
 
 </subsection>
-
+<subsection>
+<title>Le principe d'étiquetage</title>
+<!-- Basé sur l'approche de James Tanton -->
+<p>On peut remarquer que plusieurs des exemples font intervenir des méthodes et des expressions qui se ressemblent. Par exemple, on voit souvent apparaître des termes de la forme <m>6\times 5\times4  </m> ou même <m>6\times 5 \times \cdots \times 2\times 1</m>. Il convient maintenant de se définir une notation qui permet d'écrire plus succintement de tels calculs.</p>
+<definition xml:id="def_facto"> 
+<title>La factorielle</title>
+<statement> <p>Soit <m>k\in\ \N</m>, on définit <m>k!</m> (on dit la factorielle de <m>k</m>, ou bien <m>k</m> factorielle) comme étant le produit des nombres naturels de <m>1</m> jusqu'à <m>k</m>.</p>
+<p>Par convention, on définit aussi <m>0!=1</m>. On justifiera un peu plus tard ce choix.</p>
+</statement>
+</definition>
+<example>
+<title>Des exemples de factorielles</title>
+<statement><p>On cherche à calculer les valeurs suivantes: 
+<ol>
+<li><p><m>4!</m>;</p></li>
+<li><p><m>6!</m>;</p></li>
+<li><p><m>7!</m>;</p></li>
+<li><p><m>\frac{83!}{80!}</m>.</p></li>
+</ol>
+</p></statement>
+<solution>
+<p><ol>
+<li><p>Selon la définition, on a <m>4!=4\times 3\times 2\times 1=24</m>;</p></li>
+<li><p>De manière similaire, <m>6!=6\times 5\times 4\times 3\times 2\times 1=720</m>.</p></li>
+<li><p>Ici, il peut  être intéressant de remarquer que <m>7!=7\times (6\times 5\times 4\times 3\times 2\times 1)=7\times 6!</m>. On peut donc se servir de la réponse précédente pour trouver <m>7!=7\times 720=4040</m>.</p></li>
+<li><p>Ici, vu la grandeur des nombres, on peut être tenté de prendre la calculatrice, mais il y a de fortes chances que celle-ci ne soit pas d'une grande aide. En raisonnant un peu comme pour le calcul précédant, on peut montrer que <m>83!=83\times 82\times 81\times 80!</m> et donc que
+<m>\frac{83!}{80!}=\frac{83\times 82\times 81\times 80!}{80!}=83\times 82\times 81=551 286</m>.</p></li>
+</ol></p>
+</solution>
+</example>
+<remark>
+<title>Factorielle et calculatrice</title>
+<statement><p>Il existe normalement une touche factorielle sur les calculatrices. Souvent identifiée par le symbole <c>!</c>, celle-ci permet de calculer la factorielle d'un nombre, mais il y a une limite due à la capacité de mémoire et d'affichage des calculatrices. Normalement, selon la calculatrice, cette limite est atteinte entre <m>60!</m> et <m>70!</m>.</p></statement>
+</remark>
+<p>On voit maintenant comment utiliser cette notation dans les problèmes de dénombrement.</p>
+<example xml:id="ex-perm1">
+<title>Disposition de cinq lettres</title>
+<statement><p>On considère les lettres A,B,C,D,E. De combien de manières différentes peut-on ordonner ces lettres?</p></statement>
+<solution><p>Selon le principe du produit, on a <m>5\times 4\times 3\times 2\times 1=5!=120</m> possibilités. Ceci correspond bien à la réponse de l'exemple <xref ref="ex-permIntro"/>.</p></solution>
+</example>
+<p>Pour le cas général, on obtient le résultat suivant.</p>
+<proposition xml:id="prop-permutationn">
+<title>Disposition ordonnée de <m>n</m> objets distincts</title>
+<statement><p>On supposque que l'on souhaite ordonner les éléments d'un ensemble à <m>n</m> éléments (donc tous différents). Il y a <m>n!</m> manières de le faire.</p></statement>
+<proof>
+<p>Il y a <m>n</m> manières de choisir le premier objet, puis <m>n-1</m> manières de choisir le deuxième et ainsi de suite jusqu'au dernier. Par le principe du produit, il y a 
+<me>
+n\times (n-1)\times \cdots \times 2\times 1=n!
+</me> manières au total.</p>
+</proof>
+</proposition>
+<p>Une question naturelle qui survient à ce moment, surtout dans le contexte où l'on réarrange des lettres est: que se passe-t-il si des lettres sont répétées? Si le nombre de lettres est relativement petit, on peut s'en sortir en énumérant tous les cas, mais on aimerait trouver une manière plus générale pour le cas où cela ne serait pas une réelle possibilité.</p>
+<example>
+<title>Un cas avec des lettres répétées</title>
+<statement><p>On considère le mot &#x00AB; bateau &#x00BB;. De combien de manières différentes peut-on réarranger les lettres de ce mot?</p></statement>
+<solution>
+<p>On peut procéder d'une manière analogue à la méthode de l'exemple <xref ref="ex-perm1"/>, mais cette fois-ci la lettre &#x00AB; a &#x00BB; est répétée. Ainsi, bien que le mot &#x00AB; bateau &#x00BB; contienne six lettres, on a seulement cinq choix pour la première lettre. Qu'en est-il pour la deuxième lettre? Tout dépend du choix effectué pour la première lettre. Si c'est un &#x00AB; a &#x00BB;, on a encore cinq lettres possibles à utiliser, mais si c'est l'une des autres lettres, alors il ne reste que quatre possibilités. La méthode n'est donc pas aussi simple.</p>
+<p>Plutôt que d'affecter une lettre à chacune des positions, on renverse la situation. Pour chaque lettre, on affecte une position dans le nouvel arrangement. L'astuce dans ce cas est de garder les &#x00AB; a &#x00BB; pour la fin. On a donc <m>6</m> positions possibles pour placer &#x00AB; b &#x00BB;, puis <m>5</m> endroits pour placer &#x00AB; t &#x00BB;, <m>4</m> endroits pour le &#x00AB; e &#x00BB; et <m>3</m> endroits pour la lettre &#x00AB; u &#x00BB;. Les deux positions restantes seront occupées par les lettres &#x00AB; a &#x00BB;. Il y a donc <m>6\times 5\times 4\times 3=360</m> possibilités. En voici deux d'entre elles:
+<md>
+<mrow>\underline{\text{a}}\underline{\text{b}}\underline{\text{t}}\underline{\text{a}}\underline{\text{u}}\underline{\text{e}}&amp;,\underline{\text{u}}\underline{\text{a}}\underline{\text{t}}\underline{\text{b}}\underline{\text{e}}\underline{\text{a}}</mrow>
+</md>.</p>
+</solution>
+<solution><p>Une autre façon de calculer le nombre de possibilités est de considérer le problème comme si les &#x00AB; a &#x00BB; étaient en fait disctincts. On pourrait écrire b<m>\text{a}_1</m>te<m>\text{a}_2</m>u et arranger ces six lettres discinctes en <m>6!=720</m> manières différentes. Or pour chacun de ces arrangements, il existe un arrangement jumeau où les positions de <m>\text{a}_1,\text{a}_2</m> sont inversées, mais qui ne se reflète pas dans le mot en tant que tel. On compte ainsi toutes les possibilités en double lorsque l'on dit qu'il y en a <m>720</m>. La réponse est donc <m>720/2=360</m> manières distinctes.</p></solution>
+</example>
+<p>La première solution est astucieuse pour le cas où il n'y a qu'une lettre qui est répétée, mais dans un mot comme &#x00AB;SASTISFAIRE  &#x00BB;, l'approche n'est pas aussi concluante. On peut toutefois s'attarder à la seconde solution pour tenter de la généraliser. D'abord, un exemple plus simple.</p>
+<example><statement>
+<p>De combien de manières distinctes peut-on arranger les lettres du mot &#x00AB; saucisse &#x00BB; pour former une chaine de caractères?</p>
+</statement>
+<solution>
+<p>En s'inspirant de la solution à l'exemple précédent, on compte qu'il y a huit lettres dans le mot &#x00AB;saucisse &#x00AB;, mais que la lettre &#x00AB; s &#x00BB; est répétée trois fois. Est-ce que chaque arrangement de ces huit lettres est compté trois fois alors? Pas tout à fait. Si l'on distingue les &#x00AB; s &#x00BB;, il y a <m>3\times 2 \times 1</m> manières de les arranger. On compte donc une disposition spécifique des lettres non pas trois, mais six fois. Ainsi, il y a 
+<me>
+\frac{8!}{6}=6720
+</me> manières d'arranger ces lettres.</p>
+</solution>
+</example>
+<p>On revient finalement au mot &#x00AB; SASTISFAIRE  &#x00BB;, qui contient deux fois la lettre &#x00AB; a &#x00BB;, deux fois la lettre &#x00AB;i &#x00BB; et trois fois la lettre &#x00AB; s &#x00BB;. Si toutes les lettres étaient distinctes, il y aurait <m>11!</m> manières de les réordonner. En distinguant les &#x00AB; a &#x00BB;,  on compte en double tout comme avec les &#x00AB; i &#x00BB;. De plus, en distinguant les &#x00AB; s &#x00BB;, on compte aussi chacun de ces arrangements six fois. Par le principe de division, il y a donc 
+<me>
+\frac{11!}{2\times 2 \times 6}=151200
+</me>
+manières de disposer les lettres du mot &#x00AB; satisfaire &#x00BB;.
+</p>
+<p>Une manière différente d'écrire le dernier calcul est 
+<me>
+\frac{11!}{2!\times 2! \times  3!}=151200
+</me>, provenant du fait que l'on peut ordonner  les &#x00AB;a,i &#x00BB; de deux factorielles manières entre elles et les &#x00AB; s &#x00BB; de trois factorielles manières.</p>
+<p>On revient sur l'exemple <xref ref="ex-divIntro"/> pour le résoudre sous un autre angle.</p>
+<example>
+<statement>
+<p>On considère à nouveau le problème qui consiste à choisir <m>3</m> personnes parmi <m>4</m>, dans un premier temps sans leur attribuer de rôle spécifique puis en leur donnant les rôles de président, vice-président et trésorier.</p>
+</statement>
+<solution><p>On imagine les quatre personnes en ligne, et on considère la chaine de caractères &#x00AB; PVSN &#x00BB;, les lettres représentant respectivement les choix pour le président, le vice-président, le secrétaire et la personne qui ne sera pas choisie. Comme il y a quatre lettres et qu'aucune n'est répétée, il y a <m>4!</m> manières de choisir les gens qui feront partie du comité et de leur attribuer un rôle.</p></solution>
+<solution><p>On imagine à nouveau les quatre personnes en ligne et on considère cette fois la chaine de caractères &#x00AB; CCCN &#x00BB;. Ici, la lettre &#x00AB; C &#x00BB; représente être choisi et la lettre &#x00AB; N &#x00BB; ne pas l'être. On peut arranger ces lettres de <m>\frac{4!}{3!1!}=6</m> manières, qui permettent de sélectionner les personnes choisies.</p></solution>
+</example>
+<p>Ces derniers exempes ouvre la porte au dernier principe de la section.</p>
+<principle xml:id="princ-etiquetage">
+<title>Le principe d'étiquetage</title>
+<statement>
+<p>
+Si on veut donner à <m>n</m> objets disctincts un étiquette, de sorte que <m>k_1</m> possède l'étiquette &#x00AB; 1 &#x00BB;, <m>k_2</m> possède l'étiquette &#x00AB; 2&#x00BB; et ainsi de suite jusqu'à <m>k_m</m> possédant l'étiquette &#x00AB; m &#x00BB;, avec <me>
+k_1+k_2+\cdots + k_m=n
+</me>,
+alors il y a
+<me>
+\frac{n!}{k_1!k_2!\cdots k_m!}
+</me>
+manières d'attribuer ces étiquettes.
+</p>
+</statement>
+</principle>
+<example>
+<title>Une course particulière</title>
+<p>Une course avec <m>20</m> participants a lieu dans une école. On veut utiliser le principe d'étiquetage pour déterminer:
+<ol>
+<li>
+<p>de combien de manières les participants peuvent franchir la ligne d'arrivée;</p>
+</li>
+<li><p>de combien de manières on peut former le podium, c'est-à-dire les trois premières places;</p></li>
+<li><p>de combien de manières on peut donner une médaille d'or au cinq premiers coureurs, une médaille d'argent au sept suivants et une médaille de bronze au huit derniers.</p></li>
+</ol>
+</p>
+</example>
+<solution><p><ol>
+<li><p>On utilise les étiquettes <m>P_1,P_2,\ldots , P_{20}</m> pour identifier la position des coureurs. Comme toutes les étiquettes sont différentes, il y  a <m>20!</m> possibilités.</p></li>
+<li><p>On utilise les étiquettes <m>P,D,T,N,N,\ldots , N</m>, où il y a <m>17</m> fois la lettre <m>N</m>. Selon le principe d'étiquetage, il y a <m>\frac{20!}{1!1!1!17!}=20\times 19\times 18=6840</m> manières différentes d'avoir le podium.</p></li>
+<li><p>On utilise les étiquettes <m>OOOOOAAAAAAABBBBBBBB</m>. On a donc <m>\frac{20!}{5!7!8!}=99768240</m> manières d'attribuer les médailles.</p></li>
+</ol></p></solution>
+</subsection>
 
 
 
@@ -493,6 +619,7 @@ Cependant, on ne peut pas utiliser le principe de la somme, car il existe des ch
     <li><p>Le <xref ref="prop-regleSomme" text="custom">principe de la somme</xref>;</p></li>
     <li><p>Le <xref ref="prop-incExclu" text="custom">principe d'inclusion-exclusion</xref>;</p></li>
     <li><p>Le <xref ref="prop-div" text="custom">principe de la division</xref>;</p></li>
+    <li><p>Le <xref ref="princ-etiquetage" text="custom">principe d'étiquetage</xref>.</p></li>
     </ul>
     </p>
     </conclusion>

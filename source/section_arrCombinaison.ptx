@@ -34,9 +34,9 @@
 </example>
 <p>L'exemple précédent semble montrer qu'on peut  déterminer le nombre de permutations d'un ensemble de taille finie quelconque. Pour cela, on utilise la notation ci-dessous.</p>
 
-<definition xml:id="def_facto"> 
+<!--<definition xml:id="def_facto"> 
 <statement> Soit <m>k\in\ \N</m>, on définit <m>k!</m> (on dit la factorielle de <m>k</m>, ou bien <m>k</m> factorielle) de la façon suivante. Si <m>k=0</m>, alors <m>0!=1</m>. Si <m>k\geq 1</m>, alors <me>k!=k\cdot (k-1)\cdot (k-2) \cdots 3\cdot 2\cdot 1 = k\cdot (k-1)!</me>. </statement>
-</definition>
+</definition> --> <!-- Changé pour section précédente -->
 <remark> 
 <statement> Nous allons insister sur la définition alternative de <m>k!</m> par récurrence un peu plus tard. </statement>
 </remark>
