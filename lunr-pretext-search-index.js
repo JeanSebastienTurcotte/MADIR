@@ -3043,9 +3043,9 @@ var ptx_lunr_docs = [
   "body": "QFINXUFWNYNTS Le message AYHOPYXBPKPZWHYBAKHUZSHKPZWHYPAPVUYHCPYHPAHBSPZHUAZBIAPSAVBAWSHPZPYTVABZKVUJZBYSPUJVUUBUVFHBTHUXBHUA a été encodé à l'aide d'un décalage César, mais le décalage est inconnu. Déterminer le message original, sans essayer toutes les possibilités.  Si même après avoir déterminé quelles lettres sont les plus fréquentes le message ne se déchiffre toujours pas, un indice avec décalage 5 a été crypté dans le titre de l'exercice.   Ne pas lire avant d'avoir réfléchi et cherché à propos de l'indice 1. L'indice ci-dessous est un décalage de César avec décalage . Décoder chaque phrase individuellement pour une meilleure lisibilité.  QFINXUFWNYNTSJXYZSWTRFSIJLJTWLJUJWJHVZNJXYJHWNYXFSXZYNQNXJWQFQJYYWJJ  FUWJXJVZJQQJXTSYQJXQJYYWJXQJXUQZXZYNQNXJJXIJQFQFSLZJKWFSHFNXJ   Le message est un résumé du livre la disparition de George Perec, que l'on peut lire sur le site de Renaud-Bray . Ce livre a la particularité qu'il ne contient pas la lettre e , sauf pour le nom de l'auteur.  "
 },
 {
-  "id": "sec_prodSomme",
+  "id": "sec-prodSomme",
   "level": "1",
-  "url": "sec_prodSomme.html",
+  "url": "sec-prodSomme.html",
   "type": "Section",
   "number": "4.1",
   "title": "Méthodes de dénombrement: Principes de base",
@@ -3054,7 +3054,7 @@ var ptx_lunr_docs = [
 {
   "id": "ex-introProdCostumes",
   "level": "2",
-  "url": "sec_prodSomme.html#ex-introProdCostumes",
+  "url": "sec-prodSomme.html#ex-introProdCostumes",
   "type": "Exemple",
   "number": "4.1.1",
   "title": "Le nombre de costumes.",
@@ -3063,7 +3063,7 @@ var ptx_lunr_docs = [
 {
   "id": "rem-ordreChoixOrdre",
   "level": "2",
-  "url": "sec_prodSomme.html#rem-ordreChoixOrdre",
+  "url": "sec-prodSomme.html#rem-ordreChoixOrdre",
   "type": "Remarque",
   "number": "4.1.2",
   "title": "L’indépendance des choix.",
@@ -3072,7 +3072,7 @@ var ptx_lunr_docs = [
 {
   "id": "prop-regleProd",
   "level": "2",
-  "url": "sec_prodSomme.html#prop-regleProd",
+  "url": "sec-prodSomme.html#prop-regleProd",
   "type": "Principe",
   "number": "4.1.3",
   "title": "Principe du produit.",
@@ -3081,7 +3081,7 @@ var ptx_lunr_docs = [
 {
   "id": "ex-baseProd",
   "level": "2",
-  "url": "sec_prodSomme.html#ex-baseProd",
+  "url": "sec-prodSomme.html#ex-baseProd",
   "type": "Exemple",
   "number": "4.1.4",
   "title": "Exemples de base du principe du produit.",
@@ -3090,7 +3090,7 @@ var ptx_lunr_docs = [
 {
   "id": "nbrFonctionsProd",
   "level": "2",
-  "url": "sec_prodSomme.html#nbrFonctionsProd",
+  "url": "sec-prodSomme.html#nbrFonctionsProd",
   "type": "Exemple",
   "number": "4.1.5",
   "title": "Retour sur le nombre de fonctions.",
@@ -3099,16 +3099,16 @@ var ptx_lunr_docs = [
 {
   "id": "subs-regleProd-10",
   "level": "2",
-  "url": "sec_prodSomme.html#subs-regleProd-10",
+  "url": "sec-prodSomme.html#subs-regleProd-10",
   "type": "Remarque",
   "number": "4.1.6",
   "title": "Et les fonctions surjectives, elles?",
   "body": " Et les fonctions surjectives, elles?  Le cas des fonctions surjectives est beaucoup plus complexe. On étudiera ce cas dans une prochaine section .  "
 },
 {
-  "id": "ex-comptFonction",
+  "id": "prop-comptFonction",
   "level": "2",
-  "url": "sec_prodSomme.html#ex-comptFonction",
+  "url": "sec-prodSomme.html#prop-comptFonction",
   "type": "Proposition",
   "number": "4.1.7",
   "title": "Compter des fonctions : Cas général.",
@@ -3117,7 +3117,7 @@ var ptx_lunr_docs = [
 {
   "id": "exe-nbrSousEnsIntro",
   "level": "2",
-  "url": "sec_prodSomme.html#exe-nbrSousEnsIntro",
+  "url": "sec-prodSomme.html#exe-nbrSousEnsIntro",
   "type": "Exemple",
   "number": "4.1.8",
   "title": "Retour sur l’ensemble des puissances.",
@@ -3126,7 +3126,7 @@ var ptx_lunr_docs = [
 {
   "id": "exe-nbrSousEns",
   "level": "2",
-  "url": "sec_prodSomme.html#exe-nbrSousEns",
+  "url": "sec-prodSomme.html#exe-nbrSousEns",
   "type": "Proposition",
   "number": "4.1.9",
   "title": "L’ensemble des puissances: Cas général.",
@@ -3135,7 +3135,7 @@ var ptx_lunr_docs = [
 {
   "id": "ex-permIntro",
   "level": "2",
-  "url": "sec_prodSomme.html#ex-permIntro",
+  "url": "sec-prodSomme.html#ex-permIntro",
   "type": "Exemple",
   "number": "4.1.10",
   "title": "Les permutations.",
@@ -3144,7 +3144,7 @@ var ptx_lunr_docs = [
 {
   "id": "ex-regleSommeIntro",
   "level": "2",
-  "url": "sec_prodSomme.html#ex-regleSommeIntro",
+  "url": "sec-prodSomme.html#ex-regleSommeIntro",
   "type": "Exemple",
   "number": "4.1.11",
   "title": "Des lettres ou des chiffres.",
@@ -3153,7 +3153,7 @@ var ptx_lunr_docs = [
 {
   "id": "prop-regleSomme",
   "level": "2",
-  "url": "sec_prodSomme.html#prop-regleSomme",
+  "url": "sec-prodSomme.html#prop-regleSomme",
   "type": "Principe",
   "number": "4.1.12",
   "title": "Principe de la somme.",
@@ -3162,7 +3162,7 @@ var ptx_lunr_docs = [
 {
   "id": "ex-baseSomme",
   "level": "2",
-  "url": "sec_prodSomme.html#ex-baseSomme",
+  "url": "sec-prodSomme.html#ex-baseSomme",
   "type": "Exemple",
   "number": "4.1.13",
   "title": "Exemple de base du principe de la somme.",
@@ -3171,7 +3171,7 @@ var ptx_lunr_docs = [
 {
   "id": "ex-baseSommeSuccessive",
   "level": "2",
-  "url": "sec_prodSomme.html#ex-baseSommeSuccessive",
+  "url": "sec-prodSomme.html#ex-baseSommeSuccessive",
   "type": "Exemple",
   "number": "4.1.14",
   "title": "Utilisation successive du principe de la somme.",
@@ -3180,7 +3180,7 @@ var ptx_lunr_docs = [
 {
   "id": "ex-combProdSomme1",
   "level": "2",
-  "url": "sec_prodSomme.html#ex-combProdSomme1",
+  "url": "sec-prodSomme.html#ex-combProdSomme1",
   "type": "Exemple",
   "number": "4.1.15",
   "title": "Nombre de variables en BASIC.",
@@ -3189,7 +3189,7 @@ var ptx_lunr_docs = [
 {
   "id": "ex_sousEnsPair",
   "level": "2",
-  "url": "sec_prodSomme.html#ex_sousEnsPair",
+  "url": "sec-prodSomme.html#ex_sousEnsPair",
   "type": "Exemple",
   "number": "4.1.16",
   "title": "Sous-ensembles de cardinalité paire.",
@@ -3198,7 +3198,7 @@ var ptx_lunr_docs = [
 {
   "id": "ex-combProdSomme2",
   "level": "2",
-  "url": "sec_prodSomme.html#ex-combProdSomme2",
+  "url": "sec-prodSomme.html#ex-combProdSomme2",
   "type": "Exemple",
   "number": "4.1.17",
   "title": "Nombre de mots de passe.",
@@ -3207,7 +3207,7 @@ var ptx_lunr_docs = [
 {
   "id": "ex-incluExcluIntro",
   "level": "2",
-  "url": "sec_prodSomme.html#ex-incluExcluIntro",
+  "url": "sec-prodSomme.html#ex-incluExcluIntro",
   "type": "Exemple",
   "number": "4.1.18",
   "title": "Le nombre de costumes bleus ou vert!",
@@ -3216,7 +3216,7 @@ var ptx_lunr_docs = [
 {
   "id": "subs-incExclu-4",
   "level": "2",
-  "url": "sec_prodSomme.html#subs-incExclu-4",
+  "url": "sec-prodSomme.html#subs-incExclu-4",
   "type": "Remarque",
   "number": "4.1.19",
   "title": "",
@@ -3225,7 +3225,7 @@ var ptx_lunr_docs = [
 {
   "id": "prop-incExclu",
   "level": "2",
-  "url": "sec_prodSomme.html#prop-incExclu",
+  "url": "sec-prodSomme.html#prop-incExclu",
   "type": "Proposition",
   "number": "4.1.20",
   "title": "Principe d’inclusion-exclusion.",
@@ -3234,7 +3234,7 @@ var ptx_lunr_docs = [
 {
   "id": "subs-incExclu-7",
   "level": "2",
-  "url": "sec_prodSomme.html#subs-incExclu-7",
+  "url": "sec-prodSomme.html#subs-incExclu-7",
   "type": "Démonstration",
   "number": "4.1.4.1",
   "title": "",
@@ -3243,7 +3243,7 @@ var ptx_lunr_docs = [
 {
   "id": "ex-incExclu",
   "level": "2",
-  "url": "sec_prodSomme.html#ex-incExclu",
+  "url": "sec-prodSomme.html#ex-incExclu",
   "type": "Exemple",
   "number": "4.1.21",
   "title": "Exemple de base du principe d’inclusion-exclusion.",
@@ -3252,7 +3252,7 @@ var ptx_lunr_docs = [
 {
   "id": "ex-divIntro",
   "level": "2",
-  "url": "sec_prodSomme.html#ex-divIntro",
+  "url": "sec-prodSomme.html#ex-divIntro",
   "type": "Exemple",
   "number": "4.1.22",
   "title": "Choisir trois personnes parmi quatre.",
@@ -3261,7 +3261,7 @@ var ptx_lunr_docs = [
 {
   "id": "prop-div",
   "level": "2",
-  "url": "sec_prodSomme.html#prop-div",
+  "url": "sec-prodSomme.html#prop-div",
   "type": "Principe",
   "number": "4.1.23",
   "title": "Principe de la division.",
@@ -3270,7 +3270,7 @@ var ptx_lunr_docs = [
 {
   "id": "ex-div",
   "level": "2",
-  "url": "sec_prodSomme.html#ex-div",
+  "url": "sec-prodSomme.html#ex-div",
   "type": "Exemple",
   "number": "4.1.24",
   "title": "Exemple de base du principe de la division.",
@@ -3279,25 +3279,25 @@ var ptx_lunr_docs = [
 {
   "id": "def_facto",
   "level": "2",
-  "url": "sec_prodSomme.html#def_facto",
+  "url": "sec-prodSomme.html#def_facto",
   "type": "Définition",
   "number": "4.1.25",
   "title": "La factorielle.",
   "body": " La factorielle   Soit , on définit (on dit la factorielle de , ou bien factorielle) comme étant le produit des nombres naturels de jusqu'à .  Par convention, on définit aussi . On justifiera un peu plus tard ce choix.   "
 },
 {
-  "id": "sec_prodSomme-9-4",
+  "id": "sec-prodSomme-9-4",
   "level": "2",
-  "url": "sec_prodSomme.html#sec_prodSomme-9-4",
+  "url": "sec-prodSomme.html#sec-prodSomme-9-4",
   "type": "Exemple",
   "number": "4.1.26",
   "title": "Des exemples de factorielles.",
   "body": " Des exemples de factorielles  On cherche à calculer les valeurs suivantes:  ;  ;  ;  .      Selon la définition, on a ;  De manière similaire, .  Ici, il peut être intéressant de remarquer que . On peut donc se servir de la réponse précédente pour trouver .  Ici, vu la grandeur des nombres, on peut être tenté de prendre la calculatrice, mais il y a de fortes chances que celle-ci ne soit pas d'une grande aide. En raisonnant un peu comme pour le calcul précédant, on peut montrer que et donc que .    "
 },
 {
-  "id": "sec_prodSomme-9-5",
+  "id": "sec-prodSomme-9-5",
   "level": "2",
-  "url": "sec_prodSomme.html#sec_prodSomme-9-5",
+  "url": "sec-prodSomme.html#sec-prodSomme-9-5",
   "type": "Remarque",
   "number": "4.1.27",
   "title": "Factorielle et calculatrice.",
@@ -3306,7 +3306,7 @@ var ptx_lunr_docs = [
 {
   "id": "ex-perm1",
   "level": "2",
-  "url": "sec_prodSomme.html#ex-perm1",
+  "url": "sec-prodSomme.html#ex-perm1",
   "type": "Exemple",
   "number": "4.1.28",
   "title": "Disposition de cinq lettres.",
@@ -3315,34 +3315,34 @@ var ptx_lunr_docs = [
 {
   "id": "prop-permutationn",
   "level": "2",
-  "url": "sec_prodSomme.html#prop-permutationn",
+  "url": "sec-prodSomme.html#prop-permutationn",
   "type": "Proposition",
   "number": "4.1.29",
   "title": "Disposition ordonnée de <span class=\"process-math\">\\(n\\)<\/span> objets distincts.",
   "body": " Disposition ordonnée de objets distincts  On supposque que l'on souhaite ordonner les éléments d'un ensemble à éléments (donc tous différents). Il y a manières de le faire.   Il y a manières de choisir le premier objet, puis manières de choisir le deuxième et ainsi de suite jusqu'au dernier. Par le principe du produit, il y a manières au total.   "
 },
 {
-  "id": "sec_prodSomme-9-11",
+  "id": "sec-prodSomme-9-11",
   "level": "2",
-  "url": "sec_prodSomme.html#sec_prodSomme-9-11",
+  "url": "sec-prodSomme.html#sec-prodSomme-9-11",
   "type": "Exemple",
   "number": "4.1.30",
   "title": "Un cas avec des lettres répétées.",
   "body": " Un cas avec des lettres répétées  On considère le mot « bateau ». De combien de manières différentes peut-on réarranger les lettres de ce mot?   On peut procéder d'une manière analogue à la méthode de l'exemple , mais cette fois-ci la lettre « a » est répétée. Ainsi, bien que le mot « bateau » contienne six lettres, on a seulement cinq choix pour la première lettre. Qu'en est-il pour la deuxième lettre? Tout dépend du choix effectué pour la première lettre. Si c'est un « a », on a encore cinq lettres possibles à utiliser, mais si c'est l'une des autres lettres, alors il ne reste que quatre possibilités. La méthode n'est donc pas aussi simple.  Plutôt que d'affecter une lettre à chacune des positions, on renverse la situation. Pour chaque lettre, on affecte une position dans le nouvel arrangement. L'astuce dans ce cas est de garder les « a » pour la fin. On a donc positions possibles pour placer « b », puis endroits pour placer « t », endroits pour le « e » et endroits pour la lettre « u ». Les deux positions restantes seront occupées par les lettres « a ». Il y a donc possibilités. En voici deux d'entre elles: .   Une autre façon de calculer le nombre de possibilités est de considérer le problème comme si les « a » étaient en fait disctincts. On pourrait écrire b te u et arranger ces six lettres discinctes en manières différentes. Or pour chacun de ces arrangements, il existe un arrangement jumeau où les positions de sont inversées, mais qui ne se reflète pas dans le mot en tant que tel. On compte ainsi toutes les possibilités en double lorsque l'on dit qu'il y en a . La réponse est donc manières distinctes.  "
 },
 {
-  "id": "sec_prodSomme-9-13",
+  "id": "sec-prodSomme-9-13",
   "level": "2",
-  "url": "sec_prodSomme.html#sec_prodSomme-9-13",
+  "url": "sec-prodSomme.html#sec-prodSomme-9-13",
   "type": "Exemple",
   "number": "4.1.31",
   "title": "",
   "body": " De combien de manières distinctes peut-on arranger les lettres du mot « saucisse » pour former une chaine de caractères?    En s'inspirant de la solution à l'exemple précédent, on compte qu'il y a huit lettres dans le mot «saucisse «, mais que la lettre « s » est répétée trois fois. Est-ce que chaque arrangement de ces huit lettres est compté trois fois alors? Pas tout à fait. Si l'on distingue les « s », il y a manières de les arranger. On compte donc une disposition spécifique des lettres non pas trois, mais six fois. Ainsi, il y a manières d'arranger ces lettres.   "
 },
 {
-  "id": "sec_prodSomme-9-17",
+  "id": "sec-prodSomme-9-17",
   "level": "2",
-  "url": "sec_prodSomme.html#sec_prodSomme-9-17",
+  "url": "sec-prodSomme.html#sec-prodSomme-9-17",
   "type": "Exemple",
   "number": "4.1.32",
   "title": "",
@@ -3351,16 +3351,16 @@ var ptx_lunr_docs = [
 {
   "id": "princ-etiquetage",
   "level": "2",
-  "url": "sec_prodSomme.html#princ-etiquetage",
+  "url": "sec-prodSomme.html#princ-etiquetage",
   "type": "Principe",
   "number": "4.1.33",
   "title": "Le principe d’étiquetage.",
   "body": " Le principe d'étiquetage   Si on veut donner à objets disctincts un étiquette, de sorte que possède l'étiquette « 1 », possède l'étiquette « 2» et ainsi de suite jusqu'à possédant l'étiquette « m », avec , alors il y a manières d'attribuer ces étiquettes.   "
 },
 {
-  "id": "sec_prodSomme-9-20",
+  "id": "sec-prodSomme-9-20",
   "level": "2",
-  "url": "sec_prodSomme.html#sec_prodSomme-9-20",
+  "url": "sec-prodSomme.html#sec-prodSomme-9-20",
   "type": "Exemple",
   "number": "4.1.34",
   "title": "Une course particulière.",
@@ -3369,7 +3369,7 @@ var ptx_lunr_docs = [
 {
   "id": "rq-prodSomme-2",
   "level": "2",
-  "url": "sec_prodSomme.html#rq-prodSomme-2",
+  "url": "sec-prodSomme.html#rq-prodSomme-2",
   "type": "Question de compréhension",
   "number": "4.1.7.1",
   "title": "",
@@ -3378,7 +3378,7 @@ var ptx_lunr_docs = [
 {
   "id": "rq-prodSomme-3",
   "level": "2",
-  "url": "sec_prodSomme.html#rq-prodSomme-3",
+  "url": "sec-prodSomme.html#rq-prodSomme-3",
   "type": "Question de compréhension",
   "number": "4.1.7.2",
   "title": "",
@@ -3387,7 +3387,7 @@ var ptx_lunr_docs = [
 {
   "id": "rq-prodSomme-4",
   "level": "2",
-  "url": "sec_prodSomme.html#rq-prodSomme-4",
+  "url": "sec-prodSomme.html#rq-prodSomme-4",
   "type": "Question de compréhension",
   "number": "4.1.7.3",
   "title": "",
@@ -3396,7 +3396,7 @@ var ptx_lunr_docs = [
 {
   "id": "rq-prodSomme-5",
   "level": "2",
-  "url": "sec_prodSomme.html#rq-prodSomme-5",
+  "url": "sec-prodSomme.html#rq-prodSomme-5",
   "type": "Question de compréhension",
   "number": "4.1.7.4",
   "title": "",
@@ -3405,7 +3405,7 @@ var ptx_lunr_docs = [
 {
   "id": "rq-prodSomme-6",
   "level": "2",
-  "url": "sec_prodSomme.html#rq-prodSomme-6",
+  "url": "sec-prodSomme.html#rq-prodSomme-6",
   "type": "Question de compréhension",
   "number": "4.1.7.5",
   "title": "",
@@ -3414,7 +3414,7 @@ var ptx_lunr_docs = [
 {
   "id": "exo-prodSomme-2-3",
   "level": "2",
-  "url": "sec_prodSomme.html#exo-prodSomme-2-3",
+  "url": "sec-prodSomme.html#exo-prodSomme-2-3",
   "type": "Exercice",
   "number": "4.1.8.1",
   "title": "",
@@ -3423,7 +3423,7 @@ var ptx_lunr_docs = [
 {
   "id": "exo-prodSomme-2-4",
   "level": "2",
-  "url": "sec_prodSomme.html#exo-prodSomme-2-4",
+  "url": "sec-prodSomme.html#exo-prodSomme-2-4",
   "type": "Exercice",
   "number": "4.1.8.2",
   "title": "",
@@ -3432,7 +3432,7 @@ var ptx_lunr_docs = [
 {
   "id": "exo-prodSomme-2-5",
   "level": "2",
-  "url": "sec_prodSomme.html#exo-prodSomme-2-5",
+  "url": "sec-prodSomme.html#exo-prodSomme-2-5",
   "type": "Exercice",
   "number": "4.1.8.3",
   "title": "",
@@ -3441,7 +3441,7 @@ var ptx_lunr_docs = [
 {
   "id": "exo-prodSomme-2-6",
   "level": "2",
-  "url": "sec_prodSomme.html#exo-prodSomme-2-6",
+  "url": "sec-prodSomme.html#exo-prodSomme-2-6",
   "type": "Exercice",
   "number": "4.1.8.4",
   "title": "",
@@ -3450,7 +3450,7 @@ var ptx_lunr_docs = [
 {
   "id": "exo-prodSomme-2-7",
   "level": "2",
-  "url": "sec_prodSomme.html#exo-prodSomme-2-7",
+  "url": "sec-prodSomme.html#exo-prodSomme-2-7",
   "type": "Exercice",
   "number": "4.1.8.5",
   "title": "",
@@ -3459,7 +3459,7 @@ var ptx_lunr_docs = [
 {
   "id": "exo-prodSomme-2-8",
   "level": "2",
-  "url": "sec_prodSomme.html#exo-prodSomme-2-8",
+  "url": "sec-prodSomme.html#exo-prodSomme-2-8",
   "type": "Exercice",
   "number": "4.1.8.6",
   "title": "",
@@ -3468,7 +3468,7 @@ var ptx_lunr_docs = [
 {
   "id": "exo-prodSomme-2-9",
   "level": "2",
-  "url": "sec_prodSomme.html#exo-prodSomme-2-9",
+  "url": "sec-prodSomme.html#exo-prodSomme-2-9",
   "type": "Exercice",
   "number": "4.1.8.7",
   "title": "",
@@ -3477,7 +3477,7 @@ var ptx_lunr_docs = [
 {
   "id": "exo-prodSomme-2-10",
   "level": "2",
-  "url": "sec_prodSomme.html#exo-prodSomme-2-10",
+  "url": "sec-prodSomme.html#exo-prodSomme-2-10",
   "type": "Exercice",
   "number": "4.1.8.8",
   "title": "",
@@ -3486,7 +3486,7 @@ var ptx_lunr_docs = [
 {
   "id": "exo-prodSomme-2-11",
   "level": "2",
-  "url": "sec_prodSomme.html#exo-prodSomme-2-11",
+  "url": "sec-prodSomme.html#exo-prodSomme-2-11",
   "type": "Exercice",
   "number": "4.1.8.9",
   "title": "",
@@ -3495,7 +3495,7 @@ var ptx_lunr_docs = [
 {
   "id": "exo-prodSomme-2-12",
   "level": "2",
-  "url": "sec_prodSomme.html#exo-prodSomme-2-12",
+  "url": "sec-prodSomme.html#exo-prodSomme-2-12",
   "type": "Exercice",
   "number": "4.1.8.10",
   "title": "",
@@ -3504,7 +3504,7 @@ var ptx_lunr_docs = [
 {
   "id": "exo-prodSomme-2-13",
   "level": "2",
-  "url": "sec_prodSomme.html#exo-prodSomme-2-13",
+  "url": "sec-prodSomme.html#exo-prodSomme-2-13",
   "type": "Exercice",
   "number": "4.1.8.11",
   "title": "",
@@ -3513,7 +3513,7 @@ var ptx_lunr_docs = [
 {
   "id": "exo-prodSomme-2-14",
   "level": "2",
-  "url": "sec_prodSomme.html#exo-prodSomme-2-14",
+  "url": "sec-prodSomme.html#exo-prodSomme-2-14",
   "type": "Exercice",
   "number": "4.1.8.12",
   "title": "",
@@ -3522,7 +3522,7 @@ var ptx_lunr_docs = [
 {
   "id": "exo-prodSomme-2-15",
   "level": "2",
-  "url": "sec_prodSomme.html#exo-prodSomme-2-15",
+  "url": "sec-prodSomme.html#exo-prodSomme-2-15",
   "type": "Exercice",
   "number": "4.1.8.13",
   "title": "",
@@ -3531,7 +3531,7 @@ var ptx_lunr_docs = [
 {
   "id": "dur",
   "level": "2",
-  "url": "sec_prodSomme.html#dur",
+  "url": "sec-prodSomme.html#dur",
   "type": "Exercice",
   "number": "4.1.8.14",
   "title": "",
@@ -3540,7 +3540,7 @@ var ptx_lunr_docs = [
 {
   "id": "Tresdur",
   "level": "2",
-  "url": "sec_prodSomme.html#Tresdur",
+  "url": "sec-prodSomme.html#Tresdur",
   "type": "Exercice",
   "number": "4.1.8.15",
   "title": "",
@@ -3553,7 +3553,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.2",
   "title": "Permutations et combinaisons",
-  "body": " Permutations et combinaisons   On peut remarquer que plusieurs des exemples et exercices faits à la section font intervenir des méthodes et des expressions qui se ressemblent. Par exemple, on voit souvent apparaître des termes de la forme .  Ces expressions sont reliées à des concepts importants en dénombrement, c'est-à-dire les permutations et les combinaisons. On remarque également que plusieurs problèmes difficiles peuvent être résolus en utilisant les mêmes méthodes. On présente donc quelques exemples typiques qu'on peut utiliser pour résoudre une grande catégorie de problèmes.  Finalement, on présente le triangle de Pascal, qui permet de calculer de manière différente le nombre de combinaisons, ainsi que le binôme de Newton, qui utilise le nombre de combinaisons afin de calculer rapidement des expressions de la forme .    Les permutations   On considère les deux problèmes de dénombrement suivants. Premièrement, on veut choisir trois personnes parmi un groupe de personnes. Deuxièmement, on considère le nombre de podiums différents qu'il peut y avoir dans une course de personnes.  Dans les deux cas, on doit choisir trois personnes parmi . Cependant, pour le premier exemple, l'ordre dans lequel on choisit les trois personnes n'a pas d'importance, alors que pour le deuxième exemple, l'ordre est très important! Dans le premier cas, on dira que l’on compte les combinaisons, alors que dans le deuxième cas, on compte les permutations.  Étrangement, il est plus facile de compter le nombre de podiums que de compter le nombre de façons de choisir trois personnes. On commence donc par considérer le deuxième problème, et on retournera au problème de choisir trois personnes parmi en .  En utilisant le principe du produit, on voit rapidement qu'il y a podiums différents. Le concept de permutation permet de généraliser cet exemple.     Une permutation d'un ensemble d'objets est un arrangement ordonné de ces objets.  Une permutation d'un ensemble d'objets est un arrangement ordonné de objets de l'ensemble.     Une première permutation  Soit . Combien y a-t-il de permutations différentes de l'ensemble ?     Si on veut arranger (de façon ordonnée) les éléments de l'ensemble , cela veut dire qu'on choisit un élément à la première position, un à la deuxième et finalement un à la troisième.  Lorsqu'on choisit l'élément en première position, il y a choix possibles. Une fois l'élément fixé à la première position, il reste choix pour l'élément à la deuxième position. Finalement, il ne reste qu'un seul choix pour la dernière position. Ainsi, par le principe du produit, il y a permutations possible.    L'exemple précédent semble montrer qu'on peut déterminer le nombre de permutations d'un ensemble de taille finie quelconque. Pour cela, on utilise la notation ci-dessous.     Nous allons insister sur la définition alternative de par récurrence un peu plus tard.   Avec cette nouvelle notation, on est prêt à démontrer la proposition suivante.   Soit un ensemble de cardinalité finie , alors il existe différentes permutations de l'ensemble .  Une méthode pour démontrer cette proposition est de généraliser la solution de l'exemple . Une autre méthode est de remarquer que de trouver un arrangement ordonné des éléments de est équivalent à trouver une fonction injective . Par l'exemple , on sait qu'il y a telles fonctions.   De façon similaire, on peut déterminer le nombre de -permutations d'un ensemble de cardinalité finie . En effet, décrire une -permutation est équivalent à décrire une fonction injective . On utilisera une notation particulière pour ce nombre.   Le nombre de permutations d'un ensemble tel que est noté      .  Encore une fois, il suffit de remarquer que ceci est équivalent à compter des fonctions injectives . Par l'exemple , on sait qu'il y a telles fonctions.   On regarde maintenant deux problèmes typiques faisant intervenir des permutations.   Des anagrammes  Une anagramme d'une suite de lettres est une permutation de ces lettres. Lorsqu'on compte le nombre d'anagrammes possibles, on ne s'intéresse pas à savoir si la permutation est un vrai mot. Combien d'anagrammes des lettres sont telles que les lettres doivent apparaître dans cet ordre en un seul bloc?  Puisque la suite doit apparaître dans cet ordre en un seul bloc, il suffit de compter les permutations de lettres différentes (on considère comme une seule lettre). Ainsi, il y en a .    Le parcours d'un vendeur  Un vendeur doit visiter huit villes différentes, l'une d'elles étant Saint-Rémi, pour son travail. Sachant qu'il doit terminer son voyage à Saint-Rémi, de combien de façons différentes peut-il visiter ces huit villes ?  Puisqu'il doit terminer ces visites à Saint-Rémi, il ne reste qu'à déterminer l'ordre des sept premières villes qu'il doit visiter. Ainsi, il s'agit d'une permutation de sept objets, et on sait qu'il y en a .     Les combinaisons   Tel que mentionné précédemment, il est à priori un peu plus complexe de choisir trois personnes parmi que d'ordonner trois de ces personnes.  Pour arriver à déterminer le nombre de choix possibles, on commence par définir le concept de combinaison. Par la suite, on utilise le lien qu'il existe entre les permutations et les combinaisons afin de déterminer le nombre de façons de choisir objets parmi .     Soit un ensemble de cardinalité finie une combinaison de est une sélection non ordonnée de éléments de .  Le nombre de -combinaisons d'un ensemble de cardinalité finie est noté .  Les expressions de la forme , sont appelées les coefficients binomiaux.     Soit un ensemble de cardinalité finie et soit tel que , alors .   On sait que le nombre de permutations est . Nous allons utiliser le principe du produit afin de compter d'une autre façon. On peut séparer la tâche de choisir une permutation en deux étapes. Premièrement, on choisit éléments de . Deuxièmement, on choisit un ordre pour ces éléments (on permute ces éléments).  Le nombre de façons de choisir les éléments de est . Pour chaque choix de éléments , le nombre de façons d'ordonner ceux-ci est (le nombre de permutations des éléments). Ainsi, par le principe du produit, on a . On a alors .    On regarde maintenant deux exemples typiques faisant intervenir les combinaisons.   Mains de poker  Combien de mains de cinq cartes peuvent être formées à partir d'un jeu de cartes standard de cartes?  Il s'agit de compter les combinaisons de cartes parmi . On sait qu'il y en a .    Des chaînes binaires  Combien de chaînes binaires de longueur contiennent exactement caractères ?   Pour dénombrer ces chaînes, on remarque que pour choisir une telle chaîne binaire, il suffit de choisir positions où l'on place les parmi les positions possibles. Il s'agit donc de compter les combinaisons de parmi . Il y en a .  On peut également remarquer que, s'il y a exactement caractères , alors il y aura caractères . Ainsi, on aurait également pu choisir les positions des . Il y a donc façons de le faire.  Ainsi, on devrait avoir que .         Les coefficients binomiaux sont utilisés dans plusieurs branches des mathématiques. Voici quelques propriétés qu'on peut déduire facilement à l'aide de la définition et de la proposition .   Soit tels que alors est un entier naturel.   Puisque la proposition nous donne que , et que est un nombre de combinaisons, alors ce nombre est nécessairement un entier naturel.     Soit tels que alors .  Il suffit d'utiliser la proposition et la commutativité du produit dans .   Un corollaire est une proposition qui découle directement d'une autre proposition.    Le triangle de Pascal et le binôme de Newton   Les combinaisons apparaissent à plusieurs moments dans l'histoire des mathématiques. Le triangle de Pascal est un exemple où l'on peut représenter visuellement les termes afin de les calculer rapidement.  Un autre exemple est lorsqu'on veut développer l'expression . On explore ici ces deux situations.    Le triangle de Pascal    Le triangle de Pascal est une représentation des coefficients dans un tableau triangulaire. On représente ici les six premières lignes.   Le premier et le dernier nombre de chaque ligne sont des . Les autres nombres sont obtenus successivement (ligne par ligne) en additionnant les deux nombres se trouvant au-dessus.  En termes des coefficients , le triangle nous donne     En fait, la construction du triangle de Pascal laisse deviner qu'on peut déterminer les coefficients à l'aide de sommes, plutôt qu'à l'aide de la définition. On peut en déduire la formule de Pascal, qu'on donne à la proposition .    Soit tels que , alors    On a      Le binôme de Newton   Après avoir calculé à de nombreuses reprises des expressions comme ou encore , on peut deviner que   On peut voir une certaine structure dans cette expression, et on peut se demander s'il est possible de généraliser cette formule.  Par exemple, avec un peu de travail, on obtient que .  En comparant les expressions de et de aux lignes du triangle de Pascal, on voit que les coefficients devant les termes sont ceux qu'on retrouve aux lignes appropriées du triangle de Pascal. Ce résultat est vrai en général, et est énoncé à la proposition ci-dessous .     Soit et tels que , alors le coefficient devant le terme de l'expression est donné par .   Une preuve par récurrence sera présentée plus tard.    Les coefficients de  Utiliser la proposition afin de développer l'expression .   On devra utiliser les coefficients , pour allant de à . On peut les calculer à partir de la définition, ou bien à partir du triangle de Pascal. On obtient:   Ainsi, par la proposition , on a que        Les permutations et combinaisons généralisées   On veut maintenant généraliser les concepts de permutations et de combinaisons. Une première généralisation est de considérer les dénombrements d'objets indiscernables. Un exemple typique sera les anagrammes de mots avec des lettres qui se répètent.  Une deuxième façon de généraliser est de considérer des permutations et des combinaisons lorsqu'on peut répéter les éléments de l'ensemble que l'on choisit.  On a déjà fait plusieurs exemples qui sont des permutations avec répétition (voir entre autres , et ). Le dénombrement de ces situations se fait assez facilement grâce au principe du produit.  Cependant, le dénombrement de combinaisons avec répétition est un problème plus complexe. Il faudra développer une technique plus sophistiquée.    Permutations avec des objets indiscernables   On commence par considérer l'exemple le plus simple, c'est-à-dire lorsque les objets sont séparés en deux types d'objets indiscernables. En fait, on revisite l'exemple , mais on adopte une stratégie différente qu'on pourra utiliser plus tard. Cette méthode permet de généraliser la formule des permutations de types d'objets indiscernables. On peut également généraliser la méthode utilisée à l'exemple , mais la notation est un peu plus lourde.    Des chaînes binaires  Combien de chaînes binaires sont:   formées de quatre caractères et trois caractères ?   Une première solution est d'étiqueter les et les par   et , ainsi que  et . Le nombre de permutations de ces nouveaux caractères est .  Cependant, lorsqu'on enlève l'étiquetage, on remarque que pour chaque permutation qu'on vient de dénombrer, il y en a plusieurs autres qui sont équivalentes. Par exemple, lorsqu'on a les étiquettes, la chaîne est initialement considérée comme différente à la chaîne . Cependant, lorsqu'on enlève les étiquettes, les deux chaînes donnent la même, soit .  Pour chaque chaîne obtenue, on en a qui sont équivalents. Le provient des permutations des quatre alors que le correspond aux permutations des .  Par le principe de la division, on a que le nombre de chaînes binaires est .    Une autre solution est de voir le problème comme étant une combinaison, comme on a fait à l'exemple . En effet, on peut choisir une telle chaîne binaire en choisissant les positions des . Puisqu'il y aura positions au total et qu'on doit choisir la position pour les quatre caractères . Ainsi, il s'agit d'une combinaison de objets parmi .     formées de caractères dont de ces caractères sont des ?   On commence par compter le nombre de permutations de tous les objets en supposant qu'ils sont tous différents. Il y a alors permutations.  Cependant, pour chacune de ces permutations, il y a en qui sont équivalentes.  Le provient des permutations des objets de type alors que le correspond aux permutations des objets de type .   On doit choisir les positions des caractères parmi les positions. Ainsi, la réponse sera .    On veut maintenant considérer le cas où les objets sont séparés en types d'objets indiscernables.    Le nombre de permutations différentes de objets, où il y objets indiscernables de type , objets indiscernables de type , et objets indiscernables de type est     On commence par compter le nombre de permutations de tous les objets en supposant qu'ils sont tous différents. Il y a alors permutations.  Cependant, pour chacune de ces permutations, il y a en qui sont équivalentes.  Le provient des permutations des objets de type le correspond aux permutations des objets de type , et ainsi de suite jusqu'aux permutations des objets de type .  Par le principe de la division, on a que le nombre de permutations de nos objets est .    On commence par choisir les positions parmi les positions totales pour les objets de type . Il y a façons de le faire.  Par la suite, on choisit les positions parmi les positions restantes pour les objets de type . Il y a façons de le faire.  On doit maintenant choisir les positions parmi les positions restantes pour les objets de type . Il y a façons de le faire.  En poursuivant ainsi, jusqu'aux objets de type , et en utilisant le principe du produit, on a que le nombre de permutations est       Permutations avec répétitions  On peut généraliser la méthode pour résoudre l'exemple afin de trouver le nombre de permutations avec répétitions. En fait, on peut même utiliser le résultat de cet exemple afin de démontrer directement la formule suivante.   Le nombre de permutations d'un ensemble de objets si on accepte les répétitions est .  Choisir une telle permutation est équivalent à choisir une fonction . Par l'exemple , on a que le nombre de permutations de objets avec répétition est .     Combinaisons avec répétitions   On considère l'exemple suivant. Un magasin de bagels vend quatre sortes de bagels différents: nature, sésame, pavot et bleuet. En supposant que le magasin possède plus de bagels de chaque sorte, de combien de façons peut-on choisir bagels. Ceci est un exemple de combinaisons avec répétition. Ici, on pourrait par exemple choisir   On pourrait aussi s'imaginer qu'on tire billes de couleur rouge, bleu, vert ou jaune d'une urne contenant au moins billes de chaque couleur.  Une façon de représenter l'exemple précédent de façon un peu plus algébrique est la suivante. On considère pour . De combien de façons peut-on choisir les pour que ?  Pour pouvoir compter le nombre de solutions, on fait la transformation suivante. Pour chaque solution , on considère la chaîne binaire formée comme ceci: on échange chaque par une séquence de de longueur , et on ajoute un unique entre chaque séquence de (ça revient à échanger chaque en un ).  Par exemple, la solution sera transformée en la chaîne .  Ainsi, on vient de trouver une bijection entre les solutions à l'équation et les chaînes binaires de longueur formées de huit caractères et de trois caractères .  On sait qu'il existe telles chaînes. On peut généraliser cet argument pour trouver le nombre de combinaisons avec répétition.    Soit pour , le nombre de solutions à l'équation est .  On peut définir une bijection entre ces solutions et les chaînes binaires de longueur formées de caractères et caractères en utilisant la méthode précédente. Ainsi, le nombre de solutions est bien .   Pour ce genre de problèmes, il arrive souvent qu'on ajoute certaines conditions. L'exemple ci-dessous montre comment traiter ces conditions.   Combinaisons avec répétition  Déterminer le nombre de solutions à l'équation , pour et , si :   il n'y a pas d'autre condition?     pour tout ?    Pour s'assurer que , on introduit des variables intermédiaires telles que . Ainsi, en remplaçant dans l'équation, on a , ce qui devient .  Ainsi, il y aura solutions.         Pour s'assurer que , on introduit la variable intermédiaire telle que . Ainsi, en remplaçant dans l'équation, on a , ce qui devient .  Ainsi, il y aura solutions.         On compte toutes les solutions à l'équation (sans restriction) et on retire les solutions qui ne respectent pas la condition, c'est-à-dire les solutions telles que . Pour s'assurer que , on introduit la variable intermédiaire telle que . Ainsi, en remplaçant dans l'équation , on obtient .  Ainsi, il y aura solutions.         Les points importants de cette section sont:  Les permutations ;  Les combinaisons ;  Le triangle de Pascal et le binôme de Newton ;  Les permutations d'objets indiscernables ;  Les permutations avec répétition ;  Les combinaisons avec répétitions .        Ces questions sont à faire avant de venir en classe et à remettre au début du cours.    Sans utiliser une calculatrice (ou un autre outil informatique), expliquer comment calculer .    On considère l'ensemble  Combien de permutations de l'ensemble y a-t-il?  Combien de permutations de l'ensemble commencent par ?  Combien de sous-ensembles de possèdent quatre éléments?  Combien de sous-ensembles de possèdent trois éléments?   Que peut-on remarquer lorsqu'on compare les résultats de et de ? Donner une explication intuitive de ce qu'on observe.      Combien de mots peut-on former avec les lettres du mot ?     On forme des chaînes binaires de longueur , formés de quatre caractères \" \" et quatre caractères \" \". Combien de ces chaînes binaires y a-t-il?     Soit pour , trouver le nombre de solutions à l'équation      Trouver le coefficient devant dans l'expression .     Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative.      Exercices    À faire en classe  Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.    On forme des chaînes binaires de longueur dix, formés de cinq caractères \" \" et cinq caractères \" \".   Combiens de ces chaînes binaires y a-t-il?      Combiens de ces chaînes binaires contiennent cinq \" \" consécutifs?  Considérer le bloc comme étant un seul caractère.        Combiens de ces chaînes binaires contiennent cinq \" \" consécutifs ou cinq \" \"?    Utiliser l'inclusion-exclusion.       On forme des chaînes binaires de longueur , formés de cinq caractères \" \" et trois caractères \" \".   Combiens de ces chaînes binaires y a-t-il?      Combiens de ces chaînes binaires contiennent cinq \" \" consécutifs?      Combiens de ces chaînes binaires contiennent trois \" \" consécutifs?     Combiens de ces chaînes binaires contiennent cinq \" \" consécutifs ou trois \" \"?      On lance une pièce à deux faces à reprises. Le résultat est Pile ou Face. Combien de résultats:   y a-t-il au total?  .    contiennent exactement deux Face?   On choisit deux positions parmi les possibles pour les Face.    contiennent exactement trois Pile?      contiennent le même nombre de Pile que de Face?       De combien de manières peut-on sélectionner volontaires dans la classe? (On suppose qu'il y a personnes dans la classe.)  Soit le nombre de personnes dans la classe. Si , alors c'est impossible. Sinon,   Aux olympiades scolaires de l'école du Bonheur, tous les participants gagnent une médaille. S'il y a élèves et qu'on attribue médailles d'or, médailles d'argent et le reste en bronze, de combien de manières est-ce que la distribution peut être faite?     Pour une fin de semaine au chalet, on veut apporter jeux de société. Dans la collection, on trouve jeux coopératifs et jeux de stratégies. Combien de possibilités y a-t-il si:   On ne donne aucune restriction?      On souhaite avoir exactement deux jeux coopératifs?    On utilise le principe du produit pour séparer la tâche en deux étapes. Premièrement, on choisit deux jeux coopératifs et ensuite on choisit trois jeux de stratégies. Ainsi, la réponse sera .   Pour des raisons évidentes, on décide d'exclure des jeux coopératifs le jeu Pandémie et si on veut absolument apporter le jeu de stratégie Smallworld ?      Pour mon anniversaire, je souhaite faire un petit événement avec invités. J'ai bons amis hommes et bonnes amies femmes que je considère inviter. Combien de choix est-ce que j'ai si:  Je ne mets aucune restriction?   Je veux hommes et femmes?    Roxanne et Samuel forment un couple. Si je décide d'en inviter un des deux, l'autre doit venir aussi.  Combien de possibilités s'il n'y a pas d'autres restrictions?  On commence par décider si le couple est invité ou non. On obtient leur présence ou absence entraine deux sous-ensembles disjoints de possibilités. Si le couple fait partie des invités, alors il reste places à combler, à choisir parmi les autres personnes. Cela fait .  À cela, on ajoute les possibilités où Roxanne et Samuel ne sont pas invités. Il faut alors choisir les invités parmi les personnes. Cela fait .  Par le principe d'addition, on a un total de possibilités.    Parmi celles-ci, combien comprennent le couple?   Combien de possibilités si je veux avoir au total hommes et femmes?  Encore une fois, on sépare en deux cas distincts, selon si Roxanne et Samuel sont présents ou non. Dans le cas où ils sont présents, on doit ensuite choisir hommes parmi les restants et femmes parmi les restants. Selon le principe de multiplication, ceci donnera .  À cela, on doit ajouter les possibilités où Roxanne et Samuel sont absents. Il faut choisir hommes parmi les qui ne sont pas Samuel et femmes parmi les qui ne sont pas Roxanne. On obtient alors, par le principe de multiplication .  On combine finalement avec le principe d'addition pour avoir un total de possibilités.    Parmi celles-ci, combien comprennent le couple?     Parmi mes amis, il y a aussi Christian et Sophie, qui sont en chicane et ne peuvent pas être tous les deux présents.  Combien de possibilités y a-t-il s'il n'y a pas d'autres restrictions?  Cette-fois, on distingue trois cas: Christian est présent, mais pas Sophie, Sophie est présent, mais pas Christian ou ni Sophie ni Christian ne sont présents. Ces trois cas sont distincts et le principe d'addition permettra d'obtenir l'ensemble des possibilités.  Si Christian est présent, il faut ensuite choisir les autres invités parmi les personnes qui ne sont pas Sophie (ou Christian). Cela donne . Le même argument montre que si Sophie est présente, mais pas Christian, le nombre de possibilités est aussi .  Finalement, si les deux sont absents, il faut choisir les invités parmi les autres possibilités. On obtient alors .  En combinant le tout, il y a possibilités.    Combien de possibilités si je veux avoir au total hommes et femmes?       Soit et   Combien y a-t-il de fonctions et ?  Il y a fonctions , alors qu'il y a fonctions .    Combien y a-t-il de fonctions qui sont surjectives?     Pour que la fonction soit surjective, on doit avoir pour , et on doit aussi avoir . Ainsi, il doit y avoir avoir exactement un élément tel que alors que tous les autres éléments auront une seule préimage.  Donc, pour définir une fonction surjective , on doit choisir l'élément de ayant deux préimages ( possibilités). Ensuite, on choisit les deux préimages de (il y possibilités.) Finalement, on doit choisir la préimage des autres éléments de . Ceci revient à permuter trois éléments (il y a possibilités).  Ainsi, par le principe du produit, il y en a     Combien y a-t-il de fonctions qui sont injectives?      Soit . Combien de solutions y a-t-il si   sont des naturels (plus grands ou égaux à )?       sont des naturels plus grands ou égaux à ?      Soit un ensemble à éléments. Une -partition de est un ensemble de sous-ensembles de qui ont les propriétés suivantes:  ils sont non vides, c'est à dire ;  leur intersection deux à deux sont vide, c'est-à-dire si ;  leur union donne , c'est-à-dire .   Par exemple, pour , les ensembles et forment une -partition de . Combien y a-t-il de -partition de ?      Chaque -partition de est formé de deux ensembles de cardinalité et un ensemble de cardinalité .  Chaque -partition est uniquement définie par le sous-ensemble de cardinalité qu'elle contient.     Une boite de beignes d'une chaine populaire contient six compartiments qu'un employé remplit pour un client selon les règles suivantes.  Il y a trois sortes de beignes, par exemple Chocolat, Érable et Vanille et on remplit la boite. Par exemple VVECCV est une configuration.    Il s'agit d'une permutation avec répétition    Même chose, mais on permet de laisser un compartiment vide (et le client sera potentiellement déçu). Par exemple, VVE_C_ est une configuration où _ représente l'absence d'un beigne.   On remplit tous les compartiments, en s'assurant que chaque sorte de beignes soit présente dans la boite.  Il faut utiliser le principe d'inclusion-exclusion à plusieurs reprises.    On remplit tous les compartiments, mais il y a maintenant sortes de beignes!    L'employé, un peu maladroit remplit la boite avec six beignes à la vanille, mais en met potentiellement plus d'un par compartiment. Par exemple VV,V,_,VV,_,V est une configuration possible.  Il faut compter le nombre de solutions entières positives à l'équation . Il y a    Même chose que la partie , mais on utilise six beignes différents.   Le problème revient à compter le nombre de façons d'attribuer à chaque beigne un compartiment. Pour chaque beigne, il y a compartiments possibles. Par le principe du produit, il y a façons de faire.    C'est presque l'heure de la fermeture et il ne reste que beignes dans le présentoir, tous de différentes sortes. On veut remplir la boite de .  On doit choisir beignes parmi les restants. De plus, on doit les placer en ordre, car on en place un seul dans chaque compartiment. On compte donc les -permutations de objets. Il y a façons de le faire.    On ne met que des beignes au chocolat, en laissant possiblement des compartiments vides.    C'est le printemps, le sirop d'érable coule en flot. Obtenez dix beignes à l'érable dans une boite de six! (Aucun compartiment ne sera laissé vide). Par exemple, EE,E,EEE,E,EE,E représenterait une configuration où deux beignes sont placés dans les compartiments 1 et 5, trois beignes sont placés dans le compartiment 3 et un beigne est placé dans chacun des compartiments 2,4 et 6.    Il n'y a plus de boite, alors on met les beignes dans des sacs identiques. On veut mettre six beignes à la vanille dans trois sacs (évidemment, aucun sac ne sera vide, pour éviter le gaspillage).  Énumérer les possibilités, il n'y en a pas beaucoup.   Voici les manières différentes:  Un sac avec quatre beignes et deux sacs avec un beigne;  Un sac avec trois beignes, un sac avec deux beignes et un sac avec un beigne;  Trois sacs avec deux beignes.    Même chose que précédemment, mais avec six beignes différents.  C'est un cas plus difficile que ce qu'on a vu en classe! C'est un défi pour le moment!  Cela correspond à compter les -partition d'un ensemble à éléments.  Si on note le nombre de -partitions d'un ensemble de cardinalité , on peut montrer (comment?) que .  Cela correspond à compter les -partition d'un ensemble à éléments. Il y aurait manières de le faire.      "
+  "body": " Permutations et combinaisons   On peut remarquer que plusieurs des exemples et exercices faits à la section font intervenir des méthodes et des expressions qui se ressemblent. Par exemple, on voit souvent apparaître des termes de la forme .  Ces expressions sont reliées à des concepts importants en dénombrement, c'est-à-dire les permutations et les combinaisons. On remarque également que plusieurs problèmes difficiles peuvent être résolus en utilisant les mêmes méthodes. On présente donc quelques exemples typiques qu'on peut utiliser pour résoudre une grande catégorie de problèmes.  Finalement, on présente le triangle de Pascal, qui permet de calculer de manière différente le nombre de combinaisons, ainsi que le binôme de Newton, qui utilise le nombre de combinaisons afin de calculer rapidement des expressions de la forme .    Les permutations   On considère les deux problèmes de dénombrement suivants. Premièrement, on veut choisir trois personnes parmi un groupe de personnes. Deuxièmement, on considère le nombre de podiums différents qu'il peut y avoir dans une course de personnes.  Dans les deux cas, on doit choisir trois personnes parmi . Cependant, pour le premier exemple, l'ordre dans lequel on choisit les trois personnes n'a pas d'importance, alors que pour le deuxième exemple, l'ordre est très important! Dans le premier cas, on dira que l’on compte les combinaisons, alors que dans le deuxième cas, on compte les permutations.  Étrangement, il est plus facile de compter le nombre de podiums que de compter le nombre de façons de choisir trois personnes. On commence donc par considérer le deuxième problème, et on retournera au problème de choisir trois personnes parmi en .  En utilisant le principe du produit, on voit rapidement qu'il y a podiums différents. Le concept de permutation permet de généraliser cet exemple.     Une permutation d'un ensemble d'objets est un arrangement ordonné de ces objets.  Une permutation d'un ensemble d'objets est un arrangement ordonné de objets de l'ensemble.     Une première permutation  Soit . Combien y a-t-il de permutations différentes de l'ensemble ?     Si on veut arranger (de façon ordonnée) les éléments de l'ensemble , cela veut dire qu'on choisit un élément à la première position, un à la deuxième et finalement un à la troisième.  Lorsqu'on choisit l'élément en première position, il y a choix possibles. Une fois l'élément fixé à la première position, il reste choix pour l'élément à la deuxième position. Finalement, il ne reste qu'un seul choix pour la dernière position. Ainsi, par le principe du produit, il y a permutations possible.    L'exemple précédent semble montrer qu'on peut déterminer le nombre de permutations d'un ensemble de taille finie quelconque. Pour cela, on utilise la notation ci-dessous.      Nous allons insister sur la définition alternative de par récurrence un peu plus tard.   Avec cette nouvelle notation, on est prêt à démontrer la proposition suivante.   Soit un ensemble de cardinalité finie , alors il existe différentes permutations de l'ensemble .  Une méthode pour démontrer cette proposition est de généraliser la solution de l'exemple . Une autre méthode est de remarquer que de trouver un arrangement ordonné des éléments de est équivalent à trouver une fonction injective . Par l'exemple , on sait qu'il y a telles fonctions.   De façon similaire, on peut déterminer le nombre de -permutations d'un ensemble de cardinalité finie . En effet, décrire une -permutation est équivalent à décrire une fonction injective . On utilisera une notation particulière pour ce nombre.   Le nombre de permutations d'un ensemble tel que est noté      .  Encore une fois, il suffit de remarquer que ceci est équivalent à compter des fonctions injectives . Par l'exemple , on sait qu'il y a telles fonctions.   On regarde maintenant deux problèmes typiques faisant intervenir des permutations.   Des anagrammes  Une anagramme d'une suite de lettres est une permutation de ces lettres. Lorsqu'on compte le nombre d'anagrammes possibles, on ne s'intéresse pas à savoir si la permutation est un vrai mot. Combien d'anagrammes des lettres sont telles que les lettres doivent apparaître dans cet ordre en un seul bloc?  Puisque la suite doit apparaître dans cet ordre en un seul bloc, il suffit de compter les permutations de lettres différentes (on considère comme une seule lettre). Ainsi, il y en a .    Le parcours d'un vendeur  Un vendeur doit visiter huit villes différentes, l'une d'elles étant Saint-Rémi, pour son travail. Sachant qu'il doit terminer son voyage à Saint-Rémi, de combien de façons différentes peut-il visiter ces huit villes ?  Puisqu'il doit terminer ces visites à Saint-Rémi, il ne reste qu'à déterminer l'ordre des sept premières villes qu'il doit visiter. Ainsi, il s'agit d'une permutation de sept objets, et on sait qu'il y en a .     Les combinaisons   Tel que mentionné précédemment, il est à priori un peu plus complexe de choisir trois personnes parmi que d'ordonner trois de ces personnes.  Pour arriver à déterminer le nombre de choix possibles, on commence par définir le concept de combinaison. Par la suite, on utilise le lien qu'il existe entre les permutations et les combinaisons afin de déterminer le nombre de façons de choisir objets parmi .     Soit un ensemble de cardinalité finie une combinaison de est une sélection non ordonnée de éléments de .  Le nombre de -combinaisons d'un ensemble de cardinalité finie est noté .  Les expressions de la forme , sont appelées les coefficients binomiaux.     Soit un ensemble de cardinalité finie et soit tel que , alors .   On sait que le nombre de permutations est . Nous allons utiliser le principe du produit afin de compter d'une autre façon. On peut séparer la tâche de choisir une permutation en deux étapes. Premièrement, on choisit éléments de . Deuxièmement, on choisit un ordre pour ces éléments (on permute ces éléments).  Le nombre de façons de choisir les éléments de est . Pour chaque choix de éléments , le nombre de façons d'ordonner ceux-ci est (le nombre de permutations des éléments). Ainsi, par le principe du produit, on a . On a alors .    On regarde maintenant deux exemples typiques faisant intervenir les combinaisons.   Mains de poker  Combien de mains de cinq cartes peuvent être formées à partir d'un jeu de cartes standard de cartes?  Il s'agit de compter les combinaisons de cartes parmi . On sait qu'il y en a .    Des chaînes binaires  Combien de chaînes binaires de longueur contiennent exactement caractères ?   Pour dénombrer ces chaînes, on remarque que pour choisir une telle chaîne binaire, il suffit de choisir positions où l'on place les parmi les positions possibles. Il s'agit donc de compter les combinaisons de parmi . Il y en a .  On peut également remarquer que, s'il y a exactement caractères , alors il y aura caractères . Ainsi, on aurait également pu choisir les positions des . Il y a donc façons de le faire.  Ainsi, on devrait avoir que .         Les coefficients binomiaux sont utilisés dans plusieurs branches des mathématiques. Voici quelques propriétés qu'on peut déduire facilement à l'aide de la définition et de la proposition .   Soit tels que alors est un entier naturel.   Puisque la proposition nous donne que , et que est un nombre de combinaisons, alors ce nombre est nécessairement un entier naturel.     Soit tels que alors .  Il suffit d'utiliser la proposition et la commutativité du produit dans .    Un corollaire est une proposition qui découle directement d'une autre proposition.     Le triangle de Pascal et le binôme de Newton   Les combinaisons apparaissent à plusieurs moments dans l'histoire des mathématiques. Le triangle de Pascal est un exemple où l'on peut représenter visuellement les termes afin de les calculer rapidement.  Un autre exemple est lorsqu'on veut développer l'expression . On explore ici ces deux situations.    Le triangle de Pascal    Le triangle de Pascal est une représentation des coefficients dans un tableau triangulaire. On représente ici les six premières lignes.   Le premier et le dernier nombre de chaque ligne sont des . Les autres nombres sont obtenus successivement (ligne par ligne) en additionnant les deux nombres se trouvant au-dessus.  En termes des coefficients , le triangle nous donne     En fait, la construction du triangle de Pascal laisse deviner qu'on peut déterminer les coefficients à l'aide de sommes, plutôt qu'à l'aide de la définition. On peut en déduire la formule de Pascal, qu'on donne à la proposition .    Soit tels que , alors    On a      Le binôme de Newton   Après avoir calculé à de nombreuses reprises des expressions comme ou encore , on peut deviner que   On peut voir une certaine structure dans cette expression, et on peut se demander s'il est possible de généraliser cette formule.  Par exemple, avec un peu de travail, on obtient que .  En comparant les expressions de et de aux lignes du triangle de Pascal, on voit que les coefficients devant les termes sont ceux qu'on retrouve aux lignes appropriées du triangle de Pascal. Ce résultat est vrai en général, et est énoncé à la proposition ci-dessous .     Soit et tels que , alors le coefficient devant le terme de l'expression est donné par .   Une preuve par récurrence sera présentée plus tard.    Les coefficients de  Utiliser la proposition afin de développer l'expression .   On devra utiliser les coefficients , pour allant de à . On peut les calculer à partir de la définition, ou bien à partir du triangle de Pascal. On obtient:   Ainsi, par la proposition , on a que        Les permutations et combinaisons généralisées   On veut maintenant généraliser les concepts de permutations et de combinaisons. Une première généralisation est de considérer les dénombrements d'objets indiscernables. Un exemple typique sera les anagrammes de mots avec des lettres qui se répètent.  Une deuxième façon de généraliser est de considérer des permutations et des combinaisons lorsqu'on peut répéter les éléments de l'ensemble que l'on choisit.  On a déjà fait plusieurs exemples qui sont des permutations avec répétition (voir entre autres , et ). Le dénombrement de ces situations se fait assez facilement grâce au principe du produit.  Cependant, le dénombrement de combinaisons avec répétition est un problème plus complexe. Il faudra développer une technique plus sophistiquée.    Permutations avec des objets indiscernables   On commence par considérer l'exemple le plus simple, c'est-à-dire lorsque les objets sont séparés en deux types d'objets indiscernables. En fait, on revisite l'exemple , mais on adopte une stratégie différente qu'on pourra utiliser plus tard. Cette méthode permet de généraliser la formule des permutations de types d'objets indiscernables. On peut également généraliser la méthode utilisée à l'exemple , mais la notation est un peu plus lourde.    Des chaînes binaires  Combien de chaînes binaires sont:   formées de quatre caractères et trois caractères ?   Une première solution est d'étiqueter les et les par   et , ainsi que  et . Le nombre de permutations de ces nouveaux caractères est .  Cependant, lorsqu'on enlève l'étiquetage, on remarque que pour chaque permutation qu'on vient de dénombrer, il y en a plusieurs autres qui sont équivalentes. Par exemple, lorsqu'on a les étiquettes, la chaîne est initialement considérée comme différente à la chaîne . Cependant, lorsqu'on enlève les étiquettes, les deux chaînes donnent la même, soit .  Pour chaque chaîne obtenue, on en a qui sont équivalents. Le provient des permutations des quatre alors que le correspond aux permutations des .  Par le principe de la division, on a que le nombre de chaînes binaires est .    Une autre solution est de voir le problème comme étant une combinaison, comme on a fait à l'exemple . En effet, on peut choisir une telle chaîne binaire en choisissant les positions des . Puisqu'il y aura positions au total et qu'on doit choisir la position pour les quatre caractères . Ainsi, il s'agit d'une combinaison de objets parmi .     formées de caractères dont de ces caractères sont des ?   On commence par compter le nombre de permutations de tous les objets en supposant qu'ils sont tous différents. Il y a alors permutations.  Cependant, pour chacune de ces permutations, il y a en qui sont équivalentes.  Le provient des permutations des objets de type alors que le correspond aux permutations des objets de type .   On doit choisir les positions des caractères parmi les positions. Ainsi, la réponse sera .    On veut maintenant considérer le cas où les objets sont séparés en types d'objets indiscernables.    Le nombre de permutations différentes de objets, où il y objets indiscernables de type , objets indiscernables de type , et objets indiscernables de type est     On commence par compter le nombre de permutations de tous les objets en supposant qu'ils sont tous différents. Il y a alors permutations.  Cependant, pour chacune de ces permutations, il y a en qui sont équivalentes.  Le provient des permutations des objets de type le correspond aux permutations des objets de type , et ainsi de suite jusqu'aux permutations des objets de type .  Par le principe de la division, on a que le nombre de permutations de nos objets est .    On commence par choisir les positions parmi les positions totales pour les objets de type . Il y a façons de le faire.  Par la suite, on choisit les positions parmi les positions restantes pour les objets de type . Il y a façons de le faire.  On doit maintenant choisir les positions parmi les positions restantes pour les objets de type . Il y a façons de le faire.  En poursuivant ainsi, jusqu'aux objets de type , et en utilisant le principe du produit, on a que le nombre de permutations est       Permutations avec répétitions  On peut généraliser la méthode pour résoudre l'exemple afin de trouver le nombre de permutations avec répétitions. En fait, on peut même utiliser le résultat de cet exemple afin de démontrer directement la formule suivante.   Le nombre de permutations d'un ensemble de objets si on accepte les répétitions est .  Choisir une telle permutation est équivalent à choisir une fonction . Par l'exemple , on a que le nombre de permutations de objets avec répétition est .     Combinaisons avec répétitions   On considère l'exemple suivant. Un magasin de bagels vend quatre sortes de bagels différents: nature, sésame, pavot et bleuet. En supposant que le magasin possède plus de bagels de chaque sorte, de combien de façons peut-on choisir bagels. Ceci est un exemple de combinaisons avec répétition. Ici, on pourrait par exemple choisir   On pourrait aussi s'imaginer qu'on tire billes de couleur rouge, bleu, vert ou jaune d'une urne contenant au moins billes de chaque couleur.  Une façon de représenter l'exemple précédent de façon un peu plus algébrique est la suivante. On considère pour . De combien de façons peut-on choisir les pour que ?  Pour pouvoir compter le nombre de solutions, on fait la transformation suivante. Pour chaque solution , on considère la chaîne binaire formée comme ceci: on échange chaque par une séquence de de longueur , et on ajoute un unique entre chaque séquence de (ça revient à échanger chaque en un ).  Par exemple, la solution sera transformée en la chaîne .  Ainsi, on vient de trouver une bijection entre les solutions à l'équation et les chaînes binaires de longueur formées de huit caractères et de trois caractères .  On sait qu'il existe telles chaînes. On peut généraliser cet argument pour trouver le nombre de combinaisons avec répétition.    Soit pour , le nombre de solutions à l'équation est .  On peut définir une bijection entre ces solutions et les chaînes binaires de longueur formées de caractères et caractères en utilisant la méthode précédente. Ainsi, le nombre de solutions est bien .   Pour ce genre de problèmes, il arrive souvent qu'on ajoute certaines conditions. L'exemple ci-dessous montre comment traiter ces conditions.   Combinaisons avec répétition  Déterminer le nombre de solutions à l'équation , pour et , si :   il n'y a pas d'autre condition?     pour tout ?    Pour s'assurer que , on introduit des variables intermédiaires telles que . Ainsi, en remplaçant dans l'équation, on a , ce qui devient .  Ainsi, il y aura solutions.         Pour s'assurer que , on introduit la variable intermédiaire telle que . Ainsi, en remplaçant dans l'équation, on a , ce qui devient .  Ainsi, il y aura solutions.         On compte toutes les solutions à l'équation (sans restriction) et on retire les solutions qui ne respectent pas la condition, c'est-à-dire les solutions telles que . Pour s'assurer que , on introduit la variable intermédiaire telle que . Ainsi, en remplaçant dans l'équation , on obtient .  Ainsi, il y aura solutions.         Les points importants de cette section sont:  Les permutations ;  Les combinaisons ;  Le triangle de Pascal et le binôme de Newton ;  Les permutations d'objets indiscernables ;  Les permutations avec répétition ;  Les combinaisons avec répétitions .        Ces questions sont à faire avant de venir en classe et à remettre au début du cours.    Sans utiliser une calculatrice (ou un autre outil informatique), expliquer comment calculer .    On considère l'ensemble  Combien de permutations de l'ensemble y a-t-il?  Combien de permutations de l'ensemble commencent par ?  Combien de sous-ensembles de possèdent quatre éléments?  Combien de sous-ensembles de possèdent trois éléments?   Que peut-on remarquer lorsqu'on compare les résultats de et de ? Donner une explication intuitive de ce qu'on observe.      Combien de mots peut-on former avec les lettres du mot ?     On forme des chaînes binaires de longueur , formés de quatre caractères \" \" et quatre caractères \" \". Combien de ces chaînes binaires y a-t-il?     Soit pour , trouver le nombre de solutions à l'équation      Trouver le coefficient devant dans l'expression .     Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative.      Exercices    À faire en classe  Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.    On forme des chaînes binaires de longueur dix, formés de cinq caractères \" \" et cinq caractères \" \".   Combiens de ces chaînes binaires y a-t-il?      Combiens de ces chaînes binaires contiennent cinq \" \" consécutifs?  Considérer le bloc comme étant un seul caractère.        Combiens de ces chaînes binaires contiennent cinq \" \" consécutifs ou cinq \" \"?    Utiliser l'inclusion-exclusion.       On forme des chaînes binaires de longueur , formés de cinq caractères \" \" et trois caractères \" \".   Combiens de ces chaînes binaires y a-t-il?      Combiens de ces chaînes binaires contiennent cinq \" \" consécutifs?      Combiens de ces chaînes binaires contiennent trois \" \" consécutifs?     Combiens de ces chaînes binaires contiennent cinq \" \" consécutifs ou trois \" \"?      On lance une pièce à deux faces à reprises. Le résultat est Pile ou Face. Combien de résultats:   y a-t-il au total?  .    contiennent exactement deux Face?   On choisit deux positions parmi les possibles pour les Face.    contiennent exactement trois Pile?      contiennent le même nombre de Pile que de Face?       De combien de manières peut-on sélectionner volontaires dans la classe? (On suppose qu'il y a personnes dans la classe.)  Soit le nombre de personnes dans la classe. Si , alors c'est impossible. Sinon,   Aux olympiades scolaires de l'école du Bonheur, tous les participants gagnent une médaille. S'il y a élèves et qu'on attribue médailles d'or, médailles d'argent et le reste en bronze, de combien de manières est-ce que la distribution peut être faite?     Pour une fin de semaine au chalet, on veut apporter jeux de société. Dans la collection, on trouve jeux coopératifs et jeux de stratégies. Combien de possibilités y a-t-il si:   On ne donne aucune restriction?      On souhaite avoir exactement deux jeux coopératifs?    On utilise le principe du produit pour séparer la tâche en deux étapes. Premièrement, on choisit deux jeux coopératifs et ensuite on choisit trois jeux de stratégies. Ainsi, la réponse sera .   Pour des raisons évidentes, on décide d'exclure des jeux coopératifs le jeu Pandémie et si on veut absolument apporter le jeu de stratégie Smallworld ?      Pour mon anniversaire, je souhaite faire un petit événement avec invités. J'ai bons amis hommes et bonnes amies femmes que je considère inviter. Combien de choix est-ce que j'ai si:  Je ne mets aucune restriction?   Je veux hommes et femmes?    Roxanne et Samuel forment un couple. Si je décide d'en inviter un des deux, l'autre doit venir aussi.  Combien de possibilités s'il n'y a pas d'autres restrictions?  On commence par décider si le couple est invité ou non. On obtient leur présence ou absence entraine deux sous-ensembles disjoints de possibilités. Si le couple fait partie des invités, alors il reste places à combler, à choisir parmi les autres personnes. Cela fait .  À cela, on ajoute les possibilités où Roxanne et Samuel ne sont pas invités. Il faut alors choisir les invités parmi les personnes. Cela fait .  Par le principe d'addition, on a un total de possibilités.    Parmi celles-ci, combien comprennent le couple?   Combien de possibilités si je veux avoir au total hommes et femmes?  Encore une fois, on sépare en deux cas distincts, selon si Roxanne et Samuel sont présents ou non. Dans le cas où ils sont présents, on doit ensuite choisir hommes parmi les restants et femmes parmi les restants. Selon le principe de multiplication, ceci donnera .  À cela, on doit ajouter les possibilités où Roxanne et Samuel sont absents. Il faut choisir hommes parmi les qui ne sont pas Samuel et femmes parmi les qui ne sont pas Roxanne. On obtient alors, par le principe de multiplication .  On combine finalement avec le principe d'addition pour avoir un total de possibilités.    Parmi celles-ci, combien comprennent le couple?     Parmi mes amis, il y a aussi Christian et Sophie, qui sont en chicane et ne peuvent pas être tous les deux présents.  Combien de possibilités y a-t-il s'il n'y a pas d'autres restrictions?  Cette-fois, on distingue trois cas: Christian est présent, mais pas Sophie, Sophie est présent, mais pas Christian ou ni Sophie ni Christian ne sont présents. Ces trois cas sont distincts et le principe d'addition permettra d'obtenir l'ensemble des possibilités.  Si Christian est présent, il faut ensuite choisir les autres invités parmi les personnes qui ne sont pas Sophie (ou Christian). Cela donne . Le même argument montre que si Sophie est présente, mais pas Christian, le nombre de possibilités est aussi .  Finalement, si les deux sont absents, il faut choisir les invités parmi les autres possibilités. On obtient alors .  En combinant le tout, il y a possibilités.    Combien de possibilités si je veux avoir au total hommes et femmes?       Soit et   Combien y a-t-il de fonctions et ?  Il y a fonctions , alors qu'il y a fonctions .    Combien y a-t-il de fonctions qui sont surjectives?     Pour que la fonction soit surjective, on doit avoir pour , et on doit aussi avoir . Ainsi, il doit y avoir avoir exactement un élément tel que alors que tous les autres éléments auront une seule préimage.  Donc, pour définir une fonction surjective , on doit choisir l'élément de ayant deux préimages ( possibilités). Ensuite, on choisit les deux préimages de (il y possibilités.) Finalement, on doit choisir la préimage des autres éléments de . Ceci revient à permuter trois éléments (il y a possibilités).  Ainsi, par le principe du produit, il y en a     Combien y a-t-il de fonctions qui sont injectives?      Soit . Combien de solutions y a-t-il si   sont des naturels (plus grands ou égaux à )?       sont des naturels plus grands ou égaux à ?      Soit un ensemble à éléments. Une -partition de est un ensemble de sous-ensembles de qui ont les propriétés suivantes:  ils sont non vides, c'est à dire ;  leur intersection deux à deux sont vide, c'est-à-dire si ;  leur union donne , c'est-à-dire .   Par exemple, pour , les ensembles et forment une -partition de . Combien y a-t-il de -partition de ?      Chaque -partition de est formé de deux ensembles de cardinalité et un ensemble de cardinalité .  Chaque -partition est uniquement définie par le sous-ensemble de cardinalité qu'elle contient.     Une boite de beignes d'une chaine populaire contient six compartiments qu'un employé remplit pour un client selon les règles suivantes.  Il y a trois sortes de beignes, par exemple Chocolat, Érable et Vanille et on remplit la boite. Par exemple VVECCV est une configuration.    Il s'agit d'une permutation avec répétition    Même chose, mais on permet de laisser un compartiment vide (et le client sera potentiellement déçu). Par exemple, VVE_C_ est une configuration où _ représente l'absence d'un beigne.   On remplit tous les compartiments, en s'assurant que chaque sorte de beignes soit présente dans la boite.  Il faut utiliser le principe d'inclusion-exclusion à plusieurs reprises.    On remplit tous les compartiments, mais il y a maintenant sortes de beignes!    L'employé, un peu maladroit remplit la boite avec six beignes à la vanille, mais en met potentiellement plus d'un par compartiment. Par exemple VV,V,_,VV,_,V est une configuration possible.  Il faut compter le nombre de solutions entières positives à l'équation . Il y a    Même chose que la partie , mais on utilise six beignes différents.   Le problème revient à compter le nombre de façons d'attribuer à chaque beigne un compartiment. Pour chaque beigne, il y a compartiments possibles. Par le principe du produit, il y a façons de faire.    C'est presque l'heure de la fermeture et il ne reste que beignes dans le présentoir, tous de différentes sortes. On veut remplir la boite de .  On doit choisir beignes parmi les restants. De plus, on doit les placer en ordre, car on en place un seul dans chaque compartiment. On compte donc les -permutations de objets. Il y a façons de le faire.    On ne met que des beignes au chocolat, en laissant possiblement des compartiments vides.    C'est le printemps, le sirop d'érable coule en flot. Obtenez dix beignes à l'érable dans une boite de six! (Aucun compartiment ne sera laissé vide). Par exemple, EE,E,EEE,E,EE,E représenterait une configuration où deux beignes sont placés dans les compartiments 1 et 5, trois beignes sont placés dans le compartiment 3 et un beigne est placé dans chacun des compartiments 2,4 et 6.    Il n'y a plus de boite, alors on met les beignes dans des sacs identiques. On veut mettre six beignes à la vanille dans trois sacs (évidemment, aucun sac ne sera vide, pour éviter le gaspillage).  Énumérer les possibilités, il n'y en a pas beaucoup.   Voici les manières différentes:  Un sac avec quatre beignes et deux sacs avec un beigne;  Un sac avec trois beignes, un sac avec deux beignes et un sac avec un beigne;  Trois sacs avec deux beignes.    Même chose que précédemment, mais avec six beignes différents.  C'est un cas plus difficile que ce qu'on a vu en classe! C'est un défi pour le moment!  Cela correspond à compter les -partition d'un ensemble à éléments.  Si on note le nombre de -partitions d'un ensemble de cardinalité , on peut montrer (comment?) que .  Cela correspond à compter les -partition d'un ensemble à éléments. Il y aurait manières de le faire.      "
 },
 {
   "id": "def_perm",
@@ -3580,7 +3580,7 @@ var ptx_lunr_docs = [
   "type": "Remarque",
   "number": "4.2.3",
   "title": "",
-  "body": " Nous allons insister sur la définition alternative de par récurrence un peu plus tard.  "
+  "body": "  Nous allons insister sur la définition alternative de par récurrence un peu plus tard.  "
 },
 {
   "id": "prop_nbrPerm",
@@ -3688,7 +3688,7 @@ var ptx_lunr_docs = [
   "type": "Remarque",
   "number": "4.2.15",
   "title": "",
-  "body": "Un corollaire est une proposition qui découle directement d'une autre proposition. "
+  "body": " Un corollaire est une proposition qui découle directement d'une autre proposition.  "
 },
 {
   "id": "def-trianglePascal",
@@ -3943,11 +3943,110 @@ var ptx_lunr_docs = [
   "body": "Une boite de beignes d'une chaine populaire contient six compartiments qu'un employé remplit pour un client selon les règles suivantes.  Il y a trois sortes de beignes, par exemple Chocolat, Érable et Vanille et on remplit la boite. Par exemple VVECCV est une configuration.    Il s'agit d'une permutation avec répétition    Même chose, mais on permet de laisser un compartiment vide (et le client sera potentiellement déçu). Par exemple, VVE_C_ est une configuration où _ représente l'absence d'un beigne.   On remplit tous les compartiments, en s'assurant que chaque sorte de beignes soit présente dans la boite.  Il faut utiliser le principe d'inclusion-exclusion à plusieurs reprises.    On remplit tous les compartiments, mais il y a maintenant sortes de beignes!    L'employé, un peu maladroit remplit la boite avec six beignes à la vanille, mais en met potentiellement plus d'un par compartiment. Par exemple VV,V,_,VV,_,V est une configuration possible.  Il faut compter le nombre de solutions entières positives à l'équation . Il y a    Même chose que la partie , mais on utilise six beignes différents.   Le problème revient à compter le nombre de façons d'attribuer à chaque beigne un compartiment. Pour chaque beigne, il y a compartiments possibles. Par le principe du produit, il y a façons de faire.    C'est presque l'heure de la fermeture et il ne reste que beignes dans le présentoir, tous de différentes sortes. On veut remplir la boite de .  On doit choisir beignes parmi les restants. De plus, on doit les placer en ordre, car on en place un seul dans chaque compartiment. On compte donc les -permutations de objets. Il y a façons de le faire.    On ne met que des beignes au chocolat, en laissant possiblement des compartiments vides.    C'est le printemps, le sirop d'érable coule en flot. Obtenez dix beignes à l'érable dans une boite de six! (Aucun compartiment ne sera laissé vide). Par exemple, EE,E,EEE,E,EE,E représenterait une configuration où deux beignes sont placés dans les compartiments 1 et 5, trois beignes sont placés dans le compartiment 3 et un beigne est placé dans chacun des compartiments 2,4 et 6.    Il n'y a plus de boite, alors on met les beignes dans des sacs identiques. On veut mettre six beignes à la vanille dans trois sacs (évidemment, aucun sac ne sera vide, pour éviter le gaspillage).  Énumérer les possibilités, il n'y en a pas beaucoup.   Voici les manières différentes:  Un sac avec quatre beignes et deux sacs avec un beigne;  Un sac avec trois beignes, un sac avec deux beignes et un sac avec un beigne;  Trois sacs avec deux beignes.    Même chose que précédemment, mais avec six beignes différents.  C'est un cas plus difficile que ce qu'on a vu en classe! C'est un défi pour le moment!  Cela correspond à compter les -partition d'un ensemble à éléments.  Si on note le nombre de -partitions d'un ensemble de cardinalité , on peut montrer (comment?) que .  Cela correspond à compter les -partition d'un ensemble à éléments. Il y aurait manières de le faire.   "
 },
 {
+  "id": "sec-",
+  "level": "1",
+  "url": "sec-.html",
+  "type": "Section",
+  "number": "4.3",
+  "title": "Des billes et des urnes",
+  "body": "  Des billes et des urnes    On considères un certain nombre de billes, par exemple , que l'on veut placer dans un certain nombres de contenant, par exemple . De combien de manières différentes peut-on procéder?  La réponse à cette question n'est pas évidente, en partie parce que ce problème est mal formulé. Est-ce que les billes sont identiques ou différentes? De même, y a-t-il une différence entre les contenants ou s'ils sont considérés comme équivalent?  On peut de plus ajouter des contraintes à ce problème, notamment en exigeant que chaque contenant contienne au moins une bille ou encore au plus une bille. Plusieurs problèmes de dénombrement peuvent être décrits de manière équivalent à l'une de ces situations. En considérant toutes ces situations, cela mène à la catégorisation initialement introduite par le mathématicient Richard Stanley, en 1999, sous le nom du twelvefold way .    Douze cas à considérer  On imagine billes distinctes que l'on veut placer dans trois urnes tout aussi différentes. Voici quelques-unes des configuarations possibles.     Des billes différentes dans des urnes différentes - 1       Des billes différentes dans des urnes différentes - 2       Des billes différentes dans des urnes différentes - 3         Des billes différentes dans des urnes différentes - 4       Des billes différentes dans des urnes différentes - 5       Des billes différentes dans des urnes différentes - 6        Un exemple concret d'une telle situation pourrait être la distribution de tâches à accomplir par les membres d'une équipe. Chaque tâche doit être affectée à exactement une personne. Un exemple plus mathématique équivalent est celui des fonction d'un ensemble (les billes ou encore les tâches) vers un ensemble (les urnes ou encore les membres de l'équipe).  Une deuxième situation est celle où l'on ne distingue pas les billes, seulement les urnes. Toujours en gardant les cinq billes à distribuer à trois personnes, on peut voir que les situations et sont maintenant équivalent dans ce scénario. Concrètement, on peut imaginer devoir distribuer cinq morceaux d'une tablette de chocolat à trois enfants. Les morceaux sont identiques, mais pas les personnes qui les reçoivent. Mathématiquement, ce problème est équivalent à celui de trouver le nombre de solutions à l'équation .  Si au contraire les billes sont différentes, mais pas les urnes. Dans ce cas-ci, se sont maintenant les situations et qui sont équivalentes. Concrètement, on peut imaginer vouloir distribuer des personnes dans des équipes lors d'un cours d'éducation physique. Il n'y a pas de différence entre la « première » équipe, la « deuxième » équipe et ainsi de suite, seuls les membres de l'équipe sont importants. Mathématiquement, ce problème revient à compter le nombre de manière de placer les éléments d'un ensemble (les élèves de la classe) dans des sous-ensembles (les équipes) de sorte que chaque élément apparaissent exactement une fois.  Finalement, la dernière situation correspond au cas où les billes et les urnes sont identiques. On peut imaginer la confection de trois sacs d'Halloween à partir de cinq bonbons identiques. On pourrait tout placer les bonbons dans un seul sac (ce qui ne serait pas très apprécié du côté de deux des receveurs), en placer dans un sac et dans un autre et ainsi de suite. Mathématiquement, dans le problème , on distingue la solution de la solution . Et si on ne voulait pas faire cette distinction? C'est à cette question que correspond la situation des billes identiques et des urnes identiques.  En plus de chacune de ces situations, on peut ajouter des conditions supplémentaires, en imposant que chaque contenant contienne au moins une bille ou encore au plus une bille. Ceci mène au douze cas possible, résumé dans la table ci-dessous.   Des billes et des urnes - les douze cas    Billes  Urnes  Sans restriction  Au plus 1 bille par urne  Au moins une bille par urne    Différentes  Différentes          Identiques  Différentes          Différentes  Identiques          Identiques  Identiques             Des exemples  Voici une série d'exemples que l'on cherche à classer dans la table .   Des exemples de billes et urnes  Pour chacune des situations suivantes, on les classes dans la table . On suppose qu'on doit toujours essayer de placer les objets, mais que selon le problèmes des urnes pourraient être vides.  Quatre amis veulent se séparer en deux équipes afin de jouer à un jeu de société.  Une famille préparant les bagages pour un voyage doivent placer documents importants dans les valises. Afin d'éviter de se retrouver sans papiers en cas de vol ou perte, elle decide de placer les documents dans des valises différentes. La famille possède valises du même modèle.  Trois joueurs d'un jeu doivent se partager points de vie entre leur personnage en début de partie.  Une bibliothécaire commence sa journée en triant les livres retournés la veille. Pour s'aider, elle décide de placer les livres en piles.  La vie étudiante a organisé une chasse au trésor consistant à trouver dans le cégep jetons du carnaval. La personne en trouvant le plus remporte un prix. Deux amis décident de participer au concours.  Une personne a acheté un paquet de cinq ampoules afin de remplacer les cinq défectueuses à l'extérieur de sa maison.  Les quatre membres d'un comité doivent former deux sous-comités afin d'étudier des enjeux précis.  Un auteur veut sonder l'intéret pour de ses manuscrits. Pour cela, il fait lire les manuscrits à éditeurs pour obtenir leur avis.  Pour une fête d'enfants, un papa place huit palettes de chocolat Kit Kat dans trois sacs surprise à l'effigie de la reine des neiges.  Un chercheur doit attribuer huit heures de calculs à cinq ordinateurs de même puissance. Chaque ordinateur recevra au moins une heure de calcul.  Une maman veut placer quatre photos de famille prises à chacun des saison dans quatre albums souvenir identiques, en plaçant une photo par album.  Un fleuriste veut agencer sept roses rouges dans des vases identiques.  Une personne a acheté un paquet de huits ampoules afin de remplacer les cinq défectueuses à l'extérieur de sa maison.  Trois places sont disponibles pour des parents accompagnateurs lors d'une sortie scolaire. Cinq parents se sont montrés intéressés.  Un conseil d'administration lance un appel de candidatures pour combler les postes de président, trésorier et secrétaire. Cinq candidats ont manifesté leur intérêt pour les trois postes.  Une maman veut placer quatre photos de famille prises à chacun des saison dans quatre pièces de la maison, en plaçant une photo par pièce.     Pour chacune des situations, voici ce qui représentes les billes et les urnes, ainsi que la particularité de chaque problèmes.  Les amis représentent les billes (différentes) et les équipes sont l'équivalent des urnes (identiques). Chaque équipe doit avoir au moins un membre.  Les documents représentent les billes (différentes) et les valises sont représentes les urnes (identiques). On place au plus un document dans chaque valise.  Les points de vie représentent les billes (identiques) et les trois joueurs sont les urnes (différentes). On peut sous-entendre que chaque joueur recevra au moins un point de vie.  Les livres représentent les billes (différentes) et les piles sont les urnes (identiques). Il n'y a pas de restrictions sur les piles.  Les jetons correspondent aux billes (identiques) et les amis sont les urnes (différentes). Pas de restrictions sur le nombre de jetons par amis.  Les ampoules représentent les billes (identiques) et les emplacements défectueux les urnes (identiques). On doit avoir au plus une ampoule par emplacement.  Les membres du comités représentent les billes (différentes) et les sous-comités les urnes (différentes). Chaque sous-comités doit avoir au moins un membre.  Les manuscrits représentent les billes (différentes) et les éditeurs sont les urnes (différentes). Pas de restrictions dans la situation.  Les palettes de chocolat sont les billes (identiques) et les sacs sont les urnes (identiques). On peut supposer qu'il y aura au moins un chocolat par sac.  Chaque heure de calculs représente un bille (identique) et les ordinateurs sont les urnes (identiques). Au moins une heure de calculs par ordinateur.  Les photos de familles sont les billes (différentes) et les albums sont les urnes (identiques). On a au plus et au moins une photo par album.  Les roses sont les billes (identiques) et les vases sont les urnes (identiques). Pas de restrictions sur le nombre de fleurs par vase.  Les ampoules représentent les billes (identiques) et les emplacements défectueux les urnes (identiques). On doit avoir au plus une ampoule par emplacement.  Les places sont les billes (identiques) et les parents correspondent aux urnes (différentes). Au plus une place par parent.  Les postes à combler sont les billes (différentes) et les candidats sont les urnes (différentes). Il est plausible d'affirmer qu'on attribue au plus un poste par candidat.  Les photos de familles sont les billes (différentes) et les pièces sont les urnes (différentes). On a au plus et au moins une photo par pièce.    Voici une version remplie de la table avec les situations correspondantes.   Des billes et des urnes - exemples    Billes  Urnes  Sans restriction  Au plus 1 bille par urne  Au moins une bille par urne    Différentes  Différentes  8  15,16  7,16    Identiques  Différentes  5  14  3    Différentes  Identiques  4  2,11  1,11    Identiques  Identiques  12  6,13  9,10       Les nombres utilisés dans l'exemple précédent sont suffisament petits pour qu'il soit possible de considérer énumérer tous les cas possibles. On tente le coup avant d'essayer de trouver des formules générales pour chacun des douze cas.   Des exemples de billes et urnes - dénombrés  On énumère toutes les possibilités pour chacune des situations de l'exemple , sauf pour les situations .    On identifie les amis par les lettre . Voici la liste des sept équipes possibles:  et ;  et ;  et ;  et ;  et ;  et ;  et .   Comme les valises sont identiques, il n'y a qu'une seule possibilité, soit de placer les documents dans une valise.  Il y a trop de possibilités pour les énumérer.  La bibliothécaire pourrait décider de faire une seule pile avec les livres , deux piles, soit et , et ou et ou encore trois piles d'un seul livre. On dénombre donc possibilités.  Il y a six possibilités:  pour le premier ami avec les cinq jetons et le second avec aucun;  ;  ;  ;  ;  .    Comme tout est identique dans cette situation, il n'y a qu'une manière de procéder, soit de le faire.  Il y a possibilités dans cette situation. Si on dénote les sous-comités par et les membres par , on a les possibilités suivantes:  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  .    Il y a trop de possibilités pour les énumérer.  Il y a cinq possibilités. Chaque liste ci-dessous représente le nombre de palettes dans les sacs. Les nombres sont données arbitrairement dans l'ordre décroissant, mais les sacs sont identiques.  ;  ;  ;  ;  .    De manière semblable au cas précédent, on a  ;  ;  .   Il n'y a qu'une seule manière de le faire, c'est de placer les quatre photos dans les albums.  Il y a possibilités. Chaque liste ci-dessous représente le nombre de roses par vase. Les nombres sont données arbitrairement dans l'ordre décroissant, mais les vases sont identiques.  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  .    Ici, selon la restriction initiale qui demande de placer toutes les billes, c'est impossibles.  Il y a dix possibilités. Si l'on note les parents, alors ceux qui peuvent accompagner peuvent être:  ;  ;  ;  ;  ;  ;  ;  ;  ;  .  Les parents sont placés dans l'ordre alphabétique, mais il n'y a pas d'importance particulière à l'ordre de places.  Il y a trop de possibilités pour les enumérer.  Il y a possibilités. Si on note les photos par et leur position relative dans un arrangement de ces quatre lettres pour les pièces , alors on a  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  .        Le cas général pour certaines situations  Pour certaines des situations de la table , il est simple de déterminer une formule générale. Pour d'autre situations, il faudra y réfléchir plus longuement. Pour terminer cette section, on présente une discussion des cas plus simples à traiter. Pour tous les cas, on suppose que l'on a billes et urnes.  Le premier cas à considérer est celui des billes différentes et des urnes différentes, sans restrictions. Comme chaque bille peut être placée dans n'importe quelle des urnes, il suit du principe du produit qu'il y a possibilités. À noter que ce cas correspond au nombres de fonctions que l'on peut créer de l'ensemble des billes vers l'ensemble des urnes . La proposition offrait le même résultat. D'ailleurs, la seconde partie de cette propostion compte le nombre de fonctions injectives, qui correspond à l'entrée suivante de la table.  En effet, si les billes et les urnes sont différentes, mais qu'on permet au plus une bille par urne, alors cela revient à compter le nombre de fonctions injectives de vers . Si , alors il y a . La dernière entrée de la première ligne correspond aussi au nombres de fonctions de vers , cette fois-ci pour les fonctions surjectives. Tel que mentionné dans la section , ce cas est plus complexe à calculer et il faudra encore attendre pour y arriver.  Le prochain cas que l'on considère est celui des billes identiques et des urnes différentes, avec la restrictions d'au plus une bille par urnes. Comme les billes sont identiques, si , alors cela revient à choisir quelles urnes auront une billes. Ceci peut se faire de manières.  On considère ensuite le cas sans restrictions de cette rangée, soit les billes identiques dans les urnes différentes. Comme on l'a expliqué dans l'introduction, cela revient à trouver le nombre de solutions à l'équation . Selon la proposition , ce nombre est égal à .  Le cas où toutes les urnes doivent contenir au moins une bille dans cette ligne n'est pas si différent. Si l'on a assez de billes, comme celles-ci sont identiques, il suffit d'en placer une dans chaque urne et de placer le reste comme s'il n'y avait pas de restrictions. Donc, pour , il y aura .  On regarde ensuite le cas au plus une bille par urne des deux dernières rangées. Dans ces deux cas, les urnes sont indiscernables. Comme on veut que toutes les billes soient placées, deux choses peuvent se produire. Soit , auquel cas on peut placer une bille par urne (les urnes étant identiques il n'y a qu'une possibilité), soit , auquel cas on ne peut pas effectuer le placement.  Les quatre autres cas, en plus de la dernière entrée de la première ligne, vont demander un peu plus de réflexion.          Répondre à ces questions suite à la lecture du texte qui précède pour valider la compréhension.    Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative.      "
+},
+{
+  "id": "fig-cas221-1",
+  "level": "2",
+  "url": "sec-.html#fig-cas221-1",
+  "type": "Figure",
+  "number": "4.3.1",
+  "title": "",
+  "body": " Des billes différentes dans des urnes différentes - 1     "
+},
+{
+  "id": "fig-cas221-2",
+  "level": "2",
+  "url": "sec-.html#fig-cas221-2",
+  "type": "Figure",
+  "number": "4.3.2",
+  "title": "",
+  "body": " Des billes différentes dans des urnes différentes - 2     "
+},
+{
+  "id": "fig-cas311",
+  "level": "2",
+  "url": "sec-.html#fig-cas311",
+  "type": "Figure",
+  "number": "4.3.3",
+  "title": "",
+  "body": " Des billes différentes dans des urnes différentes - 3     "
+},
+{
+  "id": "fig-cas401",
+  "level": "2",
+  "url": "sec-.html#fig-cas401",
+  "type": "Figure",
+  "number": "4.3.4",
+  "title": "",
+  "body": " Des billes différentes dans des urnes différentes - 4     "
+},
+{
+  "id": "fig-cas050",
+  "level": "2",
+  "url": "sec-.html#fig-cas050",
+  "type": "Figure",
+  "number": "4.3.5",
+  "title": "",
+  "body": " Des billes différentes dans des urnes différentes - 5     "
+},
+{
+  "id": "fig-cas122",
+  "level": "2",
+  "url": "sec-.html#fig-cas122",
+  "type": "Figure",
+  "number": "4.3.6",
+  "title": "",
+  "body": " Des billes différentes dans des urnes différentes - 6     "
+},
+{
+  "id": "table-12foldvide",
+  "level": "2",
+  "url": "sec-.html#table-12foldvide",
+  "type": "Table",
+  "number": "4.3.7",
+  "title": "Des billes et des urnes - les douze cas",
+  "body": " Des billes et des urnes - les douze cas    Billes  Urnes  Sans restriction  Au plus 1 bille par urne  Au moins une bille par urne    Différentes  Différentes          Identiques  Différentes          Différentes  Identiques          Identiques  Identiques          "
+},
+{
+  "id": "ex-12fold",
+  "level": "2",
+  "url": "sec-.html#ex-12fold",
+  "type": "Exemple",
+  "number": "4.3.8",
+  "title": "Des exemples de billes et urnes.",
+  "body": " Des exemples de billes et urnes  Pour chacune des situations suivantes, on les classes dans la table . On suppose qu'on doit toujours essayer de placer les objets, mais que selon le problèmes des urnes pourraient être vides.  Quatre amis veulent se séparer en deux équipes afin de jouer à un jeu de société.  Une famille préparant les bagages pour un voyage doivent placer documents importants dans les valises. Afin d'éviter de se retrouver sans papiers en cas de vol ou perte, elle decide de placer les documents dans des valises différentes. La famille possède valises du même modèle.  Trois joueurs d'un jeu doivent se partager points de vie entre leur personnage en début de partie.  Une bibliothécaire commence sa journée en triant les livres retournés la veille. Pour s'aider, elle décide de placer les livres en piles.  La vie étudiante a organisé une chasse au trésor consistant à trouver dans le cégep jetons du carnaval. La personne en trouvant le plus remporte un prix. Deux amis décident de participer au concours.  Une personne a acheté un paquet de cinq ampoules afin de remplacer les cinq défectueuses à l'extérieur de sa maison.  Les quatre membres d'un comité doivent former deux sous-comités afin d'étudier des enjeux précis.  Un auteur veut sonder l'intéret pour de ses manuscrits. Pour cela, il fait lire les manuscrits à éditeurs pour obtenir leur avis.  Pour une fête d'enfants, un papa place huit palettes de chocolat Kit Kat dans trois sacs surprise à l'effigie de la reine des neiges.  Un chercheur doit attribuer huit heures de calculs à cinq ordinateurs de même puissance. Chaque ordinateur recevra au moins une heure de calcul.  Une maman veut placer quatre photos de famille prises à chacun des saison dans quatre albums souvenir identiques, en plaçant une photo par album.  Un fleuriste veut agencer sept roses rouges dans des vases identiques.  Une personne a acheté un paquet de huits ampoules afin de remplacer les cinq défectueuses à l'extérieur de sa maison.  Trois places sont disponibles pour des parents accompagnateurs lors d'une sortie scolaire. Cinq parents se sont montrés intéressés.  Un conseil d'administration lance un appel de candidatures pour combler les postes de président, trésorier et secrétaire. Cinq candidats ont manifesté leur intérêt pour les trois postes.  Une maman veut placer quatre photos de famille prises à chacun des saison dans quatre pièces de la maison, en plaçant une photo par pièce.     Pour chacune des situations, voici ce qui représentes les billes et les urnes, ainsi que la particularité de chaque problèmes.  Les amis représentent les billes (différentes) et les équipes sont l'équivalent des urnes (identiques). Chaque équipe doit avoir au moins un membre.  Les documents représentent les billes (différentes) et les valises sont représentes les urnes (identiques). On place au plus un document dans chaque valise.  Les points de vie représentent les billes (identiques) et les trois joueurs sont les urnes (différentes). On peut sous-entendre que chaque joueur recevra au moins un point de vie.  Les livres représentent les billes (différentes) et les piles sont les urnes (identiques). Il n'y a pas de restrictions sur les piles.  Les jetons correspondent aux billes (identiques) et les amis sont les urnes (différentes). Pas de restrictions sur le nombre de jetons par amis.  Les ampoules représentent les billes (identiques) et les emplacements défectueux les urnes (identiques). On doit avoir au plus une ampoule par emplacement.  Les membres du comités représentent les billes (différentes) et les sous-comités les urnes (différentes). Chaque sous-comités doit avoir au moins un membre.  Les manuscrits représentent les billes (différentes) et les éditeurs sont les urnes (différentes). Pas de restrictions dans la situation.  Les palettes de chocolat sont les billes (identiques) et les sacs sont les urnes (identiques). On peut supposer qu'il y aura au moins un chocolat par sac.  Chaque heure de calculs représente un bille (identique) et les ordinateurs sont les urnes (identiques). Au moins une heure de calculs par ordinateur.  Les photos de familles sont les billes (différentes) et les albums sont les urnes (identiques). On a au plus et au moins une photo par album.  Les roses sont les billes (identiques) et les vases sont les urnes (identiques). Pas de restrictions sur le nombre de fleurs par vase.  Les ampoules représentent les billes (identiques) et les emplacements défectueux les urnes (identiques). On doit avoir au plus une ampoule par emplacement.  Les places sont les billes (identiques) et les parents correspondent aux urnes (différentes). Au plus une place par parent.  Les postes à combler sont les billes (différentes) et les candidats sont les urnes (différentes). Il est plausible d'affirmer qu'on attribue au plus un poste par candidat.  Les photos de familles sont les billes (différentes) et les pièces sont les urnes (différentes). On a au plus et au moins une photo par pièce.    Voici une version remplie de la table avec les situations correspondantes.   Des billes et des urnes - exemples    Billes  Urnes  Sans restriction  Au plus 1 bille par urne  Au moins une bille par urne    Différentes  Différentes  8  15,16  7,16    Identiques  Différentes  5  14  3    Différentes  Identiques  4  2,11  1,11    Identiques  Identiques  12  6,13  9,10      "
+},
+{
+  "id": "sec--4-5",
+  "level": "2",
+  "url": "sec-.html#sec--4-5",
+  "type": "Exemple",
+  "number": "4.3.10",
+  "title": "Des exemples de billes et urnes - dénombrés.",
+  "body": " Des exemples de billes et urnes - dénombrés  On énumère toutes les possibilités pour chacune des situations de l'exemple , sauf pour les situations .    On identifie les amis par les lettre . Voici la liste des sept équipes possibles:  et ;  et ;  et ;  et ;  et ;  et ;  et .   Comme les valises sont identiques, il n'y a qu'une seule possibilité, soit de placer les documents dans une valise.  Il y a trop de possibilités pour les énumérer.  La bibliothécaire pourrait décider de faire une seule pile avec les livres , deux piles, soit et , et ou et ou encore trois piles d'un seul livre. On dénombre donc possibilités.  Il y a six possibilités:  pour le premier ami avec les cinq jetons et le second avec aucun;  ;  ;  ;  ;  .    Comme tout est identique dans cette situation, il n'y a qu'une manière de procéder, soit de le faire.  Il y a possibilités dans cette situation. Si on dénote les sous-comités par et les membres par , on a les possibilités suivantes:  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  .    Il y a trop de possibilités pour les énumérer.  Il y a cinq possibilités. Chaque liste ci-dessous représente le nombre de palettes dans les sacs. Les nombres sont données arbitrairement dans l'ordre décroissant, mais les sacs sont identiques.  ;  ;  ;  ;  .    De manière semblable au cas précédent, on a  ;  ;  .   Il n'y a qu'une seule manière de le faire, c'est de placer les quatre photos dans les albums.  Il y a possibilités. Chaque liste ci-dessous représente le nombre de roses par vase. Les nombres sont données arbitrairement dans l'ordre décroissant, mais les vases sont identiques.  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  .    Ici, selon la restriction initiale qui demande de placer toutes les billes, c'est impossibles.  Il y a dix possibilités. Si l'on note les parents, alors ceux qui peuvent accompagner peuvent être:  ;  ;  ;  ;  ;  ;  ;  ;  ;  .  Les parents sont placés dans l'ordre alphabétique, mais il n'y a pas d'importance particulière à l'ordre de places.  Il y a trop de possibilités pour les enumérer.  Il y a possibilités. Si on note les photos par et leur position relative dans un arrangement de ces quatre lettres pour les pièces , alors on a  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  .     "
+},
+{
+  "id": "rq-billesurnes-2",
+  "level": "2",
+  "url": "sec-.html#rq-billesurnes-2",
+  "type": "Question de compréhension",
+  "number": "4.3.4.1",
+  "title": "",
+  "body": " Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative.  "
+},
+{
   "id": "sec-combinatoireExoSupp",
   "level": "1",
   "url": "sec-combinatoireExoSupp.html",
   "type": "Section",
-  "number": "4.3",
+  "number": "4.4",
   "title": "Exercices supplémentaires",
   "body": "  Exercices supplémentaires          Exercices    À faire en classe  Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.   On a placé 16 cubes de couleur rouge, vert, bleu et orange en quatre colonnes tel qu'illustré ci-dessous. De combien de façons peut-on ramasser ces cubes, si on doit toujours ramasser un cube se trouvant au-dessus d'une colonne.   Disposition des cubes      Utiliser les lettres et pour représenter, respectivement, les cubes de couleur rouge, vert, bleu et orange. Utiliser ces lettres pour compter le nombre de façons de ramasser les cubes.       On considère l'ensemble . Combien de permutations de sont telles que les nombres sont en ordre croissant. Par exemple, et sont en ordre croissant, mais ne l'est pas.   .   Ici, on utilisera le principe du produit afin de résoudre le problème. On montrera ainsi qu'il existe  permutations de qui sont en ordre croissant. Avant de montrer la démarche, on fait quelques remarques, puisque la réponse à ce problème est parfois contre-intuitive. En effet, dans la question, on cherche le nombre de permutations de avec un ordre particulier. Il est donc tentant d'utiliser l'expression . Cependant, comme on veut uniquement les -permutations de qui ont un ordre particulier. On verra que ceci revient à choisir les objets sans considérer l'ordre.  On fait maintenant la démarche. On sépare la tâche en deux étapes. Tout d'abord, on choisit trois objets parmi les dix éléments de , et ensuite on les met en ordre croissant. On sait qu'il y a façons de choisir trois objets parmi dix. Par la suite, si on a trois éléments , il y a une seule façon de choisir l'ordre, car on doit nécessairement les mettre en ordre croissant! Par le principe du produit, il y a donc façons d'accomplir cette tâche.      On veut assoir huit personnes autour d'une table circulaire.    De combien de façons peut-on accomplir cette tâche si deux compositions sont équivalentes lorsque tout le monde a les mêmes voisins à gauche et à droite?   .          De combien de façons peut-on accomplir cette tâche si deux compositions sont équivalentes lorsque tout le monde a les mêmes voisins, peu importe qu'ils soient à gauche ou à droite?   .          On veut assoir personnes autour de deux tables circulaires. On peut assoir personnes à la première table, et les cinq autres à la seconde table. De combien de façons peut-on accomplir cette tâche si deux compositions sont équivalentes lorsque tout le monde a les mêmes voisins à gauche et à droite?  Commencer par choisir les personnes qui seront à la première table, et ensuite placer tout le monde sur les tables.      Combien de mots différents peut-on former à partir des lettres du mot ?     Parmi les mots formés à la première partie, combien d'entre eux ont tous les ensembles?     Parmi les mots formés à la première partie, combien d'entre eux ont tous les ensembles?     Parmi les mots formés à la première partie, combien d'entre eux ont tous les ensembles et tous les ensembles?     Parmi les mots formés à la première partie, combien d'entre eux ont tous les ensembles ou tous les ensembles?      De combien de façons peut-on placer livres différents sur quatre étagères?   Représenter un placement à l'aide des nombres à pour les livres et des barres pour séparer les étagères. Par exemple représente le placement avec les livres , et sur la première étagère, les livres et sur la deuxième étagère, les livres et sur la troisième étagère et les livres à sur la dernière.    Un palindrome est un mot qui est le même si on le lit à l'endroit que si on le lit à l'envers. Par exemple, est un palindrome.    Combien de palindromes de cinq lettres peut-on former avec les lettres de l'alphabet ?   Il suffit de choisir les trois premières lettres.  .     Combien de palindromes de six lettres peut-on former avec les lettres de l'alphabet ?   Il suffit de choisir les trois premières lettres.  .     Combien de palindromes de lettres peut-on former avec les lettres de l'alphabet ?   La réponse dépend de la parité de .  Si est pair, on pose . Si est impair, on pose . La réponse est alors .     Combien de palindromes de cinq lettres peut-on former avec les lettres de l'alphabet si chaque lettre ne peut pas être utilisée plus de deux fois?   .     On place huit points, notés de à sur un cercle à égale distance. Combien de triangles peut-on former à partir de ces points, tel qu'illustré sur la figure ci-dessous?   Un triangle dans un cercle       Il suffit de choisir trois points parmi les huit points pour former chaque triangle.      De combien de façons peut-on placer quatre billes noires (indiscernables) dans cinq urnes différentes?        Il faut compter le nombre de solutions à l'équation où .     Déterminer le coefficient du terme dans le développement de:                Un joueur de poker pige cinq cartes d'un paquet de cartes standard. Combien de mains différentes peut-il obtenir:   telles que les cinq cartes sont de la même sorte?     qui contiennent quatre as?     qui contiennent quatre cartes de la même valeur?     qui contiennent trois as et deux valets?     qui contiennent trois as et une paire?     qui contiennent deux paires (et une carte d'une troisième valeur)?      Déterminer le nombre de solutions entières à l'équation où   pour .     pour .     et .      Déterminer le nombre de solutions entières à l'équation où   pour .     pour .       Combien de solutions entières positives y a-t-il pour la paire d'équations       "
 },
@@ -3956,7 +4055,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-combinatoireExoSupp.html#exo-blocsAnagrammes",
   "type": "Exercice",
-  "number": "4.3.1",
+  "number": "4.4.1",
   "title": "",
   "body": " On a placé 16 cubes de couleur rouge, vert, bleu et orange en quatre colonnes tel qu'illustré ci-dessous. De combien de façons peut-on ramasser ces cubes, si on doit toujours ramasser un cube se trouvant au-dessus d'une colonne.   Disposition des cubes      Utiliser les lettres et pour représenter, respectivement, les cubes de couleur rouge, vert, bleu et orange. Utiliser ces lettres pour compter le nombre de façons de ramasser les cubes.     "
 },
@@ -3965,7 +4064,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-combinatoireExoSupp.html#exo-ordrePasOrdre",
   "type": "Exercice",
-  "number": "4.3.2",
+  "number": "4.4.2",
   "title": "",
   "body": " On considère l'ensemble . Combien de permutations de sont telles que les nombres sont en ordre croissant. Par exemple, et sont en ordre croissant, mais ne l'est pas.   .   Ici, on utilisera le principe du produit afin de résoudre le problème. On montrera ainsi qu'il existe  permutations de qui sont en ordre croissant. Avant de montrer la démarche, on fait quelques remarques, puisque la réponse à ce problème est parfois contre-intuitive. En effet, dans la question, on cherche le nombre de permutations de avec un ordre particulier. Il est donc tentant d'utiliser l'expression . Cependant, comme on veut uniquement les -permutations de qui ont un ordre particulier. On verra que ceci revient à choisir les objets sans considérer l'ordre.  On fait maintenant la démarche. On sépare la tâche en deux étapes. Tout d'abord, on choisit trois objets parmi les dix éléments de , et ensuite on les met en ordre croissant. On sait qu'il y a façons de choisir trois objets parmi dix. Par la suite, si on a trois éléments , il y a une seule façon de choisir l'ordre, car on doit nécessairement les mettre en ordre croissant! Par le principe du produit, il y a donc façons d'accomplir cette tâche.    "
 },
@@ -3974,7 +4073,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-combinatoireExoSupp.html#exo-combinatoireExoSupp-2-5",
   "type": "Exercice",
-  "number": "4.3.3",
+  "number": "4.4.3",
   "title": "",
   "body": " On veut assoir huit personnes autour d'une table circulaire.    De combien de façons peut-on accomplir cette tâche si deux compositions sont équivalentes lorsque tout le monde a les mêmes voisins à gauche et à droite?   .          De combien de façons peut-on accomplir cette tâche si deux compositions sont équivalentes lorsque tout le monde a les mêmes voisins, peu importe qu'ils soient à gauche ou à droite?   .        "
 },
@@ -3983,7 +4082,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-combinatoireExoSupp.html#exo-combinatoireExoSupp-2-6",
   "type": "Exercice",
-  "number": "4.3.4",
+  "number": "4.4.4",
   "title": "",
   "body": " On veut assoir personnes autour de deux tables circulaires. On peut assoir personnes à la première table, et les cinq autres à la seconde table. De combien de façons peut-on accomplir cette tâche si deux compositions sont équivalentes lorsque tout le monde a les mêmes voisins à gauche et à droite?  Commencer par choisir les personnes qui seront à la première table, et ensuite placer tout le monde sur les tables.   "
 },
@@ -3992,7 +4091,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-combinatoireExoSupp.html#exo-combinatoireExoSupp-2-7",
   "type": "Exercice",
-  "number": "4.3.5",
+  "number": "4.4.5",
   "title": "",
   "body": "  Combien de mots différents peut-on former à partir des lettres du mot ?     Parmi les mots formés à la première partie, combien d'entre eux ont tous les ensembles?     Parmi les mots formés à la première partie, combien d'entre eux ont tous les ensembles?     Parmi les mots formés à la première partie, combien d'entre eux ont tous les ensembles et tous les ensembles?     Parmi les mots formés à la première partie, combien d'entre eux ont tous les ensembles ou tous les ensembles?    "
 },
@@ -4001,7 +4100,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-combinatoireExoSupp.html#exo-combinatoireExoSupp-2-8",
   "type": "Exercice",
-  "number": "4.3.6",
+  "number": "4.4.6",
   "title": "",
   "body": " De combien de façons peut-on placer livres différents sur quatre étagères?   Représenter un placement à l'aide des nombres à pour les livres et des barres pour séparer les étagères. Par exemple représente le placement avec les livres , et sur la première étagère, les livres et sur la deuxième étagère, les livres et sur la troisième étagère et les livres à sur la dernière.  "
 },
@@ -4010,7 +4109,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-combinatoireExoSupp.html#exo-combinatoireExoSupp-2-9",
   "type": "Exercice",
-  "number": "4.3.7",
+  "number": "4.4.7",
   "title": "",
   "body": " Un palindrome est un mot qui est le même si on le lit à l'endroit que si on le lit à l'envers. Par exemple, est un palindrome.    Combien de palindromes de cinq lettres peut-on former avec les lettres de l'alphabet ?   Il suffit de choisir les trois premières lettres.  .     Combien de palindromes de six lettres peut-on former avec les lettres de l'alphabet ?   Il suffit de choisir les trois premières lettres.  .     Combien de palindromes de lettres peut-on former avec les lettres de l'alphabet ?   La réponse dépend de la parité de .  Si est pair, on pose . Si est impair, on pose . La réponse est alors .     Combien de palindromes de cinq lettres peut-on former avec les lettres de l'alphabet si chaque lettre ne peut pas être utilisée plus de deux fois?   .   "
 },
@@ -4019,7 +4118,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-combinatoireExoSupp.html#exo-combinatoireExoSupp-2-10",
   "type": "Exercice",
-  "number": "4.3.8",
+  "number": "4.4.8",
   "title": "",
   "body": " On place huit points, notés de à sur un cercle à égale distance. Combien de triangles peut-on former à partir de ces points, tel qu'illustré sur la figure ci-dessous?   Un triangle dans un cercle       Il suffit de choisir trois points parmi les huit points pour former chaque triangle.   "
 },
@@ -4028,7 +4127,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-combinatoireExoSupp.html#exo-combinatoireExoSupp-2-11",
   "type": "Exercice",
-  "number": "4.3.9",
+  "number": "4.4.9",
   "title": "",
   "body": " De combien de façons peut-on placer quatre billes noires (indiscernables) dans cinq urnes différentes?        Il faut compter le nombre de solutions à l'équation où .   "
 },
@@ -4037,7 +4136,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-combinatoireExoSupp.html#exo-combinatoireExoSupp-2-12",
   "type": "Exercice",
-  "number": "4.3.10",
+  "number": "4.4.10",
   "title": "",
   "body": " Déterminer le coefficient du terme dans le développement de:              "
 },
@@ -4046,7 +4145,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-combinatoireExoSupp.html#exo-combinatoireExoSupp-2-13",
   "type": "Exercice",
-  "number": "4.3.11",
+  "number": "4.4.11",
   "title": "",
   "body": " Un joueur de poker pige cinq cartes d'un paquet de cartes standard. Combien de mains différentes peut-il obtenir:   telles que les cinq cartes sont de la même sorte?     qui contiennent quatre as?     qui contiennent quatre cartes de la même valeur?     qui contiennent trois as et deux valets?     qui contiennent trois as et une paire?     qui contiennent deux paires (et une carte d'une troisième valeur)?    "
 },
@@ -4055,7 +4154,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-combinatoireExoSupp.html#exo-combinatoireExoSupp-2-14",
   "type": "Exercice",
-  "number": "4.3.12",
+  "number": "4.4.12",
   "title": "",
   "body": " Déterminer le nombre de solutions entières à l'équation où   pour .     pour .     et .    "
 },
@@ -4064,7 +4163,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-combinatoireExoSupp.html#exo-combinatoireExoSupp-2-15",
   "type": "Exercice",
-  "number": "4.3.13",
+  "number": "4.4.13",
   "title": "",
   "body": " Déterminer le nombre de solutions entières à l'équation où   pour .     pour .    "
 },
@@ -4073,7 +4172,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-combinatoireExoSupp.html#exo-combinatoireExoSupp-2-16",
   "type": "Exercice",
-  "number": "4.3.14",
+  "number": "4.4.14",
   "title": "",
   "body": " Combien de solutions entières positives y a-t-il pour la paire d'équations    "
 },
