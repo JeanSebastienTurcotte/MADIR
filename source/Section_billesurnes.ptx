@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Ce fichier constitue une section du livre                              -->
+<!--                                                                        -->
+<!--      Mathématiques discrètes : Intuition et rigueur                    -->
+<!--                                                                        -->
+<!-- Creative Commons Attribution Share Alike 4.0 International             -->
+<!-- CC-BY-4.0                                                              -->
+<!-- Jean-Sébastien Turcotte                                                -->
+
+<!-- Les sections sont divisées en quatre parties, en plus du titre. Les parties introduction et conclusion sont facultatives. Le texte de ceux-ci apparait respectivement avant et après les sections. Les exercices sont à la fin de la section -->
+
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec-">   <!-- Ajouter l'identifiant de la section après le - du xml:id -->
+    <title> Des billes et des urnes </title>
+    <introduction xml:id= "intro-billesurnes">  <!-- Ajouter le même identifiant de la section après le - du xml:id -->
+   <p>On considères un certain nombre de billes, par exemple <m>5</m>, que l'on veut placer dans un certain nombres de contenant, par exemple <m>3</m>. De combien de manières différentes peut-on procéder?</p>
+   <p>La réponse à cette question n'est pas évidente, en partie parce que ce problème est mal formulé. Est-ce que les billes sont identiques ou différentes? De même, y a-t-il une différence entre les contenants ou s'ils sont considérés comme équivalent?</p>
+   <p>On peut de plus ajouter des contraintes à ce problème, notamment en exigeant que chaque contenant contienne au moins une bille ou encore au plus une bille. Plusieurs problèmes de dénombrement peuvent être décrits de manière équivalente à l'une de ces situations. En considérant toutes ces situations, cela mène à la catégorisation initialement introduite par le mathématicient Richard Stanley, en 1999, sous le nom du <foreign>twelvefold way</foreign>.</p>
+   </introduction>
+    <subsection xml:id="ssec-12cas">
+    <title>Douze cas à considérer</title>
+    <p>On imagine <m>5</m> billes distinctes que l'on veut placer dans trois urnes tout aussi différentes. Voici quelques-unes des configuarations possibles.</p>
+    <sbsgroup width="30%">
+    <sidebyside>
+    <figure xml:id="fig-cas221-1">
+  <caption>Des billes différentes dans des urnes différentes - 1
+  </caption>
+  <image width="15%" xml:id="billesurnes-1">
+<latex-image >
+\begin{tikzpicture}[thick,scale=1]
+
+% Parameters
+\def\urnwidth{2}
+\def\urndist{3} % horizontal spacing between urns
+\def\hA{2.5}
+\def\hB{3.5}
+\def\hC{1}
+
+% --- Urne 1 ---
+\draw (0,\hA) -- (0,0) -- (\urnwidth,0) -- (\urnwidth,\hA) -- (\urnwidth,0);
+% Balls
+\node[circle,draw,fill=white,minimum size=15pt,inner sep=0pt,font=\small] at (0.6,0.5) {A};
+\node[circle,draw,fill=white,minimum size=15pt,inner sep=0pt,font=\small] at (1.4,0.5) {B};
+% Label
+\node[below] at (1,0) {Urne 1};
+% --- Urne 2 ---
+\begin{scope}[xshift=\urndist cm]
+  \draw (0,\hB) -- (0,0) -- (\urnwidth,0) -- (\urnwidth,\hB) -- (\urnwidth,0);
+  \node[circle,draw,fill=white,minimum size=15pt,inner sep=0pt,font=\small] at (0.6,0.7) {C};
+  \node[circle,draw,fill=white,minimum size=15pt,inner sep=0pt,font=\small] at (1.4,0.7) {D};
+  \node[below] at (1,0) {Urne 2};
+\end{scope}
+
+% --- Urne 3 ---
+\begin{scope}[xshift=2*\urndist cm]
+  \draw (0,\hC) -- (0,0) -- (\urnwidth,0) -- (\urnwidth,\hC) -- (\urnwidth,0);
+  \node[circle,draw,fill=white,minimum size=15pt,inner sep=0pt,font=\small] at (1,0.5) {E};
+  \node[below] at (1,0) {Urne 3};
+\end{scope}
+
+\end{tikzpicture}
+</latex-image>
+  </image>
+</figure>
+<figure xml:id="fig-cas221-2">
+  <caption>Des billes différentes dans des urnes différentes - 2
+  </caption>
+  <image width="15%" xml:id="billesurnes-2">
+<latex-image >
+\begin{tikzpicture}[thick,scale=1]
+
+% Parameters
+\def\urnwidth{2}
+\def\urndist{3} % horizontal spacing between urns
+\def\hA{2.5}
+\def\hB{3.5}
+\def\hC{1}
+
+% --- Urne 1 ---
+\draw (0,\hA) -- (0,0) -- (\urnwidth,0) -- (\urnwidth,\hA) -- (\urnwidth,0);
+% Balls
+\node[circle,draw,fill=white,minimum size=15pt,inner sep=0pt,font=\small] at (0.6,0.5) {E};
+\node[circle,draw,fill=white,minimum size=15pt,inner sep=0pt,font=\small] at (1.4,0.5) {B};
+% Label
+\node[below] at (1,0) {Urne 1};
+% --- Urne 2 ---
+\begin{scope}[xshift=\urndist cm]
+  \draw (0,\hB) -- (0,0) -- (\urnwidth,0) -- (\urnwidth,\hB) -- (\urnwidth,0);
+  \node[circle,draw,fill=white,minimum size=15pt,inner sep=0pt,font=\small] at (0.6,0.7) {C};
+  \node[circle,draw,fill=white,minimum size=15pt,inner sep=0pt,font=\small] at (1.4,0.7) {A};
+  \node[below] at (1,0) {Urne 2};
+\end{scope}
+
+% --- Urne 3 ---
+\begin{scope}[xshift=2*\urndist cm]
+  \draw (0,\hC) -- (0,0) -- (\urnwidth,0) -- (\urnwidth,\hC) -- (\urnwidth,0);
+  \node[circle,draw,fill=white,minimum size=15pt,inner sep=0pt,font=\small] at (1,0.5) {D};
+  \node[below] at (1,0) {Urne 3};
+\end{scope}
+
+\end{tikzpicture}
+</latex-image>
+  </image>
+</figure>
+<figure xml:id="fig-cas311">
+  <caption>Des billes différentes dans des urnes différentes - 3
+  </caption>
+  <image width="15%" xml:id="billesurnes-3">
+<latex-image >
+\begin{tikzpicture}[thick,scale=1]
+
+% Parameters
+\def\urnwidth{2}
+\def\urndist{3} % horizontal spacing between urns
+\def\hA{2.5}
+\def\hB{3.5}
+\def\hC{1}
+
+% --- Urne 1 ---
+\draw (0,\hA) -- (0,0) -- (\urnwidth,0) -- (\urnwidth,\hA) -- (\urnwidth,0);
+% Balls
+\node[circle,draw,fill=white,minimum size=15pt,inner sep=0pt,font=\small] at (0.6,0.5) {E};
+ \node[circle,draw,fill=white,minimum size=15pt,inner sep=0pt,font=\small] at (0.6,1.8) {C};
+\node[circle,draw,fill=white,minimum size=15pt,inner sep=0pt,font=\small] at (1.4,0.5) {B};
+% Label
+\node[below] at (1,0) {Urne 1};
+% --- Urne 2 ---
+\begin{scope}[xshift=\urndist cm]
+  \draw (0,\hB) -- (0,0) -- (\urnwidth,0) -- (\urnwidth,\hB) -- (\urnwidth,0);
+  \node[circle,draw,fill=white,minimum size=15pt,inner sep=0pt,font=\small] at (1,0.7) {A};
+  \node[below] at (1,0) {Urne 2};
+\end{scope}
+
+% --- Urne 3 ---
+\begin{scope}[xshift=2*\urndist cm]
+  \draw (0,\hC) -- (0,0) -- (\urnwidth,0) -- (\urnwidth,\hC) -- (\urnwidth,0);
+  \node[circle,draw,fill=white,minimum size=15pt,inner sep=0pt,font=\small] at (1,0.5) {D};
+  \node[below] at (1,0) {Urne 3};
+\end{scope}
+
+\end{tikzpicture}
+</latex-image>
+  </image>
+</figure>
+</sidebyside>
+<sidebyside>
+    <figure xml:id="fig-cas401">
+  <caption>Des billes différentes dans des urnes différentes - 4
+  </caption>
+  <image width="15%" xml:id="billesurnes-4">
+<latex-image >
+\begin{tikzpicture}[thick,scale=1]
+
+% Parameters
+\def\urnwidth{2}
+\def\urndist{3} % horizontal spacing between urns
+\def\hA{2.5}
+\def\hB{3.5}
+\def\hC{1}
+
+% --- Urne 1 ---
+\draw (0,\hA) -- (0,0) -- (\urnwidth,0) -- (\urnwidth,\hA) -- (\urnwidth,0);
+% Balls
+\node[circle,draw,fill=white,minimum size=15pt,inner sep=0pt,font=\small] at (0.6,0.5) {A};
+\node[circle,draw,fill=white,minimum size=15pt,inner sep=0pt,font=\small] at (1.4,0.5) {B};
+  \node[circle,draw,fill=white,minimum size=15pt,inner sep=0pt,font=\small] at (0.6,1.7) {C};
+  \node[circle,draw,fill=white,minimum size=15pt,inner sep=0pt,font=\small] at (1.4,1.7) {D};
+% Label
+\node[below] at (1,0) {Urne 1};
+% --- Urne 2 ---
+\begin{scope}[xshift=\urndist cm]
+  \draw (0,\hB) -- (0,0) -- (\urnwidth,0) -- (\urnwidth,\hB) -- (\urnwidth,0);
+  \node[below] at (1,0) {Urne 2};
+\end{scope}
+
+% --- Urne 3 ---
+\begin{scope}[xshift=2*\urndist cm]
+  \draw (0,\hC) -- (0,0) -- (\urnwidth,0) -- (\urnwidth,\hC) -- (\urnwidth,0);
+  \node[circle,draw,fill=white,minimum size=15pt,inner sep=0pt,font=\small] at (1,0.5) {E};
+  \node[below] at (1,0) {Urne 3};
+\end{scope}
+
+\end{tikzpicture}
+</latex-image>
+  </image>
+</figure>
+<figure xml:id="fig-cas050">
+  <caption>Des billes différentes dans des urnes différentes - 5
+  </caption>
+  <image width="15%" xml:id="billesurnes-5">
+<latex-image >
+\begin{tikzpicture}[thick,scale=1]
+
+% Parameters
+\def\urnwidth{2}
+\def\urndist{3} % horizontal spacing between urns
+\def\hA{2.5}
+\def\hB{3.5}
+\def\hC{1}
+
+% --- Urne 1 ---
+\draw (0,\hA) -- (0,0) -- (\urnwidth,0) -- (\urnwidth,\hA) -- (\urnwidth,0);
+% Balls
+% Label
+\node[below] at (1,0) {Urne 1};
+% --- Urne 2 ---
+\begin{scope}[xshift=\urndist cm]
+  \draw (0,\hB) -- (0,0) -- (\urnwidth,0) -- (\urnwidth,\hB) -- (\urnwidth,0);
+  \node[circle,draw,fill=white,minimum size=15pt,inner sep=0pt,font=\small] at (0.6,0.7) {C};
+  \node[circle,draw,fill=white,minimum size=15pt,inner sep=0pt,font=\small] at (1.4,0.7) {A};
+    \node[circle,draw,fill=white,minimum size=15pt,inner sep=0pt,font=\small] at (1,2.5) {D};
+  \node[circle,draw,fill=white,minimum size=15pt,inner sep=0pt,font=\small] at (0.6,1.5) {E};
+\node[circle,draw,fill=white,minimum size=15pt,inner sep=0pt,font=\small] at (1.4,1.5) {B};
+  \node[below] at (1,0) {Urne 2};
+\end{scope}
+
+% --- Urne 3 ---
+\begin{scope}[xshift=2*\urndist cm]
+  \draw (0,\hC) -- (0,0) -- (\urnwidth,0) -- (\urnwidth,\hC) -- (\urnwidth,0);
+  \node[below] at (1,0) {Urne 3};
+\end{scope}
+
+\end{tikzpicture}
+</latex-image>
+  </image>
+</figure>
+<figure xml:id="fig-cas122">
+  <caption>Des billes différentes dans des urnes différentes - 6
+  </caption>
+  <image width="15%" xml:id="billesurnes-6">
+<latex-image >
+\begin{tikzpicture}[thick,scale=1]
+
+% Parameters
+\def\urnwidth{2}
+\def\urndist{3} % horizontal spacing between urns
+\def\hA{2.5}
+\def\hB{3.5}
+\def\hC{1}
+
+% --- Urne 1 ---
+\draw (0,\hA) -- (0,0) -- (\urnwidth,0) -- (\urnwidth,\hA) -- (\urnwidth,0);
+% Balls
+\node[circle,draw,fill=white,minimum size=15pt,inner sep=0pt,font=\small] at (0.6,0.5) {E};
+<!-- \node[circle,draw,fill=white,minimum size=15pt,inner sep=0pt,font=\small] at (0.6,1.8) {C};-->
+<!--\node[circle,draw,fill=white,minimum size=15pt,inner sep=0pt,font=\small] at (1.4,0.5) {B};-->
+% Label
+\node[below] at (1,0) {Urne 1};
+% --- Urne 2 ---
+\begin{scope}[xshift=\urndist cm]
+  \draw (0,\hB) -- (0,0) -- (\urnwidth,0) -- (\urnwidth,\hB) -- (\urnwidth,0);
+  \node[circle,draw,fill=white,minimum size=15pt,inner sep=0pt,font=\small] at (0.6 ,0.7) {A};
+    \node[circle,draw,fill=white,minimum size=15pt,inner sep=0pt,font=\small] at (1.4,0.7) {B};
+  \node[below] at (1,0) {Urne 2};
+\end{scope}
+
+% --- Urne 3 ---
+\begin{scope}[xshift=2*\urndist cm]
+  \draw (0,\hC) -- (0,0) -- (\urnwidth,0) -- (\urnwidth,\hC) -- (\urnwidth,0);
+ \node[circle,draw,fill=white,minimum size=15pt,inner sep=0pt,font=\small] at (0.6,0.5) {C};
+\node[circle,draw,fill=white,minimum size=15pt,inner sep=0pt,font=\small] at (1.4,0.5) {D};
+  \node[below] at (1,0) {Urne 3};
+\end{scope}
+
+\end{tikzpicture}
+</latex-image>
+  </image>
+</figure>
+</sidebyside>
+</sbsgroup>
+<p>Un exemple concret d'une telle situation pourrait être la distribution de tâches à accomplir par les membres d'une équipe. Chaque tâche doit être affectée à exactement une personne. Un exemple plus mathématique équivalent est celui des fonction d'un ensemble <m>A</m> (les billes ou encore les tâches) vers un ensemble <m>B</m> (les urnes ou encore les membres de l'équipe).</p>
+<p>Une deuxième situation est celle où l'on ne distingue pas les billes, seulement les urnes. Toujours en gardant les cinq billes à distribuer à trois personnes, on peut voir que les situations <xref ref="fig-cas221-1"/> et <xref ref="fig-cas221-2"/> sont maintenant équivalentes dans ce scénario. Concrètement, on peut imaginer devoir distribuer cinq morceaux d'une tablette de chocolat à trois enfants. Les morceaux sont identiques, mais pas les personnes qui les reçoivent. Mathématiquement, ce problème est équivalent à celui de trouver le nombre de solutions à l'équation <m>x_1+x_2+x_3=5</m>.</p>
+<p>Si au contraire les billes sont différentes, mais pas les urnes. Dans ce cas-ci, se sont maintenant les situations <xref ref="fig-cas221-1"/> et <xref ref="fig-cas122"/> qui sont équivalentes. Concrètement, on peut imaginer vouloir distribuer des personnes dans des équipes lors d'un cours d'éducation physique. Il n'y a pas de différence entre la &#x00AB; première &#x00BB; équipe, la &#x00AB; deuxième &#x00BB; équipe et ainsi de suite, seuls les membres de l'équipe sont importants. Mathématiquement, ce problème revient à compter le nombre de manières de placer les éléments d'un ensemble (les élèves de la classe) dans des sous-ensembles (les équipes) de sorte que chaque élément apparaissent exactement une fois.  </p>
+<p>Finalement, la dernière situation correspond au cas où les billes et les urnes sont identiques. On peut imaginer la confection de trois sacs d'Halloween à partir de cinq bonbons identiques. On pourrait tout placer les bonbons dans un seul sac (ce qui ne serait pas très apprécié du côté de deux des receveurs), en placer <m>4</m> dans un sac et <m>1</m> dans un autre et ainsi de suite. Mathématiquement, dans le problème <m>x_1+x_2+x_3=5</m>, on distingue la solution <m>x_1=1,x_2=2,x_3=2</m> de la solution <m>x_1=2,x_2=1,x_3=2</m>. Et si on ne voulait pas faire cette distinction? C'est à cette question que correspond la situation des billes identiques et des urnes identiques.</p>
+
+<p>En plus de chacune de ces situations, on peut ajouter des conditions supplémentaires, en imposant que chaque contenant contienne au moins une bille ou encore au plus une bille. Ceci mène au douze cas possible, résumés dans la table ci-dessous.</p>
+<table xml:id="table-12foldvide">
+  <title>Des billes et des urnes - les douze cas</title>
+  <tabular top="medium">
+    <row bottom="medium">
+      <cell left="medium" right="medium">
+        Billes
+      </cell>
+      <cell right="medium">
+        Urnes
+      </cell>
+      <cell right="medium">
+        Sans restriction
+      </cell>
+      <cell right="medium">
+        Au plus 1 bille par urne
+      </cell>
+      <cell right="medium">
+        Au moins une bille par urne
+      </cell>
+    </row>
+    <row bottom="medium">
+      <cell left="medium" right="medium">
+        Différentes
+      </cell>
+      <cell right="medium">
+        Différentes
+      </cell>
+      <cell right="medium">
+      </cell>
+      <cell right="medium">
+      </cell>
+      <cell right="medium">
+      </cell>
+    </row>
+    <row bottom="medium">
+      <cell left="medium" right="medium">
+        Identiques
+      </cell>
+      <cell right="medium">
+        Différentes
+      </cell>
+      <cell right="medium">
+      </cell>
+      <cell right="medium">
+      </cell>
+      <cell right="medium">
+      </cell>
+    </row>
+    <row bottom="medium">
+      <cell left="medium" right="medium">
+        Différentes
+      </cell>
+      <cell right="medium">
+        Identiques
+      </cell>
+      <cell right="medium">
+      </cell>
+      <cell right="medium">
+      </cell>
+      <cell right="medium">
+      </cell>
+    </row>
+    <row bottom="medium">
+      <cell left="medium" right="medium">
+        Identiques
+      </cell>
+      <cell right="medium">
+        Identiques
+      </cell>
+      <cell right="medium">
+      </cell>
+      <cell right="medium">
+      </cell>
+      <cell right="medium">
+      </cell>
+    </row>
+  </tabular>
+</table>
+    </subsection>
+    <subsection>
+    <title>Des exemples</title>
+    <p>Voici une série d'exemples que l'on cherche à classer dans la table <xref ref="table-12foldvide"/>.</p>
+    <example xml:id="ex-12fold">
+    <title>Des exemples de billes et urnes</title>
+    <statement><p>Pour chacune des situations suivantes, on les classes dans la table <xref ref="table-12foldvide"/>. On suppose qu'on doit toujours essayer de placer les objets, mais que selon le problèmes des urnes pourraient être vides.
+    <ol>
+    <li><p>Quatre amis veulent se séparer en deux équipes afin de jouer à un jeu de société.</p></li>
+    <li><p>Une famille préparant les bagages pour un voyage doivent placer <m>3</m> documents importants dans les valises. Afin d'éviter de se retrouver sans papiers en cas de vol ou perte, elle decide de placer les documents dans des valises différentes. La famille possède <m>5</m> valises du même modèle. </p></li>
+    <li><p>Trois joueurs d'un jeu doivent se partager <m>14</m> points de vie entre leur personnage en début de partie.</p></li>
+    <li><p>Une bibliothécaire commence sa journée en triant les livres retournés la veille. Pour s'aider, elle décide de placer les <m>3</m> livres en piles.</p></li>
+    <li><p>La vie étudiante a organisé une chasse au trésor consistant à trouver dans le cégep <m>5</m> jetons du carnaval. La personne en trouvant le plus remporte un prix. Deux amis décident de participer au concours.</p></li>
+    <li><p>Une personne a acheté un paquet de cinq ampoules afin de remplacer les cinq défectueuses à l'extérieur de sa maison.</p></li>
+    <li><p>Les quatre membres d'un comité doivent former deux sous-comités afin d'étudier des enjeux précis.</p></li>
+    <li><p>Un auteur veut sonder l'intéret pour <m>5</m> de ses manuscrits. Pour cela, il fait lire les manuscrits à <m>3</m> éditeurs pour obtenir leur avis.</p></li>
+    <li><p>Pour une fête d'enfants, un papa place huit palettes de chocolat Kit Kat dans trois sacs surprise à l'effigie de la reine des neiges.</p></li>
+    <li><p>Un chercheur doit attribuer huit heures de calculs à cinq ordinateurs de même puissance. Chaque ordinateur recevra au moins une heure de calcul.</p></li>   
+    <li><p>Une maman veut placer quatre photos de famille prises à chacun des saison dans  quatre albums souvenir identiques, en plaçant une photo par album.</p></li>
+    <li><p>Un fleuriste veut agencer sept roses rouges dans des vases identiques.</p></li>
+    <li><p>Une personne a acheté un paquet de huits ampoules afin de remplacer les cinq défectueuses à l'extérieur de sa maison.</p></li>
+    <li><p>Trois places sont disponibles pour des parents accompagnateurs lors d'une sortie scolaire. Cinq parents se sont montrés intéressés.</p></li>
+    <li><p>Un conseil d'administration lance un appel de candidatures pour combler les postes de président, trésorier et secrétaire. Cinq candidats ont manifesté leur intérêt pour les trois postes.</p></li>
+    <li><p>Une maman veut placer quatre photos de famille prises à chacun des saison dans  quatre pièces de la maison, en plaçant une photo par pièce.</p></li>
+    </ol>
+    </p></statement>
+    <solution>
+    <p>Pour chacune des situations, voici ce qui représentes les billes et les urnes, ainsi que la particularité de chaque problèmes.
+    <ol>
+    <li><p>Les amis représentent les billes (différentes) et les équipes sont l'équivalent des urnes (identiques). Chaque équipe doit avoir au moins un membre.</p></li>
+    <li><p>Les documents représentent les billes (différentes) et les valises sont représentes les urnes (identiques). On place au plus un document dans chaque valise.</p></li>
+    <li><p>Les points de vie représentent les billes (identiques) et les trois joueurs sont les urnes (différentes). On peut sous-entendre que chaque joueur recevra au moins un point de vie.</p></li>
+    <li><p>Les livres représentent les billes (différentes) et les piles sont les urnes (identiques). Il n'y a pas de restrictions sur les piles.</p></li>
+    <li><p>Les jetons correspondent aux billes (identiques) et les amis sont les urnes (différentes). Pas de restrictions sur le nombre de jetons par amis.</p></li>
+    <li><p>Les ampoules représentent les billes (identiques) et les emplacements défectueux les urnes (identiques). On doit avoir au plus une ampoule par emplacement. </p></li>
+    <li><p>Les membres du comités représentent les billes (différentes) et les sous-comités les urnes (différentes). Chaque sous-comités doit avoir au moins un membre.</p></li>
+    <li><p>Les manuscrits représentent les billes (différentes) et les éditeurs sont les urnes (différentes). Pas de restrictions dans la situation. </p></li>
+    <li><p>Les palettes de chocolat sont les billes (identiques) et les sacs sont les urnes (identiques). On peut supposer qu'il y aura au moins un chocolat par sac.</p></li>
+    <li><p>Chaque heure de calculs représente un bille (identique) et les ordinateurs sont les urnes (identiques). Au moins une heure de calculs par ordinateur.</p></li>
+    <li><p>Les photos de familles sont les billes (différentes) et les albums sont les urnes (identiques). On a au plus et au moins une photo par album.</p></li>
+    <li><p>Les roses sont les billes (identiques) et les vases sont les urnes (identiques). Pas de restrictions sur le nombre de fleurs par vase.</p></li>
+    <li><p>Les ampoules représentent les billes (identiques) et les emplacements défectueux les urnes (identiques). On doit avoir au plus une ampoule par emplacement. </p></li>
+    <li><p>Les places sont les billes (identiques) et les parents correspondent aux urnes (différentes). Au plus une place par parent. </p></li>
+    <li><p>Les postes à combler sont les billes (différentes) et les candidats sont les urnes (différentes). Il est plausible d'affirmer qu'on attribue au plus un poste par candidat.</p></li>
+    <li><p>Les photos de familles sont les billes (différentes) et les pièces sont les urnes (différentes). On a au plus et au moins une photo par pièce.</p></li>
+    </ol>
+    </p>
+    <p>Voici une version remplie de la table avec les situations correspondantes.</p>
+    <table>
+  <title>Des billes et des urnes - exemples</title>
+  <tabular top="medium">
+    <row bottom="medium">
+      <cell left="medium" right="medium">
+        Billes
+      </cell>
+      <cell right="medium">
+        Urnes
+      </cell>
+      <cell right="medium">
+        Sans restriction
+      </cell>
+      <cell right="medium">
+        Au plus 1 bille par urne
+      </cell>
+      <cell right="medium">
+        Au moins une bille par urne
+      </cell>
+    </row>
+    <row bottom="medium">
+      <cell left="medium" right="medium">
+        Différentes
+      </cell>
+      <cell right="medium">
+        Différentes
+      </cell>
+      <cell right="medium">
+        8
+      </cell>
+      <cell right="medium">
+        15,16
+      </cell>
+      <cell right="medium">
+        7,16
+      </cell>
+    </row>
+    <row bottom="medium">
+      <cell left="medium" right="medium">
+        Identiques
+      </cell>
+      <cell right="medium">
+        Différentes
+      </cell>
+      <cell right="medium">
+        5
+      </cell>
+      <cell right="medium">
+        14
+      </cell>
+      <cell right="medium">
+        3
+      </cell>
+    </row>
+    <row bottom="medium">
+      <cell left="medium" right="medium">
+        Différentes
+      </cell>
+      <cell right="medium">
+        Identiques
+      </cell>
+      <cell right="medium">
+        4
+      </cell>
+      <cell right="medium">
+        2,11
+      </cell>
+      <cell right="medium">
+        1,11
+      </cell>
+    </row>
+    <row bottom="medium">
+      <cell left="medium" right="medium">
+        Identiques
+      </cell>
+      <cell right="medium">
+        Identiques
+      </cell>
+      <cell right="medium">
+        12
+      </cell>
+      <cell right="medium">
+        6,13
+      </cell>
+      <cell right="medium">
+        9,10
+      </cell>
+    </row>
+  </tabular>
+</table>
+    </solution>
+    </example>
+    <p>Les nombres utilisés dans l'exemple précédent sont suffisament petits pour qu'il soit possible de considérer énumérer tous les cas possibles. On tente le coup avant d'essayer de trouver des formules générales pour chacun des douze cas.</p>
+    <example>
+    <title>Des exemples de billes et urnes - dénombrés</title>
+    <statement><p>On énumère toutes les possibilités pour chacune des situations de l'exemple <xref ref="ex-12fold"/>, sauf pour les situations <m>3,8,15</m>.</p></statement>
+    <solution>
+    <p><ol>
+    <li><p>On identifie les amis par les lettre <m>A,B,C,D</m>. Voici la liste des sept équipes possibles: 
+    <ol>
+    <li><p><m>\{A,B,C\}</m> et <m>\{D\}</m>;</p></li>
+     <li><p><m>\{A,B,D\}</m> et <m>\{C\}</m>;</p></li>
+     <li><p><m>\{A,C,D\}</m> et <m>\{B\}</m>;</p></li>
+     <li><p><m>\{B,C,D\}</m> et <m>\{A\}</m>;</p></li>
+     <li><p><m>\{A,B\}</m> et <m>\{C,D\}</m>;</p></li>
+     <li><p><m>\{A,C\}</m> et <m>\{B,D\}</m>;</p></li>
+     <li><p><m>\{B,C\}</m> et <m>\{A,D\}</m>.</p></li>
+    </ol></p></li>
+    <li><p>Comme les valises sont identiques, il n'y a qu'une seule possibilité, soit de placer les documents dans une valise.</p></li>
+    <li><p>Il y a trop de possibilités pour les énumérer.</p></li>
+    <li><p>La bibliothécaire pourrait décider de faire une seule pile avec les livres <m>A,B,C</m>, deux piles, soit <m>A,B</m> et <m>C</m>, <m>A,C</m> et <m>B</m> ou <m>B,C</m> et <m>A</m> ou encore trois piles d'un seul livre. On dénombre donc <m>5</m> possibilités.</p></li>
+    <li><p>Il y a six possibilités: 
+    <ol>
+    <li><p><m>A5,B0</m> pour le premier ami avec les cinq jetons et le second avec aucun;</p></li>
+    <li><p><m>A4,B1</m>;</p></li>
+    <li><p><m>A3,B2</m>;</p></li>
+    <li><p><m>A2,B3</m>;</p></li>
+    <li><p><m>A1,B4</m>;</p></li>
+    <li><p><m>A0,B5</m>.</p></li>
+    </ol>
+    </p></li>
+    <li><p>Comme tout est identique dans cette situation, il n'y a qu'une manière de procéder, soit de le faire.</p></li>
+    <li><p>Il y a <m>14</m> possibilités dans cette situation. Si on dénote les sous-comités par <m>SC1,SC2</m> et les membres par <m>A,B,C,D</m>, on a les possibilités suivantes:
+    <ol>
+    <li><p><m>SC1=\{A\},SC2=\{B,C,D\}</m>;</p></li>
+    <li><p><m>SC1=\{B,C,D\},SC2=\{A\}</m>;</p></li>
+    <li><p><m>SC1=\{B\},SC2=\{A,C,D\}</m>;</p></li>
+    <li><p><m>SC1=\{A,C,D\},SC2=\{B\}</m>;</p></li>
+    <li><p><m>SC1=\{C\},SC2=\{A,B,D\}</m>;</p></li>
+    <li><p><m>SC1=\{A,B,D\},SC2=\{C\}</m>;</p></li>
+    <li><p><m>SC1=\{D\},SC2=\{A,B,C\}</m>;</p></li>
+    <li><p><m>SC1=\{A,B,C\},SC2=\{D\}</m>;</p></li>
+    <li><p><m>SC1=\{A,B\},SC2=\{C,D\}</m>;</p></li>
+    <li><p><m>SC1=\{C,D\},SC2=\{A,B\}</m>;</p></li>
+    <li><p><m>SC1=\{A,C\},SC2=\{B,D\}</m>;</p></li>
+    <li><p><m>SC1=\{B,D\},SC2=\{A,C\}</m>;</p></li>
+    <li><p><m>SC1=\{A,D\},SC2=\{B,C\}</m>;</p></li>
+    <li><p><m>SC1=\{B,C\},SC2=\{A,D\}</m>.</p></li>
+    </ol>
+    </p></li>
+    <li><p>Il y a trop de possibilités pour les énumérer.</p></li>
+    <li><p>Il y a cinq possibilités. Chaque liste ci-dessous représente le nombre de palettes dans les sacs. Les nombres sont données arbitrairement dans l'ordre décroissant, mais les sacs sont identiques.
+    <ol>
+    <li><p><m>6,1,1</m>;</p></li>
+    <li><p><m>5,2,1</m>;</p></li>
+    <li><p><m>4,3,1</m>;</p></li>
+    <li><p><m>4,2,2</m>;</p></li>
+    <li><p><m>3,3,2</m>.</p></li>
+    </ol>
+    </p></li>
+    <li><p>De manière semblable au cas précédent, on a
+    <ol>
+    <li><p><m>4,1,1,1,1</m>;</p></li>
+    <li><p><m>3,2,1,1,1</m>;</p></li>
+    <li><p><m>2,2,2,1,1</m>.</p></li>
+    </ol></p></li>
+    <li><p>Il n'y a qu'une seule manière de le faire, c'est de placer les quatre photos dans les albums.</p></li>
+    <li><p>Il y a <m>15</m> possibilités. Chaque liste ci-dessous représente le nombre de roses par vase. Les nombres sont données arbitrairement dans l'ordre décroissant, mais les vases sont identiques. 
+    <ol>
+    <li><p><m>7</m>;</p></li>
+    <li><p><m>6,1</m>;</p></li>
+    <li><p><m>5,2</m>;</p></li>
+    <li><p><m>5,1,1</m>;</p></li>
+    <li><p><m>4,3</m>;</p></li>
+    <li><p><m>4,2,1</m>;</p></li>
+    <li><p><m>4,1,1,1</m>;</p></li>
+    <li><p><m>3,3,1</m>;</p></li>
+    <li><p><m>3,2,2</m>;</p></li>
+    <li><p><m>3,2,1,1,</m>;</p></li>
+    <li><p><m>3,1,1,1,1</m>;</p></li>
+    <li><p><m>2,2,2,1</m>;</p></li>
+    <li><p><m>2,2,1,1,1</m>;</p></li>
+    <li><p><m>2,1,1,1,1,1</m>;</p></li>
+    <li><p><m>1,1,1,1,1,1,1</m>.</p></li>
+    </ol>
+    </p></li>
+    <li><p>Ici, selon la restriction initiale qui demande de placer toutes les billes, c'est impossibles.</p></li>
+    <li><p>Il y a dix possibilités. Si l'on note <m>A,B,C,D,E</m> les parents, alors ceux qui peuvent accompagner peuvent être:
+    <ol>
+    <li><p><m>ABC</m>;</p></li>
+    <li><p><m>ABD</m>;</p></li>
+    <li><p><m>ABE</m>;</p></li>
+    <li><p><m>ACD</m>;</p></li>
+    <li><p><m>ACE</m>;</p></li>
+    <li><p><m>ADE</m>;</p></li>
+    <li><p><m>BCD</m>;</p></li>
+    <li><p><m>BCE</m>;</p></li>
+    <li><p><m>BDE</m>;</p></li>
+    <li><p><m>CDE</m>.</p></li>
+    </ol>
+    Les parents sont placés dans l'ordre alphabétique, mais il n'y a pas d'importance particulière à l'ordre de places.
+    </p></li>
+    <li><p>Il y a trop de possibilités pour les enumérer.</p></li>
+    <li><p>Il y a <m>24</m> possibilités. Si on note les photos par <m>A,B,C,D</m> et leur position relative dans un arrangement de ces quatre lettres pour les pièces <m>1,2,3,4</m>, alors on a
+    <ol>
+    <li><p><m>ABCD</m>;</p></li>
+    <li><p><m>ABDC</m>;</p></li>
+    <li><p><m>ACBD</m>;</p></li>
+    <li><p><m>ACDB</m>;</p></li>
+    <li><p><m>ADBC</m>;</p></li>
+    <li><p><m>ADCD</m>;</p></li>
+    <li><p><m>BACD</m>;</p></li>
+    <li><p><m>BADC</m>;</p></li>
+    <li><p><m>BCDA</m>;</p></li>
+    <li><p><m>BCAA</m>;</p></li>
+    <li><p><m>BDCA</m>;</p></li>
+    <li><p><m>BDAC</m>;</p></li>
+    <li><p><m>CABD</m>;</p></li>
+    <li><p><m>CADB</m>;</p></li>
+    <li><p><m>CBDA</m>;</p></li>
+    <li><p><m>CBAD</m>;</p></li>
+    <li><p><m>CDBA</m>;</p></li>
+    <li><p><m>CDAB</m>;</p></li>
+    <li><p><m>DABC</m>;</p></li>
+    <li><p><m>DACB</m>;</p></li>
+    <li><p><m>DBCA</m>;</p></li>
+    <li><p><m>DBAC</m>;</p></li>
+    <li><p><m>DCDA</m>;</p></li>
+    <li><p><m>DCAD</m>.</p></li>
+    </ol></p></li>
+    </ol></p>
+    </solution>
+    </example>
+    </subsection>
+    <subsection>
+    <title>Le cas général pour certaines situations</title>
+    <p>Pour certaines des situations de la table <xref ref="table-12foldvide"/>,  il est simple de déterminer une formule générale. Pour d'autre situations, il faudra y réfléchir plus longuement. Pour terminer cette section, on présente une discussion des cas plus simples à traiter. Pour tous les cas, on suppose que l'on a <m>b</m> billes et <m>u</m> urnes.</p>
+    <p>Le premier cas à considérer est celui des billes différentes et des urnes différentes, sans restrictions. Comme chaque bille peut être placée dans n'importe quelle des <m>u</m> urnes, il suit du principe du produit qu'il y a <m>u^b</m> possibilités. À noter que ce cas correspond au nombres de fonctions que l'on peut créer de l'ensemble des billes <m>B</m> vers l'ensemble des urnes <m>U</m>. La proposition <xref ref="prop-comptFonction"/> offrait le même résultat. D'ailleurs, la seconde partie de cette propostion compte le nombre de fonctions injectives, qui correspond à l'entrée suivante de la table.</p>
+    <p>En effet, si les billes et les urnes sont différentes, mais qu'on permet au plus une bille par urne, alors cela revient à compter le nombre de fonctions injectives de <m>B</m> vers <m>U</m>. Si <m>b\leq u</m>, alors il y a <me>
+    u(u-1)(u-2)\cdots (u-(x-1))=P_b^u
+    </me>.
+    La dernière entrée de la première ligne correspond aussi au nombres de fonctions de <m>B</m> vers <m>U</m>, cette fois-ci pour les fonctions surjectives. Tel que mentionné dans la section <xref ref="sec-prodSomme"/>, ce cas est plus complexe à calculer et il faudra encore attendre pour y arriver.
+    </p>
+    <p>Le prochain cas que l'on considère est celui des billes identiques et des urnes différentes, avec la restrictions d'au plus une bille par urnes. Comme les billes sont identiques,  si <m>b\leq u</m>, alors cela revient à choisir quelles urnes auront une billes. Ceci peut se faire de <m>C_b^u=\frac{u!}{b!(u-b)!}</m> manières. </p>
+    <p>On considère ensuite le cas sans restrictions de cette rangée, soit les billes identiques dans les urnes différentes. Comme on l'a expliqué dans l'introduction, cela revient à trouver le nombre de solutions à l'équation <m>x_1+x_2+\cdots +x_u=b</m>. Selon la proposition <xref ref="prop-combRep"/>, ce nombre est égal à <m>C_{b}^{b+u-1}</m>.</p>
+    <p>Le cas où toutes les urnes doivent contenir au moins une bille dans cette ligne n'est pas si différent. Si l'on a assez de billes, comme celles-ci sont identiques, il suffit d'en placer une dans chaque urne et de placer le reste comme s'il n'y avait pas de restrictions. Donc, pour <m>b\geq n</m>, il y aura <m>C_{b-u}^{b-u+u-1}=C_{b-u}^{b-1}=C_{u-1}^{b-1}</m>.</p>
+    <p>On regarde ensuite le cas au plus une bille par urne des deux dernières rangées. Dans ces deux cas, les urnes sont indiscernables. Comme on veut que toutes les billes soient placées, deux choses peuvent se produire. Soit <m>b\leq u</m>, auquel cas on peut placer une bille par urne (les urnes étant identiques il n'y a qu'une possibilité), soit <m>b\ge u</m>, auquel cas on ne peut pas effectuer le placement.</p>
+    <p>Les quatre autres cas, en plus de la dernière entrée de la première ligne, vont demander un peu plus de réflexion.</p>
+    </subsection>
+    <!-- Sous-sections à écrire, à même ce fichier -->
+    
+    <conclusion xml:id="concl-billesurnes">  <!-- Ajouter le même identifiant de la section après le - du xml:id -->
+    
+    </conclusion>
+    <reading-questions xml:id="rq-billesurnes">  <!-- Ajouter le même identifiant de la section après le - du xml:id -->
+    <introduction>
+    <p>Répondre à ces questions suite à la lecture du texte qui précède pour valider la compréhension.<!--Ces questions sont à faire avant de venir en classe et à remettre au début du cours.--></p>
+    </introduction>
+  
+    <exercise>
+    <statement><p>Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.</p></statement>
+    </exercise>
+    </reading-questions>
+   <!--Inclure les exercices de la section ci-dessous--> 
+   <!--<xi:include href="Exercices_.ptx" />-->
+</section>

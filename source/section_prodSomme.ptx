@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_prodSomme">
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec-prodSomme">
 <title>Méthodes de dénombrement: Principes de base</title>
 <introduction> 
 
@@ -105,7 +105,7 @@
   On veut maintenant généraliser l'exemple précédent à des ensembles finis quelconques.
 </p>
 
-<proposition xml:id="ex-comptFonction">
+<proposition xml:id="prop-comptFonction">
 <title> Compter des fonctions : Cas général</title>
 <statement> <p>Soit deux ensembles <m>A</m> et <m>B</m> tels que <m>|A|=m</m> et <m>|B|=n</m>. Alors
 <ol>

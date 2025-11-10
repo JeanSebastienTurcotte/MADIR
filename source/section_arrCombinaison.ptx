@@ -2,7 +2,7 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_arrCombinaison">
 <title>Permutations et combinaisons</title>
 <introduction>
-<p>On peut remarquer que plusieurs des exemples et exercices faits à la section <xref ref="sec_prodSomme"/> font intervenir des méthodes et des expressions qui se ressemblent. Par exemple, on voit souvent apparaître des termes de la forme <m>6\times 5\times4  </m>.  </p>
+<p>On peut remarquer que plusieurs des exemples et exercices faits à la section <xref ref="sec-prodSomme"/> font intervenir des méthodes et des expressions qui se ressemblent. Par exemple, on voit souvent apparaître des termes de la forme <m>6\times 5\times4  </m>.  </p>
 <p>Ces expressions sont reliées à des concepts importants en dénombrement, c'est-à-dire les permutations et les combinaisons. On remarque également que plusieurs problèmes difficiles peuvent être résolus en utilisant les mêmes méthodes. On présente donc quelques exemples typiques qu'on peut utiliser pour résoudre une grande catégorie de problèmes.</p>
 <p>Finalement, on présente le triangle de Pascal, qui permet de calculer de manière différente le nombre de combinaisons, ainsi que le binôme de Newton, qui utilise le nombre de combinaisons afin de calculer rapidement des expressions de la forme <m>(x+y)^n</m>.</p>
 </introduction>
@@ -38,7 +38,7 @@
 <statement> Soit <m>k\in\ \N</m>, on définit <m>k!</m> (on dit la factorielle de <m>k</m>, ou bien <m>k</m> factorielle) de la façon suivante. Si <m>k=0</m>, alors <m>0!=1</m>. Si <m>k\geq 1</m>, alors <me>k!=k\cdot (k-1)\cdot (k-2) \cdots 3\cdot 2\cdot 1 = k\cdot (k-1)!</me>. </statement>
 </definition> --> <!-- Changé pour section précédente -->
 <remark> 
-<statement> Nous allons insister sur la définition alternative de <m>k!</m> par récurrence un peu plus tard. </statement>
+<statement> <p>Nous allons insister sur la définition alternative de <m>k!</m> par récurrence un peu plus tard. </p></statement>
 </remark>
 
 <p>Avec cette nouvelle notation, on est prêt à démontrer la proposition suivante.</p>
@@ -148,7 +148,7 @@ Soit <m>E</m> un ensemble de cardinalité finie <m>|E|=n,</m>  et soit <m>r\in\,
 </corollary>
 
 <remark>
-    Un corollaire est une proposition qui découle directement d'une autre proposition.
+<statement><p>Un corollaire est une proposition qui découle directement d'une autre proposition.</p></statement>
 </remark>
 </subsection>
 
@@ -287,7 +287,7 @@ Soit <m>E</m> un ensemble de cardinalité finie <m>|E|=n,</m>  et soit <m>r\in\,
 <introduction>
 <p> On veut maintenant généraliser les concepts de permutations et de combinaisons. Une première généralisation est de considérer les dénombrements d'objets indiscernables. Un exemple typique sera les anagrammes de mots avec des lettres qui se répètent.</p>
 <p>Une deuxième façon de généraliser est de considérer des permutations et des combinaisons lorsqu'on peut répéter les éléments de l'ensemble que l'on choisit.</p>
-<p>On a déjà fait plusieurs exemples qui sont des permutations avec répétition (voir entre autres <xref ref="ex-comptFonction"/>,  <xref ref="ex-combProdSomme1"/> et <xref ref="ex-combProdSomme2"/>). Le dénombrement de ces situations se fait assez facilement grâce au principe du produit. </p>
+<p>On a déjà fait plusieurs exemples qui sont des permutations avec répétition (voir entre autres <xref ref="prop-comptFonction"/>,  <xref ref="ex-combProdSomme1"/> et <xref ref="ex-combProdSomme2"/>). Le dénombrement de ces situations se fait assez facilement grâce au principe du produit. </p>
 <p>Cependant, le dénombrement de combinaisons avec répétition est un problème plus complexe. Il faudra développer une technique plus sophistiquée. </p> 
 </introduction>
 
@@ -367,10 +367,10 @@ formées de <m>n</m> caractères dont <m>r</m> de ces caractères sont des <m>1<
 
 <subsubsection xml:id="subsub-permRep">
 <title>Permutations avec répétitions</title>
-<introduction> On peut généraliser la méthode pour résoudre l'exemple <xref ref="ex-comptFonction"/> afin de trouver le nombre de permutations avec répétitions. En fait, on peut même utiliser le résultat de <xref ref="ex-comptFonction" text="custom"> cet exemple</xref> afin de démontrer directement la formule suivante.</introduction>
+<introduction> On peut généraliser la méthode pour résoudre l'exemple <xref ref="prop-comptFonction"/> afin de trouver le nombre de permutations avec répétitions. En fait, on peut même utiliser le résultat de <xref ref="prop-comptFonction" text="custom"> cet exemple</xref> afin de démontrer directement la formule suivante.</introduction>
 <proposition xml:id="prop-permRep">
 <statement><p>Le nombre de <m>r-</m>permutations d'un ensemble <m>E</m> de <m>n</m> objets si on accepte les répétitions est <m>n^r</m>.</p></statement>
-<proof><p> Choisir une telle <m>r-</m>permutation est équivalent à choisir une fonction <m>f: \{1,\dots,r\}\to E</m>. Par l'exemple <xref ref="ex-comptFonction"/>, on a que le nombre de <m>r-</m>permutations de <m>n</m> objets avec répétition est <m>n^r</m>. </p></proof>
+<proof><p> Choisir une telle <m>r-</m>permutation est équivalent à choisir une fonction <m>f: \{1,\dots,r\}\to E</m>. Par l'exemple <xref ref="prop-comptFonction"/>, on a que le nombre de <m>r-</m>permutations de <m>n</m> objets avec répétition est <m>n^r</m>. </p></proof>
 </proposition>
 
 </subsubsection>
@@ -386,7 +386,7 @@ formées de <m>n</m> caractères dont <m>r</m> de ces caractères sont des <m>1<
 <mrow> 1 \amp \text{ bagels au bleuet;} \amp \amp\amp 2 \amp\text{ bagels au bleuet;}</mrow>
 </md>
 </p>
-<remark>On pourrait aussi s'imaginer qu'on tire <m>8</m> billes de couleur rouge, bleu, vert ou jaune d'une urne contenant au moins <m>8</m> billes de chaque couleur.</remark>
+<remark><statement><p>On pourrait aussi s'imaginer qu'on tire <m>8</m> billes de couleur rouge, bleu, vert ou jaune d'une urne contenant au moins <m>8</m> billes de chaque couleur.</p></statement></remark>
 <p>Une façon de représenter l'exemple précédent de façon un peu plus algébrique est la suivante. On considère <m>x_i\in\,\N</m> pour <m>i=1,2,3,4</m>. De combien de façons peut-on choisir les <m>x_i</m> pour que <m>x_1+x_2+x_3+x_4=8</m>?</p>
 <p>Pour pouvoir compter le nombre de solutions, on fait la transformation suivante. Pour chaque solution <m>x_1+x_2+x_3+x_4=8</m>, on considère la chaîne binaire formée comme ceci: on échange chaque <m>x_1</m> par une séquence de <m>1</m> de longueur <m>x_i</m>, et on ajoute un unique <m>0</m> entre chaque séquence de <m>1</m> (ça revient à échanger  chaque <m>+</m> en un <m>0</m>).</p>
 <p>Par exemple, la solution <m>2+4+1+1=8</m> sera transformée en la chaîne <me>11011110101</me>.</p>

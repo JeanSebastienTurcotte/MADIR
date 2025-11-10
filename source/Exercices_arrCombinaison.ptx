@@ -251,20 +251,34 @@
     </solution>
     </exercise>
     -->
-    <exercise><introduction>Une boite de beignes d'une chaine populaire contient six compartiments qu'un employé remplit pour un client selon les règles suivantes.</introduction>
+    <exercise><introduction><p>Une boite de beignes d'une chaine populaire contient six compartiments qu'un employé remplit pour un client selon les règles suivantes. On cherche à calculer de combien de manières différentes une boite de beignes peut être constituée.</p></introduction>
     <task><statement><p>Il y a trois sortes de beignes, par exemple Chocolat, Érable et Vanille et on remplit la boite. Par exemple VVECCV est une configuration.</p></statement>
     <answer><p><m>729</m></p></answer>
     <solution>
         <p>
-            Il s'agit d'une permutation avec répétition 
+            Il s'agit d'une permutation avec répétitions. Il y a donc <m>3^6=729</m> possibilités.
         </p>
     </solution>
     </task>
     <task><statement><p>Même chose, mais on permet de laisser un compartiment vide (et le client sera potentiellement déçu). Par exemple, VVE_C_ est une configuration où _ représente l'absence d'un beigne.</p></statement>
-    <answer><p><m>4096</m></p></answer></task>
+    <answer><p><m>4096</m></p></answer>
+    <solution><p>On peut considérer l'absence de beigne comme une quatrième saveur (un peu insipide). Il y a donc <m>4^6=4096</m> possibilités.</p></solution>
+    </task>
     <task><statement><p>On remplit tous les compartiments, en s'assurant que chaque sorte de beignes soit présente dans la boite.</p></statement>
-    <hint>Il faut utiliser le principe d'inclusion-exclusion à plusieurs reprises.</hint>
+    <hint>On peut utiliser le principe d'inclusion-exclusion à plusieurs reprises.</hint>
     <answer><p><m>540</m></p></answer>
+    <solution><p>On veut minimalement un beigne vanille, un chocolat et un érable. On distingue trois cas: 
+
+<m>VCESSS</m> où <m>S</m> est une saveur répétée trois fois. On retrouve <m>VCEVVV, VCECCC</m> et <m>VCEEEE</m>.
+
+On peut aussi avoir, après avoir placé <m>VCE</m>, une saveur répétée deux fois et une autre saveur : <m>VCEVVC, VCEVVE, VCEEEV, VCEEEC, VCECCV \text{ et } VCECCE</m>
+
+Finalement, on peut avoir <m>VCEVCE</m>.
+
+Pour chacun de ces cas, on doit permuter. On aura
+
+<me>
+\frac{6!}{4!} *3 + \frac{6!}{4! 2!} *6 + \frac{6!}{2! 2! 2!}= 540</me>.</p></solution>
     </task>     
     <task><statement><p>On remplit tous les compartiments, mais il y a maintenant <m>12</m> sortes de beignes!</p></statement>
     <answer><p><m>2 985 984</m></p></answer>

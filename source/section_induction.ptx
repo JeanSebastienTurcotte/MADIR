@@ -107,7 +107,7 @@ Ainsi, sous l'H.I., la proposition est également vraie pour <m>n=k+1</m>.</p>
 <p>Par le même argument, il existe un point <m>p_2</m> qui est en commun au <m>k</m> dernières droites. On veut montrer que <m>p_1=p_2</m>.</p>
 <p>Supposons que ces points soient distincts. Alors toutes les <m>k-1</m> droites contenant ces deux points seront les mêmes droites (car il y a une seule droite passant par deux points dans le plan). Ceci est une contradiction, car ces droites sont distinctes. On doit donc avoir <m>p_1=p_2</m>, et donc toutes les <m>k+1</m> droites possèdent un point en commun.</p>
 </statement>
-<solution> À l'étape d'induction, l'argument démontrant que <m>p_1=p_2</m> ne fonctionne pas en <m>k=2.</m> En effet, si <m>k=2,</m> alors <m>k+1=3,</m> et <m>p_1</m> est un point de la première et de la deuxième droite, alors que <m>p_2</m> est un point de la deuxième et la troisième droite. Ainsi, seule la deuxième droite contient les points <m>p_1</m> et <m>p_2,</m> ce qui n'est pas une contradiction!</solution>
+<solution><p>À l'étape d'induction, l'argument démontrant que <m>p_1=p_2</m> ne fonctionne pas en <m>k=2.</m> En effet, si <m>k=2,</m> alors <m>k+1=3,</m> et <m>p_1</m> est un point de la première et de la deuxième droite, alors que <m>p_2</m> est un point de la deuxième et la troisième droite. Ainsi, seule la deuxième droite contient les points <m>p_1</m> et <m>p_2,</m> ce qui n'est pas une contradiction!</p></solution>
 </example>
 
 <example xml:id="exe-faussePreuve2">

@@ -563,4 +563,19 @@
     <task><statement><p><m>\ppcm{(2^4\cdot 3\cdot 4,2^2\cdot 3^3\cdot 7)}</m></p></statement></task>
     </exercise>
     </subexercises>
+    <!-- Exercice Sage Écrire fonction qui print pgcd avec les étapes
+    
+    def divquot(a,b):
+    M=max(a,b)
+    m=min(a,b)
+    q=M//m
+    r=M%m
+    print(f"{M}={m}*{q}+{r}")
+    if r==0:
+        return m
+    else:
+        return divquot(m,r)
+divquot(7654,456)    
+
+-->
 </exercises>
