@@ -40,16 +40,16 @@
 
 
 <exercise>
-<introduction>Une urne contient <m>10</m> billes rouges et <m>10</m> billes bleues. Une personne pige au hasard des billes sans les remettre dans l'urne.</introduction>
+<introduction><p>Une urne contient <m>10</m> billes rouges et <m>10</m> billes bleues. Une personne pige au hasard des billes sans les remettre dans l'urne.</p></introduction>
 <task>
-<statement>Combien de billes doit-elle piger avant d'être certaine d'avoir deux billes de la même couleur?</statement>
-<answer><m>3</m> billes.</answer>
+<statement><p>Combien de billes doit-elle piger avant d'être certaine d'avoir deux billes de la même couleur?</p></statement>
+<answer><p><m>3</m> billes.</p></answer>
 <solution>
 <p>On place les <m>3</m> objets (billes) dans les <m>2</m> boîtes (rouge, bleu) selon la couleur de la bille. Puisqu'il y a plus d'objets que de boîtes, il y aura au moins deux objets dans la même boîte, et donc deux billes de la même couleur. </p>
 </solution>
 </task>
 <task>
-<statement> Combien de billes doit-elle piger avant d'être certaine d'avoir deux billes bleues? </statement>
+<statement><p>Combien de billes doit-elle piger avant d'être certaine d'avoir deux billes bleues?</p> </statement>
 <answer><m>12</m> billes.</answer>
 <solution>
 <p>On suppose que les <m>10</m> premières billes pigées sont des billes rouges. Par la suite, si on pige deux billes supplémentaires, elles seront nécessairement bleus.</p>
@@ -58,7 +58,7 @@
 </exercise>
 
 <exercise xml:id="exo-mod4">
-<statement> Montrer que si on choisit aléatoirement cinq nombres entiers, alors il y en aura au moins deux ayant le même reste lorsque divisé par <m>4</m>.</statement>
+<statement><p> Montrer que si on choisit aléatoirement cinq nombres entiers, alors il y en aura au moins deux ayant le même reste lorsque divisé par <m>4</m>.</p></statement>
 <solution>
 <p>On place les <m>5</m> objets (les nombres entiers) dans les <m>4</m> boîtes représentant les classes d'équivalence modulo <m>4</m>. On place chaque entier dans sa propre classe d'équivalence. Puisqu'il y a plus d'objets que de boîtes, il ya aura au moins deux objets dans la même boîte.</p>
 <p> Ainsi, il y aura deux entiers dans la même classe d'équivalence modulo <m>4,</m> c'est-à-dire que ces deux entiers auront le même reste lorsque divisé par <m>4</m>.</p>
@@ -66,40 +66,40 @@
 </exercise>
 
 <exercise>
-<statement> Soit <m>d\in\,\N^\ast</m>. Montrer que si on choisit aléatoirement <m>d+1</m> nombres entiers, alors il y en aura au moins deux ayant le même reste lorsque divisé par <m>d</m>.</statement>
-<solution> Remplacer <m>5</m> par <m>d+1</m> et <m>4</m> par <m>d</m> dans la solution de l'exercice <xref ref="exo-mod4"/>.</solution>
+<statement><p> Soit <m>d\in\,\N^\ast</m>. Montrer que si on choisit aléatoirement <m>d+1</m> nombres entiers, alors il y en aura au moins deux ayant le même reste lorsque divisé par <m>d</m>.</p></statement>
+<solution><p> Remplacer <m>5</m> par <m>d+1</m> et <m>4</m> par <m>d</m> dans la solution de l'exercice <xref ref="exo-mod4"/>.</p></solution>
 </exercise>
 
 
 <exercise>
 <statement><p>On choisit aléatoirement <m>n+1</m> nombres parmi les éléments de <m>\{1,2,\dots,2n-1\}</m>. Montrer qu'il existe au moins deux nombres qui somment à <m>2n</m>.</p></statement>
-<hint> Considérer les ensembles <m>\{1,2n-1\},\,\{2,2n-2\},\dots,\{n-1,n+1\},\,\{n,n\}</m>.</hint>
+<hint> <p>Considérer les ensembles <m>\{1,2n-1\},\,\{2,2n-2\},\dots,\{n-1,n+1\},\,\{n,n\}</m>.</p></hint>
 <solution>
 <p>
 <ul>
-<li>Objets: Les <m>n+1</m> entiers que l'on choisit dans l'ensemble <m>\{1,2,\dots,2n-1\}</m>.</li>
-<li>Boîtes: Les <m>n</m> ensembles <m>\{1,2n-1\},\,\{2,2n-2\}, \dots ,\{n-1,n+1\},\, \{n,n\}</m>.</li>
-<li>On place un objet <m>o</m> dans une boîte <m>B</m> si <m>o\in\,B</m>.</li>
+<li><p>Objets: Les <m>n+1</m> entiers que l'on choisit dans l'ensemble <m>\{1,2,\dots,2n-1\}</m>.</p></li>
+<li><p>Boîtes: Les <m>n</m> ensembles <m>\{1,2n-1\},\,\{2,2n-2\}, \dots ,\{n-1,n+1\},\, \{n,n\}</m>.</p></li>
+<li><p>On place un objet <m>o</m> dans une boîte <m>B</m> si <m>o\in\,B</m>.</p></li>
 </ul>
-Puisqu'il ya plus d'objets que de boîtes, il y aura au moins deux objets dans la même boîte. Tout d'abord on remarque qu'il y a un seul élément dans l'ensemble <m>\{n,n\}=\{n\}</m>. Ainsi, la boîte contenant deux objets ne peut pas être celle-ci. Finalement, si une boîte contient deux objets, par la définition des boîtes, on a que la somme de ces deux entiers donne <m>2n</m>.
+<p>Puisqu'il ya plus d'objets que de boîtes, il y aura au moins deux objets dans la même boîte. Tout d'abord on remarque qu'il y a un seul élément dans l'ensemble <m>\{n,n\}=\{n\}</m>. Ainsi, la boîte contenant deux objets ne peut pas être celle-ci. Finalement, si une boîte contient deux objets, par la définition des boîtes, on a que la somme de ces deux entiers donne <m>2n</m>.</p>
 </p>
 </solution>
 </exercise>
 
 <exercise>
-<statement>Combien d'entiers doit-on choisir aléatoirement dans l'ensemble <m>\{1,2,3,4,5,6\}</m> afin de garantir qu'au moins une paire aura une somme de <m>7</m>?</statement>
-<answer> On doit en choisir <m>4</m>.</answer>
+<statement><p>Combien d'entiers doit-on choisir aléatoirement dans l'ensemble <m>\{1,2,3,4,5,6\}</m> afin de garantir qu'au moins une paire aura une somme de <m>7</m>?</p></statement>
+<answer><p> On doit en choisir <m>4</m>.</p></answer>
 </exercise>
 
 
 <exercise>
-<statment> Soit <m>f</m> est une fonction <m>f:A\to B</m>. En utilisant le principe des tiroirs de Dirichlet, montrer que si <m>|B|\lt |A|\lt \infty</m>, alors la fonction n'est pas injective.</statment>
+<statment><p> Soit <m>f</m> est une fonction <m>f:A\to B</m>. En utilisant le principe des tiroirs de Dirichlet, montrer que si <m>|B|\lt |A|\lt \infty</m>, alors la fonction n'est pas injective.</p></statment>
 <solution>
 <p>
 <ul>
-<li>Objets: Les éléments de <m>A</m></li>
-<li>Boîtes: Les éléments de <m>B</m> </li>
-<li>On place un objet <m>a</m> dans une boîte <m>b</m> si <m>f(a)=b</m>.</li>
+<li><p>Objets: Les éléments de <m>A</m>.</p></li>
+<li><p>Boîtes: Les éléments de <m>B</m>.</p> </li>
+<li><p>On place un objet <m>a</m> dans une boîte <m>b</m> si <m>f(a)=b</m>.</p></li>
 </ul>
 Puisqu'il ya plus d'objets que de boîtes, il y aura au moins deux objets dans la même boîte. Ainsi, il existe <m>a_1\neq a_2\in\,A</m> tels que <m>f(a_1)=f(a_2).</m> La fonction n'est donc pas injective.
 </p>

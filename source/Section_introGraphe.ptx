@@ -165,6 +165,80 @@
         </statement>
     </remark>
 
+<p>Une autre définition importante dans la théorie des graphes est celle d'un sous-graphe. Intuitivement, un graphe <m>H</m> est un sous-graphe d'un graphe <m>G</m> si l'on retrouve <m>H</m> dans <m>G</m>. Plus formellement, on a la définition suivante.</p>
+<definition xml:id="def-sousgraphe">
+<title>Sous-graphe</title>
+<statement><p>Une graphe <m>H=(S_H, A_H)</m> est un sous-graphe du graphe <m>G=(S_G,A_G)</m> si
+<ul>
+<li><p><m>S_H\subseteq S_G</m>;</p></li>
+<li><p><m>A_H\subseteq A_G</m>;</p></li>
+<li><p>pour toute arrête <m>(x,y)\in A_H</m>, on a <m>x\in H</m> et <m>y\in H</m>.</p></li>
+</ul>
+</p></statement>
+</definition>
+<p>Voici un exemple d'un sous-graphe <m>H</m> dans un graphe <m>G</m>.</p>
+<figure xml:id="fig-sousgraphe">
+<caption>Un sous-graphe <m>H</m> dans un graphe <m>G</m></caption>
+<image xml:id="img-sousgraphe">
+<description><p>Le graphe de Petersen est illustré à gauche, avec au centre le sous-graphe central mis en évidence. À gauche, on retrouve une copie de ce sous-graphe, seule.</p></description>
+<sageplot>
+G = graphs.PetersenGraph()
+sub_vertices = [5,6,7,8,9]
+
+H = G.subgraph(sub_vertices)
+
+# Layout of the whole graph
+posG = G.get_pos()
+
+# Restricted layout for H
+posH = {v: posG[v] for v in H.vertices()}
+# Horizontal shift amount
+shift = 3   # move left by 3 units
+
+# Create a shifted layout
+posG_left = {v: (x - shift, y) for v, (x, y) in posG.items()}
+posH_right = {v: (x + shift, y) for v, (x, y) in posH.items()}
+
+# Plot left copy of G
+p_left = G.plot(
+    pos=posG_left,
+    vertex_color="yellow",
+    edge_color="black",
+    vertex_size=300
+)
+# Plot G
+pG = G.plot(
+    pos=posG,
+    vertex_color="lightgray",
+    edge_color="lightgray"
+)
+
+# Plot H
+pH = H.plot(
+    pos=posH,
+    vertex_color="red",
+    edge_color="red",
+    edge_thickness=4,
+    vertex_size=350
+)
+# plot right copy of H
+p_right = H.plot(
+    pos=posH_right,
+    vertex_color="red",
+    edge_color="black",
+    vertex_size=300,
+    axes=False
+)
+TG1=text("Le graphe $G$",(-shift,-1.5),color="black",fontsize=10)
+TG2=text("Le graphe $G$",(0,-1.5),color="black",fontsize=10)
+TH=text("Le graphe $H$",(shift,-1.5),color="black",fontsize=10)
+Fig=(pG + pH+p_left+p_right+TG1+TG2+TH)#.show(axes=False)
+Fig
+</sageplot>
+</image>
+</figure>
+
+<p>Deux sous-graphes particulier s'obtiennent d'un graphe <m>G</m> en enlevant un sommet ou une arête de <m>G</m>. Soit <m>G</m> un graphe, <m>s\in S_G</m> et <m>a\in A_G </m>. On définit le sous-graphe <m>G\ s</m>, nommé <m>G</m> sans <m>s</m>, comme le sous-graphe obtenu de <m>G</m> en enlevant le sommet <m>g</m> et toute les arêtes qui lui sont incidentes (qui le contiennent). De plus, on définit le sous-graphe <m>G\ a</m>, nommé <m>G</m> sans <m>a</m>, comme le sous-graphe de <m>G</m> avec l'arête <m>a</m> effacée.</p>
     <p>
         Finalement, dans les prochaines sections, nous allons étudier des graphes qu'on dira pondérés. Il s'agit simplement de graphes (simples ou orientés) pour lesquels on donne un poids (un nombre réel positif) à chacune des arêtes. C'est ce genre de graphes qui est utilisé pour trouver le chemin le plus court entre deux points sur une carte.
     </p>
@@ -231,9 +305,10 @@
 <p>En regardant l'exemple précédent, on remarque que, lorsqu'on prend la somme des degrés de tous les sommets d'un graphe, chaque arête est comptée deux fois. On peut généraliser pour obtenir le théorème suivant. </p>
 
 <proposition xml:id="prop-somDeg">
-<statement><p> Soit <m>G=(S,A)</m> un graphe simple tel que <m>S=\{s_1,\,s_2\,\dots,\,s_n\}</m> à <m>m</m> arêtes.
+<statement><p> Soit <m>G=(S,A)</m> un graphe simple tel que <m>S=\{s_1,\,s_2\,\dots,\,s_n\}</m> à <m>|A|=m</m> arêtes.
 <me>\deg(s_1)+\deg(s_1)+\deg(s_2)\cdots+\deg(s_n)=\sum_{k=1}^n \deg(s_k)=2m</me>
 </p></statement>
+<proof><p>La partie gauche de l'équation compte la somme des degrés de tous les sommets. On compte cette somme d'une autre manière, en regardant les arêtes. Chaque arête contribue au degré de deux sommets. La somme des degrés des sommets est donc égale à deux fois le nombre d'arêtes.</p></proof>
 </proposition>
 
 <example> 
