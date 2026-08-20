@@ -20,83 +20,24 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "extpfeil",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math",
-    "renderActions": {
-      "findScript": [
-        10,
-        function (doc) {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
-                var display = !!node.type.match(/; *mode=display/);
-                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                var text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = {node: text, delim: '', n: 0};
-                math.end = {node: text, delim: '', n: 0};
-                doc.math.push(math);
-            });
-        },
-        ""
-      ]
-    }
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/extpfeil",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js/lib"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: true,
+isReact: false,
+htmlPresentation: false,
+lang: "fr-CA",
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
+<meta name="twitter:title" content="Mathématiques discrètes">
+<meta property="og:title" content="Mathématiques discrètes">
 <meta property="book:title" content="Mathématiques discrètes">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<meta name="twitter:description" content="Version préliminaire">
+<meta property="og:description" content="Version préliminaire">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.49"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.49"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -118,35 +59,62 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.19';
+eBookConfig.runestone_version = '8.2.6';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.5c6d23c3bf7decb7.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.296eb9cf978e3bdb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Évaluer (Sage)';
+<script src="_static/prefix-runtime.86d8a68ed7481f7e.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.bb5ac777721d4056.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8086b62682b271d1.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Évaluer (Sage)';
 </script>
 </head>
 <body class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Sauter au contenu</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="madir.html"><span class="title">Mathématiques discrètes</span> <span class="subtitle">Version préliminaire</span></a></h1>
+<a class="assistive" href="#ptx-content">Sauter au contenu</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="madir.html"><span class="title">Mathématiques discrètes</span> <span class="subtitle">Version préliminaire</span></a></div>
 <p class="byline"></p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
-<button class="toc-toggle button" title="Table des matières"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Table des matières</span></button><div class="searchbox">
-<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
-<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
-<div class="search-results-controls">
-<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Table des matières"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Table des matières</span></button><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="[search-book]"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">[search-book]</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Fermer" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
-<h2 class="search-results-heading">Résultats de la recherche: </h2>
-<div id="searchempty" class="searchempty"><span>Aucun résultat.</span></div>
-<ol id="searchresults" class="searchresults"></ol>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Résultats de la recherche: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>Aucun résultat.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-propGraphes.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="up-button button" href="chap-theorieGraphes.html" title="Haut"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Haut</span></a><a class="next-button button" href="sec-arbre.html" title="Suivant"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="[readability-settings]"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">[readability-settings]</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">[readability-settings]</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Fermer"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>[readability-line-height]</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>[readability-content-font-size]</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>[readability-theme]</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>[readability-theme-system]</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>[readability-theme-light]</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>[readability-theme-dark]</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>[readability-assistive-technologies]</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>[readability-expose-permalinks]</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">[reset-all]</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="sec-propGraphes.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Préc.</span></a><a class="up-button button" href="chap-theorieGraphes.html" title="Haut"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Haut</span></a><a class="next-button button" href="sec-arbre.html" title="Suivant"><span class="name">Suiv.</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}        
 \newcommand{\Z}{\mathbb{Z}}                
 \newcommand{\R}{\mathbb{R}}
@@ -213,129 +181,135 @@ $\Box$
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Table des matières" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="chap-ensfct.html" class="internal"><span class="codenumber">1</span> <span class="title">Ensembles et fonctions</span></a></div>
-<ul class="structural toc-item-list">
+<div class="toc-title-box"><a href="chap-reptheonombres.html" class="internal"><span class="codenumber">1</span> <span class="title">Représentation des nombres et arithmétique modulaire</span></a></div>
+<ul id="ptx-toc-group-chap-reptheonombres" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="intro-repNombres.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-ens.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Les ensembles</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-ens.html#sec-ens-3" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Définitions et exemples</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-ens.html#sec-ens-4" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Relation entre deux ensembles</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-ens.html#sec-ens-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Représentation graphique d’ensembles</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-ens.html#sec-ens-6" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Ensembles particuliers</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-ens.html#exo-ens" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Exercices</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-opens.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Opérations sur les ensembles</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-opens.html#sssec-opens" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Opérations élémentaires sur les ensembles</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-opens.html#sssec-propoper" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Propriétés des opérations élémentaires</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="sec-opens.html#rq-opens" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-opens.html#exo-opens" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Exercices</span></a></div></li>
+<div class="toc-title-box"><a href="sec-representation.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Représentation des nombres</span></a></div>
+<ul id="ptx-toc-group-sec-representation" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-representation.html#subs-sysPositionnel" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Systèmes positionnels</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-representation.html#sec-representation-4" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Représentation en base deux</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-representation.html#sec-representation-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Représentation en base hexadécimale</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-representation.html#subs-opeElemBin" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Opérations élémentaires en base deux</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="sec-representation.html#rq-representation" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-representation.html#exo-representation" class="internal"><span class="codenumber">1.1.6</span> <span class="title">Exercices</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-fonctions.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Les fonctions</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-fonctions.html#sec-fonctions-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Définitions et exemples</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-fonctions.html#sec-fonctions-4" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Représentation d’une fonction</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-fonctions.html#sec-fonctions-5" class="internal"><span class="codenumber">1.3.3</span> <span class="title">La composition de fonctions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-fonctions.html#sssec-injsurj" class="internal"><span class="codenumber">1.3.4</span> <span class="title">Fonctions injectives et surjectives</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="sec-fonctions.html#sec-fonctions-8" class="internal"><span class="codenumber">1.3.5</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-fonctions.html#exo-" class="internal"><span class="codenumber">1.3.6</span> <span class="title">Exercices</span></a></div></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="chap-logique.html" class="internal"><span class="codenumber">2</span> <span class="title">Logique mathématique</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-logprop.html" class="internal"><span class="codenumber">2.1</span> <span class="title">La logique propositionnelle</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-logprop.html#sec-logprop-3" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Propositions mathématiques et connecteurs logiques</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-logprop.html#sec-logprop-4" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Table de vérité</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-logprop.html#sec-logprop-5" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Implication, réciproque et contraposée</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="sec-logprop.html#sec-logprop-7" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-logprop.html#exo-logprop" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Exercices</span></a></div></li>
+<div class="toc-title-box"><a href="sec-divisibilite.html" class="internal"><span class="codenumber">1.2</span> <span class="title">La divisibilité dans les entiers</span></a></div>
+<ul id="ptx-toc-group-sec-divisibilite" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-divisibilite.html#sec-divisibilite-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">L’opération de division</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-divisibilite.html#sec-divisibilite-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Retour sur la conversion à partir de la base dix</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-divisibilite.html#sec-divisibilite-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">L’algorithme d’Euclide</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="sec-divisibilite.html#rq-divisibilite" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-divisibilite.html#exo-divisibilite" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Exercices</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-eqlogfnc.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Équivalence logique et formes normales</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-eqlogfnc.html#sec-eqlogfnc-3" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Équivalence logique</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-eqlogfnc.html#sec-eqlogfnc-4" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Formes normales</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="sec-eqlogfnc.html#rq-eqlogfnc" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-eqlogfnc.html#exo-eqlogfnc" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Exercices</span></a></div></li>
+<div class="toc-title-box"><a href="sec-modulo.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Arithmétique modulaire</span></a></div>
+<ul id="ptx-toc-group-sec-modulo" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modulo.html#sec-modulo-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Congruence modulo <span class="process-math">\(n\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modulo.html#sec-modulo-4" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Arithmétique modulaire</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modulo.html#sec-modulo-5" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Résolution d’équations en congruence modulo</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modulo.html#sec-modulo-6" class="internal"><span class="codenumber">1.3.4</span> <span class="title">Introduction à la cryptographie</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="sec-modulo.html#rq-modulo" class="internal"><span class="codenumber">1.3.5</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-modulo.html#exo-modulo" class="internal"><span class="codenumber">1.3.6</span> <span class="title">Exercices</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-propquant.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Les propositions quantifiées</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-propquant.html#sssec-predicats" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Prédicats</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-propquant.html#sssec-quantificateurs" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Quantificateurs existentiel et universel</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-propquant.html#sec-propquant-5" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Négation et combinaisons de quantificateurs</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="sec-propquant.html#rq-propquant" class="internal"><span class="codenumber">2.3.4</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-propquant.html#exo-propquant" class="internal"><span class="codenumber">2.3.5</span> <span class="title">Exercices</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-circuits.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Circuits logiques</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-circuits.html#sec-circuits-3" class="internal"><span class="codenumber">2.4.1</span> <span class="title">Portes logiques</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-circuits.html#sec-circuits-4" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Parallèle avec la logique propositionnelle</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="sec-circuits.html#rq-circuits" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-circuits.html#exo-circuits" class="internal"><span class="codenumber">2.4.4</span> <span class="title">Exercices</span></a></div></li>
-</ul>
-</li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="concl-reptheonombres.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="chap-reptheonombres.html" class="internal"><span class="codenumber">3</span> <span class="title">Représentation des nombres et arithmétique modulaire</span></a></div>
-<ul class="structural toc-item-list">
+<div class="toc-title-box"><a href="chap-ensfct.html" class="internal"><span class="codenumber">2</span> <span class="title">Ensembles et fonctions</span></a></div>
+<ul id="ptx-toc-group-chap-ensfct" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="intro-ensfct.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-representation.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Représentation des nombres</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-representation.html#subs-sysPositionnel" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Systèmes positionnels</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-representation.html#sec-representation-4" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Représentation en base deux</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-representation.html#sec-representation-5" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Représentation en base hexadécimale</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-representation.html#subs-opeElemBin" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Opérations élémentaires en base deux</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-representation.html#sec-representation-7" class="internal"><span class="codenumber">3.1.5</span> <span class="title">(Section supplémentaire) Représentation en circuits d’opérations binaires</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="sec-representation.html#rq-representation" class="internal"><span class="codenumber">3.1.6</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-representation.html#exo-representation" class="internal"><span class="codenumber">3.1.7</span> <span class="title">Exercices</span></a></div></li>
+<div class="toc-title-box"><a href="sec-ens.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Les ensembles</span></a></div>
+<ul id="ptx-toc-group-sec-ens" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-ens.html#sec-ens-3" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Définitions et exemples</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-ens.html#sec-ens-4" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Relation entre deux ensembles</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-ens.html#sec-ens-5" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Représentation graphique d’ensembles</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-ens.html#sec-ens-6" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Ensembles particuliers</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-ens.html#exo-ens" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Exercices</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-divisibilite.html" class="internal"><span class="codenumber">3.2</span> <span class="title">La divisibilité dans les entiers</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-divisibilite.html#sec-divisibilite-3" class="internal"><span class="codenumber">3.2.1</span> <span class="title">L’opération de division</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-divisibilite.html#sec-divisibilite-4" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Retour sur la conversion à partir de la base dix</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-divisibilite.html#sec-divisibilite-5" class="internal"><span class="codenumber">3.2.3</span> <span class="title">L’algorithme d’Euclide</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="sec-divisibilite.html#rq-divisibilite" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-divisibilite.html#exo-divisibilite" class="internal"><span class="codenumber">3.2.5</span> <span class="title">Exercices</span></a></div></li>
+<div class="toc-title-box"><a href="sec-opens.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Opérations sur les ensembles</span></a></div>
+<ul id="ptx-toc-group-sec-opens" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-opens.html#sssec-opens" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Opérations élémentaires sur les ensembles</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-opens.html#sssec-propoper" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Propriétés des opérations élémentaires</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="sec-opens.html#rq-opens" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-opens.html#exo-opens" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Exercices</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-modulo.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Arithmétique modulaire</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modulo.html#sec-modulo-3" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Congruence modulo <span class="process-math">\(n\)</span></span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modulo.html#sec-modulo-4" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Arithmétique modulaire</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modulo.html#sec-modulo-5" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Résolution d’équations en congruence modulo</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modulo.html#sec-modulo-6" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Introduction à la cryptographie</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="sec-modulo.html#rq-modulo" class="internal"><span class="codenumber">3.3.5</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-modulo.html#exo-modulo" class="internal"><span class="codenumber">3.3.6</span> <span class="title">Exercices</span></a></div></li>
+<div class="toc-title-box"><a href="sec-fonctions.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Les fonctions</span></a></div>
+<ul id="ptx-toc-group-sec-fonctions" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-fonctions.html#sec-fonctions-3" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Définitions et exemples</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-fonctions.html#sec-fonctions-4" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Représentation d’une fonction</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-fonctions.html#sec-fonctions-5" class="internal"><span class="codenumber">2.3.3</span> <span class="title">La composition de fonctions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-fonctions.html#sssec-injsurj" class="internal"><span class="codenumber">2.3.4</span> <span class="title">Fonctions injectives et surjectives</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="sec-fonctions.html#sec-fonctions-8" class="internal"><span class="codenumber">2.3.5</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-fonctions.html#exo-" class="internal"><span class="codenumber">2.3.6</span> <span class="title">Exercices</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="concl-ensfct.html" class="internal"><span class="title">Conclusion</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chap-logique.html" class="internal"><span class="codenumber">3</span> <span class="title">Logique mathématique</span></a></div>
+<ul id="ptx-toc-group-chap-logique" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="intro-logique.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-logprop.html" class="internal"><span class="codenumber">3.1</span> <span class="title">La logique propositionnelle</span></a></div>
+<ul id="ptx-toc-group-sec-logprop" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-logprop.html#sec-logprop-3" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Propositions mathématiques et connecteurs logiques</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-logprop.html#sec-logprop-4" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Table de vérité</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-logprop.html#sec-logprop-5" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Implication, réciproque et contraposée</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="sec-logprop.html#sec-logprop-7" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-logprop.html#exo-logprop" class="internal"><span class="codenumber">3.1.5</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-eqlogfnc.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Équivalence logique et formes normales</span></a></div>
+<ul id="ptx-toc-group-sec-eqlogfnc" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-eqlogfnc.html#sec-eqlogfnc-3" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Équivalence logique</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-eqlogfnc.html#sec-eqlogfnc-4" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Formes normales</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="sec-eqlogfnc.html#rq-eqlogfnc" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-eqlogfnc.html#exo-eqlogfnc" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-propquant.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Les propositions quantifiées</span></a></div>
+<ul id="ptx-toc-group-sec-propquant" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-propquant.html#sssec-predicats" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Prédicats</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-propquant.html#sssec-quantificateurs" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Quantificateurs existentiel et universel</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-propquant.html#sec-propquant-5" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Négation et combinaisons de quantificateurs</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="sec-propquant.html#rq-propquant" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-propquant.html#exo-propquant" class="internal"><span class="codenumber">3.3.5</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-circuits.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Circuits logiques</span></a></div>
+<ul id="ptx-toc-group-sec-circuits" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-circuits.html#sec-circuits-3" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Portes logiques</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-circuits.html#sec-circuits-4" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Parallèle avec la logique propositionnelle</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-circuits.html#sec-circuits-5" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Représentation en circuits d’opérations binaires</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="sec-circuits.html#rq-circuits" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-circuits.html#exo-circuits" class="internal"><span class="codenumber">3.4.5</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="concl-logique.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chap-denombrement.html" class="internal"><span class="codenumber">4</span> <span class="title">Dénombrement</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-chap-denombrement" class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-prodSomme.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Méthodes de dénombrement: Principes de base</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-prodSomme" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-prodSomme.html#subs-regleProd" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Principe du produit</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-prodSomme.html#subs-regleSomme" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Principe de la somme</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-prodSomme.html#subs-combProdSomme1" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Combinaison du principe du produit et du principe de la somme</span></a></div></li>
@@ -348,19 +322,19 @@ $\Box$
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec_arrCombinaison.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Permutations et combinaisons</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec_arrCombinaison" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_arrCombinaison.html#subs_permArr" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Les permutations</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_arrCombinaison.html#subs_combBinomial" class="internal"><span class="codenumber">4.2.2</span> <span class="title">Les combinaisons</span></a></div></li>
 <li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="sec_arrCombinaison.html#subs-trianglePascalBinomNewton" class="internal"><span class="codenumber">4.2.3</span> <span class="title">Le triangle de Pascal et le binôme de Newton</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-subs-trianglePascalBinomNewton" class="structural toc-item-list">
 <li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_arrCombinaison.html#subs-trianglePascalBinomNewton-3" class="internal"><span class="codenumber">4.2.3.1</span> <span class="title">Le triangle de Pascal</span></a></div></li>
 <li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_arrCombinaison.html#subs-trianglePascalBinomNewton-4" class="internal"><span class="codenumber">4.2.3.2</span> <span class="title">Le binôme de Newton</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="sec_arrCombinaison.html#subs-permCombGen" class="internal"><span class="codenumber">4.2.4</span> <span class="title">Les permutations et combinaisons généralisées</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-subs-permCombGen" class="structural toc-item-list">
 <li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_arrCombinaison.html#subsub-permInd" class="internal"><span class="codenumber">4.2.4.1</span> <span class="title">Permutations avec des objets indiscernables</span></a></div></li>
 <li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_arrCombinaison.html#subsub-permRep" class="internal"><span class="codenumber">4.2.4.2</span> <span class="title">Permutations avec répétitions</span></a></div></li>
 <li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_arrCombinaison.html#subsub-combRep" class="internal"><span class="codenumber">4.2.4.3</span> <span class="title">Combinaisons avec répétitions</span></a></div></li>
@@ -372,7 +346,7 @@ $\Box$
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Des billes et des urnes</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-.html#ssec-12cas" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Douze cas à considérer</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-.html#sec--4" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Des exemples</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-.html#sec--5" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Le cas général pour certaines situations</span></a></div></li>
@@ -381,20 +355,21 @@ $\Box$
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-combinatoireExoSupp.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercices supplémentaires</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-combinatoireExoSupp.html#exo-combinatoireExoSupp" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercices</span></a></div></li></ul>
+<ul id="ptx-toc-group-sec-combinatoireExoSupp" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-combinatoireExoSupp.html#exo-combinatoireExoSupp" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercices</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chap-preuveMath.html" class="internal"><span class="codenumber">5</span> <span class="title">Les preuves mathématiques</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-chap-preuveMath" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="intro-preuveMath.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec_methodePreuve.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Méthodes de preuves</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec_methodePreuve" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_methodePreuve.html#subs-terminomolgie" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Un peu de terminologie</span></a></div></li>
 <li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="sec_methodePreuve.html#subs-methodePreuve" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Différentes méthodes de preuves</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-subs-methodePreuve" class="structural toc-item-list">
 <li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_methodePreuve.html#subsub-preuveDirecte" class="internal"><span class="codenumber">5.1.2.1</span> <span class="title">Preuve directe</span></a></div></li>
 <li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_methodePreuve.html#subsub-preuvInd" class="internal"><span class="codenumber">5.1.2.2</span> <span class="title">Preuve indirecte</span></a></div></li>
 <li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec_methodePreuve.html#subsub-preuveContradiction" class="internal"><span class="codenumber">5.1.2.3</span> <span class="title">Preuve par contradiction</span></a></div></li>
@@ -407,7 +382,7 @@ $\Box$
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec_induction.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Les preuves par récurrence (par induction)</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec_induction" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_induction.html#subs_introInduction" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Les différentes étapes</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_induction.html#subs-exemples" class="internal"><span class="codenumber">5.2.2</span> <span class="title">Exemples de preuves par récurrence</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="sec_induction.html#rq-induction" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
@@ -416,7 +391,7 @@ $\Box$
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec_pidgeonHoles.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Principe des tiroirs de Dirichlet</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec_pidgeonHoles" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_pidgeonHoles.html#subs_statement" class="internal"><span class="codenumber">5.3.1</span> <span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_pidgeonHoles.html#subs_exemple" class="internal"><span class="codenumber">5.3.2</span> <span class="title">Exemples</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="sec_pidgeonHoles.html#rq-pigeonHoles" class="internal"><span class="codenumber">5.3.3</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
@@ -425,16 +400,18 @@ $\Box$
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-preuvesSupp.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercices supplémentaires</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-preuvesSupp.html#exo-preuvesSupp" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercices</span></a></div></li></ul>
+<ul id="ptx-toc-group-sec-preuvesSupp" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-preuvesSupp.html#exo-preuvesSupp" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercices</span></a></div></li></ul>
 </li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="concl-.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chap-relationRecurrence.html" class="internal"><span class="codenumber">6</span> <span class="title">Relations de récurrence</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-chap-relationRecurrence" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="intro-relationRecurrence.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-relRecLinHom.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Relations de récurrence linéaires homogènes</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-relRecLinHom" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-relRecLinHom.html#subs-defRelRec" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Suites et relations de récurrence</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-relRecLinHom.html#subs-relRecLinHom" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Relations de récurrence  et forme générale</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-relRecLinHom.html#subs-recLinHom" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Relations de récurrence linéaires homogènes</span></a></div></li>
@@ -447,7 +424,7 @@ $\Box$
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-relRecLinNonHom.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Relations de récurrence linéaires non-homogènes</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-relRecLinNonHom" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-relRecLinNonHom.html#subs-" class="internal"><span class="codenumber">6.2.1</span> <span class="title"></span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="sec-relRecLinNonHom.html#rq-relRexLinNonHom" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-relRecLinNonHom.html#exo-relRecLinNonHom" class="internal"><span class="codenumber">6.2.3</span> <span class="title">Exercices</span></a></div></li>
@@ -455,16 +432,18 @@ $\Box$
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-relRecSupp.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercices supplémentaires</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-relRecSupp.html#exo-relRecSupp" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercices</span></a></div></li></ul>
+<ul id="ptx-toc-group-sec-relRecSupp" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-relRecSupp.html#exo-relRecSupp" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercices</span></a></div></li></ul>
 </li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="concl-relationRecurrence.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="chap-theorieGraphes.html" class="internal"><span class="codenumber">7</span> <span class="title">Théorie des graphes</span></a></div>
-<ul class="structural toc-item-list contains-active">
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-chap-theorieGraphes">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="intro-theorieGraphes.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-introGraphe.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Introduction à la théorie des graphes</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-introGraphe" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-introGraphe.html#subs-defGraphe" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Les types de graphes</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-introGraphe.html#subs-terminologie" class="internal"><span class="codenumber">7.1.2</span> <span class="title">Terminologie de base</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-introGraphe.html#subs-grapheParticulier" class="internal"><span class="codenumber">7.1.3</span> <span class="title">Quelques graphes particuliers</span></a></div></li>
@@ -475,7 +454,7 @@ $\Box$
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-propGraphes.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Propriétés des graphes</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-propGraphes" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-propGraphes.html#subs-representationGraphe" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Représentations des graphes</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-propGraphes.html#subs-isoGraphe" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Isomorphismes de graphes</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-propGraphes.html#exo-propGraphe" class="internal"><span class="codenumber">7.2.3</span> <span class="title">Exercices</span></a></div></li>
@@ -483,7 +462,7 @@ $\Box$
 </li>
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="sec-chaineEuler.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Chaîne, cycle et graphe eulérien</span></a></div>
-<ul class="structural toc-item-list active">
+<ul class="structural toc-item-list active" id="ptx-toc-group-sec-chaineEuler">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-chaineEuler.html#subsec-chaineCycle" class="internal"><span class="codenumber">7.3.1</span> <span class="title">Chaîne et cycle</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-chaineEuler.html#subsec-grapheConnexe" class="internal"><span class="codenumber">7.3.2</span> <span class="title">Graphes connexes</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-chaineEuler.html#subs-eulerien" class="internal"><span class="codenumber">7.3.3</span> <span class="title">Chemins et circuits eulériens</span></a></div></li>
@@ -493,253 +472,366 @@ $\Box$
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-arbre.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Arbre et arborescence</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-arbre" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-arbre.html#subsec-arbreDef" class="internal"><span class="codenumber">7.4.1</span> <span class="title">Forêt et arbre</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-arbre.html#subsec-arbreCouvrant" class="internal"><span class="codenumber">7.4.2</span> <span class="title">Arbre couvrant</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-arbre.html#subsec-arborescence" class="internal"><span class="codenumber">7.4.3</span> <span class="title">Arborescence</span></a></div></li>
 <li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="sec-arbre.html#rq-arbre" class="internal"><span class="codenumber">7.4.4</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="concl-theorieGraphe.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-chaineEuler"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec-chaineEuler">
+<h1 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Chaîne, cycle et graphe eulérien</span>
-</h2>
-<section class="introduction" id="intro-chaineEuler"><div class="para" id="intro-chaineEuler-1"><div class="autopermalink" data-description="Paragraphe"><a href="#intro-chaineEuler-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div></div></section><section class="subsection" id="subsec-chaineCycle"><h3 class="heading hide-type">
+</h1>
+<section class="introduction" id="intro-chaineEuler">
+<div class="para" id="intro-chaineEuler-1"><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#intro-chaineEuler-1" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div></div></section>
+<section class="subsection" id="subsec-chaineCycle">
+<h2 class="heading hide-type">
 <span class="type">Sous-section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Chaîne et cycle</span>
-</h3>
-<section class="introduction" id="subsec-chaineCycle-2"><div class="para" id="subsec-chaineCycle-2-1">On veut étudier les différentes façons dont il est possible de se déplacer à l’intérieur d’un graphe, d’un sommet à l’autre en empruntant les arêtes. Non seulement les graphes sont justement utiles afin de représenter des chemins (trajets routiers, aériens et autres), mais l’étude des différents chemins présents à l’intérieur d’un graphe permet souvent de mieux comprendre ceux-ci.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-chaineCycle-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</h2>
+<section class="introduction" id="subsec-chaineCycle-2">
+<div class="para" id="subsec-chaineCycle-2-1">On veut étudier les différentes façons dont il est possible de se déplacer à l’intérieur d’un graphe, d’un sommet à l’autre en empruntant les arêtes. Non seulement les graphes sont justement utiles afin de représenter des chemins (trajets routiers, aériens et autres), mais l’étude des différents chemins présents à l’intérieur d’un graphe permet souvent de mieux comprendre ceux-ci.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#subsec-chaineCycle-2-1" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
 </div>
-<div class="para" id="subsec-chaineCycle-2-2">Par exemple, on pourra donner une nouvelle caractérisation des graphes bipartis en termes de chemins présents dans ces graphes. Aussi, en étudiant les chemins présents dans un graphe, il nous sera entre autres possible de montrer que deux graphes ne sont pas isomorphes.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-chaineCycle-2-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="subsec-chaineCycle-2-2">Par exemple, on pourra donner une nouvelle caractérisation des graphes bipartis en termes de chemins présents dans ces graphes. Aussi, en étudiant les chemins présents dans un graphe, il nous sera entre autres possible de montrer que deux graphes ne sont pas isomorphes.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#subsec-chaineCycle-2-2" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
 </div>
-<div class="para" id="subsec-chaineCycle-2-3">D’un autre côté, de nombreuses applications des graphes proviennent du fait que l’on trouve le chemin le plus court entre différents sommets. On peut évidemment penser à trouver le chemin le plus court entre deux endroits dans une ville, mais on pourra également mesurer la complexité de certains algorithmes, comme des algorithmes de tri, grandement utilisés en informatique.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-chaineCycle-2-3" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="subsec-chaineCycle-2-3">D’un autre côté, de nombreuses applications des graphes proviennent du fait que l’on trouve le chemin le plus court entre différents sommets. On peut évidemment penser à trouver le chemin le plus court entre deux endroits dans une ville, mais on pourra également mesurer la complexité de certains algorithmes, comme des algorithmes de tri, grandement utilisés en informatique.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#subsec-chaineCycle-2-3" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
 </div>
-<div class="para" id="subsec-chaineCycle-2-4">Puisque la définition d’un graphe a été donnée en termes d’ensembles, on doit donner la définition d’un chemin de façon similaire. Aussi, lorsqu’on travaille avec des graphes non orientés, comme c’est notre cas, on parlera d’une chaîne plutôt que d’un chemin. Le terme chemin étant habituellement utilisé pour les graphes orientés<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-chaineCycle-2-4" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
-</div></section><article class="definition definition-like" id="def-chaineCylce"><h4 class="heading">
+<div class="para" id="subsec-chaineCycle-2-4">Puisque la définition d’un graphe a été donnée en termes d’ensembles, on doit donner la définition d’un chemin de façon similaire. Aussi, lorsqu’on travaille avec des graphes non orientés, comme c’est notre cas, on parlera d’une chaîne plutôt que d’un chemin. Le terme chemin étant habituellement utilisé pour les graphes orientés<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#subsec-chaineCycle-2-4" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
+</div></section>
+<article class="definition definition-like" id="def-chaineCylce"><h3 class="heading">
 <span class="type">Définition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4>
-<div class="para" id="def-chaineCylce-1-1">Soit <span class="process-math">\(G=(S,A)\)</span> un graphe simple, une chaîne de longueur <span class="process-math">\(n\in \N^\ast\)</span> reliant les sommets <span class="process-math">\(s, t\in S\text{,}\)</span> ou encore une chaîne entre <span class="process-math">\(s\)</span> et <span class="process-math">\(t\text{,}\)</span> est une suite de sommets <span class="process-math">\(s_0, s_1, \dots, s_n\)</span> de <span class="process-math">\(G\)</span> tel que <span class="process-math">\(\{s_i, s_{i+1}\}\in A\)</span> pour <span class="process-math">\(i=0, 1, \dots, n-1\text{,}\)</span> avec <span class="process-math">\(s_0=s\)</span> et <span class="process-math">\(s_n=t\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#def-chaineCylce-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
-</div> <div class="para" id="def-chaineCylce-1-2">Si toutes les arêtes formant la chaîne sont uniques, c’est-à-dire si <span class="process-math">\(\{s_i, s_{i+1}\}\neq \{s_j, s_{j+1}\}\)</span> lorsque <span class="process-math">\(i\neq j\text{,}\)</span> on dira que la chaîne est une chaîne simple.<div class="autopermalink" data-description="Paragraphe"><a href="#def-chaineCylce-1-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
-</div> <div class="para" id="def-chaineCylce-1-3">Si <span class="process-math">\(s_0=s_n\text{,}\)</span> on parlera d’un cycle plutôt que d’une chaîne.<div class="autopermalink" data-description="Paragraphe"><a href="#def-chaineCylce-1-3" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</h3>
+<div class="para" id="def-chaineCylce-1-1">Soit <span class="process-math">\(G=(S,A)\)</span> un graphe simple, une chaîne de longueur <span class="process-math">\(n\in \N^\ast\)</span> reliant les sommets <span class="process-math">\(s, t\in S\text{,}\)</span> ou encore une chaîne entre <span class="process-math">\(s\)</span> et <span class="process-math">\(t\text{,}\)</span> est une suite de sommets <span class="process-math">\(s_0, s_1, \dots, s_n\)</span> de <span class="process-math">\(G\)</span> tel que <span class="process-math">\(\{s_i, s_{i+1}\}\in A\)</span> pour <span class="process-math">\(i=0, 1, \dots, n-1\text{,}\)</span> avec <span class="process-math">\(s_0=s\)</span> et <span class="process-math">\(s_n=t\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#def-chaineCylce-1-1" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
+</div> 
+<div class="para" id="def-chaineCylce-1-2">Si toutes les arêtes formant la chaîne sont uniques, c’est-à-dire si <span class="process-math">\(\{s_i, s_{i+1}\}\neq \{s_j, s_{j+1}\}\)</span> lorsque <span class="process-math">\(i\neq j\text{,}\)</span> on dira que la chaîne est une chaîne simple.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#def-chaineCylce-1-2" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
+</div> 
+<div class="para" id="def-chaineCylce-1-3">Si <span class="process-math">\(s_0=s_n\text{,}\)</span> on parlera d’un cycle plutôt que d’une chaîne.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#def-chaineCylce-1-3" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Définition 7.3.1"><a href="#def-chaineCylce" title="Copy heading and permalink for Définition 7.3.1" aria-label="Copy heading and permalink for Définition 7.3.1">🔗</a></div></article><article class="example example-like" id="exe-defChaineCycle"><h4 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Définition 7.3.1"><a tabindex="-1" href="#def-chaineCylce" title="Copier le titre et le lien permanent pour Définition 7.3.1" aria-label="Copier le titre et le lien permanent pour Définition 7.3.1">🔗</a></div>
+</article>
+<article class="example example-like" id="exe-defChaineCycle"><h3 class="heading">
 <span class="type">Exemple</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Quelsques chaînes.</span>
-</h4>
-<div class="para" id="exe-defChaineCycle-2-1">On considère le graphe <span class="process-math">\(G\)</span> ci-dessous. <figure class="figure figure-like" id="fig-defChaineCycle"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/tikzit_defChaineCycle.svg" role="img" class="contained" alt="Un graphe pour introduire les définitions de chaînes."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(G\)</span><div class="autopermalink" data-description="Figure 7.3.3"><a href="#fig-defChaineCycle" title="Copy heading and permalink for Figure 7.3.3" aria-label="Copy heading and permalink for Figure 7.3.3">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Paragraphe"><a href="#exe-defChaineCycle-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
-</div> <div class="para" id="exe-defChaineCycle-2-2">On remarque qu’il existe de nombreuses chaînes reliant <span class="process-math">\(a\)</span> et <span class="process-math">\(h\text{.}\)</span> Par exemple, il y a la chaîne  <span class="process-math">\(a, e, d, a, e, b, c, f, g, h\)</span> est une chaîne de longueur <span class="process-math">\(9\text{.}\)</span> Celle-ci n’est pas simple, car elle passe deux fois par <span class="process-math">\(\{a,e\}\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#exe-defChaineCycle-2-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
-</div> <div class="para" id="exe-defChaineCycle-2-3">Si on se limite aux chaînes simples, on peut trouver des chaînes de longueur <span class="process-math">\(6\text{.}\)</span> Par exemple, les chaînes <span class="process-math">\(a, e, b, c, g, i, h\)</span> et <span class="process-math">\(a, b, d, c, f, g, h\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#exe-defChaineCycle-2-3" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
-</div> <div class="para" id="exe-defChaineCycle-2-4">On remarque également que la chaîne <span class="process-math">\(a, b, c, f, g, h\)</span> est parmi les chaînes les plus courtes (de longueur <span class="process-math">\(5\)</span>) reliant <span class="process-math">\(a\)</span> et <span class="process-math">\(h\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#exe-defChaineCycle-2-4" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
-</div> <div class="para" id="exe-defChaineCycle-2-5">Finalement, <span class="process-math">\(G\)</span> possède plusieurs cycles. Par exemple, la chaîne <span class="process-math">\(a, b, d, a\)</span> est un cycle simple de longueur <span class="process-math">\(3\text{,}\)</span> alors que la chaîne <span class="process-math">\(f, g, h, i, f\)</span> est un cycle simple de longueur <span class="process-math">\(4\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#exe-defChaineCycle-2-5" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</h3>
+<div class="para" id="exe-defChaineCycle-2-1">On considère le graphe <span class="process-math">\(G\)</span> ci-dessous. 
+<figure class="figure figure-like" id="fig-defChaineCycle"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/tikzit_defChaineCycle.svg" role="img" class="contained" alt="Un graphe pour introduire les définitions de chaînes."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(G\)</span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.3.3"><a tabindex="-1" href="#fig-defChaineCycle" title="Copier le titre et le lien permanent pour Figure 7.3.3" aria-label="Copier le titre et le lien permanent pour Figure 7.3.3">🔗</a></div></figcaption>
+</figure><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exe-defChaineCycle-2-1" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
+</div> 
+<div class="para" id="exe-defChaineCycle-2-2">On remarque qu’il existe de nombreuses chaînes reliant <span class="process-math">\(a\)</span> et <span class="process-math">\(h\text{.}\)</span> Par exemple, il y a la chaîne  <span class="process-math">\(a, e, d, a, e, b, c, f, g, h\)</span> est une chaîne de longueur <span class="process-math">\(9\text{.}\)</span> Celle-ci n’est pas simple, car elle passe deux fois par <span class="process-math">\(\{a,e\}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exe-defChaineCycle-2-2" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
+</div> 
+<div class="para" id="exe-defChaineCycle-2-3">Si on se limite aux chaînes simples, on peut trouver des chaînes de longueur <span class="process-math">\(6\text{.}\)</span> Par exemple, les chaînes <span class="process-math">\(a, e, b, c, g, i, h\)</span> et <span class="process-math">\(a, b, d, c, f, g, h\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exe-defChaineCycle-2-3" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
+</div> 
+<div class="para" id="exe-defChaineCycle-2-4">On remarque également que la chaîne <span class="process-math">\(a, b, c, f, g, h\)</span> est parmi les chaînes les plus courtes (de longueur <span class="process-math">\(5\)</span>) reliant <span class="process-math">\(a\)</span> et <span class="process-math">\(h\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exe-defChaineCycle-2-4" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
+</div> 
+<div class="para" id="exe-defChaineCycle-2-5">Finalement, <span class="process-math">\(G\)</span> possède plusieurs cycles. Par exemple, la chaîne <span class="process-math">\(a, d,e, a\)</span> est un cycle simple de longueur <span class="process-math">\(3\text{,}\)</span> alors que la chaîne <span class="process-math">\(f, g, h, i, f\)</span> est un cycle simple de longueur <span class="process-math">\(4\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exe-defChaineCycle-2-5" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Exemple 7.3.2: Quelsques chaînes"><a href="#exe-defChaineCycle" title="Copy heading and permalink for Exemple 7.3.2: Quelsques chaînes" aria-label="Copy heading and permalink for Exemple 7.3.2: Quelsques chaînes">🔗</a></div></article><div class="autopermalink" data-description="Sous-section 7.3.1: Chaîne et cycle"><a href="#subsec-chaineCycle" title="Copy heading and permalink for Sous-section 7.3.1: Chaîne et cycle" aria-label="Copy heading and permalink for Sous-section 7.3.1: Chaîne et cycle">🔗</a></div></section><section class="subsection" id="subsec-grapheConnexe"><h3 class="heading hide-type">
+<div class="autopermalink" aria-hidden="true" data-description="Exemple 7.3.2: Quelsques chaînes"><a tabindex="-1" href="#exe-defChaineCycle" title="Copier le titre et le lien permanent pour Exemple 7.3.2: Quelsques chaînes" aria-label="Copier le titre et le lien permanent pour Exemple 7.3.2: Quelsques chaînes">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Sous-section 7.3.1: Chaîne et cycle"><a tabindex="-1" href="#subsec-chaineCycle" title="Copier le titre et le lien permanent pour Sous-section 7.3.1: Chaîne et cycle" aria-label="Copier le titre et le lien permanent pour Sous-section 7.3.1: Chaîne et cycle">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-grapheConnexe">
+<h2 class="heading hide-type">
 <span class="type">Sous-section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Graphes connexes</span>
-</h3>
-<div class="para" id="subsec-grapheConnexe-2">Jusqu’à maintenant, pour la grande majorité des graphes étudiés, il était toujours possible de trouver une chaîne reliant deux sommets quelconques du graphe. Ceci n’est pas toujours vrai, et les graphes ayant cette propriété seront nommés des graphes connexes. Si un graphe n’est pas connexe, il sera toujours possible de se restreindre à des sous-graphes connexes, c’est-à-dire ses composantes connexes.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-grapheConnexe-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</h2>
+<div class="para" id="subsec-grapheConnexe-2">Jusqu’à maintenant, pour la grande majorité des graphes étudiés, il était toujours possible de trouver une chaîne reliant deux sommets quelconques du graphe. Ceci n’est pas toujours vrai, et les graphes ayant cette propriété seront nommés des graphes connexes. Si un graphe n’est pas connexe, il sera toujours possible de se restreindre à des sous-graphes connexes, c’est-à-dire ses composantes connexes.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#subsec-grapheConnexe-2" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
 </div>
-<article class="definition definition-like" id="def-grapheConnexe"><h4 class="heading">
+<article class="definition definition-like" id="def-grapheConnexe"><h3 class="heading">
 <span class="type">Définition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4>
-<div class="para" id="def-grapheConnexe-1-1">Soit <span class="process-math">\(G=(S,A)\)</span> un graphe simple. Si, pour tout <span class="process-math">\(s, t \in S\text{,}\)</span> il existe une chaîne reliant <span class="process-math">\(s\)</span> et <span class="process-math">\(t\text{,}\)</span> alors on dira que <span class="process-math">\(G\)</span> est un <dfn class="terminology">graphe connexe</dfn>.<div class="autopermalink" data-description="Paragraphe"><a href="#def-grapheConnexe-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
-</div> <div class="para" id="def-grapheConnexe-1-2">Si on peut écrire <span class="process-math">\(G\)</span> comme l’union de graphes <span class="process-math">\(G_i=(S_i,A_i)\)</span> tels que <span class="process-math">\(G_i\)</span> est connexe et <span class="process-math">\(S_i\cap S_j =\emptyset\)</span> lorsque <span class="process-math">\(i\neq j\text{,}\)</span> on dira que les graphes <span class="process-math">\(G_i\)</span> sont les <dfn class="terminology">composantes connexes</dfn> de <span class="process-math">\(G\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#def-grapheConnexe-1-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Définition 7.3.4"><a href="#def-grapheConnexe" title="Copy heading and permalink for Définition 7.3.4" aria-label="Copy heading and permalink for Définition 7.3.4">🔗</a></div></article><div class="para" id="subsec-grapheConnexe-4">Si un graphe n’est pas connexe, il sera toujours possible de le séparer en ses composantes connexes. Cependant, le cas où le nombre de sommets du graphe est infini est un peu plus complexe. On se limitera donc au cas où le graphe possède un nombre fini de sommets.<div class="autopermalink" data-description="Paragraphe"><a href="#subsec-grapheConnexe-4" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
-</div>
-<article class="proposition theorem-like" id="prop-composanteConnexe"><h4 class="heading">
-<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4>
-<div class="para" id="prop-composanteConnexe-1-1">Soit <span class="process-math">\(G=(S,A)\)</span> un graphe simple fini, c’est-à-dire que <span class="process-math">\(|S|\in \N^\ast\text{,}\)</span> alors on peut trouver des graphes <span class="process-math">\(G_i=(S_i,A_i)\text{,}\)</span> pour <span class="process-math">\(i=1, 2, \dots, n\)</span> tels que  <span class="process-math">\(G=\bigcup_{i=1}^n G_i =G_1\cup G_2\cup \cdots \cup G_n\text{,}\)</span> <span class="process-math">\(G_i\)</span> est connexe pour tout <span class="process-math">\(i\)</span> et <span class="process-math">\(S_i\cap S_j =\emptyset\)</span> lorsque <span class="process-math">\(i\neq j\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#prop-composanteConnexe-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Proposition 7.3.5"><a href="#prop-composanteConnexe" title="Copy heading and permalink for Proposition 7.3.5" aria-label="Copy heading and permalink for Proposition 7.3.5">🔗</a></div></article><details id="prop-composanteConnexe-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Démonstration<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="prop-composanteConnexe-2-1">La preuve est laissée <a href="sec-chaineEuler.html#exo-proofPropComposanteConnexe" class="xref" data-knowl="./knowl/xref/exo-proofPropComposanteConnexe.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Exercice 7.3.5.7">en exercice</a>.<div class="autopermalink" data-description="Paragraphe"><a href="#prop-composanteConnexe-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Démonstration 7.3.5.1"><a href="#prop-composanteConnexe-2" title="Copy heading and permalink for Démonstration 7.3.5.1" aria-label="Copy heading and permalink for Démonstration 7.3.5.1">🔗</a></div></article></details><div class="autopermalink" data-description="Sous-section 7.3.2: Graphes connexes"><a href="#subsec-grapheConnexe" title="Copy heading and permalink for Sous-section 7.3.2: Graphes connexes" aria-label="Copy heading and permalink for Sous-section 7.3.2: Graphes connexes">🔗</a></div></section><section class="subsection" id="subs-eulerien"><h3 class="heading hide-type">
-<span class="type">Sous-section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Chemins et circuits eulériens</span>
 </h3>
-<section class="introduction" id="subs-eulerien-2"><div class="para" id="subs-eulerien-2-1">On termine la section avec l’étude d’un type particulier de graphes connexes, les graphes eulériens. Ce type de graphes a été utilisé afin de modéliser le fameux problème du postier chinois.<div class="autopermalink" data-description="Paragraphe"><a href="#subs-eulerien-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
-</div></section><article class="definition definition-like" id="def-eulerien"><h4 class="heading">
+<div class="para" id="def-grapheConnexe-1-1">Soit <span class="process-math">\(G=(S,A)\)</span> un graphe simple. Si, pour tout <span class="process-math">\(s, t \in S\text{,}\)</span> il existe une chaîne reliant <span class="process-math">\(s\)</span> et <span class="process-math">\(t\text{,}\)</span> alors on dira que <span class="process-math">\(G\)</span> est un <dfn class="terminology">graphe connexe</dfn>.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#def-grapheConnexe-1-1" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
+</div> 
+<div class="para" id="def-grapheConnexe-1-2">Si on peut écrire <span class="process-math">\(G\)</span> comme l’union de graphes <span class="process-math">\(G_i=(S_i,A_i)\)</span> tels que <span class="process-math">\(G_i\)</span> est connexe et <span class="process-math">\(S_i\cap S_j =\emptyset\)</span> lorsque <span class="process-math">\(i\neq j\text{,}\)</span> on dira que les graphes <span class="process-math">\(G_i\)</span> sont les <dfn class="terminology">composantes connexes</dfn> de <span class="process-math">\(G\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#def-grapheConnexe-1-2" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Définition 7.3.4"><a tabindex="-1" href="#def-grapheConnexe" title="Copier le titre et le lien permanent pour Définition 7.3.4" aria-label="Copier le titre et le lien permanent pour Définition 7.3.4">🔗</a></div>
+</article>
+<div class="para" id="subsec-grapheConnexe-4">Si un graphe n’est pas connexe, il sera toujours possible de le séparer en ses composantes connexes. Cependant, le cas où le nombre de sommets du graphe est infini est un peu plus complexe. On se limitera donc au cas où le graphe possède un nombre fini de sommets.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#subsec-grapheConnexe-4" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="prop-composanteConnexe"><h3 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="prop-composanteConnexe-1-1">Soit <span class="process-math">\(G=(S,A)\)</span> un graphe simple fini, c’est-à-dire que <span class="process-math">\(|S|\in \N^\ast\text{,}\)</span> alors on peut trouver des graphes <span class="process-math">\(G_i=(S_i,A_i)\text{,}\)</span> pour <span class="process-math">\(i=1, 2, \dots, n\)</span> tels que  <span class="process-math">\(G=\bigcup_{i=1}^n G_i =G_1\cup G_2\cup \cdots \cup G_n\text{,}\)</span> <span class="process-math">\(G_i\)</span> est connexe pour tout <span class="process-math">\(i\)</span> et <span class="process-math">\(S_i\cap S_j =\emptyset\)</span> lorsque <span class="process-math">\(i\neq j\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#prop-composanteConnexe-1-1" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proposition 7.3.5"><a tabindex="-1" href="#prop-composanteConnexe" title="Copier le titre et le lien permanent pour Proposition 7.3.5" aria-label="Copier le titre et le lien permanent pour Proposition 7.3.5">🔗</a></div>
+</article>
+<details id="prop-composanteConnexe-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Démonstration<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="prop-composanteConnexe-2-1">La preuve est laissée <a href="sec-chaineEuler.html#exo-proofPropComposanteConnexe" class="xref" data-knowl="./knowl/xref/exo-proofPropComposanteConnexe.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Exercice 7.3.5.7">en exercice</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#prop-composanteConnexe-2-1" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Démonstration 7.3.5.1"><a tabindex="-1" href="#prop-composanteConnexe-2" title="Copier le titre et le lien permanent pour Démonstration 7.3.5.1" aria-label="Copier le titre et le lien permanent pour Démonstration 7.3.5.1">🔗</a></div>
+</article></details><div class="autopermalink" aria-hidden="true" data-description="Sous-section 7.3.2: Graphes connexes"><a tabindex="-1" href="#subsec-grapheConnexe" title="Copier le titre et le lien permanent pour Sous-section 7.3.2: Graphes connexes" aria-label="Copier le titre et le lien permanent pour Sous-section 7.3.2: Graphes connexes">🔗</a></div>
+</section>
+<section class="subsection" id="subs-eulerien">
+<h2 class="heading hide-type">
+<span class="type">Sous-section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Chemins et circuits eulériens</span>
+</h2>
+<section class="introduction" id="subs-eulerien-2">
+<div class="para" id="subs-eulerien-2-1">On termine la section avec l’étude d’un type particulier de graphes connexes, les graphes eulériens. Ce type de graphes a été utilisé afin de modéliser le fameux problème du postier chinois.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#subs-eulerien-2-1" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
+</div></section>
+<article class="definition definition-like" id="def-eulerien"><h3 class="heading">
 <span class="type">Définition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4>
+</h3>
 <div class="para logical" id="def-eulerien-1-1">
 <ul class="disc" id="def-eulerien-1-1-1">
 <li id="def-eulerien-1-1-1-1">
-<div class="para" id="p-derived-def-eulerien-1-1-1-1">Une <dfn class="terminology">chaîne eulérienne</dfn> d’un graphe <span class="process-math">\(G\)</span> est une chaîne simple passant par toutes les arêtes de <span class="process-math">\(G\text{.}\)</span>
+<div class="para" id="p-derived-def-eulerien-1-1-1-1">Une <dfn class="terminology">chaîne eulérienne</dfn> d’un graphe <span class="process-math">\(G\)</span> est une chaîne simple passant une seule fois par toutes les arêtes de <span class="process-math">\(G\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Point"><a href="#def-eulerien-1-1-1-1" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Point"><a tabindex="-1" href="#def-eulerien-1-1-1-1" title="Copier le titre et le lien permanent pour Point" aria-label="Copier le titre et le lien permanent pour Point">🔗</a></div>
 </li>
 <li id="def-eulerien-1-1-1-2">
-<div class="para" id="p-derived-def-eulerien-1-1-1-2">Un <dfn class="terminology">cycle eulérien</dfn> d’un graphe <span class="process-math">\(G\)</span> est un cycle simple passant par toutes les arêtes de <span class="process-math">\(G\text{.}\)</span>
+<div class="para" id="p-derived-def-eulerien-1-1-1-2">Un <dfn class="terminology">cycle eulérien</dfn> d’un graphe <span class="process-math">\(G\)</span> est un cycle simple passant une seule fois par toutes les arêtes de <span class="process-math">\(G\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Point"><a href="#def-eulerien-1-1-1-2" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Point"><a tabindex="-1" href="#def-eulerien-1-1-1-2" title="Copier le titre et le lien permanent pour Point" aria-label="Copier le titre et le lien permanent pour Point">🔗</a></div>
 </li>
 <li id="def-eulerien-1-1-1-3">
-<div class="para" id="def-eulerien-1-1-1-3-1">Si un graphe <span class="process-math">\(G\)</span> possède un cycle eulérien, on dira que <span class="process-math">\(G\)</span> est un <dfn class="terminology">graphe eulérien</dfn>.<div class="autopermalink" data-description="Paragraphe"><a href="#def-eulerien-1-1-1-3-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="def-eulerien-1-1-1-3-1">Si un graphe <span class="process-math">\(G\)</span> possède un cycle eulérien, on dira que <span class="process-math">\(G\)</span> est un <dfn class="terminology">graphe eulérien</dfn>.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#def-eulerien-1-1-1-3-1" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Point"><a href="#def-eulerien-1-1-1-3" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Point"><a tabindex="-1" href="#def-eulerien-1-1-1-3" title="Copier le titre et le lien permanent pour Point" aria-label="Copier le titre et le lien permanent pour Point">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Paragraphe"><a href="#def-eulerien-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#def-eulerien-1-1" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Définition 7.3.6"><a href="#def-eulerien" title="Copy heading and permalink for Définition 7.3.6" aria-label="Copy heading and permalink for Définition 7.3.6">🔗</a></div></article><article class="example example-like" id="exe-eulerien"><h4 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Définition 7.3.6"><a tabindex="-1" href="#def-eulerien" title="Copier le titre et le lien permanent pour Définition 7.3.6" aria-label="Copier le titre et le lien permanent pour Définition 7.3.6">🔗</a></div>
+</article>
+<article class="example example-like" id="exe-eulerien"><h3 class="heading">
 <span class="type">Exemple</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4>
+</h3>
 <div class="para logical" id="exe-eulerien-1-1">
 <ul class="disc" id="exe-eulerien-1-1-1">
 <li id="exe-eulerien-1-1-1-1">
 <div class="para" id="p-derived-exe-eulerien-1-1-1-1">La chaîne <span class="process-math">\(a,c,e,d,c,b,a,d,b\)</span> est une chaîne eulérienne du graphe <span class="process-math">\(G_1\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Point"><a href="#exe-eulerien-1-1-1-1" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Point"><a tabindex="-1" href="#exe-eulerien-1-1-1-1" title="Copier le titre et le lien permanent pour Point" aria-label="Copier le titre et le lien permanent pour Point">🔗</a></div>
 </li>
 <li id="exe-eulerien-1-1-1-2">
 <div class="para" id="p-derived-exe-eulerien-1-1-1-2">La chaîne <span class="process-math">\(a,b,c,d,b\)</span> est une chaîne eulérien du graphe <span class="process-math">\(G_2\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Point"><a href="#exe-eulerien-1-1-1-2" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Point"><a tabindex="-1" href="#exe-eulerien-1-1-1-2" title="Copier le titre et le lien permanent pour Point" aria-label="Copier le titre et le lien permanent pour Point">🔗</a></div>
 </li>
 <li id="exe-eulerien-1-1-1-3">
 <div class="para" id="p-derived-exe-eulerien-1-1-1-3">Le cycle <span class="process-math">\(a,b,e,d,c,e,a\)</span> est un cycle eulérien du graphe <span class="process-math">\(G_3\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Point"><a href="#exe-eulerien-1-1-1-3" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Point"><a tabindex="-1" href="#exe-eulerien-1-1-1-3" title="Copier le titre et le lien permanent pour Point" aria-label="Copier le titre et le lien permanent pour Point">🔗</a></div>
 </li>
 <li id="exe-eulerien-1-1-1-4">
 <div class="para" id="p-derived-exe-eulerien-1-1-1-4">Le graphe <span class="process-math">\(G_4\)</span> ne possède aucune chaîne eulérienne, et aucun cycle eulérien.</div>
-<div class="autopermalink" data-description="Point"><a href="#exe-eulerien-1-1-1-4" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Point"><a tabindex="-1" href="#exe-eulerien-1-1-1-4" title="Copier le titre et le lien permanent pour Point" aria-label="Copier le titre et le lien permanent pour Point">🔗</a></div>
 </li>
 <li id="exe-eulerien-1-1-1-5">
 <div class="para" id="p-derived-exe-eulerien-1-1-1-5">Le graphe <span class="process-math">\(G_5\)</span> ne possède aucune chaîne eulérienne, et aucun cycle eulérien.</div>
-<div class="autopermalink" data-description="Point"><a href="#exe-eulerien-1-1-1-5" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Point"><a tabindex="-1" href="#exe-eulerien-1-1-1-5" title="Copier le titre et le lien permanent pour Point" aria-label="Copier le titre et le lien permanent pour Point">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Paragraphe"><a href="#exe-eulerien-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
-</div> <figure class="figure figure-like" id="exe-eulerien-1-2"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:20% 20% 20% 20% 20%;column-gap:0%;">
-<div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="exe-eulerien-1-2-2-1"><img src="external/tikzit_GrapheCheminEuler.jpg" class="contained"><figcaption><span class="codenumber">(a)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(G_1\)</span><div class="autopermalink" data-description="Figure 7.3.8.(a)"><a href="#exe-eulerien-1-2-2-1" title="Copy heading and permalink for Figure 7.3.8.(a)" aria-label="Copy heading and permalink for Figure 7.3.8.(a)">🔗</a></div></figcaption></figure></div>
-<div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="exe-eulerien-1-2-2-2"><img src="external/tikzit_GrapheCheminNonCircuitHamilton.jpg" class="contained"><figcaption><span class="codenumber">(b)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(G_2\)</span><div class="autopermalink" data-description="Figure 7.3.8.(b)"><a href="#exe-eulerien-1-2-2-2" title="Copy heading and permalink for Figure 7.3.8.(b)" aria-label="Copy heading and permalink for Figure 7.3.8.(b)">🔗</a></div></figcaption></figure></div>
-<div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="exe-eulerien-1-2-2-3"><img src="external/tikzit_GrapheCircuitEuler.jpg" class="contained"><figcaption><span class="codenumber">(c)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(G_3\)</span><div class="autopermalink" data-description="Figure 7.3.8.(c)"><a href="#exe-eulerien-1-2-2-3" title="Copy heading and permalink for Figure 7.3.8.(c)" aria-label="Copy heading and permalink for Figure 7.3.8.(c)">🔗</a></div></figcaption></figure></div>
-<div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="exe-eulerien-1-2-2-4"><img src="external/tikzit_GrapheNoEuler.jpg" class="contained"><figcaption><span class="codenumber">(d)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(G_4\)</span><div class="autopermalink" data-description="Figure 7.3.8.(d)"><a href="#exe-eulerien-1-2-2-4" title="Copy heading and permalink for Figure 7.3.8.(d)" aria-label="Copy heading and permalink for Figure 7.3.8.(d)">🔗</a></div></figcaption></figure></div>
-<div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="exe-eulerien-1-2-2-5"><img src="external/tikzit_GrapheNoEuler2.jpg" class="contained"><figcaption><span class="codenumber">(e)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(G_5\)</span><div class="autopermalink" data-description="Figure 7.3.8.(e)"><a href="#exe-eulerien-1-2-2-5" title="Copy heading and permalink for Figure 7.3.8.(e)" aria-label="Copy heading and permalink for Figure 7.3.8.(e)">🔗</a></div></figcaption></figure></div>
-</div></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Chaînes et cycles eulériens<div class="autopermalink" data-description="Figure 7.3.8"><a href="#exe-eulerien-1-2" title="Copy heading and permalink for Figure 7.3.8" aria-label="Copy heading and permalink for Figure 7.3.8">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Exemple 7.3.7"><a href="#exe-eulerien" title="Copy heading and permalink for Exemple 7.3.7" aria-label="Copy heading and permalink for Exemple 7.3.7">🔗</a></div></article><div class="para" id="subs-eulerien-5">Pour montrer l’existence d’une chaîne ou d’un cycle eulérien, on peut essayer d’en trouver un. Pour montrer qu’il n’en existe pas, il faut argumenter un peu plus.<div class="autopermalink" data-description="Paragraphe"><a href="#subs-eulerien-5" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exe-eulerien-1-1" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
+</div> 
+<figure class="figure figure-like" id="exe-eulerien-1-2">
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:20% 20% 20% 20% 20%;column-gap:0%;">
+<div class="sbspanel sbspanel--top top" style="">
+<figure class="figure figure-like" id="exe-eulerien-1-2-2-1"><div class="image-box"><img src="external/tikzit_GrapheCheminEuler.jpg" class="contained"></div>
+<figcaption><span class="codenumber">(a)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(G_1\)</span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.3.8(a)"><a tabindex="-1" href="#exe-eulerien-1-2-2-1" title="Copier le titre et le lien permanent pour Figure 7.3.8(a)" aria-label="Copier le titre et le lien permanent pour Figure 7.3.8(a)">🔗</a></div></figcaption>
+</figure>
 </div>
-<div class="para" id="subs-eulerien-6">Le critère donne une condition suffisante et nécessaire pour l’existence d’une chaîne ou d’un cycle eulérien<div class="autopermalink" data-description="Paragraphe"><a href="#subs-eulerien-6" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="sbspanel sbspanel--top top" style="">
+<figure class="figure figure-like" id="exe-eulerien-1-2-2-2"><div class="image-box"><img src="external/tikzit_GrapheCheminNonCircuitHamilton.jpg" class="contained"></div>
+<figcaption><span class="codenumber">(b)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(G_2\)</span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.3.8(b)"><a tabindex="-1" href="#exe-eulerien-1-2-2-2" title="Copier le titre et le lien permanent pour Figure 7.3.8(b)" aria-label="Copier le titre et le lien permanent pour Figure 7.3.8(b)">🔗</a></div></figcaption>
+</figure>
 </div>
-<article class="proposition theorem-like" id="prop-eulerien"><h4 class="heading">
+<div class="sbspanel sbspanel--top top" style="">
+<figure class="figure figure-like" id="exe-eulerien-1-2-2-3"><div class="image-box"><img src="external/tikzit_GrapheCircuitEuler.jpg" class="contained"></div>
+<figcaption><span class="codenumber">(c)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(G_3\)</span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.3.8(c)"><a tabindex="-1" href="#exe-eulerien-1-2-2-3" title="Copier le titre et le lien permanent pour Figure 7.3.8(c)" aria-label="Copier le titre et le lien permanent pour Figure 7.3.8(c)">🔗</a></div></figcaption>
+</figure>
+</div>
+<div class="sbspanel sbspanel--top top" style="">
+<figure class="figure figure-like" id="exe-eulerien-1-2-2-4"><div class="image-box"><img src="external/tikzit_GrapheNoEuler.jpg" class="contained"></div>
+<figcaption><span class="codenumber">(d)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(G_4\)</span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.3.8(d)"><a tabindex="-1" href="#exe-eulerien-1-2-2-4" title="Copier le titre et le lien permanent pour Figure 7.3.8(d)" aria-label="Copier le titre et le lien permanent pour Figure 7.3.8(d)">🔗</a></div></figcaption>
+</figure>
+</div>
+<div class="sbspanel sbspanel--top top" style="">
+<figure class="figure figure-like" id="exe-eulerien-1-2-2-5"><div class="image-box"><img src="external/tikzit_GrapheNoEuler2.jpg" class="contained"></div>
+<figcaption><span class="codenumber">(e)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(G_5\)</span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.3.8(e)"><a tabindex="-1" href="#exe-eulerien-1-2-2-5" title="Copier le titre et le lien permanent pour Figure 7.3.8(e)" aria-label="Copier le titre et le lien permanent pour Figure 7.3.8(e)">🔗</a></div></figcaption>
+</figure>
+</div>
+</div>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Chaînes et cycles eulériens<div class="autopermalink" aria-hidden="true" data-description="Figure 7.3.8"><a tabindex="-1" href="#exe-eulerien-1-2" title="Copier le titre et le lien permanent pour Figure 7.3.8" aria-label="Copier le titre et le lien permanent pour Figure 7.3.8">🔗</a></div></figcaption>
+</figure><div class="autopermalink" aria-hidden="true" data-description="Exemple 7.3.7"><a tabindex="-1" href="#exe-eulerien" title="Copier le titre et le lien permanent pour Exemple 7.3.7" aria-label="Copier le titre et le lien permanent pour Exemple 7.3.7">🔗</a></div>
+</article>
+<div class="para" id="subs-eulerien-5">Pour montrer l’existence d’une chaîne ou d’un cycle eulérien, on peut essayer d’en trouver un. Pour montrer qu’il n’en existe pas, il faut argumenter un peu plus.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#subs-eulerien-5" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
+</div>
+<div class="para" id="subs-eulerien-6">Le critère donne une condition suffisante et nécessaire pour l’existence d’une chaîne ou d’un cycle eulérien<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#subs-eulerien-6" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="prop-eulerien"><h3 class="heading">
 <span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4>
+</h3>
 <div class="para logical" id="prop-eulerien-1-1">
 <ul class="disc" id="prop-eulerien-1-1-1">
 <li id="prop-eulerien-1-1-1-1">
 <div class="para" id="p-derived-prop-eulerien-1-1-1-1">Un graphe <span class="process-math">\(G\)</span> de trois sommets ou plus possède un cycle eulérien si et seulement si <span class="process-math">\(\deg(s)\)</span> est pair pour tout sommet <span class="process-math">\(s\)</span> de <span class="process-math">\(G\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Point"><a href="#prop-eulerien-1-1-1-1" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Point"><a tabindex="-1" href="#prop-eulerien-1-1-1-1" title="Copier le titre et le lien permanent pour Point" aria-label="Copier le titre et le lien permanent pour Point">🔗</a></div>
 </li>
 <li id="prop-eulerien-1-1-1-2">
-<div class="para" id="p-derived-prop-eulerien-1-1-1-2">Un graphe <span class="process-math">\(G\)</span> possède une chaîne eulérienne si et seulement si il existe exactement deux sommets de <span class="process-math">\(G\)</span> ayant un degré impair.</div>
-<div class="autopermalink" data-description="Point"><a href="#prop-eulerien-1-1-1-2" title="Copy heading and permalink for Point" aria-label="Copy heading and permalink for Point">🔗</a></div>
+<div class="para" id="p-derived-prop-eulerien-1-1-1-2">Un graphe <span class="process-math">\(G\)</span> possède une chaîne eulérienne si et seulement s’il existe exactement zéro ou  deux sommets de <span class="process-math">\(G\)</span> ayant un degré impair.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Point"><a tabindex="-1" href="#prop-eulerien-1-1-1-2" title="Copier le titre et le lien permanent pour Point" aria-label="Copier le titre et le lien permanent pour Point">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Paragraphe"><a href="#prop-eulerien-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#prop-eulerien-1-1" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposition 7.3.9"><a href="#prop-eulerien" title="Copy heading and permalink for Proposition 7.3.9" aria-label="Copy heading and permalink for Proposition 7.3.9">🔗</a></div></article><div class="autopermalink" data-description="Sous-section 7.3.3: Chemins et circuits eulériens"><a href="#subs-eulerien" title="Copy heading and permalink for Sous-section 7.3.3: Chemins et circuits eulériens" aria-label="Copy heading and permalink for Sous-section 7.3.3: Chemins et circuits eulériens">🔗</a></div></section><section class="conclusion" id="concl-connexeEuler"></section><section class="reading-questions" id="rq-connexeEuler"><h3 class="heading hide-type">
+<div class="autopermalink" aria-hidden="true" data-description="Proposition 7.3.9"><a tabindex="-1" href="#prop-eulerien" title="Copier le titre et le lien permanent pour Proposition 7.3.9" aria-label="Copier le titre et le lien permanent pour Proposition 7.3.9">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Sous-section 7.3.3: Chemins et circuits eulériens"><a tabindex="-1" href="#subs-eulerien" title="Copier le titre et le lien permanent pour Sous-section 7.3.3: Chemins et circuits eulériens" aria-label="Copier le titre et le lien permanent pour Sous-section 7.3.3: Chemins et circuits eulériens">🔗</a></div>
+</section>
+<section class="conclusion" id="concl-connexeEuler"></section>
+<section class="reading-questions" id="rq-connexeEuler">
+<h2 class="heading hide-type">
 <span class="type">Questions de compréhension de la lecture</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Questions de compréhension de la lecture</span>
-</h3>
-<section class="introduction" id="rq-connexeEuler-1"><div class="para" id="rq-connexeEuler-1-1">Ces questions sont à faire avant de venir en classe et à remettre au début du cours.<div class="autopermalink" data-description="Paragraphe"><a href="#rq-connexeEuler-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
-</div></section><article class="exercise exercise-like" id="rq-connexeEuler-2"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
-<div class="para" id="rq-connexeEuler-2-1-1">Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.<div class="autopermalink" data-description="Paragraphe"><a href="#rq-connexeEuler-2-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</h2>
+<section class="introduction" id="rq-connexeEuler-1">
+<div class="para" id="rq-connexeEuler-1-1">Ces questions sont à faire avant de venir en classe et à remettre au début du cours.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#rq-connexeEuler-1-1" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
+</div></section>
+<article class="exercise exercise-like" id="rq-connexeEuler-2"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="rq-connexeEuler-2-1-1">Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#rq-connexeEuler-2-1-1" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Question de compréhension 7.3.4.1"><a href="#rq-connexeEuler-2" title="Copy heading and permalink for Question de compréhension 7.3.4.1" aria-label="Copy heading and permalink for Question de compréhension 7.3.4.1">🔗</a></div></article><div class="autopermalink" data-description="Questions de compréhension de la lecture 7.3.4"><a href="#rq-connexeEuler" title="Copy heading and permalink for Questions de compréhension de la lecture 7.3.4" aria-label="Copy heading and permalink for Questions de compréhension de la lecture 7.3.4">🔗</a></div></section><section class="exercises" id="exo-connexeEuler"><h3 class="heading hide-type">
+<div class="autopermalink" aria-hidden="true" data-description="Question de compréhension 7.3.4.1"><a tabindex="-1" href="#rq-connexeEuler-2" title="Copier le titre et le lien permanent pour Question de compréhension 7.3.4.1" aria-label="Copier le titre et le lien permanent pour Question de compréhension 7.3.4.1">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Questions de compréhension de la lecture 7.3.4"><a tabindex="-1" href="#rq-connexeEuler" title="Copier le titre et le lien permanent pour Questions de compréhension de la lecture 7.3.4" aria-label="Copier le titre et le lien permanent pour Questions de compréhension de la lecture 7.3.4">🔗</a></div>
+</section>
+<section class="exercises" id="exo-connexeEuler">
+<h2 class="heading hide-type">
 <span class="type">Exercices</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercices</span>
-</h3>
-<article class="exercise exercise-like" id="exo-connexeChaineSimple"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
-<div class="para" id="exo-connexeChaineSimple-1-1">Soit <span class="process-math">\(G=(S,A)\)</span> un graphe simple connexe. Montrer que si <span class="process-math">\(s, t\)</span> sont des sommets quelconques de <span class="process-math">\(G\text{,}\)</span> alors il existe une chaîne <em class="emphasis">simple</em> reliant <span class="process-math">\(s\)</span> et <span class="process-math">\(t\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#exo-connexeChaineSimple-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</h2>
+<article class="exercise exercise-like" id="exo-connexeChaineSimple"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="exo-connexeChaineSimple-1-1">Soit <span class="process-math">\(G=(S,A)\)</span> un graphe simple connexe. Montrer que si <span class="process-math">\(s, t\)</span> sont des sommets quelconques de <span class="process-math">\(G\text{,}\)</span> alors il existe une chaîne <em class="emphasis">simple</em> reliant <span class="process-math">\(s\)</span> et <span class="process-math">\(t\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exo-connexeChaineSimple-1-1" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
 </div>
-<div class="solutions"><details id="exo-connexeChaineSimple-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="exo-connexeChaineSimple-2-1">Puisque <span class="process-math">\(G\)</span> est connexe, alors il existe une chaîne <span class="process-math">\(s=s_0, s_1, \dots, s_n=t\text{.}\)</span> Supposons que cette chaîne soit de longueur minimale. On veut montrer que cette chaîne est simple.<div class="autopermalink" data-description="Paragraphe"><a href="#exo-connexeChaineSimple-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="solutions">
+<details id="exo-connexeChaineSimple-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="exo-connexeChaineSimple-2-1">Puisque <span class="process-math">\(G\)</span> est connexe, alors il existe une chaîne <span class="process-math">\(s=s_0, s_1, \dots, s_n=t\text{.}\)</span> Supposons que cette chaîne soit de longueur minimale. On veut montrer que cette chaîne est simple.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exo-connexeChaineSimple-2-1" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
 </div>
 <div class="para logical" id="exo-connexeChaineSimple-2-2">
 <div class="para">Supposons le contraire, alors il existe <span class="process-math">\(i, j\)</span> des indices tels que <span class="process-math">\(0\leq i\lt j \leq n\)</span> avec <span class="process-math">\(s_i=s_j\text{.}\)</span> Ainsi, la chaîne</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="exo-connexeChaineSimple-2-2-4">
 \begin{equation*}
 s_0, \dots s_{i-1}, s_i, s_{j+1}, s_{j+2}, \dots s_n
 \end{equation*}
 </div>
 <div class="para">est une chaîne reliant <span class="process-math">\(s\)</span> et <span class="process-math">\(t\)</span> de longueur <span class="process-math">\(n-(j-i)\lt n\text{.}\)</span> Cette chaîne est donc plus courte que la chaîne initiale. Ceci est une contradiction, car on avait supposé que la chaîne était la plus courte possible.</div>
-<div class="autopermalink" data-description="Paragraphe"><a href="#exo-connexeChaineSimple-2-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exo-connexeChaineSimple-2-2" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
 </div>
-<div class="para" id="exo-connexeChaineSimple-2-3">La chaîne <span class="process-math">\(s=s_0, s_1, \dots, s_n=t\)</span> est donc nécessairement une chaîne simple reliant <span class="process-math">\(s\)</span> et <span class="process-math">\(t\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#exo-connexeChaineSimple-2-3" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="exo-connexeChaineSimple-2-3">La chaîne <span class="process-math">\(s=s_0, s_1, \dots, s_n=t\)</span> est donc nécessairement une chaîne simple reliant <span class="process-math">\(s\)</span> et <span class="process-math">\(t\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exo-connexeChaineSimple-2-3" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 7.3.5.1.1"><a href="#exo-connexeChaineSimple-2" title="Copy heading and permalink for Solution 7.3.5.1.1" aria-label="Copy heading and permalink for Solution 7.3.5.1.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Exercice 7.3.5.1"><a href="#exo-connexeChaineSimple" title="Copy heading and permalink for Exercice 7.3.5.1" aria-label="Copy heading and permalink for Exercice 7.3.5.1">🔗</a></div></article><article class="exercise exercise-like" id="exo-addChaine"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
-<div class="introduction" id="exo-addChaine-1"><div class="para" id="exo-addChaine-1-1">Soit <span class="process-math">\(G=(S,A)\)</span> un graphe simple, et soit <span class="process-math">\(s, t, u \in S\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#exo-addChaine-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
-</div></div>
-<article class="task exercise-like" id="exo-addChaine-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="exo-addChaine-2-1-1">Montrer que s’il existe une chaîne de longueur <span class="process-math">\(n\)</span> entre <span class="process-math">\(s\)</span> et <span class="process-math">\(t\text{,}\)</span> et s’il existe une chaîne de longueur <span class="process-math">\(m\)</span> entre <span class="process-math">\(t\)</span> et <span class="process-math">\(u\text{,}\)</span> alors il existe une chaîne de longueur <span class="process-math">\(m+n\)</span> entre <span class="process-math">\(s\)</span> et <span class="process-math">\(u\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#exo-addChaine-2-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 7.3.5.1.1"><a tabindex="-1" href="#exo-connexeChaineSimple-2" title="Copier le titre et le lien permanent pour Solution 7.3.5.1.1" aria-label="Copier le titre et le lien permanent pour Solution 7.3.5.1.1">🔗</a></div>
+</div></details>
 </div>
-<div class="autopermalink" data-description="Tâche 7.3.5.2.a"><a href="#exo-addChaine-2" title="Copy heading and permalink for Tâche 7.3.5.2.a" aria-label="Copy heading and permalink for Tâche 7.3.5.2.a">🔗</a></div></article><article class="task exercise-like" id="exo-addChaine-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="exo-addChaine-3-1-1">Montrer que s’il existe une chaîne de longueur <span class="process-math">\(n\)</span> entre <span class="process-math">\(s\)</span> et <span class="process-math">\(t\text{,}\)</span> une arête entre <span class="process-math">\(t\)</span> et <span class="process-math">\(u\text{,}\)</span> et ’il existe une chaîne de longueur <span class="process-math">\(m\)</span> entre <span class="process-math">\(s\)</span> et <span class="process-math">\(u\text{,}\)</span> alors il existe un cycle de longueur <span class="process-math">\(m+n+1\)</span> qui commence à <span class="process-math">\(s\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#exo-addChaine-3-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercice 7.3.5.1"><a tabindex="-1" href="#exo-connexeChaineSimple" title="Copier le titre et le lien permanent pour Exercice 7.3.5.1" aria-label="Copier le titre et le lien permanent pour Exercice 7.3.5.1">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exo-addChaine"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="introduction" id="exo-addChaine-1">
+<div class="para" id="exo-addChaine-1-1">Soit <span class="process-math">\(G=(S,A)\)</span> un graphe simple, et soit <span class="process-math">\(s, t, u \in S\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exo-addChaine-1-1" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Tâche 7.3.5.2.b"><a href="#exo-addChaine-3" title="Copy heading and permalink for Tâche 7.3.5.2.b" aria-label="Copy heading and permalink for Tâche 7.3.5.2.b">🔗</a></div></article><div class="autopermalink" data-description="Exercice 7.3.5.2"><a href="#exo-addChaine" title="Copy heading and permalink for Exercice 7.3.5.2" aria-label="Copy heading and permalink for Exercice 7.3.5.2">🔗</a></div></article><article class="exercise exercise-like" id="exo-proprieteGrapheBiparti"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
-<div class="para" id="exo-proprieteGrapheBiparti-1-1">Soit <span class="process-math">\(G=(S_1\cup S_2,A)\)</span> <a href="sec-introGraphe.html#def-grapheBi" class="xref" data-knowl="./knowl/xref/def-grapheBi.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Définition 7.1.33: Graphe biparti">un graphe biparti</a> (avec <span class="process-math">\(S_1\)</span> et <span class="process-math">\(S_2\)</span> les parties de <span class="process-math">\(G\)</span>). Soit <span class="process-math">\(s_0, s_1, \dots, s_n\)</span> une chaîne de <span class="process-math">\(G\text{,}\)</span> et supposons que <span class="process-math">\(s_1\in S_1\text{.}\)</span> Montrer que pour les sommets d’indice impair dans cette chaîne sont des éléments de <span class="process-math">\(S_1\text{.}\)</span> Plus formellement, montrer que si <span class="process-math">\(k\in \N\)</span> tel que <span class="process-math">\(1\leq 2k+1 \leq n\text{,}\)</span> alors <span class="process-math">\(s_{2k+1}\in S_1\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#exo-proprieteGrapheBiparti-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
 </div>
-<div class="solutions"><details id="exo-proprieteGrapheBiparti-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="exo-proprieteGrapheBiparti-2-1">Supposons par contradiction qu’il existe un des sommets d’indice impair qui est un élément de <span class="process-math">\(S_2\text{,}\)</span> alors on peut choisir <span class="process-math">\(s_{2k+1}\in S_2\)</span> avec l’indice le plus petit possible. Puisque <span class="process-math">\(s_1\in S_1\text{,}\)</span> on a que <span class="process-math">\(3\leq 2k+1\leq n\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#exo-proprieteGrapheBiparti-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<article class="task exercise-like" id="exo-addChaine-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="exo-addChaine-2-1-1">Montrer que s’il existe une chaîne de longueur <span class="process-math">\(n\)</span> entre <span class="process-math">\(s\)</span> et <span class="process-math">\(t\text{,}\)</span> et s’il existe une chaîne de longueur <span class="process-math">\(m\)</span> entre <span class="process-math">\(t\)</span> et <span class="process-math">\(u\text{,}\)</span> alors il existe une chaîne de longueur <span class="process-math">\(m+n\)</span> entre <span class="process-math">\(s\)</span> et <span class="process-math">\(u\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exo-addChaine-2-1-1" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
 </div>
-<div class="para" id="exo-proprieteGrapheBiparti-2-2">Or, <span class="process-math">\(\{s_{2k-1},s_{2k}\}\)</span> et <span class="process-math">\(\{s_{2k}, s_{2k+1}\}\)</span> sont des arêtes de <span class="process-math">\(G\text{.}\)</span> Puisque <span class="process-math">\(2k+1\)</span> est minimal, on doit avoir <span class="process-math">\(s_{2k-1}\in S_1\text{,}\)</span> mais alors <span class="process-math">\(s_{2k}\in S_2\)</span> et donc <span class="process-math">\(s_{2k+1}\in S_1\text{.}\)</span> Puisque <span class="process-math">\(S_1\cap S_2 = \emptyset\text{,}\)</span> on obtient une contradiction.<div class="autopermalink" data-description="Paragraphe"><a href="#exo-proprieteGrapheBiparti-2-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Tâche 7.3.5.2.a"><a tabindex="-1" href="#exo-addChaine-2" title="Copier le titre et le lien permanent pour Tâche 7.3.5.2.a" aria-label="Copier le titre et le lien permanent pour Tâche 7.3.5.2.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="exo-addChaine-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="exo-addChaine-3-1-1">Montrer que s’il existe une chaîne de longueur <span class="process-math">\(n\)</span> entre <span class="process-math">\(s\)</span> et <span class="process-math">\(t\text{,}\)</span> une arête entre <span class="process-math">\(t\)</span> et <span class="process-math">\(u\text{,}\)</span> et ’il existe une chaîne de longueur <span class="process-math">\(m\)</span> entre <span class="process-math">\(s\)</span> et <span class="process-math">\(u\text{,}\)</span> alors il existe un cycle de longueur <span class="process-math">\(m+n+1\)</span> qui commence à <span class="process-math">\(s\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exo-addChaine-3-1-1" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
 </div>
-<div class="para" id="exo-proprieteGrapheBiparti-2-3">Par ce qui précède, il ne peut pas y avoir de sommet de la chaîne d’indice impair dans <span class="process-math">\(S_2\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#exo-proprieteGrapheBiparti-2-3" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Tâche 7.3.5.2.b"><a tabindex="-1" href="#exo-addChaine-3" title="Copier le titre et le lien permanent pour Tâche 7.3.5.2.b" aria-label="Copier le titre et le lien permanent pour Tâche 7.3.5.2.b">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Exercice 7.3.5.2"><a tabindex="-1" href="#exo-addChaine" title="Copier le titre et le lien permanent pour Exercice 7.3.5.2" aria-label="Copier le titre et le lien permanent pour Exercice 7.3.5.2">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exo-proprieteGrapheBiparti"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="exo-proprieteGrapheBiparti-1-1">Soit <span class="process-math">\(G=(S_1\cup S_2,A)\)</span> <a href="sec-introGraphe.html#def-grapheBi" class="xref" data-knowl="./knowl/xref/def-grapheBi.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Définition 7.1.33: Graphe biparti">un graphe biparti</a> (avec <span class="process-math">\(S_1\)</span> et <span class="process-math">\(S_2\)</span> les parties de <span class="process-math">\(G\)</span>). Soit <span class="process-math">\(s_0, s_1, \dots, s_n\)</span> une chaîne de <span class="process-math">\(G\text{,}\)</span> et supposons que <span class="process-math">\(s_1\in S_1\text{.}\)</span> Montrer que pour les sommets d’indice impair dans cette chaîne sont des éléments de <span class="process-math">\(S_1\text{.}\)</span> Plus formellement, montrer que si <span class="process-math">\(k\in \N\)</span> tel que <span class="process-math">\(1\leq 2k+1 \leq n\text{,}\)</span> alors <span class="process-math">\(s_{2k+1}\in S_1\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exo-proprieteGrapheBiparti-1-1" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
 </div>
-<article class="remark remark-like" id="exo-proprieteGrapheBiparti-2-4"><h5 class="heading">
+<div class="solutions">
+<details id="exo-proprieteGrapheBiparti-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="exo-proprieteGrapheBiparti-2-1">Supposons par contradiction qu’il existe un des sommets d’indice impair qui est un élément de <span class="process-math">\(S_2\text{,}\)</span> alors on peut choisir <span class="process-math">\(s_{2k+1}\in S_2\)</span> avec l’indice le plus petit possible. Puisque <span class="process-math">\(s_1\in S_1\text{,}\)</span> on a que <span class="process-math">\(3\leq 2k+1\leq n\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exo-proprieteGrapheBiparti-2-1" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
+</div>
+<div class="para" id="exo-proprieteGrapheBiparti-2-2">Or, <span class="process-math">\(\{s_{2k-1},s_{2k}\}\)</span> et <span class="process-math">\(\{s_{2k}, s_{2k+1}\}\)</span> sont des arêtes de <span class="process-math">\(G\text{.}\)</span> Puisque <span class="process-math">\(2k+1\)</span> est minimal, on doit avoir <span class="process-math">\(s_{2k-1}\in S_1\text{,}\)</span> mais alors <span class="process-math">\(s_{2k}\in S_2\)</span> et donc <span class="process-math">\(s_{2k+1}\in S_1\text{.}\)</span> Puisque <span class="process-math">\(S_1\cap S_2 = \emptyset\text{,}\)</span> on obtient une contradiction.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exo-proprieteGrapheBiparti-2-2" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
+</div>
+<div class="para" id="exo-proprieteGrapheBiparti-2-3">Par ce qui précède, il ne peut pas y avoir de sommet de la chaîne d’indice impair dans <span class="process-math">\(S_2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exo-proprieteGrapheBiparti-2-3" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
+</div>
+<article class="remark remark-like" id="exo-proprieteGrapheBiparti-2-4"><h4 class="heading">
 <span class="type">Remarque</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h5>
-<div class="para" id="exo-proprieteGrapheBiparti-2-4-1">Par ce qui précède, on obtient directement que <span class="process-math">\(s_{2k}\in S_2\)</span> lorsque <span class="process-math">\(0\leq 2k \leq n\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#exo-proprieteGrapheBiparti-2-4-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+</h4>
+<div class="para" id="exo-proprieteGrapheBiparti-2-4-1">Par ce qui précède, on obtient directement que <span class="process-math">\(s_{2k}\in S_2\)</span> lorsque <span class="process-math">\(0\leq 2k \leq n\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exo-proprieteGrapheBiparti-2-4-1" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remarque 7.3.10"><a href="#exo-proprieteGrapheBiparti-2-4" title="Copy heading and permalink for Remarque 7.3.10" aria-label="Copy heading and permalink for Remarque 7.3.10">🔗</a></div></article><div class="autopermalink" data-description="Solution 7.3.5.3.1"><a href="#exo-proprieteGrapheBiparti-2" title="Copy heading and permalink for Solution 7.3.5.3.1" aria-label="Copy heading and permalink for Solution 7.3.5.3.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Exercice 7.3.5.3"><a href="#exo-proprieteGrapheBiparti" title="Copy heading and permalink for Exercice 7.3.5.3" aria-label="Copy heading and permalink for Exercice 7.3.5.3">🔗</a></div></article><article class="exercise exercise-like" id="exo-carBiparti"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
-<div class="para" id="exo-carBiparti-1-1">Montrer qu’un graphe <span class="process-math">\(G=(S,A)\)</span> est un graphe biparti si et seulement si <span class="process-math">\(G\)</span> ne possède aucun cycle de longueur impaire.<div class="autopermalink" data-description="Paragraphe"><a href="#exo-carBiparti-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Remarque 7.3.10"><a tabindex="-1" href="#exo-proprieteGrapheBiparti-2-4" title="Copier le titre et le lien permanent pour Remarque 7.3.10" aria-label="Copier le titre et le lien permanent pour Remarque 7.3.10">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Solution 7.3.5.3.1"><a tabindex="-1" href="#exo-proprieteGrapheBiparti-2" title="Copier le titre et le lien permanent pour Solution 7.3.5.3.1" aria-label="Copier le titre et le lien permanent pour Solution 7.3.5.3.1">🔗</a></div>
+</div></details>
 </div>
-<div class="solutions"><details id="exo-carBiparti-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="exo-carBiparti-2-1">Supposons que <span class="process-math">\(G\)</span> soit un graphe biparti avec <span class="process-math">\(S_1\)</span> et <span class="process-math">\(S_2\)</span> les parties de <span class="process-math">\(G\text{.}\)</span> Supposons qu’il existe un cycle de longueur impair <span class="process-math">\(s_0, s_1, \dots, s_{2k+1}\)</span> avec <span class="process-math">\(s_1\in S_1\text{.}\)</span> On a alors <span class="process-math">\(s_0\in S_2\text{.}\)</span> De plus, par l’exercice <a href="sec-chaineEuler.html#exo-proprieteGrapheBiparti" class="xref" data-knowl="./knowl/xref/exo-proprieteGrapheBiparti.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Exercice 7.3.5.3">7.3.5.3</a>, on a également que <span class="process-math">\(s_{2k+1}\in S_1\text{.}\)</span> Cependant, puisque <span class="process-math">\(s_0, s_1, \dots, s_{2k+1}\)</span> ext un cycle, on a <span class="process-math">\(s_0=s_{2k+1}\text{.}\)</span> Ceci est impossible, car <span class="process-math">\(S_1\cap S_2 =\emptyset\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#exo-carBiparti-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercice 7.3.5.3"><a tabindex="-1" href="#exo-proprieteGrapheBiparti" title="Copier le titre et le lien permanent pour Exercice 7.3.5.3" aria-label="Copier le titre et le lien permanent pour Exercice 7.3.5.3">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exo-carBiparti"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="exo-carBiparti-1-1">Montrer qu’un graphe <span class="process-math">\(G=(S,A)\)</span> est un graphe biparti si et seulement si <span class="process-math">\(G\)</span> ne possède aucun cycle de longueur impaire.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exo-carBiparti-1-1" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
 </div>
-<div class="para" id="exo-carBiparti-2-2">Supposons maintenant que <span class="process-math">\(G\)</span> ne possède aucun cycle de longueur impaire. On suppose que <span class="process-math">\(G\)</span> est connexe. Sinon, on utilise l’argument ci-dessous sur chaque composante connexe de <span class="process-math">\(G\text{.}\)</span> On choisit un sommet <span class="process-math">\(s_0\)</span> quelconque de <span class="process-math">\(G\text{,}\)</span> et on pose <span class="process-math">\(S_1\)</span> l’ensemble des sommets relié à <span class="process-math">\(s_0\)</span> par une chaîne de longueur impaire, et <span class="process-math">\(S_2\)</span> l’ensemble des sommets relié à <span class="process-math">\(s_0\)</span> par une chaîne de longueur paire. Puisque <span class="process-math">\(G\)</span> est connexe, on a bien <span class="process-math">\(S=S_1\cup S_2\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#exo-carBiparti-2-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="solutions">
+<details id="exo-carBiparti-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="exo-carBiparti-2-1">Supposons que <span class="process-math">\(G\)</span> soit un graphe biparti avec <span class="process-math">\(S_1\)</span> et <span class="process-math">\(S_2\)</span> les parties de <span class="process-math">\(G\text{.}\)</span> Supposons qu’il existe un cycle de longueur impair <span class="process-math">\(s_0, s_1, \dots, s_{2k+1}\)</span> avec <span class="process-math">\(s_1\in S_1\text{.}\)</span> On a alors <span class="process-math">\(s_0\in S_2\text{.}\)</span> De plus, par l’exercice <a href="sec-chaineEuler.html#exo-proprieteGrapheBiparti" class="xref" data-knowl="./knowl/xref/exo-proprieteGrapheBiparti.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Exercice 7.3.5.3">7.3.5.3</a>, on a également que <span class="process-math">\(s_{2k+1}\in S_1\text{.}\)</span> Cependant, puisque <span class="process-math">\(s_0, s_1, \dots, s_{2k+1}\)</span> ext un cycle, on a <span class="process-math">\(s_0=s_{2k+1}\text{.}\)</span> Ceci est impossible, car <span class="process-math">\(S_1\cap S_2 =\emptyset\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exo-carBiparti-2-1" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
 </div>
-<div class="para" id="exo-carBiparti-2-3">On commence par montrer que <span class="process-math">\(S_1\cap S_2=\emptyset\text{.}\)</span> Si <span class="process-math">\(t\in S_1\cap S_2\text{,}\)</span> alors il existe une chaîne de longueur impaire ainsi qu’une chaîne de longueur paire entre <span class="process-math">\(s_0\)</span> et <span class="process-math">\(t\text{.}\)</span> Ainsi, par l’exercice <a href="sec-chaineEuler.html#exo-addChaine" class="xref" data-knowl="./knowl/xref/exo-addChaine.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Exercice 7.3.5.2">7.3.5.2</a>, il existe un cycle de longueur impaire dans <span class="process-math">\(G\text{,}\)</span> ce qui est une contradiction.<div class="autopermalink" data-description="Paragraphe"><a href="#exo-carBiparti-2-3" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="exo-carBiparti-2-2">Supposons maintenant que <span class="process-math">\(G\)</span> ne possède aucun cycle de longueur impaire. On suppose que <span class="process-math">\(G\)</span> est connexe. Sinon, on utilise l’argument ci-dessous sur chaque composante connexe de <span class="process-math">\(G\text{.}\)</span> On choisit un sommet <span class="process-math">\(s_0\)</span> quelconque de <span class="process-math">\(G\text{,}\)</span> et on pose <span class="process-math">\(S_1\)</span> l’ensemble des sommets relié à <span class="process-math">\(s_0\)</span> par une chaîne de longueur impaire, et <span class="process-math">\(S_2\)</span> l’ensemble des sommets relié à <span class="process-math">\(s_0\)</span> par une chaîne de longueur paire. Puisque <span class="process-math">\(G\)</span> est connexe, on a bien <span class="process-math">\(S=S_1\cup S_2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exo-carBiparti-2-2" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
 </div>
-<div class="para" id="exo-carBiparti-2-4">Il reste maintenant à montrer qu’il n’y a pas d’arête entre deux sommets de <span class="process-math">\(S_i\text{,}\)</span> pour <span class="process-math">\(i=1\)</span> et pour <span class="process-math">\(i=2\text{.}\)</span> Supposons le contraire. Ainsi, il existe une arête entre <span class="process-math">\(t_1, t_2\in S_i\)</span> pour <span class="process-math">\(i=1\)</span> ou <span class="process-math">\(i=2\text{.}\)</span> De plus, on sait qu’il existe une chaîne de longueur <span class="process-math">\(n\equiv i \mod 2\)</span> entre <span class="process-math">\(s_0\)</span> et <span class="process-math">\(t_1\text{,}\)</span> ainsi qu’une chaîne de longueur <span class="process-math">\(m\equiv i \mod 2\text{.}\)</span> Encore par l’exercice <a href="sec-chaineEuler.html#exo-addChaine" class="xref" data-knowl="./knowl/xref/exo-addChaine.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Exercice 7.3.5.2">7.3.5.2</a>, il existe un cycle de longueur <span class="process-math">\(n+m+1\equiv i+i+1\mod 2 \equiv 1 \mod 2\text{,}\)</span> c’est-à-dire qu’il existe un cycle de longueur impaire, ce qui est en contradiction avec notre hypothèse.<div class="autopermalink" data-description="Paragraphe"><a href="#exo-carBiparti-2-4" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="exo-carBiparti-2-3">On commence par montrer que <span class="process-math">\(S_1\cap S_2=\emptyset\text{.}\)</span> Si <span class="process-math">\(t\in S_1\cap S_2\text{,}\)</span> alors il existe une chaîne de longueur impaire ainsi qu’une chaîne de longueur paire entre <span class="process-math">\(s_0\)</span> et <span class="process-math">\(t\text{.}\)</span> Ainsi, par l’exercice <a href="sec-chaineEuler.html#exo-addChaine" class="xref" data-knowl="./knowl/xref/exo-addChaine.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Exercice 7.3.5.2">7.3.5.2</a>, il existe un cycle de longueur impaire dans <span class="process-math">\(G\text{,}\)</span> ce qui est une contradiction.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exo-carBiparti-2-3" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 7.3.5.4.1"><a href="#exo-carBiparti-2" title="Copy heading and permalink for Solution 7.3.5.4.1" aria-label="Copy heading and permalink for Solution 7.3.5.4.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Exercice 7.3.5.4"><a href="#exo-carBiparti" title="Copy heading and permalink for Exercice 7.3.5.4" aria-label="Copy heading and permalink for Exercice 7.3.5.4">🔗</a></div></article><article class="exercise exercise-like" id="exo-aretePont"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
-<div class="para" id="exo-aretePont-1-1">Soit <span class="process-math">\(G=(S,A)\)</span> un graphe simple connexe tel que <span class="process-math">\(S=S_1\cup S_2\text{,}\)</span> <span class="process-math">\(S_1\cap S_2=\emptyset\text{,}\)</span> <span class="process-math">\(s_1\in S_1\)</span> et <span class="process-math">\(s_2\in S_2\text{.}\)</span> Montrer qu’il existe <span class="process-math">\(u_1\in S_1\)</span> et <span class="process-math">\(u_2\in S_2\)</span> tels que <span class="process-math">\(\{u_1,u_2\}\)</span> est une arête de <span class="process-math">\(G\text{,}\)</span> c’est-à-dire que <span class="process-math">\(\{u_1,u_2\}\in A\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#exo-aretePont-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="exo-carBiparti-2-4">Il reste maintenant à montrer qu’il n’y a pas d’arête entre deux sommets de <span class="process-math">\(S_i\text{,}\)</span> pour <span class="process-math">\(i=1\)</span> et pour <span class="process-math">\(i=2\text{.}\)</span> Supposons le contraire. Ainsi, il existe une arête entre <span class="process-math">\(t_1, t_2\in S_i\)</span> pour <span class="process-math">\(i=1\)</span> ou <span class="process-math">\(i=2\text{.}\)</span> De plus, on sait qu’il existe une chaîne de longueur <span class="process-math">\(n\equiv i \mod 2\)</span> entre <span class="process-math">\(s_0\)</span> et <span class="process-math">\(t_1\text{,}\)</span> ainsi qu’une chaîne de longueur <span class="process-math">\(m\equiv i \mod 2\text{.}\)</span> Encore par l’exercice <a href="sec-chaineEuler.html#exo-addChaine" class="xref" data-knowl="./knowl/xref/exo-addChaine.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Exercice 7.3.5.2">7.3.5.2</a>, il existe un cycle de longueur <span class="process-math">\(n+m+1\equiv i+i+1\mod 2 \equiv 1 \mod 2\text{,}\)</span> c’est-à-dire qu’il existe un cycle de longueur impaire, ce qui est en contradiction avec notre hypothèse.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exo-carBiparti-2-4" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Exercice 7.3.5.5"><a href="#exo-aretePont" title="Copy heading and permalink for Exercice 7.3.5.5" aria-label="Copy heading and permalink for Exercice 7.3.5.5">🔗</a></div></article><article class="exercise exercise-like" id="exo-connexeEuler-7"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
-<div class="para" id="exo-connexeEuler-7-1-1">Soit <span class="process-math">\(G, H\)</span> deux graphes simples tels qu’il existe un isomorphisme <span class="process-math">\(f\)</span> entre eux, c’est-à-dire que <span class="process-math">\(G\cong H\text{,}\)</span> montrer que si <span class="process-math">\(s_0, s_1, \dots, s_n\)</span> est une chaîne de <span class="process-math">\(G\text{,}\)</span> alors <span class="process-math">\(f(s_1), f(s_2), \dots, f(s_n)\)</span> est une chaîne de <span class="process-math">\(H\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#exo-connexeEuler-7-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 7.3.5.4.1"><a tabindex="-1" href="#exo-carBiparti-2" title="Copier le titre et le lien permanent pour Solution 7.3.5.4.1" aria-label="Copier le titre et le lien permanent pour Solution 7.3.5.4.1">🔗</a></div>
+</div></details>
 </div>
-<div class="autopermalink" data-description="Exercice 7.3.5.6"><a href="#exo-connexeEuler-7" title="Copy heading and permalink for Exercice 7.3.5.6" aria-label="Copy heading and permalink for Exercice 7.3.5.6">🔗</a></div></article><article class="exercise exercise-like" id="exo-proofPropComposanteConnexe"><h4 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Exercice 7.3.5.4"><a tabindex="-1" href="#exo-carBiparti" title="Copier le titre et le lien permanent pour Exercice 7.3.5.4" aria-label="Copier le titre et le lien permanent pour Exercice 7.3.5.4">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exo-aretePont"><h3 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="exo-aretePont-1-1">Soit <span class="process-math">\(G=(S,A)\)</span> un graphe simple connexe tel que <span class="process-math">\(S=S_1\cup S_2\text{,}\)</span> <span class="process-math">\(S_1\cap S_2=\emptyset\text{,}\)</span> <span class="process-math">\(s_1\in S_1\)</span> et <span class="process-math">\(s_2\in S_2\text{.}\)</span> Montrer qu’il existe <span class="process-math">\(u_1\in S_1\)</span> et <span class="process-math">\(u_2\in S_2\)</span> tels que <span class="process-math">\(\{u_1,u_2\}\)</span> est une arête de <span class="process-math">\(G\text{,}\)</span> c’est-à-dire que <span class="process-math">\(\{u_1,u_2\}\in A\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exo-aretePont-1-1" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercice 7.3.5.5"><a tabindex="-1" href="#exo-aretePont" title="Copier le titre et le lien permanent pour Exercice 7.3.5.5" aria-label="Copier le titre et le lien permanent pour Exercice 7.3.5.5">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exo-connexeEuler-7"><h3 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="exo-connexeEuler-7-1-1">Soit <span class="process-math">\(G, H\)</span> deux graphes simples tels qu’il existe un isomorphisme <span class="process-math">\(f\)</span> entre eux, c’est-à-dire que <span class="process-math">\(G\cong H\text{,}\)</span> montrer que si <span class="process-math">\(s_0, s_1, \dots, s_n\)</span> est une chaîne de <span class="process-math">\(G\text{,}\)</span> alors <span class="process-math">\(f(s_1), f(s_2), \dots, f(s_n)\)</span> est une chaîne de <span class="process-math">\(H\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exo-connexeEuler-7-1-1" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercice 7.3.5.6"><a tabindex="-1" href="#exo-connexeEuler-7" title="Copier le titre et le lien permanent pour Exercice 7.3.5.6" aria-label="Copier le titre et le lien permanent pour Exercice 7.3.5.6">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exo-proofPropComposanteConnexe"><h3 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="introduction" id="exo-proofPropComposanteConnexe-1">
-<div class="para" id="exo-proofPropComposanteConnexe-1-1">On veut démontrer la proposition <a href="sec-chaineEuler.html#prop-composanteConnexe" class="xref" data-knowl="./knowl/xref/prop-composanteConnexe.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Proposition 7.3.5">7.3.5</a>. Soit <span class="process-math">\(G=(S,A)\)</span> un graphe simple tel que <span class="process-math">\(|S|\in \N^\ast\text{,}\)</span> on définit <span class="process-math">\(G_i=(S_i,A_i)\)</span> successivement de la façon suivante.<div class="autopermalink" data-description="Paragraphe"><a href="#exo-proofPropComposanteConnexe-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="exo-proofPropComposanteConnexe-1-1">On veut démontrer la proposition <a href="sec-chaineEuler.html#prop-composanteConnexe" class="xref" data-knowl="./knowl/xref/prop-composanteConnexe.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Proposition 7.3.5">7.3.5</a>. Soit <span class="process-math">\(G=(S,A)\)</span> un graphe simple tel que <span class="process-math">\(|S|\in \N^\ast\text{,}\)</span> on définit <span class="process-math">\(G_i=(S_i,A_i)\)</span> successivement de la façon suivante.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exo-proofPropComposanteConnexe-1-1" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
 </div>
-<div class="para" id="exo-proofPropComposanteConnexe-1-2">On choisit un sommet quelconque <span class="process-math">\(s_1\in S\text{.}\)</span> On pose <span class="process-math">\(S_1\)</span> l’ensemble des sommets de <span class="process-math">\(G\)</span> reliés à <span class="process-math">\(s_1\)</span> par une chaîne. On pose <span class="process-math">\(G_1\)</span> comme étant le <a href="sec-introGraphe.html#def-sousGrapheInduit" class="xref" data-knowl="./knowl/xref/def-sousGrapheInduit.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Définition 7.1.50">sous-graphe de <span class="process-math">\(G\)</span> induit par <span class="process-math">\(S_1\)</span></a>.<div class="autopermalink" data-description="Paragraphe"><a href="#exo-proofPropComposanteConnexe-1-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="exo-proofPropComposanteConnexe-1-2">On choisit un sommet quelconque <span class="process-math">\(s_1\in S\text{.}\)</span> On pose <span class="process-math">\(S_1\)</span> l’ensemble des sommets de <span class="process-math">\(G\)</span> reliés à <span class="process-math">\(s_1\)</span> par une chaîne. On pose <span class="process-math">\(G_1\)</span> comme étant le <a href="sec-introGraphe.html#def-sousGrapheInduit" class="xref" data-knowl="./knowl/xref/def-sousGrapheInduit.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Définition 7.1.50">sous-graphe de <span class="process-math">\(G\)</span> induit par <span class="process-math">\(S_1\)</span></a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exo-proofPropComposanteConnexe-1-2" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
 </div>
-<div class="para" id="exo-proofPropComposanteConnexe-1-3">Supposons maintenant qu’on ait défini les sous-graphes <span class="process-math">\(G_1=(S_1,A_1)\)</span> jusqu’à <span class="process-math">\(G_k=(S_k,A_k)\)</span> pour un certain entier positif <span class="process-math">\(k\text{.}\)</span> Si <span class="process-math">\(S=\bigcup_{i=1}^k S_i=S_1\cup S_2\cup \cdots \cup S_k\text{,}\)</span> alors on a terminé. Sinon, il existe un sommet <span class="process-math">\(s_{k+1}\in S-\bigl(S_1\cup\cdots \cup S_k \bigr)\text{.}\)</span> On veut définir <span class="process-math">\(G_{k+1}\)</span> à l’aide de ce sommet.<div class="autopermalink" data-description="Paragraphe"><a href="#exo-proofPropComposanteConnexe-1-3" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="exo-proofPropComposanteConnexe-1-3">Supposons maintenant qu’on ait défini les sous-graphes <span class="process-math">\(G_1=(S_1,A_1)\)</span> jusqu’à <span class="process-math">\(G_k=(S_k,A_k)\)</span> pour un certain entier positif <span class="process-math">\(k\text{.}\)</span> Si <span class="process-math">\(S=\bigcup_{i=1}^k S_i=S_1\cup S_2\cup \cdots \cup S_k\text{,}\)</span> alors on a terminé. Sinon, il existe un sommet <span class="process-math">\(s_{k+1}\in S-\bigl(S_1\cup\cdots \cup S_k \bigr)\text{.}\)</span> On veut définir <span class="process-math">\(G_{k+1}\)</span> à l’aide de ce sommet.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exo-proofPropComposanteConnexe-1-3" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
 </div>
-<div class="para" id="exo-proofPropComposanteConnexe-1-4">On pose <span class="process-math">\(S_{k+1}\)</span> l’ensemble des sommets qui sont reliés à <span class="process-math">\(s_{k+1}\)</span> par une chaîne de <span class="process-math">\(G\text{.}\)</span> Finalement on pose <span class="process-math">\(G_{k+1}\)</span> le sous-graphe de <span class="process-math">\(G\)</span> induit par <span class="process-math">\(S_{k+1}\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#exo-proofPropComposanteConnexe-1-4" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="para" id="exo-proofPropComposanteConnexe-1-4">On pose <span class="process-math">\(S_{k+1}\)</span> l’ensemble des sommets qui sont reliés à <span class="process-math">\(s_{k+1}\)</span> par une chaîne de <span class="process-math">\(G\text{.}\)</span> Finalement on pose <span class="process-math">\(G_{k+1}\)</span> le sous-graphe de <span class="process-math">\(G\)</span> induit par <span class="process-math">\(S_{k+1}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exo-proofPropComposanteConnexe-1-4" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="exo-proofPropComposanteConnexe-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="exo-proofPropComposanteConnexe-2-1-1">Montrer que les graphes <span class="process-math">\(G_i\)</span> obtenus dans le processus précédent sont connexes.<div class="autopermalink" data-description="Paragraphe"><a href="#exo-proofPropComposanteConnexe-2-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<article class="task exercise-like" id="exo-proofPropComposanteConnexe-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="exo-proofPropComposanteConnexe-2-1-1">Montrer que les graphes <span class="process-math">\(G_i\)</span> obtenus dans le processus précédent sont connexes.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exo-proofPropComposanteConnexe-2-1-1" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Tâche 7.3.5.7.a"><a href="#exo-proofPropComposanteConnexe-2" title="Copy heading and permalink for Tâche 7.3.5.7.a" aria-label="Copy heading and permalink for Tâche 7.3.5.7.a">🔗</a></div></article><article class="task exercise-like" id="exo-proofPropComposanteConnexe-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="exo-proofPropComposanteConnexe-3-1-1">Montrer que si <span class="process-math">\(i \lt j\text{,}\)</span> et si  <span class="process-math">\(S_i\)</span> et <span class="process-math">\(S_j\)</span> sont les ensembles obtenus dans le processus précédent, alors <span class="process-math">\(S_i\cap S_j=\emptyset\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#exo-proofPropComposanteConnexe-3-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Tâche 7.3.5.7.a"><a tabindex="-1" href="#exo-proofPropComposanteConnexe-2" title="Copier le titre et le lien permanent pour Tâche 7.3.5.7.a" aria-label="Copier le titre et le lien permanent pour Tâche 7.3.5.7.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="exo-proofPropComposanteConnexe-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="exo-proofPropComposanteConnexe-3-1-1">Montrer que si <span class="process-math">\(i \lt j\text{,}\)</span> et si  <span class="process-math">\(S_i\)</span> et <span class="process-math">\(S_j\)</span> sont les ensembles obtenus dans le processus précédent, alors <span class="process-math">\(S_i\cap S_j=\emptyset\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exo-proofPropComposanteConnexe-3-1-1" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Tâche 7.3.5.7.b"><a href="#exo-proofPropComposanteConnexe-3" title="Copy heading and permalink for Tâche 7.3.5.7.b" aria-label="Copy heading and permalink for Tâche 7.3.5.7.b">🔗</a></div></article><article class="task exercise-like" id="exo-proofPropComposanteConnexe-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="exo-proofPropComposanteConnexe-4-1-1">Montrer que le processus précédent se termine en un nombre fini d’étapes, c’est-à-dire qu’il existe un entier positif <span class="process-math">\(k\)</span> tel que <span class="process-math">\(S=S_1\cup\cdots \cup S_k\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#exo-proofPropComposanteConnexe-4-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Tâche 7.3.5.7.b"><a tabindex="-1" href="#exo-proofPropComposanteConnexe-3" title="Copier le titre et le lien permanent pour Tâche 7.3.5.7.b" aria-label="Copier le titre et le lien permanent pour Tâche 7.3.5.7.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="exo-proofPropComposanteConnexe-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="exo-proofPropComposanteConnexe-4-1-1">Montrer que le processus précédent se termine en un nombre fini d’étapes, c’est-à-dire qu’il existe un entier positif <span class="process-math">\(k\)</span> tel que <span class="process-math">\(S=S_1\cup\cdots \cup S_k\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exo-proofPropComposanteConnexe-4-1-1" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Tâche 7.3.5.7.c"><a href="#exo-proofPropComposanteConnexe-4" title="Copy heading and permalink for Tâche 7.3.5.7.c" aria-label="Copy heading and permalink for Tâche 7.3.5.7.c">🔗</a></div></article><article class="task exercise-like" id="exo-proofPropComposanteConnexe-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para" id="exo-proofPropComposanteConnexe-5-1-1">Vérifier que <span class="process-math">\(G=G_1\cup \cdot \cup G_k\text{.}\)</span><div class="autopermalink" data-description="Paragraphe"><a href="#exo-proofPropComposanteConnexe-5-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Tâche 7.3.5.7.c"><a tabindex="-1" href="#exo-proofPropComposanteConnexe-4" title="Copier le titre et le lien permanent pour Tâche 7.3.5.7.c" aria-label="Copier le titre et le lien permanent pour Tâche 7.3.5.7.c">🔗</a></div>
+</article>
+<article class="task exercise-like" id="exo-proofPropComposanteConnexe-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="exo-proofPropComposanteConnexe-5-1-1">Vérifier que <span class="process-math">\(G=G_1\cup \cdot \cup G_k\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exo-proofPropComposanteConnexe-5-1-1" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Tâche 7.3.5.7.d"><a href="#exo-proofPropComposanteConnexe-5" title="Copy heading and permalink for Tâche 7.3.5.7.d" aria-label="Copy heading and permalink for Tâche 7.3.5.7.d">🔗</a></div></article><div class="autopermalink" data-description="Exercice 7.3.5.7"><a href="#exo-proofPropComposanteConnexe" title="Copy heading and permalink for Exercice 7.3.5.7" aria-label="Copy heading and permalink for Exercice 7.3.5.7">🔗</a></div></article><div class="autopermalink" data-description="Exercices 7.3.5: Exercices"><a href="#exo-connexeEuler" title="Copy heading and permalink for Exercices 7.3.5: Exercices" aria-label="Copy heading and permalink for Exercices 7.3.5: Exercices">🔗</a></div></section><div class="autopermalink" data-description="Section 7.3: Chaîne, cycle et graphe eulérien"><a href="#sec-chaineEuler" title="Copy heading and permalink for Section 7.3: Chaîne, cycle et graphe eulérien" aria-label="Copy heading and permalink for Section 7.3: Chaîne, cycle et graphe eulérien">🔗</a></div></section></div>
+<div class="autopermalink" aria-hidden="true" data-description="Tâche 7.3.5.7.d"><a tabindex="-1" href="#exo-proofPropComposanteConnexe-5" title="Copier le titre et le lien permanent pour Tâche 7.3.5.7.d" aria-label="Copier le titre et le lien permanent pour Tâche 7.3.5.7.d">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Exercice 7.3.5.7"><a tabindex="-1" href="#exo-proofPropComposanteConnexe" title="Copier le titre et le lien permanent pour Exercice 7.3.5.7" aria-label="Copier le titre et le lien permanent pour Exercice 7.3.5.7">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Exercices 7.3.5: Exercices"><a tabindex="-1" href="#exo-connexeEuler" title="Copier le titre et le lien permanent pour Exercices 7.3.5: Exercices" aria-label="Copier le titre et le lien permanent pour Exercices 7.3.5: Exercices">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section 7.3: Chaîne, cycle et graphe eulérien"><a tabindex="-1" href="#sec-chaineEuler" title="Copier le titre et le lien permanent pour Section 7.3: Chaîne, cycle et graphe eulérien" aria-label="Copier le titre et le lien permanent pour Section 7.3: Chaîne, cycle et graphe eulérien">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="sec-propGraphes.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-arbre.html" title="Suivant"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-propGraphes.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Préc.</span></a><a class="top-button button" href="#" title="[top]"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">[top]</span></a><a class="next-button button" href="sec-arbre.html" title="Suivant"><span class="name">Suiv.</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

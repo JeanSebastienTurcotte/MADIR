@@ -18,37 +18,43 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="exercise exercise-like"><h5 class="heading">
+<article class="exercise exercise-like"><h2 class="heading">
 <span class="type">Exercice</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
-</h5>
-<div class="para">Dans la section <a href="sec-opens.html" class="internal" title="Section 1.2: Opérations sur les ensembles">1.2</a>, on a donné deux moyens pour démontrer l’égalité de deux ensembles, soit avec une table d’appartenance ou avec un argument de double inclusion. On démontre ci-dessous la deuxième <a href="sec-opens.html#li-opensDeMorgan" class="xref" data-knowl="./knowl/xref/li-opensDeMorgan.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Point 1.2.13:9">loi de De Morgan</a> à l’aide d’une troisième méthode, utilisant la logique.<div class="autopermalink" data-description="Paragraphe"><a href="#exo-egenslog-1-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
-</div> <div class="para logical">
+</h2>
+<div class="para">Dans la section <a href="sec-opens.html" class="internal" title="Section 2.2: Opérations sur les ensembles">2.2</a>, on a donné deux moyens pour démontrer l’égalité de deux ensembles, soit avec une table d’appartenance ou avec un argument de double inclusion. On démontre ci-dessous la deuxième <a href="sec-opens.html#li-opensDeMorgan" class="xref" data-knowl="./knowl/xref/li-opensDeMorgan.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Point 2.2.13:9">loi de De Morgan</a> à l’aide d’une troisième méthode, utilisant la logique.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exo-egenslog-1-1" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
+</div> 
+<div class="para logical">
 <div class="para">On veut montrer que <span class="process-math">\((A\cup B)^c=A^c\cap B^c\text{.}\)</span> Par définition, on a <span class="process-math">\(A\cup B=\{c~|~ c\in A\vee c\in B\}\text{.}\)</span> D’un point de vue de la logique, le complément représente la négation. On a alors</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/exo-negdisj.html">
 \begin{align*}
 (A\cup B)^c&amp;=\{c~|~\neg ( c\in A\vee c\in B)\}\\
-&amp;=\{c~|~\neg (c\in A)\wedge \neg( c\in B)\} &amp; &amp; \text{Selon } \knowl{./knowl/xref/exo-negdisj.html}{\text{2.1.5.6}}\\
+&amp;=\{c~|~\neg (c\in A)\wedge \neg( c\in B)\} &amp; &amp; \text{Selon } \knowl{./knowl/xref/exo-negdisj.html}{\text{3.1.5.6}}\\
 &amp;=\{c~|~c\notin A\wedge c\notin B)\}&amp; &amp; \text{négation de la relation d'appartenance}\\
 &amp;=A^c\cap B^c &amp;&amp; \text{définition de l'intersection}
 \end{align*}
 </div>
-<div class="autopermalink" data-description="Paragraphe"><a href="#exo-egenslog-1-2" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
-</div> <div class="para">Démontrer la première <a href="sec-opens.html#li-opensDeMorgan" class="xref" data-knowl="./knowl/xref/li-opensDeMorgan.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Point 1.2.13:9">loi de De Morgan</a> avec cette méthode.<div class="autopermalink" data-description="Paragraphe"><a href="#exo-egenslog-1-3" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exo-egenslog-1-2" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
+</div> 
+<div class="para">Démontrer la première <a href="sec-opens.html#li-opensDeMorgan" class="xref" data-knowl="./knowl/xref/li-opensDeMorgan.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Point 2.2.13:9">loi de De Morgan</a> avec cette méthode.<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exo-egenslog-1-3" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
 </div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para logical">
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/exo-negconj.html">
 \begin{align*}
 (A\cap B)^c&amp;=\{c~|~\neg ( c\in A\wedge c\in B)\}\\
-&amp;=\{c~|~\neg (c\in A)\vee \neg( c\in B)\} &amp; &amp; \text{Selon } \knowl{./knowl/xref/exo-negconj.html}{\text{2.1.5.10}}\\
+&amp;=\{c~|~\neg (c\in A)\vee \neg( c\in B)\} &amp; &amp; \text{Selon } \knowl{./knowl/xref/exo-negconj.html}{\text{3.1.5.10}}\\
 &amp;=\{c~|~c\notin A\vee c\notin B)\}&amp; &amp; \text{négation de la relation d'appartenance}\\
 &amp;=A^c\cup B^c &amp;&amp; \text{définition de l'union}
 \end{align*}
 </div>
-<div class="autopermalink" data-description="Paragraphe"><a href="#exo-egenslog-2-1" title="Copy heading and permalink for Paragraphe" aria-label="Copy heading and permalink for Paragraphe">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#exo-egenslog-2-1" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 2.1.5.11.1"><a href="#exo-egenslog-2" title="Copy heading and permalink for Solution 2.1.5.11.1" aria-label="Copy heading and permalink for Solution 2.1.5.11.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Exercice 2.1.5.11"><a href="#exo-egenslog" title="Copy heading and permalink for Exercice 2.1.5.11" aria-label="Copy heading and permalink for Exercice 2.1.5.11">🔗</a></div></article><span class="incontext"><a class="internal" href="sec-logprop.html#exo-egenslog">Contexte</a></span>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.1.5.11.1"><a tabindex="-1" href="#exo-egenslog-2" title="Copier le titre et le lien permanent pour Solution 3.1.5.11.1" aria-label="Copier le titre et le lien permanent pour Solution 3.1.5.11.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercice 3.1.5.11"><a tabindex="-1" href="#exo-egenslog" title="Copier le titre et le lien permanent pour Exercice 3.1.5.11" aria-label="Copier le titre et le lien permanent pour Exercice 3.1.5.11">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="sec-logprop.html#exo-egenslog">Contexte</a></span>
 </body>
 </html>
