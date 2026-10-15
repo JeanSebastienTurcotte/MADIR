@@ -428,7 +428,7 @@
     <statement>
     <p>On reprend la proposition <m>((p\wedge q)\vee r)\wedge (q\vee \neg r)</m>, dont une forme normale conjonctive a été trouvée à l'exemple <xref ref="ex-fnprop"/>. La table de vérité de cette proposition est donnée ci-dessous.</p>
 <table>
-<title>Table de vérité de <m>((p\wedge q)\vee r)\wedge (q\vee \neg r)</m> </title>
+  <title>Table de vérité de <m>((p\wedge q)\vee r)\wedge (q\vee \neg r)</m></title>
   <tabular top="major">
     <row>
       <cell>
@@ -447,13 +447,13 @@
         <m>p\wedge q</m>
       </cell>
       <cell>
-        <m>q\wedge \neg r</m>
+        <m>q\vee \neg r</m>
       </cell>
       <cell right="medium">
         <m>(p\wedge q)\vee r</m>
       </cell>
       <cell>
-        <m>((p\wedge q)\vee r)\wedge (q\wedge \neg r)</m>
+        <m>((p\wedge q)\vee r)\wedge (q\vee \neg r)</m>
       </cell>
     </row>
     <row>
@@ -473,32 +473,6 @@
         V
       </cell>
       <cell>
-        F
-      </cell>
-      <cell right="medium">
-        V
-      </cell>
-      <cell>
-        F
-      </cell>
-    </row>
-    <row>
-      <cell>
-        V
-      </cell>
-      <cell>
-        V
-      </cell>
-      <cell right="medium">
-        F
-      </cell>
-      <cell right="medium">
-        V
-      </cell>
-      <cell>
-        V
-      </cell>
-      <cell>
         V
       </cell>
       <cell right="medium">
@@ -513,6 +487,32 @@
         V
       </cell>
       <cell>
+        V
+      </cell>
+      <cell right="medium">
+        F
+      </cell>
+      <cell right="medium">
+        V
+      </cell>
+      <cell>
+        V
+      </cell>
+      <cell>
+        V
+      </cell>
+      <cell right="medium">
+        V
+      </cell>
+      <cell>
+        V
+      </cell>
+    </row>
+    <row>
+      <cell>
+        V
+      </cell>
+      <cell>
         F
       </cell>
       <cell right="medium">
@@ -528,7 +528,7 @@
         F
       </cell>
       <cell right="medium">
-        F
+        V
       </cell>
       <cell>
         F
@@ -551,33 +551,7 @@
         F
       </cell>
       <cell>
-        F
-      </cell>
-      <cell right="medium">
-        F
-      </cell>
-      <cell>
-        F
-      </cell>
-    </row>
-    <row>
-      <cell>
-        F
-      </cell>
-      <cell>
         V
-      </cell>
-      <cell right="medium">
-        V
-      </cell>
-      <cell right="medium">
-        F
-      </cell>
-      <cell>
-        F
-      </cell>
-      <cell>
-        F
       </cell>
       <cell right="medium">
         F
@@ -594,10 +568,10 @@
         V
       </cell>
       <cell right="medium">
-        F
+        V
       </cell>
       <cell right="medium">
-        V
+        F
       </cell>
       <cell>
         F
@@ -617,6 +591,32 @@
         F
       </cell>
       <cell>
+        V
+      </cell>
+      <cell right="medium">
+        F
+      </cell>
+      <cell right="medium">
+        V
+      </cell>
+      <cell>
+        F
+      </cell>
+      <cell>
+        V
+      </cell>
+      <cell right="medium">
+        F
+      </cell>
+      <cell>
+        F
+      </cell>
+    </row>
+    <row>
+      <cell>
+        F
+      </cell>
+      <cell>
         F
       </cell>
       <cell right="medium">
@@ -632,7 +632,7 @@
         F
       </cell>
       <cell right="medium">
-        F
+        V
       </cell>
       <cell>
         F
@@ -655,7 +655,7 @@
         F
       </cell>
       <cell>
-        F
+        V
       </cell>
       <cell right="medium">
         F
@@ -669,9 +669,9 @@
 <p>On cherche une forme normale disjonctive,</p>
     </statement>
     <solution>
-    <p>En regardant la table de vérité, on cible les lignes qui rendent la proposition vraie. Il y a lorsque <m>p,q</m> et <m>\neg r</m> sont vraies, de même que lorsque <m>\neg p, q</m> et <m>\neg r</m>. La proposition peut donc s'écrire de manière équivalente comme
+        <p>En regardant la table de vérité, on cible les lignes qui rendent la proposition vraie. Il y a lorsque <m>p, q</m> et <m>r</m> sont vraies, lorsque <m>p, q</m> et <m>\neg r</m> sont vraies, ainsi que lorsque <m>\neg p, q</m> et <m>\neg r</m> sont vraies. La proposition peut donc s'écrire de manière équivalente sous sa forme normale disjonctive comme
     <me>
-    ((p\wedge q)\vee r)\wedge (q\wedge \neg r)\equiv (p\wedge q\wedge \neg r)\vee (\neg p\wedge q\wedge \neg r)
+    ((p\wedge q)\vee r)\wedge (q\vee \neg r)\equiv (p\wedge q\wedge r)\vee (p\wedge q\wedge \neg r)\vee (\neg p\wedge q\wedge \neg r)
     </me>.</p>
     </solution>
     </example>

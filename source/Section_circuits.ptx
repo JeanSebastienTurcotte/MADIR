@@ -677,9 +677,213 @@ et la table de vérité suivante.</p>
 </figure>
 </solution>
 </example>
+     <example xml:id="exo-demiadditionneur"><statement><p>Un circuit peut avoir plus d'une sortie. C'est particulièrement utile quand un circuit est en fait une partie d'un système plus complexe. Le circuit illustré à la figure <xref ref="fig-demiadditionneur"/> est une partie d'un circuit utilisé pour qu'un ordinateur effectue des additions. <!--On reviendra sur ce type de circuit dans le chapitre <xref ref="chap-reptheonombres"/>.--></p>
+    <figure xml:id="fig-demiadditionneur">
+    <caption>Le circuit demi-additionneur</caption>
+    <image source="demiadditionneur.svg">
+    <description>Un circuit à deux entrée est illustrée dans lequel les entrées X et Y sont combinées dans une porte XOR et dans une porte ET. Le circuit retourne deux sorties, le résultat de chacune de ces combinaisons.</description>
+    </image>
+    </figure>
+    <p>Déterminer la table de vérité de ce circuit.</p>
+         </statement></example>
 <p>En plus de déterminer des circuits équivalents à des expressions ou des tables de vérité, on peut aussi déterminer l'équivalence de circuits entre eux. Grâce aux règles de la logique, on peut simplifier les circuits. Si on réussit à réduire le nombre de portes utilisées, on aura potentiellement sauvé des coûts de construction du circuit et peut-être aussi en maintenance ou alimentation.</p>
     </subsection>
-    
+       <subsection>
+    <title> Représentation en circuits d'opérations binaires </title>
+    <p>À l'exercice <xref ref="exo-demiadditionneur"/>, on définit un circuit à deux entrées et deux sorties. Ce circuit est appelé un demi-additionneur. Étant donné deux entrées binaires, il retourne leur somme comme un nombre à deux chiffres, la puissance de <m>2^0</m> comme somme <m>S</m> et la puissance de <m>2^1</m> comme retenue <m>R</m>. Ainsi, <m>0_2+1_2=1_2</m> sera retournée comme <m>S=1</m> et <m>R=0</m>, alors que <m>1_2+1_2=10_2</m> sera retournée comme <m>S=0</m> et <m>R=1</m>.</p>
+    <p>On peut maintenant considérer l'addition binaire générale. Une addition se fait colonne par colonne. La somme d'une colonne est obtenue en faisant la somme des chiffres des nombres à additionner plus la retenue de la colonne précédente, le cas échéant. On va maintenant construire le circuit effectuant cette opération. Dans ce circuit, on note <m>A</m> le chiffre du premier terme de l'addition, <m>B</m> le second, <m>P</m> la retenue de la colonne précédente, <m>S</m> la somme de la colonne et <m>R</m> la nouvelle retenue. La figure <xref ref="fig-additionneur"/> illustre l'additionneur.</p>
+    <figure xml:id="fig-additionneur">
+    <caption>Un circuit additionneur</caption>
+    <image source="additionneur.svg">
+    <description>Un circuit à trois entrées et deux sorties est illustré. Les entrées A et B se combinent dans une porte XOR et dans une porte ET. Le résultat de la porte XOR se combine dans une autre porte XOR avec l'entrée P pour donner la sortie S. Puis la première porte XOR se combine encore avec P, mais cette fois-ci dans une porte ET. Le résultat des deux portes ET se combinent dans une porte OU pour produire la sortie R.</description>
+    </image>
+    </figure>
+    <p>On peut comprendre le circuit en considérant la table de vérité de l'opération <m>A+B+P</m> et en utilisant une forme normale. La table est donnée ci-dessous</p>
+    <table>
+  <title>L'addition de deux chiffres et une retenue en binaire</title>
+  <tabular>
+    <row>
+      <cell>
+        <m>A</m>
+      </cell>
+      <cell>
+        <m>B</m>
+      </cell>
+      <cell>
+        <m>P</m>
+      </cell>
+      <cell>
+        <m>S</m>
+      </cell>
+      <cell>
+        <m>R</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+    </row>
+  </tabular>
+</table>
+<p>On regarde l'expression pour <m>S</m> à l'aide de la forme normale disjonctive. La sortie <m>S</m> sera égale à <m>1</m> si <m>(\neg A\wedge \neg B\wedge P)\vee (\neg A \wedge B \wedge\neg P)\vee (A\wedge\neg B\wedge \neg P)\vee (A\wedge B\wedge P)</m>. On peut ensuite utiliser les règles de la logique pour simplifier un peu l'expression.
+<md>
+<mrow>S&amp;\equiv(\neg A\wedge \neg B\wedge P)\vee (\neg A \wedge B \wedge\neg P)\vee (A\wedge\neg B\wedge \neg P)\vee (A\wedge B\wedge P)&amp;&amp;</mrow>
+<mrow>&amp;\equiv (\neg A \wedge B \wedge\neg P)\vee (A\wedge\neg B\wedge \neg P)\vee (A\wedge B\wedge P)\vee(\neg A\wedge \neg B\wedge P)&amp;&amp;\text{commutativité de la disjonction}</mrow>
+<mrow>&amp;\equiv((\neg A \wedge B \wedge\neg P)\vee (A\wedge\neg B\wedge \neg P))\vee ((A\wedge B\wedge P)\vee(\neg A\wedge \neg B\wedge P)&amp;&amp;\text{associativité de la disjonction}</mrow>
+<mrow>&amp;\equiv(((\neg A\wedge B)\vee(A\wedge \neg B))\wedge \neg P)\vee(((\neg A\wedge \neg B)\vee(A\wedge  B))\wedge P)&amp;&amp;\text{distributivité de la conjonction sur la disjonction}</mrow>
+<mrow>&amp;\equiv((A\oplus B)\wedge \neg P)\vee ((\neg A\oplus B)\wedge P)&amp;&amp; \text{définition du ou exclusif}</mrow>
+<mrow>&amp;\equiv((A\oplus B)\wedge \neg P)\vee (\neg( A\oplus B)\wedge P)&amp;&amp;\text{voir l'exercice }<xref ref="exo-negationxor"/></mrow>
+<mrow>&amp;\equiv(A\oplus B)\oplus P &amp;&amp;\text{définition du ou exclusif}</mrow>
+</md>.
+L'exercice <xref ref="exo-circuitretenue"/> permettra de montrer que <m>R\equiv ((A\oplus B)\wedge P)\vee (A\wedge B)</m>.
+</p>
+<p>On observe dans le circuit de l'additionneur la présence de deux circuits demi-additionneurs, illustrés par les boites dans le circuit équivalent de la figure <xref ref="fig-additionneurreduit"/>. </p>
+    <figure xml:id="fig-additionneurreduit">
+    <caption>Un circuit additionneur réduit grâce aux circuits demi-additonneurs</caption>
+    <image source="additionneurreduit.svg">
+    <description>Un circuit à trois entrées et deux sorties est illustré. Les entrées A et B se combinent dans un circuit demi-additionneur. La sortie S de ce circuit se combine dans un autre circuit demi-additionneur avec l'entrée P. La sortie S de ce second demi-additionneur produit la sortie S globale du circuit. Puis, les sorties R des deux demi-additionneurs se combinent pour produire la sortie globale R du circuit.</description>
+    </image>
+    </figure>
+    <p>Maintenant, à partir de plusieurs combinaisons de circuits additionneurs, on peut illustrer comment faire l'addition de deux nombres binaires. La quantité de circuits additionneurs à utiliser dépend du nombre de chiffres utilisés pour représenter les nombres. Dans la figure <xref ref="fig-additionneur4bits"/>, on illustre un circuit permettant de faire l'addition de nombres binaires écrits avec quatre chiffres. La sortie d'un tel système sera un nombre à cinq chiffres, avec potentiellement le premier de ces chiffres égal à zéro. Pour faire <m>A+B=S</m>, on suppose que <m>A=(A_3A_2A_1A_0)_2</m>, <m>B=(B_3B_2B_1B_0)_2</m> et <m>S=(S_4S_3S_2S_1S_0)_2</m>. Le circuit additionne, de haut en bas, les chiffres de droite à gauche de <m>A</m> et <m>B</m>.</p>
+    <figure xml:id="fig-additionneur4bits">
+    <caption>Un circuit additionneur pour des nombres binaires à quatre chiffres</caption>
+    <image source="additionneur4bits.svg">
+    <description>Un circuit à huit entrées et cinq sorties est illustré. Les entrées A0 et B0 se combinent dans un circuit demi-additionneur. La sortie S de ce circuit produit la sortie S0 puis la sortie R se combine avec les entrées A1 et B1 dans un additionneur. La sortie S de cette additionneur produit S1 et la sortie R se combine avec A2 et B2 dans un autre additionneur. On continue ainsi de suite jusqu'au dernier additionneur, qui produit S3 par sa sortie S et S4 par sa sortie R.</description>
+    </image>
+    </figure>
+    </subsection>
     <!-- Sous-sections à écrire, à même ce fichier -->
     
     <conclusion xml:id="concl-circuits">  <!-- Ajouter le même identifiant de la section après le - du xml:id -->
@@ -722,15 +926,6 @@ et la table de vérité suivante.</p>
     </figure>
     <p>Déterminer une circuit équivalent à une simple porte XOR en termes de porte NON, ET et OU.</p></statement></exercise>
    <exercise><statement><p>Quel serait un circuit associé à l'expression <m>p\rightarrow q</m>?</p></statement></exercise>
-    <exercise xml:id="exo-demiadditionneur"><statement><p>Un circuit peut avoir plus d'une sortie. C'est particulièrement utile quand un circuit est en fait une partie d'un système plus complexe. Le circuit illustré à la figure <xref ref="fig-demiadditionneur"/> est une partie d'un circuit utilisé pour qu'un ordinateur effectue des additions. On reviendra sur ce type de circuit dans le chapitre <xref ref="chap-reptheonombres"/>.</p>
-    <figure xml:id="fig-demiadditionneur">
-    <caption>Le circuit demi-additionneur</caption>
-    <image source="demiadditionneur.svg">
-    <description>Un circuit à deux entrée est illustrée dans lequel les entrées X et Y sont combinées dans une porte XOR et dans une porte ET. Le circuit retourne deux sorties, le résultat de chacune de ces combinaisons.</description>
-    </image>
-    </figure>
-    <p>Déterminer la table de vérité de ce circuit.</p>
-    </statement></exercise>
      <exercise><statement><p>Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.</p></statement>
     </exercise>
     <exercise>

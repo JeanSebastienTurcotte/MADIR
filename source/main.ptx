@@ -264,9 +264,9 @@ $\Box$
   <book xml:id="madir">
     <title>Mathématiques discrètes</title>
     <subtitle>Version préliminaire</subtitle>
+    <xi:include href="Chapitre_representationtheorienombres.ptx"/> 
     <xi:include href="Chapitre_ensembles.ptx" />
     <xi:include href="Chapitre_logique.ptx" />
-    <xi:include href="Chapitre_representationtheorienombres.ptx"/>
     <xi:include href="Chapitre_denombrement.ptx"/>
     <xi:include href="Chapitre_preuveMath.ptx"/>
     <xi:include href="Chapitre_relationRecurrence.ptx"/>

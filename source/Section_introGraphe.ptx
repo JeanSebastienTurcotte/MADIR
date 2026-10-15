@@ -157,7 +157,7 @@
                 <ol>
                 <li> Les deux extrémités d'une même arête sont distinctes;</li>
                 <li> L'ordre dans lequel on écrit les sommets est important, car <m>(s,t)\neq (t,s)</m>;</li>
-                <li> Deux arêtes distinctes peuvent avoir les mêmes sommets, mais pas dans le même ordre, il n'y a donc pas deux arêtes différentes qui partent finissent aux mêmes sommets.</li>
+                <li> Deux arêtes distinctes peuvent avoir les mêmes sommets, mais pas dans le même ordre, il n'y a donc pas deux arêtes différentes qui partent et finissent aux mêmes sommets.</li>
                 </ol>
                 </p>
                 <p>Comme pour les graphes simples, nous allons principalement considérer des graphes dont l'ensemble des sommets est un ensemble fini. On dira alors que le graphe est fini.</p>
@@ -257,11 +257,11 @@ Fig
 <statement>
 <p>Soit <m>G=(S,A)</m> un graphe simple, et soit <m>s,\,t\in\,S:</m>
 <ul>
-<li>On dira que <m>s</m> est adjacent à <m>t</m>, ou bien que <m>s</m> est un voisin de <m>t</m> dans <m>G</m> si  <m>s</m> et <m>t</m> sont les extrémités d'une arête de <m>G</m>, c'est-à-dire si <m>\{s,t\}\in A</m>.</li>
-<li>Le voisinage de <m>s,</m> noté <m>V(s)</m> est l'ensemble de tous les voisins de <m>s</m>.</li>
-<li> Soit <m>R</m> un sous-ensemble des sommets de <m>G</m>, on note <m>V(R)</m> l'union de tous les voisinages <m>V(s)</m> avec <m>s\in\, R </m>.</li>
-<li> Le degré de <m>s</m> est le nombre de voisins de <m>s</m>. </li>
-<li> Le degré du sommet <m>s</m> sera noté <m>\deg(s)</m>.</li>
+<li><p>On dira que <m>s</m> est adjacent à <m>t</m>, ou bien que <m>s</m> est un voisin de <m>t</m> dans <m>G</m> si  <m>s</m> et <m>t</m> sont les extrémités d'une arête de <m>G</m>, c'est-à-dire si <m>\{s,t\}\in A</m>.</p></li>
+<li><p>Le voisinage de <m>s,</m> noté <m>V(s)</m> est l'ensemble de tous les voisins de <m>s</m>.</p></li>
+<li><p> Soit <m>R</m> un sous-ensemble des sommets de <m>G</m>, on note <m>V(R)</m> l'union de tous les voisinages <m>V(s)</m> avec <m>s\in\, R </m>.</p></li>
+<li><p> Le degré de <m>s</m> est le nombre de voisins de <m>s</m>. </p></li>
+<li><p> Le degré du sommet <m>s</m> sera noté <m>\deg(s)</m>.</p></li>
 
 </ul>
 </p>
@@ -306,7 +306,7 @@ Fig
 
 <proposition xml:id="prop-somDeg">
 <statement><p> Soit <m>G=(S,A)</m> un graphe simple tel que <m>S=\{s_1,\,s_2\,\dots,\,s_n\}</m> à <m>|A|=m</m> arêtes.
-<me>\deg(s_1)+\deg(s_1)+\deg(s_2)\cdots+\deg(s_n)=\sum_{k=1}^n \deg(s_k)=2m</me>
+<me>\deg(s_1)+\deg(s_2)+\cdots+\deg(s_n)=\sum_{k=1}^n \deg(s_k)=2m</me>
 </p></statement>
 <proof><p>La partie gauche de l'équation compte la somme des degrés de tous les sommets. On compte cette somme d'une autre manière, en regardant les arêtes. Chaque arête contribue au degré de deux sommets. La somme des degrés des sommets est donc égale à deux fois le nombre d'arêtes.</p></proof>
 </proposition>

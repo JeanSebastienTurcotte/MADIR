@@ -241,12 +241,12 @@
     </task>
     </exercise>
     <exercise xml:id="exo-fctcar"><introduction><p>Soit <m>A</m> un ensemble et soit <m>C\subseteq  A</m> un sous-ensemble. La fonction caractéristique de <m>C</m>, notée <m>\mathbb{1}_C</m> est une fonction de <m>A</m> vers <m>\{0,1\}</m> définie par
-    <me>
+    <md>
     \mathbb{1}_C(a)=\begin{cases}
     1 &amp; \text{ si } a\in C \\
     0 &amp; \text{ si } a\notin C
     \end{cases}
-    </me> .</p></introduction>
+    </md>.</p></introduction>
     <task><statement><p>À titre d'exemple, on considère l'ensemble  <m>A=\{a,b,c\}</m> et le sous-ensemble <m>C=\{a,b\}</m>. Quels sont les éléments de <m>\mathbb{1}_C</m>?</p></statement>
     <answer><p><m>\mathbb{1}_C = \{(a,1),(b,1),(c,0)\}</m>. Ainsi, on a <m>\mathbb{1}_C(a)=1</m>, <m>\mathbb{1}_C(b)=1</m> et <m>\mathbb{1}_C(c)=0</m>. </p></answer>
     </task>
@@ -420,6 +420,12 @@
     <answer><p><m>\mathbb{1}_{C^c}=1-\mathbb{1}_C</m>.</p></answer>
     </task>
     </exercise>
+        <exercise><introduction><p>On considère la fonction <m>f:\mathbb{N}\to \mathbb{N}</m> qui associe à chaque nombre naturel la somme de ses chiffres dans la représentation binaire, par exemple <m>f(11001_2)=3</m>. Soit <m>A=\{0,1,2,\ldots , 100\}</m>. </p></introduction>
+    <task><statement><p>Calculer <m>f(66)</m>.</p></statement><answer> <p><m>f(66)=f(1000010_2)=2</m></p> </answer></task>
+    <task><statement><p>Quelle est l'image de l'ensemble <m>A</m>?</p></statement> <answer><p> <m>f(A)=\{0,1,2,3,4,5,6\}</m></p> </answer> </task>
+    <task><statement><p>Donner <m>(f^{-1}(\{1\}))\cap A</m>, soit les nombres dans <m>A</m> qui ont comme image <m>1</m>.</p></statement><answer><p> <m>(f^{-1}(\{1\}))\cap A=\{1,2,4,8,16,32,64\}</m> </p></answer></task>
+    <task><statement><p>De façon générale, que vaut <m>f^{-1}(\{1\})</m>?</p></statement><answer> <p><m>f^{-1}(\{1\})</m> est l'ensemble des puissances de <m>2</m>. </p> </answer></task>
+     </exercise> 
     <exercise><introduction><p>On considère les ensembles <m>A=\{0,1\}</m> et <m>B=\{a,b,c\}</m>. Dans le chapitre  <xref ref="chap-denombrement"/>, nous verrons des méthodes plus générales pour compter des obtets. Pour l'instant, vous pouvez utiliser un argument intuitif ou énumérer les fonctions demandées.</p></introduction>
     <task xml:id="exo-nbrFonctions"><introduction><p>On considère les fonctions de <m>A</m> vers <m>B</m>.</p></introduction>
     <task><statement><p>Combien y a-t-il de fonctions possibles?</p></statement><answer><p>Il y a <m>3^2=9</m> fonctions de <m>A</m> vers <m>B</m>.</p></answer>
@@ -507,8 +513,8 @@ Une telle fonction est la fonction définie par <m>f(0)=a</m> et <m>f(1)=b</m>.<
     </task>
     </exercise>
     <exercise><statement><p>Montrer que si <m>g:A\to B</m> et <m>f:B\to C</m> sont deux fonctions inversibles, alors la composition est inversible et
-    <me>
-    (f\circ g)^{-1}=g^{-1}\circ f^{-1}    </me>.
+    <md>
+    (f\circ g)^{-1}=g^{-1}\circ f^{-1}</md>.
     </p></statement>
     <solution> <p> Par l'exercice <xref ref="exo-compInjSurj"/>, on sait que <m>f\circ g</m> est injective et surjective, et donc bijective et inversible. Il ne reste qu'à montrer que pour tout <m>a \in A</m>, et pour tout <m>c\in C</m>
     <me>
@@ -519,7 +525,7 @@ Une telle fonction est la fonction définie par <m>f(0)=a</m> et <m>f(1)=b</m>.<
     (f\circ g)\circ  (g^{-1}\circ f^{-1})(c) = c.
     </me> </p>
 
-    Par définition, on a 
+    <p>Par définition, on a 
 
     <md>
     <mrow>
@@ -535,7 +541,7 @@ Une telle fonction est la fonction définie par <m>f(0)=a</m> et <m>f(1)=b</m>.<
     &amp;= g^{-1}(g(a)) = a
     </mrow>
     </md>   
-
+        </p><p>
     De façon similaire, on a
     <md>
     <mrow>
@@ -551,9 +557,9 @@ Une telle fonction est la fonction définie par <m>f(0)=a</m> et <m>f(1)=b</m>.<
     &amp;= f(f^{-1}(c)) = c
     </mrow>
     </md> 
-   <me>
-   (f\circ g)\circ  (g^{-1}\circ f^{-1})(x) = x.
-   </me>
+   <md>
+   (f\circ g)\circ  (g^{-1}\circ f^{-1})(x) = x
+        </md>.</p>
     </solution>
     </exercise>
     </exercisegroup>
@@ -691,9 +697,9 @@ a-dire que <m>r_i\neq d_{i,i}</m>.  Ainsi, <m>f</m> ne peut pas être une biject
     <task><statement><p>Est-ce que la fonction est injective? Surjective?</p></statement><answer><p>Surjective, mais pas injective.</p></answer></task>
     </exercise>
     <exercise><statement><p>On considère la fonction caractéristique définie à l'exercice <xref ref="exo-fctcar"/> et la différence symétrique de l'exercice <xref ref="exo-diffsym"/>. Montrer que
-    <me> 
-    \mathbb{1}_{A\oplus B}=\mathbb{1}_A+\mathbb{1}_B-2\mathbb{1}_{A\cap B}
-    </me>.</p></statement>
+    <md> 
+    \mathbb{1}_{A\oplus B}=\mathbb{1}_A+\mathbb{1}_B-2\mathbb{1}_{A\cap B}</md>.
+    </p></statement>
     <solution><p>On peut construire une table d'appartenance:</p>
     <table>
   <title>Table d'appartenance pour l'exercice</title>

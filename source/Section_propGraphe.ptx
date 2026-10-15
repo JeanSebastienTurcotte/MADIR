@@ -428,7 +428,7 @@ La proposition <xref ref="prop-isoGraphe"/> est surtout utile pour montrer que d
             <image width="25%" source="tikzit_Graphesdiff2.jpg"/>
         </figure>
         <figure >
-            <caption><m>h</m> </caption>
+            <caption><m>H</m> </caption>
             <image width="25%" source="tikzit_Graphesdiff1.jpg" />
         </figure>
     </sidebyside>

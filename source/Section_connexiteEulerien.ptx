@@ -108,7 +108,7 @@
                     On remarque également que la chaîne <m>a, b, c, f, g, h</m> est parmi les chaînes les plus courtes (de longueur <m>5</m>) reliant <m>a</m> et <m>h</m>.
                 </p>
                 <p>
-                    Finalement, <m>G</m> possède plusieurs cycles. Par exemple, la chaîne <m>a, b, d, a</m> est un cycle simple de longueur <m>3</m>, alors que la chaîne <m>f, g, h, i, f</m> est un cycle simple de longueur <m>4</m>.
+                    Finalement, <m>G</m> possède plusieurs cycles. Par exemple, la chaîne <m>a, d,e, a</m> est un cycle simple de longueur <m>3</m>, alors que la chaîne <m>f, g, h, i, f</m> est un cycle simple de longueur <m>4</m>.
                 </p>
             </statement>
         </example>
@@ -157,8 +157,8 @@
 <statement> 
 <p>
 <ul>
-<li> Une <term>chaîne eulérienne</term> d'un graphe <m>G</m> est une chaîne simple passant par toutes les arêtes de <m> G</m>.</li>
-<li> Un <term>cycle eulérien</term> d'un graphe <m>G</m> est un cycle simple passant par toutes les arêtes de <m>G</m>.</li>
+<li> Une <term>chaîne eulérienne</term> d'un graphe <m>G</m> est une chaîne simple passant une seule fois par toutes les arêtes de <m> G</m>.</li>
+<li> Un <term>cycle eulérien</term> d'un graphe <m>G</m> est un cycle simple passant une seule fois par toutes les arêtes de <m>G</m>.</li>
 <li><p>Si un graphe <m>G</m> possède un cycle eulérien, on dira que <m>G</m> est un <term>graphe eulérien</term>.</p>
 </li>
 </ul> 
@@ -213,7 +213,7 @@
 <p> 
 <ul>
 <li> Un graphe <m>G</m> de trois sommets ou plus possède un cycle eulérien si et seulement si <m>\deg(s)</m> est pair pour tout sommet <m>s</m> de <m>G</m>. </li>
-<li> Un graphe <m>G</m> possède une chaîne eulérienne si et seulement si il existe exactement deux sommets de <m>G</m> ayant un degré impair.</li>
+<li> Un graphe <m>G</m> possède une chaîne eulérienne si et seulement s'il existe exactement zéro ou  deux sommets de <m>G</m> ayant un degré impair.</li>
 </ul>
 </p>
 </statement>

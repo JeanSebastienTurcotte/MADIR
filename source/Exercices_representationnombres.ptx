@@ -60,35 +60,7 @@
     <exercise xml:id="exo-hexaafinir"><statement><p>Compléter la conversion de <m>987654321</m> en hexadécimal entamée à l'exemple <xref ref="ex-decihexa"/>.</p></statement>
     <answer><p><m>987654321=3ADE68B1_{16}</m></p></answer>
   </exercise>
-    <exercise><introduction><p>On considère <m>\Omega=\{n\in \N ~|~ n\leq 15\}</m>. On pose <m>A_0\subseteq \Omega</m> l'ensemble des nombres dans <m>\Omega</m> qui ont un <m>1</m> à la position <m>2^0</m> dans leur représentation binaire, <m>A_1\subseteq\Omega</m> ceux qui ont un <m>1</m> à la position <m>2^1</m> et ainsi de suite.</p></introduction>
-    <task><statement><p>Donner une description en extension de <m>A_2</m>.</p></statement><answer><p><m>A_2=\{4,5,6,7,12,13,14,15\}</m></p></answer></task>
-    <task><statement><p>Que sont les nombres dans <m>A_3^c</m>?</p></statement><answer><p><m>A_3=\{8,9,10,11,12,13,14,15\}</m>, et donc <m>A_3^c=\{0,1,2,3,4,5,6,7\}</m></p></answer></task>
-    <task><statement><p>Que vaut <m>\lvert A_1\cup A_0\rvert</m></p></statement><answer><p><m>|A_1\cup A_0|=12</m></p></answer></task>
-    <task>
-      <statement><p>Énumérer les éléments dans <m>A_2\cap A_0</m>.</p></statement>
-      <answer><p> <m>A_2\cap A_0 =\{5,7,13,15\}</m></p> </answer>
-      <solution>
-        <p>
-          Par définition, on a que <m>A_2=\{4,5,6,7,12,13,14,15\}</m>, alors que <m>A_0=\{1,3,5,7,8,9,11,13,15\}</m>. Ainsi, <m>A_2\cap A_0 =\{5,7,13,15\}</m>
-        </p>
-      </solution>    
-    </task>
-    <task>
-      <statement><p>Énumérer les éléments dans <m>A_3\cap A_1</m>.</p></statement>
-      <answer><p> <m>A_3\cap A_1 =\{10,11,14,15\}</m></p> </answer>
-      <solution>
-        <p>
-          Par définition, on a que <m>A_3=\{8,9,10,11,12,13,14,15\}</m>, alors que <m>A_1=\{2,3,6,7,10,11,14,15\}</m>. Ainsi, <m>A_3\cap A_1 =\{10,11,14,15\}</m>
-        </p>
-      </solution> 
-    </task>
-    </exercise>
-    <exercise><introduction><p>On considère la fonction <m>f:\mathbb{N}\to \mathbb{N}</m> qui associe à chaque nombre naturel la somme de ses chiffres dans la représentation binaire, par exemple <m>f(11001_2)=3</m>. Soit <m>A=\{0,1,2,\ldots , 100\}</m>. </p></introduction>
-    <task><statement><p>Calculer <m>f(66)</m>.</p></statement><answer> <p><m>f(66)=f(1000010_2)=2</m></p> </answer></task>
-    <task><statement><p>Quelle est l'image de l'ensemble <m>A</m>?</p></statement> <answer><p> <m>f(A)=\{0,1,2,3,4,5,6\}</m></p> </answer> </task>
-    <task><statement><p>Donner <m>(f^{-1}(\{1\}))\cap A</m>, soit les nombres dans <m>A</m> qui ont comme image <m>1</m>.</p></statement><answer><p> <m>(f^{-1}(\{1\}))\cap A=\{1,2,4,8,16,32,64\}</m> </p></answer></task>
-    <task><statement><p>De façon générale, que vaut <m>f^{-1}(\{1\})</m>?</p></statement><answer> <p><m>f^{-1}(\{1\})</m> est l'ensemble des puissances de <m>2</m>. </p> </answer></task>
-     </exercise> 
+    
      <exercise><introduction><p>Effectuer les opérations suivantes.</p></introduction>
     <task>
         <statement><p><m>110111011_2+1001011010_2</m></p></statement>
@@ -306,7 +278,7 @@
     <task><statement><p><m>10000_2-1101_2</m></p></statement> <answer><p> <m>10000_2-1101_2=0011_2</m></p></answer> </task>
     <task><statement><p><m>10000_2-1110_2</m></p></statement> <answer><p><m>1000_2-1110_2=0010_2</m></p></answer> </task>
     <task><statement><p><m>10000_2-1111_2</m></p></statement> <answer><p><m>10000_2-1111_2=0001_2</m></p></answer> </task>
-    <task><statement><p><m>100000000_2-110100</m></p></statement> <answer> <p><m>100000000_2-110100_2=001100_2</m> </p></answer> </task>
+    <task><statement><p><m>100000000_2-110100_2</m></p></statement> <answer> <p><m>100000000_2-110100_2=11001100_2</m> </p></answer> </task>
     <task><statement><p>Que peut-on dire du résultat de la soustraction d'un nombre à une puissance de deux supérieure?</p></statement>
     <answer>
     <p>Le résultat de la soustraction est obtenu de la manière suivante:
@@ -319,19 +291,6 @@
     </subexercises>
     <subexercises>
     <title>Exercices supplémentaires</title>
-    <exercise xml:id="exo-circuitretenue">
-        <statement><p>Montrer en utilisant une table de vérité et la forme normale disjonctive que la retenue d'un additionneur s'écrit comme <m>R\equiv ((A\oplus B)\wedge P)\vee (A\wedge B)</m>.</p></statement>
-        <solution><p> À l'aide de la table de vérité, on trouve la forme normale disjonctive de: <me>R\equiv (\neg A \wedge B\wedge P)\vee( A \wedge \neg B\wedge P)\vee(A \wedge  B\wedge  \neg P)\vee(A \wedge B\wedge P) </me>. À l'aide des propriétés, on obtient</p> 
-            <md>
-                <mrow>R&amp;\equiv (\neg A \wedge B\wedge P)\vee( A \wedge \neg B\wedge P)\vee(A \wedge  B\wedge  \neg P)\vee(A \wedge B\wedge P)&amp;&amp;</mrow>
-                <mrow>&amp;\equiv (((\neg A \wedge B)\vee(A \wedge \neg B)) \wedge P )\vee(A \wedge  B\wedge  \neg P)\vee(A \wedge B\wedge P)&amp;&amp;\text{distributivité de la conjonction sur la disjonction}</mrow>
-                <mrow>&amp;\equiv(((\neg A \wedge B)\vee(A \wedge \neg B)) \wedge P )\vee ((A\wedge B)\wedge(\neg P \vee P))&amp;&amp;\text{distributivité de la conjonction sur la disjonction}</mrow>
-                <mrow>&amp;\equiv (((\neg A \wedge B)\vee(A \wedge \neg B)) \wedge P )\vee ((A\wedge B)\wedge(V))&amp;&amp;\text{propriété de la négation}</mrow>
-                <mrow>&amp;\equiv (((\neg A \wedge B)\vee(A \wedge \neg B)) \wedge P )\vee (A\wedge B)&amp;&amp;\text{propriété d'identité}</mrow>
-                <mrow>&amp;\equiv((A\oplus B)\wedge P)\vee (A\wedge B)&amp;&amp; \text{définition du ou exclusif}</mrow>
-            </md>
-        </solution>
-    </exercise>
     <exercise>
     <title>La complémentation à <m>2</m></title>
     <introduction><p>On a vu dans le texte, faire une soustraction est une opération difficile comparativement à faire une addition. L'exercice <xref ref="exo-puissmoinsnombre"/> laisse entrevoir une manière différente de faire les soustractions. C'est d'ailleurs avec cette méthode (un peu modifiée) qu'un ordinateur effectue les soustractions. La méthode est basée sur l'observation suivante:
@@ -354,8 +313,8 @@
     <task><statement><p>Trouver le complément de <m>11101_2</m> par rapport à la puissance <m>n=8</m>.</p></statement><answer><p><m>(00011101_2)^c=11100011_2</m></p></answer></task>
     </task>
     <task><introduction><p>Pour revenir à la soustraction <m>A-B</m>, une fois le complément de <m>B</m> calculé, on additionne <m>A+B^c</m>, ce qui donne un nombre à au plus <m>n+1</m> chiffres significatifs (à partir du premier <m>1</m> à gauche). On distingue alors deux cas, selon si <m>A&gt;B</m> ou <m>A&lt;B</m>.</p></introduction>
-    <task><statement><p>Vérifier que <m>101011_2-1101_2=0101011_2+(0001101_2)^c-10000000_2=0101011_2+1110011_2-10000000_2=</m> et que le résultat correspond au résultat de <m>0101011_2+(0001101_2)^c</m>, en ignorant le chiffre le plus à gauche. On prend le complément selon la puissance <m>n=7</m>.</p></statement></task>
-    <task><statement><p>Calculer <m>11001_2-10100_2</m> en utilisant l'observation ci-dessus.</p></statement><solution>En prenant le complément à 2 selon la puissance 5, on a <me> 11001_2 + (10100_2)^c = 1 1001_2+0 1100_2= 10 0101_2</me>. Ainsi, en omettant le <m>1</m> le plus à gauche, on a <me>11001_2-10100_2=00101_2</me></solution></task>
+    <task><statement><p>Vérifier que <m>101011_2-1101_2=0101011_2+(0001101_2)^c-10000000_2=0101011_2+1110011_2-10000000_2=0011110_2</m> et que le résultat correspond au résultat de <m>0101011_2+(0001101_2)^c</m>, en ignorant le chiffre le plus à gauche. On prend le complément selon la puissance <m>n=7</m>.</p></statement></task>
+        <task><statement><p>Calculer <m>11001_2-10100_2</m> en utilisant l'observation ci-dessus.</p></statement><solution><p>En prenant le complément à 2 selon la puissance 5, on a <me> 11001_2 + (10100_2)^c = 1 1001_2+0 1100_2= 10 0101_2</me>. Ainsi, en omettant le <m>1</m> le plus à gauche, on a <me>11001_2-10100_2=00101_2</me></p></solution></task>
     <task><introduction><p>Lorsque <m>A&lt;B</m>, l'algorithme de soustraction ne fonctionne pas. On a alors deux options. La première consiste à
      faire <m>B-A</m> à la place et de mettre un signe négatif devant la réponse, puisque <m>A-B=-(B-A)</m>. L'autre option utilise un argument similaire pour montrer que
      <me>
@@ -368,29 +327,7 @@
      <task><statement><p>Utiliser la seconde méthode pour calculer <m>111_2-10111_2</m>.</p></statement></task>
     </task>
     </exercise>
-    <exercise xml:id="exo-circuitegalite">
-    <introduction><p>On désire construire un circuit qui va permettre de déterminer si deux nombres <m>A,B</m> écrits en binaire sont égaux. L'idée est de comparer chiffre par chiffre, l'égalité étant vérifiée si tous les chiffres à la même position sont égaux.</p></introduction>
-    <task><statement><p>Quelle porte permet de vérifier si deux entrées ont la même valeur?</p></statement>
-    <hint><p>C'est la négation d'une porte spécifique.</p></hint>
-    </task>
-    <task><statement><p>Illustrer le circuit permettant de vérifier l'égalité de deux nombres écrits à l'aide de deux chiffres.</p></statement></task>
-    <task><statement><p>Généraliser l'idée du circuit précédent pour des nombres à <m>n</m> chiffres.</p></statement>
-    <hint><p>Penser à utiliser une porte ET multiple.</p></hint>
-    </task>
-    </exercise>
-    <exercise><introduction><p>On considère le circuit de la figure <xref ref="fig-circuit9"/>, qui prend deux nombres binaires écrits à l'aide de deux chiffres. </p></introduction>
-    <task><statement><p>Comparer différentes possibilités de <m>A</m> et <m>B</m> afin de déterminer ce que fait ce circuit.</p>
-    <figure xml:id="fig-circuit9">
-    <caption>Un circuit pour nombres binaires à deux chiffres</caption>
-    <image source="circuit9.svg">
-    <description>
-    Un circuit à quatre entrées et une sortie est représenté. L'entrée A0 se combine avec la négation de l'entrée B0 dans une porte ET. Les entrées A1 et B1 se combinent dans une porte NXOR (non ou exclusif). La sortie de cette porte se combine avec la sortie de la première porte ET dans une deuxième porte ET. Ensuite, A1 se combine cette fois avec la négation de B1 dans une porte ET, et le résultat de cette porte se combine dans une porte OU avec le résultat de la deuxième porte ET pour produire la sortie finale du circuit.
-    </description>
-    </image>
-    </figure>
-    </statement></task>
-    <task><statement><p>Vérifier que le circuit correspond à l'expression <m>(A_1\wedge \neg B_1)\vee ((A_1=B_1)\wedge(A_0\wedge \neg B_0))</m>, où l'expression <m>A_1=B_1</m> vaut <m>1</m> si les deux entrées ont la même valeur et <m>0</m> sinon.</p></statement></task>
-    <task><statement><p>En utilisant une boite générique pour illustrer le circuit d'égalité de l'exercice <xref ref="exo-circuitegalite"/>, illustrer un circuit permettant de généraliser celui de la figure <xref ref="fig-circuit9"/> pour des nombres à <n>n</n> chiffres.</p></statement></task>
-    </exercise>
+    
+    
     </subexercises>
 </exercises>

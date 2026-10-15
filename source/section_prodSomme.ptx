@@ -500,7 +500,7 @@ Cependant, on ne peut pas utiliser le principe de la somme, car il existe des ch
 <p><ol>
 <li><p>Selon la définition, on a <m>4!=4\times 3\times 2\times 1=24</m>;</p></li>
 <li><p>De manière similaire, <m>6!=6\times 5\times 4\times 3\times 2\times 1=720</m>.</p></li>
-<li><p>Ici, il peut  être intéressant de remarquer que <m>7!=7\times (6\times 5\times 4\times 3\times 2\times 1)=7\times 6!</m>. On peut donc se servir de la réponse précédente pour trouver <m>7!=7\times 720=4040</m>.</p></li>
+<li><p>Ici, il peut  être intéressant de remarquer que <m>7!=7\times (6\times 5\times 4\times 3\times 2\times 1)=7\times 6!</m>. On peut donc se servir de la réponse précédente pour trouver <m>7!=7\times 720=5040</m>.</p></li>
 <li><p>Ici, vu la grandeur des nombres, on peut être tenté de prendre la calculatrice, mais il y a de fortes chances que celle-ci ne soit pas d'une grande aide. En raisonnant un peu comme pour le calcul précédant, on peut montrer que <m>83!=83\times 82\times 81\times 80!</m> et donc que
 <m>\frac{83!}{80!}=\frac{83\times 82\times 81\times 80!}{80!}=83\times 82\times 81=551 286</m>.</p></li>
 </ol></p>
@@ -567,7 +567,7 @@ manières de disposer les lettres du mot &#x00AB; satisfaire &#x00BB;.
 <p>On considère à nouveau le problème qui consiste à choisir <m>3</m> personnes parmi <m>4</m>, dans un premier temps sans leur attribuer de rôle spécifique puis en leur donnant les rôles de président, vice-président et trésorier.</p>
 </statement>
 <solution><p>On imagine les quatre personnes en ligne, et on considère la chaine de caractères &#x00AB; PVSN &#x00BB;, les lettres représentant respectivement les choix pour le président, le vice-président, le secrétaire et la personne qui ne sera pas choisie. Comme il y a quatre lettres et qu'aucune n'est répétée, il y a <m>4!</m> manières de choisir les gens qui feront partie du comité et de leur attribuer un rôle.</p></solution>
-<solution><p>On imagine à nouveau les quatre personnes en ligne et on considère cette fois la chaine de caractères &#x00AB; CCCN &#x00BB;. Ici, la lettre &#x00AB; C &#x00BB; représente être choisi et la lettre &#x00AB; N &#x00BB; ne pas l'être. On peut arranger ces lettres de <m>\frac{4!}{3!1!}=6</m> manières, qui permettent de sélectionner les personnes choisies.</p></solution>
+<solution><p>On imagine à nouveau les quatre personnes en ligne et on considère cette fois la chaine de caractères &#x00AB; CCCN &#x00BB;. Ici, la lettre &#x00AB; C &#x00BB; représente être choisi et la lettre &#x00AB; N &#x00BB; ne pas l'être. On peut arranger ces lettres de <m>\frac{4!}{3!1!}=4</m> manières, qui permettent de sélectionner les personnes choisies.</p></solution>
 </example>
 <p>Ces derniers exempes ouvre la porte au dernier principe de la section.</p>
 <principle xml:id="princ-etiquetage">

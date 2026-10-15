@@ -243,49 +243,50 @@
     <introduction><p>Résoudre les congruences suivantes sans essayer toutes les possibilités ou expliquer pourquoi il n'y a pas de solutions.</p></introduction>
     <task><statement><p><m>2x\equiv 3\mod 5</m></p></statement>
     <solution>
-    <md>
+    <p>
+        <md>
     <mrow> 3\cdot 2x\amp \equiv 3\cdot 3 \mod 5</mrow>
     <mrow> 1x\amp \equiv 9 \mod 5</mrow>
     <mrow> x\amp \equiv 4 \mod 5.</mrow>
     </md>
-    Ainsi, <m>x</m> est une solution à l'équation si et seulement si <m>x\in \ E_{4,5}</m>.
+        Ainsi, <m>x</m> est une solution à l'équation si et seulement si <m>x\in \ E_{4,5}</m>.</p>
     </solution>
     </task>
     <task><statement><p><m>3x\equiv 2\mod 4</m></p></statement>
     <solution>
-    <md>
+    <p><md>
     <mrow> 3\cdot 3x\amp \equiv 3\cdot 2 \mod 4</mrow>
     <mrow> 1x\amp \equiv 6 \mod 4</mrow>
     <mrow> x\amp \equiv 2 .\mod 4</mrow>
     </md>
-    Ainsi, <m>x</m> est une solution à l'équation si et seulement si <m>x\in \ E_{2,4}</m>.
+        Ainsi, <m>x</m> est une solution à l'équation si et seulement si <m>x\in \ E_{2,4}</m>.</p>
     </solution>
     </task>
     <task><statement><p><m>3x\equiv 6\mod 7</m></p></statement>
     <solution>
-    <md>
+    <p><md>
     <mrow> 5\cdot 3x\amp \equiv 5\cdot 6 \mod 7</mrow>
     <mrow> 1x\amp \equiv 30 \mod 7</mrow>
     <mrow> x\amp \equiv 2 \mod 7.</mrow>
     </md>
-    Ainsi, <m>x</m> est une solution à l'équation si et seulement si <m>x\in \ E_{2,7}</m>.
+        Ainsi, <m>x</m> est une solution à l'équation si et seulement si <m>x\in \ E_{2,7}</m>.</p>
     </solution>
     </task>
     <task><statement><p><m>4x\equiv 5\mod 6</m></p></statement>
-    <answer>Cette équation ne possède aucune solution, car <m>\pgcd{(4,6)}=2\not\mid \ 5.</m></answer>
+        <answer><p>Cette équation ne possède aucune solution, car <m>\pgcd{(4,6)}=2\not\mid \ 5.</m></p></answer>
     </task>
     <task><statement><p><m>5x\equiv 3\mod 7</m></p></statement>
     <solution>
-    <md>
+    <p><md>
     <mrow> 3\cdot 5x\amp \equiv 3\cdot 3 \mod 7</mrow>
     <mrow> 1x\amp \equiv 9 \mod 7</mrow>
     <mrow> x\amp \equiv 2 \mod 7.</mrow>
     </md>
-    Ainsi, <m>x</m> est une solution à l'équation si et seulement si <m>x\in \ E_{2,7}</m>.
+        Ainsi, <m>x</m> est une solution à l'équation si et seulement si <m>x\in \ E_{2,7}</m>.</p>
     </solution>
     </task>
     <hint><p>Les résultats de l'exercice précédent peuvent être utile.</p></hint>
-    <hint>On peut aussi y aller par essaie-erreur pour la plus part des équations.</hint>
+        <hint><p>On peut aussi y aller par essaie-erreur pour la plus part des équations.</p></hint>
     </exercise>
     <exercise><statement><p>Sachant que <m>x=68</m> est une solution à l'équation <m>5x\equiv 1\mod 113</m>, trouver une solution à <me>
     5x\equiv 34\mod 113

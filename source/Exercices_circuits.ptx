@@ -207,6 +207,43 @@
                 </figure>
         </answer>
     </exercise>
+        <exercise xml:id="exo-circuitretenue">
+        <statement><p>Montrer en utilisant une table de vérité et la forme normale disjonctive que la retenue d'un additionneur s'écrit comme <m>R\equiv ((A\oplus B)\wedge P)\vee (A\wedge B)</m>.</p></statement>
+        <solution><p> À l'aide de la table de vérité, on trouve la forme normale disjonctive de: <me>R\equiv (\neg A \wedge B\wedge P)\vee( A \wedge \neg B\wedge P)\vee(A \wedge  B\wedge  \neg P)\vee(A \wedge B\wedge P) </me>. À l'aide des propriétés, on obtient</p> 
+            <md>
+                <mrow>R&amp;\equiv (\neg A \wedge B\wedge P)\vee( A \wedge \neg B\wedge P)\vee(A \wedge  B\wedge  \neg P)\vee(A \wedge B\wedge P)&amp;&amp;</mrow>
+                <mrow>&amp;\equiv (((\neg A \wedge B)\vee(A \wedge \neg B)) \wedge P )\vee(A \wedge  B\wedge  \neg P)\vee(A \wedge B\wedge P)&amp;&amp;\text{distributivité de la conjonction sur la disjonction}</mrow>
+                <mrow>&amp;\equiv(((\neg A \wedge B)\vee(A \wedge \neg B)) \wedge P )\vee ((A\wedge B)\wedge(\neg P \vee P))&amp;&amp;\text{distributivité de la conjonction sur la disjonction}</mrow>
+                <mrow>&amp;\equiv (((\neg A \wedge B)\vee(A \wedge \neg B)) \wedge P )\vee ((A\wedge B)\wedge(V))&amp;&amp;\text{propriété de la négation}</mrow>
+                <mrow>&amp;\equiv (((\neg A \wedge B)\vee(A \wedge \neg B)) \wedge P )\vee (A\wedge B)&amp;&amp;\text{propriété d'identité}</mrow>
+                <mrow>&amp;\equiv((A\oplus B)\wedge P)\vee (A\wedge B)&amp;&amp; \text{définition du ou exclusif}</mrow>
+            </md>
+        </solution>
+    </exercise>
+        <exercise xml:id="exo-circuitegalite">
+    <introduction><p>On désire construire un circuit qui va permettre de déterminer si deux nombres <m>A,B</m> écrits en binaire sont égaux. L'idée est de comparer chiffre par chiffre, l'égalité étant vérifiée si tous les chiffres à la même position sont égaux.</p></introduction>
+    <task><statement><p>Quelle porte permet de vérifier si deux entrées ont la même valeur?</p></statement>
+    <hint><p>C'est la négation d'une porte spécifique.</p></hint>
+    </task>
+    <task><statement><p>Illustrer le circuit permettant de vérifier l'égalité de deux nombres écrits à l'aide de deux chiffres.</p></statement></task>
+    <task><statement><p>Généraliser l'idée du circuit précédent pour des nombres à <m>n</m> chiffres.</p></statement>
+    <hint><p>Penser à utiliser une porte ET multiple.</p></hint>
+    </task>
+    </exercise>
+        <exercise><introduction><p>On considère le circuit de la figure <xref ref="fig-circuit9"/>, qui prend deux nombres binaires écrits à l'aide de deux chiffres. </p></introduction>
+    <task><statement><p>Comparer différentes possibilités de <m>A</m> et <m>B</m> afin de déterminer ce que fait ce circuit.</p>
+    <figure xml:id="fig-circuit9">
+    <caption>Un circuit pour nombres binaires à deux chiffres</caption>
+    <image source="circuit9.svg">
+    <description>
+    Un circuit à quatre entrées et une sortie est représenté. L'entrée A0 se combine avec la négation de l'entrée B0 dans une porte ET. Les entrées A1 et B1 se combinent dans une porte NXOR (non ou exclusif). La sortie de cette porte se combine avec la sortie de la première porte ET dans une deuxième porte ET. Ensuite, A1 se combine cette fois avec la négation de B1 dans une porte ET, et le résultat de cette porte se combine dans une porte OU avec le résultat de la deuxième porte ET pour produire la sortie finale du circuit.
+    </description>
+    </image>
+    </figure>
+    </statement></task>
+    <task><statement><p>Vérifier que le circuit correspond à l'expression <m>(A_1\wedge \neg B_1)\vee ((A_1=B_1)\wedge(A_0\wedge \neg B_0))</m>, où l'expression <m>A_1=B_1</m> vaut <m>1</m> si les deux entrées ont la même valeur et <m>0</m> sinon.</p></statement></task>
+    <task><statement><p>En utilisant une boite générique pour illustrer le circuit d'égalité de l'exercice <xref ref="exo-circuitegalite"/>, illustrer un circuit permettant de généraliser celui de la figure <xref ref="fig-circuit9"/> pour des nombres à <n>n</n> chiffres.</p></statement></task>
+    </exercise>
     </subexercises>
     <subexercises>
     <title>Exercices supplémentaires</title>
