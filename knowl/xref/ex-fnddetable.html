@@ -30,9 +30,9 @@
 <td class="l m b0 r2 l0 t3 lines"><span class="process-math">\(r\)</span></td>
 <td class="l m b0 r2 l0 t3 lines"><span class="process-math">\(\neg r\)</span></td>
 <td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(p\wedge q\)</span></td>
-<td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(q\wedge \neg r\)</span></td>
+<td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(q\vee \neg r\)</span></td>
 <td class="l m b0 r2 l0 t3 lines"><span class="process-math">\((p\wedge q)\vee r\)</span></td>
-<td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(((p\wedge q)\vee r)\wedge (q\wedge \neg r)\)</span></td>
+<td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(((p\wedge q)\vee r)\wedge (q\vee \neg r)\)</span></td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">V</td>
@@ -40,28 +40,28 @@
 <td class="l m b0 r2 l0 t0 lines">V</td>
 <td class="l m b0 r2 l0 t0 lines">F</td>
 <td class="l m b0 r0 l0 t0 lines">V</td>
-<td class="l m b0 r0 l0 t0 lines">F</td>
-<td class="l m b0 r2 l0 t0 lines">V</td>
-<td class="l m b0 r0 l0 t0 lines">F</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">V</td>
-<td class="l m b0 r0 l0 t0 lines">V</td>
-<td class="l m b0 r2 l0 t0 lines">F</td>
-<td class="l m b0 r2 l0 t0 lines">V</td>
-<td class="l m b0 r0 l0 t0 lines">V</td>
 <td class="l m b0 r0 l0 t0 lines">V</td>
 <td class="l m b0 r2 l0 t0 lines">V</td>
 <td class="l m b0 r0 l0 t0 lines">V</td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">V</td>
+<td class="l m b0 r0 l0 t0 lines">V</td>
+<td class="l m b0 r2 l0 t0 lines">F</td>
+<td class="l m b0 r2 l0 t0 lines">V</td>
+<td class="l m b0 r0 l0 t0 lines">V</td>
+<td class="l m b0 r0 l0 t0 lines">V</td>
+<td class="l m b0 r2 l0 t0 lines">V</td>
+<td class="l m b0 r0 l0 t0 lines">V</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">V</td>
 <td class="l m b0 r0 l0 t0 lines">F</td>
 <td class="l m b0 r2 l0 t0 lines">V</td>
 <td class="l m b0 r2 l0 t0 lines">F</td>
 <td class="l m b0 r0 l0 t0 lines">F</td>
 <td class="l m b0 r0 l0 t0 lines">F</td>
-<td class="l m b0 r2 l0 t0 lines">F</td>
+<td class="l m b0 r2 l0 t0 lines">V</td>
 <td class="l m b0 r0 l0 t0 lines">F</td>
 </tr>
 <tr>
@@ -70,7 +70,7 @@
 <td class="l m b0 r2 l0 t0 lines">F</td>
 <td class="l m b0 r2 l0 t0 lines">V</td>
 <td class="l m b0 r0 l0 t0 lines">F</td>
-<td class="l m b0 r0 l0 t0 lines">F</td>
+<td class="l m b0 r0 l0 t0 lines">V</td>
 <td class="l m b0 r2 l0 t0 lines">F</td>
 <td class="l m b0 r0 l0 t0 lines">F</td>
 </tr>
@@ -79,16 +79,6 @@
 <td class="l m b0 r0 l0 t0 lines">V</td>
 <td class="l m b0 r2 l0 t0 lines">V</td>
 <td class="l m b0 r2 l0 t0 lines">F</td>
-<td class="l m b0 r0 l0 t0 lines">F</td>
-<td class="l m b0 r0 l0 t0 lines">F</td>
-<td class="l m b0 r2 l0 t0 lines">F</td>
-<td class="l m b0 r0 l0 t0 lines">F</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">F</td>
-<td class="l m b0 r0 l0 t0 lines">V</td>
-<td class="l m b0 r2 l0 t0 lines">F</td>
-<td class="l m b0 r2 l0 t0 lines">V</td>
 <td class="l m b0 r0 l0 t0 lines">F</td>
 <td class="l m b0 r0 l0 t0 lines">V</td>
 <td class="l m b0 r2 l0 t0 lines">V</td>
@@ -96,12 +86,22 @@
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">F</td>
+<td class="l m b0 r0 l0 t0 lines">V</td>
+<td class="l m b0 r2 l0 t0 lines">F</td>
+<td class="l m b0 r2 l0 t0 lines">V</td>
+<td class="l m b0 r0 l0 t0 lines">F</td>
+<td class="l m b0 r0 l0 t0 lines">V</td>
+<td class="l m b0 r2 l0 t0 lines">F</td>
+<td class="l m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">F</td>
 <td class="l m b0 r0 l0 t0 lines">F</td>
 <td class="l m b0 r2 l0 t0 lines">V</td>
 <td class="l m b0 r2 l0 t0 lines">F</td>
 <td class="l m b0 r0 l0 t0 lines">F</td>
 <td class="l m b0 r0 l0 t0 lines">F</td>
-<td class="l m b0 r2 l0 t0 lines">F</td>
+<td class="l m b0 r2 l0 t0 lines">V</td>
 <td class="l m b0 r0 l0 t0 lines">F</td>
 </tr>
 <tr>
@@ -110,7 +110,7 @@
 <td class="l m b3 r2 l0 t0 lines">F</td>
 <td class="l m b3 r2 l0 t0 lines">V</td>
 <td class="l m b3 r0 l0 t0 lines">F</td>
-<td class="l m b3 r0 l0 t0 lines">F</td>
+<td class="l m b3 r0 l0 t0 lines">V</td>
 <td class="l m b3 r2 l0 t0 lines">F</td>
 <td class="l m b3 r0 l0 t0 lines">F</td>
 </tr>
@@ -122,10 +122,10 @@
 <details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
 <div class="para logical">
-<div class="para">En regardant la table de vérité, on cible les lignes qui rendent la proposition vraie. Il y a lorsque <span class="process-math">\(p,q\)</span> et <span class="process-math">\(\neg r\)</span> sont vraies, de même que lorsque <span class="process-math">\(\neg p, q\)</span> et <span class="process-math">\(\neg r\text{.}\)</span> La proposition peut donc s’écrire de manière équivalente comme</div>
+<div class="para">En regardant la table de vérité, on cible les lignes qui rendent la proposition vraie. Il y a lorsque <span class="process-math">\(p, q\)</span> et <span class="process-math">\(r\)</span> sont vraies, lorsque <span class="process-math">\(p, q\)</span> et <span class="process-math">\(\neg r\)</span> sont vraies, ainsi que lorsque <span class="process-math">\(\neg p, q\)</span> et <span class="process-math">\(\neg r\)</span> sont vraies. La proposition peut donc s’écrire de manière équivalente sous sa forme normale disjonctive comme</div>
 <div class="displaymath process-math">
 \begin{equation*}
-((p\wedge q)\vee r)\wedge (q\wedge \neg r)\equiv (p\wedge q\wedge \neg r)\vee (\neg p\wedge q\wedge \neg r)\text{.}
+((p\wedge q)\vee r)\wedge (q\vee \neg r)\equiv (p\wedge q\wedge r)\vee (p\wedge q\wedge \neg r)\vee (\neg p\wedge q\wedge \neg r)\text{.}
 \end{equation*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraphe"><a tabindex="-1" href="#ex-fnddetable-3-1" title="Copier le titre et le lien permanent pour Paragraphe" aria-label="Copier le titre et le lien permanent pour Paragraphe">🔗</a></div>
