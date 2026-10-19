@@ -265,7 +265,7 @@
     <solution><p>On peut considérer l'absence de beigne comme une quatrième saveur (un peu insipide). Il y a donc <m>4^6=4096</m> possibilités.</p></solution>
     </task>
     <task><statement><p>On remplit tous les compartiments, en s'assurant que chaque sorte de beignes soit présente dans la boite.</p></statement>
-    <hint>On peut utiliser le principe d'inclusion-exclusion à plusieurs reprises.</hint>
+        <hint><p>On peut utiliser le principe d'inclusion-exclusion à plusieurs reprises.</p></hint>
     <answer><p><m>540</m></p></answer>
     <solution><p>On veut minimalement un beigne vanille, un chocolat et un érable. On distingue trois cas: 
 
@@ -284,16 +284,16 @@ Pour chacun de ces cas, on doit permuter. On aura
     <answer><p><m>2 985 984</m></p></answer>
     </task>    
     <task xml:id="exo-beignes1"><statement><p>L'employé, un peu maladroit remplit la boite avec six beignes à la vanille, mais en met potentiellement plus d'un par compartiment. Par exemple VV,V,_,VV,_,V est une configuration possible.</p></statement>
-    <solution>Il faut compter le nombre de solutions entières positives à l'équation <m>x_1+x_2+x_3+x_4+x_5+x_6=6</m>. Il y a <m>\Binomial{6+6-1}{6}=\Binomial{11}{6}=\frac{11!}{6!5!}=462</m></solution>
+        <solution><p>Il faut compter le nombre de solutions entières positives à l'équation <m>x_1+x_2+x_3+x_4+x_5+x_6=6</m>. Il y a <m>\Binomial{6+6-1}{6}=\Binomial{11}{6}=\frac{11!}{6!5!}=462</m></p></solution>
     <answer><p><m>462</m></p></answer>
     </task>
-    <task><statement><p>Même chose que la partie <xref ref="exo-beignes1"/>, mais on utilise six beignes différents.</p>
+<!-- À revoir    <task><statement><p>Même chose que la partie <xref ref="exo-beignes1"/>, mais on utilise six beignes différents.</p>
     </statement>
-    <solution>Le problème revient à compter le nombre de façons d'attribuer à chaque beigne un compartiment. Pour chaque beigne, il y a <m>6</m> compartiments possibles. Par le principe du produit, il y a <m>6^6</m> façons de faire.</solution>
+        <solution><p>Le problème revient à compter le nombre de façons d'attribuer à chaque beigne un compartiment. Pour chaque beigne, il y a <m>6</m> compartiments possibles. Par le principe du produit, il y a <m>6^6</m> façons de faire.</p></solution>
     <answer><p><m>46 656</m></p></answer>
-    </task>
+    </task> -->
     <task><statement><p>C'est presque l'heure de la fermeture et il ne reste que <m>12</m> beignes dans le présentoir, tous de différentes sortes. On veut remplir la boite de <m>6</m>.</p></statement>
-    <solution> On doit choisir <m>6</m> beignes parmi les <m>12</m> restants. De plus, on doit les placer en ordre, car on en place un seul dans chaque compartiment. On compte donc les <m>6</m>-permutations de <m>12</m> objets. Il y a <m>\Permutation{12}{6}=\frac{12!}{6!}</m> façons de le faire.</solution>
+        <solution> <p>On doit choisir <m>6</m> beignes parmi les <m>12</m> restants. De plus, on doit les placer en ordre, car on en place un seul dans chaque compartiment. On compte donc les <m>6</m>-permutations de <m>12</m> objets. Il y a <m>\Permutation{12}{6}=\frac{12!}{6!}</m> façons de le faire.</p></solution>
     <answer><p><m>665 280</m></p></answer>
     </task>
 

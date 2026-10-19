@@ -355,7 +355,7 @@ Si on veut que les fonctions soient injectives, on suppose qu'on étiquette les 
 
   <example xml:id="ex-incluExcluIntro">
     <title>Le nombre de costumes bleus ou vert!</title>
-  <statement><p>Supposons qu'un de vos amis doit choisir un costume pour animer un spectacle. Si votre ami  doit choisir parmi 5 chapeaux dont 3 sont bleus, 2 chandails et 6 pantalons, dont 4 sont verts. De combien de façons différentes peut-il s'habiller, s'il doit porter un chapeau bleau ou un pantalon vert? </p></statement>
+  <statement><p>Supposons qu'un de vos amis doit choisir un costume pour animer un spectacle. Si votre ami  doit choisir parmi 5 chapeaux dont 3 sont bleus, 2 chandails et 6 pantalons, dont 4 sont verts. De combien de façons différentes peut-il s'habiller, s'il doit porter un chapeau bleu ou un pantalon vert? </p></statement>
   <solution>
     <p>On note <m>C</m> le nombre de costumes avec chapeau bleu ou pantalon vert. Pour déterminer <m>C</m>, on sépare la tâche de choisir le costume en deux catégories: la première catégorie est celle formée des costumes avec un chapeau bleu, alors que la deuxième est celle formée des costumes avec un pantalon vert.</p>
     <p>On note <m>C_b</m> le nombre de costumes avec chapeau bleu, et <m>C_v</m> le nombre de costumes avec un pantalon vert. Par le principe du produit, on a que <m>C_b=3\times 2\times 6 =36</m>. De même, on obtient  <m>C_v=5\times 2\times 4=40</m></p>
@@ -540,7 +540,7 @@ n\times (n-1)\times \cdots \times 2\times 1=n!
 </solution>
 <solution><p>Une autre façon de calculer le nombre de possibilités est de considérer le problème comme si les &#x00AB; a &#x00BB; étaient en fait disctincts. On pourrait écrire b<m>\text{a}_1</m>te<m>\text{a}_2</m>u et arranger ces six lettres discinctes en <m>6!=720</m> manières différentes. Or pour chacun de ces arrangements, il existe un arrangement jumeau où les positions de <m>\text{a}_1,\text{a}_2</m> sont inversées, mais qui ne se reflète pas dans le mot en tant que tel. On compte ainsi toutes les possibilités en double lorsque l'on dit qu'il y en a <m>720</m>. La réponse est donc <m>720/2=360</m> manières distinctes.</p></solution>
 </example>
-<p>La première solution est astucieuse pour le cas où il n'y a qu'une lettre qui est répétée, mais dans un mot comme &#x00AB;SASTISFAIRE  &#x00BB;, l'approche n'est pas aussi concluante. On peut toutefois s'attarder à la seconde solution pour tenter de la généraliser. D'abord, un exemple plus simple.</p>
+<p>La première solution est astucieuse pour le cas où il n'y a qu'une lettre qui est répétée, mais dans un mot comme &#x00AB;abracadabra  &#x00BB;, l'approche n'est pas aussi concluante. On peut toutefois s'attarder à la seconde solution pour tenter de la généraliser. D'abord, un exemple plus simple.</p>
 <example><statement>
 <p>De combien de manières distinctes peut-on arranger les lettres du mot &#x00AB; saucisse &#x00BB; pour former une chaine de caractères?</p>
 </statement>
@@ -551,16 +551,16 @@ n\times (n-1)\times \cdots \times 2\times 1=n!
 </me> manières d'arranger ces lettres.</p>
 </solution>
 </example>
-<p>On revient finalement au mot &#x00AB; SASTISFAIRE  &#x00BB;, qui contient deux fois la lettre &#x00AB; a &#x00BB;, deux fois la lettre &#x00AB;i &#x00BB; et trois fois la lettre &#x00AB; s &#x00BB;. Si toutes les lettres étaient distinctes, il y aurait <m>11!</m> manières de les réordonner. En distinguant les &#x00AB; a &#x00BB;,  on compte en double tout comme avec les &#x00AB; i &#x00BB;. De plus, en distinguant les &#x00AB; s &#x00BB;, on compte aussi chacun de ces arrangements six fois. Par le principe de division, il y a donc 
+<p>On revient finalement au mot &#x00AB; abracadabra  &#x00BB;, qui contient deux fois la lettre &#x00AB; b &#x00BB;, deux fois la lettre &#x00AB;r &#x00BB; et cinq fois la lettre &#x00AB; a &#x00BB;. Si toutes les lettres étaient distinctes, il y aurait <m>11!</m> manières de les réordonner. En distinguant les &#x00AB; b &#x00BB;,  on compte en double tout comme avec les &#x00AB; r &#x00BB;. De plus, en distinguant les &#x00AB; a &#x00BB;, on compte aussi chacun de ces arrangements cent vingt fois. Par le principe de division, il y a donc 
 <me>
-\frac{11!}{2\times 2 \times 6}=151200
+\frac{11!}{2\times 2 \times 120}=83160
 </me>
-manières de disposer les lettres du mot &#x00AB; satisfaire &#x00BB;.
+manières de disposer les lettres du mot &#x00AB; abracadabra &#x00BB;.
 </p>
 <p>Une manière différente d'écrire le dernier calcul est 
 <me>
-\frac{11!}{2!\times 2! \times  3!}=151200
-</me>, provenant du fait que l'on peut ordonner  les &#x00AB;a,i &#x00BB; de deux factorielles manières entre elles et les &#x00AB; s &#x00BB; de trois factorielles manières.</p>
+\frac{11!}{2!\times 2! \times  5!}=83160
+</me>, provenant du fait que l'on peut ordonner  les &#x00AB;b,r &#x00BB; de deux factorielles manières entre elles et les &#x00AB; a &#x00BB; de cinq factorielles manières.</p>
 <p>On revient sur l'exemple <xref ref="ex-divIntro"/> pour le résoudre sous un autre angle.</p>
 <example>
 <statement>
