@@ -15,7 +15,7 @@
 
 <exercise xml:id="exo-invQisQ">
 <statement>Montrer que si <m>x\in\,\Q</m> et <m>x\neq 0</m>, alors <m>\frac{1}{x}\in\,\Q</m>.</statement>
-<hint>Par preuve directe.</hint>
+<hint><p>Par preuve directe.</p></hint>
 <solution>
 <p> On suppose que <m>x\in\,\Q^\ast,</m> et on veut montrer que <m>\frac{1}{x}\in\,\Q</m>.</p>
 <p>Puisque <m>x\in\,\Q-\{0\}</m>, par définition de <m>\Q</m>, on sait qu'il existe <m>p,\,q\in\,\Z</m> tel que <m>x=\frac{p}{q}</m>, avec <m>q\neq 0</m>. Puisque <m>x\neq 0</m>, on sait également que <m>p\neq 0</m>.</p>
@@ -26,7 +26,7 @@
 
 <exercise>
 <statement>Montrer que si <m>x,y\in\,\R</m> alors <m>\text{min}(x,y)+\text{max}(x,y)=x+y,</m> où <m>\text{min}(x,y)</m> est la plus petite valeur entre <m>x</m> et <m>y,</m> alors que <m>\text{max}(x,y)</m> est la plus grande valeur entre <m>x</m> et <m>y</m>.</statement>
-<hint>Séparer la preuve en deux cas. Le premier cas lorsque <m>x\geq y</m>, et le deuxième cas lorsque <m>x\lt y</m>. Faites une preuve directe dans les deux cas.</hint>
+<hint><p>Séparer la preuve en deux cas. Le premier cas lorsque <m>x\geq y</m>, et le deuxième cas lorsque <m>x\lt y</m>. Faites une preuve directe dans les deux cas.</p></hint>
 <solution>
 <p>On suppose d'abord que <m>x\geq y.</m> Dans ce cas, on a que <m>\text{min}(x,y)=y</m> et <m>\text{max}(x,y)=x.</m> Ainsi, <m>\text{min}(x,y)+\text{max}(x,y)=y+x=x+y,</m> par commutativité de l'addition dans <m>\Z</m>.</p>
 <p>On ensuite que <m>y \gt  x.</m> Dans ce cas, on a que <m>\text{min}(x,y)=x</m> et <m>\text{max}(x,y)=y.</m> Ainsi, <m>\text{min}(x,y)+\text{max}(x,y)=y+x</m>.</p>
@@ -35,7 +35,7 @@
 
 <exercise>
 <statement>Montrer que si <m>m</m> et <m>n</m> sont des entiers de parité différente, alors <m>5m+5n</m> est un entier impair.</statement>
-<hint>Sans perdre de généralité, on peut supposer que <m>m</m> est pair alors que <m>n</m> est impair.</hint>
+<hint><p>Sans perdre de généralité, on peut supposer que <m>m</m> est pair alors que <m>n</m> est impair.</p></hint>
 <solution>
 <p>On suppose que <m>m</m> est pair et que <m>n</m> est impair. Ainsi, <m>m\equiv 0 \mod 2,</m> alors que <m>n\equiv 1 \mod 2</m>.</p>
 <p>
@@ -51,7 +51,7 @@ d'où <m>5m+5n</m> est un entier impair.
 
 <exercise xml:id="exo-cubeEvenBaseEven">
 <statement>Montrer que pour <m>n</m> un entier, si <m>n^3</m> est pair, alors <m>n</m> est pair.</statement>
-<hint>Par preuve indirecte.</hint>
+<hint><p>Par preuve indirecte.</p></hint>
 <solution>
 <p>On suppose que <m>n</m> est un entier impair. On veut montrer qu'alors <m>n^3</m> est impair.</p>
 <p>Puisque <m>n</m> est impair, on sait que <m>n\equiv 1\mod 2</m>.</p>
@@ -69,7 +69,7 @@ d'où <m>n^3</m> est un nombre impair.
 
 <exercise xml:id="exo-sommePuissancePair">
 <statement> Soit <m>a\in\,\Z,</m> et soit <m>m</m> et <m>n</m> des entiers plus grand que <m>0</m>. Montrer que <m>a^m+a^n\equiv 0 \mod 2</m></statement>
-<hint>Ici il est utile de séparer la question en deux cas. On fait une première preuve en supposant que <m>a</m> est pair (c'est-à-dire que <m>a \equiv 0 \mod 2</m>). Par la suite , on montre que la proposition est vraie lorsque <m>a</m> est impair (c'est-à-dire lorsque <m>a \equiv 1 \mod 2</m>).</hint>
+<hint><p>Ici il est utile de séparer la question en deux cas. On fait une première preuve en supposant que <m>a</m> est pair (c'est-à-dire que <m>a \equiv 0 \mod 2</m>). Par la suite , on montre que la proposition est vraie lorsque <m>a</m> est impair (c'est-à-dire lorsque <m>a \equiv 1 \mod 2</m>).</p></hint>
 <solution>
 <p> Supposons que <m>a\equiv 0 \mod  2.</m> Par les propriétés de l'équivalence modulo <m>2,</m> on a que 
 <md>
@@ -91,7 +91,7 @@ d'où <m>a^m+a^n</m> est pair.</p>
 
 <exercise xml:id="exo-invIrrIsIrr">
 <statement>Montrer que si <m>x\in\,\Q^c,</m> alors <m>\frac{1}{x}\in\,\Q^c</m>.</statement>
-<hint>Par preuve indirecte.</hint>
+<hint><p>Par preuve indirecte.</p></hint>
 <solution> 
 <p>On suppose que <m>\frac{1}{x}\in\,\Q.</m> On veut montrer que <m>x\in\,\Q.</m> Puisque <m>\frac{1}{x}\in\,\Q,</m> on sait que <m>x\neq 0</m>. Aussi, <m>\frac{1}{x}\neq 0</m>, car <m>1\neq 0</m>.</p>
 <p>Par le numéro <xref ref ="exo-invQisQ"/>, on a que <m>\frac{1}{\frac{1}{x}}\in\,\Q.</m> Or, on sait aussi que <m>\frac{1}{\frac{1}{x}}=x.</m> On a donc <m>x\in\,\Q</m>.</p>
@@ -101,7 +101,7 @@ d'où <m>a^m+a^n</m> est pair.</p>
 
 <exercise>
 <statement>Soit <m>x,\, y\in\,\R</m>, montrer que si <m>x+y\geq 2,</m> alors <m>x\geq 1</m> ou <m>y\geq 1</m>. </statement>
-<hint> Par preuve indirecte.</hint>
+<hint> <p>Par preuve indirecte.</p></hint>
 <solution> 
 <p>On suppose que <m>x\lt 1</m> et <m>y \lt 1.</m> On veut montrer que  <m>x+y\lt 2.</m> Puisque <m>x\lt 1</m> et <m>y \lt 1,</m> on a que <m>x+y \lt 1 + 1 =2</m>.</p>
 <p>On a montré que si <m>x\lt 1</m> et <m>y \lt 1,</m> alors <m>x+y\lt 2.</m> Ainsi, si <m>x+y\geq 2,</m> on doit nécessairement avoir que <m>x\geq 1</m> ou <m>y\geq 1</m>.</p>
@@ -121,7 +121,7 @@ c'est-à-dire que <m>mn</m> est impair.
 </p>
 <p>On a montrer que si <m>m</m> et <m>n</m> sont tous deux impairs, alors <m>mn</m> est également impair. Ainsi, si <m>mn</m> est pair, on doit nécessairement avoir que <m>m</m> ou <m>n</m> est pair.</p>
 </solution>
-<hint> Par preuve indirecte.</hint>
+<hint> <p>Par preuve indirecte.</p></hint>
 </exercise>
 
 <exercise xml:id="exo-plusMoyenne">
@@ -132,13 +132,13 @@ c'est-à-dire que <m>mn</m> est impair.
 <p>Ainsi, <me>M=\frac{a_1+a_2+\cdots + a_n}{n}\lt\frac{nM}{n}=M</me>.</p>
 <p>On vient donc de montrer que <m>M\lt M,</m> ce qui est une contradiction. Il doit donc nécessairement y avoir au moins un des <m>a_i</m> qui est plus grand ou égal à <m>M</m>.</p>
 </solution>
-<hint>Par contradiction.</hint>
+<hint><p>Par contradiction.</p></hint>
 </exercise>
 
 <exercise xml:id="exo-prime">
 <statement> Soit <m>p\in\,\N</m> un nombre premier et <m>m,\,n\in\,\N</m>. Montrer que si <m>p</m> divise <m>m\cdot n,</m> alors <m>p</m> divise <m>m</m> ou <m>n</m>. </statement>
-<hint>Par preuve directe, en passant par <m>\mod p</m> et en utilisant l'inverse modulo <m>p</m>.</hint>
-<hint>Faire la preuve en deux étapes. Soit <m>p\mid n</m> ou bien <m>p\not\mid n</m>.</hint>
+<hint><p>Par preuve directe, en passant par <m>\mod p</m> et en utilisant l'inverse modulo <m>p</m>.</p></hint>
+<hint><p>Faire la preuve en deux étapes. Soit <m>p\mid n</m> ou bien <m>p\not\mid n</m>.</p></hint>
 <solution>
 <p> On suppose que <m>p</m> divise <m>m\cdot n,</m> et on veut montrer que <m>p</m> divise <m>m</m> ou <m>n</m>. Si <m>p\mid n</m>, on a terminé. Si <m>p</m> ne divise pas <m>n,</m> on doit montrer que <m>p</m> divise <m>m</m></p>
 <p>
@@ -162,8 +162,8 @@ c'est-à-dire que <m>p\mid m</m>
 
 <exercise xml:id="exo-irrCubique">
 <statement>Montrer que <m>\sqrt[3]{2}\in\,\Q^c</m> et <m>\sqrt[3]{4}\in\,\Q^c</m>.</statement>
-<hint>Par contradiction.</hint>
-<hint> Revoir l'exemple <xref ref="exe-sqrt2Qc"/> .</hint>
+<hint><p>Par contradiction.</p></hint>
+<hint> <p>Revoir l'exemple <xref ref="exe-sqrt2Qc"/> .</p></hint>
 <solution>
 <p>Posons <m>x=\sqrt[3]{2}</m>. On suppose que <m>x\in\,\Q.</m> On peut alors écrire <m>x=\frac{a}{b},</m> avec <m>a,\,b\in\,\Z,</m> et <m>b\neq 0.</m> Sans perdre de généralité, on peut également supposer que cette fraction est réduite, c'est-à-dire que <m>\pgcd(a,b)=1</m>.</p>
 <p> On a donc 
@@ -199,7 +199,7 @@ Ainsi, <m>b^3</m> est pair, et donc <m>b</m> est pair, par <xref ref="exo-cubeEv
 
 <exercise>
 <statement>Montrer par contradiction qu'il n'y a pas de nombre <m>r\in\,\Q</m> tel que <m>r^3+r+1=0</m>.</statement>
-<hint> Supposer que <m>r=\frac{a}{b}</m> où  <m>\pgcd(a,b)=1</m>. En remplaçant dans l'équation et en multipliant par <m>b^3</m>, que peut-on dire sur la parité de <m>a</m> et <m>b</m>?</hint>
+<hint> <p>Supposer que <m>r=\frac{a}{b}</m> où  <m>\pgcd(a,b)=1</m>. En remplaçant dans l'équation et en multipliant par <m>b^3</m>, que peut-on dire sur la parité de <m>a</m> et <m>b</m>?</p></hint>
 <solution>
 <p>On suppose que <m>r=\frac{a}{b}</m> où  <m>\pgcd(a,b)=1</m>. Ainsi, on a 
 <md>
@@ -256,8 +256,8 @@ Ainsi, <m>a^3</m> est pair, d'où <m>a</m> est également pair par <xref ref="ex
 
 <exercise xml:id="exo-pordQQcisQc">
 <statement>Montrer ou réfuter que le produit d'un nombre rationnel différent de <m>0</m> par un irrationnel est un irrationnel.</statement>
-<hint>C'est vrai!</hint>
-<hint> Par contradiction.</hint>
+    <hint><p>C'est vrai!</p></hint>
+<hint> <p>Par contradiction.</p></hint>
 <solution> 
 <p>Soit <m>r\in\,\Q^\ast</m> et <m>x\in\,\Q^c,</m> supposons que <m>rx=y\in\,\Q.</m> Puisque <m>r\neq 0,</m> par l'exercice <xref ref="exo-invQisQ"/>, on sait que <m>\frac{1}{r}\in\,\Q.</m> Ainsi, <m>x= y \frac{1}{r}\in\,\Q,</m> par l'exemple <xref ref="exe-prodQisQ"/>. </p>
 <p>Ceci est une contradiction, car on avait supposé <m>x\in\,\Q^c.</m> On doit donc avoir <m>y\in\,\Q^c</m>.</p>
@@ -280,7 +280,7 @@ Montrer que si <m>n</m> est un entier, alors les quatre énoncés suivants sont 
 <li><m>3n</m> est pair.</li>
 </ol>
 </statement>
-<hint>Montrer que les implications <m> n+1\equiv 1 \mod 2\rightarrow n \equiv 0 \mod 2\rightarrow 3n \equiv 0 \mod 2\rightarrow 3n+1\equiv 1 \mod 2\rightarrow n+1\equiv 1 \mod 2</m> sont vraies.</hint>
+<hint><p>Montrer que les implications <m> n+1\equiv 1 \mod 2\rightarrow n \equiv 0 \mod 2\rightarrow 3n \equiv 0 \mod 2\rightarrow 3n+1\equiv 1 \mod 2\rightarrow n+1\equiv 1 \mod 2</m> sont vraies.</p></hint>
 <solution>
 <p>Supposons que <m>n+1\equiv 1 \mod 2,</m> par les propriétés des équivalences modulo <m>2,</m> on a que <m>n \equiv 0 \mod 2</m>.</p>
 <p>Supposons que <m>n \equiv 0 \mod 2,</m> par les propriétés des équivalences modulo <m>2,</m> on a que <m>3n \equiv 0 \mod 2</m>.</p>
@@ -291,7 +291,7 @@ Montrer que si <m>n</m> est un entier, alors les quatre énoncés suivants sont 
 
 <exercise> 
 <statement>Montrer ou réfuter que si <m>x\in\,\Q</m> et <m>y\in\,\Q</m>, alors <m>x^y\in\,\Q</m>.</statement>
-<hint>C'est faux!</hint>
+<hint><p>C'est faux!</p></hint>
 <hint>
     <p>
         Pour réfuter cet énoncé, il est suffisant de trouver une paire <m>x,y\ \in \Q</m> tel que <m>x^y \notin \Q</m>.
@@ -302,8 +302,8 @@ Montrer que si <m>n</m> est un entier, alors les quatre énoncés suivants sont 
 
 <exercise>
 <statement>Montrer ou réfuter qu'il existe <m>x\in\,\Q^c</m> et <m>y\in\,\Q^c</m> tel que <m>x^y\in\,\Q</m>.</statement>
-<hint>C'est vrai! </hint>
-<hint> Considérer <m>\sqrt{2}^\sqrt{2}</m>. Si <m>\sqrt{2}^\sqrt{2}\in\,\Q,</m> on a terminé, et on a montré que l'énoncé est vrai. Sinon, que peut-on dire de <m>\left(\sqrt{2}^\sqrt{2}\right)^\sqrt{2}</m>? </hint>
+<hint><p>C'est vrai! </p></hint>
+<hint><p> Considérer <m>\sqrt{2}^\sqrt{2}</m>. Si <m>\sqrt{2}^\sqrt{2}\in\,\Q,</m> on a terminé, et on a montré que l'énoncé est vrai. Sinon, que peut-on dire de <m>\left(\sqrt{2}^\sqrt{2}\right)^\sqrt{2}</m>? </p></hint>
 <solution>
     <p>On considère <m>\sqrt{2}^\sqrt{2}\in \R</m>. À priori, on ne sait pas si <m>\sqrt{2}^\sqrt{2}\in \Q</m> ou  si <m>\sqrt{2}^\sqrt{2}\in \Q^c</m>. On étudie ces deux possibilités. </p>
     <p>Si <m>\sqrt{2}^\sqrt{2} \in \Q</m>, on a déjà terminé. En effet, on peut poser <m>x=y=\sqrt{2}\in \Q^c</m>. On aurait alors <m>x^y = \sqrt{2}^\sqrt{2}\in \Q</m>.</p>
@@ -317,8 +317,8 @@ Montrer que si <m>n</m> est un entier, alors les quatre énoncés suivants sont 
 
 <exercise>
 <statement>Montrer ou réfuter qu'il existe un <m>x\in\,\Q</m> et un <m>y\in\,\Q^c</m> tels que <m>x^y\in\,\Q^c</m>.</statement>
-<hint>C'est vrai! </hint>
-<hint>Considérer <m>2^\sqrt{2}</m>. Si <m>2^\sqrt{2}\in\, \Q^c</m>, on a montré que c'est vrai. Sinon, que peut-on dire sur <m>{\left(2^\sqrt{2}\right)}^{\frac{\sqrt{2}}{4}}</m>? </hint>
+<hint><p>C'est vrai! </p></hint>
+<hint><p>Considérer <m>2^\sqrt{2}</m>. Si <m>2^\sqrt{2}\in\, \Q^c</m>, on a montré que c'est vrai. Sinon, que peut-on dire sur <m>{\left(2^\sqrt{2}\right)}^{\frac{\sqrt{2}}{4}}</m>? </p></hint>
 <solution>
 <p>On va montrer qu'un tel <m>x</m>  et un tel <m>y</m> existe. </p>
 <p>Tout d'abord, on remarque que <m>2\in\,\Q</m> et <m>\sqrt{2}\in\,\Q^c.</m> Il y a alors deux cas possibles. Soit <m>2^\sqrt{2}\in\,\Q^c,</m> ou bien <m>2^\sqrt{2}\in\,\Q</m>.</p> 
