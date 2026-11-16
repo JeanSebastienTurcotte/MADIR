@@ -11,13 +11,13 @@
 <!-- Les sections sont divisées en quatre parties, en plus du titre. Les parties introduction et conclusion sont facultatives. Le texte de ceux-ci apparait respectivement avant et après les sections. Les exercices sont à la fin de la section -->
 
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec-relRecLinNonHom">   <!-- Ajouter l'identifiant de la section après le - du xml:id -->
-    <title>Relations de récurrence linéaires non-homogènes</title>
+    <title>Relations de récurrence linéaires non homogènes</title>
     <introduction xml:id= "intro-relRecLinNonHom">  <!-- Ajouter le même identifiant de la section après le - du xml:id -->
     <p> Nous allons maintenant étudier les relations linéaires non-homogènes. Pour trouver les solutions à ces relations, il faudra trouver une solution particulière, ainsi que la solution générale à son équation homogène associée.</p>
     </introduction>
 
-<subsection xml:id="subs-">
-<title> </title>
+<subsection xml:id="subs-NonHom">
+<title> Résolution de certaines équations non homogènes </title>
 <introduction>
 <p> À la section précédente, on a déjà vu certaines relations de récurrence qui étaient linéaires non-homogènes. En fait, on a même déjà trouvé la solution à certaines de ces relations assez facilement <xref ref="exe-formGen1"/>. </p> 
 <p>Malheureusement, il s'agit d'exemples particuliers. La plupart des relations non-homogènes seront difficiles à résoudre. Tout de même, on peut séparer la résolution des relations homogènes en deux parties.</p>
