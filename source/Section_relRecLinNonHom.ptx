@@ -144,7 +144,7 @@ Ainsi, toutes les solutions à la relation de récurrence seront <m>a_n=\left( \
 <example xml:id="exe-solNonHom3">
 <title> La somme des <m>n</m> premiers entiers positifs</title>
 <statement>
-<p>On considère la relation <m>a_n=a_{n-1}+n</m> avec condition initiale <m> a_1.</m> On peut alors remarquer que <m>a_n</m> est la somme des <m>n</m> premiers entiers positifs.</p> 
+<p>On considère la relation <m>a_n=a_{n-1}+n</m> avec condition initiale <m> a_1=1.</m> On peut alors remarquer que <m>a_n</m> est la somme des <m>n</m> premiers entiers positifs.</p> 
 <p> On connait déjà la formule pour <m> a_n,</m> mais on veut la retrouver à l'aide de la relation de récurrence à l'aide d'une solution particulière de la forme <m>a^{(p)}_n=cn^2+dn</m>.</p>
 </statement>
 <solution>

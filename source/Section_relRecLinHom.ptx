@@ -224,7 +224,7 @@ Le cas d'ordre <m>2</m> demandera un peu plus d'analyse.</p>
 <subsection xml:id="subs-solLinHom">
 <title> Solutions aux équations de récurrence linéaires homogènes d'ordre 2: Cas 1</title>
 <introduction>
-<p>On a déjà remarqué que, pour une relation de récurrence donnée, il peut y avoir plusieurs suites qui la satisfont. Si on connaît également quelques termes (disons <m>a_0,a_1,\dots ,a_k</m>) alors la solution devient alors unique.</p>
+<p>On a déjà remarqué que, pour une relation de récurrence donnée, il peut y avoir plusieurs suites qui la satisfont. Si on connaît également quelques termes (disons <m>a_0,a_1,\dots ,a_k</m>) alors la solution devient unique.</p>
 <p>On veut trouver la forme générale des solutions pour une relation de récurrence linéaire homogène d'ordre <m>2,</m> c'est-à-dire une relation de la forme <m>a_n=c_1a_{n-1}+c_2a_{n-2}</m>. On s'inspire de l'exemple <xref ref="exe-formGen2"/>. </p>
 </introduction>
 <example xml:id="exe-solLinHomDeux">
@@ -344,7 +344,7 @@ En résolvant ce système d'équations, on a que <m>\alpha_1=3</m> et <m>\alpha_
 <example xml:id="exe-LinHomMult">
 <title> Équations caractéristiques à une seule racine</title>
 <statement>
-<p>Trouver l'unique racine <m>r_1</m> à l'Équation caractéristique de la relation de récurrence <m>a_n=6a_{n-1}-9a_{n-2}</m></p>
+<p>Trouver l'unique racine <m>r_1</m> à l'équation caractéristique de la relation de récurrence <m>a_n=6a_{n-1}-9a_{n-2}</m></p>
 <p>Vérifier que si <m>a_n=nr_1^n,</m> alors la suite <m>\{a_n\}</m> satisfait à la relation de récurrence.</p>
 </statement>
 <solution>
